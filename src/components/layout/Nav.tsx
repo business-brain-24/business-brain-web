@@ -125,9 +125,11 @@ export default function Nav() {
             <Link href="/contact" className="hidden text-[14px] text-ink sm:block">
               Log in
             </Link>
-            <Button href="/demo" size="sm" className="hidden sm:inline-flex">
-              Book a demo
-            </Button>
+            <span className="hidden sm:inline-flex">
+              <Button href="/demo" size="sm">
+                Book a demo
+              </Button>
+            </span>
             <button
               className="flex h-11 w-11 items-center justify-center rounded-lg lg:hidden"
               onClick={() => setMobile(true)}

@@ -140,7 +140,7 @@ export function Blocks() {
 
   const tiles = products.map((p) => p.name.split(" ")[0]);
   return (
-    <section className="container-x grid items-center gap-14 py-24 sm:py-32 lg:grid-cols-2">
+    <section className="container-x grid items-center gap-14 overflow-x-clip py-24 sm:py-32 lg:grid-cols-2">
       <div>
         <Label>Modular by design</Label>
         <h2 className="h-section mt-3">Every product is a block. The brain holds them together.</h2>
