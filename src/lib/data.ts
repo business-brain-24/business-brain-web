@@ -804,3 +804,211 @@ export const testimonial = {
 };
 
 export const logos = ["Northloom", "Riverstone", "Keya Foods", "Bluegate", "Orbitex", "Sundar Pharma", "Meridian", "Padma Agro", "Lumen Retail"];
+
+export type AppGroup = { name: string; note: string; apps: { name: string; href?: string }[] };
+
+export const appCatalog: AppGroup[] = [
+  {
+    name: "Operational",
+    note: "Sales, buying, stock and the daily run of the business",
+    apps: [
+      { name: "B2B Sales", href: "/products/sales" },
+      { name: "Purchase Requisition", href: "/products/procurement" },
+      { name: "Operation" },
+      { name: "Product Lab" },
+      { name: "Frontdesk" },
+      { name: "Pre Sale" },
+      { name: "Sales", href: "/products/sales" },
+      { name: "Analytics Dashboard" },
+      { name: "Dashboards" },
+      { name: "Nexus Partner" },
+      { name: "Campaign Management" },
+      { name: "Gate Pass" },
+      { name: "Accounting", href: "/products/accounting" },
+      { name: "Timesheets" },
+      { name: "KPI & Bonus" },
+      { name: "Purchase", href: "/products/procurement" },
+      { name: "Inventory", href: "/products/inventory" },
+    ],
+  },
+  {
+    name: "HRMS",
+    note: "Everything about your people, from hire to payslip",
+    apps: [
+      { name: "Dashboard" },
+      { name: "Users" },
+      { name: "Movement" },
+      { name: "Shift" },
+      { name: "eLearning" },
+      { name: "Surveys" },
+      { name: "Employees", href: "/products/hrms" },
+      { name: "Payroll", href: "/products/payroll" },
+      { name: "Advance Salary" },
+      { name: "Attendances", href: "/products/attendance" },
+      { name: "Recruitment" },
+      { name: "Leave", href: "/products/attendance" },
+      { name: "Expenses" },
+    ],
+  },
+  {
+    name: "General",
+    note: "Shared tools every team uses every day",
+    apps: [
+      { name: "Query Deluxe" },
+      { name: "Discuss" },
+      { name: "To-do" },
+      { name: "Calendar" },
+      { name: "Profile" },
+      { name: "Profile Database" },
+      { name: "Spreadsheets" },
+      { name: "Contacts" },
+      { name: "CRM", href: "/products/crm" },
+      { name: "Documents" },
+      { name: "Project", href: "/products/projects" },
+      { name: "Website" },
+      { name: "Announcements" },
+      { name: "Events" },
+      { name: "Apps" },
+      { name: "Settings" },
+    ],
+  },
+  {
+    name: "Other apps",
+    note: "Specialised apps for service, partners and the shop floor",
+    apps: [
+      { name: "Security Center" },
+      { name: "PMO Leads" },
+      { name: "Partner Portal Sales" },
+      { name: "Betopia Voice" },
+      { name: "Helpdesk" },
+      { name: "Level Bonus" },
+      { name: "Meeting Rooms" },
+      { name: "Betopia Sales Desk" },
+      { name: "Manufacturing", href: "/products/manufacturing" },
+    ],
+  },
+];
+
+export const appCount = appCatalog.reduce((n, g) => n + g.apps.length, 0);
+
+export type Story = {
+  slug: string;
+  company: string;
+  industry: string;
+  badge: string;
+  title: string;
+  summary: string;
+  image?: string;
+  logo?: string;
+  quote?: string;
+  page?: boolean;
+};
+
+export const stories: Story[] = [
+  {
+    slug: "akboria",
+    company: "Akboria",
+    industry: "Sweets & Food",
+    badge: "35 features live · 14 in progress",
+    title: "How Akboria runs a brand from 1911 on one brain.",
+    summary: "Field SR demand, showroom POS, central store, production, procurement and management reporting — connected end to end.",
+    image: "/customers/akboria/range.jpg",
+    logo: "/customers/akboria/logo.png",
+    page: true,
+  },
+  {
+    slug: "urmi",
+    company: "Urmi Group",
+    industry: "Garments & Textile",
+    badge: "Fully delivered",
+    title: "Urmi Group runs its garments business on Business Brain 24.",
+    summary: "One of Bangladesh’s leading apparel groups — delivered end to end and live across the business.",
+    image: "/customers/urmi/factory.jpg",
+    logo: "/customers/urmi/logo.png",
+  },
+];
+
+export const akboriaModules = [
+  "Sales Demand and SR Field Management",
+  "Showroom Demand and POS Management",
+  "Central Store and Dispatch Management",
+  "Manufacturing and Production Management",
+  "Procurement and Vendor Management",
+  "Management Dashboard and Reporting",
+];
+
+export type DeliveryGroup = { name: string; items: string[] };
+
+export const akboriaDelivered: DeliveryGroup[] = [
+  {
+    name: "Sales & field force",
+    items: [
+      "Customer, shop, dealer and partner management",
+      "Sales force hierarchy and role management",
+      "Field sales and order management",
+      "Multi-unit order processing",
+      "Walk-in / direct sales",
+      "Credit exception approval",
+      "SR shop visit tracking with GPS",
+      "Daily beat and route planning",
+      "ASM–SR instruction messaging",
+      "Sales targets and achievement tracking",
+      "Sales policy engine",
+      "Trade offers and product flags",
+    ],
+  },
+  {
+    name: "Dealer, store & dispatch",
+    items: [
+      "Dealer inventory management",
+      "Stock issue and walking sales",
+      "Product returns and damage management",
+      "Delivery challan hand-over workflow",
+      "Shop damage claim workflow",
+      "Central distribution and goods receipt",
+      "Automated demand fulfillment",
+    ],
+  },
+  {
+    name: "Collections & finance",
+    items: ["Cash and online collection", "FIFO invoice settlement", "Cash-carry controls", "Auto-invoicing", "Purchase order approval workflow"],
+  },
+  { name: "Showroom & POS", items: ["Outlet POS integration", "POS APIs"] },
+  {
+    name: "Dashboards & reporting",
+    items: ["Management KPI dashboard", "Role-based dashboards for SR, Dealer, Delivery Man and ASM", "Primary and secondary sales reporting"],
+  },
+  {
+    name: "Platform & mobile",
+    items: [
+      "Core ERP foundation, branding, security and territory hierarchy",
+      "Mobile REST API platform",
+      "Authentication, product, shop, order, collection and challan APIs",
+      "API token security",
+      "In-app notifications",
+      "UI customization and login experience",
+    ],
+  },
+];
+
+export const akboriaInProgress: DeliveryGroup[] = [
+  { name: "Field HR", items: ["SR GPS attendance", "SR expense claims", "Leave request workflow"] },
+  {
+    name: "Manufacturing",
+    items: ["Manufacturing operations", "Factory, floor, shift and worker management", "Batch planning and packaging manufacturing", "Manufacturing reports"],
+  },
+  {
+    name: "Procurement",
+    items: [
+      "Procurement vendor management",
+      "Procurement routing and approval workflows",
+      "Tender and bid management",
+      "Comparative statements and award process",
+      "Vendor performance and governance",
+      "Conflict of interest and procurement audit",
+      "Procurement AI assistance and insights",
+    ],
+  },
+];
+
+export const countItems = (groups: DeliveryGroup[]) => groups.reduce((n, g) => n + g.items.length, 0);

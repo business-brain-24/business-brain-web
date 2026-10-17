@@ -77,7 +77,7 @@ export default function Nav() {
 
   const links = [
     { href: "/pricing", label: "Pricing" },
-    { href: "/customers/northloom", label: "Customers" },
+    { href: "/customers", label: "Customers" },
     { href: "/about", label: "About" },
     { href: "/resources", label: "Resources" },
   ];
@@ -199,6 +199,7 @@ function ProductsMenu() {
         </Link>
         <div className="flex justify-between text-[14px]">
           <Link href="/products" className="hover:underline">See all products →</Link>
+          <Link href="/apps" className="text-white/65 hover:text-white">All 55 apps</Link>
           <Link href="/pricing" className="text-white/65 hover:text-white">Compare plans</Link>
         </div>
       </div>
@@ -289,7 +290,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
         ))}
         {[
           ["/pricing", "Pricing"],
-          ["/customers/northloom", "Customers"],
+          ["/customers", "Customers"],
           ["/about", "About"],
           ["/resources", "Resources"],
           ["/careers", "Careers"],

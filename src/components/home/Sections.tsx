@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
@@ -9,7 +10,7 @@ import { ArrowUpRight, Check, ChevronRight, ShieldCheck } from "lucide-react";
 import clsx from "clsx";
 import { Reveal, Stagger, StaggerItem, SplitHeading } from "@/components/motion/Reveal";
 import { Button, Label } from "@/components/ui/Button";
-import { industries, products, testimonial } from "@/lib/data";
+import { industries, products } from "@/lib/data";
 import { AskBox } from "./Hero";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -440,35 +441,59 @@ export function Industries() {
 }
 
 /* ---------- Reviews ---------- */
+const reviews = [
+  {
+    logo: "/customers/akboria/logo.png",
+    company: "Akboria",
+    meta: "Akboria · Sweets & Food, since 1911",
+    badge: "35 features live",
+    quote: "From the SR’s phone to the oven to the showroom shelf — every demand now lands in one place, and we see it the same day.",
+    href: "/customers/akboria",
+    tone: "bg-[#FFF7F2]",
+    badgeTone: "bg-white text-orange-deep",
+    size: [110, 50],
+  },
+  {
+    logo: "/customers/urmi/logo.png",
+    company: "Urmi Group",
+    meta: "Urmi Group · Garments & Textile",
+    badge: "Fully delivered",
+    quote: "Our factories, people and numbers now live in one system. The rollout was delivered end to end — and it runs.",
+    tone: "bg-surface",
+    badgeTone: "bg-green-soft text-[#067647]",
+    size: [115, 50],
+  },
+];
+
 export function Reviews() {
-  const small = [
-    { q: "Payroll for 6,000 workers used to take three people a week. Now it's an afternoon.", n: "Tanvir Hasan", r: "HR Director, Orbitex" },
-    { q: "Our outlets finally show the same stock as the warehouse.", n: "Nadia Karim", r: "COO, Lumen Retail" },
-  ];
   return (
     <section className="container-x pb-24 sm:pb-32">
-      <Label>Customers</Label>
-      <h2 className="h-section mt-3">What our customers say.</h2>
-      <div className="mt-12 grid gap-4 lg:grid-cols-[1.6fr_1fr]">
-        <Reveal className="flex flex-col justify-between rounded-[20px] bg-surface p-7 sm:p-10">
-          <p className="text-[22px] font-medium leading-[32px] tracking-[-0.02em] sm:text-[28px] sm:leading-[38px]">“{testimonial.quote}”</p>
-          <div className="mt-10 flex items-center gap-3">
-            <span className="h-11 w-11 rounded-full bg-[linear-gradient(135deg,#FFD2BC,#FF6B2C)]" />
-            <div>
-              <p className="text-[15px] font-medium">{testimonial.name}</p>
-              <p className="text-[13px] text-muted">{testimonial.role}</p>
-            </div>
-          </div>
-        </Reveal>
-        <div className="grid gap-4">
-          {small.map((s, i) => (
-            <Reveal key={s.n} delay={0.1 + i * 0.1} className="rounded-[20px] border border-line p-7">
-              <p className="text-[16px] leading-[25px]">“{s.q}”</p>
-              <p className="mt-6 text-[14px] font-medium">{s.n}</p>
-              <p className="text-[13px] text-muted">{s.r}</p>
-            </Reveal>
-          ))}
+      <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+        <div>
+          <Label>Customers</Label>
+          <h2 className="h-section mt-3 max-w-[640px]">Trusted by brands Bangladesh grew up with.</h2>
         </div>
+        <Link href="/customers" className="text-[14px] font-medium transition-colors hover:text-orange">All success stories →</Link>
+      </div>
+      <div className="mt-12 grid gap-4 lg:grid-cols-2">
+        {reviews.map((r, i) => (
+          <Reveal key={r.company} delay={i * 0.1} className={`flex flex-col justify-between gap-10 rounded-[20px] p-7 sm:gap-12 sm:p-10 ${r.tone}`}>
+            <div className="flex items-center justify-between gap-4">
+              <Image src={r.logo} alt={r.company} width={r.size[0]} height={r.size[1]} className="h-auto w-[96px] sm:w-[110px]" />
+              <span className={`rounded-full px-3 py-1.5 text-[13px] ${r.badgeTone}`}>{r.badge}</span>
+            </div>
+            <p className="text-[20px] font-medium leading-[30px] tracking-[-0.02em] sm:text-[26px] sm:leading-[36px]">“{r.quote}”</p>
+            <div className="flex items-end justify-between gap-4">
+              <div>
+                <p className="text-[15px] font-medium">Management team</p>
+                <p className="text-[13px] text-muted">{r.meta}</p>
+              </div>
+              {r.href && (
+                <Link href={r.href} className="shrink-0 text-[14px] font-medium transition-colors hover:text-orange">Read the story →</Link>
+              )}
+            </div>
+          </Reveal>
+        ))}
       </div>
     </section>
   );
