@@ -1012,3 +1012,11 @@ export const akboriaInProgress: DeliveryGroup[] = [
 ];
 
 export const countItems = (groups: DeliveryGroup[]) => groups.reduce((n, g) => n + g.items.length, 0);
+
+export type Plan = { name: string; price: number | null; note: string; features: string[]; featured?: boolean };
+
+export const plans: Plan[] = [
+  { name: "Starter", price: 4900, note: "For one company getting off spreadsheets", features: ["Up to 3 products", "25 users", "Brain AI · 200 questions / mo", "Email support"] },
+  { name: "Growth", price: 14900, note: "For multi-branch companies", features: ["Up to 8 products", "150 users", "Brain AI · unlimited", "Multi-branch & cost centres", "Priority support"], featured: true },
+  { name: "Enterprise", price: null, note: "For groups and large factories", features: ["All 14 products", "Unlimited users", "Group consolidation", "Dedicated success team", "On-prem or private cloud"] },
+];
