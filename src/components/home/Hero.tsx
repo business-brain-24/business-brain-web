@@ -42,9 +42,9 @@ const heroLogos = ["Northloom", "Riverstone", "Kaya Foods", "Bluegate", "Orbitex
 
 const prompts = [
   "Which products does a 300-person factory need?",
-  "Why is cash lower than last month?",
-  "Which items will run out before Friday?",
-  "Who hasn’t visited a shop this week?",
+  "How can Business Brain help my business?",
+  "Which modules do you have?",
+  "How long does setup take?",
 ];
 
 export default function Hero() {

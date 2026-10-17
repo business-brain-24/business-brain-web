@@ -8,12 +8,8 @@ import PageHero from "@/components/ui/PageHero";
 import { Button } from "@/components/ui/Button";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import CTA from "@/components/ui/CTA";
+import { plans } from "@/lib/data";
 
-const plans = [
-  { name: "Starter", price: 4900, note: "For one company getting off spreadsheets", features: ["Up to 3 products", "25 users", "Brain AI · 200 questions / mo", "Email support"] },
-  { name: "Growth", price: 14900, note: "For multi-branch companies", features: ["Up to 8 products", "150 users", "Brain AI · unlimited", "Multi-branch & cost centres", "Priority support"], featured: true },
-  { name: "Enterprise", price: null, note: "For groups and large factories", features: ["All 14 products", "Unlimited users", "Group consolidation", "Dedicated success team", "On-prem or private cloud"] },
-];
 
 export default function PricingPage() {
   const [yearly, setYearly] = useState(true);
