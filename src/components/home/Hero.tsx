@@ -379,7 +379,7 @@ function HeroAsk() {
 
   return (
     <Link
-      href="/ask"
+      href={`/ask?q=${encodeURIComponent(prompts[i])}`}
       className="group flex w-full items-center justify-between gap-3 rounded-[12px] border border-line bg-white py-2 pl-[18px] pr-2 shadow-[0_10px_30px_#0B0D120F] transition-shadow hover:shadow-[0_14px_40px_#0B0D121F]"
     >
       <span className="flex min-w-0 items-center gap-2.5">
