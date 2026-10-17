@@ -11,13 +11,14 @@ const cols = [
       ["Manufacturing", "/products/manufacturing"],
       ["HRMS & Payroll", "/products/hrms"],
       ["All products", "/products"],
+      ["All 55 apps", "/apps"],
     ],
   },
   {
     title: "Company",
     links: [
       ["About", "/about"],
-      ["Customers", "/customers/northloom"],
+      ["Success stories", "/customers"],
       ["Partners", "/partners"],
       ["Careers", "/careers"],
     ],
