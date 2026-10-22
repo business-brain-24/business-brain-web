@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from "framer-motion";
@@ -9,6 +8,7 @@ import clsx from "clsx";
 import { Button } from "@/components/ui/Button";
 import { SplitHeading } from "@/components/motion/Reveal";
 import { getProduct } from "@/lib/data";
+import LogoHub from "./LogoHub";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -51,7 +51,7 @@ const prompts = [
 export default function Hero() {
   return (
     <section className="px-2 pt-2 sm:px-3 sm:pt-3" style={{ fontFamily: "system-ui, sans-serif" }}>
-      <div className="relative mx-auto flex max-w-[1416px] flex-col items-center overflow-clip rounded-[20px] bg-[#F2F2F3]">
+      <div className="relative flex w-full flex-col items-center overflow-clip rounded-[20px] bg-[#F2F2F3]">
         <motion.div
           aria-hidden
           initial={{ opacity: 0 }}
@@ -218,14 +218,7 @@ function Stage() {
           style={{ x: brainX, y: brainY, rotate: brainR }}
         >
           <motion.div className="h-full w-full" animate={{ y: [0, -8, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}>
-            <Image
-              src="/hero/brain.jpg"
-              alt="Business Brain 24"
-              fill
-              priority
-              sizes="300px"
-              className="object-cover mix-blend-multiply [mask-image:radial-gradient(circle_at_50%_48%,#000_52%,transparent_70%)]"
-            />
+            <LogoHub className="h-full w-full p-6 drop-shadow-[0_24px_30px_rgba(11,13,18,0.14)]" />
           </motion.div>
         </motion.div>
 
@@ -317,7 +310,7 @@ function MobileStage() {
       <div className="relative h-[220px] w-[220px]">
         <div className="absolute inset-[-30px] rounded-full bg-[radial-gradient(circle,rgba(255,107,44,0.18)_0%,rgba(255,107,44,0)_65%)]" />
         <motion.div className="relative h-full w-full" animate={{ y: [0, -6, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}>
-          <Image src="/hero/brain.jpg" alt="Business Brain 24" fill sizes="220px" className="object-cover mix-blend-multiply [mask-image:radial-gradient(circle_at_50%_48%,#000_52%,transparent_70%)]" />
+          <LogoHub className="h-full w-full p-4" />
         </motion.div>
       </div>
       <div className="flex flex-wrap justify-center gap-2">
