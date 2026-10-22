@@ -68,9 +68,10 @@ export default function LogoHub({ className }: { className?: string }) {
         fill="none"
         stroke={ORANGE}
         strokeWidth={2}
-        initial={{ opacity: 0 }}
-        animate={{ r: [16, 34], opacity: [0.5, 0] }}
+        initial={{ opacity: 0, scale: 1 }}
+        animate={{ scale: [1, 2.1], opacity: [0.5, 0] }}
         transition={{ duration: 2.4, repeat: Infinity, ease: "easeOut", delay: 1.4 }}
+        style={{ transformOrigin: `${HUB.x}px ${HUB.y}px`, transformBox: "view-box" }}
       />
       <motion.g
         initial={{ scale: 0 }}
