@@ -10,12 +10,15 @@ import { groups, industries, products } from "@/lib/data";
 import { Button } from "@/components/ui/Button";
 import { getLenis } from "@/components/motion/SmoothScroll";
 
+export function BrandMark({ className }: { className?: string }) {
+  // eslint-disable-next-line @next/next/no-img-element
+  return <img src="/logo.svg" alt="" width={30} height={30} className={clsx("shrink-0", className)} />;
+}
+
 export function Logo({ className }: { className?: string }) {
   return (
     <Link href="/" className={clsx("flex items-center gap-2.5", className)} aria-label="Business Brain 24 home">
-      <span className="flex h-[26px] w-[26px] items-center justify-center rounded-[7px] bg-[linear-gradient(180deg,#FF6B2C_50%,#C2410C_100%)]">
-        <span className="h-2 w-2 rounded-full bg-white" />
-      </span>
+      <BrandMark className="h-[30px] w-[30px]" />
       <span className="text-[15px] font-medium tracking-[-0.01em]">Business Brain 24</span>
     </Link>
   );
