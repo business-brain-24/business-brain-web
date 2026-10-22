@@ -16,6 +16,7 @@ type Chat = { id: string; title: string; msgs: Msg[]; at: number };
 
 const ease = [0.22, 1, 0.36, 1] as const;
 const STORE = "bb-ask-chats";
+const CURRENT = "bb-ask-current";
 const uid = () => Math.random().toString(36).slice(2, 10);
 
 const TABS = [...dataStarters, { module: "About Business Brain", questions: starters }];
@@ -28,6 +29,30 @@ function load(): Chat[] {
     return [];
   }
 }
+/* A refresh mid-answer leaves a question without a reply; answers are deterministic, so fill it in. */
+function heal(c: Chat): Chat {
+  const last = c.msgs[c.msgs.length - 1];
+  if (last?.from !== "user") return c;
+  const reply = respond(last.text);
+  return { ...c, msgs: [...c.msgs, { id: uid(), from: "brain", text: reply.text, reply }] };
+}
+
+function readCurrent(): string | null {
+  try {
+    return window.localStorage.getItem(CURRENT);
+  } catch {
+    return null;
+  }
+}
+function saveCurrent(id: string | null) {
+  try {
+    if (id) window.localStorage.setItem(CURRENT, id);
+    else window.localStorage.removeItem(CURRENT);
+  } catch {
+    /* storage unavailable */
+  }
+}
+
 function save(chats: Chat[]) {
   try {
     window.localStorage.setItem(STORE, JSON.stringify(chats.slice(0, 30)));
@@ -54,10 +79,22 @@ export default function Ask() {
   const busy = thinking !== null || typing !== null;
   const empty = msgs.length === 0;
 
-  useEffect(() => setChats(load()), []);
+  const [ready, setReady] = useState(false);
+
+  // restore saved chats and reopen the one that was open, so a refresh never starts a new chat
   useEffect(() => {
-    if (chats.length) save(chats);
-  }, [chats]);
+    const saved = load().map(heal);
+    const open = readCurrent();
+    setChats(saved);
+    if (open && saved.some((c) => c.id === open)) setCurrent(open);
+    setReady(true);
+  }, []);
+  useEffect(() => {
+    if (ready) save(chats);
+  }, [chats, ready]);
+  useEffect(() => {
+    if (ready) saveCurrent(current);
+  }, [current, ready]);
 
   // keep the newest message in view
   useEffect(() => {
@@ -66,11 +103,11 @@ export default function Ask() {
   }, [msgs.length, thinking, typing, empty]);
 
   const ask = useCallback(
-    (q: string, regenerateOf?: string) => {
+    (q: string, regenerateOf?: string, fresh = false) => {
       const text = q.trim();
       if (!text || busy) return;
       const reply = respond(text);
-      const existing = current && chats.some((c) => c.id === current);
+      const existing = !fresh && current && chats.some((c) => c.id === current);
       const id = existing ? (current as string) : uid();
 
       setChats((all) => {
@@ -101,14 +138,16 @@ export default function Ask() {
     setTyping(null);
   };
 
-  // questions handed over from elsewhere on the site ("/ask?q=…") are asked straight away
+  // a question handed over from elsewhere on the site ("/ask?q=…") opens its own chat, once:
+  // it's dropped from the address so a refresh doesn't ask it again
   useEffect(() => {
+    if (!ready || handedOver.current) return;
+    handedOver.current = true;
     const q = new URLSearchParams(window.location.search).get("q");
-    if (q && !handedOver.current) {
-      handedOver.current = true;
-      ask(q);
-    }
-  }, [ask]);
+    if (!q) return;
+    window.history.replaceState(null, "", "/ask");
+    ask(q, undefined, true);
+  }, [ready, ask]);
 
   useEffect(() => {
     const el = input.current;
@@ -125,11 +164,7 @@ export default function Ask() {
   };
 
   const remove = (id: string) => {
-    setChats((all) => {
-      const next = all.filter((c) => c.id !== id);
-      if (!next.length) save([]);
-      return next;
-    });
+    setChats((all) => all.filter((c) => c.id !== id));
     if (current === id) setCurrent(null);
   };
 
