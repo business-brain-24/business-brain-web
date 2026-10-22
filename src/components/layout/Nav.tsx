@@ -82,6 +82,9 @@ export default function Nav() {
     { href: "/resources", label: "Resources" },
   ];
 
+  // the chat is a full-screen app with its own way home
+  if (pathname === "/ask") return null;
+
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-50 px-2 pt-2 sm:px-3 sm:pt-3" onMouseLeave={leave}>

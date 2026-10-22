@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUp, Check, Copy, Database, MessageSquare, PanelLeft, RotateCcw, Square, SquarePen, Trash2, X } from "lucide-react";
 import clsx from "clsx";
+import { Logo } from "@/components/layout/Nav";
 import { starters, type Reply } from "@/lib/brain-knowledge";
 import { dataStarters, respond } from "@/lib/brain-data";
 import { COMPANY } from "@/lib/demo-data";
@@ -172,24 +173,23 @@ export default function Ask() {
   );
 
   return (
-    <section className="flex h-[100svh] gap-2 px-2 pb-2 pt-[84px] sm:px-3 sm:pb-3 sm:pt-[92px]">
+    <section className="flex h-[100svh] gap-2 p-2 sm:gap-3 sm:p-3">
       {/* sidebar */}
       <AnimatePresence>
         {sidebar && (
-          <motion.div key="scrim" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setSidebar(false)} className="fixed inset-0 z-40 bg-ink/30 lg:hidden" />
+          <motion.div key="scrim" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setSidebar(false)} className="fixed inset-0 z-[55] bg-ink/30 lg:hidden" />
         )}
       </AnimatePresence>
       <aside
         className={clsx(
-          "z-50 flex w-[272px] shrink-0 flex-col rounded-[18px] bg-surface p-3 transition-transform duration-300",
+          // above the site header only while it is a slide-in drawer; on desktop the header's menus must cover it
+          "z-[56] flex w-[272px] shrink-0 flex-col rounded-[18px] bg-surface p-3 transition-transform duration-300 lg:z-auto",
           "fixed bottom-2 left-2 top-2 lg:static lg:translate-x-0",
           sidebar ? "translate-x-0" : "-translate-x-[110%]",
         )}
       >
         <div className="flex items-center justify-between px-1 pb-2">
-          <span className="flex items-center gap-2 text-[14px] font-medium">
-            <Avatar /> Brain
-          </span>
+          <Logo className="rounded-lg px-1 py-1" />
           <button onClick={() => setSidebar(false)} className="flex h-8 w-8 items-center justify-center rounded-lg text-muted hover:bg-white lg:hidden" aria-label="Close sidebar">
             <X size={16} />
           </button>
@@ -249,6 +249,9 @@ export default function Ask() {
           <button onClick={() => setSidebar(true)} className="flex h-9 w-9 items-center justify-center rounded-lg text-muted hover:bg-surface lg:hidden" aria-label="Open sidebar">
             <PanelLeft size={18} />
           </button>
+          <Link href="/" aria-label="Business Brain 24 home" className="flex h-8 w-8 items-center justify-center rounded-[8px] bg-[linear-gradient(180deg,#FF6B2C_50%,#C2410C_100%)] lg:hidden">
+            <span className="h-2 w-2 rounded-full bg-white" />
+          </Link>
           <p className="text-[15px] font-medium">Brain</p>
           <span className="truncate whitespace-nowrap rounded-full bg-surface px-2.5 py-1 text-[12px] text-muted">{COMPANY} · demo</span>
           <button onClick={newChat} className="ml-auto flex h-9 w-9 items-center justify-center rounded-lg text-muted hover:bg-surface lg:hidden" aria-label="New chat">
