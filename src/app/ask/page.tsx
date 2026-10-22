@@ -5,7 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUp, Check, Copy, Database, MessageSquare, PanelLeft, RotateCcw, Square, SquarePen, Trash2, X } from "lucide-react";
 import clsx from "clsx";
-import { Logo } from "@/components/layout/Nav";
+import { BrandMark, Logo } from "@/components/layout/Nav";
 import { starters, type Reply } from "@/lib/brain-knowledge";
 import { dataStarters, respond } from "@/lib/brain-data";
 import { COMPANY } from "@/lib/demo-data";
@@ -284,8 +284,8 @@ export default function Ask() {
           <button onClick={() => setSidebar(true)} className="flex h-9 w-9 items-center justify-center rounded-lg text-muted hover:bg-surface lg:hidden" aria-label="Open sidebar">
             <PanelLeft size={18} />
           </button>
-          <Link href="/" aria-label="Business Brain 24 home" className="flex h-8 w-8 items-center justify-center rounded-[8px] bg-[linear-gradient(180deg,#FF6B2C_50%,#C2410C_100%)] lg:hidden">
-            <span className="h-2 w-2 rounded-full bg-white" />
+          <Link href="/" aria-label="Business Brain 24 home" className="flex h-8 w-8 items-center justify-center lg:hidden">
+            <BrandMark className="h-8 w-8" />
           </Link>
           <p className="text-[15px] font-medium">Brain</p>
           <span className="truncate whitespace-nowrap rounded-full bg-surface px-2.5 py-1 text-[12px] text-muted">{COMPANY} · demo</span>
@@ -376,9 +376,7 @@ export default function Ask() {
 
 function Avatar() {
   return (
-    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[linear-gradient(180deg,#FF6B2C_50%,#C2410C_100%)]">
-      <span className="h-2 w-2 rounded-full bg-white" />
-    </span>
+    <BrandMark className="h-7 w-7" />
   );
 }
 
