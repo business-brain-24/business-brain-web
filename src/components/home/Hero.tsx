@@ -8,7 +8,14 @@ import clsx from "clsx";
 import { Button } from "@/components/ui/Button";
 import { SplitHeading } from "@/components/motion/Reveal";
 import { getProduct } from "@/lib/data";
+import dynamic from "next/dynamic";
 import LogoHub from "./LogoHub";
+
+// the 3D mark loads after the page; the animated SVG mark stands in until then
+const LogoNeuron = dynamic(() => import("@/components/three/LogoNeuron"), {
+  ssr: false,
+  loading: () => <LogoHub className="h-full w-full p-16" />,
+});
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -214,11 +221,11 @@ function Stage() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: focus ? 0.18 : 1, scale: focus ? 0.55 : 1 }}
           transition={engaged ? { duration: 0.6, ease } : { duration: 1.2, ease, delay: 0.3 }}
-          className="absolute left-[558px] top-[130px] h-[300px] w-[300px]"
+          className="absolute left-[498px] top-[80px] h-[420px] w-[420px]"
           style={{ x: brainX, y: brainY, rotate: brainR }}
         >
           <motion.div className="h-full w-full" animate={{ y: [0, -8, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}>
-            <LogoHub className="h-full w-full p-6 drop-shadow-[0_24px_30px_rgba(11,13,18,0.14)]" />
+            <LogoNeuron />
           </motion.div>
         </motion.div>
 
@@ -307,10 +314,10 @@ function MobileStage() {
         <Ring value={books} />
         <span className="text-[14px] font-medium text-white tabular-nums">Books {books}% closed</span>
       </div>
-      <div className="relative h-[220px] w-[220px]">
+      <div className="relative h-[300px] w-[300px]">
         <div className="absolute inset-[-30px] rounded-full bg-[radial-gradient(circle,rgba(255,107,44,0.18)_0%,rgba(255,107,44,0)_65%)]" />
         <motion.div className="relative h-full w-full" animate={{ y: [0, -6, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}>
-          <LogoHub className="h-full w-full p-4" />
+          <LogoNeuron />
         </motion.div>
       </div>
       <div className="flex flex-wrap justify-center gap-2">
