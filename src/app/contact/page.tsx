@@ -19,7 +19,7 @@ export default function Contact() {
         <Stagger className="space-y-3">
           {[
             [Mail, "hello@businessbrain24.com"],
-            [Phone, "+880 9600 000 024"],
+            [Phone, "+880 1332-840871"],
           ].map(([Icon, t]) => {
             const I = Icon as typeof Mail;
             return (

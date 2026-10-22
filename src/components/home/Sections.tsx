@@ -1,9 +1,10 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight, Check, ChevronRight, ShieldCheck } from "lucide-react";
@@ -12,32 +13,39 @@ import { Reveal, Stagger, StaggerItem, SplitHeading } from "@/components/motion/
 import { Button, Label } from "@/components/ui/Button";
 import { industries, products } from "@/lib/data";
 import { AskBox } from "./Hero";
+import type { RegionStat } from "@/components/three/BangladeshMap";
 
 gsap.registerPlugin(ScrollTrigger);
 
-/* ---------- About ---------- */
+/* ---------- What it does ---------- */
 export function About() {
-  const groups = [
-    { title: "Finance & Accounting", body: "General ledger, VAT, budgets and assets — one source of truth for every taka." },
-    { title: "Supply chain", body: "Procurement, inventory, sales and POS that update each other in real time." },
-    { title: "Operations", body: "Manufacturing, quality and projects with live costs and progress." },
-    { title: "People", body: "HRMS, payroll and attendance for teams from 50 to 20,000." },
+  const items = [
+    { title: "Ask your business", body: "Chat with your ERP data in Bangla or English and get numbers and charts back." },
+    { title: "Connect your own AI", body: "Our MCP server plugs ChatGPT or Claude into your ERP, within the access you set." },
+    { title: "One connected record", body: "HR, attendance, payroll, accounting, CRM, purchasing, inventory, manufacturing and projects share one database." },
+    { title: "AI insights", body: "Cross-module insights, demand forecasting and audit anomaly flags." },
+    { title: "Bangladesh compliance", body: "Labour law, income tax, VAT and supplementary duty configured into HR, payroll and finance." },
+    { title: "Branch and access control", body: "Company, branch and warehouse reporting with role-based access and activity tracking." },
   ];
   return (
     <section className="container-x py-24 sm:py-32">
       <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
         <div>
-          <Label>About Business Brain 24</Label>
-          <SplitHeading as="h2" text="Built for companies that outgrew spreadsheets and disconnected tools" className="h-section mt-3 max-w-[760px]" />
+          <Label>What it does</Label>
+          <SplitHeading as="h2" text="The AI-centric ERP for growing businesses" className="h-section mt-3 max-w-[760px]" />
+          <p className="mt-4 max-w-[620px] text-[16px] leading-[26px] text-muted">
+            One live record with AI at the core, configured to your workflows and Bangladesh rules.
+          </p>
         </div>
         <Reveal>
-          <Button href="/demo">Book a demo</Button>
+          <Button href="/demo">Book a fit session</Button>
         </Reveal>
       </div>
-      <Stagger className="mt-14 grid gap-x-12 gap-y-10 sm:grid-cols-2">
-        {groups.map((g) => (
+      <Stagger className="mt-14 grid gap-x-12 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+        {items.map((g, i) => (
           <StaggerItem key={g.title} className="border-t border-line pt-6">
-            <h3 className="text-[18px] font-medium">{g.title}</h3>
+            <span className="text-[13px] text-orange">0{i + 1}</span>
+            <h3 className="mt-2 text-[18px] font-medium">{g.title}</h3>
             <p className="mt-2 max-w-[460px] text-[15px] leading-[24px] text-muted">{g.body}</p>
           </StaggerItem>
         ))}
@@ -51,10 +59,11 @@ export function WhyUs() {
   const ref = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
   const items = [
-    { t: "Live, not end-of-month", b: "Every transaction updates every report the moment it happens. No exports, no waiting." },
-    { t: "Local by default", b: "Bangla & English, VAT/Mushak, bKash and labour-law payroll — no customisation needed." },
-    { t: "An AI that answers with your numbers", b: "Brain reads all 14 products, so its answers come from your real data, with the source shown." },
-    { t: "Pay per product, not per seat tier", b: "Start with one product and add the rest when you're ready. Your data is already there." },
+    { t: "Ask instead of waiting", b: "Ask a question instead of waiting for a report. The answer comes straight from live data." },
+    { t: "No more re-entry", b: "Reduce repeated data entry and disconnected spreadsheets." },
+    { t: "Clear approvals, one record", b: "Give teams clear approval paths and one shared record." },
+    { t: "Everything in one place", b: "See every branch, warehouse and field team in one place." },
+    { t: "The AI you already know", b: "Use the AI assistant you already know, connected to your own data." },
   ];
 
   useEffect(() => {
@@ -78,9 +87,9 @@ export function WhyUs() {
       <div ref={ref} className="container-x grid gap-12 md:grid-cols-[1fr_1.4fr] md:gap-20">
         <div className="md:sticky md:top-32 md:self-start">
           <Label>Why Business Brain 24</Label>
-          <h2 className="h-section mt-3">One database, not fifteen integrations.</h2>
+          <h2 className="h-section mt-3">More answers. Less chasing reports.</h2>
           <p className="mt-4 max-w-[380px] text-[16px] leading-[26px] text-muted">
-            Most ERPs bolt products together. Ours were built on one record from day one.
+            One live record and an AI that reads all of it, so the answer is always one question away.
           </p>
           <div className="mt-8 hidden gap-1.5 md:flex">
             {items.map((_, i) => (
@@ -142,13 +151,13 @@ export function Blocks() {
   return (
     <section className="container-x grid items-center gap-14 overflow-x-clip py-24 sm:py-32 lg:grid-cols-2">
       <div>
-        <Label>Modular by design</Label>
+        <Label>Modular implementation</Label>
         <h2 className="h-section mt-3">Every product is a block. The brain holds them together.</h2>
         <p className="mt-4 max-w-[460px] text-[16px] leading-[26px] text-muted">
-          Start with Accounting or Inventory. Add Payroll next quarter. Every block plugs into the same brain — no migrations, no re-entry.
+          Select the modules you need now and add the rest later. Every module writes to the same live record — no re-entry, no disconnected spreadsheets.
         </p>
         <ul className="mt-6 space-y-3 text-[15px]">
-          {["Activate a product in one click", "Data flows in from day one", "One login, one permission model"].map((t) => (
+          {["Select only the modules you need", "Configured and customised to your workflows", "One login, role-based access"].map((t) => (
             <li key={t} className="flex items-center gap-3">
               <span className="flex h-5 w-5 items-center justify-center rounded-full bg-orange-soft text-orange">
                 <Check size={12} strokeWidth={3} />
@@ -182,56 +191,36 @@ function Tile({ t }: { t: string }) {
   );
 }
 
-/* ---------- Compliance counters ---------- */
+/* ---------- Built for your business ---------- */
 export function Compliance() {
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (!ref.current) return;
-    const ctx = gsap.context(() => {
-      gsap.utils.toArray<HTMLElement>("[data-count]").forEach((el) => {
-        const end = Number(el.dataset.count);
-        const obj = { v: 0 };
-        gsap.to(obj, {
-          v: end,
-          duration: 1.6,
-          ease: "power2.out",
-          scrollTrigger: { trigger: el, start: "top 85%" },
-          onUpdate: () => {
-            el.textContent = Math.round(obj.v).toLocaleString();
-          },
-        });
-      });
-    }, ref);
-    return () => ctx.revert();
-  }, []);
-
-  const stats = [
-    { n: 1200, s: "+", l: "companies" },
-    { n: 460000, s: "", l: "employees paid monthly" },
-    { n: 99, s: ".9%", l: "uptime" },
-    { n: 6, s: "", l: "countries" },
+  const deploy = ["Cloud or on-premise deployment", "Modular implementation", "Own MCP server", "Role-based access", "Deployment options agreed during scoping"];
+  const rules = [
+    { t: "Labour law", b: "Leave, overtime and service rules in HR and payroll." },
+    { t: "Income tax", b: "Tax deductions calculated in every payroll run." },
+    { t: "VAT", b: "Configured into purchasing, sales and finance." },
+    { t: "Supplementary duty", b: "Applied where your products and imports need it." },
   ];
   return (
-    <section ref={ref} className="container-x pb-24 sm:pb-32">
+    <section className="container-x pb-24 sm:pb-32">
       <div className="grid gap-10 border-t border-line pt-10 lg:grid-cols-[1fr_2fr]">
         <div className="flex items-start gap-3">
-          <ShieldCheck className="mt-1 text-orange" size={20} />
-          <p className="text-[18px] font-medium leading-[26px]">Your payroll and books are held to audited standards.</p>
+          <ShieldCheck className="mt-1 shrink-0 text-orange" size={20} />
+          <div>
+            <p className="text-[18px] font-medium leading-[26px]">Built for your business.</p>
+            <p className="mt-2 text-[15px] leading-[24px] text-muted">Configured to your workflows and Bangladesh rules.</p>
+          </div>
         </div>
-        <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
-          {stats.map((s) => (
-            <div key={s.l}>
-              <p className="text-[32px] font-medium tracking-[-0.03em] sm:text-[40px]">
-                <span data-count={s.n}>0</span>
-                {s.s}
-              </p>
-              <p className="mt-1 text-[13px] text-muted">{s.l}</p>
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {rules.map((r) => (
+            <div key={r.t}>
+              <p className="text-[20px] font-medium tracking-[-0.02em]">{r.t}</p>
+              <p className="mt-1 text-[13px] leading-[20px] text-muted">{r.b}</p>
             </div>
           ))}
         </div>
       </div>
       <div className="mt-8 flex flex-wrap gap-2">
-        {["ISO 27001", "SOC 2 Type II", "GDPR-ready", "Local data residency", "Daily encrypted backups"].map((b) => (
+        {deploy.map((b) => (
           <span key={b} className="rounded-full border border-line px-3 py-1.5 text-[13px] text-muted">
             {b}
           </span>
@@ -249,10 +238,10 @@ export function ProductsBento() {
       <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
         <div>
           <Label>Products</Label>
-          <SplitHeading as="h2" text="14 products. One nervous system." className="h-section mt-3" />
+          <SplitHeading as="h2" text="Every module. One live record." className="h-section mt-3" />
         </div>
         <p className="max-w-[400px] text-[16px] leading-[26px] text-muted">
-          Start with one. Add the next in a click. Every product shares the same data, users and brain.
+          HR, attendance, payroll, accounting, CRM, purchasing, inventory, manufacturing and projects share one database.
         </p>
       </div>
 
@@ -323,8 +312,8 @@ export function ProductsBento() {
               <ArrowUpRight size={18} />
             </span>
             <div>
-              <p className="text-[28px] font-medium leading-[32px] tracking-[-0.03em] sm:text-[32px]">See all 14 products</p>
-              <p className="mt-3 text-[14px] leading-[22px] text-white/65">Plus CRM, AI & BI, mobile apps and 40+ integrations.</p>
+              <p className="text-[28px] font-medium leading-[32px] tracking-[-0.03em] sm:text-[32px]">See all modules</p>
+              <p className="mt-3 text-[14px] leading-[22px] text-white/65">Plus CRM, projects, Watch Tower and our own MCP server.</p>
             </div>
           </Link>
         </StaggerItem>
@@ -346,13 +335,10 @@ function BentoText({ label, title, body }: { label: string; title: string; body:
 /* ---------- Brain AI chat ---------- */
 export function BrainAI() {
   const messages = [
-    { from: "user", text: "Why is cash lower than last month?" },
-    {
-      from: "brain",
-      text: "Cash is down ৳ 1.2 Cr. Three reasons: Rahim Traders is 40 days late (৳ 38 L), October overtime ran 31% higher, and a ৳ 42 L yarn PO was paid early.",
-    },
-    { from: "user", text: "Hold new orders for Rahim Traders." },
-    { from: "brain", text: "Done. Credit hold applied in Sales. I've let Jamal know before tomorrow's route." },
+    { from: "user", text: "What were yesterday's sales by branch?" },
+    { from: "brain", text: "৳ 48.6 L across 6 branches. Gulshan led with ৳ 12.4 L; Sylhet ran 18% below its daily average." },
+    { from: "user", text: "গতকাল কোন পণ্য সবচেয়ে বেশি বিক্রি হয়েছে?" },
+    { from: "brain", text: "মিষ্টি দই — ৪,২১০ ইউনিট, গত সপ্তাহের গড়ের চেয়ে ১২% বেশি।" },
   ];
   return (
     <section className="px-2 sm:px-3">
@@ -360,13 +346,13 @@ export function BrainAI() {
         <div className="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-[radial-gradient(circle,rgba(255,107,44,0.25),transparent_65%)]" />
         <div className="container-x relative grid items-center gap-14 lg:grid-cols-2">
           <div>
-            <Label>Brain AI</Label>
-            <h2 className="h-section mt-3">Talk to your business like it&apos;s a colleague.</h2>
+            <Label>Ask your business</Label>
+            <h2 className="h-section mt-3">Ask in plain words. Get numbers and charts back.</h2>
             <p className="mt-4 max-w-[440px] text-[16px] leading-[26px] text-white/65">
-              Brain reads every product in real time. Ask in Bangla or English, get the answer with its source, and let it act — with your approval.
+              Chat with your ERP data in Bangla or English. Our own MCP server also lets you connect ChatGPT or Claude to your ERP, within the access you set.
             </p>
             <ul className="mt-8 space-y-3 text-[15px] text-white/85">
-              {["Answers with your real numbers", "Takes action with your approval", "Respects every user's permissions"].map((t) => (
+              {["Answers and charts from your live data", "Connect ChatGPT or Claude through our MCP server", "Every answer respects each user's access"].map((t) => (
                 <li key={t} className="flex items-center gap-3">
                   <Check size={16} className="text-orange" /> {t}
                 </li>
@@ -374,7 +360,7 @@ export function BrainAI() {
             </ul>
             <div className="mt-10">
               <Button href="/ask" variant="light">
-                Try Brain AI
+                Ask your business
               </Button>
             </div>
           </div>
@@ -495,6 +481,206 @@ export function Reviews() {
           </Reveal>
         ))}
       </div>
+    </section>
+  );
+}
+
+/* ---------- Watch Tower: live operations map ---------- */
+const BangladeshMap = dynamic(() => import("@/components/three/BangladeshMap"), {
+  ssr: false,
+  loading: () => <div className="flex h-full items-center justify-center text-[13px] text-white/40">Loading map…</div>,
+});
+
+const regions: RegionStat[] = [
+  { name: "Rangpur", pct: 94, orders: 212, reps: 18, top: "Sohel Rana" },
+  { name: "Rajshahi", pct: 101, orders: 264, reps: 21, top: "Karim Hossain" },
+  { name: "Mymensingh", pct: 97, orders: 158, reps: 14, top: "Mitu Akter" },
+  { name: "Sylhet", pct: 81, orders: 96, reps: 9, top: "Tania Begum" },
+  { name: "Dhaka", pct: 108, orders: 611, reps: 46, top: "Rahim Uddin" },
+  { name: "Khulna", pct: 99, orders: 233, reps: 19, top: "Jamal Sheikh" },
+  { name: "Barishal", pct: 92, orders: 121, reps: 11, top: "Ruma Das" },
+  { name: "Chattogram", pct: 104, orders: 402, reps: 32, top: "Nusrat Jahan" },
+];
+
+const liveOrders = [
+  { region: "Dhaka", text: "Order #8841 · ৳ 64,200", who: "Rahim · SR" },
+  { region: "Chattogram", text: "Order #8842 · ৳ 18,900", who: "Nusrat · SR" },
+  { region: "Rajshahi", text: "Order #8843 · ৳ 41,500", who: "Karim · SR" },
+  { region: "Sylhet", text: "Order #8844 · ৳ 9,750", who: "Tania · SR" },
+  { region: "Khulna", text: "Order #8845 · ৳ 27,300", who: "Jamal · SR" },
+  { region: "Rangpur", text: "Order #8846 · ৳ 33,100", who: "Sohel · SR" },
+];
+
+const leaders = [
+  ["Rahim Uddin", "Dhaka", "৳ 4.8 L"],
+  ["Nusrat Jahan", "Chattogram", "৳ 4.1 L"],
+  ["Karim Hossain", "Rajshahi", "৳ 3.6 L"],
+];
+
+export function WatchTower() {
+  const [tick, setTick] = useState(0);
+  const [selected, setSelected] = useState<string | null>(null);
+  useEffect(() => {
+    const t = window.setInterval(() => setTick((v) => v + 1), 2600);
+    return () => window.clearInterval(t);
+  }, []);
+  const o = liveOrders[tick % liveOrders.length];
+  const order = { ...o, key: tick };
+  const sel = regions.find((r) => r.name === selected);
+
+  return (
+    <section className="container-x py-24 sm:py-32">
+      <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+        <div>
+          <Label>Watch Tower</Label>
+          <SplitHeading as="h2" text="Your AI control centre." className="h-section mt-3" />
+          <p className="mt-4 max-w-[560px] text-[16px] leading-[26px] text-muted">
+            An interactive, live map of your whole operation: field force, branches, orders and trucks. New orders pop up as they happen, leaderboards show
+            your top performers, and you can ask the AI what&apos;s going on. Watch Tower comes with Business Brain 24.
+          </p>
+        </div>
+        <Reveal>
+          <Button href="/demo?session=watch-tower">Book a Watch Tower demo</Button>
+        </Reveal>
+      </div>
+
+      <Reveal className="mt-12 grid gap-4 rounded-[20px] bg-ink p-3 text-white sm:rounded-[28px] sm:p-4 lg:grid-cols-[1.7fr_1fr]">
+        <div className="relative aspect-[4/5] overflow-hidden rounded-[16px] bg-[radial-gradient(ellipse_at_50%_40%,#1D2129_0%,#111318_75%)] sm:aspect-[16/12] lg:aspect-auto lg:min-h-[560px]">
+          <div className="absolute inset-0 opacity-30 [background-image:radial-gradient(rgba(255,255,255,0.14)_1px,transparent_1px)] [background-size:18px_18px]" />
+          <div className="absolute inset-0">
+            <BangladeshMap stats={regions} selected={selected} onSelect={setSelected} order={order} />
+          </div>
+          <span className="pointer-events-none absolute left-4 top-4 flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[11px] font-medium text-white/80">
+            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-green" /> Live
+          </span>
+          <div className="pointer-events-none absolute bottom-4 left-4 flex flex-col gap-1">
+            <span className="text-[11px] text-white/45">
+              <span className="hidden [@media(pointer:fine)]:inline">Drag to tilt · </span>Click a division
+            </span>
+            <span className="text-[10px] text-white/25">Boundaries: geoBoundaries, CC BY 4.0</span>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-3">
+          <div className="min-h-[188px] rounded-[16px] bg-white/[0.05] p-5">
+            <AnimatePresence mode="wait" initial={false}>
+              {sel ? (
+                <motion.div key={sel.name} initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }} transition={{ duration: 0.25 }}>
+                  <div className="flex items-center justify-between">
+                    <p className="text-[12px] font-medium text-orange">{sel.name} division · today</p>
+                    <button type="button" onClick={() => setSelected(null)} className="text-[12px] text-white/50 hover:text-white">
+                      All regions
+                    </button>
+                  </div>
+                  <p className={clsx("mt-3 text-[34px] font-medium tracking-[-0.03em]", sel.pct < 90 ? "text-[#F97066]" : "text-white")}>
+                    {sel.pct}%<span className="ml-2 text-[13px] font-normal tracking-normal text-white/50">of target</span>
+                  </p>
+                  <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-white/10">
+                    <div className={clsx("h-full rounded-full", sel.pct < 90 ? "bg-[#F04438]" : "bg-green")} style={{ width: `${Math.min(sel.pct, 100)}%` }} />
+                  </div>
+                  <dl className="mt-4 grid grid-cols-3 gap-3 text-[13px]">
+                    <div>
+                      <dt className="text-white/45">Orders</dt>
+                      <dd className="mt-0.5 tabular-nums">{sel.orders}</dd>
+                    </div>
+                    <div>
+                      <dt className="text-white/45">Reps active</dt>
+                      <dd className="mt-0.5 tabular-nums">{sel.reps}</dd>
+                    </div>
+                    <div>
+                      <dt className="text-white/45">Top rep</dt>
+                      <dd className="mt-0.5 truncate">{sel.top}</dd>
+                    </div>
+                  </dl>
+                </motion.div>
+              ) : (
+                <motion.div key="all" initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }} transition={{ duration: 0.25 }}>
+                  <p className="text-[12px] font-medium text-orange">Today&apos;s leaderboard</p>
+                  <ul className="mt-3 space-y-2.5">
+                    {leaders.map(([n, r, v], i) => (
+                      <li key={n} className="flex items-center justify-between gap-3 text-[14px]">
+                        <span className="flex min-w-0 items-center gap-3">
+                          <span className="w-4 text-white/40">{i + 1}</span>
+                          <button type="button" onClick={() => setSelected(r)} className="truncate text-left hover:text-orange">
+                            {n}
+                          </button>
+                          <span className="hidden text-[12px] text-white/40 sm:inline">{r}</span>
+                        </span>
+                        <span className="tabular-nums text-white/80">{v}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+          <div className="flex flex-1 flex-col justify-end gap-3 rounded-[16px] bg-white/[0.05] p-5">
+            <button
+              type="button"
+              onClick={() => setSelected("Sylhet")}
+              className="ml-auto max-w-[90%] rounded-[12px] bg-white px-3.5 py-2.5 text-left text-[13px] text-ink transition-transform hover:-translate-y-0.5"
+            >
+              Which region is behind target today?
+            </button>
+            <p className="max-w-[92%] rounded-[12px] bg-white/[0.08] px-3.5 py-2.5 text-[13px] leading-[20px] text-white/90">
+              <span className="mb-1 block text-[11px] font-medium text-orange">Watch Tower AI</span>
+              Sylhet is at 81% of today&apos;s target. 3 of 9 reps haven&apos;t logged an order since noon.
+            </p>
+          </div>
+        </div>
+      </Reveal>
+    </section>
+  );
+}
+
+/* ---------- Use cases ---------- */
+export function UseCases() {
+  const cases = [
+    { t: "Owner’s daily check", b: "“What were yesterday’s sales by branch?” answered from live data." },
+    { t: "Payroll on Bangladesh rules", b: "Attendance, leave and tax deductions in one payroll run." },
+    { t: "Purchase to payment", b: "Requisition, approval, purchase order, goods receipt and stock in one trail." },
+    { t: "Inventory planning", b: "Stock levels across warehouses with demand forecasts to plan ahead." },
+    { t: "Field sales control", b: "Sales reps, orders and deliveries tracked live on Watch Tower." },
+    { t: "Manufacturing", b: "Production, raw materials and finished goods linked to sales and stock." },
+  ];
+  return (
+    <section className="bg-surface py-24 sm:py-32">
+      <div className="container-x">
+        <Label>Use cases</Label>
+        <SplitHeading as="h2" text="What it looks like on a normal day." className="h-section mt-3 max-w-[640px]" />
+        <Stagger className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {cases.map((c, i) => (
+            <StaggerItem key={c.t} className="flex min-h-[180px] flex-col justify-between rounded-[20px] bg-white p-6 shadow-[var(--shadow-soft)] sm:p-7">
+              <span className="text-[13px] text-orange">0{i + 1}</span>
+              <div>
+                <h3 className="mt-6 text-[19px] font-medium tracking-[-0.01em]">{c.t}</h3>
+                <p className="mt-2 text-[15px] leading-[24px] text-muted">{c.b}</p>
+              </div>
+            </StaggerItem>
+          ))}
+        </Stagger>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- How it works ---------- */
+export function HowItWorks() {
+  const steps = ["Assess requirements", "Select modules", "Configure and customise", "Connect AI and MCP", "Migrate and test", "Train and launch"];
+  return (
+    <section className="container-x py-24 sm:py-32">
+      <Label>How it works</Label>
+      <SplitHeading as="h2" text="From first call to go-live in six steps." className="h-section mt-3 max-w-[640px]" />
+      <Stagger className="mt-12 grid gap-px overflow-hidden rounded-[20px] border border-line bg-line sm:grid-cols-2 lg:grid-cols-6">
+        {steps.map((s, i) => (
+          <StaggerItem key={s} className="flex min-h-[150px] flex-col justify-between bg-white p-6">
+            <span className={clsx("flex h-8 w-8 items-center justify-center rounded-full text-[13px] font-medium", i === 3 ? "bg-orange text-white" : "bg-surface text-ink")}>
+              {i + 1}
+            </span>
+            <p className="mt-6 text-[16px] font-medium leading-[22px]">{s}</p>
+          </StaggerItem>
+        ))}
+      </Stagger>
     </section>
   );
 }

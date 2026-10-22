@@ -23,7 +23,7 @@ export default function Careers() {
   ];
   return (
     <>
-      <PageHero label="Careers · We're hiring" title="Help 1,200 companies think faster." sub="Join 180 engineers, designers and operators building the ERP South Asia actually wants to use." center>
+      <PageHero label="Careers · We're hiring" title="Put AI at the core of every business." sub="Join 180 engineers, designers and operators building the ERP South Asia actually wants to use." center>
         <div className="flex justify-center">
           <Button href="#roles">See {roles.length} open roles</Button>
         </div>

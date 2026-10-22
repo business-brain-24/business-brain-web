@@ -1,12 +1,30 @@
-import { appCatalog, appCount, groups, industries, plans, products, stories } from "@/lib/data";
+import { appCatalog, appCount, contact, groups, industries, plans, products, stories } from "@/lib/data";
 
 /* A small, rule-based "assistant" that answers questions about Business Brain 24
    from the site's own data. Demo only — no network calls. */
+
+export type Unit = "bdt" | "count" | "pct" | "kg" | "tonnes" | "min" | "days";
+export type Chart = {
+  kind: "bar" | "hbar" | "stacked" | "line" | "area" | "pie";
+  title: string;
+  unit: Unit;
+  /** one row per x value: { label, [series]: value } */
+  data: Record<string, string | number>[];
+  series: string[];
+  note?: string;
+};
+export type Kpi = { label: string; value: string; delta?: string; good?: boolean };
+export type Table = { title: string; columns: string[]; rows: string[][] };
 
 export type Reply = {
   text: string;
   bullets?: string[];
   stats?: { value: string; label: string }[];
+  kpis?: Kpi[];
+  charts?: Chart[];
+  tables?: Table[];
+  /** answer built from the sample company data */
+  demo?: boolean;
   links?: { label: string; href: string }[];
   follow: string[];
 };
@@ -48,9 +66,9 @@ const stop = new Set(["there", "their", "which", "about", "would", "could", "sho
 
 export const starters = [
   "What is Business Brain 24?",
-  "Which modules do you have?",
+  "Can I connect ChatGPT or Claude?",
+  "What is Watch Tower?",
   "How can it help my business?",
-  "How much does it cost?",
 ];
 
 export function answer(raw: string): Reply {
@@ -62,48 +80,93 @@ export function answer(raw: string): Reply {
       text: "There are three plans. Every plan includes Brain AI, and yearly billing saves about 17%.",
       bullets: plans.map((p) => `${p.name} — ${p.price ? `৳${p.price.toLocaleString()} / month` : "custom price"} · ${p.features.slice(0, 2).join(", ")}`),
       links: [{ label: "See full pricing", href: "/pricing" }],
-      follow: ["Which modules do you have?", "How long does setup take?", "Book a demo"],
+      follow: ["Which modules do you have?", "How does it work?", "Book a fit session"],
     };
   }
 
   // demo / contact
-  if (has(q, "demo", "contact", "talk to", "sales team", "call", "meeting")) {
+  if (has(q, "demo", "contact", "talk to", "sales team", "call", "meeting", "fit session", "book")) {
     return {
-      text: "Happy to show you. A demo takes 30 minutes with a specialist from your industry, and you'll get a price estimate at the end.",
+      text: `Book a free AI-ERP fit session and we'll map your operation to the right modules. Want to see your own operation live? Book a Watch Tower demo. You can also call ${contact.phone}.`,
       links: [
-        { label: "Book a demo", href: "/demo" },
-        { label: "Contact us", href: "/contact" },
+        { label: "Book a free AI-ERP fit session", href: "/demo" },
+        { label: "Book a Watch Tower demo", href: "/demo?session=watch-tower" },
       ],
-      follow: ["How much does it cost?", "How long does setup take?", "Who uses Business Brain?"],
+      follow: ["What is Watch Tower?", "How does it work?", "Can I connect ChatGPT or Claude?"],
+    };
+  }
+
+  // MCP / bring your own AI
+  if (has(q, "mcp", "chatgpt", "claude", "openai", "own ai", "my ai", "connect ai", /gpt/)) {
+    return {
+      text: "Business Brain 24 has its own MCP server. It plugs ChatGPT or Claude into your ERP, so you can use the AI assistant you already know with your own data — within the access you set.",
+      bullets: [
+        "Works with ChatGPT and Claude",
+        "Answers come from your live ERP data",
+        "Each user only reaches what their role allows",
+        "Connected during setup, in the “Connect AI and MCP” step",
+      ],
+      links: [{ label: "Book a free AI-ERP fit session", href: "/demo" }],
+      follow: ["What is Watch Tower?", "Is my data secure?", "How does it work?"],
+    };
+  }
+
+  // Watch Tower
+  if (has(q, "watch tower", "watchtower", "control centre", "control center", "live map", "leaderboard", "truck", "field force", "field sales")) {
+    return {
+      text: "Watch Tower is your AI control centre: an interactive, live map of your whole operation — field force, branches, orders and trucks. It comes with Business Brain 24.",
+      bullets: [
+        "New orders pop up on the map as they happen",
+        "Leaderboards show your top performers",
+        "Ask the AI questions like “Which region is behind target today?”",
+      ],
+      links: [{ label: "Book a Watch Tower demo", href: "/demo?session=watch-tower" }],
+      follow: ["Can I connect ChatGPT or Claude?", "Which modules do you have?", "Book a fit session"],
+    };
+  }
+
+  // Bangladesh compliance
+  if (has(q, "bangladesh", "labour", "labor", "income tax", "supplementary duty", "compliance", "nbr", "mushak")) {
+    return {
+      text: "Business Brain 24 is configured for Bangladesh. Labour law, income tax, VAT and supplementary duty are built into HR, payroll and finance.",
+      bullets: [
+        "Payroll on Bangladesh rules — attendance, leave and tax deductions in one run",
+        "VAT and supplementary duty in purchasing, sales and finance",
+        "Ask questions in Bangla or English",
+      ],
+      links: [{ label: "Explore Payroll", href: "/products/payroll" }],
+      follow: ["How does it work?", "Which modules do you have?", "Book a fit session"],
     };
   }
 
   // implementation / migration
-  if (has(q, "setup", "set up", "implement", "go live", "go-live", "onboard", "migrat", "tally", "quickbooks", "excel", "how long", "training")) {
+  if (has(q, "setup", "set up", "implement", "go live", "go-live", "onboard", "migrat", "tally", "quickbooks", "excel", "how long", "training", "how does it work", "process")) {
     return {
-      text: "Most teams go live in 4–6 weeks. We migrate your data, configure your workflows and train your people — you don't need an IT team.",
+      text: "Implementation is modular — we configure Business Brain 24 to your workflows in six steps:",
       bullets: [
-        "Week 1 — discovery and data mapping",
-        "Weeks 2–3 — import masters and opening balances (from Tally, QuickBooks or Excel)",
-        "Weeks 3–4 — configure approvals, reports and roles",
-        "Weeks 5–6 — training, parallel run and go-live",
+        "1. Assess requirements",
+        "2. Select modules",
+        "3. Configure and customise",
+        "4. Connect AI and MCP",
+        "5. Migrate and test",
+        "6. Train and launch",
       ],
-      links: [{ label: "Book a demo", href: "/demo" }],
-      follow: ["How much does it cost?", "Is my data secure?", "Who uses Business Brain?"],
+      links: [{ label: "Book a free AI-ERP fit session", href: "/demo" }],
+      follow: ["Is my data secure?", "Can I connect ChatGPT or Claude?", "Who uses Business Brain?"],
     };
   }
 
   // Brain AI
   if (has(q, /\bai\b/, "assistant", /\bchat/, /\bask\b/, "gpt", "insight")) {
     return {
-      text: "Brain AI reads across every product, so you can ask a plain question and get the answer with the numbers and the reason behind them.",
+      text: "AI is at the core of Business Brain 24. Ask questions in plain words — in Bangla or English — and get answers and charts straight from your data.",
       bullets: [
-        "Ask in English or Bangla — “Why is cash lower than last month?”",
-        "Proactive alerts for late payments, low stock and overspending",
-        "Drafts POs, reminders and reports for you to approve",
+        "“What were yesterday’s sales by branch?” answered from live data",
+        "Cross-module insights, demand forecasting and audit anomaly flags",
+        "Connect ChatGPT or Claude through our own MCP server",
         "Only sees what each user is allowed to see",
       ],
-      follow: ["Is my data secure?", "Which modules do you have?", "How much does it cost?"],
+      follow: ["Can I connect ChatGPT or Claude?", "What is Watch Tower?", "Is my data secure?"],
     };
   }
 
@@ -125,14 +188,13 @@ export function answer(raw: string): Reply {
   // security
   if (has(q, "secur", "safe", "data", "privacy", "cloud", "on-prem", "backup", "hosting")) {
     return {
-      text: "Your data stays yours. Business Brain runs on secure cloud hosting, or on-premise for Enterprise customers.",
+      text: "Your data stays yours. Business Brain 24 runs in the cloud or on-premise — the deployment option is agreed during scoping.",
       bullets: [
-        "Role-based access down to branch and field level",
-        "Full audit trail on every change",
-        "Encrypted in transit and at rest, with daily backups",
-        "Private cloud or on-prem available on Enterprise",
+        "Role-based access with activity tracking",
+        "Company, branch and warehouse-level reporting",
+        "AI and MCP connections only reach what each user's role allows",
       ],
-      follow: ["How long does setup take?", "How much does it cost?", "Book a demo"],
+      follow: ["How does it work?", "Can I connect ChatGPT or Claude?", "Book a fit session"],
     };
   }
 
@@ -146,12 +208,8 @@ export function answer(raw: string): Reply {
         "Procurement — requisitions, approvals and vendors",
         "Accounting — every transaction posts to one ledger automatically",
       ],
-      stats: [
-        { value: "4", label: "starter products" },
-        { value: "4–6 weeks", label: "to go live" },
-      ],
       links: [{ label: "Explore all products", href: "/products" }],
-      follow: ["What about Manufacturing?", "How much does it cost?", "How long does setup take?"],
+      follow: ["What about Manufacturing?", "How much does it cost?", "How does it work?"],
     };
   }
 
@@ -184,7 +242,7 @@ export function answer(raw: string): Reply {
       bullets: industry.bundle.map((b) => `${b.name} — ${b.note}`),
       stats: [industry.stat],
       links: [{ label: `Business Brain for ${industry.name}`, href: `/industries/${industry.slug}` }],
-      follow: ["How much does it cost?", "How long does setup take?", "Who uses Business Brain?"],
+      follow: ["How much does it cost?", "How does it work?", "Who uses Business Brain?"],
     };
   }
 
@@ -211,43 +269,33 @@ export function answer(raw: string): Reply {
   // benefits / ROI
   if (has(q, "benefit", "help", "why", "roi", "save", "advantage", "value", "improve", "worth")) {
     return {
-      text: "Most companies come to us running on spreadsheets and five or six disconnected tools. With one database and an AI on top, the same work takes a fraction of the time.",
+      text: "More answers. Less chasing reports.",
       bullets: [
-        "One source of truth — sales, stock, people and money update each other in real time",
-        "Faster month-end — books close themselves as the business runs",
-        "Fewer people chasing numbers — ask Brain AI instead of building reports",
-        "Tighter control — approvals, budgets and audit trails on every transaction",
-        "Grows with you — add products, branches and companies without re-implementing",
+        "Ask a question instead of waiting for a report",
+        "Reduce repeated data entry and disconnected spreadsheets",
+        "Give teams clear approval paths and one shared record",
+        "See every branch, warehouse and field team in one place",
+        "Use the AI assistant you already know, connected to your own data",
       ],
-      stats: [
-        { value: "80%", label: "faster month-end close" },
-        { value: "−18%", label: "purchase cost" },
-        { value: "6 → 1", label: "tools replaced" },
-      ],
-      follow: ["Who uses Business Brain?", "How long does setup take?", "How much does it cost?"],
+      follow: ["What is Watch Tower?", "How does it work?", "Who uses Business Brain?"],
     };
   }
 
   // customers
   if (has(q, "customer", "client", "who use", "case stud", "success", "akboria", "urmi", "reference")) {
     return {
-      text: "Business Brain runs finance, operations and people for 1,200+ companies. A couple of recent ones:",
+      text: "A couple of the businesses running on Business Brain 24:",
       bullets: stories.map((s) => `${s.company} (${s.industry}) — ${s.summary}`),
       links: [{ label: "Read success stories", href: "/customers" }],
-      follow: ["Is there a mobile app?", "How long does setup take?", "Book a demo"],
+      follow: ["What is Watch Tower?", "How does it work?", "Book a fit session"],
     };
   }
 
   // what is it / overview / greeting
   if (has(q, "what is", "about", "overview", "explain", "business brain", "hello", "hi ", "hey")) {
     return {
-      text: "Business Brain 24 is an ERP for growing companies: accounting, procurement, inventory, sales, manufacturing, HR and payroll on one database — with an AI that understands all of it.",
-      stats: [
-        { value: String(products.length), label: "core products" },
-        { value: String(appCount), label: "apps" },
-        { value: "1,200+", label: "companies" },
-      ],
-      follow: ["Which modules do you have?", "How can it help my business?", "How much does it cost?"],
+      text: "Business Brain 24 is the AI-centric ERP for growing businesses. It brings HR, payroll, finance, purchasing, inventory, sales and manufacturing into one live record, with AI at the core — and our own MCP server lets you connect ChatGPT or Claude. Configured to your workflows and Bangladesh rules.",
+      follow: ["Can I connect ChatGPT or Claude?", "What is Watch Tower?", "How can it help my business?"],
     };
   }
 

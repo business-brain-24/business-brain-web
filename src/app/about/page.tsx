@@ -7,21 +7,21 @@ export const metadata: Metadata = { title: "About" };
 
 export default function About() {
   const stats = [
-    ["1,200+", "companies run on us"],
-    ["4.6L", "employees paid monthly"],
-    ["180", "people on the team"],
-    ["6", "countries served"],
+    ["AI", "at the core"],
+    ["MCP", "our own server, for ChatGPT & Claude"],
+    ["1", "live record for every module"],
+    ["BD", "labour law, tax and VAT configured"],
   ];
   const beliefs = [
     ["One source of truth", "Data entered once should power every decision in the company."],
     ["Built with operators", "Every feature starts on a factory floor, a store counter or a finance desk."],
-    ["Trust is the product", "Your payroll, books and secrets are safe with us — ISO 27001, local data residency."],
+    ["Trust is the product", "Your payroll and books are safe with us — role-based access, activity tracking, and cloud or on-premise deployment."],
   ];
   const journey = [
     ["2017", "Founded in Dhaka. First payroll customer: 600 workers."],
     ["2019", "Full ERP suite launched with Accounting and Inventory."],
     ["2023", "1,000 customers. Expanded to the Middle East."],
-    ["2026", "Brain AI: the ERP you can talk to."],
+    ["2026", "The AI-centric ERP: run your business, ask it anything."],
   ];
   return (
     <>
