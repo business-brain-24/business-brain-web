@@ -4,10 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { ArrowUp, Check, Sparkles } from "lucide-react";
+import { ArrowUp, Check, Sparkles, X } from "lucide-react";
 import clsx from "clsx";
 import { Button } from "@/components/ui/Button";
 import { SplitHeading } from "@/components/motion/Reveal";
+import { getProduct } from "@/lib/data";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -146,7 +147,22 @@ function useActive() {
 function Stage() {
   const wrap = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
-  const { active, hover, setHover, books } = useActive();
+  const { active: cycleActive, hover, setHover, books } = useActive();
+  const [expanded, setExpanded] = useState<number | null>(null);
+  const active = expanded !== null ? [expanded] : cycleActive;
+  const [engaged, setEngaged] = useState(false);
+  const focus = expanded !== null;
+  const toggleExpand = (i: number) => {
+    setEngaged(true);
+    setExpanded((cur) => (cur === i ? null : i));
+  };
+
+  useEffect(() => {
+    if (expanded === null) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setExpanded(null);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [expanded]);
 
   const mx = useMotionValue(0);
   const my = useMotionValue(0);
@@ -184,28 +200,28 @@ function Stage() {
                   fill="none"
                   strokeWidth={1.5}
                   initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1, stroke: on ? "#FF6B2C" : "#D3D5DA" }}
-                  transition={{ pathLength: { duration: 1.2, ease, delay: 0.7 + i * 0.08 }, stroke: { duration: 0.5 } }}
+                  animate={{ pathLength: 1, stroke: on ? "#FF6B2C" : "#D3D5DA", opacity: focus ? 0.12 : 1 }}
+                  transition={{ pathLength: { duration: 1.2, ease, delay: 0.7 + i * 0.08 }, stroke: { duration: 0.5 }, opacity: { duration: 0.4 } }}
                 />
-                {on && <Pulses path={n.path} />}
+                {on && !focus && <Pulses path={n.path} />}
               </g>
             );
           })}
-          <motion.path d="M708 40 L708 150" fill="none" stroke="#FF6B2C" strokeWidth={1.5} initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 0.8, ease, delay: 0.9 }} />
-          <Pulses path="M708 40 L708 150" />
+          <motion.path d="M708 40 L708 150" fill="none" stroke="#FF6B2C" strokeWidth={1.5} initial={{ pathLength: 0 }} animate={{ pathLength: 1, opacity: focus ? 0.12 : 1 }} transition={{ duration: 0.8, ease, delay: 0.9, opacity: { duration: 0.4 } }} />
+          {!focus && <Pulses path="M708 40 L708 150" />}
         </svg>
 
         {/* glow + brain */}
         <motion.div
           aria-hidden
           className="absolute left-[528px] top-[130px] h-[360px] w-[360px] rounded-full bg-[radial-gradient(circle,rgba(255,107,44,0.18)_0%,rgba(255,107,44,0)_65%)]"
-          animate={{ scale: hover !== null ? 1.15 : [1, 1.08, 1] }}
+          animate={{ scale: focus ? 1.6 : hover !== null ? 1.15 : [1, 1.08, 1] }}
           transition={hover !== null ? { duration: 0.4 } : { duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2, ease, delay: 0.3 }}
+          animate={{ opacity: focus ? 0.18 : 1, scale: focus ? 0.55 : 1 }}
+          transition={engaged ? { duration: 0.6, ease } : { duration: 1.2, ease, delay: 0.3 }}
           className="absolute left-[558px] top-[130px] h-[300px] w-[300px]"
           style={{ x: brainX, y: brainY, rotate: brainR }}
         >
@@ -224,8 +240,8 @@ function Stage() {
         {/* books closed */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease, delay: 0.8 }}
+          animate={{ opacity: focus ? 0 : 1, y: 0 }}
+          transition={{ duration: 0.7, ease, delay: focus ? 0 : 0.8 }}
           className="absolute left-1/2 top-0 flex -translate-x-1/2 items-center gap-2.5 rounded-[10px] bg-ink py-[9px] pl-2.5 pr-4 shadow-[0_10px_30px_#0B0D122E]"
         >
           <Ring value={books} />
@@ -233,13 +249,13 @@ function Stage() {
         </motion.div>
 
         {/* module chips */}
-        {nodes.map((n, i) => (
-          <Chip key={n.name} node={n} index={i} on={active.includes(i)} onHover={setHover} />
-        ))}
-
         {/* ghost modules */}
         {ghosts.map((g) => (
-          <motion.div key={g.x} className="absolute top-[200px] flex flex-col gap-[120px] opacity-35" style={{ left: g.x, x: ghostX }}>
+          <motion.div
+            key={g.x}
+            className="absolute top-[200px] flex flex-col gap-[120px] transition-opacity duration-300"
+            style={{ left: g.x, x: ghostX, opacity: focus ? 0.08 : 0.35 }}
+          >
             {g.names.map((name, j) => (
               <motion.span
                 key={name}
@@ -255,12 +271,33 @@ function Stage() {
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease, delay: 1.1 }}
+          animate={{ opacity: focus ? 0 : 1, y: 0 }}
+          transition={{ duration: 0.8, ease, delay: focus ? 0 : 1.1 }}
           className="absolute left-[428px] top-[520px] w-[560px]"
+          style={{ pointerEvents: focus ? "none" : "auto" }}
         >
           <HeroAsk />
         </motion.div>
+
+        <AnimatePresence>
+          {focus && <ModuleScrim key="scrim" onClose={() => setExpanded(null)} />}
+          {expanded !== null && <ModuleNeuron key={expanded} node={nodes[expanded]} onClose={() => setExpanded(null)} />}
+        </AnimatePresence>
+
+        {/* module chips sit above the scrim so another module can be picked directly */}
+        {nodes.map((n, i) => (
+          <Chip
+            key={n.name}
+            node={n}
+            index={i}
+            on={active.includes(i)}
+            onHover={setHover}
+            dimmed={focus && expanded !== i}
+            isSource={expanded === i}
+            engaged={engaged}
+            onToggle={toggleExpand}
+          />
+        ))}
       </div>
     </div>
   );
@@ -268,7 +305,17 @@ function Stage() {
 
 /* ---------- Phones: same pieces, stacked ---------- */
 function MobileStage() {
-  const { active, setHover, books } = useActive();
+  const { active: cycleActive, setHover, books } = useActive();
+  const [expanded, setExpanded] = useState<number | null>(null);
+  const [engaged, setEngaged] = useState(false);
+  const active = expanded !== null ? [expanded] : cycleActive;
+  const open = expanded !== null ? nodes[expanded] : null;
+  const product = open ? getProduct(slugOf(open)) : undefined;
+  const toggleExpand = (i: number) => {
+    setEngaged(true);
+    setExpanded((cur) => (cur === i ? null : i));
+  };
+
   return (
     <div className="relative flex w-full flex-col items-center gap-6 px-4 md:hidden">
       <div className="flex items-center gap-2.5 rounded-[10px] bg-ink py-[9px] pl-2.5 pr-4">
@@ -283,9 +330,52 @@ function MobileStage() {
       </div>
       <div className="flex flex-wrap justify-center gap-2">
         {nodes.map((n, i) => (
-          <Chip key={n.name} node={n} index={i} on={active.includes(i)} onHover={setHover} inline />
+          <Chip
+            key={n.name}
+            node={n}
+            index={i}
+            on={active.includes(i)}
+            onHover={setHover}
+            onToggle={toggleExpand}
+            inline
+            dimmed={expanded !== null && expanded !== i}
+            isSource={expanded === i}
+            engaged={engaged}
+          />
         ))}
       </div>
+      <AnimatePresence initial={false}>
+        {open && product && (
+          <motion.div
+            key={open.name}
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.35, ease }}
+            className="w-full max-w-[420px] overflow-hidden"
+          >
+            <div className="relative flex flex-col items-center gap-4 rounded-[16px] border border-line bg-white px-4 pb-4 pt-5">
+              <span className="absolute -top-px left-1/2 h-4 w-px -translate-x-1/2 bg-orange" />
+              <div className="flex flex-wrap justify-center gap-2">
+                {product.features.map((f, j) => (
+                  <motion.span
+                    key={f.title}
+                    initial={{ opacity: 0, scale: 0.6 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, ease, delay: 0.1 + j * 0.05 }}
+                    className="rounded-full border border-line bg-surface px-3 py-1.5 text-[12px] font-medium text-ink"
+                  >
+                    {f.title}
+                  </motion.span>
+                ))}
+              </div>
+              <Link href={open.href} className="text-[13px] font-medium text-orange-deep">
+                Open {open.name} →
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <div className="w-full max-w-[560px]">
         <HeroAsk />
       </div>
@@ -293,21 +383,40 @@ function MobileStage() {
   );
 }
 
-function Chip({ node, index, on, onHover, inline }: { node: Node; index: number; on: boolean; onHover: (i: number | null) => void; inline?: boolean }) {
+type ChipProps = {
+  node: Node;
+  index: number;
+  on: boolean;
+  onHover: (i: number | null) => void;
+  onToggle: (i: number) => void;
+  inline?: boolean;
+  dimmed?: boolean;
+  isSource?: boolean;
+  engaged?: boolean;
+};
+
+function Chip({ node, index, on, onHover, onToggle, inline, dimmed, isSource, engaged }: ChipProps) {
   return (
     <motion.div
       initial={{ opacity: 0, x: inline ? 0 : node.side === "l" ? -24 : 24 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.7, ease, delay: 0.9 + index * 0.08 }}
+      animate={{ opacity: dimmed ? 0.35 : 1, x: 0 }}
+      transition={engaged ? { duration: 0.35, ease } : { duration: 0.7, ease, delay: 0.9 + index * 0.08 }}
       className={inline ? "" : "absolute"}
       style={inline ? undefined : { left: node.x, top: node.y }}
     >
       <Link
         href={node.href}
+        aria-expanded={!!isSource}
         onMouseEnter={() => onHover(index)}
         onMouseLeave={() => onHover(null)}
         onFocus={() => onHover(index)}
         onBlur={() => onHover(null)}
+        onClick={(e) => {
+          // modifier / middle clicks still open the product page
+          if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+          e.preventDefault();
+          onToggle(index);
+        }}
         className={clsx(
           "flex items-center gap-2.5 whitespace-nowrap rounded-full border bg-white px-3.5 py-2.5 transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-0.5",
           on ? "border-orange shadow-[0_0_0_4px_#FF6B2C1A]" : "border-line",
@@ -315,7 +424,11 @@ function Chip({ node, index, on, onHover, inline }: { node: Node; index: number;
       >
         <span className="text-[14px] font-medium leading-[18px] text-black">{node.name}</span>
         <AnimatePresence mode="wait" initial={false}>
-          {on ? (
+          {isSource ? (
+            <motion.span key="x" initial={{ scale: 0.5, opacity: 0, rotate: -90 }} animate={{ scale: 1, opacity: 1, rotate: 0 }} exit={{ scale: 0.5, opacity: 0 }} transition={{ duration: 0.25 }} className="flex h-[18px] w-[18px] items-center justify-center rounded-full bg-orange">
+              <X size={11} strokeWidth={3.5} className="text-white" />
+            </motion.span>
+          ) : on ? (
             <motion.span key="s" initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -4 }} transition={{ duration: 0.25 }} className="text-[12px] leading-4 text-orange-deep">
               {node.status}
             </motion.span>
@@ -326,6 +439,127 @@ function Chip({ node, index, on, onHover, inline }: { node: Node; index: number;
           )}
         </AnimatePresence>
       </Link>
+    </motion.div>
+  );
+}
+
+const slugOf = (n: Node) => n.href.split("/").pop() ?? "";
+
+/* Neuron geometry, in stage coordinates: the open module sits where the brain was. */
+const SOMA = { x: 708, y: 300, half: 104 };
+const DENDRITE = { rx: 238, ry: 192 };
+
+function dendritePoint(i: number, count: number) {
+  const a = ((-90 + (360 / count) * i) * Math.PI) / 180;
+  return { x: SOMA.x + DENDRITE.rx * Math.cos(a), y: SOMA.y + DENDRITE.ry * Math.sin(a) };
+}
+
+function ModuleScrim({ onClose }: { onClose: () => void }) {
+  return (
+    <motion.div
+      aria-hidden
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.35 }}
+      onClick={onClose}
+      className="absolute inset-0 cursor-zoom-out bg-[radial-gradient(circle_at_50%_48%,rgba(242,242,243,0.2)_0%,rgba(242,242,243,0.75)_60%)]"
+    />
+  );
+}
+
+function ModuleNeuron({ node, onClose }: { node: Node; onClose: () => void }) {
+  const product = getProduct(slugOf(node));
+  if (!product) return null;
+  const features = product.features;
+
+  const [sx, sy] = node.path.slice(1).split(" ").slice(0, 2).map(Number);
+  const ex = node.side === "l" ? SOMA.x - SOMA.half : SOMA.x + SOMA.half;
+  const mid = (sx + ex) / 2;
+  const axon = `M${sx} ${sy} C ${mid} ${sy}, ${mid} ${SOMA.y}, ${ex} ${SOMA.y}`;
+
+  return (
+    <motion.div className="absolute inset-0" exit={{ opacity: 0 }} transition={{ duration: 0.25 }}>
+      <svg width={STAGE_W} height={STAGE_H} viewBox={`0 0 ${STAGE_W} ${STAGE_H}`} className="pointer-events-none absolute inset-0" aria-hidden>
+        <motion.path d={axon} fill="none" stroke="#FF6B2C" strokeWidth={2} initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 0.45, ease }} />
+        <Pulses path={axon} />
+        {features.map((f, i) => {
+          const p = dendritePoint(i, features.length);
+          // bow each dendrite slightly so the cell reads as organic, not a wheel
+          const cx = (SOMA.x + p.x) / 2 + (p.y - SOMA.y) * 0.12;
+          const cy = (SOMA.y + p.y) / 2 - (p.x - SOMA.x) * 0.12;
+          const d = `M${SOMA.x} ${SOMA.y} Q ${cx} ${cy}, ${p.x} ${p.y}`;
+          return (
+            <g key={f.title}>
+              <motion.path
+                d={d}
+                fill="none"
+                stroke="#FF6B2C"
+                strokeOpacity={0.55}
+                strokeWidth={1.5}
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{ duration: 0.5, ease, delay: 0.35 + i * 0.05 }}
+              />
+              <Pulses path={d} />
+            </g>
+          );
+        })}
+      </svg>
+
+      {/* soma */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.4 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.6 }}
+        transition={{ duration: 0.45, ease, delay: 0.2 }}
+        className="absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1 rounded-[18px] border border-orange bg-white px-5 py-3.5 text-center shadow-[0_0_0_6px_#FF6B2C1A,0_18px_40px_#0B0D121F]"
+        style={{ left: SOMA.x, top: SOMA.y, width: SOMA.half * 2 }}
+      >
+        <span className="text-[16px] font-semibold leading-5 tracking-[-0.01em] text-black">{node.name}</span>
+        <span className="text-[12px] leading-4 text-[#545A66]">{product.short}</span>
+        <Link href={node.href} className="group mt-1 text-[12px] font-medium text-orange-deep hover:text-orange">
+          Open module <span className="inline-block transition-transform group-hover:translate-x-0.5">→</span>
+        </Link>
+      </motion.div>
+
+      {/* dendrites: the module's sub-modules */}
+      {features.map((f, i) => {
+        const p = dendritePoint(i, features.length);
+        return (
+          <motion.div
+            key={f.title}
+            initial={{ opacity: 0, scale: 0.4, x: SOMA.x - p.x, y: SOMA.y - p.y }}
+            animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
+            exit={{ opacity: 0, scale: 0.4, x: (SOMA.x - p.x) * 0.6, y: (SOMA.y - p.y) * 0.6 }}
+            transition={{ duration: 0.55, ease, delay: 0.4 + i * 0.05 }}
+            className="absolute"
+            style={{ left: p.x, top: p.y }}
+          >
+            <Link
+              href={node.href}
+              title={f.body}
+              className="group flex -translate-x-1/2 -translate-y-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-line bg-white py-2 pl-2.5 pr-3.5 shadow-[0_8px_22px_#0B0D1212] transition-[border-color,box-shadow] duration-300 hover:border-orange hover:shadow-[0_0_0_4px_#FF6B2C1A]"
+            >
+              <span className="h-2 w-2 rounded-full bg-orange shadow-[0_0_0_3px_#FF6B2C26]" />
+              <span className="text-[13px] font-medium leading-4 text-black">{f.title}</span>
+            </Link>
+          </motion.div>
+        );
+      })}
+
+      <motion.button
+        type="button"
+        onClick={onClose}
+        aria-label={`Close ${node.name}`}
+        initial={{ opacity: 0, scale: 0.6 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.3, delay: 0.5 }}
+        className="absolute flex h-9 w-9 items-center justify-center rounded-full border border-line bg-white text-[#545A66] shadow-[0_8px_20px_#0B0D1214] transition-colors hover:border-orange hover:text-orange"
+        style={{ left: SOMA.x + DENDRITE.rx + 70, top: 40 }}
+      >
+        <X size={16} />
+      </motion.button>
     </motion.div>
   );
 }
