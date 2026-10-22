@@ -39,13 +39,13 @@ const ghosts = [
   { names: ["CRM", "Assets"], x: 1290 },
 ];
 
-const heroLogos = ["Northloom", "Riverstone", "Kaya Foods", "Bluegate", "Orbitex", "Sundar Pharma", "Meridian"];
+const pillars = ["AI at the core", "Own MCP server: works with ChatGPT and Claude", "Configured for Bangladesh"];
 
 const prompts = [
-  "Which products does a 300-person factory need?",
-  "How can Business Brain help my business?",
-  "Which modules do you have?",
-  "How long does setup take?",
+  "What were yesterday's sales by branch?",
+  "Which region is behind target today?",
+  "Show stock levels across all warehouses.",
+  "Which modules does a 300-person factory need?",
 ];
 
 export default function Hero() {
@@ -62,7 +62,7 @@ export default function Hero() {
 
         <div className="relative flex w-full max-w-[960px] flex-col items-center gap-[22px] px-5 pb-12 pt-[124px] text-center sm:pb-16 sm:pt-[142px]">
           <SplitHeading
-            text="One brain that runs your entire business"
+            text="Run your business. Ask it anything."
             className="text-[40px] font-medium leading-[44px] tracking-[-0.04em] text-black sm:text-[56px] sm:leading-[60px] lg:text-[64px] lg:leading-[66px]"
           />
           <motion.p
@@ -71,17 +71,18 @@ export default function Hero() {
             transition={{ duration: 0.8, ease, delay: 0.45 }}
             className="max-w-[580px] text-[16px] leading-[26px] text-[#545A66] sm:text-[17px] sm:leading-[27px]"
           >
-            Accounting, procurement, inventory, manufacturing, HR and payroll share one database — and an AI that understands all of it.
+            The AI-centric ERP for growing businesses. HR, payroll, finance, purchasing, inventory, sales and manufacturing in one live record — ask
+            questions in plain words and get answers and charts straight from your data.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease, delay: 0.6 }}
-            className="flex items-center gap-4"
+            className="flex flex-wrap items-center justify-center gap-x-5 gap-y-3"
           >
-            <Button href="/demo">Book a demo</Button>
-            <Link href="/pricing" className="group text-[15px] text-[#2A2E37] transition-colors hover:text-orange">
-              See pricing <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+            <Button href="/demo">Book a free AI-ERP fit session</Button>
+            <Link href="/demo?session=watch-tower" className="group text-[15px] text-[#2A2E37] transition-colors hover:text-orange">
+              Book a Watch Tower demo <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
             </Link>
           </motion.div>
         </div>
@@ -89,24 +90,15 @@ export default function Hero() {
         <Stage />
         <MobileStage />
 
-        <div className="relative flex w-full flex-col items-center gap-5 pb-12 pt-10">
-          <p className="px-5 text-center text-[13px] leading-4 text-[#8A8F99]">Running finance, operations and people for 1,200+ companies</p>
-          <div className="relative w-full overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_12%,#000_88%,transparent)] lg:[mask-image:none]">
-            <div className="flex w-max animate-marquee gap-14 pr-14 lg:mx-auto lg:animate-none lg:pr-0">
-              {[...heroLogos, ...heroLogos].map((l, i) => (
-                <span
-                  key={i}
-                  aria-hidden={i >= heroLogos.length}
-                  className={clsx(
-                    "text-[18px] font-semibold leading-[22px] tracking-[-0.02em] text-[#A3A8B3] transition-colors hover:text-ink",
-                    i >= heroLogos.length && "lg:hidden",
-                  )}
-                >
-                  {l}
-                </span>
-              ))}
-            </div>
-          </div>
+        <div className="relative flex w-full flex-wrap items-center justify-center gap-x-8 gap-y-3 px-5 pb-12 pt-10">
+          {pillars.map((p) => (
+            <span key={p} className="flex items-center gap-2 text-[14px] font-medium text-[#545A66]">
+              <span className="flex h-[18px] w-[18px] items-center justify-center rounded-full bg-orange-soft text-orange">
+                <Check size={11} strokeWidth={3.5} />
+              </span>
+              {p}
+            </span>
+          ))}
         </div>
       </div>
     </section>

@@ -116,3 +116,13 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+@keyframes bb-pop {
+  from { opacity: 0; transform: translateY(8px) scale(0.9); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes bb-shimmer {
+  from { background-position: 100% 0; }
+  to { background-position: -100% 0; }
+}

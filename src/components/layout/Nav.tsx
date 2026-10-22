@@ -127,7 +127,7 @@ export default function Nav() {
             </Link>
             <span className="hidden sm:inline-flex">
               <Button href="/demo" size="sm">
-                Book a demo
+                Book a fit session
               </Button>
             </span>
             <button
@@ -190,11 +190,11 @@ function ProductsMenu() {
       <div className="ml-3 flex flex-1 flex-col justify-between overflow-hidden rounded-[12px] bg-ink p-7 text-white">
         <div>
           <p className="text-[13px] font-medium text-orange">Brain AI</p>
-          <p className="mt-3 max-w-[340px] text-[28px] font-medium leading-[32px] tracking-[-0.03em]">Fourteen products. One brain that reads them all.</p>
-          <p className="mt-3 max-w-[340px] text-[14px] leading-[21px] text-white/65">Ask a question in plain words and get an answer from every module at once.</p>
+          <p className="mt-3 max-w-[340px] text-[28px] font-medium leading-[32px] tracking-[-0.03em]">Every module. One AI that reads them all.</p>
+          <p className="mt-3 max-w-[340px] text-[14px] leading-[21px] text-white/65">Ask in Bangla or English, or connect ChatGPT or Claude through our MCP server.</p>
         </div>
         <Link href="/ask" className="my-6 flex items-center justify-between rounded-[12px] bg-white py-2.5 pl-4 pr-2.5">
-          <span className="text-[14px] text-subtle">Why is cash lower than last month?</span>
+          <span className="text-[14px] text-subtle">What were yesterday&apos;s sales by branch?</span>
           <span className="flex h-8 w-8 items-center justify-center rounded-full bg-orange text-white">
             <ArrowUp size={15} />
           </span>
@@ -311,7 +311,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
         </Link>
         <Link href="/demo" className="flex h-12 flex-1 items-center justify-center gap-2 rounded-[12px] bg-ink text-[15px] font-medium text-white">
           <span className="flex h-6 w-6 items-center justify-center rounded-md bg-orange text-[12px]">›</span>
-          Book a demo
+          Book a fit session
         </Link>
       </div>
     </motion.div>

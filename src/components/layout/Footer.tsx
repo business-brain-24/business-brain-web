@@ -1,5 +1,9 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Logo } from "./Nav";
+import { contact } from "@/lib/data";
 
 const cols = [
   {
@@ -35,12 +39,17 @@ const cols = [
 ];
 
 export default function Footer() {
+  // the chat is a full-screen app
+  if (usePathname() === "/ask") return null;
   return (
     <footer className="container-x pb-8 pt-16 sm:pt-24">
       <div className="flex flex-col justify-between gap-12 md:flex-row">
         <div className="max-w-[300px]">
           <Logo />
-          <p className="mt-4 text-[14px] leading-[22px] text-muted">ERP for growing companies. Dhaka · Chattogram · Dubai.</p>
+          <p className="mt-4 text-[14px] leading-[22px] text-muted">The AI-centric ERP for growing businesses. Configured for Bangladesh.</p>
+          <a href={contact.phoneHref} className="mt-3 block text-[14px] text-ink transition-colors hover:text-orange">
+            {contact.phone}
+          </a>
         </div>
         <div className="grid grid-cols-2 gap-10 sm:grid-cols-3 sm:gap-16">
           {cols.map((c) => (

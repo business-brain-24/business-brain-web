@@ -10,7 +10,7 @@ export const metadata: Metadata = { title: "Partners" };
 export default function Partners() {
   return (
     <>
-      <PageHero label="Partner program" title="Grow with the brain behind 1,200 companies." sub="Resell, implement or integrate Business Brain 24 — with recurring revenue, certified training and a partner team behind you.">
+      <PageHero label="Partner program" title="Grow with the AI-centric ERP." sub="Resell, implement or integrate Business Brain 24 — with recurring revenue, certified training and a partner team behind you.">
         <div className="flex flex-wrap items-center gap-5">
           <Button href="/contact">Become a partner</Button>
           <TextLink href="/contact">Find a partner</TextLink>

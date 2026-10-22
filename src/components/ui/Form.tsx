@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Check } from "lucide-react";
 import clsx from "clsx";
 
-type Field = { name: string; label: string; type?: string; placeholder?: string; options?: string[]; full?: boolean; area?: boolean };
+type Field = { name: string; label: string; type?: string; placeholder?: string; options?: string[]; full?: boolean; area?: boolean; defaultValue?: string };
 
 export default function Form({ fields, submit, done }: { fields: Field[]; submit: string; done: string }) {
   const [sent, setSent] = useState(false);
@@ -41,7 +41,7 @@ export default function Form({ fields, submit, done }: { fields: Field[]; submit
             <label key={f.name} className={clsx("flex flex-col gap-2", (f.full || f.area) && "sm:col-span-2")}>
               <span className="text-[13px] font-medium">{f.label}</span>
               {f.options ? (
-                <select name={f.name} defaultValue="" className={input(errors[f.name])}>
+                <select name={f.name} defaultValue={f.defaultValue ?? ""} className={input(errors[f.name])}>
                   <option value="" disabled>
                     Select…
                   </option>
