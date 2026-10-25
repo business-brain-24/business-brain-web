@@ -9,7 +9,8 @@ import AppIcon from "@/components/workspace/AppIcon";
 import { useUser } from "@/lib/session";
 import { apps, categories, type App } from "@/lib/workspace";
 import { seeds } from "@/lib/app-seeds";
-import Analytics from "@/components/workspace/layouts/Analytics";
+import { WidgetGrid } from "@/components/workspace/widgets";
+import { overviews } from "@/lib/overviews";
 import Records from "@/components/workspace/layouts/Records";
 import Kanban from "@/components/workspace/layouts/Kanban";
 import Calendar from "@/components/workspace/layouts/Calendar";
@@ -72,7 +73,7 @@ export default function AppDashboard() {
           </div>
         )}
 
-        <div className="mt-1">{view === "overview" || layout.kind === "analytics" ? <Analytics app={app} /> : renderLayout(app)}</div>
+        <div className="mt-1">{view === "overview" || layout.kind === "analytics" ? <WidgetGrid widgets={overviews[app.slug] ?? []} /> : renderLayout(app)}</div>
 
         {/* footer strip */}
         {!(layout.kind === "chat" && view === "work") && (
@@ -110,6 +111,6 @@ function renderLayout(app: App) {
     case "directory": return <Directory {...l} />;
     case "cards": return <Cards app={app} {...l} />;
     case "settings": return <Settings {...l} />;
-    default: return <Analytics app={app} />;
+    default: return <WidgetGrid widgets={overviews[app.slug] ?? []} />;
   }
 }
