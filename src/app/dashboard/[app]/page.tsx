@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { notFound, useParams, useRouter } from "next/navigation";
 import { ArrowLeft, CalendarDays, Sparkles } from "lucide-react";
+import clsx from "clsx";
 import AppIcon from "@/components/workspace/AppIcon";
 import { useUser } from "@/lib/session";
 import { apps, categories, type App } from "@/lib/workspace";
@@ -23,6 +24,7 @@ export default function AppDashboard() {
   const router = useRouter();
   const user = useUser();
   const app = apps.find((a) => a.slug === slug);
+  const [view, setView] = useState<"overview" | "work">("overview");
 
   useEffect(() => {
     if (user === null) router.replace("/login");
@@ -59,10 +61,21 @@ export default function AppDashboard() {
           </div>
         </div>
 
-        <div className="mt-1">{renderLayout(app)}</div>
+        {/* every app opens on its own overview dashboard; the working view sits in the second tab */}
+        {layout.kind !== "analytics" && (
+          <div className="mb-3 flex gap-1 px-2">
+            {(["overview", "work"] as const).map((v) => (
+              <button key={v} onClick={() => setView(v)} className={clsx("rounded-full px-4 py-1.5 text-[13px] transition-colors", view === v ? "bg-orange-soft font-medium text-orange-deep" : "text-muted hover:text-ink")}>
+                {v === "overview" ? "Overview" : workLabel[layout.kind]}
+              </button>
+            ))}
+          </div>
+        )}
+
+        <div className="mt-1">{view === "overview" || layout.kind === "analytics" ? <Analytics app={app} /> : renderLayout(app)}</div>
 
         {/* footer strip */}
-        {layout.kind !== "chat" && (
+        {!(layout.kind === "chat" && view === "work") && (
         <div className="mt-3 flex flex-wrap items-center justify-between gap-3 rounded-[18px] border border-line bg-white px-4 py-3">
           <div className="flex items-center gap-3">
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[linear-gradient(145deg,#FF8A4C,#C2410C)] text-[13px] font-semibold text-white">{user.name[0]}</span>
@@ -81,6 +94,10 @@ export default function AppDashboard() {
   );
 }
 
+
+const workLabel: Record<string, string> = {
+  records: "Records", kanban: "Board", calendar: "Calendar", chat: "Chat", feed: "Posts", directory: "Directory", cards: "Library", settings: "Settings", analytics: "Overview",
+};
 
 function renderLayout(app: App) {
   const l = seeds[app.slug] ?? { kind: "analytics" };
