@@ -9,16 +9,16 @@ export const metadata: Metadata = { title: "Book a fit session" };
 
 const sessions = {
   fit: {
-    option: "Free AI-ERP fit session",
-    label: "Free AI-ERP fit session",
-    title: "Find out how AI fits your operation.",
+    option: "Free ERP AI-readiness audit",
+    label: "Free ERP AI-readiness audit",
+    title: "Put AI at the core of your business.",
     points: [
       "We assess your requirements and current tools",
       "We recommend the modules you actually need",
       "We show how AI and our MCP server connect to your data",
       "Cloud or on-premise options discussed during scoping",
     ],
-    submit: "Book my fit session",
+    submit: "Book my free audit",
   },
   "watch-tower": {
     option: "Watch Tower demo",

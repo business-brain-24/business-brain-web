@@ -49,7 +49,7 @@ export default function PricingPage() {
     <>
       <PageHero
         label="Pricing"
-        title="Priced for your operation, not a package."
+        title="Tailored pricing."
         sub="Business Brain is a dedicated ERP, so every rollout is different. Tell us what you need and we'll send a tailored quote within one working day."
         center
       />

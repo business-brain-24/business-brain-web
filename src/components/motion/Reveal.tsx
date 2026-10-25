@@ -50,13 +50,14 @@ export function StaggerItem({ children, className }: { children: React.ReactNode
 
 /** Splits a headline into words that rise in on view. */
 export function SplitHeading({ text, className, as: Tag = "h1", delay = 0 }: { text: string; className?: string; as?: "h1" | "h2" | "h3"; delay?: number }) {
-  const words = text.split(" ");
+  // a "\n" in the text forces a line break at that point
+  const words = text.replace(/\n/g, " \n ").split(" ").filter(Boolean);
   const MotionTag = motion[Tag];
   // Trigger from the heading itself: the word spans start fully clipped by their mask,
   // so an observer on them would never report them as visible.
   return (
-    <MotionTag className={className} aria-label={text} initial="hidden" whileInView="show" viewport={{ once: true }}>
-      {words.map((w, i) => (
+    <MotionTag className={className} aria-label={text.replace(/\n/g, " ")} initial="hidden" whileInView="show" viewport={{ once: true }}>
+      {words.map((w, i) => w === "\n" ? <br key={i} /> : (
         <span key={i} aria-hidden className="inline-block overflow-hidden pb-[0.08em] align-bottom">
           <motion.span
             className="inline-block"

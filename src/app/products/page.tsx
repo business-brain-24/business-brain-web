@@ -1,9 +1,10 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { appCount, groups, products } from "@/lib/data";
+import { groups, products } from "@/lib/data";
 import { Label } from "@/components/ui/Button";
 import { Reveal, SplitHeading, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import CTA from "@/components/ui/CTA";
+import ModuleCatalogue from "@/components/products/ModuleCatalogue";
 
 export const metadata: Metadata = { title: "Products" };
 
@@ -43,14 +44,12 @@ export default function ProductsIndex() {
           </Stagger>
         </section>
       ))}
-      <section className="container-x mt-16 sm:mt-24">
-        <Link href="/apps" className="group flex items-center justify-between rounded-[16px] bg-surface p-6 sm:p-8">
-          <span>
-            <span className="block text-[19px] font-medium">Looking for a specific app?</span>
-            <span className="mt-1 block text-[14px] text-muted">Browse all {appCount} apps — HRMS, operational, general and more.</span>
-          </span>
-          <span className="text-muted transition-all group-hover:translate-x-1 group-hover:text-orange">→</span>
-        </Link>
+      <section id="modules" className="container-x mt-20 sm:mt-28">
+        <Label>All modules</Label>
+        <h2 className="h-section mt-3 max-w-[760px]">Every module and sub-module, Betopia and Akboria.</h2>
+        <div className="mt-8">
+          <ModuleCatalogue />
+        </div>
       </section>
       <CTA />
     </>

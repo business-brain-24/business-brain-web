@@ -188,9 +188,9 @@ export const overviews: Record<string, Widget[]> = {
   dashboards: [
     { type: "kpis", items: [{ label: "Revenue (MTD)", value: "৳ 9.2 Cr", delta: "+7%" }, { label: "Gross margin", value: "28.4%", delta: "+0.6%" }, { label: "Cash in bank", value: "৳ 6.1 Cr" }, { label: "Receivables", value: "৳ 2.4 Cr", note: "৳ 38 L overdue" }] },
     { w: 6, type: "line", title: "Revenue vs cost", sub: "৳ crore", labels: MONTHS, series: [{ name: "Revenue", data: [8.1, 9.4, 8.8, 9.6, 10.2, 9.2] }, { name: "Cost", data: [6.0, 6.8, 6.4, 6.9, 7.3, 6.6] }] },
-    { w: 6, type: "line", title: "Plant output", sub: "Tonnes per month", labels: MONTHS, series: [{ name: "Output", data: [820, 870, 790, 910, 880, 940] }] },
-    { w: 4, type: "gauge", title: "Plant OEE", value: 78, caption: "Gazipur · world class is 85" },
-    { w: 8, type: "list", status: true, title: "Alerts", rows: [{ label: "Noodles 4-pack out of stock at Rangpur", sub: "Inventory", value: "At risk" }, { label: "PO-2288 from City Sugar is 3 days late", sub: "Procurement", value: "Late" }, { label: "INV-10418 Meena Bazar overdue", sub: "Invoicing", value: "Overdue" }] },
+    { w: 6, type: "line", title: "Cash in vs cash out", sub: "৳ crore", labels: MONTHS, series: [{ name: "Cash in", data: [7.8, 8.9, 8.6, 9.1, 9.8, 9.0] }, { name: "Cash out", data: [7.1, 8.2, 7.9, 8.4, 9.0, 8.1] }] },
+    { w: 4, type: "gauge", title: "Collection rate", value: 82, caption: "৳ 4.2 Cr collected of ৳ 5.1 Cr invoiced this month" },
+    { w: 8, type: "list", status: true, title: "Finance alerts", rows: [{ label: "INV-10418 · Meena Bazar · ৳ 6.1 L", sub: "Receivable, 5 days past due", value: "Overdue" }, { label: "INV-10411 · Sky Distribution · ৳ 2.7 L", sub: "Receivable, 9 days past due", value: "Overdue" }, { label: "BILL-882 · Meghna Flour Mills · ৳ 42.0 L", sub: "Payable due 27 Oct", value: "Pending" }] },
   ],
   campaigns: [
     { type: "kpis", items: [{ label: "Reach", value: "1.2 M", delta: "+22%" }, { label: "Leads", value: "842" }, { label: "Cost per lead", value: "৳ 76", delta: "-৳ 9", downIsGood: true }, { label: "Spend", value: "৳ 6.4 L", note: "of ৳ 9 L budget" }] },

@@ -51,6 +51,11 @@ html.lenis body {
   overflow: hidden;
 }
 
+/* body alone doesn't stop wide decorative glows from widening the page on phones */
+html {
+  overflow-x: clip;
+}
+
 body {
   background: #ffffff;
   color: var(--color-ink);

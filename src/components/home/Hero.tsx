@@ -69,28 +69,42 @@ export default function Hero() {
 
         <div className="relative flex w-full max-w-[960px] flex-col items-center gap-[22px] px-5 pb-12 pt-[124px] text-center sm:pb-16 sm:pt-[142px]">
           <SplitHeading
-            text="Run your business. Ask it anything."
+            text={"Business Brain 24:\nDo More. Spend Less."}
             className="text-[40px] font-medium leading-[44px] tracking-[-0.04em] text-black sm:text-[56px] sm:leading-[60px] lg:text-[64px] lg:leading-[66px]"
           />
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease, delay: 0.45 }}
-            className="max-w-[580px] text-[16px] leading-[26px] text-[#545A66] sm:text-[17px] sm:leading-[27px]"
+            transition={{ duration: 0.8, ease, delay: 0.4 }}
+            className="max-w-[680px] text-[19px] font-medium leading-[28px] tracking-[-0.01em] text-ink sm:text-[22px] sm:leading-[31px]"
           >
-            The AI-centric ERP for growing businesses. HR, payroll, finance, purchasing, inventory, sales and manufacturing in one live record — ask
-            questions in plain words and get answers and charts straight from your data.
+            The agentic ERP that cuts operating costs and lifts productivity across your enterprise.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease, delay: 0.5 }}
+            className="max-w-[640px] text-[15px] leading-[25px] text-[#545A66] sm:text-[16px] sm:leading-[26px]"
+          >
+            Bring finance, HR, payroll, procurement, inventory, sales, manufacturing and many other modules into one connected system. Reduce
+            repetitive work, coordinate approvals and turn business insights into action — with the controls you set.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease, delay: 0.6 }}
-            className="flex flex-wrap items-center justify-center gap-x-5 gap-y-3"
+            className="mt-2 flex flex-col items-center gap-x-8 gap-y-5 sm:flex-row sm:items-start"
           >
-            <Button href="/demo">Book a free AI-ERP fit session</Button>
-            <a href={WATCH_TOWER_DEMO} target="_blank" rel="noopener noreferrer" className="group text-[15px] text-[#2A2E37] transition-colors hover:text-orange">
-              Book a Watch Tower demo <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
-            </a>
+            <div className="flex flex-col items-center gap-2">
+              <Button href="/demo">Put AI at the core of your business</Button>
+              <span className="text-[13px] text-[#6B7180]">Free audit session on your ERP AI readiness</span>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <Button href={WATCH_TOWER_DEMO} external variant="light" className="!bg-ink/10">
+                See your business world
+              </Button>
+              <span className="text-[13px] text-[#6B7180]">Book a free Watch Tower demo</span>
+            </div>
           </motion.div>
         </div>
 

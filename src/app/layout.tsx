@@ -6,11 +6,11 @@ import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "Business Brain 24 — Run your business. Ask it anything.",
+    default: "Business Brain 24 — Do More. Spend Less.",
     template: "%s · Business Brain 24",
   },
   description:
-    "The AI-centric ERP for growing businesses. HR, payroll, finance, purchasing, inventory, sales and manufacturing in one live record, with AI at the core and our own MCP server for ChatGPT and Claude. Configured for Bangladesh.",
+    "The agentic ERP that cuts operating costs and lifts productivity across your enterprise. Finance, HR, payroll, procurement, inventory, sales, manufacturing and more in one connected system, with AI at the core.",
 };
 
 export const viewport: Viewport = {

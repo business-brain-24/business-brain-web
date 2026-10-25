@@ -10,8 +10,6 @@ import { useUser } from "@/lib/session";
 import { apps, categories, type Category } from "@/lib/workspace";
 
 const FAV_KEY = "bb-favourites";
-const pick = (slug: string, i = 0) => apps.find((a) => a.slug === slug)!.kpis[i];
-const today = [pick("sales"), pick("attendance"), pick("payroll", 2), pick("inventory", 2)];
 const prompts = ["Which region is behind target today?", "Who is on leave this week?", "What stock runs out first?"];
 
 export default function Dashboard() {
@@ -65,7 +63,7 @@ export default function Dashboard() {
       <div className="bb-fade-up relative overflow-hidden rounded-[24px] border border-line bg-white p-5 sm:p-8">
         <div className="pointer-events-none absolute -right-20 -top-32 h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle,rgba(255,107,44,0.14),transparent_65%)]" />
 
-        <div className="relative grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-end">
+        <div className="relative max-w-[760px]">
           <div>
             <p className="text-[13px] text-muted">{new Date().toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" })}</p>
             <h1 className="mt-2 text-[30px] font-medium tracking-[-0.03em] sm:text-[40px]">
@@ -93,14 +91,6 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-px overflow-hidden rounded-[16px] border border-line bg-line">
-            {today.map(([k, v]) => (
-              <div key={k} className="bg-white p-4">
-                <p className="text-[12px] text-muted">{k}</p>
-                <p className="mt-1.5 text-[22px] font-medium tracking-[-0.02em] sm:text-[26px]">{v}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
 

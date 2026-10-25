@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ArrowUpRight, Check, ChevronRight, ShieldCheck } from "lucide-react";
+import { ArrowUpRight, Check, ChevronRight, ShieldCheck, Sparkles } from "lucide-react";
 import clsx from "clsx";
 import { Reveal, Stagger, StaggerItem, SplitHeading } from "@/components/motion/Reveal";
 import { Button, Label } from "@/components/ui/Button";
@@ -365,6 +365,12 @@ export function BrainAI() {
             </div>
           </div>
           <div className="rounded-[20px] border border-white/10 bg-white/[0.04] p-4 sm:p-6">
+            <div className="mb-5 flex items-center gap-3 border-b border-white/10 pb-4">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-orange/15 text-orange">
+                <Sparkles size={17} />
+              </span>
+              <p className="text-[17px] font-medium tracking-[-0.01em] sm:text-[19px]">Run your business. Ask it anything.</p>
+            </div>
             <div className="space-y-3">
               {messages.map((m, i) => (
                 <motion.div
