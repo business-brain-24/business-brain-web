@@ -1,6 +1,5 @@
 import clsx from "clsx";
 import { Label } from "./Button";
-import { Reveal, SplitHeading } from "@/components/motion/Reveal";
 
 export default function PageHero({
   label,
@@ -15,6 +14,7 @@ export default function PageHero({
   center?: boolean;
   children?: React.ReactNode;
 }) {
+  const words = title.split(" ");
   return (
     <section className={clsx("container-x relative pt-[120px] sm:pt-[150px]", center && "text-center")}>
       <div
@@ -24,13 +24,22 @@ export default function PageHero({
         )}
       />
       <Label className="relative">{label}</Label>
-      <SplitHeading text={title} className={clsx("h-display relative mt-4 max-w-[900px]", center && "mx-auto")} />
+      <h1 aria-label={title} className={clsx("h-display relative mt-4 max-w-[900px]", center && "mx-auto")}>
+        {words.map((w, i) => (
+          <span key={i} aria-hidden className="inline-block overflow-hidden pb-[0.08em] align-bottom">
+            <span className="bb-rise inline-block" style={{ animationDelay: `${i * 0.045}s` }}>
+              {w}
+              {i < words.length - 1 ? " " : ""}
+            </span>
+          </span>
+        ))}
+      </h1>
       {sub && (
-        <Reveal delay={0.3}>
-          <p className={clsx("relative mt-5 max-w-[580px] text-[16px] leading-[26px] text-muted sm:text-[18px] sm:leading-[28px]", center && "mx-auto")}>{sub}</p>
-        </Reveal>
+        <p className={clsx("bb-fade-up relative mt-5 max-w-[580px] text-[16px] leading-[26px] text-muted sm:text-[18px] sm:leading-[28px]", center && "mx-auto")} style={{ animationDelay: "0.3s" }}>
+          {sub}
+        </p>
       )}
-      {children && <Reveal delay={0.45} className="relative mt-8">{children}</Reveal>}
+      {children && <div className="bb-fade-up relative mt-8" style={{ animationDelay: "0.45s" }}>{children}</div>}
     </section>
   );
 }
