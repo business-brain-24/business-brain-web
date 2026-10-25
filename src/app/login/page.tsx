@@ -3,9 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import clsx from "clsx";
-
-// Demo account so prospects can try the product. Not real authentication.
-const DEMO_USERS: Record<string, string> = { jubair: "1234" };
+import { DEMO_USERS, signIn } from "@/lib/session";
 
 export default function Login() {
   const router = useRouter();
@@ -16,8 +14,8 @@ export default function Login() {
     const data = new FormData(e.currentTarget);
     const user = String(data.get("username") ?? "").trim().toLowerCase();
     const pass = String(data.get("password") ?? "");
-    if (DEMO_USERS[user] !== pass) return setError("Wrong username or password.");
-    sessionStorage.setItem("bb-user", user);
+    if (DEMO_USERS[user]?.password !== pass) return setError("Wrong username or password.");
+    signIn(user);
     router.push("/dashboard");
   };
 

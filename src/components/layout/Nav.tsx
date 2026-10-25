@@ -9,6 +9,8 @@ import clsx from "clsx";
 import { groups, industries, products } from "@/lib/data";
 import { Button } from "@/components/ui/Button";
 import { getLenis } from "@/components/motion/SmoothScroll";
+import UserMenu from "@/components/layout/UserMenu";
+import { useUser } from "@/lib/session";
 
 export function BrandMark({ className }: { className?: string }) {
   // eslint-disable-next-line @next/next/no-img-element
@@ -34,6 +36,7 @@ export default function Nav() {
   const [mobile, setMobile] = useState(false);
   const closeTimer = useRef<number | null>(null);
   const pathname = usePathname();
+  const user = useUser();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -128,9 +131,13 @@ export default function Nav() {
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-4">
-            <Link href="/login" className="hidden text-[14px] text-ink sm:block">
-              Log in
-            </Link>
+            {user ? (
+              <UserMenu user={user} />
+            ) : (
+              <Link href="/login" className="hidden text-[14px] text-ink sm:block">
+                Log in
+              </Link>
+            )}
             <span className="hidden sm:inline-flex">
               <Button href="/demo" size="sm">
                 Book a fit session
