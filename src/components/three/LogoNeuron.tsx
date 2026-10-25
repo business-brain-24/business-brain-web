@@ -8,6 +8,32 @@ import * as THREE from "three";
 const ORANGE = "#F47A2A";
 const NAVY = "#233A80";
 
+/* Fine grain for a satin, painted-metal finish: drives roughness and a faint bump so highlights spread instead of mirroring. */
+function useSatin() {
+  return useMemo(() => {
+    const size = 256;
+    const canvas = document.createElement("canvas");
+    canvas.width = canvas.height = size;
+    const ctx = canvas.getContext("2d")!;
+    const img = ctx.createImageData(size, size);
+    let seed = 11;
+    const r = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+    for (let i = 0; i < size * size; i++) {
+      const v = 150 + r() * 70;
+      img.data.set([v, v, v, 255], i * 4);
+    }
+    ctx.putImageData(img, 0, 0);
+    const grain = new THREE.CanvasTexture(canvas);
+    grain.wrapS = grain.wrapT = THREE.RepeatWrapping;
+    grain.repeat.set(3, 3);
+
+    const satin = (color: string, metalness: number, roughness: number) =>
+      new THREE.MeshPhysicalMaterial({ color, metalness, roughness, roughnessMap: grain, bumpMap: grain, bumpScale: 0.6, sheen: 0.25, sheenRoughness: 0.8, sheenColor: new THREE.Color("#ffffff") });
+
+    return { orange: satin(ORANGE, 0.08, 0.58), navy: satin(NAVY, 0.55, 0.5) };
+  }, []);
+}
+
 /* The logo's five modules, in logo space (hub at the origin, y up), scaled to scene units. */
 const S = 1 / 42;
 const MODULES = [
@@ -36,7 +62,7 @@ function useNeurons(count: number) {
   }, [count]);
 }
 
-function Spoke({ to, delay }: { to: THREE.Vector3; delay: number }) {
+function Spoke({ to, delay, material }: { to: THREE.Vector3; delay: number; material: THREE.Material }) {
   const pulse = useRef<THREE.Mesh>(null);
   const { geom, curve } = useMemo(() => {
     const c = new THREE.LineCurve3(new THREE.Vector3(0, 0, 0), to);
@@ -50,9 +76,7 @@ function Spoke({ to, delay }: { to: THREE.Vector3; delay: number }) {
   });
   return (
     <group>
-      <mesh geometry={geom}>
-        <meshPhysicalMaterial color={NAVY} roughness={0.25} metalness={0.4} clearcoat={1} clearcoatRoughness={0.15} />
-      </mesh>
+      <mesh geometry={geom} material={material} />
       <mesh ref={pulse}>
         <sphereGeometry args={[0.09, 16, 16]} />
         <meshBasicMaterial color="#FFE1CC" toneMapped={false} />
@@ -65,6 +89,7 @@ function Mark() {
   const group = useRef<THREE.Group>(null);
   const ring = useRef<THREE.Mesh>(null);
   const neurons = useNeurons(110);
+  const mat = useSatin();
 
   useFrame(({ clock, pointer }, dt) => {
     const t = clock.elapsedTime;
@@ -94,7 +119,7 @@ function Mark() {
 
       {/* spokes */}
       {MODULES.map((m, i) => (
-        <Spoke key={i} to={m.pos} delay={i * 0.21} />
+        <Spoke key={i} to={m.pos} delay={i * 0.21} material={mat.navy} />
       ))}
 
       {/* modules */}
@@ -102,23 +127,19 @@ function Mark() {
         <Float key={i} speed={1.6} rotationIntensity={0.35} floatIntensity={0.35} floatingRange={[-0.08, 0.08]}>
           <group position={m.pos}>
             {m.shape === "sphere" ? (
-              <mesh castShadow>
+              <mesh castShadow material={mat.orange}>
                 <sphereGeometry args={[0.56, 48, 48]} />
-                <meshPhysicalMaterial color={ORANGE} roughness={0.22} clearcoat={1} clearcoatRoughness={0.12} sheen={0.4} />
               </mesh>
             ) : (
-              <RoundedBox args={[1.12, 1.1, 0.7]} radius={0.24} smoothness={6} castShadow>
-                <meshPhysicalMaterial color={ORANGE} roughness={0.22} clearcoat={1} clearcoatRoughness={0.12} sheen={0.4} />
-              </RoundedBox>
+              <RoundedBox args={[1.12, 1.1, 0.7]} radius={0.24} smoothness={6} castShadow material={mat.orange} />
             )}
           </group>
         </Float>
       ))}
 
       {/* hub */}
-      <mesh>
+      <mesh material={mat.navy}>
         <torusGeometry args={[0.3, 0.13, 32, 64]} />
-        <meshPhysicalMaterial color={NAVY} roughness={0.2} metalness={0.5} clearcoat={1} />
       </mesh>
       <mesh>
         <sphereGeometry args={[0.17, 32, 32]} />
@@ -144,13 +165,14 @@ export default function LogoNeuron() {
       style={{ touchAction: coarse ? "pan-y" : "none", cursor: coarse ? undefined : "grab" }}
       aria-label="Business Brain 24 — drag to rotate"
     >
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[3, 4, 5]} intensity={1.6} />
-      <directionalLight position={[-4, -2, 2]} intensity={0.5} color="#FFB08A" />
+      {/* soft studio light: broad, low-contrast sources so the satin reads as matte with gentle highlights */}
+      <hemisphereLight args={["#ffffff", "#F3E3D8", 0.9]} />
+      <directionalLight position={[3, 5, 6]} intensity={1.1} />
+      <directionalLight position={[-5, 1, 3]} intensity={0.35} color="#DCE6F5" />
       <Environment resolution={256}>
-        <Lightformer intensity={2.2} position={[0, 4, 4]} scale={[8, 2, 1]} />
-        <Lightformer intensity={1.2} position={[-5, 0, 2]} rotation-y={Math.PI / 2} scale={[6, 4, 1]} />
-        <Lightformer intensity={0.8} color="#FFB08A" position={[5, -2, 1]} rotation-y={-Math.PI / 2} scale={[6, 3, 1]} />
+        <Lightformer intensity={1.2} position={[0, 5, 5]} scale={[12, 6, 1]} />
+        <Lightformer intensity={0.7} position={[-6, 0, 3]} rotation-y={Math.PI / 2} scale={[10, 8, 1]} color="#E8EEF7" />
+        <Lightformer intensity={0.5} color="#FFE2CF" position={[6, -2, 2]} rotation-y={-Math.PI / 2} scale={[10, 6, 1]} />
       </Environment>
       <Mark />
       <OrbitControls
