@@ -3,7 +3,6 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { motion } from "framer-motion";
 import { Cog, LayoutGrid, Puzzle, Search, Star, Users, type LucideIcon } from "lucide-react";
 import clsx from "clsx";
 import AppIcon from "@/components/workspace/AppIcon";
@@ -48,13 +47,13 @@ export default function Dashboard() {
   if (!user) return null;
 
   return (
-    <section className="container-x pb-16 pt-[100px] sm:pt-[120px]">
-      <div className="mb-6">
+    <section className="flex min-h-[calc(100svh-64px)] flex-col p-3 sm:p-4">
+      <div className="mb-4 px-1">
         <p className="text-[13px] font-medium text-orange">Workspace</p>
         <h1 className="mt-1 text-[28px] font-medium tracking-[-0.03em] sm:text-[34px]">Good to see you, {user.name}</h1>
       </div>
 
-      <div className="grid gap-5 rounded-[24px] bg-[linear-gradient(135deg,#F5F3FF,#F8FAFC_45%,#EFF6FF)] p-3 sm:p-5 lg:grid-cols-[260px_1fr]">
+      <div className="grid flex-1 gap-5 rounded-[24px] bg-[linear-gradient(135deg,#F5F3FF,#F8FAFC_45%,#EFF6FF)] p-3 sm:p-5 lg:grid-cols-[260px_1fr]">
         <aside className="rounded-[20px] bg-white/80 p-3 sm:p-4">
           <SideItem icon={Star} label="Favourites" count={favs.length} color="#F59E0B" active={active === "fav" && !query} onClick={() => { setActive("fav"); setQuery(""); }} />
           <p className="mb-2 mt-5 px-2 text-[11px] font-semibold tracking-[0.2em] text-muted">CATEGORIES</p>
@@ -74,9 +73,9 @@ export default function Dashboard() {
           {shown.length === 0 ? (
             <p className="mt-16 text-center text-[15px] text-muted">{active === "fav" && !query ? "Star an app to pin it here." : "No apps match your search."}</p>
           ) : (
-            <motion.div key={`${active}-${query}`} initial="hidden" animate="show" variants={{ show: { transition: { staggerChildren: 0.03 } } }} className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 xl:grid-cols-5">
-              {shown.map((a) => (
-                <motion.div key={a.slug} variants={{ hidden: { opacity: 0, y: 10 }, show: { opacity: 1, y: 0 } }} className="group relative">
+            <div key={`${active}-${query}`} className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 xl:grid-cols-5">
+              {shown.map((a, i) => (
+                <div key={a.slug} style={{ animationDelay: `${i * 0.03}s` }} className="bb-fade-up group relative">
                   <Link href={`/dashboard/${a.slug}`} className="flex h-full flex-col items-center gap-3 rounded-[20px] bg-white px-3 pb-5 pt-7 text-center shadow-[0_10px_30px_-22px_rgba(15,23,42,0.35)] transition-transform duration-200 hover:-translate-y-1">
                     <AppIcon app={a} />
                     <span className="text-[14px] font-semibold leading-tight">{a.name}</span>
@@ -88,9 +87,9 @@ export default function Dashboard() {
                   >
                     <Star size={15} fill={favs.includes(a.slug) ? "currentColor" : "none"} />
                   </button>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
           )}
         </div>
       </div>

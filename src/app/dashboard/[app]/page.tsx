@@ -47,7 +47,7 @@ export default function AppDashboard() {
   const today = new Date().toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
 
   return (
-    <section className="container-x pb-16 pt-[96px] sm:pt-[110px]">
+    <section className="p-3 sm:p-4">
       <div className="rounded-[28px] border border-line bg-[#FBFBFC] p-3 shadow-[0_30px_80px_-50px_rgba(15,23,42,0.45)] sm:p-4">
         {/* top bar */}
         <div className="flex flex-wrap items-center justify-between gap-3 px-2 pb-3 pt-1">

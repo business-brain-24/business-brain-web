@@ -40,7 +40,8 @@ const cols = [
 
 export default function Footer() {
   // the chat is a full-screen app
-  if (usePathname() === "/ask") return null;
+  const footerPath = usePathname();
+  if (footerPath === "/ask" || footerPath.startsWith("/dashboard")) return null;
   return (
     <footer className="container-x pb-8 pt-16 sm:pt-24">
       <div className="flex flex-col justify-between gap-12 md:flex-row">

@@ -89,7 +89,7 @@ export default function Nav() {
   ];
 
   // the chat is a full-screen app with its own way home
-  if (pathname === "/ask") return null;
+  if (pathname === "/ask" || pathname.startsWith("/dashboard")) return null;
 
   return (
     <>
