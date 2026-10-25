@@ -1,91 +1,14 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
-import { Check } from "lucide-react";
-import Form from "@/components/ui/Form";
-import { Label } from "@/components/ui/Button";
-import { Reveal, SplitHeading } from "@/components/motion/Reveal";
-import { contact, industries } from "@/lib/data";
+import BookingFromQuery, { Booking } from "./Booking";
 
 export const metadata: Metadata = { title: "Book a fit session" };
 
-const sessions = {
-  fit: {
-    option: "Free ERP AI-readiness audit",
-    label: "Free ERP AI-readiness audit",
-    title: "Put AI at the core of your business.",
-    points: [
-      "We assess your requirements and current tools",
-      "We recommend the modules you actually need",
-      "We show how AI and our MCP server connect to your data",
-      "Cloud or on-premise options discussed during scoping",
-    ],
-    submit: "Book my free audit",
-  },
-  "watch-tower": {
-    option: "Watch Tower demo",
-    label: "Watch Tower demo",
-    title: "See your own operation live on Watch Tower.",
-    points: [
-      "A live map of your field force, branches, orders and trucks",
-      "New orders popping up as they happen",
-      "Leaderboards for your top performers",
-      "Ask the AI questions like “Which region is behind target today?”",
-    ],
-    submit: "Book my Watch Tower demo",
-  },
-} as const;
-
-export default async function Demo({ searchParams }: { searchParams: Promise<{ session?: string }> }) {
-  const { session } = await searchParams;
-  const s = session === "watch-tower" ? sessions["watch-tower"] : sessions.fit;
-
+// The page is static, so ?session= is read in the browser. The fallback is the default fit session.
+export default function Demo() {
   return (
-    <section className="container-x grid gap-12 pb-10 pt-[120px] sm:pt-[150px] lg:grid-cols-[1fr_1.1fr] lg:gap-20">
-      <div>
-        <Label>{s.label}</Label>
-        <SplitHeading text={s.title} className="h-section mt-3 !text-[clamp(34px,5vw,56px)]" />
-        <Reveal delay={0.3}>
-          <ul className="mt-8 space-y-4 text-[16px]">
-            {s.points.map((t) => (
-              <li key={t} className="flex items-center gap-3">
-                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-soft text-orange">
-                  <Check size={14} strokeWidth={3} />
-                </span>
-                {t}
-              </li>
-            ))}
-          </ul>
-          <div className="mt-10 rounded-[16px] bg-surface p-6">
-            <p className="text-[16px] leading-[25px]">Prefer to talk first?</p>
-            <p className="mt-2 text-[14px] text-muted">
-              Call{" "}
-              <a href={contact.phoneHref} className="font-medium text-ink hover:text-orange">
-                {contact.phone}
-              </a>{" "}
-              or visit{" "}
-              <a href={contact.siteHref} className="font-medium text-ink hover:text-orange">
-                {contact.site}
-              </a>
-              .
-            </p>
-          </div>
-        </Reveal>
-      </div>
-      <Reveal delay={0.2} className="rounded-[20px] border border-line p-6 sm:p-8">
-        <Form
-          key={s.option}
-          submit={s.submit}
-          done="Your request is in."
-          fields={[
-            { name: "session", label: "What would you like to book?", options: [sessions.fit.option, sessions["watch-tower"].option], defaultValue: s.option, full: true },
-            { name: "name", label: "Full name", placeholder: "Your name" },
-            { name: "email", label: "Work email", type: "email", placeholder: "name@company.com" },
-            { name: "company", label: "Company", placeholder: "Company name" },
-            { name: "size", label: "Company size", options: ["1–50", "51–200", "201–1,000", "1,000+"] },
-            { name: "industry", label: "Industry", options: industries.map((i) => i.name), full: true },
-            { name: "notes", label: "What would you like to see?", area: true, placeholder: "Payroll on Bangladesh rules, field sales on Watch Tower…" },
-          ]}
-        />
-      </Reveal>
-    </section>
+    <Suspense fallback={<Booking />}>
+      <BookingFromQuery />
+    </Suspense>
   );
 }
