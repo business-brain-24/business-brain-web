@@ -159,8 +159,8 @@ function Sparkline({ points }: { points: number[] }) {
         </linearGradient>
       </defs>
       <path d={`${d} L${w},${h} L0,${h} Z`} fill="url(#spark-fill)" />
-      <path d={d} fill="none" stroke="#0B0D12" strokeWidth="2" strokeLinecap="round" pathLength={1} className="bb-draw" />
-      <circle cx={lx} cy={ly} r="4.5" fill="#0B0D12" />
+      <path d={d} fill="none" stroke="#FF6B2C" strokeWidth="2" strokeLinecap="round" pathLength={1} className="bb-draw" />
+      <circle cx={lx} cy={ly} r="4.5" fill="#FF6B2C" />
     </svg>
   );
 }
@@ -176,7 +176,7 @@ function HalfGauge({ value }: { value: number }) {
         <radialGradient id="gauge-core" cx="0.5" cy="1" r="1">
           <stop offset="0" stopColor="#FF6B2C" />
           <stop offset="0.6" stopColor="#C2410C" />
-          <stop offset="1" stopColor="#0B0D12" />
+          <stop offset="1" stopColor="#9A3412" />
         </radialGradient>
       </defs>
       {Array.from({ length: ticks + 1 }, (_, i) => {

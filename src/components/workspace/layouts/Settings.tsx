@@ -22,7 +22,7 @@ export default function Settings({ sections }: Props) {
         {sections.map((s) => {
           const Icon = icons[s.title] ?? Building2;
           return (
-            <button key={s.title} onClick={() => setActive(s.title)} className={clsx("flex shrink-0 items-center gap-2.5 rounded-[12px] px-3 py-2.5 text-[14px]", active === s.title ? "bg-ink text-white" : "hover:bg-surface")}>
+            <button key={s.title} onClick={() => setActive(s.title)} className={clsx("flex shrink-0 items-center gap-2.5 rounded-[12px] px-3 py-2.5 text-[14px]", active === s.title ? "bg-orange-soft font-medium text-orange-deep" : "hover:bg-surface")}>
               <Icon size={16} className={active === s.title ? "text-orange" : "text-muted"} /> {s.title}
             </button>
           );
@@ -37,9 +37,9 @@ export default function Settings({ sections }: Props) {
               setSaved(true);
               setTimeout(() => setSaved(false), 1800);
             }}
-            className="flex h-9 items-center gap-1.5 rounded-full bg-ink px-4 text-[13px] font-medium text-white"
+            className="flex h-9 items-center gap-1.5 rounded-full bg-orange px-4 text-[13px] font-medium text-white"
           >
-            {saved ? <><Check size={14} className="text-orange" /> Saved</> : "Save changes"}
+            {saved ? <><Check size={14} /> Saved</> : "Save changes"}
           </button>
         </div>
         <div key={active} className="divide-y divide-line">

@@ -24,7 +24,7 @@ export default function Records({ app, cols, rows, action }: { app: App; cols: s
         <div className="flex flex-col gap-3 border-b border-line p-3 lg:flex-row lg:items-center lg:justify-between">
           <div className="no-scrollbar flex gap-1 overflow-x-auto">
             {["All", ...statuses].map((s) => (
-              <button key={s} onClick={() => setTab(s)} className={clsx("shrink-0 rounded-full px-3.5 py-1.5 text-[13px] transition-colors", tab === s ? "bg-ink text-white" : "text-muted hover:bg-surface hover:text-ink")}>
+              <button key={s} onClick={() => setTab(s)} className={clsx("shrink-0 rounded-full px-3.5 py-1.5 text-[13px] transition-colors", tab === s ? "bg-orange-soft font-medium text-orange-deep" : "text-muted hover:bg-surface hover:text-ink")}>
                 {s}
                 <span className={clsx("ml-1.5 text-[11px]", tab === s ? "text-orange" : "text-muted/70")}>{s === "All" ? rows.length : rows.filter((r) => r[r.length - 1] === s).length}</span>
               </button>
@@ -110,7 +110,7 @@ export default function Records({ app, cols, rows, action }: { app: App; cols: s
             </div>
             <div className="flex gap-2 border-t border-line p-4">
               <button className="h-11 flex-1 rounded-[12px] border border-line text-[14px] font-medium hover:border-ink/30">Edit</button>
-              <button className="h-11 flex-1 rounded-[12px] bg-ink text-[14px] font-medium text-white">Approve</button>
+              <button className="h-11 flex-1 rounded-[12px] bg-orange text-[14px] font-medium text-white">Approve</button>
             </div>
           </aside>
         </>

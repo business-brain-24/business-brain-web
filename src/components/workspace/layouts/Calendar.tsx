@@ -9,7 +9,7 @@ const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 const START = 6, END = 22, ROW = 44;
 const tones: Record<Tone, string> = {
   orange: "bg-orange-soft border-orange text-orange-deep",
-  ink: "bg-ink text-white border-ink",
+  ink: "bg-[#EEF2F7] border-[#64748B] text-ink",
   green: "bg-emerald-50 border-emerald-500 text-emerald-800",
   gray: "bg-surface border-[#CBD5E1] text-ink",
 };
@@ -32,7 +32,7 @@ export default function Calendar({ week, events, side }: Props) {
           </div>
           <div className="flex items-center gap-2">
             <div className="flex rounded-full border border-line p-0.5 text-[12px]">
-              {["Day", "Week", "Month"].map((v) => <span key={v} className={clsx("rounded-full px-3 py-1", v === "Week" ? "bg-ink text-white" : "text-muted")}>{v}</span>)}
+              {["Day", "Week", "Month"].map((v) => <span key={v} className={clsx("rounded-full px-3 py-1", v === "Week" ? "bg-orange-soft font-medium text-orange-deep" : "text-muted")}>{v}</span>)}
             </div>
             <button className="flex h-8 items-center gap-1 rounded-full bg-[linear-gradient(180deg,#FF6B2C,#C2410C)] px-3 text-[12px] font-medium text-white"><Plus size={13} /> New</button>
           </div>

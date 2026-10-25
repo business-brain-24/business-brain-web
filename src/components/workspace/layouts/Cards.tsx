@@ -20,7 +20,7 @@ export default function Cards({ app, filters, items, action }: Props) {
       <div className="mb-3 flex items-center justify-between gap-3">
         <div className="no-scrollbar flex gap-1 overflow-x-auto rounded-full border border-line bg-white p-1">
           {filters.map((f) => (
-            <button key={f} onClick={() => setFilter(f)} className={clsx("shrink-0 rounded-full px-4 py-1.5 text-[13px]", filter === f ? "bg-ink text-white" : "text-muted hover:text-ink")}>
+            <button key={f} onClick={() => setFilter(f)} className={clsx("shrink-0 rounded-full px-4 py-1.5 text-[13px]", filter === f ? "bg-orange-soft font-medium text-orange-deep" : "text-muted hover:text-ink")}>
               {f} <span className={clsx("ml-1 text-[11px]", filter === f ? "text-orange" : "text-muted/70")}>{items.filter((i) => i.group === f).length}</span>
             </button>
           ))}

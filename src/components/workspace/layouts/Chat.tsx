@@ -30,7 +30,7 @@ export default function Chat({ channels, active, topic, messages: seed }: Props)
         </label>
         <p className="px-4 pb-1 pt-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-muted">Channels</p>
         {channels.filter((c) => !c.dm).map((c) => (
-          <button key={c.name} className={clsx("mx-2 flex items-center gap-2 rounded-[10px] px-2.5 py-2 text-[14px]", c.name === active ? "bg-ink text-white" : "hover:bg-white")}>
+          <button key={c.name} className={clsx("mx-2 flex items-center gap-2 rounded-[10px] px-2.5 py-2 text-[14px]", c.name === active ? "bg-orange-soft font-medium text-orange-deep" : "hover:bg-white")}>
             <Hash size={14} className={c.name === active ? "text-orange" : "text-muted"} />
             <span className={clsx("flex-1 text-left", c.unread && c.name !== active && "font-semibold")}>{c.name}</span>
             {c.unread && c.name !== active && <span className="rounded-full bg-orange px-1.5 text-[11px] font-semibold text-white">{c.unread}</span>}
@@ -62,7 +62,7 @@ export default function Chat({ channels, active, topic, messages: seed }: Props)
               <Avatar name={m.who} size={34} />
               <div className={clsx("max-w-[75%]", m.me && "text-right")}>
                 <p className="text-[12px] text-muted"><span className="font-semibold text-ink">{m.who}</span> · {m.time}</p>
-                <p className={clsx("mt-1 inline-block rounded-[14px] px-3.5 py-2.5 text-left text-[14px] leading-[21px]", m.me ? "rounded-tr-[4px] bg-ink text-white" : "rounded-tl-[4px] bg-surface")}>{m.text}</p>
+                <p className={clsx("mt-1 inline-block rounded-[14px] px-3.5 py-2.5 text-left text-[14px] leading-[21px]", m.me ? "rounded-tr-[4px] bg-orange-soft text-ink" : "rounded-tl-[4px] bg-surface")}>{m.text}</p>
               </div>
             </div>
           ))}

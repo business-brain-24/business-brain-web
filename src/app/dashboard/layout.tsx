@@ -22,7 +22,7 @@ export default function WorkspaceLayout({ children }: { children: React.ReactNod
           <span className="hidden text-[14px] font-medium text-muted sm:block">Workspace</span>
         </div>
         <nav className="flex items-center gap-1 sm:gap-2">
-          <Link href="/dashboard" className={clsx("flex items-center gap-1.5 rounded-full px-3 py-2 text-[14px]", pathname === "/dashboard" ? "bg-ink text-white" : "hover:bg-surface")}>
+          <Link href="/dashboard" className={clsx("flex items-center gap-1.5 rounded-full px-3 py-2 text-[14px]", pathname === "/dashboard" ? "bg-orange-soft font-medium text-orange-deep" : "hover:bg-surface")}>
             <LayoutGrid size={15} /> <span className="hidden sm:inline">My apps</span>
           </Link>
           <Link href="/ask" className="flex items-center gap-1.5 rounded-full px-3 py-2 text-[14px] hover:bg-surface">

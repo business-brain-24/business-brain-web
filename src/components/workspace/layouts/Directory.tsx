@@ -20,7 +20,7 @@ export default function Directory({ groups, people, action }: Props) {
       <div className="mb-3 flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
         <div className="no-scrollbar flex gap-1 overflow-x-auto rounded-full border border-line bg-white p-1">
           {["All", ...groups].map((g) => (
-            <button key={g} onClick={() => setGroup(g)} className={clsx("shrink-0 rounded-full px-3.5 py-1.5 text-[13px]", group === g ? "bg-ink text-white" : "text-muted hover:text-ink")}>
+            <button key={g} onClick={() => setGroup(g)} className={clsx("shrink-0 rounded-full px-3.5 py-1.5 text-[13px]", group === g ? "bg-orange-soft font-medium text-orange-deep" : "text-muted hover:text-ink")}>
               {g} <span className={clsx("ml-1 text-[11px]", group === g ? "text-orange" : "text-muted/70")}>{g === "All" ? people.length : people.filter((p) => p.group === g).length}</span>
             </button>
           ))}
@@ -31,8 +31,8 @@ export default function Directory({ groups, people, action }: Props) {
             <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search people" className="min-w-0 flex-1 bg-transparent text-[13px] outline-none" />
           </label>
           <div className="flex rounded-full border border-line bg-white p-0.5">
-            <button onClick={() => setGrid(true)} aria-label="Grid view" className={clsx("rounded-full p-2", grid && "bg-ink text-white")}><LayoutGrid size={14} /></button>
-            <button onClick={() => setGrid(false)} aria-label="List view" className={clsx("rounded-full p-2", !grid && "bg-ink text-white")}><List size={14} /></button>
+            <button onClick={() => setGrid(true)} aria-label="Grid view" className={clsx("rounded-full p-2", grid && "bg-orange-soft font-medium text-orange-deep")}><LayoutGrid size={14} /></button>
+            <button onClick={() => setGrid(false)} aria-label="List view" className={clsx("rounded-full p-2", !grid && "bg-orange-soft font-medium text-orange-deep")}><List size={14} /></button>
           </div>
           <button className="flex h-10 shrink-0 items-center gap-1.5 rounded-full bg-[linear-gradient(180deg,#FF6B2C,#C2410C)] px-4 text-[13px] font-medium text-white"><Plus size={14} /> <span className="hidden sm:inline">{action}</span></button>
         </div>

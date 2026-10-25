@@ -15,13 +15,13 @@ export function StatusPill({ s }: { s: string }) {
   );
 }
 
-/** Initials avatar in a stable brand-adjacent tone per name. */
+/** Initials avatar in a stable soft tone per name. */
 export function Avatar({ name, size = 32 }: { name: string; size?: number }) {
-  const tones = ["#0B0D12", "#C2410C", "#FF6B2C", "#545A66", "#7C2D12", "#1F2937"];
-  const tone = tones[[...name].reduce((n, c) => n + c.charCodeAt(0), 0) % tones.length];
+  const tones = [["#FFF4EE", "#C2410C"], ["#F1F5F9", "#475569"], ["#ECFDF5", "#047857"], ["#FEF3C7", "#B45309"], ["#EEF2FF", "#4338CA"]];
+  const [bg, fg] = tones[[...name].reduce((n, c) => n + c.charCodeAt(0), 0) % tones.length];
   const initials = name.split(" ").map((p) => p[0]).slice(0, 2).join("").toUpperCase();
   return (
-    <span className="flex shrink-0 items-center justify-center rounded-full font-semibold text-white" style={{ width: size, height: size, background: tone, fontSize: size * 0.38 }}>
+    <span className="flex shrink-0 items-center justify-center rounded-full font-semibold" style={{ width: size, height: size, background: bg, color: fg, fontSize: size * 0.38 }}>
       {initials}
     </span>
   );

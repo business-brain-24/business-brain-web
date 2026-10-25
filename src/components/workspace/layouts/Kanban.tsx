@@ -5,7 +5,7 @@ import { Avatar } from "./shared";
 
 type Props = Extract<Layout, { kind: "kanban" }>;
 
-const accents = ["#94A3B8", "#FF6B2C", "#F59E0B", "#0B0D12", "#10B981"];
+const accents = ["#94A3B8", "#FF6B2C", "#F59E0B", "#64748B", "#10B981"];
 
 /** Board layout: columns of cards that move left to right as work progresses. */
 export default function Kanban({ columns, action }: Props) {

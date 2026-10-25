@@ -62,13 +62,12 @@ export default function Dashboard() {
   return (
     <section className="mx-auto max-w-[1500px] p-3 sm:p-5">
       {/* command header */}
-      <div className="bb-fade-up relative overflow-hidden rounded-[24px] bg-ink p-5 text-white sm:p-8">
-        <div className="pointer-events-none absolute -right-20 -top-32 h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle,rgba(255,107,44,0.45),transparent_65%)]" />
-        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:linear-gradient(90deg,transparent,black)]" />
+      <div className="bb-fade-up relative overflow-hidden rounded-[24px] border border-line bg-white p-5 sm:p-8">
+        <div className="pointer-events-none absolute -right-20 -top-32 h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle,rgba(255,107,44,0.14),transparent_65%)]" />
 
         <div className="relative grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-end">
           <div>
-            <p className="text-[13px] text-white/50">{new Date().toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" })}</p>
+            <p className="text-[13px] text-muted">{new Date().toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" })}</p>
             <h1 className="mt-2 text-[30px] font-medium tracking-[-0.03em] sm:text-[40px]">
               {greet}, {user.name}.
             </h1>
@@ -77,27 +76,27 @@ export default function Dashboard() {
                 e.preventDefault();
                 askBrain(ask);
               }}
-              className="mt-6 flex h-14 items-center gap-3 rounded-[16px] border border-white/10 bg-white/[0.06] pl-4 pr-1.5 backdrop-blur focus-within:border-orange/60"
+              className="mt-6 flex h-14 items-center gap-3 rounded-[16px] border border-line bg-surface pl-4 pr-1.5 focus-within:border-orange focus-within:bg-white"
             >
               <Sparkles size={18} className="shrink-0 text-orange" />
-              <input value={ask} onChange={(e) => setAsk(e.target.value)} placeholder="Ask Brain AI about your business…" className="h-full min-w-0 flex-1 bg-transparent text-[15px] text-white outline-none placeholder:text-white/40" />
-              <button type="submit" aria-label="Ask" className="flex h-11 w-11 items-center justify-center rounded-[12px] bg-[linear-gradient(180deg,#FF6B2C,#C2410C)]">
+              <input value={ask} onChange={(e) => setAsk(e.target.value)} placeholder="Ask Brain AI about your business…" className="h-full min-w-0 flex-1 bg-transparent text-[15px] outline-none placeholder:text-muted" />
+              <button type="submit" aria-label="Ask" className="flex h-11 w-11 items-center justify-center rounded-[12px] bg-orange text-white">
                 <ArrowRight size={18} />
               </button>
             </form>
             <div className="mt-3 flex flex-wrap gap-2">
               {prompts.map((p) => (
-                <button key={p} onClick={() => askBrain(p)} className="rounded-full border border-white/10 px-3 py-1.5 text-[12px] text-white/70 transition-colors hover:border-orange/50 hover:text-white">
+                <button key={p} onClick={() => askBrain(p)} className="rounded-full border border-line px-3 py-1.5 text-[12px] text-muted transition-colors hover:border-orange/50 hover:text-ink">
                   {p}
                 </button>
               ))}
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-px overflow-hidden rounded-[16px] border border-white/10 bg-white/10">
+          <div className="grid grid-cols-2 gap-px overflow-hidden rounded-[16px] border border-line bg-line">
             {today.map(([k, v]) => (
-              <div key={k} className="bg-ink/90 p-4">
-                <p className="text-[12px] text-white/50">{k}</p>
+              <div key={k} className="bg-white p-4">
+                <p className="text-[12px] text-muted">{k}</p>
                 <p className="mt-1.5 text-[22px] font-medium tracking-[-0.02em] sm:text-[26px]">{v}</p>
               </div>
             ))}
@@ -112,7 +111,7 @@ export default function Dashboard() {
             <button
               key={t.id}
               onClick={() => setTab(t.id)}
-              className={clsx("flex shrink-0 items-center gap-2 rounded-full px-4 py-2 text-[14px] transition-colors", tab === t.id ? "bg-ink text-white" : "text-muted hover:text-ink")}
+              className={clsx("flex shrink-0 items-center gap-2 rounded-full px-4 py-2 text-[14px] transition-colors", tab === t.id ? "bg-orange-soft font-medium text-orange-deep" : "text-muted hover:text-ink")}
             >
               {t.id === "fav" && <Star size={13} fill={tab === t.id ? "currentColor" : "none"} />}
               {t.name}
