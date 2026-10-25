@@ -148,3 +148,13 @@ body {
 }
 .bb-grow { transform-origin: bottom; animation: bb-grow 0.8s cubic-bezier(0.22, 1, 0.36, 1) both; }
 .bb-draw { stroke-dasharray: 1; animation: bb-draw 1.2s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes bb-slide-in {
+  from { transform: translateX(100%); }
+  to { transform: none; }
+}
+@keyframes bb-grow-x {
+  from { transform: scaleX(0); }
+  to { transform: none; }
+}
+.bb-slide-in { animation: bb-slide-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.bb-grow-x { transform-origin: left; animation: bb-grow-x 0.9s cubic-bezier(0.22, 1, 0.36, 1) both; }

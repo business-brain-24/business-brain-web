@@ -3,20 +3,23 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Cog, LayoutGrid, Puzzle, Search, Star, Users, type LucideIcon } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Search, Sparkles, Star } from "lucide-react";
 import clsx from "clsx";
 import AppIcon from "@/components/workspace/AppIcon";
 import { useUser } from "@/lib/session";
 import { apps, categories, type Category } from "@/lib/workspace";
 
-const catIcons: Record<Category, LucideIcon> = { general: LayoutGrid, hrms: Users, operational: Cog, other: Puzzle };
 const FAV_KEY = "bb-favourites";
+const pick = (slug: string, i = 0) => apps.find((a) => a.slug === slug)!.kpis[i];
+const today = [pick("sales"), pick("attendance"), pick("payroll", 2), pick("inventory", 2)];
+const prompts = ["Which region is behind target today?", "Who is on leave this week?", "What stock runs out first?"];
 
 export default function Dashboard() {
   const router = useRouter();
   const user = useUser();
-  const [active, setActive] = useState<Category | "fav">("general");
+  const [tab, setTab] = useState<Category | "all" | "fav">("all");
   const [query, setQuery] = useState("");
+  const [ask, setAsk] = useState("");
   const [favs, setFavs] = useState<string[]>([]);
 
   useEffect(() => {
@@ -40,73 +43,126 @@ export default function Dashboard() {
 
   const shown = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (q) return apps.filter((a) => a.name.toLowerCase().includes(q));
-    return active === "fav" ? apps.filter((a) => favs.includes(a.slug)) : apps.filter((a) => a.category === active);
-  }, [active, query, favs]);
+    return apps.filter(
+      (a) => (tab === "all" || (tab === "fav" ? favs.includes(a.slug) : a.category === tab)) && (!q || a.name.toLowerCase().includes(q)),
+    );
+  }, [tab, query, favs]);
 
   if (!user) return null;
 
+  const hour = new Date().getHours();
+  const greet = hour < 12 ? "Good morning" : hour < 17 ? "Good afternoon" : "Good evening";
+  const askBrain = (q: string) => q.trim() && router.push(`/ask?q=${encodeURIComponent(q.trim())}`);
+  const tabs: { id: Category | "all" | "fav"; name: string; count: number }[] = [
+    { id: "all", name: "All apps", count: apps.length },
+    ...categories.map((c) => ({ id: c.id, name: c.name, count: apps.filter((a) => a.category === c.id).length })),
+    { id: "fav", name: "Pinned", count: favs.length },
+  ];
+
   return (
-    <section className="flex min-h-[calc(100svh-64px)] flex-col p-3 sm:p-4">
-      <div className="mb-4 px-1">
-        <p className="text-[13px] font-medium text-orange">Workspace</p>
-        <h1 className="mt-1 text-[28px] font-medium tracking-[-0.03em] sm:text-[34px]">Good to see you, {user.name}</h1>
-      </div>
+    <section className="mx-auto max-w-[1500px] p-3 sm:p-5">
+      {/* command header */}
+      <div className="bb-fade-up relative overflow-hidden rounded-[24px] bg-ink p-5 text-white sm:p-8">
+        <div className="pointer-events-none absolute -right-20 -top-32 h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle,rgba(255,107,44,0.45),transparent_65%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:linear-gradient(90deg,transparent,black)]" />
 
-      <div className="grid flex-1 gap-5 rounded-[24px] bg-[linear-gradient(135deg,#F5F3FF,#F8FAFC_45%,#EFF6FF)] p-3 sm:p-5 lg:grid-cols-[260px_1fr]">
-        <aside className="rounded-[20px] bg-white/80 p-3 sm:p-4">
-          <SideItem icon={Star} label="Favourites" count={favs.length} color="#F59E0B" active={active === "fav" && !query} onClick={() => { setActive("fav"); setQuery(""); }} />
-          <p className="mb-2 mt-5 px-2 text-[11px] font-semibold tracking-[0.2em] text-muted">CATEGORIES</p>
-          <div className="flex gap-1 overflow-x-auto lg:flex-col">
-            {categories.map((c) => (
-              <SideItem key={c.id} icon={catIcons[c.id]} label={c.name} count={apps.filter((a) => a.category === c.id).length} color={c.color} active={active === c.id && !query} onClick={() => { setActive(c.id); setQuery(""); }} />
-            ))}
-          </div>
-        </aside>
-
-        <div>
-          <label className="flex h-14 items-center gap-3 rounded-[16px] border border-line bg-white px-4 shadow-[0_10px_30px_-20px_rgba(15,23,42,0.3)] focus-within:border-orange">
-            <Search size={18} className="text-muted" />
-            <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search apps…" className="h-full flex-1 bg-transparent text-[15px] outline-none" />
-          </label>
-
-          {shown.length === 0 ? (
-            <p className="mt-16 text-center text-[15px] text-muted">{active === "fav" && !query ? "Star an app to pin it here." : "No apps match your search."}</p>
-          ) : (
-            <div key={`${active}-${query}`} className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 xl:grid-cols-5">
-              {shown.map((a, i) => (
-                <div key={a.slug} style={{ animationDelay: `${i * 0.03}s` }} className="bb-fade-up group relative">
-                  <Link href={`/dashboard/${a.slug}`} className="flex h-full flex-col items-center gap-3 rounded-[20px] bg-white px-3 pb-5 pt-7 text-center shadow-[0_10px_30px_-22px_rgba(15,23,42,0.35)] transition-transform duration-200 hover:-translate-y-1">
-                    <AppIcon app={a} />
-                    <span className="text-[14px] font-semibold leading-tight">{a.name}</span>
-                  </Link>
-                  <button
-                    onClick={() => toggleFav(a.slug)}
-                    aria-label={favs.includes(a.slug) ? `Remove ${a.name} from favourites` : `Add ${a.name} to favourites`}
-                    className={clsx("absolute right-2.5 top-2.5 rounded-full p-1.5 transition-opacity", favs.includes(a.slug) ? "text-amber-500" : "text-muted opacity-0 group-hover:opacity-100 focus:opacity-100")}
-                  >
-                    <Star size={15} fill={favs.includes(a.slug) ? "currentColor" : "none"} />
-                  </button>
-                </div>
+        <div className="relative grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-end">
+          <div>
+            <p className="text-[13px] text-white/50">{new Date().toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" })}</p>
+            <h1 className="mt-2 text-[30px] font-medium tracking-[-0.03em] sm:text-[40px]">
+              {greet}, {user.name}.
+            </h1>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                askBrain(ask);
+              }}
+              className="mt-6 flex h-14 items-center gap-3 rounded-[16px] border border-white/10 bg-white/[0.06] pl-4 pr-1.5 backdrop-blur focus-within:border-orange/60"
+            >
+              <Sparkles size={18} className="shrink-0 text-orange" />
+              <input value={ask} onChange={(e) => setAsk(e.target.value)} placeholder="Ask Brain AI about your business…" className="h-full min-w-0 flex-1 bg-transparent text-[15px] text-white outline-none placeholder:text-white/40" />
+              <button type="submit" aria-label="Ask" className="flex h-11 w-11 items-center justify-center rounded-[12px] bg-[linear-gradient(180deg,#FF6B2C,#C2410C)]">
+                <ArrowRight size={18} />
+              </button>
+            </form>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {prompts.map((p) => (
+                <button key={p} onClick={() => askBrain(p)} className="rounded-full border border-white/10 px-3 py-1.5 text-[12px] text-white/70 transition-colors hover:border-orange/50 hover:text-white">
+                  {p}
+                </button>
               ))}
             </div>
-          )}
+          </div>
+
+          <div className="grid grid-cols-2 gap-px overflow-hidden rounded-[16px] border border-white/10 bg-white/10">
+            {today.map(([k, v]) => (
+              <div key={k} className="bg-ink/90 p-4">
+                <p className="text-[12px] text-white/50">{k}</p>
+                <p className="mt-1.5 text-[22px] font-medium tracking-[-0.02em] sm:text-[26px]">{v}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </section>
-  );
-}
 
-function SideItem({ icon: Icon, label, count, color, active, onClick }: { icon: LucideIcon; label: string; count: number; color: string; active: boolean; onClick: () => void }) {
-  return (
-    <button onClick={onClick} className={clsx("flex w-full shrink-0 items-center gap-3 rounded-[14px] px-2 py-2 text-left transition-colors lg:w-full", active ? "bg-white shadow-[0_10px_30px_-18px_rgba(15,23,42,0.35)]" : "hover:bg-white/70")}>
-      <span className="flex h-10 w-10 items-center justify-center rounded-[12px] transition-colors" style={active ? { background: color, color: "#fff" } : { background: "#F1F5F9", color: "#64748B" }}>
-        <Icon size={18} />
-      </span>
-      <span className="flex-1 whitespace-nowrap text-[15px] font-semibold" style={active ? { color } : undefined}>{label}</span>
-      <span className="ml-2 flex h-7 min-w-7 items-center justify-center rounded-full px-2 text-[12px] font-semibold" style={active ? { background: color, color: "#fff" } : { background: "#F1F5F9", color: "#64748B" }}>
-        {count}
-      </span>
-    </button>
+      {/* tabs + search */}
+      <div className="mt-5 flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+        <div className="no-scrollbar flex gap-1 overflow-x-auto rounded-full border border-line bg-white p-1">
+          {tabs.map((t) => (
+            <button
+              key={t.id}
+              onClick={() => setTab(t.id)}
+              className={clsx("flex shrink-0 items-center gap-2 rounded-full px-4 py-2 text-[14px] transition-colors", tab === t.id ? "bg-ink text-white" : "text-muted hover:text-ink")}
+            >
+              {t.id === "fav" && <Star size={13} fill={tab === t.id ? "currentColor" : "none"} />}
+              {t.name}
+              <span className={clsx("text-[12px]", tab === t.id ? "text-orange" : "text-muted/70")}>{t.count}</span>
+            </button>
+          ))}
+        </div>
+        <label className="flex h-11 items-center gap-2.5 rounded-full border border-line bg-white px-4 focus-within:border-orange lg:w-[300px]">
+          <Search size={16} className="text-muted" />
+          <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Find an app" className="h-full min-w-0 flex-1 bg-transparent text-[14px] outline-none" />
+        </label>
+      </div>
+
+      {/* apps */}
+      {shown.length === 0 ? (
+        <div className="mt-6 rounded-[20px] border border-dashed border-line bg-white py-16 text-center text-[15px] text-muted">
+          {tab === "fav" && !query ? "Pin an app with the star to keep it here." : "No apps match your search."}
+        </div>
+      ) : (
+        <div key={`${tab}-${query}`} className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+          {shown.map((a, i) => {
+            const [label, value] = a.kpis[0];
+            const pinned = favs.includes(a.slug);
+            return (
+              <div key={a.slug} style={{ animationDelay: `${Math.min(i, 12) * 0.025}s` }} className="bb-fade-up group relative">
+                <Link
+                  href={`/dashboard/${a.slug}`}
+                  className="flex h-full items-center gap-4 rounded-[18px] border border-line bg-white p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-orange/40 hover:shadow-[0_18px_40px_-28px_rgba(255,107,44,0.6)]"
+                >
+                  <AppIcon app={a} size={52} />
+                  <div className="min-w-0 flex-1">
+                    <p className="truncate text-[15px] font-medium">{a.name}</p>
+                    <p className="mt-0.5 truncate text-[12px] text-muted">
+                      {label} · <span className="font-medium text-ink">{value}</span>
+                    </p>
+                  </div>
+                  <ArrowUpRight size={16} className="shrink-0 text-muted transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-orange" />
+                </Link>
+                <button
+                  onClick={() => toggleFav(a.slug)}
+                  aria-label={pinned ? `Unpin ${a.name}` : `Pin ${a.name}`}
+                  className={clsx("absolute right-10 top-1/2 -translate-y-1/2 rounded-full p-1.5 transition-opacity", pinned ? "text-orange" : "text-muted opacity-0 hover:text-orange group-hover:opacity-100 focus:opacity-100")}
+                >
+                  <Star size={14} fill={pinned ? "currentColor" : "none"} />
+                </button>
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </section>
   );
 }
