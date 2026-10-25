@@ -88,9 +88,9 @@ export default function Hero() {
             className="flex flex-wrap items-center justify-center gap-x-5 gap-y-3"
           >
             <Button href="/demo">Book a free AI-ERP fit session</Button>
-            <Link href="/demo?session=watch-tower" className="group text-[15px] text-[#2A2E37] transition-colors hover:text-orange">
+            <a href="https://world.akboriaerp.com/?source=seed" target="_blank" rel="noopener noreferrer" className="group text-[15px] text-[#2A2E37] transition-colors hover:text-orange">
               Book a Watch Tower demo <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
-            </Link>
+            </a>
           </motion.div>
         </div>
 
