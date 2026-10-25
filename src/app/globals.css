@@ -138,3 +138,13 @@ body {
 }
 .bb-rise { animation: bb-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both; }
 .bb-fade-up { animation: bb-fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes bb-grow {
+  from { transform: scaleY(0); }
+  to { transform: none; }
+}
+@keyframes bb-draw {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+.bb-grow { transform-origin: bottom; animation: bb-grow 0.8s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.bb-draw { stroke-dasharray: 1; animation: bb-draw 1.2s cubic-bezier(0.22, 1, 0.36, 1) both; }

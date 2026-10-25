@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown, Menu, X, ArrowUp } from "lucide-react";
+import { ChevronDown, LayoutGrid, Menu, X, ArrowUp } from "lucide-react";
 import clsx from "clsx";
 import { groups, industries, products } from "@/lib/data";
 import { Button } from "@/components/ui/Button";
@@ -21,7 +21,7 @@ export function Logo({ className }: { className?: string }) {
   return (
     <Link href="/" className={clsx("flex items-center gap-2.5", className)} aria-label="Business Brain 24 home">
       <BrandMark className="h-[30px] w-[30px]" />
-      <span className="text-[15px] font-medium tracking-[-0.01em]">Business Brain 24</span>
+      <span className="whitespace-nowrap text-[15px] font-medium tracking-[-0.01em]">Business Brain 24</span>
     </Link>
   );
 }
@@ -132,7 +132,12 @@ export default function Nav() {
 
           <div className="flex items-center gap-2 sm:gap-4">
             {user ? (
-              <UserMenu user={user} />
+              <>
+                <Link href="/dashboard" className="hidden items-center gap-1.5 whitespace-nowrap text-[14px] text-ink xl:flex">
+                  <LayoutGrid size={15} /> My apps
+                </Link>
+                <UserMenu user={user} />
+              </>
             ) : (
               <Link href="/login" className="hidden text-[14px] text-ink sm:block">
                 Log in

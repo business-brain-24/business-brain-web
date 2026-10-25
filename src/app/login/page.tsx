@@ -16,7 +16,7 @@ export default function Login() {
     const pass = String(data.get("password") ?? "");
     if (DEMO_USERS[user]?.password !== pass) return setError("Wrong username or password.");
     signIn(user);
-    router.push("/dashboard");
+    router.push("/");
   };
 
   const input = clsx("h-12 w-full rounded-[10px] border bg-white px-3.5 text-[15px] outline-none focus:border-orange focus:shadow-[0_0_0_4px_rgba(255,107,44,0.14)]", error ? "border-danger" : "border-line");
