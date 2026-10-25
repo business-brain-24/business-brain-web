@@ -1,7 +1,6 @@
-import Link from "next/link";
 import { Button } from "./Button";
 import { Reveal } from "@/components/motion/Reveal";
-import { contact } from "@/lib/data";
+import { contact, WATCH_TOWER_DEMO } from "@/lib/data";
 
 export default function CTA({ title = "Put AI at the core of your business" }: { title?: string }) {
   return (
@@ -27,9 +26,9 @@ export default function CTA({ title = "Put AI at the core of your business" }: {
             <Button href="/demo" variant="light">
               Book a free AI-ERP fit session
             </Button>
-            <Link href="/demo?session=watch-tower" className="whitespace-nowrap text-[15px] text-white/85 transition-colors hover:text-orange">
+            <a href={WATCH_TOWER_DEMO} target="_blank" rel="noopener noreferrer" className="whitespace-nowrap text-[15px] text-white/85 transition-colors hover:text-orange">
               Book a Watch Tower demo →
-            </Link>
+            </a>
           </div>
         </Reveal>
       </div>

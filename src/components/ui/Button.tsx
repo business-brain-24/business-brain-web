@@ -9,14 +9,17 @@ type Props = {
   size?: "md" | "sm";
   className?: string;
   icon?: React.ReactNode;
+  /** Opens in a new tab, for links that leave the site. */
+  external?: boolean;
 };
 
 /** Framed button: translucent ring, solid inner, orange chevron tile. */
-export function Button({ href, children, variant = "dark", size = "md", className, icon }: Props) {
+export function Button({ href, children, variant = "dark", size = "md", className, icon, external }: Props) {
   const dark = variant === "dark";
   return (
     <Link
       href={href}
+      {...(external && { target: "_blank", rel: "noopener noreferrer" })}
       className={clsx(
         "group inline-flex w-fit shrink-0 rounded-[12px] p-[3px] transition-colors duration-200",
         dark ? "bg-ink/12 hover:bg-orange/30" : "bg-white/25 hover:bg-white/40",

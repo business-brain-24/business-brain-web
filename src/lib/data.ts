@@ -1,3 +1,6 @@
+/** Live Watch Tower demo, linked from every "Book a Watch Tower demo" call to action. */
+export const WATCH_TOWER_DEMO = "https://world.akboriaerp.com/?source=seed";
+
 export const contact = {
   phone: "+880 1332-840871",
   phoneHref: "tel:+8801332840871",

@@ -11,7 +11,7 @@ import { ArrowUpRight, Check, ChevronRight, ShieldCheck } from "lucide-react";
 import clsx from "clsx";
 import { Reveal, Stagger, StaggerItem, SplitHeading } from "@/components/motion/Reveal";
 import { Button, Label } from "@/components/ui/Button";
-import { industries, products } from "@/lib/data";
+import { industries, products, WATCH_TOWER_DEMO } from "@/lib/data";
 import { AskBox } from "./Hero";
 import type { RegionStat } from "@/components/three/BangladeshMap";
 
@@ -540,7 +540,7 @@ export function WatchTower() {
           </p>
         </div>
         <Reveal>
-          <Button href="/demo?session=watch-tower">Book a Watch Tower demo</Button>
+          <Button href={WATCH_TOWER_DEMO} external>Book a Watch Tower demo</Button>
         </Reveal>
       </div>
 
