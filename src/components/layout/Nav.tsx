@@ -128,7 +128,7 @@ export default function Nav() {
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-4">
-            <Link href="/contact" className="hidden text-[14px] text-ink sm:block">
+            <Link href="/login" className="hidden text-[14px] text-ink sm:block">
               Log in
             </Link>
             <span className="hidden sm:inline-flex">
@@ -208,7 +208,7 @@ function ProductsMenu() {
         <div className="flex justify-between text-[14px]">
           <Link href="/products" className="hover:underline">See all products →</Link>
           <Link href="/apps" className="text-white/65 hover:text-white">All 55 apps</Link>
-          <Link href="/pricing" className="text-white/65 hover:text-white">Compare plans</Link>
+          <Link href="/pricing" className="text-white/65 hover:text-white">Request a quote</Link>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { appCatalog, appCount, contact, groups, industries, plans, products, stories } from "@/lib/data";
+import { appCatalog, appCount, contact, groups, industries, products, stories } from "@/lib/data";
 
 /* A small, rule-based "assistant" that answers questions about Business Brain 24
    from the site's own data. Demo only — no network calls. */
@@ -77,9 +77,8 @@ export function answer(raw: string): Reply {
   // pricing
   if (has(q, "price", "pricing", "cost", "how much", "plan", "subscription", "trial")) {
     return {
-      text: "There are three plans. Every plan includes Brain AI, and yearly billing saves about 17%.",
-      bullets: plans.map((p) => `${p.name} — ${p.price ? `৳${p.price.toLocaleString()} / month` : "custom price"} · ${p.features.slice(0, 2).join(", ")}`),
-      links: [{ label: "See full pricing", href: "/pricing" }],
+      text: "Business Brain is a dedicated ERP, so pricing is tailored to you. Share your modules, users and custom requirements and we'll send a quote within one working day.",
+      links: [{ label: "Request a quote", href: "/pricing" }],
       follow: ["Which modules do you have?", "How does it work?", "Book a fit session"],
     };
   }
