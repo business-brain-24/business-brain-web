@@ -68,10 +68,6 @@ export function Booking({ session }: { session?: string | null }) {
               Call{" "}
               <a href={contact.phoneHref} className="font-medium text-ink hover:text-orange">
                 {contact.phone}
-              </a>{" "}
-              or{" "}
-              <a href={contact.phone2Href} className="font-medium text-ink hover:text-orange">
-                {contact.phone2}
               </a>
               .
             </p>

@@ -2,10 +2,8 @@
 export const WATCH_TOWER_DEMO = "https://world.akboriaerp.com/?source=seed";
 
 export const contact = {
-  phone: "+880 1332-840871",
-  phoneHref: "tel:+8801332840871",
-  phone2: "+880 1332-840930",
-  phone2Href: "tel:+8801332840930",
+  phone: "+880 1332-840930",
+  phoneHref: "tel:+8801332840930",
   site: "businessbrain24.com",
   siteHref: "https://businessbrain24.com",
 };
