@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/site";
 import Link from "next/link";
 import { appCatalog, appCount } from "@/lib/data";
 import { Label } from "@/components/ui/Button";
 import { Reveal, SplitHeading, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import CTA from "@/components/ui/CTA";
 
-export const metadata: Metadata = { title: "All apps" };
+export const metadata: Metadata = pageMeta(
+  "/apps",
+  "All apps",
+  "The full Business Brain 24 app catalogue: every operational, finance, people and growth app in one AI-centric ERP, grouped by what it does.",
+);
 
 export default function Apps() {
   return (

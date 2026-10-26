@@ -152,7 +152,7 @@ function Connections({ nodes, showLabels }: { nodes: NodeDef[]; showLabels: bool
           </mesh>
           {showLabels && (
             <Html position={n.pos} center zIndexRange={[10, 0]}>
-              <div className="pointer-events-none mt-8 whitespace-nowrap rounded-full border border-line bg-white/95 px-2.5 py-1 text-[11px] font-medium text-ink shadow-[0_6px_18px_rgba(11,13,18,0.08)] sm:px-3 sm:text-[12px]">
+              <div className="pointer-events-none mt-8 whitespace-nowrap rounded-full border border-line bg-white/95 px-2.5 py-1 text-[12px] font-medium text-ink shadow-[0_6px_18px_rgba(11,13,18,0.08)] sm:px-3 sm:text-[12px]">
                 {n.label}
               </div>
             </Html>

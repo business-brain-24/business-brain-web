@@ -129,7 +129,7 @@ export function Connected({ p, dark = false }: { p: Product; dark?: boolean }) {
             <div className="flex justify-center py-4">
               <div data-orb className="relative flex h-40 w-40 flex-col items-center justify-center rounded-full bg-[radial-gradient(circle_at_50%_40%,#FFF4EE,#FFD2BC_60%,#FF8A55)] text-center shadow-[0_0_80px_rgba(255,107,44,0.35)] sm:h-44 sm:w-44">
                 <span className="absolute inset-0 animate-pulse-ring rounded-full border border-orange/40" />
-                <span className="text-[11px] text-orange-deep">{p.connected.event}</span>
+                <span className="text-[12px] text-orange-deep">{p.connected.event}</span>
                 <span className="mt-1 text-[17px] font-medium text-ink">{p.connected.state}</span>
               </div>
             </div>
@@ -245,19 +245,23 @@ export function FAQ({ p }: { p: Product }) {
               onClick={() => setOpen(open === i ? null : i)}
               className="flex w-full items-center justify-between gap-6 py-5 text-left text-[16px] font-medium"
               aria-expanded={open === i}
+              aria-controls={`faq-${i}`}
             >
               {f.q}
               <motion.span animate={{ rotate: open === i ? 45 : 0 }} className={clsx("shrink-0", open === i ? "text-orange" : "text-muted")}>
                 <Plus size={18} />
               </motion.span>
             </button>
-            <AnimatePresence initial={false}>
-              {open === i && (
-                <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }} className="overflow-hidden">
-                  <p className="max-w-[640px] pb-6 text-[15px] leading-[24px] text-muted">{f.a}</p>
-                </motion.div>
-              )}
-            </AnimatePresence>
+            {/* Every answer stays in the HTML for crawlers; closed ones collapse with grid rows. */}
+            <div
+              id={`faq-${i}`}
+              aria-hidden={open !== i}
+              className={clsx("grid transition-[grid-template-rows,opacity] duration-[350ms] ease-[cubic-bezier(0.22,1,0.36,1)]", open === i ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0")}
+            >
+              <div className="overflow-hidden">
+                <p className="max-w-[640px] pb-6 text-[15px] leading-[24px] text-muted">{f.a}</p>
+              </div>
+            </div>
           </div>
         ))}
       </div>

@@ -14,6 +14,7 @@ import { Button, Label } from "@/components/ui/Button";
 import { industries, products, WATCH_TOWER_DEMO } from "@/lib/data";
 import { AskBox } from "./Hero";
 import type { RegionStat } from "@/components/three/BangladeshMap";
+import LazyScene from "@/components/three/LazyScene";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -85,7 +86,7 @@ export function WhyUs() {
   return (
     <section className="bg-surface py-24 sm:py-32">
       <div ref={ref} className="container-x grid gap-12 md:grid-cols-[1fr_1.4fr] md:gap-20">
-        <div className="md:sticky md:top-32 md:self-start">
+        <div className="min-w-0 md:sticky md:top-32 md:self-start">
           <Label>Why Business Brain 24</Label>
           <h2 className="h-section mt-3">More answers. Less chasing reports.</h2>
           <p className="mt-4 max-w-[380px] text-[16px] leading-[26px] text-muted">
@@ -185,7 +186,7 @@ export function Blocks() {
 
 function Tile({ t }: { t: string }) {
   return (
-    <div data-tile className="flex aspect-square items-end rounded-[12px] border border-line bg-white p-2 text-[11px] font-medium text-ink shadow-[0_1px_2px_rgba(11,13,18,0.04)] sm:p-2.5 sm:text-[12px]">
+    <div data-tile className="flex aspect-square items-end rounded-[12px] border border-line bg-white p-2 text-[12px] font-medium text-ink shadow-[0_1px_2px_rgba(11,13,18,0.04)] sm:p-2.5 sm:text-[12px]">
       {t}
     </div>
   );
@@ -403,7 +404,7 @@ export function BrainAI() {
 export function Industries() {
   return (
     <section className="container-x grid gap-12 py-24 sm:py-32 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
-      <div className="lg:sticky lg:top-32 lg:self-start">
+      <div className="min-w-0 lg:sticky lg:top-32 lg:self-start">
         <Label>Industries</Label>
         <h2 className="h-section mt-3">Configured for how your industry works.</h2>
         <p className="mt-4 max-w-[380px] text-[16px] leading-[26px] text-muted">
@@ -465,7 +466,7 @@ export function Reviews() {
           <Label>Customers</Label>
           <h2 className="h-section mt-3 max-w-[640px]">Trusted by brands Bangladesh grew up with.</h2>
         </div>
-        <Link href="/customers" className="text-[14px] font-medium transition-colors hover:text-orange">All success stories →</Link>
+        <Link href="/customers" className="inline-flex min-h-11 items-center text-[14px] font-medium transition-colors hover:text-orange">All success stories →</Link>
       </div>
       <div className="mt-12 grid gap-4 lg:grid-cols-2">
         {reviews.map((r, i) => (
@@ -481,7 +482,7 @@ export function Reviews() {
                 <p className="text-[13px] text-muted">{r.meta}</p>
               </div>
               {r.href && (
-                <Link href={r.href} className="shrink-0 text-[14px] font-medium transition-colors hover:text-orange">Read the story →</Link>
+                <Link href={r.href} className="inline-flex min-h-11 shrink-0 items-center text-[14px] font-medium transition-colors hover:text-orange">Read the story →</Link>
               )}
             </div>
           </Reveal>
@@ -554,16 +555,18 @@ export function WatchTower() {
         <div className="relative aspect-[4/5] overflow-hidden rounded-[16px] bg-[radial-gradient(ellipse_at_50%_40%,#1D2129_0%,#111318_75%)] sm:aspect-[16/12] lg:aspect-auto lg:min-h-[560px]">
           <div className="absolute inset-0 opacity-30 [background-image:radial-gradient(rgba(255,255,255,0.14)_1px,transparent_1px)] [background-size:18px_18px]" />
           <div className="absolute inset-0">
-            <BangladeshMap stats={regions} selected={selected} onSelect={setSelected} order={order} />
+            <LazyScene tapToLoad="Load the live map" fallback={<div className="flex h-full items-center justify-center p-8 text-center text-[13px] text-white/50">Live map of regions, reps and orders</div>}>
+              <BangladeshMap stats={regions} selected={selected} onSelect={setSelected} order={order} />
+            </LazyScene>
           </div>
-          <span className="pointer-events-none absolute left-4 top-4 flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[11px] font-medium text-white/80">
+          <span className="pointer-events-none absolute left-4 top-4 flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[12px] font-medium text-white/80">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-green" /> Live
           </span>
           <div className="pointer-events-none absolute bottom-4 left-4 flex flex-col gap-1">
-            <span className="text-[11px] text-white/45">
+            <span className="text-[12px] text-white/45">
               <span className="hidden [@media(pointer:fine)]:inline">Drag to tilt · </span>Click a division
             </span>
-            <span className="text-[10px] text-white/25">Boundaries: geoBoundaries, CC BY 4.0</span>
+            <span className="text-[12px] text-white/25">Boundaries: geoBoundaries, CC BY 4.0</span>
           </div>
         </div>
 
@@ -574,7 +577,7 @@ export function WatchTower() {
                 <motion.div key={sel.name} initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }} transition={{ duration: 0.25 }}>
                   <div className="flex items-center justify-between">
                     <p className="text-[12px] font-medium text-orange">{sel.name} division · today</p>
-                    <button type="button" onClick={() => setSelected(null)} className="text-[12px] text-white/50 hover:text-white">
+                    <button type="button" onClick={() => setSelected(null)} className="-my-3 min-h-11 px-2 text-[12px] text-white/50 hover:text-white">
                       All regions
                     </button>
                   </div>
@@ -607,7 +610,7 @@ export function WatchTower() {
                       <li key={n} className="flex items-center justify-between gap-3 text-[14px]">
                         <span className="flex min-w-0 items-center gap-3">
                           <span className="w-4 text-white/40">{i + 1}</span>
-                          <button type="button" onClick={() => setSelected(r)} className="truncate text-left hover:text-orange">
+                          <button type="button" onClick={() => setSelected(r)} className="min-h-11 truncate text-left hover:text-orange">
                             {n}
                           </button>
                           <span className="hidden text-[12px] text-white/40 sm:inline">{r}</span>
@@ -629,7 +632,7 @@ export function WatchTower() {
               Which region is behind target today?
             </button>
             <p className="max-w-[92%] rounded-[12px] bg-white/[0.08] px-3.5 py-2.5 text-[13px] leading-[20px] text-white/90">
-              <span className="mb-1 block text-[11px] font-medium text-orange">Watch Tower AI</span>
+              <span className="mb-1 block text-[12px] font-medium text-orange">Watch Tower AI</span>
               Sylhet is at 81% of today&apos;s target. 3 of 9 reps haven&apos;t logged an order since noon.
             </p>
           </div>

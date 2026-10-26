@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import clsx from "clsx";
 import { DEMO_USERS, signIn } from "@/lib/session";
+import { track } from "@/lib/analytics";
 
 export default function Login() {
   const router = useRouter();
@@ -16,10 +17,11 @@ export default function Login() {
     const pass = String(data.get("password") ?? "");
     if (DEMO_USERS[user]?.password !== pass) return setError("Wrong username or password.");
     signIn(user);
+    track("demo_login");
     router.push("/");
   };
 
-  const input = clsx("h-12 w-full rounded-[10px] border bg-white px-3.5 text-[15px] outline-none focus:border-orange focus:shadow-[0_0_0_4px_rgba(255,107,44,0.14)]", error ? "border-danger" : "border-line");
+  const input = clsx("h-12 w-full rounded-[10px] border bg-white px-3.5 text-[16px] sm:text-[15px] outline-none focus:border-orange focus:shadow-[0_0_0_4px_rgba(255,107,44,0.14)]", error ? "border-danger" : "border-line");
 
   return (
     <section className="container-x flex justify-center pb-16 pt-[120px] sm:pt-[150px]">

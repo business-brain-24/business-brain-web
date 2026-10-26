@@ -19,6 +19,7 @@ export function Button({ href, children, variant = "dark", size = "md", classNam
   return (
     <Link
       href={href}
+      data-cta
       {...(external && { target: "_blank", rel: "noopener noreferrer" })}
       className={clsx(
         "group inline-flex w-fit shrink-0 rounded-[12px] p-[3px] transition-colors duration-200",

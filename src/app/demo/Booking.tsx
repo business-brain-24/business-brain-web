@@ -75,6 +75,7 @@ export function Booking({ session }: { session?: string | null }) {
       </div>
       <Reveal delay={0.2} className="rounded-[20px] border border-line p-6 sm:p-8">
         <Form
+          name="demo"
           key={s.option}
           submit={s.submit}
           done="Your request is in."

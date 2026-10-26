@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/site";
 import { ArrowUpRight } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import { Button } from "@/components/ui/Button";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 
-export const metadata: Metadata = { title: "Careers" };
+export const metadata: Metadata = pageMeta(
+  "/careers",
+  "Careers",
+  "Join the Business Brain 24 team and build the AI-centric ERP that runs growing businesses in Bangladesh. See open roles and how we work together.",
+);
 
 const roles = [
   ["Senior Backend Engineer, Payroll", "Engineering · Dhaka · Hybrid"],

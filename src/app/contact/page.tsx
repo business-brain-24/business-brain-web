@@ -3,8 +3,14 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import Form from "@/components/ui/Form";
 import PageHero from "@/components/ui/PageHero";
 import { Stagger, StaggerItem, Reveal } from "@/components/motion/Reveal";
+import { contact } from "@/lib/data";
+import { pageMeta, SITE_EMAIL } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Contact" };
+export const metadata: Metadata = pageMeta(
+  "/contact",
+  "Contact",
+  "Talk to the Business Brain 24 team about sales, support or partnerships. Call, email or send a message and we reply within one working day.",
+);
 
 export default function Contact() {
   const offices = [
@@ -18,14 +24,16 @@ export default function Contact() {
       <section className="container-x mt-14 grid gap-10 lg:grid-cols-[1fr_1.3fr]">
         <Stagger className="space-y-3">
           {[
-            [Mail, "hello@businessbrain24.com"],
-            [Phone, "+880 1332-840871"],
-          ].map(([Icon, t]) => {
+            [Mail, SITE_EMAIL, `mailto:${SITE_EMAIL}`],
+            [Phone, contact.phone, contact.phoneHref],
+          ].map(([Icon, t, href]) => {
             const I = Icon as typeof Mail;
             return (
-              <StaggerItem key={t as string} className="flex items-center gap-4 rounded-[14px] border border-line p-5">
-                <I size={18} className="text-orange" />
-                <span className="text-[15px]">{t as string}</span>
+              <StaggerItem key={t as string}>
+                <a href={href as string} className="flex items-center gap-4 rounded-[14px] border border-line p-5 transition-colors hover:border-ink">
+                  <I size={18} className="text-orange" />
+                  <span className="text-[15px]">{t as string}</span>
+                </a>
               </StaggerItem>
             );
           })}
@@ -41,6 +49,7 @@ export default function Contact() {
         </Stagger>
         <Reveal className="rounded-[20px] border border-line p-6 sm:p-8">
           <Form
+            name="contact"
             submit="Send message"
             done="Message sent."
             fields={[

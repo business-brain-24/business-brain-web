@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/site";
+import JsonLd, { breadcrumbLd } from "@/components/seo/JsonLd";
 import Link from "next/link";
 import { Reveal, SplitHeading, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import CTA from "@/components/ui/CTA";
 
-export const metadata: Metadata = { title: "Northloom Textiles · Customer story" };
+export const metadata: Metadata = pageMeta(
+  "/customers/northloom",
+  "Northloom Textiles · Customer story",
+  "How Northloom Textiles replaced six tools with Business Brain 24 and closed the month in one afternoon across four factories and 2,400 employees.",
+);
 
 export default function Story() {
   return (
     <>
+      <JsonLd data={breadcrumbLd([["Success stories", "/customers"], ["Northloom Textiles", "/customers/northloom"]])} />
       <section className="container-x pt-[120px] sm:pt-[150px]">
         <p className="flex flex-wrap gap-1.5 text-[13px] text-muted">
           <Link href="/resources" className="hover:text-ink">Resources</Link> / <span>Customer stories</span> / <span className="text-ink">Northloom Textiles</span>

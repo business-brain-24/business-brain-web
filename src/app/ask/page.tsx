@@ -9,6 +9,10 @@ import { BrandMark, Logo } from "@/components/layout/Nav";
 import { starters, type Reply } from "@/lib/brain-knowledge";
 import { dataStarters, respond } from "@/lib/brain-data";
 import { COMPANY } from "@/lib/demo-data";
+import { track } from "@/lib/analytics";
+
+// Preset ids for analytics, so the question text itself is never sent.
+const presetIds = new Map<string, string>([...starters.map((q, i) => [q, `starter_${i + 1}`] as const), ...dataStarters.flatMap((g) => g.questions.map((q, i) => [q, `${g.module.toLowerCase()}_${i + 1}`] as const))]);
 import { ChartCard, DataTable, KpiRow } from "@/components/ask/Visuals";
 
 type Msg = { id: string; from: "user" | "brain"; text: string; reply?: Reply };
@@ -106,6 +110,10 @@ export default function Ask() {
     (q: string, regenerateOf?: string, fresh = false) => {
       const text = q.trim();
       if (!text || busy) return;
+      if (!regenerateOf) {
+        const preset = presetIds.get(text);
+        track("ask_question", preset ? { preset_question_id: preset } : { free_text: true });
+      }
       const reply = respond(text);
       const existing = !fresh && current && chats.some((c) => c.id === current);
       const id = existing ? (current as string) : uid();
@@ -191,7 +199,7 @@ export default function Ask() {
           }
         }}
         placeholder="Ask about sales, payroll, stock…"
-        className="max-h-[200px] min-w-0 flex-1 resize-none bg-transparent py-2.5 text-[15px] leading-[22px] outline-none placeholder:text-subtle focus-visible:outline-none"
+        className="max-h-[200px] min-w-0 flex-1 resize-none bg-transparent py-2.5 text-[16px] leading-[22px] outline-none placeholder:text-subtle sm:text-[15px] focus-visible:outline-none"
         aria-label="Message Brain"
         style={{ outline: "none" }}
       />
@@ -359,7 +367,7 @@ export default function Ask() {
             </div>
             <div className="shrink-0 px-4 pb-3">
               <div className="mx-auto w-full max-w-[768px]">{composer}</div>
-              <p className="mt-2 text-center text-[11.5px] text-subtle">
+              <p className="mt-2 text-center text-[12px] text-subtle">
                 Numbers come from sample data for a demo company.{" "}
                 <Link href="/demo" className="underline underline-offset-2 hover:text-ink">
                   Book a fit session

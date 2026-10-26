@@ -62,7 +62,7 @@ export default function ModuleCatalogue() {
                         <div className="flex items-start justify-between gap-3">
                           <p className="text-[15px] font-medium leading-snug">{s.name}</p>
                           {s.status && (
-                            <span className={clsx("shrink-0 rounded-full px-2 py-0.5 text-[11px] font-medium", s.status === "Live" ? "bg-emerald-50 text-emerald-700" : "bg-orange-soft text-orange-deep")}>
+                            <span className={clsx("shrink-0 rounded-full px-2 py-0.5 text-[12px] font-medium", s.status === "Live" ? "bg-emerald-50 text-emerald-700" : "bg-orange-soft text-orange-deep")}>
                               {s.status}
                             </span>
                           )}

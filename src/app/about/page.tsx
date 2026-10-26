@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/site";
 import PageHero from "@/components/ui/PageHero";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import CTA from "@/components/ui/CTA";
 
-export const metadata: Metadata = { title: "About" };
+export const metadata: Metadata = pageMeta(
+  "/about",
+  "About",
+  "Business Brain 24 builds the AI-centric ERP for growing businesses in Bangladesh: one connected system for finance, people, supply chain and operations.",
+);
 
 export default function About() {
   const stats = [

@@ -8,6 +8,7 @@ import clsx from "clsx";
 import { getProduct, WATCH_TOWER_DEMO } from "@/lib/data";
 import dynamic from "next/dynamic";
 import LogoHub from "./LogoHub";
+import LazyScene from "@/components/three/LazyScene";
 
 // the 3D mark loads after the page; the animated SVG mark stands in until then
 const LogoNeuron = dynamic(() => import("@/components/three/LogoNeuron"), {
@@ -68,7 +69,7 @@ export default function Hero() {
         <div className="relative flex w-full max-w-[980px] flex-col items-center px-5 pb-12 pt-[118px] text-center sm:pb-16 sm:pt-[136px]">
           {/* eyebrow */}
           <span className="bb-fade-up inline-flex items-center gap-2 rounded-full border border-orange/20 bg-white/80 py-1.5 pl-1.5 pr-3.5 text-[13px] font-medium text-[#3A3F4A] shadow-[0_6px_20px_-12px_rgba(255,107,44,0.6)] backdrop-blur">
-            <span className="flex h-6 items-center gap-1 rounded-full bg-orange px-2 text-[11px] font-semibold uppercase tracking-[0.06em] text-white">
+            <span className="flex h-6 items-center gap-1 rounded-full bg-orange px-2 text-[12px] font-semibold uppercase tracking-[0.06em] text-white">
               <Sparkles size={11} /> Agentic
             </span>
             The ERP with AI at its core
@@ -108,7 +109,7 @@ export default function Hero() {
               className="group relative flex flex-col overflow-hidden rounded-[18px] bg-ink p-5 text-white shadow-[0_24px_50px_-28px_rgba(11,13,18,0.7)] transition-transform duration-200 hover:-translate-y-0.5"
             >
               <span className="pointer-events-none absolute -right-10 -top-14 h-40 w-40 rounded-full bg-orange/35 blur-3xl" />
-              <span className="relative text-[11px] font-semibold uppercase tracking-[0.12em] text-orange">Business Brain 24 · Free audit</span>
+              <span className="relative text-[12px] font-semibold uppercase tracking-[0.12em] text-orange">Business Brain 24 · Free audit</span>
               <span className="relative mt-2 text-[18px] font-medium leading-snug tracking-[-0.01em]">Put AI at the core of your business</span>
               <span className="relative mt-1.5 text-[13px] text-white/60">Free audit session on your ERP AI readiness</span>
               <span className="relative mt-5 inline-flex items-center gap-2 text-[14px] font-medium">
@@ -124,7 +125,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="group relative flex flex-col overflow-hidden rounded-[18px] border border-line bg-white p-5 shadow-[0_24px_50px_-34px_rgba(11,13,18,0.45)] transition-all duration-200 hover:-translate-y-0.5 hover:border-orange/40"
             >
-              <span className="text-[11px] font-semibold uppercase tracking-[0.12em] text-orange-deep">Watch Tower · Free demo</span>
+              <span className="text-[12px] font-semibold uppercase tracking-[0.12em] text-orange-deep">Watch Tower · Free demo</span>
               <span className="mt-2 text-[18px] font-medium leading-snug tracking-[-0.01em]">See your business world</span>
               <span className="mt-1.5 text-[13px] text-muted">Book a free demo and watch your operation live</span>
               <span className="mt-5 inline-flex items-center gap-2 text-[14px] font-medium">
@@ -268,7 +269,9 @@ function Stage() {
           style={{ x: brainX, y: brainY, rotate: brainR }}
         >
           <motion.div className="h-full w-full" animate={{ y: [0, -8, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}>
-            <LogoNeuron />
+            <LazyScene fallback={<LogoHub className="h-full w-full p-16" />}>
+              <LogoNeuron />
+            </LazyScene>
           </motion.div>
         </motion.div>
 
@@ -360,7 +363,9 @@ function MobileStage() {
       <div className="relative h-[300px] w-[300px]">
         <div className="absolute inset-[-30px] rounded-full bg-[radial-gradient(circle,rgba(255,107,44,0.18)_0%,rgba(255,107,44,0)_65%)]" />
         <motion.div className="relative h-full w-full" animate={{ y: [0, -6, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}>
-          <LogoNeuron />
+          <LazyScene fallback={<LogoHub className="h-full w-full p-10" />}>
+            <LogoNeuron />
+          </LazyScene>
         </motion.div>
       </div>
       <div className="flex flex-wrap justify-center gap-2">

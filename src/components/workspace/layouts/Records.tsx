@@ -43,12 +43,14 @@ export default function Records({ app, cols, rows, action }: { app: App; cols: s
           </div>
         </div>
 
+        {/* On phones the table scrolls sideways: Employee stays pinned and the edge fade hints at more columns. */}
+        <div className="relative">
         <div className="overflow-x-auto">
           <table className="w-full min-w-[720px] text-left text-[14px]">
-            <thead className="bg-surface text-[11px] uppercase tracking-[0.08em] text-muted">
+            <thead className="bg-surface text-[12px] uppercase tracking-[0.08em] text-muted">
               <tr>
                 <th className="w-10 px-4 py-3"><input type="checkbox" aria-label="Select all" className="accent-[#FF6B2C]" /></th>
-                {cols.map((c) => <th key={c} className="px-4 py-3 font-medium">{c}</th>)}
+                {cols.map((c, i) => <th key={c} className={clsx("px-4 py-3 font-medium", i === 0 && "sticky left-0 z-[1] bg-surface sm:static")}>{c}</th>)}
               </tr>
             </thead>
             <tbody>
@@ -56,7 +58,7 @@ export default function Records({ app, cols, rows, action }: { app: App; cols: s
                 <tr key={r.join()} onClick={() => setOpen(r)} className={clsx("cursor-pointer border-t border-line transition-colors hover:bg-orange-soft/50", open === r && "bg-orange-soft/60")}>
                   <td className="px-4 py-3" onClick={(e) => e.stopPropagation()}><input type="checkbox" aria-label={`Select ${r[0]}`} className="accent-[#FF6B2C]" /></td>
                   {r.map((cell, i) => (
-                    <td key={i} className={clsx("whitespace-nowrap px-4 py-3", i === 0 && "font-medium")}>
+                    <td key={i} className={clsx("whitespace-nowrap px-4 py-3", i === 0 && "sticky left-0 z-[1] bg-white font-medium shadow-[1px_0_0_var(--color-line)] sm:static sm:shadow-none")}>
                       {i === r.length - 1 ? (
                         <StatusPill s={cell} />
                       ) : i === personCol ? (
@@ -73,6 +75,8 @@ export default function Records({ app, cols, rows, action }: { app: App; cols: s
               )}
             </tbody>
           </table>
+        </div>
+        <div aria-hidden className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-white to-transparent sm:hidden" />
         </div>
         <div className="flex items-center justify-between border-t border-line px-4 py-3 text-[12px] text-muted">
           <span>Showing {shown.length} of {rows.length}</span>

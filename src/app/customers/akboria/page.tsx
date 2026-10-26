@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/site";
+import JsonLd, { breadcrumbLd } from "@/components/seo/JsonLd";
 import Image from "next/image";
 import Link from "next/link";
 import { akboriaDelivered, akboriaInProgress, akboriaModules, countItems } from "@/lib/data";
 import { Reveal, SplitHeading, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import CTA from "@/components/ui/CTA";
 
-export const metadata: Metadata = { title: "Akboria · Customer story" };
+export const metadata: Metadata = pageMeta(
+  "/customers/akboria",
+  "Akboria · Customer story",
+  "How Akboria, a sweets brand founded in 1911, runs field sales, showroom POS, central store, production and procurement on one Business Brain 24 system.",
+);
 
 const live = countItems(akboriaDelivered);
 const building = countItems(akboriaInProgress);
@@ -20,6 +26,7 @@ const appScreens: [string, string, boolean][] = [
 export default function Story() {
   return (
     <>
+      <JsonLd data={breadcrumbLd([["Success stories", "/customers"], ["Akboria", "/customers/akboria"]])} />
       <section className="container-x pt-[120px] sm:pt-[150px]">
         <p className="flex flex-wrap gap-1.5 text-[13px] text-muted">
           <Link href="/resources" className="hover:text-ink">Resources</Link> / <Link href="/customers" className="hover:text-ink">Success stories</Link> / <span className="text-ink">Akboria</span>

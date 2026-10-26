@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useFrameloop } from "./LazyScene";
 import { Canvas, useFrame, useThree, type ThreeEvent } from "@react-three/fiber";
 import { ContactShadows, Html, Line, OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
@@ -111,7 +112,7 @@ function Division({
 
       {stat && (!compact || selected || hovered) && (
         <Html position={[shape.center.x + 0.1, shape.center.y, DEPTH + 0.05]} zIndexRange={[20, 0]} style={{ pointerEvents: "none" }}>
-          <div className="-translate-y-1/2 whitespace-nowrap rounded-full bg-[#0B0D12]/80 px-2 py-1 text-[11px] leading-none text-white/85 backdrop-blur-sm">
+          <div className="-translate-y-1/2 whitespace-nowrap rounded-full bg-[#0B0D12]/80 px-2 py-1 text-[12px] leading-none text-white/85 backdrop-blur-sm">
             {stat.name} <span className={behind ? "text-[#F97066]" : "text-white/50"}>{stat.pct}%</span>
           </div>
         </Html>
@@ -221,12 +222,14 @@ export default function BangladeshMap(props: {
   onSelect: (n: string | null) => void;
   order: { region: string; text: string; who: string; key: number };
 }) {
+  const frameloop = useFrameloop();
   // on touch screens a drag should scroll the page, so only tapping is interactive there
   const [coarse, setCoarse] = useState(false);
   useEffect(() => setCoarse(window.matchMedia("(pointer: coarse)").matches), []);
 
   return (
     <Canvas
+      frameloop={frameloop}
       shadows
       dpr={[1, 1.75]}
       camera={{ position: CAMERA, fov: 38 }}

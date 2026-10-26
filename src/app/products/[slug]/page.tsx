@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 import { getProduct, products } from "@/lib/data";
 import { AskSection, Connected, FAQ, Features, ProductHero, Related, ScreenSection } from "@/components/product/Sections";
 import CTA from "@/components/ui/CTA";
+import JsonLd, { breadcrumbLd, faqLd, softwareLd } from "@/components/seo/JsonLd";
+import ViewEvent from "@/components/analytics/ViewEvent";
+import { pageMeta } from "@/lib/site";
 
 export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
@@ -11,7 +14,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const p = getProduct(slug);
-  return p ? { title: p.name, description: p.sub } : {};
+  return p ? pageMeta(`/products/${p.slug}`, p.name, `${p.name}: ${p.sub}`, null) : {};
 }
 
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -39,6 +42,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
   return (
     <>
+      <JsonLd data={[softwareLd(p), faqLd(p.faqs), breadcrumbLd([["Products", "/products"], [p.name, `/products/${p.slug}`]])]} />
+      <ViewEvent event="product_view" slug={p.slug} />
       <ProductHero p={p} />
       {order[p.layout].map((k) => sections[k])}
       <Related items={related} />

@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/site";
 import { Code2, LineChart, Wrench } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import { Button, TextLink } from "@/components/ui/Button";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import CTA from "@/components/ui/CTA";
 
-export const metadata: Metadata = { title: "Partners" };
+export const metadata: Metadata = pageMeta(
+  "/partners",
+  "Partners",
+  "Partner with Business Brain 24. Implementation, reseller and technology partners help Bangladeshi businesses roll out an AI-centric ERP faster.",
+);
 
 export default function Partners() {
   return (
