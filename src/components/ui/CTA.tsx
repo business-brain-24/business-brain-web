@@ -17,9 +17,6 @@ export default function CTA({ title = "Put AI at the core of your business" }: {
               <a href={contact.phoneHref} className="inline-flex min-h-11 items-center transition-colors hover:text-orange">
                 {contact.phone}
               </a>
-              <a href={contact.siteHref} className="inline-flex min-h-11 items-center transition-colors hover:text-orange">
-                {contact.site}
-              </a>
             </p>
           </div>
           <div className="flex shrink-0 flex-col items-start gap-4 sm:flex-row sm:items-center">

@@ -106,13 +106,13 @@ export default function Hero() {
           <div className="bb-fade-up mt-9 grid w-full max-w-[760px] gap-3 text-left sm:grid-cols-2" style={{ animationDelay: "0.55s" }}>
             <Link
               href="/demo"
-              className="group relative flex flex-col overflow-hidden rounded-[18px] bg-ink p-5 text-white shadow-[0_24px_50px_-28px_rgba(11,13,18,0.7)] transition-transform duration-200 hover:-translate-y-0.5"
+              className="group relative flex flex-col overflow-hidden rounded-[16px] bg-ink px-4 py-3.5 text-white shadow-[0_24px_50px_-28px_rgba(11,13,18,0.7)] transition-transform duration-200 hover:-translate-y-0.5"
             >
               <span className="pointer-events-none absolute -right-10 -top-14 h-40 w-40 rounded-full bg-orange/35 blur-3xl" />
               <span className="relative text-[12px] font-semibold uppercase tracking-[0.12em] text-orange">Business Brain 24 · Free audit</span>
-              <span className="relative mt-2 text-[18px] font-medium leading-snug tracking-[-0.01em]">Put AI at the core of your business</span>
-              <span className="relative mt-1.5 text-[13px] text-white/60">Free audit session on your ERP AI readiness</span>
-              <span className="relative mt-4 inline-flex items-center gap-1.5 text-[13px] font-medium">
+              <span className="relative mt-1 text-[16px] font-medium leading-snug tracking-[-0.01em]">Put AI at the core of your business</span>
+              <span className="relative mt-0.5 text-[13px] text-white/60">Free audit session on your ERP AI readiness</span>
+              <span className="relative mt-3 inline-flex items-center gap-1.5 text-[13px] font-medium">
                 <span className="flex h-6 w-6 items-center justify-center rounded-[7px] bg-[linear-gradient(180deg,#FF6B2C_50%,#C2410C_100%)] transition-transform group-hover:translate-x-0.5">
                   <ChevronRight size={13} />
                 </span>
@@ -123,12 +123,12 @@ export default function Hero() {
               href={WATCH_TOWER_DEMO}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex flex-col overflow-hidden rounded-[18px] border border-line bg-white p-5 shadow-[0_24px_50px_-34px_rgba(11,13,18,0.45)] transition-all duration-200 hover:-translate-y-0.5 hover:border-orange/40"
+              className="group relative flex flex-col overflow-hidden rounded-[16px] border border-line bg-white px-4 py-3.5 shadow-[0_24px_50px_-34px_rgba(11,13,18,0.45)] transition-all duration-200 hover:-translate-y-0.5 hover:border-orange/40"
             >
               <span className="text-[12px] font-semibold uppercase tracking-[0.12em] text-orange-deep">Watch Tower · Free demo</span>
-              <span className="mt-2 text-[18px] font-medium leading-snug tracking-[-0.01em]">See your business world</span>
-              <span className="mt-1.5 text-[13px] text-muted">Book a free demo and watch your operation live</span>
-              <span className="mt-4 inline-flex items-center gap-1.5 text-[13px] font-medium">
+              <span className="mt-1 text-[16px] font-medium leading-snug tracking-[-0.01em]">See your business world</span>
+              <span className="mt-0.5 text-[13px] text-muted">Book a free demo and watch your operation live</span>
+              <span className="mt-3 inline-flex items-center gap-1.5 text-[13px] font-medium">
                 <span className="flex h-6 w-6 items-center justify-center rounded-[7px] bg-orange-soft text-orange transition-transform group-hover:translate-x-0.5">
                   <ArrowUpRight size={13} />
                 </span>
