@@ -1,6 +1,7 @@
 import Link from "next/link";
 import clsx from "clsx";
 import { ChevronRight } from "lucide-react";
+import { ICON } from "@/lib/icons";
 
 type Props = {
   href: string;
@@ -40,7 +41,7 @@ export function Button({ href, children, variant = "dark", size = "md", classNam
             size === "md" ? "h-9 w-9" : "h-7 w-7",
           )}
         >
-          <span className="transition-transform duration-200 group-hover:translate-x-0.5">{icon ?? <ChevronRight size={size === "md" ? 16 : 14} strokeWidth={2.2} />}</span>
+          <span className="transition-transform duration-200 group-hover:translate-x-0.5">{icon ?? <ChevronRight size={size === "md" ? ICON.md : ICON.sm} strokeWidth={2.2} />}</span>
         </span>
         <span className={clsx("font-medium whitespace-nowrap", size === "md" ? "text-[15px]" : "text-[13px]")}>{children}</span>
       </span>

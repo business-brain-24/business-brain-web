@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import { Button } from "@/components/ui/Button";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { ICON } from "@/lib/icons";
 
 export const metadata: Metadata = pageMeta(
   "/careers",
@@ -51,7 +52,7 @@ export default function Careers() {
                   <p className="text-[18px] font-medium transition-transform duration-300 group-hover:translate-x-1">{t}</p>
                   <p className="mt-1 text-[14px] text-muted">{m}</p>
                 </div>
-                <ArrowUpRight className="shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-orange" size={20} />
+                <ArrowUpRight className="shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-orange" size={ICON.lg} />
               </a>
             </StaggerItem>
           ))}

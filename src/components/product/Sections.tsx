@@ -11,6 +11,7 @@ import type { Product } from "@/lib/data";
 import { Button, Label, TextLink } from "@/components/ui/Button";
 import { Reveal, SplitHeading, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import ProductScreen from "./Screens";
+import { ICON } from "@/lib/icons";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -210,7 +211,7 @@ export function AskSection({ p }: { p: Product }) {
             </motion.div>
           ))}
           <Link href="/ask" className="mt-4 flex items-center gap-3 rounded-[14px] bg-white py-2 pl-4 pr-2 text-ink">
-            <Sparkles size={16} className="text-orange" />
+            <Sparkles size={ICON.md} className="text-orange" />
             <AnimatePresence mode="wait">
               <motion.span
                 key={active}
@@ -223,7 +224,7 @@ export function AskSection({ p }: { p: Product }) {
               </motion.span>
             </AnimatePresence>
             <span className="flex h-9 w-9 items-center justify-center rounded-[10px] bg-orange text-white">
-              <ArrowUp size={16} />
+              <ArrowUp size={ICON.md} />
             </span>
           </Link>
         </div>
@@ -249,7 +250,7 @@ export function FAQ({ p }: { p: Product }) {
             >
               {f.q}
               <motion.span animate={{ rotate: open === i ? 45 : 0 }} className={clsx("shrink-0", open === i ? "text-orange" : "text-muted")}>
-                <Plus size={18} />
+                <Plus size={ICON.lg} />
               </motion.span>
             </button>
             {/* Every answer stays in the HTML for crawlers; closed ones collapse with grid rows. */}

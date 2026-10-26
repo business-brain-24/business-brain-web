@@ -7,10 +7,11 @@ import { Check, Plus, X } from "lucide-react";
 import clsx from "clsx";
 import PageHero from "@/components/ui/PageHero";
 import CTA from "@/components/ui/CTA";
-import { input, PrivacyNote, SubmitButton } from "@/components/ui/Form";
+import { input, PrivacyNote, Select, SubmitButton } from "@/components/ui/Form";
 import Turnstile from "@/components/ui/Turnstile";
 import { contact, industries, products } from "@/lib/data";
 import { submitLead, thanksPath } from "@/lib/lead";
+import { ICON } from "@/lib/icons";
 
 type Custom = { id: number; label: string; value: string };
 
@@ -91,22 +92,22 @@ export default function Pricing() {
                 {field(
                   "industry",
                   "Industry",
-                  <select name="industry" defaultValue="" className={input(errors.industry)}>
+                  <Select name="industry" defaultValue="" className={input(errors.industry)}>
                     <option value="" disabled>Select…</option>
                     {industries.map((i) => <option key={i.name}>{i.name}</option>)}
                     <option>Other</option>
-                  </select>,
+                  </Select>,
                 )}
                 {field("users", "Number of users", <input name="users" type="number" min={1} placeholder="e.g. 50" className={input(errors.users)} />)}
                 {field("branches", "Branches / sites", <input name="branches" type="number" min={1} placeholder="e.g. 3" className={input()} />)}
                 {field(
                   "deploy",
                   "Deployment",
-                  <select name="deploy" defaultValue="Cloud" className={input()}>
+                  <Select name="deploy" defaultValue="Cloud" className={input()}>
                     <option>Cloud</option>
                     <option>On-premise</option>
                     <option>Not sure yet</option>
-                  </select>,
+                  </Select>,
                 )}
 
                 <div className="flex flex-col gap-2 sm:col-span-2">
@@ -132,12 +133,12 @@ export default function Pricing() {
                       <input value={c.label} onChange={(e) => setRow(c.id, "label", e.target.value)} placeholder="Requirement (e.g. Bank integration)" className={clsx(input(), "flex-[2]")} />
                       <input value={c.value} onChange={(e) => setRow(c.id, "value", e.target.value)} placeholder="Details (e.g. City Bank, BEFTN)" className={clsx(input(), "flex-[3]")} />
                       <button type="button" onClick={() => setCustom((cs) => cs.filter((x) => x.id !== c.id))} aria-label="Remove requirement" className="flex h-12 shrink-0 items-center justify-center gap-2 rounded-[10px] border border-line text-[14px] hover:border-ink/40 sm:w-12">
-                        <X size={16} /> <span className="sm:hidden">Remove</span>
+                        <X size={ICON.md} /> <span className="sm:hidden">Remove</span>
                       </button>
                     </div>
                   ))}
                   <button type="button" onClick={() => setCustom((cs) => [...cs, { id: Date.now(), label: "", value: "" }])} className="inline-flex w-fit items-center gap-2 rounded-full border border-dashed border-line px-3.5 py-2 text-[14px] hover:border-orange hover:text-orange">
-                    <Plus size={14} /> Add requirement
+                    <Plus size={ICON.sm} /> Add requirement
                   </button>
                 </div>
 

@@ -2,6 +2,7 @@ import { Sparkles, TrendingDown, TrendingUp } from "lucide-react";
 import clsx from "clsx";
 import type { Widget } from "@/lib/overviews";
 import { Avatar, StatusPill } from "./layouts/shared";
+import { ICON } from "@/lib/icons";
 
 // Brand-led palette for multi-series charts: orange first, then calm neutrals and one green.
 const PALETTE = ["#FF6B2C", "#FDBA8C", "#0F766E", "#94A3B8", "#C2410C", "#FCD9C4"];
@@ -53,7 +54,7 @@ function WidgetView({ w }: { w: Widget }) {
               <p className="mt-1.5 text-[24px] font-semibold tracking-[-0.03em]">{k.value}</p>
               {k.delta && (
                 <p className={clsx("mt-1 flex items-center gap-1 text-[12px] font-medium", k.delta.startsWith("-") === !k.downIsGood ? "text-rose-600" : "text-emerald-600")}>
-                  {k.delta.startsWith("-") ? <TrendingDown size={13} /> : <TrendingUp size={13} />} {k.delta}
+                  {k.delta.startsWith("-") ? <TrendingDown size={ICON.sm} /> : <TrendingUp size={ICON.sm} />} {k.delta}
                   <span className="font-normal text-muted">{k.note ?? "vs last month"}</span>
                 </p>
               )}
@@ -66,7 +67,7 @@ function WidgetView({ w }: { w: Widget }) {
     case "insight":
       return (
         <div className="flex h-full gap-3 rounded-[18px] border border-orange/25 bg-[linear-gradient(135deg,#FFF4EE,#FFFFFF_70%)] p-5">
-          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-orange-soft text-orange"><Sparkles size={17} /></span>
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-orange-soft text-orange"><Sparkles size={ICON.md} /></span>
           <div>
             <p className="text-[13px] font-semibold text-orange-deep">Brain AI insight</p>
             <p className="mt-1 text-[14px] leading-[22px]">{w.text}</p>

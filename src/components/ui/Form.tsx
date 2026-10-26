@@ -4,10 +4,11 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check, ChevronDown, ChevronRight } from "lucide-react";
 import clsx from "clsx";
 import Turnstile from "./Turnstile";
 import { contact } from "@/lib/data";
+import { ICON } from "@/lib/icons";
 import { submitLead, thanksPath, type FormName } from "@/lib/lead";
 
 /** Digits with optional +, spaces, dashes or brackets; at least 7 digits. Same rule as functions/api/lead.ts. */
@@ -68,14 +69,14 @@ export default function Form({ name, fields, submit, done }: { name: FormName; f
             <label key={f.name} className={clsx("flex flex-col gap-2", (f.full || f.area) && "sm:col-span-2")}>
               <span className="text-[13px] font-medium">{f.label}</span>
               {f.options ? (
-                <select name={f.name} defaultValue={f.defaultValue ?? ""} onChange={f.onChange && ((e) => f.onChange?.(e.target.value))} className={input(errors[f.name])}>
+                <Select name={f.name} defaultValue={f.defaultValue ?? ""} onChange={f.onChange && ((e) => f.onChange?.(e.target.value))} className={input(errors[f.name])}>
                   <option value="" disabled>
                     Select…
                   </option>
                   {f.options.map((o) => (
                     <option key={o}>{o}</option>
                   ))}
-                </select>
+                </Select>
               ) : f.area ? (
                 <textarea name={f.name} rows={4} placeholder={f.placeholder} className={clsx(input(errors[f.name]), "h-auto py-3")} />
               ) : (
@@ -99,11 +100,25 @@ export default function Form({ name, fields, submit, done }: { name: FormName; f
   );
 }
 
+/** Native select with the site chevron instead of the browser arrow, at the standard icon size. */
+export function Select({ className, children, ...props }: React.SelectHTMLAttributes<HTMLSelectElement>) {
+  return (
+    <span className="relative block w-full">
+      <select {...props} className={clsx(className, "appearance-none pr-10")}>
+        {children}
+      </select>
+      <ChevronDown size={ICON.md} aria-hidden className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-muted" />
+    </span>
+  );
+}
+
 export function SubmitButton({ sending, children }: { sending: boolean; children: React.ReactNode }) {
   return (
     <button type="submit" disabled={sending} aria-busy={sending} className="group mt-2 inline-flex w-fit rounded-[12px] bg-ink/12 p-[3px] disabled:opacity-60 sm:col-span-2">
       <span className="flex items-center gap-3 rounded-[10px] bg-ink py-[3px] pl-[3px] pr-4 text-white transition-transform group-active:scale-[0.98]">
-        <span className="flex h-9 w-9 items-center justify-center rounded-[8px] bg-[linear-gradient(180deg,#FF6B2C_50%,#C2410C_100%)]">›</span>
+        <span className="flex h-9 w-9 items-center justify-center rounded-[8px] bg-[linear-gradient(180deg,#FF6B2C_50%,#C2410C_100%)]">
+          <ChevronRight size={ICON.md} strokeWidth={2.2} className="transition-transform duration-200 group-hover:translate-x-0.5" />
+        </span>
         <span className="text-[15px] font-medium">{sending ? "Sending…" : children}</span>
       </span>
     </button>

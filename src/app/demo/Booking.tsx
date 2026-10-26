@@ -7,6 +7,7 @@ import Form from "@/components/ui/Form";
 import { Label } from "@/components/ui/Button";
 import { Reveal, SplitHeading } from "@/components/motion/Reveal";
 import { contact, industries } from "@/lib/data";
+import { ICON } from "@/lib/icons";
 
 const sessions = {
   fit: {
@@ -56,7 +57,7 @@ export function Booking({ session }: { session?: string | null }) {
             {s.points.map((t) => (
               <li key={t} className="flex items-center gap-3">
                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-soft text-orange">
-                  <Check size={14} strokeWidth={3} />
+                  <Check size={ICON.sm} strokeWidth={3} />
                 </span>
                 {t}
               </li>

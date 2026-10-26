@@ -8,6 +8,7 @@ import clsx from "clsx";
 import AppIcon from "@/components/workspace/AppIcon";
 import { useUser } from "@/lib/session";
 import { apps, categories, type Category } from "@/lib/workspace";
+import { ICON } from "@/lib/icons";
 
 const FAV_KEY = "bb-favourites";
 const prompts = ["Which region is behind target today?", "Who is on leave this week?", "What stock runs out first?"];
@@ -76,10 +77,10 @@ export default function Dashboard() {
               }}
               className="mt-6 flex h-14 items-center gap-3 rounded-[16px] border border-line bg-surface pl-4 pr-1.5 focus-within:border-orange focus-within:bg-white"
             >
-              <Sparkles size={18} className="shrink-0 text-orange" />
+              <Sparkles size={ICON.lg} className="shrink-0 text-orange" />
               <input value={ask} onChange={(e) => setAsk(e.target.value)} placeholder="Ask Brain AI about your business…" className="h-full min-w-0 flex-1 bg-transparent text-[15px] outline-none placeholder:text-muted" />
               <button type="submit" aria-label="Ask" className="flex h-11 w-11 items-center justify-center rounded-[12px] bg-orange text-white">
-                <ArrowRight size={18} />
+                <ArrowRight size={ICON.lg} />
               </button>
             </form>
             <div className="mt-3 flex flex-wrap gap-2">
@@ -103,14 +104,14 @@ export default function Dashboard() {
               onClick={() => setTab(t.id)}
               className={clsx("flex shrink-0 items-center gap-2 rounded-full px-4 py-2 text-[14px] transition-colors", tab === t.id ? "bg-orange-soft font-medium text-orange-deep" : "text-muted hover:text-ink")}
             >
-              {t.id === "fav" && <Star size={13} fill={tab === t.id ? "currentColor" : "none"} />}
+              {t.id === "fav" && <Star size={ICON.sm} fill={tab === t.id ? "currentColor" : "none"} />}
               {t.name}
               <span className={clsx("text-[12px]", tab === t.id ? "text-orange" : "text-muted/70")}>{t.count}</span>
             </button>
           ))}
         </div>
         <label className="flex h-11 items-center gap-2.5 rounded-full border border-line bg-white px-4 focus-within:border-orange lg:w-[300px]">
-          <Search size={16} className="text-muted" />
+          <Search size={ICON.md} className="text-muted" />
           <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Find an app" className="h-full min-w-0 flex-1 bg-transparent text-[14px] outline-none" />
         </label>
       </div>
@@ -138,14 +139,14 @@ export default function Dashboard() {
                       {label} · <span className="font-medium text-ink">{value}</span>
                     </p>
                   </div>
-                  <ArrowUpRight size={16} className="shrink-0 text-muted transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-orange" />
+                  <ArrowUpRight size={ICON.md} className="shrink-0 text-muted transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-orange" />
                 </Link>
                 <button
                   onClick={() => toggleFav(a.slug)}
                   aria-label={pinned ? `Unpin ${a.name}` : `Pin ${a.name}`}
                   className={clsx("absolute right-10 top-1/2 -translate-y-1/2 rounded-full p-1.5 transition-opacity", pinned ? "text-orange" : "text-muted opacity-0 hover:text-orange group-hover:opacity-100 focus:opacity-100")}
                 >
-                  <Star size={14} fill={pinned ? "currentColor" : "none"} />
+                  <Star size={ICON.sm} fill={pinned ? "currentColor" : "none"} />
                 </button>
               </div>
             );

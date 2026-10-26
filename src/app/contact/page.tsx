@@ -5,6 +5,7 @@ import PageHero from "@/components/ui/PageHero";
 import { Stagger, StaggerItem, Reveal } from "@/components/motion/Reveal";
 import { contact } from "@/lib/data";
 import { pageMeta, SITE_EMAIL } from "@/lib/site";
+import { ICON } from "@/lib/icons";
 
 export const metadata: Metadata = pageMeta(
   "/contact",
@@ -31,7 +32,7 @@ export default function Contact() {
             return (
               <StaggerItem key={t as string}>
                 <a href={href as string} className="flex items-center gap-4 rounded-[14px] border border-line p-5 transition-colors hover:border-ink">
-                  <I size={18} className="text-orange" />
+                  <I size={ICON.lg} className="text-orange" />
                   <span className="text-[15px]">{t as string}</span>
                 </a>
               </StaggerItem>
@@ -39,7 +40,7 @@ export default function Contact() {
           })}
           {offices.map(([c, a]) => (
             <StaggerItem key={c} className="flex gap-4 rounded-[14px] bg-surface p-5">
-              <MapPin size={18} className="mt-0.5 text-orange" />
+              <MapPin size={ICON.lg} className="mt-0.5 text-orange" />
               <div>
                 <p className="text-[15px] font-medium">{c}</p>
                 <p className="text-[14px] text-muted">{a}</p>

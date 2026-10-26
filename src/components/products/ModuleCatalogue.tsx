@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import clsx from "clsx";
 import { catalogues } from "@/lib/catalog";
+import { ICON } from "@/lib/icons";
 
 /** Every module and sub-module, for Betopia and Akboria, with a tab per ERP and expandable modules. */
 export default function ModuleCatalogue() {
@@ -51,7 +52,7 @@ export default function ModuleCatalogue() {
                   <span className="hidden text-[13px] text-muted sm:inline">
                     {m.subs.length} sub-modules{live && live < m.subs.length ? ` · ${live} live` : ""}
                   </span>
-                  <ChevronDown size={18} className={clsx("text-muted transition-transform", isOpen && "rotate-180 text-orange")} />
+                  <ChevronDown size={ICON.lg} className={clsx("text-muted transition-transform", isOpen && "rotate-180 text-orange")} />
                 </span>
               </button>
               {isOpen && (

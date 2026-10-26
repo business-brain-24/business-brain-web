@@ -4,13 +4,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown, LayoutGrid, Menu, X, ArrowUp } from "lucide-react";
+import { ChevronDown, ChevronRight, LayoutGrid, Menu, X, ArrowUp } from "lucide-react";
 import clsx from "clsx";
 import { groups, industries, products } from "@/lib/data";
 import { Button } from "@/components/ui/Button";
 import { getLenis } from "@/components/motion/SmoothScroll";
 import UserMenu from "@/components/layout/UserMenu";
 import { useUser } from "@/lib/session";
+import { ICON } from "@/lib/icons";
 
 export function BrandMark({ className }: { className?: string }) {
   // eslint-disable-next-line @next/next/no-img-element
@@ -115,7 +116,7 @@ export default function Nav() {
                 )}
               >
                 {k}
-                <ChevronDown size={14} className={clsx("transition-transform duration-200", open === k && "rotate-180")} />
+                <ChevronDown size={ICON.sm} className={clsx("transition-transform duration-200", open === k && "rotate-180")} />
               </button>
             ))}
             {links.map((l) => (
@@ -134,7 +135,7 @@ export default function Nav() {
             {user ? (
               <>
                 <Link href="/dashboard" className="hidden items-center gap-1.5 whitespace-nowrap text-[14px] text-ink xl:flex">
-                  <LayoutGrid size={15} /> My apps
+                  <LayoutGrid size={ICON.md} /> My apps
                 </Link>
                 <UserMenu user={user} />
               </>
@@ -153,7 +154,7 @@ export default function Nav() {
               onClick={() => setMobile(true)}
               aria-label="Open menu"
             >
-              <Menu size={20} />
+              <Menu size={ICON.lg} />
             </button>
           </div>
         </div>
@@ -214,7 +215,7 @@ function ProductsMenu() {
         <Link href="/ask" className="my-6 flex items-center justify-between rounded-[12px] bg-white py-2.5 pl-4 pr-2.5">
           <span className="text-[14px] text-subtle">What were yesterday&apos;s sales by branch?</span>
           <span className="flex h-8 w-8 items-center justify-center rounded-full bg-orange text-white">
-            <ArrowUp size={15} />
+            <ArrowUp size={ICON.md} />
           </span>
         </Link>
         <div className="flex justify-between text-[14px]">
@@ -264,7 +265,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
       <div className="flex h-[66px] items-center justify-between border-b border-line px-4 sm:px-6">
         <Logo />
         <button onClick={onClose} className="flex h-11 w-11 items-center justify-center" aria-label="Close menu">
-          <X size={22} />
+          <X size={ICON.lg} />
         </button>
       </div>
       <motion.div
@@ -328,7 +329,9 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
           Log in
         </Link>
         <Link href="/demo" className="flex h-12 flex-1 items-center justify-center gap-2 rounded-[12px] bg-ink text-[15px] font-medium text-white">
-          <span className="flex h-6 w-6 items-center justify-center rounded-md bg-orange text-[12px]">›</span>
+          <span className="flex h-7 w-7 items-center justify-center rounded-[8px] bg-[linear-gradient(180deg,#FF6B2C_50%,#C2410C_100%)]">
+            <ChevronRight size={ICON.sm} strokeWidth={2.2} />
+          </span>
           Book a fit session
         </Link>
       </div>
@@ -363,7 +366,7 @@ function BackToTop() {
           className="fixed bottom-5 right-5 z-40 hidden h-11 w-11 items-center justify-center rounded-full border border-line bg-white/90 shadow-[var(--shadow-soft)] backdrop-blur md:flex"
           aria-label="Back to top"
         >
-          <ArrowUp size={18} />
+          <ArrowUp size={ICON.lg} />
         </motion.button>
       )}
     </AnimatePresence>

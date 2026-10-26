@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/motion/Reveal";
 import CTA from "@/components/ui/CTA";
 import Newsletter from "./Newsletter";
+import { ICON } from "@/lib/icons";
 
 /*
  * #12: the six cards below have no pages behind them yet, and the Northloom story is not confirmed.
@@ -48,7 +49,7 @@ export default function Resources() {
             ))}
           </div>
           <label className="flex h-11 w-full items-center gap-2.5 rounded-full border border-line px-4 focus-within:border-orange lg:w-[320px]">
-            <Search size={16} className="text-subtle" />
+            <Search size={ICON.md} className="text-subtle" />
             <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search stories, guides, webinars…" className="w-full bg-transparent text-[16px] outline-none sm:text-[14px]" />
           </label>
         </div>}
@@ -94,7 +95,7 @@ export default function Resources() {
             <motion.article key={title} layout initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.96 }} transition={{ duration: 0.35 }} className="group cursor-pointer">
               <div className="flex aspect-[16/9] items-center justify-center rounded-[16px] bg-surface">
                 <span className="flex h-14 w-14 items-center justify-center rounded-[14px] bg-white shadow-[0_1px_2px_rgba(11,13,18,0.06)] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
-                  <Icon size={22} strokeWidth={1.6} />
+                  <Icon size={ICON.lg} strokeWidth={1.6} />
                 </span>
               </div>
               <p className="mt-4 text-[13px] text-muted">{meta}</p>

@@ -5,6 +5,7 @@ import { Download, Filter, Plus, Search, X } from "lucide-react";
 import clsx from "clsx";
 import type { App } from "@/lib/workspace";
 import { Avatar, KpiStrip, StatusPill } from "./shared";
+import { ICON } from "@/lib/icons";
 
 /** Records layout: status tabs, search, a dense table, and a detail drawer for the selected row. */
 export default function Records({ app, cols, rows, action }: { app: App; cols: string[]; rows: string[][]; action: string }) {
@@ -32,13 +33,13 @@ export default function Records({ app, cols, rows, action }: { app: App; cols: s
           </div>
           <div className="flex items-center gap-2">
             <label className="flex h-9 flex-1 items-center gap-2 rounded-full border border-line px-3 focus-within:border-orange lg:w-56 lg:flex-none">
-              <Search size={14} className="text-muted" />
+              <Search size={ICON.sm} className="text-muted" />
               <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search" className="min-w-0 flex-1 bg-transparent text-[13px] outline-none" />
             </label>
-            <button className="flex h-9 w-9 items-center justify-center rounded-full border border-line hover:border-ink/30" aria-label="Filter"><Filter size={14} /></button>
-            <button className="flex h-9 w-9 items-center justify-center rounded-full border border-line hover:border-ink/30" aria-label="Export"><Download size={14} /></button>
+            <button className="flex h-9 w-9 items-center justify-center rounded-full border border-line hover:border-ink/30" aria-label="Filter"><Filter size={ICON.sm} /></button>
+            <button className="flex h-9 w-9 items-center justify-center rounded-full border border-line hover:border-ink/30" aria-label="Export"><Download size={ICON.sm} /></button>
             <button className="flex h-9 shrink-0 items-center gap-1.5 rounded-full bg-[linear-gradient(180deg,#FF6B2C,#C2410C)] px-3.5 text-[13px] font-medium text-white">
-              <Plus size={14} /> <span className="hidden sm:inline">{action}</span>
+              <Plus size={ICON.sm} /> <span className="hidden sm:inline">{action}</span>
             </button>
           </div>
         </div>
@@ -93,7 +94,7 @@ export default function Records({ app, cols, rows, action }: { app: App; cols: s
                 <p className="text-[12px] text-muted">{app.name}</p>
                 <p className="text-[18px] font-semibold">{open[0]}</p>
               </div>
-              <button onClick={() => setOpen(null)} aria-label="Close" className="flex h-9 w-9 items-center justify-center rounded-full hover:bg-surface"><X size={18} /></button>
+              <button onClick={() => setOpen(null)} aria-label="Close" className="flex h-9 w-9 items-center justify-center rounded-full hover:bg-surface"><X size={ICON.lg} /></button>
             </div>
             <div className="flex-1 overflow-y-auto p-5">
               <StatusPill s={open[open.length - 1]} />

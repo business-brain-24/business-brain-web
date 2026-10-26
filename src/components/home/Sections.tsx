@@ -15,6 +15,7 @@ import { industries, products, WATCH_TOWER_DEMO } from "@/lib/data";
 import { AskBox } from "./Hero";
 import type { RegionStat } from "@/components/three/BangladeshMap";
 import LazyScene from "@/components/three/LazyScene";
+import { ICON } from "@/lib/icons";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -161,7 +162,7 @@ export function Blocks() {
           {["Select only the modules you need", "Configured and customised to your workflows", "One login, role-based access"].map((t) => (
             <li key={t} className="flex items-center gap-3">
               <span className="flex h-5 w-5 items-center justify-center rounded-full bg-orange-soft text-orange">
-                <Check size={12} strokeWidth={3} />
+                <Check size={ICON.xs} strokeWidth={3} />
               </span>
               {t}
             </li>
@@ -205,7 +206,7 @@ export function Compliance() {
     <section className="container-x pb-24 sm:pb-32">
       <div className="grid gap-10 border-t border-line pt-10 lg:grid-cols-[1fr_2fr]">
         <div className="flex items-start gap-3">
-          <ShieldCheck className="mt-1 shrink-0 text-orange" size={20} />
+          <ShieldCheck className="mt-1 shrink-0 text-orange" size={ICON.lg} />
           <div>
             <p className="text-[18px] font-medium leading-[26px]">Built for your business.</p>
             <p className="mt-2 text-[15px] leading-[24px] text-muted">Configured to your workflows and Bangladesh rules.</p>
@@ -310,7 +311,7 @@ export function ProductsBento() {
         <StaggerItem className="md:col-span-2">
           <Link href="/products" className="group flex min-h-[340px] flex-col justify-between rounded-[20px] bg-ink p-6 text-white sm:p-7">
             <span className="flex h-11 w-11 items-center justify-center rounded-[10px] bg-[linear-gradient(180deg,#FF6B2C_50%,#C2410C_100%)] transition-transform duration-300 group-hover:rotate-45">
-              <ArrowUpRight size={18} />
+              <ArrowUpRight size={ICON.lg} />
             </span>
             <div>
               <p className="text-[28px] font-medium leading-[32px] tracking-[-0.03em] sm:text-[32px]">See all modules</p>
@@ -355,7 +356,7 @@ export function BrainAI() {
             <ul className="mt-8 space-y-3 text-[15px] text-white/85">
               {["Answers and charts from your live data", "Connect ChatGPT or Claude through our MCP server", "Every answer respects each user's access"].map((t) => (
                 <li key={t} className="flex items-center gap-3">
-                  <Check size={16} className="text-orange" /> {t}
+                  <Check size={ICON.md} className="text-orange" /> {t}
                 </li>
               ))}
             </ul>
@@ -368,7 +369,7 @@ export function BrainAI() {
           <div className="rounded-[20px] border border-white/10 bg-white/[0.04] p-4 sm:p-6">
             <div className="mb-5 flex items-center gap-3 border-b border-white/10 pb-4">
               <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-orange/15 text-orange">
-                <Sparkles size={17} />
+                <Sparkles size={ICON.md} />
               </span>
               <p className="text-[17px] font-medium tracking-[-0.01em] sm:text-[19px]">Run your business. Ask it anything.</p>
             </div>
@@ -423,7 +424,7 @@ export function Industries() {
                 <p className="mt-1 truncate text-[14px] text-muted">{ind.short}</p>
               </div>
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-line transition-all duration-300 group-hover:border-ink group-hover:bg-ink group-hover:text-white">
-                <ChevronRight size={16} />
+                <ChevronRight size={ICON.md} />
               </span>
             </Link>
           </Reveal>

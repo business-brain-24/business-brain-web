@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Check } from "lucide-react";
 import Turnstile from "@/components/ui/Turnstile";
 import { submitLead } from "@/lib/lead";
+import { ICON } from "@/lib/icons";
 
 export default function Newsletter() {
   const [state, setState] = useState<"idle" | "sending" | "done">("idle");
@@ -27,7 +28,7 @@ export default function Newsletter() {
   if (state === "done")
     return (
       <p className="flex items-center gap-2 text-[15px] font-medium">
-        <Check size={18} className="text-orange" /> You&apos;re subscribed. Watch your inbox.
+        <Check size={ICON.lg} className="text-orange" /> You&apos;re subscribed. Watch your inbox.
       </p>
     );
 

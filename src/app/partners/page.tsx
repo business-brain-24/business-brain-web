@@ -5,6 +5,7 @@ import PageHero from "@/components/ui/PageHero";
 import { Button, TextLink } from "@/components/ui/Button";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import CTA from "@/components/ui/CTA";
+import { ICON } from "@/lib/icons";
 
 export const metadata: Metadata = pageMeta(
   "/partners",
@@ -45,7 +46,7 @@ export default function Partners() {
             return (
               <StaggerItem key={t as string} className="group rounded-[16px] border border-line p-7 transition-shadow hover:shadow-[var(--shadow-soft)]">
                 <span className="flex h-11 w-11 items-center justify-center rounded-[10px] bg-surface transition-colors group-hover:bg-orange group-hover:text-white">
-                  <I size={18} />
+                  <I size={ICON.lg} />
                 </span>
                 <p className="mt-6 text-[20px] font-medium">{t as string}</p>
                 <p className="mt-2 text-[15px] leading-[23px] text-muted">{b as string}</p>
