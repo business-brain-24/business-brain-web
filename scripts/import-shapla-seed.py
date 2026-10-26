@@ -22,6 +22,7 @@ from xml.etree import ElementTree as ET
 ROOT = Path(__file__).resolve().parent.parent
 OUT_DATA = ROOT / "data" / "seed" / "shapla-foods"
 OUT_TS = ROOT / "src" / "lib" / "shapla-seed.ts"
+OUT_AGENT = ROOT / "src" / "lib" / "shapla-agent-data.ts"
 NS = {"m": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
 REL = "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id"
 EXCEL_EPOCH = date(1899, 12, 30)
@@ -433,6 +434,99 @@ def production_summary(t, prod):
     }
 
 
+def build_agent(t):
+    """Compact records and pre-computed totals the Shapla chat agent answers from."""
+    co = t["Company"]
+    prod = {r["SKU"]: r for r in t["Products"]}
+    cus = {r["Customer ID"]: r for r in t["Customers"]}
+    sales_lines = defaultdict(list)
+    for l in t["Sales_Order_Lines"]:
+        sales_lines[l["SO ID"]].append(l)
+    so_date = {o["SO ID"]: o["Order date"] for o in t["Sales_Orders"]}
+    months = ["2026-07", "2026-08", "2026-09", "2026-10"]
+    mi = {m: i for i, m in enumerate(months)}
+    z = lambda: [0.0] * len(months)
+    r0 = lambda x: round(x)
+
+    # per product: net sales, units and cost of goods by month
+    pm = defaultdict(lambda: {"net": z(), "qty": z(), "cogs": z()})
+    for so, ls in sales_lines.items():
+        m = mi[so_date[so][:7]]
+        for l in ls:
+            p = pm[l["SKU"]]
+            p["net"][m] += l["Net (BDT)"]
+            p["qty"][m] += l["Qty (units)"]
+            p["cogs"][m] += l["Qty (units)"] * prod[l["SKU"]]["Std cost (BDT)"]
+
+    # orders: daily totals, plus totals by customer, officer, depot and status
+    daily = defaultdict(lambda: [0.0, 0])
+    by_cus = defaultdict(lambda: {"net": z(), "orders": 0, "last": ""})
+    by_off = defaultdict(lambda: {"net": z(), "orders": 0})
+    by_dep = defaultdict(lambda: {"net": z(), "Delivered": 0, "Invoiced": 0, "Pending": 0})
+    pending = []
+    for o in t["Sales_Orders"]:
+        m = mi[o["Order date"][:7]]
+        daily[o["Order date"]][0] += o["Net amount (BDT)"]
+        daily[o["Order date"]][1] += 1
+        c = by_cus[o["Customer ID"]]
+        c["net"][m] += o["Net amount (BDT)"]
+        c["orders"] += 1
+        c["last"] = max(c["last"], o["Order date"])
+        f = by_off[o["Sales officer (Emp ID)"]]
+        f["net"][m] += o["Net amount (BDT)"]
+        f["orders"] += 1
+        dp = by_dep[o["Depot (Location ID)"]]
+        dp["net"][m] += o["Net amount (BDT)"]
+        dp[o["Status"]] += 1
+        if o["Status"] == "Pending":
+            pending.append({"id": o["SO ID"], "date": o["Order date"], "cus": o["Customer ID"], "dep": o["Depot (Location ID)"], "total": r0(o["Total (BDT)"])})
+
+    inv = [{"id": i["Invoice ID"], "so": i["SO ID"], "date": i["Invoice date"], "due": i["Due date"], "cus": i["Customer ID"], "amt": r0(i["Amount (BDT)"]), "paid": r0(i["Paid (BDT)"]), "out": r0(i["Outstanding (BDT)"]), "st": i["Payment status"]} for i in t["Invoices"]]
+    col = defaultdict(lambda: defaultdict(float))
+    for c in t["Collections"]:
+        col[c["Receipt date"][:7]][c["Method"]] += c["Amount (BDT)"]
+
+    po_lines = defaultdict(list)
+    for l in t["Purchase_Order_Lines"]:
+        po_lines[l["PO ID"]].append([l["RM ID"], l["Qty"], l["Unit price (BDT)"]])
+    bom = defaultdict(list)
+    for b in t["BOM"]:
+        bom[b["SKU"]].append([b["RM ID"], b["Qty per unit"]])
+
+    data = {
+        "company": {"name": co["Company name"], "industry": co["Industry"], "headOffice": co["Head office"], "factory": co["Factory"], "fiscalYear": co["Fiscal year"].replace(" – ", " to "), "period": "1 Jul to 25 Oct 2026", "asOf": AS_OF.isoformat()},
+        "months": ["Jul", "Aug", "Sep", "Oct"],
+        "locations": [{"id": r["Location ID"], "name": r["Name"], "type": r["Type"], "division": r["Division"], "district": r["District"]} for r in t["Locations"]],
+        "categories": {r["Category ID"]: r["Category"] for r in t["Categories"]},
+        "departments": {r["Dept ID"]: r["Department"] for r in t["Departments"]},
+        "regions": [{"id": r["Region ID"], "name": r["Region"].replace(" Region", ""), "division": r["Division"], "rsm": r["Regional Sales Manager (Emp ID)"]} for r in t["Regions"]],
+        "products": [{"sku": r["SKU"], "name": r["Product name"], "pack": r["Pack size"], "cat": r["Category ID"], "unit": r["Unit"], "perCase": r["Units per case"], "mrp": r["MRP (BDT)"], "tp": r["Trade price (BDT)"], "cost": r["Std cost (BDT)"], "vat": r["VAT % (illustrative)"]} for r in t["Products"]],
+        "rawMaterials": [{"id": r["RM ID"], "name": r["Material"], "unit": r["Unit"], "cost": r["Std cost (BDT)"]} for r in t["Raw_Materials"]],
+        "suppliers": [{"id": r["Supplier ID"], "name": r["Supplier"], "city": r["City"], "contact": r["Contact person"], "terms": r["Payment terms (days)"]} for r in t["Suppliers"]],
+        "bom": bom,
+        "employees": [{"id": r["Employee ID"], "name": r["Name"], "gender": r["Gender"], "dept": r["Dept ID"], "title": r["Designation"], "grade": r["Grade"], "loc": r["Location ID"], "join": r["Join date"], "type": r["Employment type"], "gross": r["Gross salary (BDT/month)"], "basic": r["Basic"], "house": r["House rent"], "medical": r["Medical"], "other": r["Conveyance & other"]} for r in t["Employees"]],
+        "customers": [{"id": r["Customer ID"], "name": r["Customer"], "type": r["Type"], "division": r["Division"], "area": r["Area / town"], "region": r["Region ID"], "officer": r["Sales officer (Emp ID)"], "contact": r["Contact person"], "credit": r["Credit limit (BDT)"], "terms": r["Credit terms (days)"]} for r in t["Customers"]],
+        "productMonthly": {k: {kk: [r0(x) for x in vv] for kk, vv in v.items()} for k, v in pm.items()},
+        "daily": [{"date": dd, "net": r0(v[0]), "orders": v[1]} for dd, v in sorted(daily.items())],
+        "customerTotals": {k: {"net": [r0(x) for x in v["net"]], "orders": v["orders"], "last": v["last"]} for k, v in by_cus.items()},
+        "officerTotals": {k: {"net": [r0(x) for x in v["net"]], "orders": v["orders"]} for k, v in by_off.items()},
+        "depotTotals": {k: {"net": [r0(x) for x in v["net"]], "Delivered": v["Delivered"], "Invoiced": v["Invoiced"], "Pending": v["Pending"]} for k, v in by_dep.items()},
+        "pendingOrders": sorted(pending, key=lambda x: x["date"]),
+        "invoices": inv,
+        "collections": {m: {k: r0(x) for k, x in v.items()} for m, v in sorted(col.items())},
+        "purchaseOrders": [{"id": p["PO ID"], "date": p["PO date"], "sup": p["Supplier ID"], "to": p["Deliver to"], "st": p["Status"], "total": r0(p["Total (BDT)"]), "exp": p["Expected date"], "lines": po_lines[p["PO ID"]]} for p in t["Purchase_Orders"]],
+        "production": [{"id": m["MO ID"], "date": m["Date"], "sku": m["SKU"], "planned": m["Planned qty"], "produced": m["Produced qty"], "good": m["Good qty"], "rejected": m["Rejected qty"], "st": m["Status"]} for m in t["Production_Orders"]],
+        "stock": [{"loc": s["Location ID"], "sku": s["SKU"], "qty": s["Qty (units)"], "reorder": s["Reorder level (units)"]} for s in t["Stock_On_Hand"]],
+        "accounts": [{"code": a["Account code"], "name": a["Account name"], "type": a["Type"]} for a in t["Chart_of_Accounts"]],
+    }
+    OUT_AGENT.write_text(
+        "// Generated by scripts/import-shapla-seed.py from the Shapla Foods seed workbook. Do not edit by hand.\n"
+        "// Compact records and totals the Shapla chat agent (src/lib/shapla-agent.ts) answers from.\n\n"
+        f"export const S = {json.dumps(data, ensure_ascii=False, separators=(',', ':'))};\n",
+        encoding="utf-8",
+    )
+
+
 def main():
     if len(sys.argv) != 2:
         sys.exit(__doc__)
@@ -456,6 +550,7 @@ def main():
         f"export const shapla = {body};\n",
         encoding="utf-8",
     )
+    build_agent(tables)
     print(f"wrote {len(tables)} tables to {OUT_DATA.relative_to(ROOT)} and views to {OUT_TS.relative_to(ROOT)}")
 
 

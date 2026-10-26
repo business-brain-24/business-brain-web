@@ -50,9 +50,9 @@ const pillars = ["AI at the core", "Own MCP server: works with ChatGPT and Claud
 
 const prompts = [
   "What were yesterday's sales by branch?",
-  "Which region is behind target today?",
+  "Which region sells the most?",
   "Show stock levels across all warehouses.",
-  "Which modules does a 300-person factory need?",
+  "How is the factory doing?",
 ];
 
 export default function Hero() {

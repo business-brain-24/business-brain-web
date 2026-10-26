@@ -11,7 +11,7 @@ import { apps, categories, type Category } from "@/lib/workspace";
 import { ICON } from "@/lib/icons";
 
 const FAV_KEY = "bb-favourites";
-const prompts = ["Which region is behind target today?", "Who is on leave this week?", "What stock runs out first?"];
+const prompts = ["Which region sells the most?", "Who joined most recently?", "What stock runs out first?"];
 
 export default function Dashboard() {
   const router = useRouter();
