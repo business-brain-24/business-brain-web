@@ -10,6 +10,9 @@ import Turnstile from "./Turnstile";
 import { contact } from "@/lib/data";
 import { submitLead, thanksPath, type FormName } from "@/lib/lead";
 
+/** Digits with optional +, spaces, dashes or brackets; at least 7 digits. Same rule as functions/api/lead.ts. */
+const PHONE = /^\+?[\d\s()-]*\d(?:[\s()-]*\d){6,}[\s()-]*$/;
+
 type Field = { name: string; label: string; type?: string; placeholder?: string; options?: string[]; full?: boolean; area?: boolean; defaultValue?: string };
 
 export default function Form({ name, fields, submit, done }: { name: FormName; fields: Field[]; submit: string; done: string }) {
@@ -29,6 +32,7 @@ export default function Form({ name, fields, submit, done }: { name: FormName; f
       if (!v) next[f.name] = "Required";
       else if (f.type === "email" && /@(gmail|yahoo|hotmail|outlook)\./i.test(v)) next[f.name] = "Use your work email so we can match your industry.";
       else if (f.type === "email" && !/^\S+@\S+\.\S+$/.test(v)) next[f.name] = "Enter a valid email.";
+      else if (f.type === "tel" && !PHONE.test(v)) next[f.name] = "Enter a valid phone number.";
     });
     setErrors(next);
     if (Object.keys(next).length > 0) return;
@@ -75,7 +79,7 @@ export default function Form({ name, fields, submit, done }: { name: FormName; f
               ) : f.area ? (
                 <textarea name={f.name} rows={4} placeholder={f.placeholder} className={clsx(input(errors[f.name]), "h-auto py-3")} />
               ) : (
-                <input name={f.name} type={f.type ?? "text"} placeholder={f.placeholder} className={input(errors[f.name])} />
+                <input name={f.name} type={f.type ?? "text"} {...(f.type === "tel" && { inputMode: "tel" as const, autoComplete: "tel" })} placeholder={f.placeholder} className={input(errors[f.name])} />
               )}
               {errors[f.name] && <span className="text-[13px] text-danger">{errors[f.name]}</span>}
             </label>

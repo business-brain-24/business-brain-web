@@ -83,9 +83,10 @@ export function Booking({ session }: { session?: string | null }) {
             { name: "session", label: "What would you like to book?", options: [sessions.fit.option, sessions["watch-tower"].option], defaultValue: s.option, full: true },
             { name: "name", label: "Full name", placeholder: "Your name" },
             { name: "email", label: "Work email", type: "email", placeholder: "name@company.com" },
+            { name: "phone", label: "Phone", type: "tel", placeholder: "+880 1XXX-XXXXXX" },
             { name: "company", label: "Company", placeholder: "Company name" },
             { name: "size", label: "Company size", options: ["1 to 50", "51 to 200", "201 to 1,000", "1,000+"] },
-            { name: "industry", label: "Industry", options: industries.map((i) => i.name), full: true },
+            { name: "industry", label: "Industry", options: industries.map((i) => i.name) },
             { name: "notes", label: "What would you like to see?", area: true, placeholder: "Payroll on Bangladesh rules, field sales on Watch Tower…" },
           ]}
         />

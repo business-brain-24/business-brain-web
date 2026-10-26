@@ -19,12 +19,13 @@ type Ctx = { request: Request; env: Env; waitUntil(p: Promise<unknown>): void };
 
 const FORMS: Record<string, string[]> = {
   contact: ["name", "email", "topic", "message"],
-  demo: ["session", "name", "email", "company", "size", "industry", "notes"],
+  demo: ["session", "name", "email", "phone", "company", "size", "industry", "notes"],
   quote: ["name", "email", "company", "users", "industry"],
   newsletter: ["email"],
 };
 const RATE_LIMIT = 5; // submissions per IP per 10 minutes
 const EMAIL = /^\S+@\S+\.\S+$/;
+const PHONE = /^\+?[\d\s()-]*\d(?:[\s()-]*\d){6,}[\s()-]*$/;
 
 const json = (body: unknown, status = 200) => new Response(JSON.stringify(body), { status, headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" } });
 
@@ -48,6 +49,8 @@ export const onRequestPost = async ({ request, env, waitUntil }: Ctx) => {
   for (const f of required) if (!String(fields[f] ?? "").trim()) errors[f] = "Required";
   const email = String(fields.email ?? "").trim();
   if (email && !EMAIL.test(email)) errors.email = "Enter a valid email.";
+  const phone = String(fields.phone ?? "").trim();
+  if (phone && !PHONE.test(phone)) errors.phone = "Enter a valid phone number.";
   if (form === "contact" || form === "demo") {
     if (/@(gmail|yahoo|hotmail|outlook)\./i.test(email)) errors.email = "Use your work email so we can match your industry.";
   }
