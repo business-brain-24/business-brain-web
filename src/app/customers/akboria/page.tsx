@@ -56,7 +56,7 @@ export default function Story() {
           </Reveal>
           <Reveal className="border-l-2 border-orange pl-6 sm:pl-8">
             <p className="text-[22px] font-medium leading-[32px] tracking-[-0.02em] sm:text-[24px] sm:leading-[34px]">
-              “From the SR’s phone to the oven to the showroom shelf — every demand now lands in one place, and we see it the same day.”
+              “From the SR’s phone to the oven to the showroom shelf, every demand now lands in one place, and we see it the same day.”
             </p>
           </Reveal>
           <Reveal>

@@ -20,7 +20,7 @@ export default function About() {
   const beliefs = [
     ["One source of truth", "Data entered once should power every decision in the company."],
     ["Built with operators", "Every feature starts on a factory floor, a store counter or a finance desk."],
-    ["Trust is the product", "Your payroll and books are safe with us — role-based access, activity tracking, and cloud or on-premise deployment."],
+    ["Trust is the product", "Your payroll and books are safe with us: role-based access, activity tracking, and cloud or on-premise deployment."],
   ];
   const journey = [
     ["2017", "Founded in Dhaka. First payroll customer: 600 workers."],

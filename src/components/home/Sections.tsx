@@ -155,7 +155,7 @@ export function Blocks() {
         <Label>Modular implementation</Label>
         <h2 className="h-section mt-3">Every product is a block. The brain holds them together.</h2>
         <p className="mt-4 max-w-[460px] text-[16px] leading-[26px] text-muted">
-          Select the modules you need now and add the rest later. Every module writes to the same live record — no re-entry, no disconnected spreadsheets.
+          Select the modules you need now and add the rest later. Every module writes to the same live record: no re-entry, no disconnected spreadsheets.
         </p>
         <ul className="mt-6 space-y-3 text-[15px]">
           {["Select only the modules you need", "Configured and customised to your workflows", "One login, role-based access"].map((t) => (
@@ -268,7 +268,7 @@ export function ProductsBento() {
                 </motion.div>
               ))}
             </div>
-            <BentoText label="Supply chain" title="Procurement · Inventory · Sales · POS" body="From requisition to reorder — auto-matched POs, GRNs and invoices." />
+            <BentoText label="Supply chain" title="Procurement · Inventory · Sales · POS" body="From requisition to reorder: auto-matched POs, GRNs and invoices." />
           </Link>
         </StaggerItem>
         <StaggerItem className="md:col-span-2">
@@ -339,7 +339,7 @@ export function BrainAI() {
     { from: "user", text: "What were yesterday's sales by branch?" },
     { from: "brain", text: "৳ 48.6 L across 6 branches. Gulshan led with ৳ 12.4 L; Sylhet ran 18% below its daily average." },
     { from: "user", text: "গতকাল কোন পণ্য সবচেয়ে বেশি বিক্রি হয়েছে?" },
-    { from: "brain", text: "মিষ্টি দই — ৪,২১০ ইউনিট, গত সপ্তাহের গড়ের চেয়ে ১২% বেশি।" },
+    { from: "brain", text: "মিষ্টি দই: ৪,২১০ ইউনিট, গত সপ্তাহের গড়ের চেয়ে ১২% বেশি।" },
   ];
   return (
     <section className="px-2 sm:px-3">
@@ -440,7 +440,7 @@ const reviews = [
     company: "Akboria",
     meta: "Akboria · Sweets & Food, since 1911",
     badge: "35 features live",
-    quote: "From the SR’s phone to the oven to the showroom shelf — every demand now lands in one place, and we see it the same day.",
+    quote: "From the SR’s phone to the oven to the showroom shelf, every demand now lands in one place, and we see it the same day.",
     href: "/customers/akboria",
     tone: "bg-[#FFF7F2]",
     badgeTone: "bg-white text-orange-deep",
@@ -451,7 +451,7 @@ const reviews = [
     company: "Urmi Group",
     meta: "Urmi Group · Garments & Textile",
     badge: "Fully delivered",
-    quote: "Our factories, people and numbers now live in one system. The rollout was delivered end to end — and it runs.",
+    quote: "Our factories, people and numbers now live in one system. The rollout was delivered end to end, and it runs.",
     tone: "bg-surface",
     badgeTone: "bg-green-soft text-[#067647]",
     size: [115, 50],

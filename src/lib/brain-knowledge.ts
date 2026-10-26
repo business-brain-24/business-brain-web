@@ -1,7 +1,7 @@
 import { appCatalog, appCount, contact, groups, industries, products, stories } from "@/lib/data";
 
 /* A small, rule-based "assistant" that answers questions about Business Brain 24
-   from the site's own data. Demo only — no network calls. */
+   from the site's own data. Demo only: no network calls. */
 
 export type Unit = "bdt" | "count" | "pct" | "kg" | "tonnes" | "min" | "days";
 export type Chart = {
@@ -98,7 +98,7 @@ export function answer(raw: string): Reply {
   // MCP / bring your own AI
   if (has(q, "mcp", "chatgpt", "claude", "openai", "own ai", "my ai", "connect ai", /gpt/)) {
     return {
-      text: "Business Brain 24 has its own MCP server. It plugs ChatGPT or Claude into your ERP, so you can use the AI assistant you already know with your own data — within the access you set.",
+      text: "Business Brain 24 has its own MCP server. It plugs ChatGPT or Claude into your ERP, so you can use the AI assistant you already know with your own data, within the access you set.",
       bullets: [
         "Works with ChatGPT and Claude",
         "Answers come from your live ERP data",
@@ -113,7 +113,7 @@ export function answer(raw: string): Reply {
   // Watch Tower
   if (has(q, "watch tower", "watchtower", "control centre", "control center", "live map", "leaderboard", "truck", "field force", "field sales")) {
     return {
-      text: "Watch Tower is your AI control centre: an interactive, live map of your whole operation — field force, branches, orders and trucks. It comes with Business Brain 24.",
+      text: "Watch Tower is your AI control centre: an interactive, live map of your whole operation, including field force, branches, orders and trucks. It comes with Business Brain 24.",
       bullets: [
         "New orders pop up on the map as they happen",
         "Leaderboards show your top performers",
@@ -129,7 +129,7 @@ export function answer(raw: string): Reply {
     return {
       text: "Business Brain 24 is configured for Bangladesh. Labour law, income tax, VAT and supplementary duty are built into HR, payroll and finance.",
       bullets: [
-        "Payroll on Bangladesh rules — attendance, leave and tax deductions in one run",
+        "Payroll on Bangladesh rules: attendance, leave and tax deductions in one run",
         "VAT and supplementary duty in purchasing, sales and finance",
         "Ask questions in Bangla or English",
       ],
@@ -141,7 +141,7 @@ export function answer(raw: string): Reply {
   // implementation / migration
   if (has(q, "setup", "set up", "implement", "go live", "go-live", "onboard", "migrat", "tally", "quickbooks", "excel", "how long", "training", "how does it work", "process")) {
     return {
-      text: "Implementation is modular — we configure Business Brain 24 to your workflows in six steps:",
+      text: "Implementation is modular. We configure Business Brain 24 to your workflows in six steps:",
       bullets: [
         "1. Assess requirements",
         "2. Select modules",
@@ -158,7 +158,7 @@ export function answer(raw: string): Reply {
   // Brain AI
   if (has(q, /\bai\b/, "assistant", /\bchat/, /\bask\b/, "gpt", "insight")) {
     return {
-      text: "AI is at the core of Business Brain 24. Ask questions in plain words — in Bangla or English — and get answers and charts straight from your data.",
+      text: "AI is at the core of Business Brain 24. Ask questions in plain words, in Bangla or English, and get answers and charts straight from your data.",
       bullets: [
         "“What were yesterday’s sales by branch?” answered from live data",
         "Cross-module insights, demand forecasting and audit anomaly flags",
@@ -172,12 +172,12 @@ export function answer(raw: string): Reply {
   // mobile
   if (has(q, "mobile", "phone", "android", "ios", "offline", "field")) {
     return {
-      text: "Yes — there are mobile apps for the people who work away from a desk, and they work offline.",
+      text: "Yes, there are mobile apps for the people who work away from a desk, and they work offline.",
       bullets: [
-        "Sales reps — orders, shop visits with GPS, collections",
-        "Managers (ASM / NSM) — team targets, approvals, route plans",
-        "Dealers — stock, orders and claims",
-        "Employees — attendance, leave, payslips and expenses",
+        "Sales reps: orders, shop visits with GPS, collections",
+        "Managers (ASM / NSM): team targets, approvals, route plans",
+        "Dealers: stock, orders and claims",
+        "Employees: attendance, leave, payslips and expenses",
       ],
       links: [{ label: "See it at Akboria", href: "/customers/akboria" }],
       follow: ["Who uses Business Brain?", "Tell me about Sales & distribution", "How much does it cost?"],
@@ -187,7 +187,7 @@ export function answer(raw: string): Reply {
   // security
   if (has(q, "secur", "safe", "data", "privacy", "cloud", "on-prem", "backup", "hosting")) {
     return {
-      text: "Your data stays yours. Business Brain 24 runs in the cloud or on-premise — the deployment option is agreed during scoping.",
+      text: "Your data stays yours. Business Brain 24 runs in the cloud or on-premise. The deployment option is agreed during scoping.",
       bullets: [
         "Role-based access with activity tracking",
         "Company, branch and warehouse-level reporting",
@@ -202,10 +202,10 @@ export function answer(raw: string): Reply {
     return {
       text: "Most companies start with the products closest to their daily pain, then add the rest once the data is flowing. A typical 300-person factory starts with these four:",
       bullets: [
-        "HRMS & Payroll — attendance, overtime and salaries for every worker",
-        "Inventory — raw material, WIP and finished goods across stores",
-        "Procurement — requisitions, approvals and vendors",
-        "Accounting — every transaction posts to one ledger automatically",
+        "HRMS & Payroll: attendance, overtime and salaries for every worker",
+        "Inventory: raw material, WIP and finished goods across stores",
+        "Procurement: requisitions, approvals and vendors",
+        "Accounting: every transaction posts to one ledger automatically",
       ],
       links: [{ label: "Explore all products", href: "/products" }],
       follow: ["What about Manufacturing?", "How much does it cost?", "How does it work?"],
@@ -218,7 +218,7 @@ export function answer(raw: string): Reply {
     const faq = product.faqs.find((f) => f.q.toLowerCase().split(/\W+/).filter((w) => w.length > 4 && !stop.has(w)).filter((w) => q.includes(w)).length >= 2);
     return {
       text: faq ? `${faq.a}` : `${product.name}: ${product.title} ${product.sub}`,
-      bullets: faq ? undefined : product.features.map((f) => `${f.title} — ${f.body}`),
+      bullets: faq ? undefined : product.features.map((f) => `${f.title}: ${f.body}`),
       stats: faq ? undefined : product.stats,
       links: [{ label: `Explore ${product.name}`, href: `/products/${product.slug}` }],
       follow: product.faqs.slice(0, 2).map((f) => f.q).concat("Which modules work with it?"),
@@ -231,14 +231,14 @@ export function answer(raw: string): Reply {
     if (!industry) {
       return {
         text: `Business Brain 24 comes pre-configured for ${industries.length} industries, each with the right modules and reports switched on.`,
-        bullets: industries.map((i) => `${i.name} — ${i.short}`),
+        bullets: industries.map((i) => `${i.name}: ${i.short}`),
         links: [{ label: "Browse industries", href: "/industries" }],
         follow: ["How does it work for garments?", "How does it work for retail?", "Which modules do you have?"],
       };
     }
     return {
       text: `${industry.title} ${industry.sub}`,
-      bullets: industry.bundle.map((b) => `${b.name} — ${b.note}`),
+      bullets: industry.bundle.map((b) => `${b.name}: ${b.note}`),
       stats: [industry.stat],
       links: [{ label: `Business Brain for ${industry.name}`, href: `/industries/${industry.slug}` }],
       follow: ["How much does it cost?", "How does it work?", "Who uses Business Brain?"],
@@ -249,7 +249,7 @@ export function answer(raw: string): Reply {
   if (has(q, /\bapps\b/, /\b55\b/)) {
     return {
       text: `Beyond the ${products.length} core products, there are ${appCount} apps in total, all sharing one login and one database.`,
-      bullets: appCatalog.map((g) => `${g.name} (${g.apps.length}) — ${g.apps.slice(0, 4).map((a) => a.name).join(", ")}…`),
+      bullets: appCatalog.map((g) => `${g.name} (${g.apps.length}): ${g.apps.slice(0, 4).map((a) => a.name).join(", ")}…`),
       links: [{ label: `See all ${appCount} apps`, href: "/apps" }],
       follow: ["Which modules do you have?", "Is there a mobile app?", "How much does it cost?"],
     };
@@ -258,8 +258,8 @@ export function answer(raw: string): Reply {
   // modules / features overview
   if (has(q, "module", "product", "feature", "what do you have", "what can it do", "offer", "include", "list")) {
     return {
-      text: `Business Brain 24 has ${products.length} products in ${groups.length} groups. Start with the ones you need — each one you add later already knows your data.`,
-      bullets: groups.map((g) => `${g} — ${products.filter((p) => p.group === g).map((p) => p.name).join(", ")}`),
+      text: `Business Brain 24 has ${products.length} products in ${groups.length} groups. Start with the ones you need: each one you add later already knows your data.`,
+      bullets: groups.map((g) => `${g}: ${products.filter((p) => p.group === g).map((p) => p.name).join(", ")}`),
       links: [{ label: "Explore all products", href: "/products" }],
       follow: ["Tell me about Accounting", "Tell me about Inventory", "How can it help my business?"],
     };
@@ -284,7 +284,7 @@ export function answer(raw: string): Reply {
   if (has(q, "customer", "client", "who use", "case stud", "success", "akboria", "urmi", "reference")) {
     return {
       text: "A couple of the businesses running on Business Brain 24:",
-      bullets: stories.map((s) => `${s.company} (${s.industry}) — ${s.summary}`),
+      bullets: stories.map((s) => `${s.company} (${s.industry}): ${s.summary}`),
       links: [{ label: "Read success stories", href: "/customers" }],
       follow: ["What is Watch Tower?", "How does it work?", "Book a fit session"],
     };
@@ -293,13 +293,13 @@ export function answer(raw: string): Reply {
   // what is it / overview / greeting
   if (has(q, "what is", "about", "overview", "explain", "business brain", "hello", "hi ", "hey")) {
     return {
-      text: "Business Brain 24 is the AI-centric ERP for growing businesses. It brings HR, payroll, finance, purchasing, inventory, sales and manufacturing into one live record, with AI at the core — and our own MCP server lets you connect ChatGPT or Claude. Configured to your workflows and Bangladesh rules.",
+      text: "Business Brain 24 is the AI-centric ERP for growing businesses. It brings HR, payroll, finance, purchasing, inventory, sales and manufacturing into one live record, with AI at the core, and our own MCP server lets you connect ChatGPT or Claude. Configured to your workflows and Bangladesh rules.",
       follow: ["Can I connect ChatGPT or Claude?", "What is Watch Tower?", "How can it help my business?"],
     };
   }
 
   return {
-    text: "I can tell you about Business Brain 24 — what it does, which modules it has, how it would help your business, pricing and setup. What would you like to know?",
+    text: "I can tell you about Business Brain 24: what it does, which modules it has, how it would help your business, pricing and setup. What would you like to know?",
     follow: starters,
   };
 }

@@ -99,7 +99,7 @@ export default function Hero() {
           </p>
           <p className="bb-fade-up mt-4 max-w-[600px] text-[15px] leading-[25px] text-[#5B616D]" style={{ animationDelay: "0.45s" }}>
             Bring finance, HR, payroll, procurement, inventory, sales, manufacturing and many other modules into one connected system. Reduce
-            repetitive work, coordinate approvals and turn business insights into action — with the controls you set.
+            repetitive work, coordinate approvals and turn business insights into action, with the controls you set.
           </p>
 
           {/* two clear next steps */}

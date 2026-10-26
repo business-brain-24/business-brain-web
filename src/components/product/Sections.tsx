@@ -196,7 +196,7 @@ export function AskSection({ p }: { p: Product }) {
         <div className="relative">
           <Label>Ask Brain AI</Label>
           <h2 className="h-section mt-3">{p.ask.title}</h2>
-          <p className="mt-3 max-w-[380px] text-[15px] leading-[24px] text-white/60">Answers come from live data across every product — with the source shown.</p>
+          <p className="mt-3 max-w-[380px] text-[15px] leading-[24px] text-white/60">Answers come from live data across every product, with the source shown.</p>
         </div>
         <div className="relative min-w-0 space-y-2.5">
           {p.ask.prompts.map((q, i) => (

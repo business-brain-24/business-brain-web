@@ -20,7 +20,7 @@ export default function Contact() {
   ];
   return (
     <>
-      <PageHero label="Contact" title="Talk to a human." sub="Sales, support or partnerships — we reply within one working day." />
+      <PageHero label="Contact" title="Talk to a human." sub="Sales, support or partnerships. We reply within one working day." />
       <section className="container-x mt-14 grid gap-10 lg:grid-cols-[1fr_1.3fr]">
         <Stagger className="space-y-3">
           {[

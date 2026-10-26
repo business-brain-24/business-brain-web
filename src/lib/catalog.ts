@@ -12,7 +12,7 @@ const betopia: Catalogue = {
   modules: [
     {
       name: "Operational",
-      desc: "The daily run of the business — selling, buying, stock, money and the dashboards that tie them together. Every transaction posts once and shows up everywhere it matters.",
+      desc: "The daily run of the business: selling, buying, stock, money and the dashboards that tie them together. Every transaction posts once and shows up everywhere it matters.",
       subs: [
         { name: "B2B Sales", href: "/products/sales", desc: "Quotations, orders and invoices for distributors and corporate buyers, with credit limits and price lists per customer." },
         { name: "Sales", href: "/products/sales", desc: "Orders, delivery and invoicing across every channel, with targets and achievement tracked by rep and region." },
@@ -28,7 +28,7 @@ const betopia: Catalogue = {
         { name: "Timesheets", desc: "Hours logged against projects and tasks, approved weekly and ready for billing or costing." },
         { name: "KPI & Bonus", desc: "Set KPIs per role, track them from live data and calculate bonuses automatically." },
         { name: "Campaign Management", desc: "Plan marketing and trade campaigns, track spend, leads and return on each channel." },
-        { name: "Nexus Partner", desc: "Manage channel partners — onboarding, agreements, orders and commissions in one place." },
+        { name: "Nexus Partner", desc: "Manage channel partners: onboarding, agreements, orders and commissions in one place." },
         { name: "Analytics Dashboard", desc: "Drill-down analytics on sales, stock and margin, built from the same live record." },
         { name: "Dashboards", desc: "Role-based management dashboards that refresh live, from CEO overview to plant output." },
       ],
@@ -54,7 +54,7 @@ const betopia: Catalogue = {
     },
     {
       name: "General",
-      desc: "Shared tools every team uses every day — communication, planning, documents and records — all connected to the same people and data.",
+      desc: "Shared tools every team uses every day: communication, planning, documents and records, all connected to the same people and data.",
       subs: [
         { name: "Discuss", desc: "Team channels and direct messages, with records and documents linked into the conversation." },
         { name: "To-do", desc: "Personal and assigned tasks with due dates, priorities and reminders." },
@@ -76,7 +76,7 @@ const betopia: Catalogue = {
     },
     {
       name: "Other apps",
-      desc: "Specialised apps for service, partners, sales desks and the shop floor — added when a team needs them, already connected to everything else.",
+      desc: "Specialised apps for service, partners, sales desks and the shop floor, added when a team needs them, already connected to everything else.",
       subs: [
         { name: "Manufacturing", href: "/products/manufacturing", desc: "Bills of materials, production orders, batches and shop-floor output with costing." },
         { name: "Helpdesk", desc: "Customer and internal support tickets with SLAs, assignment and history." },
@@ -108,7 +108,7 @@ const akboria: Catalogue = {
         { name: "Credit exception approval", status: "Live", desc: "Orders above a shop's credit limit go to the right manager for approval before dispatch." },
         { name: "SR shop visit tracking with GPS", status: "Live", desc: "Every shop visit is logged with GPS and time, so managers see real coverage." },
         { name: "Daily beat and route planning", status: "Live", desc: "Plan which shops each SR visits each day and track the route against the plan." },
-        { name: "ASM–SR instruction messaging", status: "Live", desc: "Area managers send instructions to their SRs and see when they are read." },
+        { name: "ASM to SR instruction messaging", status: "Live", desc: "Area managers send instructions to their SRs and see when they are read." },
         { name: "Sales targets and achievement tracking", status: "Live", desc: "Targets by SR, product and territory, with achievement updated as orders come in." },
         { name: "Sales policy engine", status: "Live", desc: "Pricing, discount and eligibility rules applied automatically to every order." },
         { name: "Trade offers and product flags", status: "Live", desc: "Run trade offers and flag focus or new products so SRs push the right items." },
@@ -169,7 +169,7 @@ const akboria: Catalogue = {
     },
     {
       name: "Management Dashboard and Reporting",
-      desc: "Gives every role the numbers it needs — management KPIs at the top, and focused dashboards for SRs, dealers, delivery staff and area managers.",
+      desc: "Gives every role the numbers it needs: management KPIs at the top, and focused dashboards for SRs, dealers, delivery staff and area managers.",
       subs: [
         { name: "Management KPI dashboard", status: "Live", desc: "Sales, collection, stock and target KPIs for leadership, updated live." },
         { name: "Role-based dashboards", status: "Live", desc: "Separate dashboards for SR, Dealer, Delivery Man and ASM, showing only what each role needs." },

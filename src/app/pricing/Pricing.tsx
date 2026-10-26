@@ -126,7 +126,7 @@ export default function Pricing() {
 
                 <div className="flex flex-col gap-2 sm:col-span-2">
                   <span className="text-[13px] font-medium">Custom requirements</span>
-                  <span className="text-[13px] text-muted">Add anything specific — integrations, approval flows, reports, data migration, devices.</span>
+                  <span className="text-[13px] text-muted">Add anything specific: integrations, approval flows, reports, data migration, devices.</span>
                   {custom.map((c) => (
                     <div key={c.id} className="flex flex-col gap-2 rounded-[12px] border border-line p-2 sm:flex-row sm:border-0 sm:p-0">
                       <input value={c.label} onChange={(e) => setRow(c.id, "label", e.target.value)} placeholder="Requirement (e.g. Bank integration)" className={clsx(input(), "flex-[2]")} />

@@ -52,7 +52,7 @@ export function pageMeta(path: string, title: string | undefined, description: s
 }
 
 /**
- * Fits a description to the 140–160 characters asked for in #7. Tries each base (and its leading
+ * Fits a description to the 140 to 160 characters asked for in #7. Tries each base (and its leading
  * whole sentences), adding up to three tails until one lands in range. Checked after build
  * by scripts/check-meta.mjs.
  */
@@ -73,7 +73,7 @@ export function fitDescription(base: string | string[], tails: string[]) {
       if (t !== u && u !== v && t !== v && ok(`${b} ${t} ${u} ${v}`)) return `${b} ${t} ${u} ${v}`;
   }
   // One sentence that is too long: cut at a word boundary and end on a full stop.
-  const cut = bases[bases.length - 1].slice(0, 159).replace(/[\s,;:–-]+\S*$/, "");
+  const cut = bases[bases.length - 1].slice(0, 159).replace(/[\s,;:-]+\S*$/, "");
   return `${cut.replace(/[.,;:]$/, "")}.`;
 }
 

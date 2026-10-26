@@ -4,6 +4,8 @@ export const WATCH_TOWER_DEMO = "https://world.akboriaerp.com/?source=seed";
 export const contact = {
   phone: "+880 1332-840871",
   phoneHref: "tel:+8801332840871",
+  phone2: "+880 1332-840930",
+  phone2Href: "tel:+8801332840930",
   site: "businessbrain24.com",
   siteHref: "https://businessbrain24.com",
 };
@@ -640,7 +642,7 @@ export const industries: Industry[] = [
     short: "Landed cost, credit control, collections",
     layout: "d",
     title: "Buy smart, move fast, collect on time.",
-    sub: "Imports, warehousing, credit sales and collections for traders and distributors — with landed cost and margins visible on every deal.",
+    sub: "Imports, warehousing, credit sales and collections for traders and distributors, with landed cost and margins visible on every deal.",
     painTitle: "Built for volume, credit and cash flow.",
     pains: [
       { title: "Import & landed cost", body: "LC, duty, freight and clearing in every unit cost." },
@@ -664,11 +666,11 @@ export const industries: Industry[] = [
     short: "Multi-outlet POS, distributors, trade schemes",
     layout: "c",
     title: "Every shelf, outlet and distributor in sync.",
-    sub: "POS, distribution, schemes and replenishment for supermarket chains and FMCG brands — connected to one brain.",
+    sub: "POS, distribution, schemes and replenishment for supermarket chains and FMCG brands, connected to one brain.",
     painTitle: "Built for fast-moving goods and thin margins.",
     pains: [
       { title: "Multi-outlet POS", body: "Central pricing and stock across 100+ stores, even offline." },
-      { title: "Primary & secondary sales", body: "Track what distributors buy — and what they actually sell." },
+      { title: "Primary & secondary sales", body: "Track what distributors buy, and what they actually sell." },
       { title: "Schemes & trade promotions", body: "Slab offers and claims, settled automatically." },
       { title: "Expiry & batch control", body: "FEFO picking and near-expiry alerts per outlet." },
     ],
@@ -736,10 +738,10 @@ export const industries: Industry[] = [
     short: "Style costing, line planning, piece-rate payroll",
     layout: "a",
     title: "From yarn to shipment, on one brain.",
-    sub: "Style costing, line planning, buyer compliance and payroll for 5,000-worker floors — connected.",
+    sub: "Style costing, line planning, buyer compliance and payroll for 5,000-worker floors, connected.",
     painTitle: "Built for the realities of a garments floor.",
     pains: [
-      { title: "Buyer-wise style costing", body: "Fabric, trims, CM and overhead per style — margin visible before you quote." },
+      { title: "Buyer-wise style costing", body: "Fabric, trims, CM and overhead per style, margin visible before you quote." },
       { title: "Line planning & efficiency", body: "Hourly output, SMV and WIP per line, straight from the floor tablets." },
       { title: "Piece-rate & overtime payroll", body: "Labour-law compliant wages for thousands of workers, paid by mobile banking." },
       { title: "Back-to-back LC & export docs", body: "Track BTB LCs, UD, EXP and shipment against every order." },
@@ -808,7 +810,7 @@ export const getProduct = (slug: string) => products.find((p) => p.slug === slug
 export const getIndustry = (slug: string) => industries.find((i) => i.slug === slug);
 
 export const testimonial = {
-  quote: "We replaced six tools and four Excel files. Month-end close went from five days to one afternoon — and I can finally ask the system instead of my team.",
+  quote: "We replaced six tools and four Excel files. Month-end close went from five days to one afternoon, and I can finally ask the system instead of my team.",
   name: "Farhana Rahman",
   role: "CFO, Northloom Textiles · 2,400 employees",
 };
@@ -921,7 +923,7 @@ export const stories: Story[] = [
     industry: "Sweets & Food",
     badge: "35 features live · 14 in progress",
     title: "How Akboria runs a brand from 1911 on one brain.",
-    summary: "Field SR demand, showroom POS, central store, production, procurement and management reporting — connected end to end.",
+    summary: "Field SR demand, showroom POS, central store, production, procurement and management reporting, connected end to end.",
     image: "/customers/akboria/range.jpg",
     logo: "/customers/akboria/logo.png",
     page: true,
@@ -932,7 +934,7 @@ export const stories: Story[] = [
     industry: "Garments & Textile",
     badge: "Fully delivered",
     title: "Urmi Group runs its garments business on Business Brain 24.",
-    summary: "One of Bangladesh’s leading apparel groups — delivered end to end and live across the business.",
+    summary: "One of Bangladesh’s leading apparel groups, delivered end to end and live across the business.",
     image: "/customers/urmi/factory.jpg",
     logo: "/customers/urmi/logo.png",
   },
@@ -961,7 +963,7 @@ export const akboriaDelivered: DeliveryGroup[] = [
       "Credit exception approval",
       "SR shop visit tracking with GPS",
       "Daily beat and route planning",
-      "ASM–SR instruction messaging",
+      "ASM to SR instruction messaging",
       "Sales targets and achievement tracking",
       "Sales policy engine",
       "Trade offers and product flags",

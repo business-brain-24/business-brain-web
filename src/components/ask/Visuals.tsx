@@ -251,7 +251,7 @@ export function ChartCard({ chart }: { chart: Chart }) {
           table={{
             title: chart.title,
             columns: [chart.kind === "pie" ? "Item" : "", ...(chart.kind === "pie" ? ["Value"] : chart.series)],
-            rows: chart.data.map((d) => [String(d.label), ...chart.series.map((s) => (d[s] === undefined ? "—" : fmt(chart.unit, Number(d[s]))))]),
+            rows: chart.data.map((d) => [String(d.label), ...chart.series.map((s) => (d[s] === undefined ? "n/a" : fmt(chart.unit, Number(d[s]))))]),
           }}
           bare
         />

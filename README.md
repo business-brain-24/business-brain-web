@@ -23,13 +23,13 @@ Open http://localhost:3000.
 ## What's in the site
 
 **Marketing pages** (`src/app/`)
-- `/` — home page
-- `/products`, `/products/[slug]` — the ERP modules
-- `/industries`, `/industries/[slug]` — industry solutions
-- `/pricing` — custom quote request (see below)
+- `/`: home page
+- `/products`, `/products/[slug]`: the ERP modules
+- `/industries`, `/industries/[slug]`: industry solutions
+- `/pricing`: custom quote request (see below)
 - `/customers`, `/about`, `/partners`, `/resources`, `/careers`, `/contact`, `/demo`
 
-**Ask Brain AI** (`/ask`) — a full-screen chat demo that answers questions about the business with charts and tables. Other pages can open it with a question: `/ask?q=…`.
+**Ask Brain AI** (`/ask`): a full-screen chat demo that answers questions about the business with charts and tables. Other pages can open it with a question: `/ask?q=…`.
 
 ### Pricing
 
@@ -45,8 +45,8 @@ A sample logged-in ERP that lets prospects try the product.
 
 After login the site nav shows **My apps** and an avatar menu. The workspace runs full-screen, like the chat, with its own app bar.
 
-- **`/dashboard`** — app launcher: a greeting, an Ask Brain AI box, today's key numbers, category tabs, search, and pinned apps.
-- **`/dashboard/[app]`** — 36 apps in four groups (General, HRMS, Operational, Other). Each opens on its own **Overview** dashboard. A second tab holds the app's working view:
+- **`/dashboard`**: app launcher: a greeting, an Ask Brain AI box, today's key numbers, category tabs, search, and pinned apps.
+- **`/dashboard/[app]`**: 36 apps in four groups (General, HRMS, Operational, Other). Each opens on its own **Overview** dashboard. A second tab holds the app's working view:
 
 | Working view | Apps |
 | --- | --- |

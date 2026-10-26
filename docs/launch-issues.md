@@ -1,4 +1,4 @@
-# Launch readiness — issue tracker
+# Launch readiness: issue tracker
 
 Status of every instruction in the launch issues ([#15](https://github.com/business-brain-24/business-brain-web/issues/15)).
 Branch: `launch-readiness`. Update this file as items close.
@@ -55,7 +55,7 @@ Legend: ✅ done in code · 🔶 done, needs a check after deploy · ⏳ waiting
 | `favicon.ico`, `apple-icon.png`, `manifest.ts` (+ `/apple-touch-icon.png`) | ✅ | `src/app/`, `public/`; regenerate with `npm run icons` |
 | `noindex` on `/login` and `/dashboard` | ✅ | `login/layout.tsx`, `dashboard/layout.tsx` (+ `X-Robots-Tag`) |
 | Delete unused create-next-app SVGs | ✅ | Removed from `public/` |
-| Descriptions 140–160 characters | ✅ | `fitDescription()` in `src/lib/site.ts`; `npm run build` fails via `scripts/check-meta.mjs` (postbuild) if any page is out of range |
+| Descriptions 140 to 160 characters | ✅ | `fitDescription()` in `src/lib/site.ts`; `npm run build` fails via `scripts/check-meta.mjs` (postbuild) if any page is out of range |
 | `/dashboard/[app]` has its own title and description | ✅ | `generateMetadata` in `dashboard/[app]/page.tsx` |
 | Description copy approved by marketing | ⏳ Marketing | Current descriptions are factual, built from page copy |
 | Check previews in Facebook, LinkedIn, WhatsApp | 🔶 | After deploy |

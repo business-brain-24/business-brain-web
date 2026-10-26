@@ -16,7 +16,7 @@ const description =
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Business Brain 24 — Do More. Spend Less.",
+    default: "Business Brain 24: Do More. Spend Less.",
     template: "%s · Business Brain 24",
   },
   description,

@@ -1,4 +1,4 @@
-# Business Brain (BB-24) — Persistent Codebase Memory
+# Business Brain (BB-24): Persistent Codebase Memory
 
 > **Last Updated**: 2026-10-17
 > **Status**: Active & Evergreen

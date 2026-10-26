@@ -1,4 +1,4 @@
-// After `npm run build`: every page in out/ must have a description of 140–160 characters (#7).
+// After `npm run build`: every page in out/ must have a description of 140 to 160 characters (#7).
 // Usage: node scripts/check-meta.mjs
 import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
@@ -18,7 +18,7 @@ async function walk(dir) {
 }
 await walk("out");
 if (bad.length) {
-  console.error(`Descriptions outside 140–160 characters:\n${bad.join("\n")}`);
+  console.error(`Descriptions outside 140 to 160 characters:\n${bad.join("\n")}`);
   process.exit(1);
 }
-console.log("check-meta: every description is 140–160 characters");
+console.log("check-meta: every description is 140 to 160 characters");

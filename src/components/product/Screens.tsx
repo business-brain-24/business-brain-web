@@ -24,7 +24,7 @@ const sidebars: Record<string, string[]> = {
 const titles: Record<string, string> = {
   accounting: "September 2026 · All branches",
   procurement: "Open requisitions · This week",
-  budget: "FY 2026–27 · Cost centres",
+  budget: "FY 2026/27 · Cost centres",
   inventory: "Stock on hand · 6 warehouses",
   sales: "Orders · October 2026",
   pos: "Today · 42 outlets live",
@@ -207,7 +207,7 @@ function ApprovalFlow() {
     ["Quotes", "3 vendors", "✓ Compared", "done"],
     ["Approval", "Waiting on CFO", "2 h left in SLA", "active"],
     ["Purchase order", "PO-4412", "Draft", "todo"],
-    ["Goods received", "—", "Not yet", "todo"],
+    ["Goods received", "None", "Not yet", "todo"],
   ];
   return (
     <div className="space-y-4">
@@ -560,7 +560,7 @@ function AssetCards() {
 function Gantt() {
   const rows: [string, number, number, string][] = [
     ["Foundation", 2, 24, "bg-ink"],
-    ["Structure, floors 1–12", 22, 36, "bg-ink"],
+    ["Structure, floors 1 to 12", 22, 36, "bg-ink"],
     ["Steel delivery", 52, 18, "split"],
     ["MEP works", 58, 28, "bg-line"],
     ["Finishing", 74, 24, "bg-line"],
@@ -606,7 +606,7 @@ function Gantt() {
       </div>
       <div className="flex items-center gap-3 border-t border-line bg-ink px-4 py-3 text-white">
         <span className="text-[12px] text-orange">Brain</span>
-        <span>Start finishing on floors 1–6 before steel arrives to win back 7 days.</span>
+        <span>Start finishing on floors 1 to 6 before steel arrives to win back 7 days.</span>
       </div>
     </div>
   );

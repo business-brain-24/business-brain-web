@@ -1,5 +1,5 @@
 /**
- * POST /api/lead — every form on the site posts here (Cloudflare Pages Function, next to the static export).
+ * POST /api/lead: every form on the site posts here (Cloudflare Pages Function, next to the static export).
  *
  * Bindings and secrets (Pages project > Settings, encrypted, never NEXT_PUBLIC_*):
  *   LEADS               KV namespace. Every lead is stored here first, so a delivery failure never loses it. Also used for rate limits.

@@ -64,7 +64,7 @@ export default function Calendar({ week, events, side }: Props) {
                         style={{ top: top + 1, height, left: overlap ? `${idx * 50 + 2}%` : 3, right: overlap ? `${(1 - idx) * 50 + 2}%` : 3, animationDelay: `${0.1 + i * 0.04}s` }}
                       >
                         <p className="truncate font-semibold">{e.title}</p>
-                        {height > 34 && <p className="truncate opacity-75">{e.start}–{e.end}{e.where ? ` · ${e.where}` : ""}</p>}
+                        {height > 34 && <p className="truncate opacity-75">{e.start} to {e.end}{e.where ? ` · ${e.where}` : ""}</p>}
                       </div>
                     );
                   })}

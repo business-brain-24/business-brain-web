@@ -449,7 +449,7 @@ function BrainMessage({
             {r.bullets && (
               <ul className="space-y-1.5">
                 {r.bullets.map((b) => {
-                  const [head, ...rest] = b.split(" — ");
+                  const [head, ...rest] = b.split(": ");
                   return (
                     <li key={b} className="flex gap-2.5">
                       <span className="mt-[11px] h-1 w-1 shrink-0 rounded-full bg-ink" />
@@ -457,7 +457,7 @@ function BrainMessage({
                         {rest.length ? (
                           <>
                             <span className="font-medium">{head}</span>
-                            <span className="text-muted"> — {rest.join(" — ")}</span>
+                            <span className="text-muted">: {rest.join(": ")}</span>
                           </>
                         ) : (
                           b

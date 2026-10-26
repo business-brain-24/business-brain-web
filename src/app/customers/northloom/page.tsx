@@ -31,14 +31,14 @@ export default function Story() {
           <div className="dot-grid absolute inset-0 opacity-10 invert" />
           <div className="absolute -right-24 -top-24 h-[480px] w-[480px] rounded-full bg-[radial-gradient(circle,rgba(255,107,44,0.35),transparent_65%)]" />
           <p className="relative max-w-[700px] text-[22px] font-medium leading-[32px] tracking-[-0.02em] sm:text-[32px] sm:leading-[42px]">
-            “I used to wait three days for a P&L. Now I just ask Brain — and it answers with the numbers and the reason.”
+            “I used to wait three days for a P&L. Now I just ask Brain, and it answers with the numbers and the reason.”
           </p>
         </Reveal>
       </section>
       <section className="container-x grid gap-12 py-20 lg:grid-cols-[2fr_1fr]">
         <div className="space-y-12">
           {[
-            ["The challenge", "Four factories ran on six tools — Tally for accounts, Excel for payroll, a separate attendance system and paper-based store registers. Month-end took five days, and the CFO never fully trusted the numbers."],
+            ["The challenge", "Four factories ran on six tools: Tally for accounts, Excel for payroll, a separate attendance system and paper-based store registers. Month-end took five days, and the CFO never fully trusted the numbers."],
             ["The solution", "Business Brain 24 went live in six weeks: HRMS and Payroll first, then Inventory, Procurement and Accounting. Every product writes to one ledger, so the books close themselves as the factory runs."],
           ].map(([t, b]) => (
             <Reveal key={t}>

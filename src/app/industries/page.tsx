@@ -15,7 +15,7 @@ export const metadata: Metadata = pageMeta(
 export default function IndustriesIndex() {
   return (
     <>
-      <PageHero label="Industries" title="Configured for how your industry works." sub="Recommended products, workflows and reports for eight industries — ready from day one." />
+      <PageHero label="Industries" title="Configured for how your industry works." sub="Recommended products, workflows and reports for eight industries, ready from day one." />
       <Stagger className="container-x mt-14 grid gap-3 sm:grid-cols-2">
         {industries.map((i) => (
           <StaggerItem key={i.slug}>

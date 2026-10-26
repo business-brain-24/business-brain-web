@@ -64,9 +64,9 @@ export function Booking({ session }: { session?: string | null }) {
               <a href={contact.phoneHref} className="font-medium text-ink hover:text-orange">
                 {contact.phone}
               </a>{" "}
-              or visit{" "}
-              <a href={contact.siteHref} className="font-medium text-ink hover:text-orange">
-                {contact.site}
+              or{" "}
+              <a href={contact.phone2Href} className="font-medium text-ink hover:text-orange">
+                {contact.phone2}
               </a>
               .
             </p>
@@ -84,7 +84,7 @@ export function Booking({ session }: { session?: string | null }) {
             { name: "name", label: "Full name", placeholder: "Your name" },
             { name: "email", label: "Work email", type: "email", placeholder: "name@company.com" },
             { name: "company", label: "Company", placeholder: "Company name" },
-            { name: "size", label: "Company size", options: ["1–50", "51–200", "201–1,000", "1,000+"] },
+            { name: "size", label: "Company size", options: ["1 to 50", "51 to 200", "201 to 1,000", "1,000+"] },
             { name: "industry", label: "Industry", options: industries.map((i) => i.name), full: true },
             { name: "notes", label: "What would you like to see?", area: true, placeholder: "Payroll on Bangladesh rules, field sales on Watch Tower…" },
           ]}
