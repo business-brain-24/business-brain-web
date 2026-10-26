@@ -5,7 +5,7 @@ import { AskSection, Connected, FAQ, Features, ProductHero, Related, ScreenSecti
 import CTA from "@/components/ui/CTA";
 import JsonLd, { breadcrumbLd, faqLd, softwareLd } from "@/components/seo/JsonLd";
 import ViewEvent from "@/components/analytics/ViewEvent";
-import { pageMeta } from "@/lib/site";
+import { descriptionTails, fitDescription, pageMeta } from "@/lib/site";
 
 export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
@@ -14,7 +14,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const p = getProduct(slug);
-  return p ? pageMeta(`/products/${p.slug}`, p.name, `${p.name}: ${p.sub}`, null) : {};
+  return p ? pageMeta(`/products/${p.slug}`, p.name, fitDescription([`${p.name}: ${p.sub}`, p.sub], descriptionTails), null) : {};
 }
 
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {

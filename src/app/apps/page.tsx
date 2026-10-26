@@ -9,7 +9,7 @@ import CTA from "@/components/ui/CTA";
 export const metadata: Metadata = pageMeta(
   "/apps",
   "All apps",
-  "The full Business Brain 24 app catalogue: every operational, finance, people and growth app in one AI-centric ERP, grouped by what it does.",
+  "The full Business Brain 24 app catalogue: every operational, finance, people and growth app in one AI-centric ERP, grouped by what each one does.",
 );
 
 export default function Apps() {

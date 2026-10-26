@@ -269,7 +269,7 @@ function Stage() {
           style={{ x: brainX, y: brainY, rotate: brainR }}
         >
           <motion.div className="h-full w-full" animate={{ y: [0, -8, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}>
-            <LazyScene fallback={<LogoHub className="h-full w-full p-16" />}>
+            <LazyScene fallback={<img src="/logo.svg" alt="" width={300} height={300} className="h-full w-full object-contain p-16" />}>
               <LogoNeuron />
             </LazyScene>
           </motion.div>
@@ -363,7 +363,7 @@ function MobileStage() {
       <div className="relative h-[300px] w-[300px]">
         <div className="absolute inset-[-30px] rounded-full bg-[radial-gradient(circle,rgba(255,107,44,0.18)_0%,rgba(255,107,44,0)_65%)]" />
         <motion.div className="relative h-full w-full" animate={{ y: [0, -6, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}>
-          <LazyScene fallback={<LogoHub className="h-full w-full p-10" />}>
+          <LazyScene fallback={<img src="/logo.svg" alt="" width={300} height={300} className="h-full w-full object-contain p-10" />}>
             <LogoNeuron />
           </LazyScene>
         </motion.div>

@@ -5,7 +5,7 @@ import { Bundle, IndustryHero, Pains, Testimonial } from "@/components/industry/
 import CTA from "@/components/ui/CTA";
 import JsonLd, { breadcrumbLd } from "@/components/seo/JsonLd";
 import ViewEvent from "@/components/analytics/ViewEvent";
-import { pageMeta } from "@/lib/site";
+import { descriptionTails, fitDescription, pageMeta } from "@/lib/site";
 
 export function generateStaticParams() {
   return industries.map((i) => ({ slug: i.slug }));
@@ -14,7 +14,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const ind = getIndustry(slug);
-  return ind ? pageMeta(`/industries/${ind.slug}`, `ERP for ${ind.name}`, `Business Brain 24 for ${ind.name}: ${ind.sub}`, null) : {};
+  return ind ? pageMeta(`/industries/${ind.slug}`, `ERP for ${ind.name}`, fitDescription([`ERP for ${ind.name}: ${ind.sub}`, ind.sub], descriptionTails), null) : {};
 }
 
 export default async function IndustryPage({ params }: { params: Promise<{ slug: string }> }) {

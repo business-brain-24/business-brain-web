@@ -55,7 +55,9 @@ Legend: ✅ done in code · 🔶 done, needs a check after deploy · ⏳ waiting
 | `favicon.ico`, `apple-icon.png`, `manifest.ts` (+ `/apple-touch-icon.png`) | ✅ | `src/app/`, `public/`; regenerate with `npm run icons` |
 | `noindex` on `/login` and `/dashboard` | ✅ | `login/layout.tsx`, `dashboard/layout.tsx` (+ `X-Robots-Tag`) |
 | Delete unused create-next-app SVGs | ✅ | Removed from `public/` |
-| Description copy approved by marketing | ⏳ Marketing | Current descriptions are factual placeholders from page copy |
+| Descriptions 140–160 characters | ✅ | `fitDescription()` in `src/lib/site.ts`; `npm run build` fails via `scripts/check-meta.mjs` (postbuild) if any page is out of range |
+| `/dashboard/[app]` has its own title and description | ✅ | `generateMetadata` in `dashboard/[app]/page.tsx` |
+| Description copy approved by marketing | ⏳ Marketing | Current descriptions are factual, built from page copy |
 | Check previews in Facebook, LinkedIn, WhatsApp | 🔶 | After deploy |
 
 ## #8 One canonical host, security and cache headers
@@ -99,7 +101,7 @@ Legend: ✅ done in code · 🔶 done, needs a check after deploy · ⏳ waiting
 | Banner: Accept / Reject / Manage, Reject equally easy, 3 categories | ✅ | `src/components/analytics/Consent.tsx` |
 | 6-month first-party cookie, reopenable | ✅ | `bb24_consent` cookie |
 | Consent Mode v2 defaults denied before GTM, `consent_update` event | ✅ | Inline head script in `layout.tsx` |
-| Compact bottom bar on mobile, small client component | ✅ | Checked at 360 px |
+| Compact bottom bar on mobile, under about 5 kB | ✅ | Checked at 360 px; `Consent.tsx` is 4.6 kB minified, 2.0 kB gzipped |
 | Privacy link under every form submit | ✅ | `PrivacyNote` |
 | Legal text, company legal name and address | ⏳ Management | Add to `sections` in each page; page says "being finalised" until then |
 | Verify no Meta/LinkedIn/Ads requests before consent | 🔶 | Needs the GTM container (#9) |
@@ -138,7 +140,7 @@ Legend: ✅ done in code · 🔶 done, needs a check after deploy · ⏳ waiting
 | --- | --- | --- |
 | Baseline PageSpeed (mobile) on `/`, `/products/accounting`, `/pricing`, `/demo` | ➖ | Needs the deployed preview URL; post numbers in the issue |
 | 3D: dynamic + `ssr: false`, mount in view, pause off-screen | ✅ | `src/components/three/LazyScene.tsx`, `frameloop` in both canvases |
-| Static fallback on small screens, ≤4 cores, reduced motion | ✅ | Hero shows the SVG mark; the map shows a "Load the live map" button |
+| Static image instead on small screens, ≤4 cores, reduced motion | ✅ | Hero: static `/logo.svg`; map: `public/home/bangladesh-map.webp` drawn from the same division data (`npm run map`) |
 | Images to WebP with responsive `srcset` | ✅ | `scripts/optimize-images.mjs` (prebuild) + `src/lib/image-loader.ts` (factory.jpg 484 kB → 33 kB on phones) |
 | gsap vs framer-motion | ✅ kept | gsap drives ScrollTrigger in 4 sections and syncs Lenis; replacing it would change the design |
 | Preload LCP element / fonts | ➖ | Decide after the baseline shows what the LCP element is |
@@ -152,7 +154,7 @@ Legend: ✅ done in code · 🔶 done, needs a check after deploy · ⏳ waiting
 | 2. 16 px inputs on mobile (Form, pricing, newsletter, search, login, /ask) | ✅ | `input()` in `Form.tsx` and each field |
 | 3. Tap targets ≥ 44 px (footer, story links, CTA phone/site, map controls) | ✅ | `min-h-11` |
 | 4. No text under 12 px | ✅ | Raised across home, product, catalogue, 3D labels, ask |
-| 5. "What it does" sticky column overflow | ✅ | `min-w-0` on both sticky columns in `home/Sections.tsx` |
+| 5. "What it does" sticky column overflow | ✅ | `grid-cols-1` on the mobile grids in `home/Sections.tsx` (also fixed the clipped "Ask in plain words" heading found while checking) |
 | 6. Records table on phones | ✅ | Sticky first column + edge fade, `layouts/Records.tsx` |
 | Not-yet-checked list (nav drawer, 3D touch drag, Lenis on iOS, landscape/tablet, Kanban/Calendar/Chat at 360 px) | ➖ | Needs real iPhone + mid-range Android |
 | Lighthouse mobile Accessibility ≥ 95 | 🔶 | After deploy |

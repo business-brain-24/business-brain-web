@@ -18,13 +18,11 @@ function canRender3D() {
 
 /**
  * Mounts a 3D scene only once it is near the viewport, and pauses it when it scrolls away.
- * `fallback` renders until then, and permanently on devices that should not run WebGL.
- * With `tapToLoad`, the fallback is shown on those devices with a button to load the scene anyway.
+ * `fallback` (a static image) renders until then, and permanently on devices that should not run WebGL.
  */
-export default function LazyScene({ children, fallback, className, tapToLoad }: { children: React.ReactNode; fallback: React.ReactNode; className?: string; tapToLoad?: string }) {
+export default function LazyScene({ children, fallback, className }: { children: React.ReactNode; fallback: React.ReactNode; className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const [capable, setCapable] = useState<boolean | null>(null);
-  const [forced, setForced] = useState(false);
   const [seen, setSeen] = useState(false);
   const [visible, setVisible] = useState(false);
 
@@ -41,20 +39,13 @@ export default function LazyScene({ children, fallback, className, tapToLoad }: 
     return () => io.disconnect();
   }, []);
 
-  const show = seen && (capable || forced);
+  const show = seen && capable;
   return (
     <div ref={ref} className={className ?? "h-full w-full"}>
       {show ? (
         <Active.Provider value={visible}>{children}</Active.Provider>
       ) : (
-        <div className="relative h-full w-full">
-          {fallback}
-          {tapToLoad && capable === false && (
-            <button type="button" onClick={() => setForced(true)} className="absolute bottom-4 left-1/2 min-h-11 -translate-x-1/2 rounded-full bg-white px-5 text-[14px] font-medium text-ink shadow">
-              {tapToLoad}
-            </button>
-          )}
-        </div>
+        fallback
       )}
     </div>
   );

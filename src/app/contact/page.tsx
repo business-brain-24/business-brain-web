@@ -9,7 +9,7 @@ import { pageMeta, SITE_EMAIL } from "@/lib/site";
 export const metadata: Metadata = pageMeta(
   "/contact",
   "Contact",
-  "Talk to the Business Brain 24 team about sales, support or partnerships. Call, email or send a message and we reply within one working day.",
+  "Talk to the Business Brain 24 team about sales, support or partnerships. Call, email or send us a message and we will reply within one working day.",
 );
 
 export default function Contact() {

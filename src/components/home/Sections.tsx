@@ -345,7 +345,7 @@ export function BrainAI() {
     <section className="px-2 sm:px-3">
       <div className="relative overflow-hidden rounded-[20px] bg-ink py-20 text-white sm:rounded-[28px] sm:py-28">
         <div className="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-[radial-gradient(circle,rgba(255,107,44,0.25),transparent_65%)]" />
-        <div className="container-x relative grid items-center gap-14 lg:grid-cols-2">
+        <div className="container-x relative grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
           <div>
             <Label>Ask your business</Label>
             <h2 className="h-section mt-3">Ask in plain words. Get numbers and charts back.</h2>
@@ -403,7 +403,7 @@ export function BrainAI() {
 /* ---------- Industries list with hover reveal ---------- */
 export function Industries() {
   return (
-    <section className="container-x grid gap-12 py-24 sm:py-32 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
+    <section className="container-x grid grid-cols-1 gap-12 py-24 sm:py-32 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
       <div className="min-w-0 lg:sticky lg:top-32 lg:self-start">
         <Label>Industries</Label>
         <h2 className="h-section mt-3">Configured for how your industry works.</h2>
@@ -555,7 +555,7 @@ export function WatchTower() {
         <div className="relative aspect-[4/5] overflow-hidden rounded-[16px] bg-[radial-gradient(ellipse_at_50%_40%,#1D2129_0%,#111318_75%)] sm:aspect-[16/12] lg:aspect-auto lg:min-h-[560px]">
           <div className="absolute inset-0 opacity-30 [background-image:radial-gradient(rgba(255,255,255,0.14)_1px,transparent_1px)] [background-size:18px_18px]" />
           <div className="absolute inset-0">
-            <LazyScene tapToLoad="Load the live map" fallback={<div className="flex h-full items-center justify-center p-8 text-center text-[13px] text-white/50">Live map of regions, reps and orders</div>}>
+            <LazyScene fallback={<img src="/home/bangladesh-map.webp" alt="Map of Bangladesh divisions" width={800} height={1000} loading="lazy" className="h-full w-full object-contain" />}>
               <BangladeshMap stats={regions} selected={selected} onSelect={setSelected} order={order} />
             </LazyScene>
           </div>
