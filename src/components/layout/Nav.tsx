@@ -4,10 +4,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown, ChevronRight, LayoutGrid, Menu, X, ArrowUp } from "lucide-react";
+import {
+  ArrowRight, ArrowUp, Banknote, Boxes, Building2, Calculator, CalendarClock, ChevronDown, ChevronRight, Factory, FolderKanban, Handshake,
+  HardHat, LayoutGrid, Menu, Network, PiggyBank, Pill, ShieldCheck, Shirt, ShoppingCart, Sparkles, Store, Truck, Users, Wheat, X, type LucideIcon,
+} from "lucide-react";
 import clsx from "clsx";
-import { groups, industries, products } from "@/lib/data";
-import { Button } from "@/components/ui/Button";
+import { industries, products, stories } from "@/lib/data";
 import { getLenis } from "@/components/motion/SmoothScroll";
 import UserMenu from "@/components/layout/UserMenu";
 import { useUser } from "@/lib/session";
@@ -95,13 +97,15 @@ export default function Nav() {
       <header className="fixed inset-x-0 top-0 z-50 px-2 pt-2 sm:px-3 sm:pt-3" onMouseLeave={leave}>
         <div
           className={clsx(
-            "mx-auto flex max-w-[1400px] items-center justify-between rounded-[14px] border px-3 transition-all duration-300 sm:px-5",
-            scrolled || open ? "h-[60px] border-line bg-white/85 backdrop-blur-xl" : "h-[66px] border-transparent bg-transparent",
+            "mx-auto flex max-w-[1400px] items-center justify-between rounded-[18px] border border-white/80 px-3 backdrop-blur-xl transition-all duration-300 sm:px-4",
+            scrolled || open
+              ? "h-[60px] bg-white/85 shadow-[0_10px_30px_-14px_rgba(11,13,18,0.22)]"
+              : "h-[64px] bg-white/55 shadow-[0_8px_24px_-16px_rgba(11,13,18,0.18)]",
           )}
         >
           <Logo />
 
-          <nav className="hidden items-center gap-1 text-[14px] text-muted lg:flex" aria-label="Main">
+          <nav className="hidden items-center gap-0.5 text-[14px] text-ink/70 lg:flex" aria-label="Main">
             {(["products", "industries"] as const).map((k) => (
               <button
                 key={k}
@@ -109,8 +113,8 @@ export default function Nav() {
                 onClick={() => setOpen(open === k ? null : k)}
                 aria-expanded={open === k}
                 className={clsx(
-                  "flex items-center gap-1 rounded-lg px-3 py-2 capitalize transition-colors hover:text-ink",
-                  open === k && "bg-surface text-ink",
+                  "flex items-center gap-1 rounded-full px-3.5 py-2 capitalize transition-colors hover:bg-ink/5 hover:text-ink",
+                  open === k && "bg-ink/5 text-ink",
                 )}
               >
                 {k}
@@ -122,7 +126,7 @@ export default function Nav() {
                 key={l.href}
                 href={l.href}
                 onMouseEnter={() => enter(null)}
-                className={clsx("rounded-lg px-3 py-2 transition-colors hover:text-ink", pathname.startsWith(l.href) && "text-ink")}
+                className={clsx("rounded-full px-3.5 py-2 transition-colors hover:bg-ink/5 hover:text-ink", pathname.startsWith(l.href) && "text-ink")}
               >
                 {l.label}
               </Link>
@@ -142,11 +146,7 @@ export default function Nav() {
                 Log in
               </Link>
             )}
-            <span className="hidden sm:inline-flex">
-              <Button href="/demo" size="sm">
-                Book a fit session
-              </Button>
-            </span>
+            <TalkButton className="hidden sm:inline-flex" />
             <button
               className="flex h-11 w-11 items-center justify-center rounded-lg lg:hidden"
               onClick={() => setMobile(true)}
@@ -166,7 +166,7 @@ export default function Nav() {
               exit={{ opacity: 0, y: -6, transition: { duration: 0.15 } }}
               transition={{ duration: 0.35, ease }}
               onMouseEnter={() => enter(open)}
-              className="mx-auto mt-2 hidden w-fit rounded-[14px] border border-line bg-white p-2 shadow-[var(--shadow-float)] lg:block"
+              className="mx-auto mt-2 hidden w-fit max-w-[calc(100vw-24px)] rounded-[22px] border border-white bg-white/90 p-3 shadow-[0_30px_80px_-30px_rgba(11,13,18,0.35)] backdrop-blur-2xl lg:block"
             >
               {open === "products" ? <ProductsMenu /> : <IndustriesMenu />}
             </motion.div>
@@ -180,52 +180,132 @@ export default function Nav() {
   );
 }
 
-/* Mega menus: names only, grouped, with one link to the full list. */
-const menuLink = "block rounded-[8px] px-2.5 py-1.5 text-[14px] text-ink transition-colors hover:bg-surface hover:text-orange";
-
-function MenuFooter({ href, children }: { href: string; children: React.ReactNode }) {
+/** The one call to action in the bar: books a session with the team behind the Brain. */
+function TalkButton({ className, large }: { className?: string; large?: boolean }) {
   return (
-    <div className="mt-1 flex justify-end border-t border-line px-2.5 pt-2.5">
-      <Link href={href} className="inline-flex items-center gap-1 text-[13px] font-medium text-ink hover:text-orange">
-        {children} <ChevronRight size={ICON.sm} />
+    <Link
+      href="/demo"
+      data-cta
+      className={clsx(
+        "group items-center gap-2 rounded-full bg-ink py-1 pl-1 font-medium text-white transition-colors hover:bg-[#1c1f28]",
+        large ? "h-12 pr-5 text-[15px]" : "h-10 pr-4 text-[14px]",
+        className,
+      )}
+    >
+      <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[linear-gradient(180deg,#FF6B2C,#C2410C)] transition-transform duration-300 group-hover:rotate-12">
+        <Sparkles size={ICON.sm} strokeWidth={2.2} />
+      </span>
+      Talk to the Brain
+    </Link>
+  );
+}
+
+const productIcons: Record<string, LucideIcon> = {
+  accounting: Calculator, budget: PiggyBank, assets: Building2, procurement: ShoppingCart, inventory: Boxes, sales: Truck, pos: Store,
+  manufacturing: Factory, quality: ShieldCheck, projects: FolderKanban, hrms: Users, payroll: Banknote, attendance: CalendarClock, crm: Handshake,
+};
+const industryIcons: Record<string, LucideIcon> = {
+  manufacturing: Factory, trading: Truck, retail: Store, pharma: Pill, agro: Wheat, garments: Shirt, construction: HardHat, group: Network,
+};
+
+/* Mega menus: icon, name and one line per item, grouped, with one featured card. */
+function MenuItem({ href, Icon, name, short }: { href: string; Icon: LucideIcon; name: string; short: string }) {
+  return (
+    <Link href={href} className="group flex gap-3 rounded-[12px] p-2.5 transition-colors hover:bg-orange-soft">
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-surface text-ink transition-colors group-hover:bg-orange group-hover:text-white">
+        <Icon size={ICON.md} strokeWidth={1.8} />
+      </span>
+      <span className="min-w-0">
+        <span className="block text-[14px] font-medium leading-[20px] text-ink">{name}</span>
+        <span className="line-clamp-2 block text-[12.5px] leading-[18px] text-muted">{short}</span>
+      </span>
+    </Link>
+  );
+}
+
+function GroupLabel({ children }: { children: React.ReactNode }) {
+  return <p className="px-2.5 pb-1 pt-1 text-[11px] font-medium uppercase tracking-[0.14em] text-subtle">{children}</p>;
+}
+
+function MenuFooter({ links }: { links: [string, string][] }) {
+  return (
+    <div className="mt-2 flex items-center justify-end gap-5 border-t border-line px-2.5 pt-3">
+      {links.map(([href, label]) => (
+        <Link key={href} href={href} className="inline-flex items-center gap-1 text-[13px] font-medium text-ink hover:text-orange">
+          {label} <ChevronRight size={ICON.sm} />
+        </Link>
+      ))}
+    </div>
+  );
+}
+
+// Four columns: Finance with Growth, Supply chain, Operations, People
+const productColumns: string[][] = [["Finance", "Growth"], ["Supply chain"], ["Operations"], ["People"]];
+
+function ProductsMenu() {
+  return (
+    <div className="flex gap-3">
+      <div>
+        <div className="grid grid-cols-4 gap-1">
+          {productColumns.map((col) => (
+            <div key={col.join()} className="w-[214px]">
+              {col.map((g) => (
+                <div key={g} className="mb-2">
+                  <GroupLabel>{g}</GroupLabel>
+                  {products
+                    .filter((p) => p.group === g)
+                    .map((p) => (
+                      <MenuItem key={p.slug} href={`/products/${p.slug}`} Icon={productIcons[p.slug] ?? LayoutGrid} name={p.name} short={p.short} />
+                    ))}
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+        <MenuFooter links={[["/apps", "All 55 apps"], ["/products", "See all products"]]} />
+      </div>
+      <Link href="/ask" className="group relative hidden w-[250px] shrink-0 flex-col justify-end overflow-hidden rounded-[16px] bg-ink p-5 text-white xl:flex">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/lp/orb.webp" alt="" className="absolute -right-10 -top-8 w-[240px] opacity-90 transition-transform duration-700 group-hover:scale-105" />
+        <span aria-hidden className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,13,18,0)_25%,rgba(11,13,18,0.85)_55%,#0b0d12_100%)]" />
+        <span className="relative text-[11px] font-medium uppercase tracking-[0.14em] text-white/60">Ask Brain AI</span>
+        <span className="relative mt-2 text-[18px] font-medium leading-[24px] tracking-[-0.01em]">Ask your ERP in Bangla or English.</span>
+        <span className="relative mt-1.5 text-[13px] leading-[19px] text-white/70">Answers and charts come straight from the ledger.</span>
+        <span className="relative mt-4 inline-flex items-center gap-1.5 text-[13px] font-medium text-[#FF8A57]">
+          Try Ask Brain <ArrowRight size={ICON.sm} />
+        </span>
       </Link>
     </div>
   );
 }
 
-function ProductsMenu() {
-  return (
-    <div>
-      <div className="flex gap-1">
-        {groups.map((g) => (
-          <div key={g} className="w-[168px]">
-            <p className="px-2.5 pb-1 pt-1.5 text-[12px] font-medium text-orange">{g}</p>
-            {products
-              .filter((p) => p.group === g)
-              .map((p) => (
-                <Link key={p.slug} href={`/products/${p.slug}`} className={menuLink}>
-                  {p.name}
-                </Link>
-              ))}
-          </div>
-        ))}
-      </div>
-      <MenuFooter href="/products">See all products</MenuFooter>
-    </div>
-  );
-}
-
 function IndustriesMenu() {
+  const story = stories[0];
   return (
-    <div className="w-[440px]">
-      <div className="grid grid-cols-2 gap-x-1">
-        {industries.map((i) => (
-          <Link key={i.slug} href={`/industries/${i.slug}`} className={menuLink}>
-            {i.name}
-          </Link>
-        ))}
+    <div className="flex gap-3">
+      <div>
+        <div className="grid w-[560px] grid-cols-2 gap-1">
+          {industries.map((i) => (
+            <MenuItem key={i.slug} href={`/industries/${i.slug}`} Icon={industryIcons[i.slug] ?? Building2} name={i.name} short={i.short} />
+          ))}
+        </div>
+        <MenuFooter links={[["/industries", "See all industries"]]} />
       </div>
-      <MenuFooter href="/industries">See all industries</MenuFooter>
+      {story && (
+        <Link href={`/customers/${story.slug}`} className="group hidden w-[250px] shrink-0 flex-col overflow-hidden rounded-[16px] border border-line bg-white xl:flex">
+          <span className="relative block h-[132px] overflow-hidden">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={story.image} alt="" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+          </span>
+          <span className="flex flex-1 flex-col p-4">
+            <span className="text-[11px] font-medium uppercase tracking-[0.14em] text-subtle">Customer story · {story.industry}</span>
+            <span className="mt-1.5 text-[15px] font-medium leading-[21px] text-ink">{story.title}</span>
+            <span className="mt-auto inline-flex items-center gap-1.5 pt-3 text-[13px] font-medium text-orange">
+              Read the story <ArrowRight size={ICON.sm} />
+            </span>
+          </span>
+        </Link>
+      )}
     </div>
   );
 }
@@ -273,15 +353,17 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
                   className="overflow-hidden"
                 >
                   <div className="grid grid-cols-1 gap-x-6 pb-5 sm:grid-cols-2">
-                    {(k === "products" ? products : industries).map((p) => (
-                      <Link
-                        key={p.slug}
-                        href={`/${k}/${p.slug}`}
-                        className="flex min-h-11 items-center py-2 text-[16px] text-ink"
-                      >
-                        {p.name}
-                      </Link>
-                    ))}
+                    {(k === "products" ? products : industries).map((p) => {
+                      const Icon = (k === "products" ? productIcons : industryIcons)[p.slug] ?? LayoutGrid;
+                      return (
+                        <Link key={p.slug} href={`/${k}/${p.slug}`} className="flex min-h-12 items-center gap-3 py-1.5 text-[16px] text-ink">
+                          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-surface">
+                            <Icon size={ICON.md} strokeWidth={1.8} />
+                          </span>
+                          {p.name}
+                        </Link>
+                      );
+                    })}
                   </div>
                 </motion.div>
               )}
@@ -302,15 +384,10 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
         ))}
       </motion.div>
       <div className="flex gap-2.5 border-t border-line p-4 pb-[max(16px,env(safe-area-inset-bottom))] sm:px-6">
-        <Link href="/contact" className="flex h-12 flex-1 items-center justify-center rounded-[12px] border border-line text-[15px]">
+        <Link href="/login" className="flex h-12 flex-1 items-center justify-center rounded-full border border-line text-[15px]">
           Log in
         </Link>
-        <Link href="/demo" className="flex h-12 flex-1 items-center justify-center gap-2 rounded-[12px] bg-ink text-[15px] font-medium text-white">
-          <span className="flex h-7 w-7 items-center justify-center rounded-[8px] bg-[linear-gradient(180deg,#FF6B2C_50%,#C2410C_100%)]">
-            <ChevronRight size={ICON.sm} strokeWidth={2.2} />
-          </span>
-          Book a fit session
-        </Link>
+        <TalkButton large className="flex flex-[1.4] justify-center" />
       </div>
     </motion.div>
   );
