@@ -40,15 +40,27 @@ export const tiers = [
   { id: "T3", label: "Confirm with a second step", tone: "orange" },
 ] as const;
 
-export const apps = [
-  { icon: "business-brain-24", name: "Business Brain 24", line: "The web workspace for the whole company." },
-  { icon: "bb24-field", name: "BB24 Field", line: "Sales reps and delivery, offline and in Bangla." },
-  { icon: "bb24-counter", name: "BB24 Counter", line: "Offline-first POS with batch QR and day close." },
-  { icon: "bb24-brain", name: "BB24 Brain", line: "Your agents and Ask Brain in one place." },
-  { icon: "bb24-saathi", name: "BB24 Saathi", line: "Dealers order, pay and track their wallet." },
-  { icon: "bb24-console", name: "BB24 Console", line: "Operations and approvals on your phone." },
-  { icon: "bb24-gateway", name: "BB24 Gateway", line: "API, events and MCP for any app or assistant." },
+export type AppCard = { icon: string; name: string; line: string; who: string; body: string };
+
+/** The app family (WEBSITE-CONTEXT.md section 4). `line` is the short form, `body` the card copy. */
+export const apps: AppCard[] = [
+  { icon: "business-brain-24", name: "Business Brain 24", line: "The web workspace for the whole company.", who: "Every desk in the company",
+    body: "Command centre, sales, make, buy, money and people on one connected core. Every team works from the same live figures." },
+  { icon: "bb24-brain", name: "BB24 Brain", line: "Your agents and Ask Brain in one place.", who: "Owners and managers",
+    body: "Your named agents and Ask Brain together. Ask in Bangla or English; any action comes back as a card for you to approve." },
+  { icon: "bb24-field", name: "BB24 Field", line: "Sales reps and delivery, offline and in Bangla.", who: "Sales reps and delivery",
+    body: "Orders, routes and collections in the field. Works offline and in Bangla." },
+  { icon: "bb24-counter", name: "BB24 Counter", line: "Offline-first POS with batch QR and day close.", who: "Shops and outlets",
+    body: "An offline-first counter with batch QR, day close and franchise settlement." },
+  { icon: "bb24-saathi", name: "BB24 Saathi", line: "Dealers order, pay and track their wallet.", who: "Dealers and distributors",
+    body: "Dealers place orders, pay and track their wallet without a phone call." },
+  { icon: "bb24-console", name: "BB24 Console", line: "Operations and approvals on your phone.", who: "Operations heads",
+    body: "Operations and approvals on your phone, with the decisions that need you at the top." },
+  { icon: "bb24-gateway", name: "BB24 Gateway", line: "API, events and MCP for any app or assistant.", who: "Developers and partners",
+    body: "One identity and scopes for every app, partner system or AI assistant." },
 ];
+
+export const appByIcon = (icon: string) => apps.find((a) => a.icon === icon)!;
 
 export const modules: { id: string; Icon: LucideIcon; name: string; body: string; screen: string }[] = [
   { id: "command", Icon: LayoutDashboard, name: "Command centre", body: "A morning brief written by agents overnight, KPIs with one-line causes, and the decisions waiting for you.", screen: "21-command-centre" },

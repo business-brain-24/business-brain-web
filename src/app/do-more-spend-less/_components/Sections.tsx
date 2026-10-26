@@ -4,7 +4,8 @@ import clsx from "clsx";
 import { ArrowRight, Check, ShoppingCart } from "lucide-react";
 import s from "../lp.module.css";
 import ModuleTabs from "./ModuleTabs";
-import { apps, editions, guardrails, industries, outcomes, rules, steps, tiers } from "./content";
+import AppsBento from "./AppsBento";
+import { editions, guardrails, industries, outcomes, rules, steps, tiers } from "./content";
 
 function Heading({ eyebrow, title, sub, center }: { eyebrow: string; title: React.ReactNode; sub?: string; center?: boolean }) {
   return (
@@ -101,15 +102,7 @@ export function Apps() {
   return (
     <section data-cta-location="apps" className={section}>
       <Heading center eyebrow="One brain, many apps" title="Every team gets its own app." sub="One connected core under all of them. Each app sees the same live figures." />
-      <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-7">
-        {apps.map((a) => (
-          <div key={a.name} className={clsx(s.glass, "flex flex-col items-center p-5 text-center")}>
-            <Image src={`/lp/apps/${a.icon}.webp`} alt="" width={72} height={72} className="rounded-[18px]" />
-            <p className="mt-4 text-[15px] font-semibold text-[#161928]">{a.name}</p>
-            <p className="mt-1.5 text-[13px] leading-[19px] text-[#5D6380]">{a.line}</p>
-          </div>
-        ))}
-      </div>
+      <AppsBento />
     </section>
   );
 }
