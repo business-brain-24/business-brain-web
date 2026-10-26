@@ -13,7 +13,7 @@ import { submitLead, thanksPath, type FormName } from "@/lib/lead";
 /** Digits with optional +, spaces, dashes or brackets; at least 7 digits. Same rule as functions/api/lead.ts. */
 const PHONE = /^\+?[\d\s()-]*\d(?:[\s()-]*\d){6,}[\s()-]*$/;
 
-type Field = { name: string; label: string; type?: string; placeholder?: string; options?: string[]; full?: boolean; area?: boolean; defaultValue?: string };
+type Field = { name: string; label: string; type?: string; placeholder?: string; options?: string[]; full?: boolean; area?: boolean; defaultValue?: string; onChange?: (value: string) => void };
 
 export default function Form({ name, fields, submit, done }: { name: FormName; fields: Field[]; submit: string; done: string }) {
   const router = useRouter();
@@ -68,7 +68,7 @@ export default function Form({ name, fields, submit, done }: { name: FormName; f
             <label key={f.name} className={clsx("flex flex-col gap-2", (f.full || f.area) && "sm:col-span-2")}>
               <span className="text-[13px] font-medium">{f.label}</span>
               {f.options ? (
-                <select name={f.name} defaultValue={f.defaultValue ?? ""} className={input(errors[f.name])}>
+                <select name={f.name} defaultValue={f.defaultValue ?? ""} onChange={f.onChange && ((e) => f.onChange?.(e.target.value))} className={input(errors[f.name])}>
                   <option value="" disabled>
                     Select…
                   </option>

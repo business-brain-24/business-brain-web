@@ -112,9 +112,9 @@ export default function Hero() {
               <span className="relative text-[12px] font-semibold uppercase tracking-[0.12em] text-orange">Business Brain 24 · Free audit</span>
               <span className="relative mt-2 text-[18px] font-medium leading-snug tracking-[-0.01em]">Put AI at the core of your business</span>
               <span className="relative mt-1.5 text-[13px] text-white/60">Free audit session on your ERP AI readiness</span>
-              <span className="relative mt-5 inline-flex items-center gap-2 text-[14px] font-medium">
-                <span className="flex h-8 w-8 items-center justify-center rounded-[9px] bg-[linear-gradient(180deg,#FF6B2C_50%,#C2410C_100%)] transition-transform group-hover:translate-x-0.5">
-                  <ChevronRight size={16} />
+              <span className="relative mt-4 inline-flex items-center gap-1.5 text-[13px] font-medium">
+                <span className="flex h-6 w-6 items-center justify-center rounded-[7px] bg-[linear-gradient(180deg,#FF6B2C_50%,#C2410C_100%)] transition-transform group-hover:translate-x-0.5">
+                  <ChevronRight size={13} />
                 </span>
                 Book my audit
               </span>
@@ -128,9 +128,9 @@ export default function Hero() {
               <span className="text-[12px] font-semibold uppercase tracking-[0.12em] text-orange-deep">Watch Tower · Free demo</span>
               <span className="mt-2 text-[18px] font-medium leading-snug tracking-[-0.01em]">See your business world</span>
               <span className="mt-1.5 text-[13px] text-muted">Book a free demo and watch your operation live</span>
-              <span className="mt-5 inline-flex items-center gap-2 text-[14px] font-medium">
-                <span className="flex h-8 w-8 items-center justify-center rounded-[9px] bg-orange-soft text-orange transition-transform group-hover:translate-x-0.5">
-                  <ArrowUpRight size={16} />
+              <span className="mt-4 inline-flex items-center gap-1.5 text-[13px] font-medium">
+                <span className="flex h-6 w-6 items-center justify-center rounded-[7px] bg-orange-soft text-orange transition-transform group-hover:translate-x-0.5">
+                  <ArrowUpRight size={13} />
                 </span>
                 Open the live demo
               </span>
