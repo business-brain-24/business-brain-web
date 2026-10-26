@@ -1,6 +1,8 @@
 // Overview dashboards for every workspace app. Each one is composed from widgets
 // that fit what that app actually tracks, using the same sample company as the rest of the demo.
 
+import { shapla } from "./shapla-seed";
+
 type Kpi = { label: string; value: string; delta?: string; note?: string; downIsGood?: boolean };
 type W = { w?: 3 | 4 | 5 | 6 | 7 | 8 | 12 };
 
@@ -127,19 +129,8 @@ export const overviews: Record<string, Widget[]> = {
     { w: 7, type: "stacked", title: "How people answered", sub: "Engagement 2026", keys: ["Agree", "Neutral", "Disagree"], rows: [{ label: "Proud to work here", values: [182, 44, 22] }, { label: "Fairly paid", values: [118, 76, 54] }, { label: "Clear goals", values: [164, 58, 26] }, { label: "Manager support", values: [171, 49, 28] }, { label: "Would recommend", values: [149, 61, 38] }] },
     { w: 12, type: "insight", text: "‘Fairly paid’ scores lowest at Gazipur night shift (31% agree vs 48% company-wide). Night allowance hasn't changed since 2023." },
   ],
-  employees: [
-    { type: "kpis", items: [{ label: "Employees", value: "412" }, { label: "Joined this month", value: "12" }, { label: "Average tenure", value: "3.4 yrs" }, { label: "Birthdays this week", value: "5" }] },
-    { w: 6, type: "bars", horizontal: true, title: "Employees by location", items: [{ label: "Gazipur plant", value: 214 }, { label: "Head office", value: 96 }, { label: "Tongi warehouse", value: 38 }, { label: "Chattogram depot", value: 28 }, { label: "Rangpur depot", value: 22 }, { label: "Sylhet depot", value: 14 }] },
-    { w: 6, type: "bars", title: "Tenure", items: [{ label: "<1 yr", value: 74 }, { label: "1 to 2", value: 98 }, { label: "3 to 5", value: 136 }, { label: "6 to 10", value: 78 }, { label: "10+", value: 26 }] },
-    { w: 12, type: "list", title: "This week", rows: [{ label: "Arif Khan joins as IT admin", sub: "Monday · Head office", value: "Joining" }, { label: "Kamal Hasan: 9 years", sub: "Work anniversary · Thursday", value: "🎉" }, { label: "Habib Rahman leaves", sub: "Friday · exit interview booked", value: "Leaving" }] },
-  ],
-  payroll: [
-    { type: "kpis", items: [{ label: "October gross", value: "৳ 2.06 Cr", delta: "+2.1%" }, { label: "Net pay", value: "৳ 1.84 Cr" }, { label: "Tax withheld", value: "৳ 9.6 L" }, { label: "Bank transfer ready", value: "406 of 406", note: "City Bank BEFTN" }] },
-    { w: 7, type: "line", title: "Payroll cost", sub: "৳ lakh per month", labels: MONTHS, series: [{ name: "Gross", data: [194, 196, 198, 201, 202, 206] }, { name: "Net", data: [173, 175, 177, 179, 181, 184] }] },
-    { w: 5, type: "donut", title: "Where the money goes", center: "৳ 2.06 Cr", centerLabel: "gross", slices: [{ label: "Basic", value: 128, display: "৳ 1.28 Cr" }, { label: "Allowances", value: 52, display: "৳ 52 L" }, { label: "Overtime", value: 14, display: "৳ 14 L" }, { label: "Bonus", value: 12, display: "৳ 12 L" }] },
-    { w: 6, type: "bars", horizontal: true, title: "Cost by department", items: [{ label: "Production", value: 82, display: "৳ 82 L" }, { label: "Sales", value: 51, display: "৳ 51 L" }, { label: "Head office", value: 44, display: "৳ 44 L" }, { label: "Warehouse", value: 29, display: "৳ 29 L" }] },
-    { w: 6, type: "timeline", title: "October run", items: [{ time: "Today", title: "Awaiting your approval", sub: "406 employees · ৳ 1.84 Cr" }, { time: "27 Oct", title: "Bank file to City Bank" }, { time: "30 Oct", title: "Salaries credited" }, { time: "15 Nov", title: "Tax deposit to NBR" }] },
-  ],
+  employees: shapla.employees.overview as Widget[],
+  payroll: shapla.payroll.overview as Widget[],
   attendance: [
     { type: "kpis", items: [{ label: "Present", value: "386", note: "of 412" }, { label: "Late", value: "17", delta: "-4", downIsGood: true }, { label: "Absent", value: "12" }, { label: "On leave", value: "14" }] },
     { w: 4, type: "donut", title: "Today", center: "94%", centerLabel: "present", slices: [{ label: "On time", value: 369 }, { label: "Late", value: 17 }, { label: "On leave", value: 14 }, { label: "Absent", value: 12 }] },
@@ -175,16 +166,10 @@ export const overviews: Record<string, Widget[]> = {
   demand: [
     { type: "kpis", items: [{ label: "November forecast", value: "৳ 4.8 Cr", delta: "+8%" }, { label: "Forecast accuracy", value: "91%", delta: "+2%" }, { label: "Items at stock-out risk", value: "6", downIsGood: true }, { label: "Season", value: "Winter", note: "snacks up, juice down" }] },
     { w: 8, type: "line", title: "Biscuits 200g: demand", sub: "Cartons per month, with forecast", labels: ["Jun", "Jul", "Aug", "Sep", "Oct", "Nov*", "Dec*"], series: [{ name: "Actual / forecast", data: [36000, 38500, 40200, 41000, 42000, 46500, 49000] }, { name: "Last year", data: [33000, 34800, 36100, 37500, 38900, 41200, 43800] }] },
-    { w: 4, type: "list", title: "Biggest changes next month", rows: [{ label: "Noodles 4-pack", value: "+11%" }, { label: "Biscuits 200g", value: "+11%" }, { label: "Chips 50g", value: "+4%" }, { label: "Juice 1L", value: "−7%" }] },
+    { w: 4, type: "list", title: "Biggest changes next month", rows: [{ label: "Noodles 4-pack", value: "+11%" }, { label: "Biscuits 200g", value: "+11%" }, { label: "Chips 50g", value: "+4%" }, { label: "Juice 1L", value: "Down 7%" }] },
     { w: 12, type: "insight", text: "Noodles 4-pack is already out of stock at Rangpur and demand rises 11% next month. Plan 2,000 cartons from Gazipur this week." },
   ],
-  sales: [
-    { type: "kpis", items: [{ label: "Sales today", value: "৳ 48.2 L", delta: "+6%", note: "vs same day last week" }, { label: "Month to date", value: "৳ 9.2 Cr" }, { label: "Target achieved", value: "87%" }, { label: "Returns", value: "1.2%", delta: "-0.3%", downIsGood: true }] },
-    { w: 8, type: "line", title: "Monthly sales", sub: "৳ crore", labels: MONTHS, series: [{ name: "2026", data: [8.1, 9.4, 8.8, 9.6, 10.2, 9.2] }, { name: "Target", data: [8.5, 9, 9, 9.5, 10, 10.5] }] },
-    { w: 4, type: "gauge", title: "October target", value: 87, caption: "৳ 9.2 Cr of ৳ 10.5 Cr · 6 days left" },
-    { w: 6, type: "progress", title: "Region vs target", goal: 100, warnBelow: 80, items: [{ label: "Dhaka", value: 92, right: "92%" }, { label: "Chattogram", value: 88, right: "88%" }, { label: "Sylhet", value: 81, right: "81%" }, { label: "Rangpur", value: 74, right: "74%" }] },
-    { w: 6, type: "bars", horizontal: true, title: "Top products", sub: "Month to date", items: [{ label: "Chips 50g", value: 210, display: "৳ 2.1 Cr" }, { label: "Biscuits 200g", value: 184, display: "৳ 1.84 Cr" }, { label: "Noodles 4-pack", value: 152, display: "৳ 1.52 Cr" }, { label: "Juice 1L", value: 96, display: "৳ 96 L" }] },
-  ],
+  sales: shapla.sales.overview as Widget[],
   dashboards: [
     { type: "kpis", items: [{ label: "Revenue (MTD)", value: "৳ 9.2 Cr", delta: "+7%" }, { label: "Gross margin", value: "28.4%", delta: "+0.6%" }, { label: "Cash in bank", value: "৳ 6.1 Cr" }, { label: "Receivables", value: "৳ 2.4 Cr", note: "৳ 38 L overdue" }] },
     { w: 6, type: "line", title: "Revenue vs cost", sub: "৳ crore", labels: MONTHS, series: [{ name: "Revenue", data: [8.1, 9.4, 8.8, 9.6, 10.2, 9.2] }, { name: "Cost", data: [6.0, 6.8, 6.4, 6.9, 7.3, 6.6] }] },
@@ -204,12 +189,7 @@ export const overviews: Record<string, Widget[]> = {
     { w: 4, type: "donut", title: "Pass types", slices: [{ label: "Goods out", value: 16 }, { label: "Goods in", value: 9 }, { label: "Visitors", value: 8 }, { label: "Returnable", value: 5 }] },
     { w: 12, type: "list", status: true, title: "Inside now", rows: [{ label: "Chatta Metro-Ma 14-8890", sub: "Goods in · Gate 2 · since 10:05", value: "Pending" }, { label: "Akij Packaging: 2 visitors", sub: "Meeting with Nadia · since 09:40", value: "Pending" }, { label: "Pallet jack × 2", sub: "Returnable · due back 17:00", value: "Approved" }] },
   ],
-  procurement: [
-    { type: "kpis", items: [{ label: "Spend this month", value: "৳ 1.4 Cr", delta: "+4%" }, { label: "Open POs", value: "26" }, { label: "On-time delivery", value: "88%", delta: "-3%" }, { label: "Savings negotiated", value: "৳ 6.2 L" }] },
-    { w: 7, type: "bars", horizontal: true, title: "Spend by supplier", sub: "This month", items: [{ label: "Meghna Flour Mills", value: 42, display: "৳ 42 L" }, { label: "Akij Packaging", value: 28, display: "৳ 28 L" }, { label: "City Sugar", value: 19, display: "৳ 19 L" }, { label: "Bashundhara Paper", value: 12, display: "৳ 12 L" }, { label: "Titas Gas", value: 9, display: "৳ 9 L" }] },
-    { w: 5, type: "progress", title: "Supplier on-time rate", goal: 95, warnBelow: 80, items: [{ label: "Bashundhara Paper", value: 98 }, { label: "Akij Packaging", value: 94 }, { label: "Meghna Flour Mills", value: 89 }, { label: "City Sugar", value: 71 }] },
-    { w: 12, type: "donut", title: "Spend by category", center: "৳ 1.4 Cr", centerLabel: "this month", slices: [{ label: "Raw materials", value: 82 }, { label: "Packaging", value: 34 }, { label: "Utilities", value: 12 }, { label: "Maintenance", value: 8 }, { label: "Other", value: 4 }] },
-  ],
+  procurement: shapla.procurement.overview as Widget[],
   timesheets: [
     { type: "kpis", items: [{ label: "Hours logged", value: "1,842", note: "this week" }, { label: "Billable", value: "64%", delta: "+3%" }, { label: "To approve", value: "12" }, { label: "Overtime", value: "96 h", downIsGood: true, delta: "+14 h" }] },
     { w: 7, type: "stacked", title: "Hours by project", keys: ["Billable", "Internal", "Overtime"], rows: [{ label: "Plant expansion", values: [420, 60, 38] }, { label: "Dealer portal", values: [260, 40, 22] }, { label: "WMS rollout", values: [210, 50, 30] }, { label: "Support", values: [80, 120, 6] }] },
@@ -220,12 +200,7 @@ export const overviews: Record<string, Widget[]> = {
     { w: 7, type: "bars", title: "Payables ageing", sub: "৳ lakh", items: [{ label: "Not due", value: 48, display: "৳ 48 L" }, { label: "0 to 30", value: 32, display: "৳ 32 L" }, { label: "31 to 60", value: 9, display: "৳ 9 L" }, { label: "61 to 90", value: 3, display: "৳ 3 L" }, { label: "90+", value: 1, display: "৳ 1 L" }] },
     { w: 5, type: "timeline", title: "Payment schedule", items: [{ time: "27 Oct", title: "Meghna Flour Mills", sub: "BILL-882 · ৳ 42.0 L" }, { time: "29 Oct", title: "Akij Packaging", sub: "BILL-879 · ৳ 18.6 L" }, { time: "30 Oct", title: "Titas Gas", sub: "BILL-874 · ৳ 3.4 L" }, { time: "2 Nov", title: "City Sugar", sub: "BILL-871 · ৳ 9.8 L" }] },
   ],
-  inventory: [
-    { type: "kpis", items: [{ label: "Stock value", value: "৳ 6.8 Cr", delta: "+3%" }, { label: "SKUs", value: "1,284" }, { label: "Below reorder level", value: "17", downIsGood: true, delta: "+5" }, { label: "Expiring in 30 days", value: "9", note: "৳ 2.1 L at risk" }] },
-    { w: 5, type: "donut", title: "Stock value by warehouse", center: "৳ 6.8 Cr", centerLabel: "on hand", slices: [{ label: "Tongi", value: 3.1, display: "৳ 3.1 Cr" }, { label: "Gazipur", value: 2.2, display: "৳ 2.2 Cr" }, { label: "Chattogram", value: 0.9, display: "৳ 90 L" }, { label: "Rangpur", value: 0.6, display: "৳ 60 L" }] },
-    { w: 7, type: "progress", title: "Stock vs reorder level", sub: "Lowest first", warnBelow: 60, goal: 100, items: [{ label: "Noodles 4-pack · Rangpur", value: 0, right: "0 / 2,000" }, { label: "Carton 12× · Tongi", value: 28, right: "1,400 / 5,000" }, { label: "Sugar 50kg · Gazipur", value: 42, right: "85 / 200" }, { label: "Flour 50kg · Gazipur", value: 40, right: "120 / 300" }, { label: "Juice 1L · Chattogram", value: 64, right: "640 / 1,000" }] },
-    { w: 12, type: "line", title: "Stock value trend", sub: "৳ crore", labels: MONTHS, series: [{ name: "Stock value", data: [5.9, 6.2, 6.6, 6.4, 6.6, 6.8] }] },
-  ],
+  inventory: shapla.inventory.overview as Widget[],
 
   // ─────────────── Other ───────────────
   onboarding: [
@@ -233,12 +208,7 @@ export const overviews: Record<string, Widget[]> = {
     { w: 7, type: "progress", title: "Checklist progress", warnBelow: 30, items: [{ label: "Arif Khan · IT admin · joined 27 Oct", value: 60, right: "6 / 10" }, { label: "Habib Rahman · leaving 31 Oct", value: 63, right: "5 / 8" }, { label: "Mim Sultana · joins 1 Nov", value: 20, right: "2 / 10" }, { label: "Lina Das · joins 3 Nov", value: 10, right: "1 / 10" }] },
     { w: 5, type: "list", title: "Day-one ready?", status: true, rows: [{ label: "Laptop for Mim Sultana", sub: "IT", value: "Pending" }, { label: "ID card for Lina Das", sub: "Admin", value: "Pending" }, { label: "Payroll setup for Arif Khan", sub: "HR", value: "Done" }, { label: "Exit interview: Habib", sub: "Booked 30 Oct", value: "Scheduled" }] },
   ],
-  invoicing: [
-    { type: "kpis", items: [{ label: "Invoiced this month", value: "৳ 5.1 Cr", delta: "+9%" }, { label: "Outstanding", value: "৳ 2.4 Cr" }, { label: "Overdue", value: "৳ 38 L", downIsGood: true, delta: "-৳ 6 L" }, { label: "Days to collect", value: "27", delta: "-2", downIsGood: true }] },
-    { w: 7, type: "bars", title: "Receivables ageing", sub: "৳ lakh", items: [{ label: "Not due", value: 142, display: "৳ 1.42 Cr" }, { label: "0 to 30", value: 60, display: "৳ 60 L" }, { label: "31 to 60", value: 24, display: "৳ 24 L" }, { label: "61 to 90", value: 9, display: "৳ 9 L" }, { label: "90+", value: 5, display: "৳ 5 L" }] },
-    { w: 5, type: "leaders", avatars: false, title: "Largest balances", rows: [{ name: "Shwapno", sub: "4 invoices", value: "৳ 48 L" }, { name: "Agora", sub: "3 invoices", value: "৳ 26 L" }, { name: "Meena Bazar", sub: "1 overdue", value: "৳ 6.1 L" }, { name: "Sky Distribution", sub: "1 overdue", value: "৳ 2.7 L" }] },
-    { w: 12, type: "line", title: "Invoiced vs collected", sub: "৳ crore", labels: MONTHS, series: [{ name: "Invoiced", data: [4.2, 4.8, 4.5, 4.9, 4.7, 5.1] }, { name: "Collected", data: [3.9, 4.4, 4.6, 4.5, 4.6, 4.2] }] },
-  ],
+  invoicing: shapla.invoicing.overview as Widget[],
   "hr-reporting": [
     { type: "kpis", items: [{ label: "Attrition (12 m)", value: "8.4%", delta: "-1.2%", downIsGood: true }, { label: "Cost per hire", value: "৳ 18,500" }, { label: "Absenteeism", value: "2.9%" }, { label: "Training hours / head", value: "3.4 h" }] },
     { w: 7, type: "line", title: "Attrition rate", sub: "Rolling 12 months, %", labels: MONTHS, series: [{ name: "Company", data: [9.8, 9.6, 9.2, 8.9, 8.6, 8.4] }, { name: "Industry", data: [11, 11, 10.8, 10.9, 10.7, 10.6] }] },

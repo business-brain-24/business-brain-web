@@ -1,0 +1,182 @@
+[
+ {
+  "Supplier ID": "SUP-001",
+  "Supplier": "Meghna Agro Traders",
+  "City": "Sylhet",
+  "Contact person": "Ashraf Talukder",
+  "Phone (dummy)": 1065302958,
+  "Email (dummy)": "sales1@supplier1.test",
+  "Payment terms (days)": 45,
+  "Status": "Active"
+ },
+ {
+  "Supplier ID": "SUP-002",
+  "Supplier": "Padma Packaging Ltd",
+  "City": "Gazipur",
+  "Contact person": "Habib Alam",
+  "Phone (dummy)": 1011896747,
+  "Email (dummy)": "sales2@supplier2.test",
+  "Payment terms (days)": 15,
+  "Status": "Active"
+ },
+ {
+  "Supplier ID": "SUP-003",
+  "Supplier": "Jamuna Edible Imports",
+  "City": "Narayanganj",
+  "Contact person": "Sharmin Rahman",
+  "Phone (dummy)": 1096741219,
+  "Email (dummy)": "sales3@supplier3.test",
+  "Payment terms (days)": 30,
+  "Status": "Active"
+ },
+ {
+  "Supplier ID": "SUP-004",
+  "Supplier": "Karnaphuli Sugar Supply",
+  "City": "Gazipur",
+  "Contact person": "Rahim Khan",
+  "Phone (dummy)": 1053991209,
+  "Email (dummy)": "sales4@supplier4.test",
+  "Payment terms (days)": 30,
+  "Status": "Active"
+ },
+ {
+  "Supplier ID": "SUP-005",
+  "Supplier": "Teesta Spice House",
+  "City": "Gazipur",
+  "Contact person": "Jannatul Islam",
+  "Phone (dummy)": 1072623684,
+  "Email (dummy)": "sales5@supplier5.test",
+  "Payment terms (days)": 60,
+  "Status": "Active"
+ },
+ {
+  "Supplier ID": "SUP-006",
+  "Supplier": "Sylhet Tea Brokers",
+  "City": "Chattogram",
+  "Contact person": "Rakib Khan",
+  "Phone (dummy)": 1068197822,
+  "Email (dummy)": "sales6@supplier6.test",
+  "Payment terms (days)": 60,
+  "Status": "Active"
+ },
+ {
+  "Supplier ID": "SUP-007",
+  "Supplier": "Surma Dairy Inputs",
+  "City": "Khulna",
+  "Contact person": "Mamun Sarker",
+  "Phone (dummy)": 1019329269,
+  "Email (dummy)": "sales7@supplier7.test",
+  "Payment terms (days)": 60,
+  "Status": "Active"
+ },
+ {
+  "Supplier ID": "SUP-008",
+  "Supplier": "Rupsha Plastics",
+  "City": "Khulna",
+  "Contact person": "Farzana Alam",
+  "Phone (dummy)": 1033268510,
+  "Email (dummy)": "sales8@supplier8.test",
+  "Payment terms (days)": 15,
+  "Status": "Active"
+ },
+ {
+  "Supplier ID": "SUP-009",
+  "Supplier": "Buriganga Carton Works",
+  "City": "Gazipur",
+  "Contact person": "Mamun Alam",
+  "Phone (dummy)": 1012747414,
+  "Email (dummy)": "sales9@supplier9.test",
+  "Payment terms (days)": 30,
+  "Status": "Active"
+ },
+ {
+  "Supplier ID": "SUP-010",
+  "Supplier": "Dhaleshwari Flour Mills",
+  "City": "Chattogram",
+  "Contact person": "Ashraf Khan",
+  "Phone (dummy)": 1031527272,
+  "Email (dummy)": "sales10@supplier10.test",
+  "Payment terms (days)": 30,
+  "Status": "Active"
+ },
+ {
+  "Supplier ID": "SUP-011",
+  "Supplier": "Kushiyara Pulses",
+  "City": "Sylhet",
+  "Contact person": "Shirin Bhuiyan",
+  "Phone (dummy)": 1065577787,
+  "Email (dummy)": "sales11@supplier11.test",
+  "Payment terms (days)": 15,
+  "Status": "Active"
+ },
+ {
+  "Supplier ID": "SUP-012",
+  "Supplier": "Madhumati Food Ingredients",
+  "City": "Narayanganj",
+  "Contact person": "Tania Chowdhury",
+  "Phone (dummy)": 1033447159,
+  "Email (dummy)": "sales12@supplier12.test",
+  "Payment terms (days)": 30,
+  "Status": "Active"
+ },
+ {
+  "Supplier ID": "SUP-013",
+  "Supplier": "Gorai Glass & Jar",
+  "City": "Narayanganj",
+  "Contact person": "Rokeya Bhuiyan",
+  "Phone (dummy)": 1072773682,
+  "Email (dummy)": "sales13@supplier13.test",
+  "Payment terms (days)": 30,
+  "Status": "Active"
+ },
+ {
+  "Supplier ID": "SUP-014",
+  "Supplier": "Atrai Agro Products",
+  "City": "Gazipur",
+  "Contact person": "Habib Roy",
+  "Phone (dummy)": 1026120303,
+  "Email (dummy)": "sales14@supplier14.test",
+  "Payment terms (days)": 60,
+  "Status": "Active"
+ },
+ {
+  "Supplier ID": "SUP-015",
+  "Supplier": "Bhairab Salt Industries",
+  "City": "Chattogram",
+  "Contact person": "Belal Islam",
+  "Phone (dummy)": 1041049233,
+  "Email (dummy)": "sales15@supplier15.test",
+  "Payment terms (days)": 15,
+  "Status": "Active"
+ },
+ {
+  "Supplier ID": "SUP-016",
+  "Supplier": "Shitalakshya Chemicals",
+  "City": "Khulna",
+  "Contact person": "Emon Das",
+  "Phone (dummy)": 1054351195,
+  "Email (dummy)": "sales16@supplier16.test",
+  "Payment terms (days)": 45,
+  "Status": "Active"
+ },
+ {
+  "Supplier ID": "SUP-017",
+  "Supplier": "Ichamati Logistics",
+  "City": "Chattogram",
+  "Contact person": "Rahim Molla",
+  "Phone (dummy)": 1057204606,
+  "Email (dummy)": "sales17@supplier17.test",
+  "Payment terms (days)": 60,
+  "Status": "Active"
+ },
+ {
+  "Supplier ID": "SUP-018",
+  "Supplier": "Halda Fruits Processing",
+  "City": "Sylhet",
+  "Contact person": "Mahmud Mia",
+  "Phone (dummy)": 1086241241,
+  "Email (dummy)": "sales18@supplier18.test",
+  "Payment terms (days)": 30,
+  "Status": "Active"
+ }
+]

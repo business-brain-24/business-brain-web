@@ -51,7 +51,7 @@ export default function Story() {
             <Stagger className="mt-4 grid gap-3 sm:grid-cols-3">
               {[
                 ["80%", "faster month-end close"],
-                ["−18%", "purchase cost"],
+                ["18%", "lower purchase cost"],
                 ["4 min", "payroll for 2,400"],
               ].map(([v, l]) => (
                 <StaggerItem key={l} className="rounded-[16px] bg-surface p-6">

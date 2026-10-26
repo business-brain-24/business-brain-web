@@ -8,6 +8,18 @@ import {
   BarChart,
   CartesianGrid,
   Cell,
+  ComposedChart,
+  Funnel,
+  FunnelChart,
+  LabelList,
+  PolarAngleAxis,
+  PolarGrid,
+  PolarRadiusAxis,
+  Radar,
+  RadarChart,
+  RadialBar,
+  RadialBarChart,
+  Treemap,
   Line,
   LineChart,
   Pie,
@@ -182,6 +194,95 @@ function Plot({ chart }: { chart: Chart }) {
     );
   }
 
+  if (kind === "radar") {
+    return (
+      <div className="space-y-3">
+        <ResponsiveContainer width="100%" height={300}>
+          <RadarChart data={data} outerRadius="72%" margin={{ top: 8, right: 24, bottom: 8, left: 24 }}>
+            <PolarGrid stroke="#e3e6eb" />
+            <PolarAngleAxis dataKey="label" tick={{ ...AXIS, fill: "#545a66", fontSize: 12 }} />
+            <PolarRadiusAxis domain={[0, 100]} tick={false} axisLine={false} />
+            {tooltip}
+            {series.map((s, i) => (
+              <Radar key={s} name={s} dataKey={s} stroke={colorFor(series, i)} fill={colorFor(series, i)} fillOpacity={series.length > 1 ? 0.12 : 0.22} strokeWidth={2} animationDuration={700} />
+            ))}
+          </RadarChart>
+        </ResponsiveContainer>
+      </div>
+    );
+  }
+
+  if (kind === "composed") {
+    return (
+      <div className="space-y-3">
+        <ResponsiveContainer width="100%" height={260}>
+          <ComposedChart data={data} margin={{ top: 8, right: 8, bottom: 0, left: 0 }}>
+            {grid}
+            <XAxis dataKey="label" tick={AXIS} axisLine={false} tickLine={false} />
+            <YAxis tick={AXIS} axisLine={false} tickLine={false} width={52} tickFormatter={(v) => compact(unit, v)} />
+            {tooltip}
+            <Bar dataKey={series[0]} fill={colorFor(series, 0)} radius={[4, 4, 0, 0]} maxBarSize={36} animationDuration={700} />
+            {series.slice(1).map((s, i) => (
+              <Line key={s} type="monotone" dataKey={s} stroke={colorFor(series, i + 1)} strokeWidth={2.5} dot={{ r: 3 }} animationDuration={800} />
+            ))}
+          </ComposedChart>
+        </ResponsiveContainer>
+      </div>
+    );
+  }
+
+  if (kind === "radial") {
+    const rows = data.map((d, i) => ({ ...d, label: String(d.label), value: Number(d.value), fill: PALETTE[i % PALETTE.length] }));
+    return (
+      <div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-8">
+        <div className="h-[220px] w-[220px] shrink-0">
+          <ResponsiveContainer>
+            <RadialBarChart data={rows} innerRadius="28%" outerRadius="100%" startAngle={90} endAngle={-270} barSize={10}>
+              <PolarAngleAxis type="number" domain={[0, 100]} tick={false} />
+              <RadialBar dataKey="value" background={{ fill: "#f1f3f6" }} cornerRadius={6} animationDuration={800} />
+              {tooltip}
+            </RadialBarChart>
+          </ResponsiveContainer>
+        </div>
+        <ul className="w-full space-y-2 text-[13px]">
+          {rows.map((d) => (
+            <li key={String(d.label)} className="flex items-center gap-2.5">
+              <span className="h-2.5 w-2.5 shrink-0 rounded-[3px]" style={{ background: d.fill }} />
+              <span className="min-w-0 flex-1 truncate text-ink">{d.label}</span>
+              <span className="tabular-nums font-medium text-ink">{fmt(unit, Number(d.value))}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+
+  if (kind === "funnel") {
+    const rows = data.map((d, i) => ({ ...d, label: String(d.label), value: Number(d.value), fill: PALETTE[i % PALETTE.length] }));
+    return (
+      <ResponsiveContainer width="100%" height={Math.max(200, rows.length * 56)}>
+        <FunnelChart margin={{ top: 4, right: 150, bottom: 4, left: 8 }}>
+          {tooltip}
+          <Funnel data={rows} dataKey="value" nameKey="label" isAnimationActive animationDuration={700}>
+            <LabelList position="right" dataKey="label" fill="#545a66" stroke="none" fontSize={12} />
+            <LabelList position="center" dataKey="value" fill="#fff" stroke="none" fontSize={12} formatter={(v: unknown) => compact(unit, Number(v))} />
+          </Funnel>
+        </FunnelChart>
+      </ResponsiveContainer>
+    );
+  }
+
+  if (kind === "treemap") {
+    const rows = data.map((d, i) => ({ name: String(d.label), value: Number(d.value), fill: PALETTE[i % PALETTE.length] }));
+    return (
+      <ResponsiveContainer width="100%" height={260}>
+        <Treemap data={rows} dataKey="value" nameKey="name" stroke="#fff" isAnimationActive animationDuration={600} content={<TreeCell unit={unit} />}>
+          {tooltip}
+        </Treemap>
+      </ResponsiveContainer>
+    );
+  }
+
   // bar and stacked
   return (
     <ResponsiveContainer width="100%" height={240}>
@@ -211,9 +312,28 @@ function Plot({ chart }: { chart: Chart }) {
   );
 }
 
+/** Treemap tile: the name and value, shown only when the tile is big enough to read. */
+function TreeCell(props: { x?: number; y?: number; width?: number; height?: number; name?: string; value?: number; fill?: string; unit: Unit }) {
+  const { x = 0, y = 0, width = 0, height = 0, name, value, fill, unit } = props;
+  return (
+    <g>
+      <rect x={x} y={y} width={width} height={height} fill={fill} stroke="#fff" strokeWidth={2} rx={6} />
+      {width > 70 && height > 34 && (
+        <>
+          <text x={x + 8} y={y + 18} fill="#fff" fontSize={12} fontWeight={500}>{name}</text>
+          <text x={x + 8} y={y + 34} fill="#fff" fillOpacity={0.85} fontSize={11}>{compact(unit, Number(value))}</text>
+        </>
+      )}
+    </g>
+  );
+}
+
+/** Kinds with a single "value" per row. */
+const SINGLE = new Set<Chart["kind"]>(["pie", "radial", "funnel", "treemap"]);
+
 export function ChartCard({ chart }: { chart: Chart }) {
   const [table, setTable] = useState(false);
-  const multi = chart.kind !== "pie" && chart.series.length > 1;
+  const multi = !SINGLE.has(chart.kind) && chart.series.length > 1;
   return (
     <figure className="rounded-[16px] border border-line bg-white p-4 sm:p-5">
       <figcaption className="mb-3 flex items-start justify-between gap-3">
@@ -251,7 +371,7 @@ export function ChartCard({ chart }: { chart: Chart }) {
         <DataTable
           table={{
             title: chart.title,
-            columns: [chart.kind === "pie" ? "Item" : "", ...(chart.kind === "pie" ? ["Value"] : chart.series)],
+            columns: [SINGLE.has(chart.kind) ? "Item" : "", ...(SINGLE.has(chart.kind) ? ["Value"] : chart.series)],
             rows: chart.data.map((d) => [String(d.label), ...chart.series.map((s) => (d[s] === undefined ? "n/a" : fmt(chart.unit, Number(d[s]))))]),
           }}
           bare
@@ -272,8 +392,9 @@ export function KpiRow({ kpis }: { kpis: Kpi[] }) {
           <p className="mt-1 text-[19px] font-medium leading-6 tracking-[-0.02em] text-ink tabular-nums">{k.value}</p>
           {k.delta && (
             <p className={clsx("mt-1 flex items-center gap-0.5 text-[12px] font-medium", k.good === false ? "text-[#B42318]" : "text-[#067647]")}>
-              {k.delta.startsWith("−") ? <ArrowDownRight size={ICON.sm} /> : <ArrowUpRight size={ICON.sm} />}
-              {k.delta}
+              {/^[-−]/.test(k.delta) ? <ArrowDownRight size={ICON.sm} /> : <ArrowUpRight size={ICON.sm} />}
+              {/* The arrow shows the direction; the number has no plus or minus sign. */}
+              {k.delta.replace(/^[+\-−]\s?/, "")}
             </p>
           )}
         </div>

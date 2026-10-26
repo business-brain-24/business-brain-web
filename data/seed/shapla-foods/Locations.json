@@ -1,0 +1,72 @@
+[
+ {
+  "Location ID": "LOC-001",
+  "Name": "Shapla Factory, Gazipur",
+  "Type": "Factory",
+  "Division": "Dhaka",
+  "District": "Gazipur"
+ },
+ {
+  "Location ID": "LOC-002",
+  "Name": "Central Warehouse, Tongi",
+  "Type": "Central warehouse",
+  "Division": "Dhaka",
+  "District": "Gazipur"
+ },
+ {
+  "Location ID": "LOC-003",
+  "Name": "Dhaka Depot",
+  "Type": "Depot",
+  "Division": "Dhaka",
+  "District": "Dhaka"
+ },
+ {
+  "Location ID": "LOC-004",
+  "Name": "Chattogram Depot",
+  "Type": "Depot",
+  "Division": "Chattogram",
+  "District": "Chattogram"
+ },
+ {
+  "Location ID": "LOC-005",
+  "Name": "Rajshahi Depot",
+  "Type": "Depot",
+  "Division": "Rajshahi",
+  "District": "Rajshahi"
+ },
+ {
+  "Location ID": "LOC-006",
+  "Name": "Khulna Depot",
+  "Type": "Depot",
+  "Division": "Khulna",
+  "District": "Khulna"
+ },
+ {
+  "Location ID": "LOC-007",
+  "Name": "Barishal Depot",
+  "Type": "Depot",
+  "Division": "Barishal",
+  "District": "Barishal"
+ },
+ {
+  "Location ID": "LOC-008",
+  "Name": "Sylhet Depot",
+  "Type": "Depot",
+  "Division": "Sylhet",
+  "District": "Sylhet"
+ },
+ {
+  "Location ID": "LOC-009",
+  "Name": "Rangpur Depot",
+  "Type": "Depot",
+  "Division": "Rangpur",
+  "District": "Rangpur"
+ },
+ {
+  "Location ID": "LOC-010",
+  "Name": "Mymensingh Depot",
+  "Type": "Depot",
+  "Division": "Mymensingh",
+  "District": "Mymensingh"
+ }
+]

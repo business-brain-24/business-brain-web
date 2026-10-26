@@ -1,0 +1,50 @@
+[
+ {
+  "Region ID": "REG-01",
+  "Region": "Dhaka Region",
+  "Division": "Dhaka",
+  "Regional Sales Manager (Emp ID)": "EMP-0004"
+ },
+ {
+  "Region ID": "REG-02",
+  "Region": "Chattogram Region",
+  "Division": "Chattogram",
+  "Regional Sales Manager (Emp ID)": "EMP-0005"
+ },
+ {
+  "Region ID": "REG-03",
+  "Region": "Rajshahi Region",
+  "Division": "Rajshahi",
+  "Regional Sales Manager (Emp ID)": "EMP-0006"
+ },
+ {
+  "Region ID": "REG-04",
+  "Region": "Khulna Region",
+  "Division": "Khulna",
+  "Regional Sales Manager (Emp ID)": "EMP-0007"
+ },
+ {
+  "Region ID": "REG-05",
+  "Region": "Barishal Region",
+  "Division": "Barishal",
+  "Regional Sales Manager (Emp ID)": "EMP-0008"
+ },
+ {
+  "Region ID": "REG-06",
+  "Region": "Sylhet Region",
+  "Division": "Sylhet",
+  "Regional Sales Manager (Emp ID)": "EMP-0009"
+ },
+ {
+  "Region ID": "REG-07",
+  "Region": "Rangpur Region",
+  "Division": "Rangpur",
+  "Regional Sales Manager (Emp ID)": "EMP-0010"
+ },
+ {
+  "Region ID": "REG-08",
+  "Region": "Mymensingh Region",
+  "Division": "Mymensingh",
+  "Regional Sales Manager (Emp ID)": "EMP-0011"
+ }
+]

@@ -180,10 +180,10 @@ export const procurement = {
     ["Closed", 412],
   ] as [string, number][],
   priceMoves: [
-    ["Raw milk (litre)", "৳ 62", "৳ 68", "+9.7%"],
-    ["Sugar (kg)", "৳ 128", "৳ 136", "+6.3%"],
-    ["Wheat flour (kg)", "৳ 54", "৳ 51", "−5.6%"],
-    ["Corrugated carton", "৳ 38", "৳ 41", "+7.9%"],
+    ["Raw milk (litre)", "৳ 62", "৳ 68", "Up 9.7%"],
+    ["Sugar (kg)", "৳ 128", "৳ 136", "Up 6.3%"],
+    ["Wheat flour (kg)", "৳ 54", "৳ 51", "Down 5.6%"],
+    ["Corrugated carton", "৳ 38", "৳ 41", "Up 7.9%"],
   ],
 };
 

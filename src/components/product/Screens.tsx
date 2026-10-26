@@ -246,7 +246,7 @@ function BudgetBars() {
   const rows: [string, number, string, boolean][] = [
     ["Factory 1 · Production", 52, "৳ 5.8 Cr", false],
     ["Factory 2 · Utilities", 71, "৳ 1.2 Cr", false],
-    ["Head office · Marketing", 100, "− ৳ 14 L", true],
+    ["Head office · Marketing", 100, "৳ 14 L over", true],
     ["Dhaka depot · Logistics", 44, "৳ 98 L", false],
     ["IT & systems", 36, "৳ 64 L", false],
   ];
@@ -427,7 +427,7 @@ function Register() {
           </p>
         ))}
         <p className="flex justify-between border-t border-line px-4 py-3 text-green">
-          Loyalty · 120 points <span>− ৳ 40</span>
+          Loyalty discount · 120 points <span>৳ 40</span>
         </p>
         <p className="flex justify-between border-t border-line px-4 py-3.5 text-[18px] font-medium">
           Total <span>৳ 750</span>
@@ -684,7 +684,7 @@ function PayRun() {
           {[
             ["Gross pay · 2,412 people", "৳ 4,21,00,000", ""],
             ["Overtime", "৳ 38,20,000 · +31%", "text-orange-deep"],
-            ["Tax & PF withheld", "− ৳ 24,60,000", ""],
+            ["Tax & PF withheld", "৳ 24,60,000", ""],
           ].map(([a, b, c], i) => (
             <p key={a} className={clsx("flex justify-between gap-3 px-4 py-3.5", i > 0 && "border-t border-line")}>
               <span className="text-muted">{a}</span>
@@ -704,7 +704,7 @@ function PayRun() {
           ["Basic", "৳ 18,000"],
           ["House rent", "৳ 9,000"],
           ["Overtime 12 h", "৳ 2,160"],
-          ["PF", "− ৳ 1,800"],
+          ["PF deducted", "৳ 1,800"],
         ].map(([a, b], i) => (
           <p key={a} className={clsx("flex justify-between", i === 0 && "border-t border-line pt-2.5", a === "PF" && "text-muted")}>
             {a} <span>{b}</span>

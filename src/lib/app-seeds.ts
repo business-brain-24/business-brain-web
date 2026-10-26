@@ -1,5 +1,7 @@
 // Seed data for the demo workspace. Each app picks a layout that suits the work it does.
 
+import { shapla } from "./shapla-seed";
+
 export type Tone = "orange" | "ink" | "green" | "gray";
 
 export type Layout =
@@ -97,17 +99,8 @@ export const seeds: Record<string, Layout> = {
   contacts: {
     kind: "directory",
     action: "Add contact",
-    groups: ["Customers", "Suppliers", "Vendors"],
-    people: [
-      { name: "Tanvir Ahmed", role: "Purchase manager", group: "Suppliers", location: "Akij Packaging, Dhaka", email: "tanvir@akijpack.com.bd", phone: "+880 1711-203344" },
-      { name: "Farzana Haque", role: "Category head", group: "Customers", location: "Shwapno, Dhaka", email: "farzana@shwapno.com", phone: "+880 1819-552210" },
-      { name: "Imran Hossain", role: "Head of trade", group: "Customers", location: "Pran-RFL, Dhaka", email: "imran@prangroup.com", phone: "+880 1713-889012" },
-      { name: "Nusrat Jahan", role: "Account manager", group: "Vendors", location: "Meghna Logistics, Chattogram", email: "nusrat@meghnalog.com", phone: "+880 1922-410098" },
-      { name: "Mahbub Alam", role: "Sales director", group: "Suppliers", location: "Meghna Flour Mills, Narayanganj", email: "mahbub@meghnaflour.com", phone: "+880 1715-660021" },
-      { name: "Sharmin Akhter", role: "Store operations", group: "Customers", location: "Agora, Dhaka", email: "sharmin@agora.com.bd", phone: "+880 1817-334450" },
-      { name: "Hasan Mahmud", role: "Owner", group: "Customers", location: "Mollah Traders, Dinajpur", email: "mollahtraders@gmail.com", phone: "+880 1716-778899" },
-      { name: "Rezaul Karim", role: "Key accounts", group: "Suppliers", location: "City Sugar, Dhaka", email: "rezaul@citygroup.com.bd", phone: "+880 1730-110022" },
-    ],
+    groups: shapla.contacts.groups,
+    people: shapla.contacts.people,
   },
   crm: {
     kind: "kanban",
@@ -258,32 +251,14 @@ export const seeds: Record<string, Layout> = {
   employees: {
     kind: "directory",
     action: "Add employee",
-    groups: ["Production", "Sales", "Finance", "Warehouse", "HR"],
-    people: [
-      { name: P.sadia, role: "Finance lead", group: "Finance", location: "Head office · since 2019", email: "sadia@brainfoods.com.bd", phone: "+880 1711-000102" },
-      { name: P.rafiq, role: "Sales manager", group: "Sales", location: "Rangpur · since 2020", email: "rafiq@brainfoods.com.bd", phone: "+880 1711-000104" },
-      { name: P.kamal, role: "Plant supervisor", group: "Production", location: "Gazipur · since 2017", email: "kamal@brainfoods.com.bd", phone: "+880 1711-000105" },
-      { name: P.rina, role: "Line leader", group: "Production", location: "Gazipur · since 2018", email: "rina@brainfoods.com.bd", phone: "+880 1711-000109", status: "On leave" },
-      { name: P.tanim, role: "Territory officer", group: "Sales", location: "Dinajpur · since 2023", email: "tanim@brainfoods.com.bd", phone: "+880 1711-000110" },
-      { name: P.shuvo, role: "Warehouse lead", group: "Warehouse", location: "Tongi · since 2021", email: "shuvo@brainfoods.com.bd", phone: "+880 1711-000108" },
-      { name: P.farhana, role: "Head of HR", group: "HR", location: "Head office · since 2016", email: "farhana@brainfoods.com.bd", phone: "+880 1711-000103" },
-      { name: P.selim, role: "Night supervisor", group: "Production", location: "Gazipur · since 2019", email: "selim@brainfoods.com.bd", phone: "+880 1711-000111" },
-    ],
+    groups: shapla.employees.groups,
+    people: shapla.employees.people,
   },
   payroll: {
     kind: "records",
     action: "Run payroll",
-    cols: ["Employee", "Department", "Basic", "Allowances", "Deductions", "Net pay", "Status"],
-    rows: [
-      ["Sadia Islam", "Finance", "৳ 95,000", "৳ 28,500", "৳ 9,200", "৳ 1,14,300", "Awaiting approval"],
-      ["Rafiq Uddin", "Sales", "৳ 72,000", "৳ 31,000", "৳ 6,800", "৳ 96,200", "Awaiting approval"],
-      ["Kamal Hasan", "Production", "৳ 58,000", "৳ 17,400", "৳ 4,900", "৳ 70,500", "Awaiting approval"],
-      ["Farhana Hoque", "HR", "৳ 88,000", "৳ 26,400", "৳ 8,600", "৳ 1,05,800", "Awaiting approval"],
-      ["Tanim Roy", "Sales", "৳ 38,000", "৳ 14,200", "৳ 2,100", "৳ 50,100", "Awaiting approval"],
-      ["Shuvo Das", "Warehouse", "৳ 42,000", "৳ 12,600", "৳ 2,500", "৳ 52,100", "Awaiting approval"],
-      ["Rina Begum", "Production", "৳ 26,000", "৳ 7,800", "৳ 1,200", "৳ 32,600", "Awaiting approval"],
-      ["Selim Reza", "Production", "৳ 31,000", "৳ 11,300", "৳ 1,600", "৳ 40,700", "Awaiting approval"],
-    ],
+    cols: shapla.payroll.cols,
+    rows: shapla.payroll.rows,
   },
   attendance: {
     kind: "records",
@@ -389,15 +364,8 @@ export const seeds: Record<string, Layout> = {
   procurement: {
     kind: "records",
     action: "New purchase order",
-    cols: ["PO", "Supplier", "Items", "Ordered", "Expected", "Value", "Status"],
-    rows: [
-      ["PO-2291", "Akij Packaging", "Cartons, film", "21 Oct", "28 Oct", "৳ 18.6 L", "Approved"],
-      ["PO-2290", "Meghna Flour Mills", "Flour 50kg × 400", "19 Oct", "26 Oct", "৳ 42.0 L", "In transit"],
-      ["PO-2288", "City Sugar", "Sugar 50kg × 200", "15 Oct", "22 Oct", "৳ 9.8 L", "Late"],
-      ["PO-2285", "Bashundhara Paper", "Labels", "12 Oct", "18 Oct", "৳ 6.2 L", "Received"],
-      ["PO-2283", "Titas Gas", "Industrial gas", "10 Oct", "None", "৳ 3.4 L", "Received"],
-      ["PO-2280", "ACI Chemicals", "Cleaning agents", "8 Oct", "15 Oct", "৳ 1.9 L", "Received"],
-    ],
+    cols: shapla.procurement.cols,
+    rows: shapla.procurement.rows,
   },
   timesheets: {
     kind: "records",
@@ -427,16 +395,8 @@ export const seeds: Record<string, Layout> = {
   inventory: {
     kind: "records",
     action: "Stock adjustment",
-    cols: ["SKU", "Item", "Warehouse", "On hand", "Reorder at", "Value", "Status"],
-    rows: [
-      ["RM-0101", "Flour 50kg", "Gazipur", "120", "300", "৳ 3.9 L", "Low stock"],
-      ["RM-0102", "Sugar 50kg", "Gazipur", "85", "200", "৳ 4.1 L", "Low stock"],
-      ["PK-0310", "Carton 12×", "Tongi", "1,400", "5,000", "৳ 56,000", "Low stock"],
-      ["FG-1001", "Biscuits 200g", "Tongi", "18,400", "6,000", "৳ 5.5 L", "In stock"],
-      ["FG-1022", "Juice 1L", "Chattogram", "640", "1,000", "৳ 70,400", "Low stock"],
-      ["FG-1040", "Chips 50g", "Tongi", "42,000", "10,000", "৳ 6.3 L", "In stock"],
-      ["FG-1055", "Noodles 4-pack", "Rangpur", "0", "2,000", "৳ 0", "Out of stock"],
-    ],
+    cols: shapla.inventory.cols,
+    rows: shapla.inventory.rows,
   },
 
   // ─── Other ───
@@ -456,16 +416,8 @@ export const seeds: Record<string, Layout> = {
   invoicing: {
     kind: "records",
     action: "New invoice",
-    cols: ["Invoice", "Customer", "Issued", "Due", "Amount", "Status"],
-    rows: [
-      ["INV-10422", "Shwapno", "20 Oct", "4 Nov", "৳ 12.4 L", "Paid"],
-      ["INV-10421", "Agora", "19 Oct", "3 Nov", "৳ 8.6 L", "Pending"],
-      ["INV-10420", "Mollah Traders", "18 Oct", "2 Nov", "৳ 3.2 L", "Pending"],
-      ["INV-10418", "Meena Bazar", "5 Oct", "20 Oct", "৳ 6.1 L", "Overdue"],
-      ["INV-10415", "Unimart", "3 Oct", "18 Oct", "৳ 4.9 L", "Paid"],
-      ["INV-10411", "Sky Distribution", "1 Oct", "16 Oct", "৳ 2.7 L", "Overdue"],
-      ["INV-10409", "Daraz", "28 Sep", "13 Oct", "৳ 5.4 L", "Paid"],
-    ],
+    cols: shapla.invoicing.cols,
+    rows: shapla.invoicing.rows,
   },
   "hr-reporting": { kind: "analytics" },
 };
