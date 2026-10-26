@@ -8,6 +8,7 @@ import clsx from "clsx";
 import { getProduct, WATCH_TOWER_DEMO } from "@/lib/data";
 import dynamic from "next/dynamic";
 import LogoHub from "./LogoHub";
+import ProductVisual from "./ProductVisual";
 import LazyScene from "@/components/three/LazyScene";
 import { ICON } from "@/lib/icons";
 
@@ -138,6 +139,9 @@ export default function Hero() {
             </a>
           </div>
         </div>
+
+        {/* product visual: the workspace with real demo numbers, then the brain structure */}
+        <ProductVisual />
 
         <Stage />
         <MobileStage />
