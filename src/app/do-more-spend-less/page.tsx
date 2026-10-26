@@ -4,7 +4,7 @@ import { Apps, AskBrain, Editions, FinalCta, HowItWorks, Industries, Modules, Ou
 
 const title = "Do More. Spend Less.";
 const description =
-  "One brain for factory, stock, sales and money. AI agents read live figures, propose the next step and act only through your approvals.";
+  "One brain for factory, stock, sales and money. AI agents read live figures, propose the next step and act only through your approvals. Book a demo.";
 
 export const metadata: Metadata = {
   title: { absolute: `${title} · Business Brain 24` },
