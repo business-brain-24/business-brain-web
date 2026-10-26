@@ -69,7 +69,7 @@ export default function Hero() {
           className="pointer-events-none absolute left-0 top-[420px] hidden h-[520px] w-[520px] bg-[url(/hero/dots.jpg)] bg-[length:100%_100%] mix-blend-multiply [mask-image:radial-gradient(circle,#000_30%,transparent_70%)] md:block"
         />
 
-        <div className="relative flex w-full max-w-[980px] flex-col items-center px-5 pb-12 pt-[118px] text-center sm:pb-16 sm:pt-[136px]">
+        <div className="relative flex w-full max-w-[1120px] flex-col items-center px-5 pb-10 pt-[104px] text-center sm:pb-12 sm:pt-[112px]">
           {/* eyebrow */}
           <span className="bb-fade-up inline-flex items-center gap-2 rounded-full border border-orange/20 bg-white/80 py-1.5 pl-1.5 pr-3.5 text-[13px] font-medium text-[#3A3F4A] shadow-[0_6px_20px_-12px_rgba(255,107,44,0.6)] backdrop-blur">
             <span className="flex h-6 items-center gap-1 rounded-full bg-orange px-2 text-[12px] font-semibold uppercase tracking-[0.06em] text-white">
@@ -79,11 +79,11 @@ export default function Hero() {
           </span>
 
           {/* headline: brand line, then the promise with the payoff in orange */}
-          <h1 aria-label="Business Brain 24: Do More. Spend Less." className="mt-7 font-medium tracking-[-0.045em] text-black">
-            <span aria-hidden className="block overflow-hidden pb-1 text-[22px] leading-[28px] tracking-[-0.02em] text-[#545A66] sm:text-[26px] sm:leading-[32px]">
+          <h1 aria-label="Business Brain 24: Do More. Spend Less." className="mt-5 font-medium tracking-[-0.045em] text-black">
+            <span aria-hidden className="block overflow-hidden pb-1 text-[20px] leading-[26px] tracking-[-0.02em] text-[#545A66] sm:text-[22px] sm:leading-[28px]">
               <span className="bb-rise inline-block">Business Brain 24</span>
             </span>
-            <span aria-hidden className="mt-2 block text-[46px] leading-[50px] sm:text-[72px] sm:leading-[76px] lg:text-[84px] lg:leading-[88px]">
+            <span aria-hidden className="mt-1 block text-[42px] leading-[46px] sm:text-[56px] sm:leading-[60px] lg:text-[64px] lg:leading-[68px]">
               {["Do", "More."].map((w, i) => (
                 <span key={w} className="inline-block overflow-hidden pb-[0.1em] align-bottom">
                   <span className="bb-rise inline-block" style={{ animationDelay: `${0.08 + i * 0.05}s` }}>{w}&nbsp;</span>
@@ -97,16 +97,16 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="bb-fade-up mt-6 max-w-[620px] text-[18px] font-medium leading-[27px] tracking-[-0.01em] text-ink sm:text-[21px] sm:leading-[30px]" style={{ animationDelay: "0.35s" }}>
+          <p className="bb-fade-up mt-4 max-w-[860px] text-[18px] font-medium leading-[27px] tracking-[-0.01em] text-ink sm:text-[20px] sm:leading-[28px]" style={{ animationDelay: "0.35s" }}>
             The agentic ERP that cuts operating costs and lifts productivity across your enterprise.
           </p>
-          <p className="bb-fade-up mt-4 max-w-[600px] text-[15px] leading-[25px] text-[#5B616D]" style={{ animationDelay: "0.45s" }}>
+          <p className="bb-fade-up mt-3 max-w-[860px] text-[15px] leading-[24px] text-[#5B616D]" style={{ animationDelay: "0.45s" }}>
             Bring finance, HR, payroll, procurement, inventory, sales, manufacturing and many other modules into one connected system. Reduce
             repetitive work, coordinate approvals and turn business insights into action, with the controls you set.
           </p>
 
           {/* two clear next steps, as regular buttons */}
-          <div className="bb-fade-up mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center" style={{ animationDelay: "0.55s" }}>
+          <div className="bb-fade-up mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center" style={{ animationDelay: "0.55s" }}>
             <Button href="/demo">Book a free ERP AI audit</Button>
             <Button href={WATCH_TOWER_DEMO} variant="light" external icon={<ArrowUpRight size={ICON.md} strokeWidth={2.2} />} className="!bg-ink/10 hover:!bg-orange/30">
               See your business world
