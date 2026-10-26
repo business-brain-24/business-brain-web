@@ -417,7 +417,7 @@ function BackToTop() {
             if (lenis) lenis.scrollTo(0);
             else window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          className="fixed bottom-5 right-5 z-40 hidden h-11 w-11 items-center justify-center rounded-full border border-line bg-white/90 shadow-[var(--shadow-soft)] backdrop-blur md:flex"
+          className="fixed bottom-[92px] right-[28px] z-40 hidden h-11 w-11 items-center justify-center rounded-full border border-line bg-white/90 shadow-[var(--shadow-soft)] backdrop-blur md:flex"
           aria-label="Back to top"
         >
           <ArrowUp size={ICON.lg} />
