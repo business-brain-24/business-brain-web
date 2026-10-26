@@ -24,7 +24,7 @@ const STORE = "bb-ask-chats";
 const CURRENT = "bb-ask-current";
 const uid = () => Math.random().toString(36).slice(2, 10);
 
-const TABS = [...dataStarters, { module: "About Business Brain", questions: starters }];
+const TABS = dataStarters;
 
 function load(): Chat[] {
   try {
@@ -276,10 +276,10 @@ export default function Ask() {
 
         <div className="mt-3 rounded-[14px] bg-white p-3.5">
           <p className="flex items-center gap-2 text-[13px] font-medium">
-            <Database size={ICON.sm} className="text-orange" /> Demo company data
+            <Database size={ICON.sm} className="text-orange" /> Shapla Foods assistant
           </p>
           <p className="mt-1.5 text-[12px] leading-[18px] text-muted">
-            Questions about numbers are answered from sample data for {COMPANY}, a fictional food manufacturer.
+            I answer from Shapla Foods&apos; own records: sales, finance, payroll, HR, logistics, stock, purchasing and production. Shapla is a fictional company for this demo.
           </p>
           <Link href="/demo" className="mt-2 inline-block text-[12px] font-medium text-orange-deep hover:text-orange">
             See it with your own data →
@@ -296,7 +296,7 @@ export default function Ask() {
           <Link href="/" aria-label="Business Brain 24 home" className="flex h-8 w-8 items-center justify-center lg:hidden">
             <BrandMark className="h-8 w-8" />
           </Link>
-          <p className="text-[15px] font-medium">Brain</p>
+          <p className="text-[15px] font-medium">Shapla assistant</p>
           <span className="truncate whitespace-nowrap rounded-full bg-surface px-2.5 py-1 text-[12px] text-muted">{COMPANY} · demo</span>
           <button onClick={newChat} className="ml-auto flex h-9 w-9 items-center justify-center rounded-lg text-muted hover:bg-surface lg:hidden" aria-label="New chat">
             <SquarePen size={ICON.md} />
@@ -306,8 +306,8 @@ export default function Ask() {
         {empty ? (
           <div className="flex min-h-0 flex-1 flex-col overflow-y-auto px-4" data-lenis-prevent>
             <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease }} className="mx-auto flex w-full max-w-[720px] flex-1 flex-col justify-center py-10">
-              <h1 className="text-center text-[28px] font-medium tracking-[-0.03em] sm:text-[34px]">What do you want to know?</h1>
-              <p className="mt-2 text-center text-[15px] text-muted">Ask in plain words, in English or Bangla. Get the numbers and the charts.</p>
+              <h1 className="text-center text-[28px] font-medium tracking-[-0.03em] sm:text-[34px]">What would you like to know about Shapla?</h1>
+              <p className="mt-2 text-center text-[15px] text-muted">Ask about sales, finance, payroll, logistics, stock or production. Get the numbers and the charts.</p>
               <div className="mt-8">{composer}</div>
 
               <div className="mt-6 flex gap-1.5 overflow-x-auto pb-1 [scrollbar-width:none]">
@@ -429,7 +429,7 @@ function BrainMessage({
           <div className="space-y-4">
             {r.demo && (
               <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="-mt-1 flex items-center gap-1.5 text-[12px] text-subtle">
-                <Database size={ICON.xs} /> Sample data · {COMPANY}
+                <Database size={ICON.xs} /> From {COMPANY} records
               </motion.p>
             )}
             {r.kpis && (

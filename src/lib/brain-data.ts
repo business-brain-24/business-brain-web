@@ -1,5 +1,5 @@
-import { answer, type Chart, type Kpi, type Reply, type Unit } from "@/lib/brain-knowledge";
-import { shaplaAnswer, shaplaStarters } from "@/lib/brain-shapla";
+import { type Chart, type Kpi, type Reply, type Unit } from "@/lib/brain-knowledge";
+import { shaplaAgent, shaplaModules } from "@/lib/shapla-agent";
 import {
   COMPANY,
   LAST_YEAR,
@@ -772,33 +772,21 @@ export function dataAnswer(raw: string): Reply | null {
   return hit[1](context(raw));
 }
 
-/** Data questions are answered from the sample company; everything else from product knowledge. */
-/* Ask Brain only talks about the business and Business Brain 24. Anything else gets a polite no. */
-const ON_TOPIC = /\b(business|brain|erp|bb24|shapla|sales?|sell|sold|revenue|profit|loss|margin|cost|spend|price|pricing|quote|budget|cash|bank|finance|account|ledger|vat|tax|invoice|bill|receivable|payable|ageing|aging|collect|payment|bkash|nagad|customer|dealer|distributor|retailer|supplier|vendor|purchase|procure|po\b|order|stock|inventory|warehouse|depot|sku|product|category|production|factory|plant|batch|yield|oee|downtime|quality|employee|staff|people|headcount|hr\b|hrms|payroll|salary|overtime|attendance|leave|attrition|hiring|recruit|department|branch|region|division|target|kpi|report|dashboard|chart|forecast|demand|pipeline|project|watch ?tower|mcp|chatgpt|claude|ai\b|module|app|demo|fit session|contact|setup|implement|deploy|cloud|premise|security|integration|scorecard|funnel|trend|compare|month|year|today|yesterday)/;
-const GREETING = /^\s*(hi|hello|hey|salam|assalamu|good (morning|afternoon|evening)|thanks?|thank you)\b/;
-const BANGLA = /[\u0980-\u09FF]/;
-
-const decline = (): Reply => ({
-  text: "Sorry, I can only help with questions about your business and Business Brain 24, like sales, stock, payroll, customers or how the system works. Here are a few things you could ask.",
-  follow: [...shaplaStarters.slice(0, 3), "What is Business Brain 24?"],
-});
-
+/** The chat is Shapla Foods' own assistant: every question goes to the Shapla agent. */
 export function respond(q: string): Reply {
-  const lower = q.toLowerCase();
-  if (GREETING.test(lower) && lower.split(/\s+/).length <= 4) {
-    return { text: "Hello! Ask me anything about your business: sales, stock, payroll, customers, or how Business Brain 24 works.", follow: shaplaStarters.slice(0, 4) };
-  }
-  if (!ON_TOPIC.test(lower) && !BANGLA.test(q)) return decline();
-  return shaplaAnswer(lower) ?? dataAnswer(q) ?? answer(q);
+  return shaplaAgent(q);
 }
 
-export const dataStarters: { module: string; questions: string[] }[] = [
+/** Question groups shown under the chat box, one per module. */
+export const dataStarters = shaplaModules;
+
+/** Earlier generated-data starters, kept for reference. */
+export const legacyStarters: { module: string; questions: string[] }[] = [
   { module: "Sales", questions: ["What were last year's sales by division?", "Compare sales 2024 vs 2025 vs 2026", "Which products sold the most this year?", "What were yesterday's sales by branch?"] },
   { module: "Payroll", questions: ["Show payroll cost last year", "Payroll by department", "Show overtime by month", "Compare payroll 2024 vs 2025 vs 2026"] },
   { module: "Manufacturing", questions: ["Show production output this year", "OEE by line", "What is causing downtime?", "Show latest batches"] },
   { module: "Inventory", questions: ["Show stock by warehouse", "Forecast stock for the next 8 weeks", "Which items are slow moving?", "Days of cover by category"] },
   { module: "Finance", questions: ["Show profit and loss for 2025", "Show receivables ageing", "Show cash balance by month", "Budget vs actual by cost centre"] },
   { module: "People", questions: ["Show headcount trend", "Attrition by department", "Attendance rate this year", "Late arrivals by department"] },
-  { module: "Scorecards", questions: shaplaStarters.slice(0, 4) },
   { module: "More", questions: ["How is my business doing?", "Purchase spend by supplier", "Show the sales pipeline", "Show project progress"] },
 ];
