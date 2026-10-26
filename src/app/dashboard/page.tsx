@@ -124,7 +124,6 @@ export default function Dashboard() {
       ) : (
         <div key={`${tab}-${query}`} className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {shown.map((a, i) => {
-            const [label, value] = a.kpis[0];
             const pinned = favs.includes(a.slug);
             return (
               <div key={a.slug} style={{ animationDelay: `${Math.min(i, 12) * 0.025}s` }} className="bb-fade-up group relative">
@@ -135,9 +134,8 @@ export default function Dashboard() {
                   <AppIcon app={a} size={52} />
                   <div className="min-w-0 flex-1">
                     <p className="truncate text-[15px] font-medium">{a.name}</p>
-                    <p className="mt-0.5 truncate text-[12px] text-muted">
-                      {label} · <span className="font-medium text-ink">{value}</span>
-                    </p>
+                    {/* Only the app's group here: one number per tile mixed unrelated data (sales next to attendance). */}
+                    <p className="mt-0.5 truncate text-[12px] text-muted">{categories.find((c) => c.id === a.category)?.name}</p>
                   </div>
                   <ArrowUpRight size={ICON.md} className="shrink-0 text-muted transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-orange" />
                 </Link>

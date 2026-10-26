@@ -29,7 +29,7 @@ export default function Story() {
       <JsonLd data={breadcrumbLd([["Success stories", "/customers"], ["Akboria", "/customers/akboria"]])} />
       <section className="container-x pt-[120px] sm:pt-[150px]">
         <p className="flex flex-wrap gap-1.5 text-[13px] text-muted">
-          <Link href="/resources" className="hover:text-ink">Resources</Link> / <Link href="/customers" className="hover:text-ink">Success stories</Link> / <span className="text-ink">Akboria</span>
+          <Link href="/customers" className="hover:text-ink">Success stories</Link> / <span className="text-ink">Akboria</span>
         </p>
         <SplitHeading text="How Akboria runs a brand from 1911 on one brain." className="h-display mt-5 max-w-[960px]" />
         <Reveal delay={0.3} className="mt-6 flex flex-wrap gap-2">

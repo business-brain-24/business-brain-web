@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Button, TextLink } from "@/components/ui/Button";
 
 export const metadata: Metadata = { title: "Page not found",
-  description: "This Business Brain 24 page does not exist. The link may be old or mistyped. Explore our products, see pricing or book a free AI-ERP fit session.", robots: { index: false } };
+  description: "This Business Brain 24 page does not exist. The link may be old or mistyped. Explore our products and industries, or book a free AI-ERP fit session.", robots: { index: false } };
 
 // Nav and footer come from the root layout.
 export default function NotFound() {
@@ -14,7 +14,7 @@ export default function NotFound() {
       <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
         <Button href="/demo">Book a fit session</Button>
         <TextLink href="/products">Products</TextLink>
-        <TextLink href="/pricing">Pricing</TextLink>
+        <TextLink href="/industries">Industries</TextLink>
       </div>
     </section>
   );

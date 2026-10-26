@@ -17,7 +17,7 @@ export default function Story() {
       <JsonLd data={breadcrumbLd([["Success stories", "/customers"], ["Northloom Textiles", "/customers/northloom"]])} />
       <section className="container-x pt-[120px] sm:pt-[150px]">
         <p className="flex flex-wrap gap-1.5 text-[13px] text-muted">
-          <Link href="/resources" className="hover:text-ink">Resources</Link> / <span>Customer stories</span> / <span className="text-ink">Northloom Textiles</span>
+          <Link href="/customers" className="hover:text-ink">Success stories</Link> / <span className="text-ink">Northloom Textiles</span>
         </p>
         <SplitHeading text="How Northloom closed the month in one afternoon." className="h-display mt-5 max-w-[960px]" />
         <Reveal delay={0.3} className="mt-6 flex flex-wrap gap-2">

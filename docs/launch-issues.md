@@ -170,3 +170,25 @@ Legend: ✅ done in code · 🔶 done, needs a check after deploy · ⏳ waiting
 | `TURNSTILE_SECRET` | encrypted secret | #11 |
 | `LEAD_WEBHOOK_URL`, `LEAD_WEBHOOK_TOKEN` | encrypted secret | #11 |
 | `LEADS` | KV namespace binding | #11 |
+
+---
+
+## Content alignment doc (26 Oct 2026)
+
+| Instruction | Status | Where |
+| --- | --- | --- |
+| Remove Use Case section | ✅ | `UseCases` removed from `home/Sections.tsx` and `app/page.tsx` |
+| Remove "Clear approvals, one record" from Why Business Brain 24 | ✅ | `WhyUs` items |
+| Remove the buttons under "Built for your business" | ✅ | Deployment pills removed from `Compliance` |
+| Remove Customer section from landing page | ✅ | `Reviews` removed; stories still at `/customers` |
+| Watch Tower: redesign or a glimpse of the actual portal | ⏳ Need portal screenshots | Copy updated to the doc's wording; the live portal needs a sign-in |
+| Replace "The AI-centric ERP for growing businesses. Configured for Bangladesh." | ✅ | Footer, "What it does" heading, manifest, share image, llms.txt, Ask Brain |
+| Product tab: keep See all products; remove All 55 apps and quote | ✅ | `layout/Nav.tsx`, footer |
+| About: use the doc's Business Brain and Watch Tower copy | ✅ | `app/about/page.tsx` |
+| Remove Pricing and Resources tabs | ✅ | Nav, footer, sitemap, llms.txt; pages stay on disk, unlinked |
+| Remove long dashes everywhere | ✅ | Built site checked: none |
+| Approved hero and supporting copy | ✅ | Already matched |
+| Primary and secondary hero buttons | ✅ | Secondary sub now "Book a free demo" |
+| "Run your business. Ask it anything." inside the chat box | ✅ | `AskBox text=` in the Brain AI section |
+| Product tab: all Betopia and Akboria modules and sub-modules with a few lines each | ✅ | Already in `lib/catalog.ts` (Betopia 4 / 55, Akboria 7 / 49, all described) |
+| Do not show mixed data in the dashboard | ✅ | `/dashboard` tiles show the app group, not one KPI per app |

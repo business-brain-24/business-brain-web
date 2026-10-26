@@ -78,7 +78,7 @@ export function answer(raw: string): Reply {
   if (has(q, "price", "pricing", "cost", "how much", "plan", "subscription", "trial")) {
     return {
       text: "Business Brain is a dedicated ERP, so pricing is tailored to you. Share your modules, users and custom requirements and we'll send a quote within one working day.",
-      links: [{ label: "Request a quote", href: "/pricing" }],
+      links: [{ label: "Book a fit session", href: "/demo" }],
       follow: ["Which modules do you have?", "How does it work?", "Book a fit session"],
     };
   }
@@ -250,7 +250,7 @@ export function answer(raw: string): Reply {
     return {
       text: `Beyond the ${products.length} core products, there are ${appCount} apps in total, all sharing one login and one database.`,
       bullets: appCatalog.map((g) => `${g.name} (${g.apps.length}): ${g.apps.slice(0, 4).map((a) => a.name).join(", ")}…`),
-      links: [{ label: `See all ${appCount} apps`, href: "/apps" }],
+      links: [{ label: "See all products", href: "/products" }],
       follow: ["Which modules do you have?", "Is there a mobile app?", "How much does it cost?"],
     };
   }
@@ -293,7 +293,7 @@ export function answer(raw: string): Reply {
   // what is it / overview / greeting
   if (has(q, "what is", "about", "overview", "explain", "business brain", "hello", "hi ", "hey")) {
     return {
-      text: "Business Brain 24 is the AI-centric ERP for growing businesses. It brings HR, payroll, finance, purchasing, inventory, sales and manufacturing into one live record, with AI at the core, and our own MCP server lets you connect ChatGPT or Claude. Configured to your workflows and Bangladesh rules.",
+      text: "Business Brain 24 is the agentic ERP that cuts operating costs and lifts productivity across your enterprise. It brings HR, payroll, finance, purchasing, inventory, sales and manufacturing into one live record, with AI at the core, and our own MCP server lets you connect ChatGPT or Claude. Configured to your workflows and Bangladesh rules.",
       follow: ["Can I connect ChatGPT or Claude?", "What is Watch Tower?", "How can it help my business?"],
     };
   }

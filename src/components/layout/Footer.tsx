@@ -16,7 +16,6 @@ const cols = [
       ["Manufacturing", "/products/manufacturing"],
       ["HRMS & Payroll", "/products/hrms"],
       ["All products", "/products"],
-      ["All 55 apps", "/apps"],
     ],
   },
   {
@@ -29,11 +28,10 @@ const cols = [
     ],
   },
   {
-    title: "Resources",
+    title: "Get in touch",
     links: [
-      ["Blog", "/resources"],
       ["Ask Brain AI", "/ask"],
-      ["Pricing", "/pricing"],
+      ["Book a fit session", "/demo"],
       ["Contact", "/contact"],
     ],
   },
@@ -48,7 +46,7 @@ export default function Footer() {
       <div className="flex flex-col justify-between gap-12 md:flex-row">
         <div className="max-w-[300px]">
           <Logo />
-          <p className="mt-4 text-[14px] leading-[22px] text-muted">The AI-centric ERP for growing businesses. Configured for Bangladesh.</p>
+          <p className="mt-4 text-[14px] leading-[22px] text-muted">The agentic ERP that cuts operating costs and lifts productivity across your enterprise.</p>
           <a href={contact.phoneHref} className="mt-3 flex min-h-11 items-center text-[14px] text-ink transition-colors hover:text-orange">
             {contact.phone}
           </a>

@@ -12,13 +12,10 @@ export const staticRoutes = [
   "/",
   "/products",
   "/industries",
-  "/pricing",
   "/customers",
   "/about",
-  "/apps",
   "/contact",
   "/demo",
-  "/resources",
   "/careers",
   "/partners",
   "/ask",
@@ -79,7 +76,7 @@ export function fitDescription(base: string | string[], tails: string[]) {
 
 export const descriptionTails = [
   "Cloud or on-premise, with AI at the core.",
-  `Part of ${SITE_NAME}, the AI-centric ERP configured for Bangladesh.`,
+  `Part of ${SITE_NAME}, the agentic ERP with AI at the core.`,
   `Part of the ${SITE_NAME} AI-centric ERP.`,
   "Configured for Bangladesh, with AI at the core.",
   `One connected ERP by ${SITE_NAME}.`,

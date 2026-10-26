@@ -123,7 +123,7 @@ export function Bundle({ ind }: { ind: Industry }) {
             <Label>Recommended bundle</Label>
             <h2 className="mt-2 text-[28px] font-medium tracking-[-0.03em] sm:text-[34px]">The {ind.name.split(" ")[0]} stack</h2>
           </div>
-          <TextLink href="/pricing">Price this bundle</TextLink>
+          <TextLink href="/demo">Book a fit session</TextLink>
         </div>
         <Stagger className="mt-8 grid grid-cols-2 gap-2.5 md:grid-cols-5">
           {ind.bundle.map((b) => {

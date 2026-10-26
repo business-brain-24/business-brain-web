@@ -128,7 +128,7 @@ export default function Hero() {
             >
               <span className="text-[12px] font-semibold uppercase tracking-[0.12em] text-orange-deep">Watch Tower · Free demo</span>
               <span className="mt-1 text-[16px] font-medium leading-snug tracking-[-0.01em]">See your business world</span>
-              <span className="mt-0.5 text-[13px] text-muted">Book a free demo and watch your operation live</span>
+              <span className="mt-0.5 text-[13px] text-muted">Book a free demo</span>
               <span className="mt-3 inline-flex items-center gap-1.5 text-[13px] font-medium">
                 <span className="flex h-7 w-7 items-center justify-center rounded-[8px] bg-orange-soft text-orange transition-transform group-hover:translate-x-0.5">
                   <ArrowUpRight size={ICON.sm} />
@@ -672,11 +672,13 @@ function HeroAsk() {
 }
 
 /* Kept for the dark Brain AI section further down the page. */
-export function AskBox({ dark = false }: { dark?: boolean }) {
+/** With `text`, the box shows that line instead of cycling through example questions. */
+export function AskBox({ dark = false, text }: { dark?: boolean; text?: string }) {
   const [i, setI] = useState(0);
   const [typed, setTyped] = useState("");
 
   useEffect(() => {
+    if (text) return;
     const full = prompts[i];
     let n = 0;
     setTyped("");
@@ -690,7 +692,7 @@ export function AskBox({ dark = false }: { dark?: boolean }) {
       window.clearInterval(typer);
       window.clearTimeout(next);
     };
-  }, [i]);
+  }, [i, text]);
 
   return (
     <div
@@ -701,8 +703,8 @@ export function AskBox({ dark = false }: { dark?: boolean }) {
     >
       <Sparkles size={ICON.lg} className="shrink-0 text-orange" />
       <p className={"min-w-0 flex-1 truncate text-left text-[14px] sm:text-[15px] " + (dark ? "text-white/80" : "text-muted")}>
-        {typed}
-        <span className="ml-0.5 inline-block h-4 w-px translate-y-0.5 animate-pulse bg-orange" />
+        {text ?? typed}
+        {!text && <span className="ml-0.5 inline-block h-4 w-px translate-y-0.5 animate-pulse bg-orange" />}
       </p>
       <AnimatePresence mode="wait">
         <motion.a

@@ -9,8 +9,6 @@ import {
   HowItWorks,
   Industries,
   ProductsBento,
-  Reviews,
-  UseCases,
   WatchTower,
   WhyUs,
 } from "@/components/home/Sections";
@@ -30,14 +28,12 @@ export default function Home() {
       <About />
       <BrainAI />
       <WatchTower />
-      <UseCases />
       <WhyUs />
       <ProductsBento />
       <Blocks />
       <Industries />
       <HowItWorks />
       <Compliance />
-      <Reviews />
       <CTA />
     </>
   );

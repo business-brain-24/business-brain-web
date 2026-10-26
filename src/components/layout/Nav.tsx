@@ -83,10 +83,8 @@ export default function Nav() {
   };
 
   const links = [
-    { href: "/pricing", label: "Pricing" },
     { href: "/customers", label: "Customers" },
     { href: "/about", label: "About" },
-    { href: "/resources", label: "Resources" },
   ];
 
   // the chat is a full-screen app with its own way home
@@ -220,8 +218,6 @@ function ProductsMenu() {
         </Link>
         <div className="flex justify-between text-[14px]">
           <Link href="/products" className="hover:underline">See all products →</Link>
-          <Link href="/apps" className="text-white/65 hover:text-white">All 55 apps</Link>
-          <Link href="/pricing" className="text-white/65 hover:text-white">Request a quote</Link>
         </div>
       </div>
     </div>
@@ -310,10 +306,8 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
           </motion.div>
         ))}
         {[
-          ["/pricing", "Pricing"],
           ["/customers", "Customers"],
           ["/about", "About"],
-          ["/resources", "Resources"],
           ["/careers", "Careers"],
           ["/contact", "Contact"],
         ].map(([href, label]) => (

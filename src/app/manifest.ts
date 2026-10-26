@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Business Brain 24",
     short_name: "BB24",
-    description: "The AI-centric ERP for growing businesses. Configured for Bangladesh.",
+    description: "The agentic ERP that cuts operating costs and lifts productivity across your enterprise.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

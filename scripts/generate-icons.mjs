@@ -49,7 +49,8 @@ const card = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="1200" h
   <rect x="72" y="72" width="180" height="180" rx="36" fill="#ffffff"/>
   <text x="72" y="380" font-family="Helvetica, Arial, sans-serif" font-size="76" font-weight="700" fill="#ffffff" letter-spacing="-2">Business Brain 24</text>
   <text x="72" y="455" font-family="Helvetica, Arial, sans-serif" font-size="40" fill="#FF6B2C">Do more. Spend less.</text>
-  <text x="72" y="530" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#ffffff" fill-opacity="0.65">The AI-centric ERP, configured for Bangladesh.</text>
+  <text x="72" y="520" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#ffffff" fill-opacity="0.65">The agentic ERP that cuts operating costs</text>
+  <text x="72" y="562" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#ffffff" fill-opacity="0.65">and lifts productivity across your enterprise.</text>
 </svg>`);
 await sharp(card).composite([{ input: logo, left: 87, top: 87 }]).png().toFile("public/og/default.png");
 

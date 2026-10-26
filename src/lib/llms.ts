@@ -8,17 +8,15 @@ import { absolute, SITE_EMAIL, SITE_NAME } from "./site";
 
 const intro = `# ${SITE_NAME}
 
-> ${SITE_NAME} is an AI-centric ERP for growing businesses: finance, HR and payroll, procurement, inventory, sales, manufacturing and more in one connected system, with AI at the core.
+> ${SITE_NAME} is the agentic ERP that cuts operating costs and lifts productivity across your enterprise: finance, HR and payroll, procurement, inventory, sales, manufacturing and more in one connected system, with AI at the core.
 
 ${SITE_NAME} is for growing companies and groups, configured for Bangladesh (local VAT and Mushak forms, TDS, Bangladesh payroll rules). Brain AI answers questions on your own data, and an MCP server lets assistants such as ChatGPT or Claude connect to it. It runs in the cloud or on-premise. There are no fixed packages: every rollout is quoted for the modules, users and sites you need.`;
 
 const company = `## Company
 
 - [About](${absolute("/about")}): who we are and what we build
-- [Pricing](${absolute("/pricing")}): no fixed packages; request a tailored quote
 - [Book a fit session](${absolute("/demo")}): free AI-ERP fit session or a Watch Tower demo
-- [Contact](${absolute("/contact")}): phone ${contact.phone}, email ${SITE_EMAIL}
-- [All apps](${absolute("/apps")}): the full app catalogue`;
+- [Contact](${absolute("/contact")}): phone ${contact.phone}, email ${SITE_EMAIL}`;
 
 const storyLine = (s: (typeof stories)[number]) => `- [${s.company}](${absolute(s.page ? `/customers/${s.slug}` : "/customers")}): ${s.industry}. ${s.summary}`;
 
