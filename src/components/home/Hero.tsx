@@ -7,7 +7,6 @@ import { ArrowUp, ArrowUpRight, Check, Sparkles, X } from "lucide-react";
 import clsx from "clsx";
 import { getProduct, WATCH_TOWER_DEMO } from "@/lib/data";
 import dynamic from "next/dynamic";
-import LogoHub from "./LogoHub";
 import ProductVisual from "./ProductVisual";
 import { Button } from "@/components/ui/Button";
 import LazyScene from "@/components/three/LazyScene";
@@ -16,8 +15,23 @@ import { ICON } from "@/lib/icons";
 // the 3D mark loads after the page; the animated SVG mark stands in until then
 const LogoNeuron = dynamic(() => import("@/components/three/LogoNeuron"), {
   ssr: false,
-  loading: () => <LogoHub className="h-full w-full p-16" />,
+  // the static logo underneath (LazyScene fallback) covers loading
+  loading: () => null,
 });
+
+/** Downloads the 3D logo while the browser is idle after load, on screens that will show it. */
+function usePrefetch3D() {
+  useEffect(() => {
+    if (window.innerWidth < 768 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const go = () => void import("@/components/three/LogoNeuron");
+    if (typeof window.requestIdleCallback === "function") {
+      const id = window.requestIdleCallback(go, { timeout: 2500 });
+      return () => window.cancelIdleCallback(id);
+    }
+    const t = window.setTimeout(go, 1500);
+    return () => window.clearTimeout(t);
+  }, []);
+}
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -58,6 +72,7 @@ const prompts = [
 ];
 
 export default function Hero() {
+  usePrefetch3D();
   return (
     <section className="px-2 pt-2 sm:px-3 sm:pt-3" style={{ fontFamily: "system-ui, sans-serif" }}>
       <div className="relative flex w-full flex-col items-center overflow-clip rounded-[20px] bg-[#F2F2F3]">

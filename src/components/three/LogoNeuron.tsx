@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useFrameloop } from "./LazyScene";
+import { useFrameloop, useSceneReady } from "./LazyScene";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment, Float, Lightformer, OrbitControls, RoundedBox } from "@react-three/drei";
 import * as THREE from "three";
@@ -154,6 +154,18 @@ function Mark() {
   );
 }
 
+/** Tells LazyScene the canvas has drawn, so the static logo can fade out. */
+function FirstFrame() {
+  const ready = useSceneReady();
+  const done = useRef(false);
+  useFrame(() => {
+    if (done.current) return;
+    done.current = true;
+    ready();
+  });
+  return null;
+}
+
 export default function LogoNeuron() {
   const frameloop = useFrameloop();
   const [coarse, setCoarse] = useState(false);
@@ -172,12 +184,13 @@ export default function LogoNeuron() {
       <hemisphereLight args={["#ffffff", "#F3E3D8", 0.9]} />
       <directionalLight position={[3, 5, 6]} intensity={1.1} />
       <directionalLight position={[-5, 1, 3]} intensity={0.35} color="#DCE6F5" />
-      <Environment resolution={256}>
+      <Environment resolution={128}>
         <Lightformer intensity={1.2} position={[0, 5, 5]} scale={[12, 6, 1]} />
         <Lightformer intensity={0.7} position={[-6, 0, 3]} rotation-y={Math.PI / 2} scale={[10, 8, 1]} color="#E8EEF7" />
         <Lightformer intensity={0.5} color="#FFE2CF" position={[6, -2, 2]} rotation-y={-Math.PI / 2} scale={[10, 6, 1]} />
       </Environment>
       <Mark />
+      <FirstFrame />
       <OrbitControls
         enablePan={false}
         enableZoom={false}
