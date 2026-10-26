@@ -1,0 +1,161 @@
+/* Business Brain 24 design tokens (WEBSITE-CONTEXT.md, 26 Oct 2026), scoped to this landing page only. */
+.lp {
+  --bb-navy: #262d6c;
+  --bb-navy-900: #13173b;
+  --bb-orange: #f16222;
+  --bb-orange-700: #b33d0e;
+  --bb-synapse: #6a45ee;
+  --bb-synapse-soft: #f3f0ff;
+  --bb-synapse-text: #5633cf;
+  --bb-pulse: #0fa3a3;
+  --bb-cream: #f7f3ea;
+  --bb-ink: #161928;
+  --bb-muted: #5d6380;
+  --bb-subtle: #8b91a8;
+  --bb-hairline: rgba(38, 45, 108, 0.07);
+
+  --glass-bg: rgba(255, 253, 248, 0.65);
+  --glass-strong: rgba(255, 253, 248, 0.88);
+  --glass-stroke: rgba(255, 255, 255, 0.95);
+  --glass-blur: 32px;
+  --glass-shadow: 0 14px 36px rgba(60, 42, 20, 0.08);
+
+  background: var(--bb-cream);
+  color: var(--bb-ink);
+  font-family: var(--lp-ui), system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+
+.display {
+  font-family: var(--lp-display), system-ui, sans-serif;
+  letter-spacing: -0.025em;
+}
+.mono {
+  font-family: var(--lp-mono), ui-monospace, monospace;
+}
+.bangla {
+  font-family: var(--lp-bangla), "Noto Sans Bengali", sans-serif;
+}
+
+.eyebrow {
+  font-family: var(--lp-mono), ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--bb-orange-700);
+}
+
+.accent {
+  background: linear-gradient(180deg, #f16222, #c2410c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-stroke);
+  border-radius: 22px;
+  backdrop-filter: blur(var(--glass-blur)) saturate(140%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(140%);
+  box-shadow: var(--glass-shadow);
+}
+.glassStrong {
+  composes: glass;
+  background: var(--glass-strong);
+}
+
+.btnSignal {
+  background: linear-gradient(180deg, #f67d41, #f16222);
+  color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(241, 98, 34, 0.4);
+  transition: transform 150ms ease, box-shadow 200ms ease;
+}
+.btnSignal:hover {
+  box-shadow: 0 14px 34px rgba(241, 98, 34, 0.5);
+}
+.btnSignal:active {
+  transform: scale(0.98);
+}
+.btnNavy {
+  background: var(--bb-navy);
+  color: #fff;
+  border-radius: 10px;
+  transition: background 200ms ease;
+}
+.btnNavy:hover {
+  background: var(--bb-navy-900);
+}
+.btnGlass {
+  composes: glass;
+  border-radius: 14px;
+  transition: background 200ms ease;
+}
+.btnGlass:hover {
+  background: var(--glass-strong);
+}
+
+/* Soft glass bubbles behind the hero, faded into the cream page. */
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background-image: url("/lp/backdrop.webp");
+  background-size: cover;
+  background-position: center top;
+  opacity: 0.85;
+  -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 55%, transparent 100%);
+}
+
+.livePulse {
+  position: relative;
+}
+.livePulse::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: var(--bb-pulse);
+  animation: pulse 2.4s ease-out infinite;
+}
+
+.float {
+  animation: float 7s ease-in-out infinite;
+}
+.floatSlow {
+  animation: float 9s ease-in-out infinite;
+  animation-delay: -3s;
+}
+
+.approveRing {
+  box-shadow: 0 0 0 4px rgba(241, 98, 34, 0.18), 0 10px 28px rgba(241, 98, 34, 0.4);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float,
+  .floatSlow,
+  .livePulse::after {
+    animation: none;
+  }
+}
