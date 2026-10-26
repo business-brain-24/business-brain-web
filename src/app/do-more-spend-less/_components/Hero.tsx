@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
-import { ArrowRight, Headphones, ListChecks, MousePointer2, ShoppingCart, Tags, Truck } from "lucide-react";
+import { ArrowRight, Headphones, ListChecks, MousePointer2, ShoppingCart, Sparkles, Tags, Truck } from "lucide-react";
 import s from "../lp.module.css";
 import VideoButton from "./VideoButton";
 
@@ -16,9 +16,12 @@ export default function Hero() {
       <div className={s.heroBg} aria-hidden />
 
       <div className="container-x relative text-center">
-        <p className={clsx(s.eyebrow, "inline-flex items-center gap-2 rounded-full border border-white bg-white/60 px-3.5 py-1.5 backdrop-blur")}>
-          <span className="h-1.5 w-1.5 rounded-full bg-[#F16222]" />
-          The agentic ERP<span className="hidden sm:inline"> · From factory to shelf</span>
+        <p className="inline-flex items-center gap-2.5 rounded-full border border-white bg-white/80 py-1.5 pl-1.5 pr-4 shadow-[0_8px_24px_-12px_rgba(60,42,20,0.25)] backdrop-blur">
+          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[linear-gradient(180deg,#F67D41,#D84E12)] text-white" aria-hidden>
+            <Sparkles size={14} strokeWidth={2} />
+          </span>
+          <span className="text-[15px] font-semibold text-[#262D6C]">The Agentic ERP</span>
+          <span className="hidden text-[15px] text-[#5D6380] sm:inline">· from factory to shelf</span>
         </p>
         <h1 className={clsx(s.display, "mx-auto mt-6 text-[52px] font-semibold leading-[0.98] text-[#161928] sm:text-[80px] lg:text-[96px]")}>
           Do More.
