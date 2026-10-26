@@ -5,6 +5,7 @@ import { Download, Filter, Plus, Search, X } from "lucide-react";
 import clsx from "clsx";
 import type { App } from "@/lib/workspace";
 import { Avatar, KpiStrip, StatusPill } from "./shared";
+import { ICON } from "@/lib/icons";
 
 /** Records layout: status tabs, search, a dense table, and a detail drawer for the selected row. */
 export default function Records({ app, cols, rows, action }: { app: App; cols: string[]; rows: string[][]; action: string }) {
@@ -32,23 +33,25 @@ export default function Records({ app, cols, rows, action }: { app: App; cols: s
           </div>
           <div className="flex items-center gap-2">
             <label className="flex h-9 flex-1 items-center gap-2 rounded-full border border-line px-3 focus-within:border-orange lg:w-56 lg:flex-none">
-              <Search size={14} className="text-muted" />
+              <Search size={ICON.sm} className="text-muted" />
               <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search" className="min-w-0 flex-1 bg-transparent text-[13px] outline-none" />
             </label>
-            <button className="flex h-9 w-9 items-center justify-center rounded-full border border-line hover:border-ink/30" aria-label="Filter"><Filter size={14} /></button>
-            <button className="flex h-9 w-9 items-center justify-center rounded-full border border-line hover:border-ink/30" aria-label="Export"><Download size={14} /></button>
+            <button className="flex h-9 w-9 items-center justify-center rounded-full border border-line hover:border-ink/30" aria-label="Filter"><Filter size={ICON.sm} /></button>
+            <button className="flex h-9 w-9 items-center justify-center rounded-full border border-line hover:border-ink/30" aria-label="Export"><Download size={ICON.sm} /></button>
             <button className="flex h-9 shrink-0 items-center gap-1.5 rounded-full bg-[linear-gradient(180deg,#FF6B2C,#C2410C)] px-3.5 text-[13px] font-medium text-white">
-              <Plus size={14} /> <span className="hidden sm:inline">{action}</span>
+              <Plus size={ICON.sm} /> <span className="hidden sm:inline">{action}</span>
             </button>
           </div>
         </div>
 
+        {/* On phones the table scrolls sideways: Employee stays pinned and the edge fade hints at more columns. */}
+        <div className="relative">
         <div className="overflow-x-auto">
           <table className="w-full min-w-[720px] text-left text-[14px]">
-            <thead className="bg-surface text-[11px] uppercase tracking-[0.08em] text-muted">
+            <thead className="bg-surface text-[12px] uppercase tracking-[0.08em] text-muted">
               <tr>
                 <th className="w-10 px-4 py-3"><input type="checkbox" aria-label="Select all" className="accent-[#FF6B2C]" /></th>
-                {cols.map((c) => <th key={c} className="px-4 py-3 font-medium">{c}</th>)}
+                {cols.map((c, i) => <th key={c} className={clsx("px-4 py-3 font-medium", i === 0 && "sticky left-0 z-[1] bg-surface sm:static")}>{c}</th>)}
               </tr>
             </thead>
             <tbody>
@@ -56,7 +59,7 @@ export default function Records({ app, cols, rows, action }: { app: App; cols: s
                 <tr key={r.join()} onClick={() => setOpen(r)} className={clsx("cursor-pointer border-t border-line transition-colors hover:bg-orange-soft/50", open === r && "bg-orange-soft/60")}>
                   <td className="px-4 py-3" onClick={(e) => e.stopPropagation()}><input type="checkbox" aria-label={`Select ${r[0]}`} className="accent-[#FF6B2C]" /></td>
                   {r.map((cell, i) => (
-                    <td key={i} className={clsx("whitespace-nowrap px-4 py-3", i === 0 && "font-medium")}>
+                    <td key={i} className={clsx("whitespace-nowrap px-4 py-3", i === 0 && "sticky left-0 z-[1] bg-white font-medium shadow-[1px_0_0_var(--color-line)] sm:static sm:shadow-none")}>
                       {i === r.length - 1 ? (
                         <StatusPill s={cell} />
                       ) : i === personCol ? (
@@ -74,6 +77,8 @@ export default function Records({ app, cols, rows, action }: { app: App; cols: s
             </tbody>
           </table>
         </div>
+        <div aria-hidden className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-white to-transparent sm:hidden" />
+        </div>
         <div className="flex items-center justify-between border-t border-line px-4 py-3 text-[12px] text-muted">
           <span>Showing {shown.length} of {rows.length}</span>
           <span>Click a row for details</span>
@@ -89,7 +94,7 @@ export default function Records({ app, cols, rows, action }: { app: App; cols: s
                 <p className="text-[12px] text-muted">{app.name}</p>
                 <p className="text-[18px] font-semibold">{open[0]}</p>
               </div>
-              <button onClick={() => setOpen(null)} aria-label="Close" className="flex h-9 w-9 items-center justify-center rounded-full hover:bg-surface"><X size={18} /></button>
+              <button onClick={() => setOpen(null)} aria-label="Close" className="flex h-9 w-9 items-center justify-center rounded-full hover:bg-surface"><X size={ICON.lg} /></button>
             </div>
             <div className="flex-1 overflow-y-auto p-5">
               <StatusPill s={open[open.length - 1]} />

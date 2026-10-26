@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useFrameloop } from "./LazyScene";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment, Float, Lightformer, OrbitControls, RoundedBox } from "@react-three/drei";
 import * as THREE from "three";
@@ -154,16 +155,18 @@ function Mark() {
 }
 
 export default function LogoNeuron() {
+  const frameloop = useFrameloop();
   const [coarse, setCoarse] = useState(false);
   useEffect(() => setCoarse(window.matchMedia("(pointer: coarse)").matches), []);
 
   return (
     <Canvas
+      frameloop={frameloop}
       dpr={[1, 2]}
       camera={{ position: [0, 0, 7.6], fov: 40 }}
       gl={{ antialias: true, alpha: true }}
       style={{ touchAction: coarse ? "pan-y" : "none", cursor: coarse ? undefined : "grab" }}
-      aria-label="Business Brain 24 — drag to rotate"
+      aria-label="Business Brain 24. Drag to rotate"
     >
       {/* soft studio light: broad, low-contrast sources so the satin reads as matte with gentle highlights */}
       <hemisphereLight args={["#ffffff", "#F3E3D8", 0.9]} />

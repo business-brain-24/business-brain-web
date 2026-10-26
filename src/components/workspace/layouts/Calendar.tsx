@@ -2,6 +2,7 @@ import { ChevronLeft, ChevronRight, Plus } from "lucide-react";
 import clsx from "clsx";
 import type { Layout, Tone } from "@/lib/app-seeds";
 import { Panel } from "./shared";
+import { ICON } from "@/lib/icons";
 
 type Props = Extract<Layout, { kind: "calendar" }>;
 
@@ -26,15 +27,15 @@ export default function Calendar({ week, events, side }: Props) {
       <Panel>
         <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line px-4 py-3">
           <div className="flex items-center gap-2">
-            <button aria-label="Previous week" className="flex h-8 w-8 items-center justify-center rounded-full border border-line"><ChevronLeft size={15} /></button>
-            <button aria-label="Next week" className="flex h-8 w-8 items-center justify-center rounded-full border border-line"><ChevronRight size={15} /></button>
+            <button aria-label="Previous week" className="flex h-8 w-8 items-center justify-center rounded-full border border-line"><ChevronLeft size={ICON.md} /></button>
+            <button aria-label="Next week" className="flex h-8 w-8 items-center justify-center rounded-full border border-line"><ChevronRight size={ICON.md} /></button>
             <p className="ml-1 text-[15px] font-semibold">{week}</p>
           </div>
           <div className="flex items-center gap-2">
             <div className="flex rounded-full border border-line p-0.5 text-[12px]">
               {["Day", "Week", "Month"].map((v) => <span key={v} className={clsx("rounded-full px-3 py-1", v === "Week" ? "bg-orange-soft font-medium text-orange-deep" : "text-muted")}>{v}</span>)}
             </div>
-            <button className="flex h-8 items-center gap-1 rounded-full bg-[linear-gradient(180deg,#FF6B2C,#C2410C)] px-3 text-[12px] font-medium text-white"><Plus size={13} /> New</button>
+            <button className="flex h-8 items-center gap-1 rounded-full bg-[linear-gradient(180deg,#FF6B2C,#C2410C)] px-3 text-[12px] font-medium text-white"><Plus size={ICON.sm} /> New</button>
           </div>
         </div>
         <div className="overflow-x-auto">
@@ -64,7 +65,7 @@ export default function Calendar({ week, events, side }: Props) {
                         style={{ top: top + 1, height, left: overlap ? `${idx * 50 + 2}%` : 3, right: overlap ? `${(1 - idx) * 50 + 2}%` : 3, animationDelay: `${0.1 + i * 0.04}s` }}
                       >
                         <p className="truncate font-semibold">{e.title}</p>
-                        {height > 34 && <p className="truncate opacity-75">{e.start}–{e.end}{e.where ? ` · ${e.where}` : ""}</p>}
+                        {height > 34 && <p className="truncate opacity-75">{e.start} to {e.end}{e.where ? ` · ${e.where}` : ""}</p>}
                       </div>
                     );
                   })}

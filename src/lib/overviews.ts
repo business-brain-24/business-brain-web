@@ -29,9 +29,9 @@ export const overviews: Record<string, Widget[]> = {
   // ─────────────── General ───────────────
   announcements: [
     { type: "kpis", items: [{ label: "Published this month", value: "24", delta: "+6" }, { label: "Average read rate", value: "87%", delta: "+4%" }, { label: "Acknowledged", value: "1,912", note: "of 2,196 required" }, { label: "Scheduled", value: "2", note: "next: 1 Nov, 09:00" }] },
-    { w: 7, type: "progress", title: "Read rate by announcement", sub: "Staff who opened it", goal: 90, items: [{ label: "Fire drill — Gazipur plant", value: 95 }, { label: "Durga Puja schedule", value: 92 }, { label: "Line 3 back to capacity", value: 88 }, { label: "New expense policy", value: 78 }, { label: "Q4 town hall", value: 95 }] },
+    { w: 7, type: "progress", title: "Read rate by announcement", sub: "Staff who opened it", goal: 90, items: [{ label: "Fire drill: Gazipur plant", value: 95 }, { label: "Durga Puja schedule", value: 92 }, { label: "Line 3 back to capacity", value: 88 }, { label: "New expense policy", value: 78 }, { label: "Q4 town hall", value: 95 }] },
     { w: 5, type: "donut", title: "Reach by location", center: "412", centerLabel: "staff", slices: [{ label: "Gazipur plant", value: 214 }, { label: "Head office", value: 96 }, { label: "Depots", value: 64 }, { label: "Tongi warehouse", value: 38 }] },
-    { w: 12, type: "insight", text: "18 people at Gazipur haven't opened the expense policy. Most work night shift — schedule a repost at 22:15 when the shift starts." },
+    { w: 12, type: "insight", text: "18 people at Gazipur haven't opened the expense policy. Most work night shift. Schedule a repost at 22:15 when the shift starts." },
   ],
   discuss: [
     { type: "kpis", items: [{ label: "Messages today", value: "1,284", delta: "+12%" }, { label: "Active channels", value: "18" }, { label: "Avg. reply time", value: "6 min", delta: "-2 min", downIsGood: true }, { label: "Your mentions", value: "4", note: "2 unanswered" }] },
@@ -40,7 +40,7 @@ export const overviews: Record<string, Widget[]> = {
   ],
   calendar: [
     { type: "kpis", items: [{ label: "Meetings today", value: "5" }, { label: "Hours in meetings", value: "17.5 h", note: "this week" }, { label: "Focus time left", value: "3.5 h", note: "today" }, { label: "Pending invites", value: "2" }] },
-    { w: 5, type: "timeline", title: "Today", items: [{ time: "09:30 · Room 2", title: "Daily stand-up" }, { time: "11:00 · Online", title: "Supplier review — Akij Packaging" }, { time: "14:00 · Board room", title: "Budget sign-off", sub: "Sadia, Farhana, CEO" }, { time: "16:30 · Room 1", title: "1:1 with Sadia" }] },
+    { w: 5, type: "timeline", title: "Today", items: [{ time: "09:30 · Room 2", title: "Daily stand-up" }, { time: "11:00 · Online", title: "Supplier review: Akij Packaging" }, { time: "14:00 · Board room", title: "Budget sign-off", sub: "Sadia, Farhana, CEO" }, { time: "16:30 · Room 1", title: "1:1 with Sadia" }] },
     { w: 7, type: "bars", title: "Meeting hours by day", sub: "This week", items: DAYS.slice(0, 5).map((d, i) => ({ label: d, value: [4.5, 3, 5, 3.5, 1.5][i], display: `${[4.5, 3, 5, 3.5, 1.5][i]}h` })) },
     { w: 12, type: "insight", text: "Wednesday is already 5 hours of meetings. Moving the 1:1 with Sadia to Friday gives you a 2-hour focus block before the plant visit." },
   ],
@@ -66,7 +66,7 @@ export const overviews: Record<string, Widget[]> = {
     { type: "kpis", items: [{ label: "Active projects", value: "8" }, { label: "On track", value: "6" }, { label: "Budget used", value: "৳ 4.1 Cr", note: "of ৳ 6.8 Cr" }, { label: "Hours this week", value: "312", delta: "+8%" }] },
     { w: 7, type: "progress", title: "Project progress", sub: "Work done vs plan", warnBelow: 50, items: [{ label: "Payroll migration", value: 95, right: "95% · due Oct" }, { label: "Dealer portal", value: 82, right: "82% · due Nov" }, { label: "Gazipur plant expansion", value: 64, right: "64% · due Dec" }, { label: "New warehouse WMS", value: 41, right: "41% · 2 weeks late" }, { label: "Chattogram depot automation", value: 12, right: "12% · scoping" }] },
     { w: 5, type: "donut", title: "Budget by project", center: "৳ 6.8 Cr", centerLabel: "approved", slices: [{ label: "Plant expansion", value: 3.6, display: "৳ 3.6 Cr" }, { label: "WMS", value: 1.4, display: "৳ 1.4 Cr" }, { label: "Dealer portal", value: 0.9, display: "৳ 90 L" }, { label: "Other", value: 0.9, display: "৳ 90 L" }] },
-    { w: 12, type: "timeline", title: "Upcoming milestones", items: [{ time: "31 Oct", title: "Payroll migration — go-live sign-off", sub: "Farhana Hoque" }, { time: "12 Nov", title: "Dealer portal — pilot with 40 dealers", sub: "Tanim Roy" }, { time: "30 Nov", title: "WMS — Tongi cutover (at risk)", sub: "Nadia Akter" }, { time: "15 Dec", title: "Line 4 commissioning", sub: "Kamal Hasan" }] },
+    { w: 12, type: "timeline", title: "Upcoming milestones", items: [{ time: "31 Oct", title: "Payroll migration: go-live sign-off", sub: "Farhana Hoque" }, { time: "12 Nov", title: "Dealer portal: pilot with 40 dealers", sub: "Tanim Roy" }, { time: "30 Nov", title: "WMS: Tongi cutover (at risk)", sub: "Nadia Akter" }, { time: "15 Dec", title: "Line 4 commissioning", sub: "Kamal Hasan" }] },
   ],
   website: [
     { type: "kpis", items: [{ label: "Visitors today", value: "1,284", delta: "+9%" }, { label: "Leads", value: "23", delta: "+4" }, { label: "Conversion", value: "1.8%", delta: "+0.3%" }, { label: "Bounce rate", value: "41%", delta: "-3%", downIsGood: true }] },
@@ -88,7 +88,7 @@ export const overviews: Record<string, Widget[]> = {
   settings: [
     { type: "kpis", items: [{ label: "Users", value: "412" }, { label: "Two-factor coverage", value: "94%", delta: "+6%" }, { label: "Active sessions", value: "96" }, { label: "Failed sign-ins today", value: "3", downIsGood: true }] },
     { w: 4, type: "gauge", title: "Security score", value: 86, caption: "Turn on 2FA for 24 more users to reach 95" },
-    { w: 8, type: "timeline", title: "Audit log", items: [{ time: "Today 10:12 · Admin", title: "VAT rate for bakery set to 5%" }, { time: "Yesterday 16:40 · Jubair", title: "New role created: Store manager" }, { time: "20 Oct · Admin", title: "Fiscal year 2026–27 opened" }, { time: "18 Oct · Admin", title: "Two-factor made mandatory for Finance" }] },
+    { w: 8, type: "timeline", title: "Audit log", items: [{ time: "Today 10:12 · Admin", title: "VAT rate for bakery set to 5%" }, { time: "Yesterday 16:40 · Jubair", title: "New role created: Store manager" }, { time: "20 Oct · Admin", title: "Fiscal year 2026/27 opened" }, { time: "18 Oct · Admin", title: "Two-factor made mandatory for Finance" }] },
   ],
 
   // ─────────────── HRMS ───────────────
@@ -97,7 +97,7 @@ export const overviews: Record<string, Widget[]> = {
     { w: 7, type: "stacked", title: "Headcount by department", keys: ["Permanent", "Contract", "Intern"], rows: [{ label: "Production", values: [168, 42, 4] }, { label: "Sales", values: [74, 10, 2] }, { label: "Warehouse", values: [44, 14, 0] }, { label: "Finance", values: [22, 0, 2] }, { label: "HR & Admin", values: [26, 2, 2] }] },
     { w: 5, type: "donut", title: "Gender mix", center: "412", centerLabel: "people", slices: [{ label: "Men", value: 268 }, { label: "Women", value: 144 }] },
     { w: 7, type: "line", title: "Joiners and leavers", labels: MONTHS, series: [{ name: "Joined", data: [9, 14, 6, 11, 8, 12] }, { name: "Left", data: [4, 6, 5, 3, 7, 4] }] },
-    { w: 5, type: "bars", title: "Age bands", items: [{ label: "18–24", value: 62 }, { label: "25–34", value: 178 }, { label: "35–44", value: 112 }, { label: "45–54", value: 46 }, { label: "55+", value: 14 }] },
+    { w: 5, type: "bars", title: "Age bands", items: [{ label: "18 to 24", value: 62 }, { label: "25 to 34", value: 178 }, { label: "35 to 44", value: 112 }, { label: "45 to 54", value: 46 }, { label: "55+", value: 14 }] },
   ],
   users: [
     { type: "kpis", items: [{ label: "System users", value: "412" }, { label: "Signed in today", value: "298" }, { label: "Admins", value: "6" }, { label: "Pending invites", value: "8" }] },
@@ -114,7 +114,7 @@ export const overviews: Record<string, Widget[]> = {
     { type: "kpis", items: [{ label: "Staff on shift now", value: "112", note: "Morning · Gazipur" }, { label: "Shift coverage", value: "97%", delta: "+2%" }, { label: "Swap requests", value: "5" }, { label: "Overtime this week", value: "96 h", delta: "+14 h", downIsGood: true }] },
     { w: 8, type: "heatmap", title: "Coverage by shift", sub: "% of required staff present", rows: ["Morning", "Evening", "Night"], cols: DAYS, values: [[98, 100, 97, 99, 96, 92, 88], [95, 97, 99, 94, 98, 90, 86], [91, 93, 90, 95, 92, 84, 80]], unit: "%" },
     { w: 4, type: "donut", title: "Who's rostered", center: "296", centerLabel: "staff", slices: [{ label: "Morning", value: 112 }, { label: "Evening", value: 100 }, { label: "Night", value: 84 }] },
-    { w: 12, type: "insight", text: "Night shift coverage drops to 80% on Sundays. Three operators have asked to swap into Sunday nights — approving them closes the gap without overtime." },
+    { w: 12, type: "insight", text: "Night shift coverage drops to 80% on Sundays. Three operators have asked to swap into Sunday nights. Approving them closes the gap without overtime." },
   ],
   elearning: [
     { type: "kpis", items: [{ label: "Active learners", value: "264", delta: "+38" }, { label: "Completion rate", value: "71%", delta: "+5%" }, { label: "Certificates issued", value: "183" }, { label: "Learning hours", value: "1,420 h", note: "this quarter" }] },
@@ -130,8 +130,8 @@ export const overviews: Record<string, Widget[]> = {
   employees: [
     { type: "kpis", items: [{ label: "Employees", value: "412" }, { label: "Joined this month", value: "12" }, { label: "Average tenure", value: "3.4 yrs" }, { label: "Birthdays this week", value: "5" }] },
     { w: 6, type: "bars", horizontal: true, title: "Employees by location", items: [{ label: "Gazipur plant", value: 214 }, { label: "Head office", value: 96 }, { label: "Tongi warehouse", value: 38 }, { label: "Chattogram depot", value: 28 }, { label: "Rangpur depot", value: 22 }, { label: "Sylhet depot", value: 14 }] },
-    { w: 6, type: "bars", title: "Tenure", items: [{ label: "<1 yr", value: 74 }, { label: "1–2", value: 98 }, { label: "3–5", value: 136 }, { label: "6–10", value: 78 }, { label: "10+", value: 26 }] },
-    { w: 12, type: "list", title: "This week", rows: [{ label: "Arif Khan joins as IT admin", sub: "Monday · Head office", value: "Joining" }, { label: "Kamal Hasan — 9 years", sub: "Work anniversary · Thursday", value: "🎉" }, { label: "Habib Rahman leaves", sub: "Friday · exit interview booked", value: "Leaving" }] },
+    { w: 6, type: "bars", title: "Tenure", items: [{ label: "<1 yr", value: 74 }, { label: "1 to 2", value: 98 }, { label: "3 to 5", value: 136 }, { label: "6 to 10", value: 78 }, { label: "10+", value: 26 }] },
+    { w: 12, type: "list", title: "This week", rows: [{ label: "Arif Khan joins as IT admin", sub: "Monday · Head office", value: "Joining" }, { label: "Kamal Hasan: 9 years", sub: "Work anniversary · Thursday", value: "🎉" }, { label: "Habib Rahman leaves", sub: "Friday · exit interview booked", value: "Leaving" }] },
   ],
   payroll: [
     { type: "kpis", items: [{ label: "October gross", value: "৳ 2.06 Cr", delta: "+2.1%" }, { label: "Net pay", value: "৳ 1.84 Cr" }, { label: "Tax withheld", value: "৳ 9.6 L" }, { label: "Bank transfer ready", value: "406 of 406", note: "City Bank BEFTN" }] },
@@ -174,7 +174,7 @@ export const overviews: Record<string, Widget[]> = {
   ],
   demand: [
     { type: "kpis", items: [{ label: "November forecast", value: "৳ 4.8 Cr", delta: "+8%" }, { label: "Forecast accuracy", value: "91%", delta: "+2%" }, { label: "Items at stock-out risk", value: "6", downIsGood: true }, { label: "Season", value: "Winter", note: "snacks up, juice down" }] },
-    { w: 8, type: "line", title: "Biscuits 200g — demand", sub: "Cartons per month, with forecast", labels: ["Jun", "Jul", "Aug", "Sep", "Oct", "Nov*", "Dec*"], series: [{ name: "Actual / forecast", data: [36000, 38500, 40200, 41000, 42000, 46500, 49000] }, { name: "Last year", data: [33000, 34800, 36100, 37500, 38900, 41200, 43800] }] },
+    { w: 8, type: "line", title: "Biscuits 200g: demand", sub: "Cartons per month, with forecast", labels: ["Jun", "Jul", "Aug", "Sep", "Oct", "Nov*", "Dec*"], series: [{ name: "Actual / forecast", data: [36000, 38500, 40200, 41000, 42000, 46500, 49000] }, { name: "Last year", data: [33000, 34800, 36100, 37500, 38900, 41200, 43800] }] },
     { w: 4, type: "list", title: "Biggest changes next month", rows: [{ label: "Noodles 4-pack", value: "+11%" }, { label: "Biscuits 200g", value: "+11%" }, { label: "Chips 50g", value: "+4%" }, { label: "Juice 1L", value: "−7%" }] },
     { w: 12, type: "insight", text: "Noodles 4-pack is already out of stock at Rangpur and demand rises 11% next month. Plan 2,000 cartons from Gazipur this week." },
   ],
@@ -194,7 +194,7 @@ export const overviews: Record<string, Widget[]> = {
   ],
   campaigns: [
     { type: "kpis", items: [{ label: "Reach", value: "1.2 M", delta: "+22%" }, { label: "Leads", value: "842" }, { label: "Cost per lead", value: "৳ 76", delta: "-৳ 9", downIsGood: true }, { label: "Spend", value: "৳ 6.4 L", note: "of ৳ 9 L budget" }] },
-    { w: 7, type: "table", title: "Campaign results", cols: ["Campaign", "Channel", "Leads", "Cost / lead", "Status"], rows: [["Winter snacks", "Facebook", "312", "৳ 67", "Running"], ["Dealer bonus Q4", "SMS", "128", "৳ 30", "Running"], ["Eid offer", "TV + Digital", "402", "৳ 104", "Completed"], ["New juice launch", "YouTube", "—", "—", "Scheduled"]] },
+    { w: 7, type: "table", title: "Campaign results", cols: ["Campaign", "Channel", "Leads", "Cost / lead", "Status"], rows: [["Winter snacks", "Facebook", "312", "৳ 67", "Running"], ["Dealer bonus Q4", "SMS", "128", "৳ 30", "Running"], ["Eid offer", "TV + Digital", "402", "৳ 104", "Completed"], ["New juice launch", "YouTube", "Not yet", "Not yet", "Scheduled"]] },
     { w: 5, type: "donut", title: "Leads by channel", slices: [{ label: "Facebook", value: 412 }, { label: "TV", value: 214 }, { label: "SMS", value: 128 }, { label: "YouTube", value: 88 }] },
     { w: 12, type: "funnel", title: "Winter snacks funnel", stages: [{ label: "Reached", value: 640000, display: "640k" }, { label: "Engaged", value: 38400, display: "38.4k" }, { label: "Clicked", value: 6200, display: "6.2k" }, { label: "Lead", value: 312 }] },
   ],
@@ -202,7 +202,7 @@ export const overviews: Record<string, Widget[]> = {
     { type: "kpis", items: [{ label: "Passes today", value: "38" }, { label: "Vehicles inside", value: "7" }, { label: "Visitors on site", value: "15" }, { label: "Avg. gate time", value: "11 min", delta: "-3 min", downIsGood: true }] },
     { w: 8, type: "bars", title: "Gate traffic by hour", sub: "Today, all gates", items: ["6", "8", "10", "12", "14", "16", "18", "20"].map((h, i) => ({ label: `${h}:00`, value: [4, 9, 7, 5, 6, 8, 3, 1][i] })) },
     { w: 4, type: "donut", title: "Pass types", slices: [{ label: "Goods out", value: 16 }, { label: "Goods in", value: 9 }, { label: "Visitors", value: 8 }, { label: "Returnable", value: 5 }] },
-    { w: 12, type: "list", status: true, title: "Inside now", rows: [{ label: "Chatta Metro-Ma 14-8890", sub: "Goods in · Gate 2 · since 10:05", value: "Pending" }, { label: "Akij Packaging — 2 visitors", sub: "Meeting with Nadia · since 09:40", value: "Pending" }, { label: "Pallet jack × 2", sub: "Returnable · due back 17:00", value: "Approved" }] },
+    { w: 12, type: "list", status: true, title: "Inside now", rows: [{ label: "Chatta Metro-Ma 14-8890", sub: "Goods in · Gate 2 · since 10:05", value: "Pending" }, { label: "Akij Packaging: 2 visitors", sub: "Meeting with Nadia · since 09:40", value: "Pending" }, { label: "Pallet jack × 2", sub: "Returnable · due back 17:00", value: "Approved" }] },
   ],
   procurement: [
     { type: "kpis", items: [{ label: "Spend this month", value: "৳ 1.4 Cr", delta: "+4%" }, { label: "Open POs", value: "26" }, { label: "On-time delivery", value: "88%", delta: "-3%" }, { label: "Savings negotiated", value: "৳ 6.2 L" }] },
@@ -217,7 +217,7 @@ export const overviews: Record<string, Widget[]> = {
   ],
   purchase: [
     { type: "kpis", items: [{ label: "Bills to pay", value: "14" }, { label: "Due this week", value: "৳ 32 L" }, { label: "Paid this month", value: "৳ 1.1 Cr" }, { label: "Early-pay discounts", value: "৳ 84,000", note: "available" }] },
-    { w: 7, type: "bars", title: "Payables ageing", sub: "৳ lakh", items: [{ label: "Not due", value: 48, display: "৳ 48 L" }, { label: "0–30", value: 32, display: "৳ 32 L" }, { label: "31–60", value: 9, display: "৳ 9 L" }, { label: "61–90", value: 3, display: "৳ 3 L" }, { label: "90+", value: 1, display: "৳ 1 L" }] },
+    { w: 7, type: "bars", title: "Payables ageing", sub: "৳ lakh", items: [{ label: "Not due", value: 48, display: "৳ 48 L" }, { label: "0 to 30", value: 32, display: "৳ 32 L" }, { label: "31 to 60", value: 9, display: "৳ 9 L" }, { label: "61 to 90", value: 3, display: "৳ 3 L" }, { label: "90+", value: 1, display: "৳ 1 L" }] },
     { w: 5, type: "timeline", title: "Payment schedule", items: [{ time: "27 Oct", title: "Meghna Flour Mills", sub: "BILL-882 · ৳ 42.0 L" }, { time: "29 Oct", title: "Akij Packaging", sub: "BILL-879 · ৳ 18.6 L" }, { time: "30 Oct", title: "Titas Gas", sub: "BILL-874 · ৳ 3.4 L" }, { time: "2 Nov", title: "City Sugar", sub: "BILL-871 · ৳ 9.8 L" }] },
   ],
   inventory: [
@@ -231,11 +231,11 @@ export const overviews: Record<string, Widget[]> = {
   onboarding: [
     { type: "kpis", items: [{ label: "Joining this month", value: "12" }, { label: "Leaving this month", value: "4" }, { label: "Checklists open", value: "9" }, { label: "Assets to collect", value: "6", note: "laptops, ID cards" }] },
     { w: 7, type: "progress", title: "Checklist progress", warnBelow: 30, items: [{ label: "Arif Khan · IT admin · joined 27 Oct", value: 60, right: "6 / 10" }, { label: "Habib Rahman · leaving 31 Oct", value: 63, right: "5 / 8" }, { label: "Mim Sultana · joins 1 Nov", value: 20, right: "2 / 10" }, { label: "Lina Das · joins 3 Nov", value: 10, right: "1 / 10" }] },
-    { w: 5, type: "list", title: "Day-one ready?", status: true, rows: [{ label: "Laptop for Mim Sultana", sub: "IT", value: "Pending" }, { label: "ID card for Lina Das", sub: "Admin", value: "Pending" }, { label: "Payroll setup for Arif Khan", sub: "HR", value: "Done" }, { label: "Exit interview — Habib", sub: "Booked 30 Oct", value: "Scheduled" }] },
+    { w: 5, type: "list", title: "Day-one ready?", status: true, rows: [{ label: "Laptop for Mim Sultana", sub: "IT", value: "Pending" }, { label: "ID card for Lina Das", sub: "Admin", value: "Pending" }, { label: "Payroll setup for Arif Khan", sub: "HR", value: "Done" }, { label: "Exit interview: Habib", sub: "Booked 30 Oct", value: "Scheduled" }] },
   ],
   invoicing: [
     { type: "kpis", items: [{ label: "Invoiced this month", value: "৳ 5.1 Cr", delta: "+9%" }, { label: "Outstanding", value: "৳ 2.4 Cr" }, { label: "Overdue", value: "৳ 38 L", downIsGood: true, delta: "-৳ 6 L" }, { label: "Days to collect", value: "27", delta: "-2", downIsGood: true }] },
-    { w: 7, type: "bars", title: "Receivables ageing", sub: "৳ lakh", items: [{ label: "Not due", value: 142, display: "৳ 1.42 Cr" }, { label: "0–30", value: 60, display: "৳ 60 L" }, { label: "31–60", value: 24, display: "৳ 24 L" }, { label: "61–90", value: 9, display: "৳ 9 L" }, { label: "90+", value: 5, display: "৳ 5 L" }] },
+    { w: 7, type: "bars", title: "Receivables ageing", sub: "৳ lakh", items: [{ label: "Not due", value: 142, display: "৳ 1.42 Cr" }, { label: "0 to 30", value: 60, display: "৳ 60 L" }, { label: "31 to 60", value: 24, display: "৳ 24 L" }, { label: "61 to 90", value: 9, display: "৳ 9 L" }, { label: "90+", value: 5, display: "৳ 5 L" }] },
     { w: 5, type: "leaders", avatars: false, title: "Largest balances", rows: [{ name: "Shwapno", sub: "4 invoices", value: "৳ 48 L" }, { name: "Agora", sub: "3 invoices", value: "৳ 26 L" }, { name: "Meena Bazar", sub: "1 overdue", value: "৳ 6.1 L" }, { name: "Sky Distribution", sub: "1 overdue", value: "৳ 2.7 L" }] },
     { w: 12, type: "line", title: "Invoiced vs collected", sub: "৳ crore", labels: MONTHS, series: [{ name: "Invoiced", data: [4.2, 4.8, 4.5, 4.9, 4.7, 5.1] }, { name: "Collected", data: [3.9, 4.4, 4.6, 4.5, 4.6, 4.2] }] },
   ],

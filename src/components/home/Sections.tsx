@@ -1,19 +1,20 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ArrowUpRight, Check, ChevronRight, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowUpRight, Check, ChevronRight, ShieldCheck } from "lucide-react";
 import clsx from "clsx";
 import { Reveal, Stagger, StaggerItem, SplitHeading } from "@/components/motion/Reveal";
 import { Button, Label } from "@/components/ui/Button";
 import { industries, products, WATCH_TOWER_DEMO } from "@/lib/data";
 import { AskBox } from "./Hero";
 import type { RegionStat } from "@/components/three/BangladeshMap";
+import LazyScene from "@/components/three/LazyScene";
+import { ICON } from "@/lib/icons";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,7 +33,7 @@ export function About() {
       <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
         <div>
           <Label>What it does</Label>
-          <SplitHeading as="h2" text="The AI-centric ERP for growing businesses" className="h-section mt-3 max-w-[760px]" />
+          <SplitHeading as="h2" text="The agentic ERP that cuts operating costs and lifts productivity across your enterprise." className="h-section mt-3 max-w-[760px]" />
           <p className="mt-4 max-w-[620px] text-[16px] leading-[26px] text-muted">
             One live record with AI at the core, configured to your workflows and Bangladesh rules.
           </p>
@@ -61,7 +62,6 @@ export function WhyUs() {
   const items = [
     { t: "Ask instead of waiting", b: "Ask a question instead of waiting for a report. The answer comes straight from live data." },
     { t: "No more re-entry", b: "Reduce repeated data entry and disconnected spreadsheets." },
-    { t: "Clear approvals, one record", b: "Give teams clear approval paths and one shared record." },
     { t: "Everything in one place", b: "See every branch, warehouse and field team in one place." },
     { t: "The AI you already know", b: "Use the AI assistant you already know, connected to your own data." },
   ];
@@ -85,7 +85,7 @@ export function WhyUs() {
   return (
     <section className="bg-surface py-24 sm:py-32">
       <div ref={ref} className="container-x grid gap-12 md:grid-cols-[1fr_1.4fr] md:gap-20">
-        <div className="md:sticky md:top-32 md:self-start">
+        <div className="min-w-0 md:sticky md:top-32 md:self-start">
           <Label>Why Business Brain 24</Label>
           <h2 className="h-section mt-3">More answers. Less chasing reports.</h2>
           <p className="mt-4 max-w-[380px] text-[16px] leading-[26px] text-muted">
@@ -154,13 +154,13 @@ export function Blocks() {
         <Label>Modular implementation</Label>
         <h2 className="h-section mt-3">Every product is a block. The brain holds them together.</h2>
         <p className="mt-4 max-w-[460px] text-[16px] leading-[26px] text-muted">
-          Select the modules you need now and add the rest later. Every module writes to the same live record — no re-entry, no disconnected spreadsheets.
+          Select the modules you need now and add the rest later. Every module writes to the same live record: no re-entry, no disconnected spreadsheets.
         </p>
         <ul className="mt-6 space-y-3 text-[15px]">
           {["Select only the modules you need", "Configured and customised to your workflows", "One login, role-based access"].map((t) => (
             <li key={t} className="flex items-center gap-3">
               <span className="flex h-5 w-5 items-center justify-center rounded-full bg-orange-soft text-orange">
-                <Check size={12} strokeWidth={3} />
+                <Check size={ICON.xs} strokeWidth={3} />
               </span>
               {t}
             </li>
@@ -185,7 +185,7 @@ export function Blocks() {
 
 function Tile({ t }: { t: string }) {
   return (
-    <div data-tile className="flex aspect-square items-end rounded-[12px] border border-line bg-white p-2 text-[11px] font-medium text-ink shadow-[0_1px_2px_rgba(11,13,18,0.04)] sm:p-2.5 sm:text-[12px]">
+    <div data-tile className="flex aspect-square items-end rounded-[12px] border border-line bg-white p-2 text-[12px] font-medium text-ink shadow-[0_1px_2px_rgba(11,13,18,0.04)] sm:p-2.5 sm:text-[12px]">
       {t}
     </div>
   );
@@ -193,7 +193,6 @@ function Tile({ t }: { t: string }) {
 
 /* ---------- Built for your business ---------- */
 export function Compliance() {
-  const deploy = ["Cloud or on-premise deployment", "Modular implementation", "Own MCP server", "Role-based access", "Deployment options agreed during scoping"];
   const rules = [
     { t: "Labour law", b: "Leave, overtime and service rules in HR and payroll." },
     { t: "Income tax", b: "Tax deductions calculated in every payroll run." },
@@ -204,7 +203,7 @@ export function Compliance() {
     <section className="container-x pb-24 sm:pb-32">
       <div className="grid gap-10 border-t border-line pt-10 lg:grid-cols-[1fr_2fr]">
         <div className="flex items-start gap-3">
-          <ShieldCheck className="mt-1 shrink-0 text-orange" size={20} />
+          <ShieldCheck className="mt-1 shrink-0 text-orange" size={ICON.lg} />
           <div>
             <p className="text-[18px] font-medium leading-[26px]">Built for your business.</p>
             <p className="mt-2 text-[15px] leading-[24px] text-muted">Configured to your workflows and Bangladesh rules.</p>
@@ -218,13 +217,6 @@ export function Compliance() {
             </div>
           ))}
         </div>
-      </div>
-      <div className="mt-8 flex flex-wrap gap-2">
-        {deploy.map((b) => (
-          <span key={b} className="rounded-full border border-line px-3 py-1.5 text-[13px] text-muted">
-            {b}
-          </span>
-        ))}
       </div>
     </section>
   );
@@ -267,7 +259,7 @@ export function ProductsBento() {
                 </motion.div>
               ))}
             </div>
-            <BentoText label="Supply chain" title="Procurement · Inventory · Sales · POS" body="From requisition to reorder — auto-matched POs, GRNs and invoices." />
+            <BentoText label="Supply chain" title="Procurement · Inventory · Sales · POS" body="From requisition to reorder: auto-matched POs, GRNs and invoices." />
           </Link>
         </StaggerItem>
         <StaggerItem className="md:col-span-2">
@@ -309,7 +301,7 @@ export function ProductsBento() {
         <StaggerItem className="md:col-span-2">
           <Link href="/products" className="group flex min-h-[340px] flex-col justify-between rounded-[20px] bg-ink p-6 text-white sm:p-7">
             <span className="flex h-11 w-11 items-center justify-center rounded-[10px] bg-[linear-gradient(180deg,#FF6B2C_50%,#C2410C_100%)] transition-transform duration-300 group-hover:rotate-45">
-              <ArrowUpRight size={18} />
+              <ArrowUpRight size={ICON.lg} />
             </span>
             <div>
               <p className="text-[28px] font-medium leading-[32px] tracking-[-0.03em] sm:text-[32px]">See all modules</p>
@@ -338,13 +330,13 @@ export function BrainAI() {
     { from: "user", text: "What were yesterday's sales by branch?" },
     { from: "brain", text: "৳ 48.6 L across 6 branches. Gulshan led with ৳ 12.4 L; Sylhet ran 18% below its daily average." },
     { from: "user", text: "গতকাল কোন পণ্য সবচেয়ে বেশি বিক্রি হয়েছে?" },
-    { from: "brain", text: "মিষ্টি দই — ৪,২১০ ইউনিট, গত সপ্তাহের গড়ের চেয়ে ১২% বেশি।" },
+    { from: "brain", text: "মিষ্টি দই: ৪,২১০ ইউনিট, গত সপ্তাহের গড়ের চেয়ে ১২% বেশি।" },
   ];
   return (
     <section className="px-2 sm:px-3">
       <div className="relative overflow-hidden rounded-[20px] bg-ink py-20 text-white sm:rounded-[28px] sm:py-28">
         <div className="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-[radial-gradient(circle,rgba(255,107,44,0.25),transparent_65%)]" />
-        <div className="container-x relative grid items-center gap-14 lg:grid-cols-2">
+        <div className="container-x relative grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
           <div>
             <Label>Ask your business</Label>
             <h2 className="h-section mt-3">Ask in plain words. Get numbers and charts back.</h2>
@@ -354,7 +346,7 @@ export function BrainAI() {
             <ul className="mt-8 space-y-3 text-[15px] text-white/85">
               {["Answers and charts from your live data", "Connect ChatGPT or Claude through our MCP server", "Every answer respects each user's access"].map((t) => (
                 <li key={t} className="flex items-center gap-3">
-                  <Check size={16} className="text-orange" /> {t}
+                  <Check size={ICON.md} className="text-orange" /> {t}
                 </li>
               ))}
             </ul>
@@ -365,12 +357,6 @@ export function BrainAI() {
             </div>
           </div>
           <div className="rounded-[20px] border border-white/10 bg-white/[0.04] p-4 sm:p-6">
-            <div className="mb-5 flex items-center gap-3 border-b border-white/10 pb-4">
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-orange/15 text-orange">
-                <Sparkles size={17} />
-              </span>
-              <p className="text-[17px] font-medium tracking-[-0.01em] sm:text-[19px]">Run your business. Ask it anything.</p>
-            </div>
             <div className="space-y-3">
               {messages.map((m, i) => (
                 <motion.div
@@ -390,7 +376,7 @@ export function BrainAI() {
               ))}
             </div>
             <div className="mt-5">
-              <AskBox dark />
+              <AskBox dark text="Run your business. Ask it anything." />
             </div>
           </div>
         </div>
@@ -402,8 +388,8 @@ export function BrainAI() {
 /* ---------- Industries list with hover reveal ---------- */
 export function Industries() {
   return (
-    <section className="container-x grid gap-12 py-24 sm:py-32 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
-      <div className="lg:sticky lg:top-32 lg:self-start">
+    <section className="container-x grid grid-cols-1 gap-12 py-24 sm:py-32 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
+      <div className="min-w-0 lg:sticky lg:top-32 lg:self-start">
         <Label>Industries</Label>
         <h2 className="h-section mt-3">Configured for how your industry works.</h2>
         <p className="mt-4 max-w-[380px] text-[16px] leading-[26px] text-muted">
@@ -422,68 +408,9 @@ export function Industries() {
                 <p className="mt-1 truncate text-[14px] text-muted">{ind.short}</p>
               </div>
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-line transition-all duration-300 group-hover:border-ink group-hover:bg-ink group-hover:text-white">
-                <ChevronRight size={16} />
+                <ChevronRight size={ICON.md} />
               </span>
             </Link>
-          </Reveal>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-/* ---------- Reviews ---------- */
-const reviews = [
-  {
-    logo: "/customers/akboria/logo.png",
-    company: "Akboria",
-    meta: "Akboria · Sweets & Food, since 1911",
-    badge: "35 features live",
-    quote: "From the SR’s phone to the oven to the showroom shelf — every demand now lands in one place, and we see it the same day.",
-    href: "/customers/akboria",
-    tone: "bg-[#FFF7F2]",
-    badgeTone: "bg-white text-orange-deep",
-    size: [110, 50],
-  },
-  {
-    logo: "/customers/urmi/logo.png",
-    company: "Urmi Group",
-    meta: "Urmi Group · Garments & Textile",
-    badge: "Fully delivered",
-    quote: "Our factories, people and numbers now live in one system. The rollout was delivered end to end — and it runs.",
-    tone: "bg-surface",
-    badgeTone: "bg-green-soft text-[#067647]",
-    size: [115, 50],
-  },
-];
-
-export function Reviews() {
-  return (
-    <section className="container-x pb-24 sm:pb-32">
-      <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-        <div>
-          <Label>Customers</Label>
-          <h2 className="h-section mt-3 max-w-[640px]">Trusted by brands Bangladesh grew up with.</h2>
-        </div>
-        <Link href="/customers" className="text-[14px] font-medium transition-colors hover:text-orange">All success stories →</Link>
-      </div>
-      <div className="mt-12 grid gap-4 lg:grid-cols-2">
-        {reviews.map((r, i) => (
-          <Reveal key={r.company} delay={i * 0.1} className={`flex flex-col justify-between gap-10 rounded-[20px] p-7 sm:gap-12 sm:p-10 ${r.tone}`}>
-            <div className="flex items-center justify-between gap-4">
-              <Image src={r.logo} alt={r.company} width={r.size[0]} height={r.size[1]} className="h-auto w-[96px] sm:w-[110px]" />
-              <span className={`rounded-full px-3 py-1.5 text-[13px] ${r.badgeTone}`}>{r.badge}</span>
-            </div>
-            <p className="text-[20px] font-medium leading-[30px] tracking-[-0.02em] sm:text-[26px] sm:leading-[36px]">“{r.quote}”</p>
-            <div className="flex items-end justify-between gap-4">
-              <div>
-                <p className="text-[15px] font-medium">Management team</p>
-                <p className="text-[13px] text-muted">{r.meta}</p>
-              </div>
-              {r.href && (
-                <Link href={r.href} className="shrink-0 text-[14px] font-medium transition-colors hover:text-orange">Read the story →</Link>
-              )}
-            </div>
           </Reveal>
         ))}
       </div>
@@ -541,8 +468,9 @@ export function WatchTower() {
           <Label>Watch Tower</Label>
           <SplitHeading as="h2" text="Your AI control centre." className="h-section mt-3" />
           <p className="mt-4 max-w-[560px] text-[16px] leading-[26px] text-muted">
-            An interactive, live map of your whole operation: field force, branches, orders and trucks. New orders pop up as they happen, leaderboards show
-            your top performers, and you can ask the AI what&apos;s going on. Watch Tower comes with Business Brain 24.
+            An interactive, live map of your whole operation: field force, branches, orders and vehicles. New orders pop up as they happen, leaderboards
+            show your top performers, and you can ask the AI questions such as &ldquo;Which region is behind target today?&rdquo; Watch Tower comes with
+            Business Brain 24.
           </p>
         </div>
         <Reveal>
@@ -554,16 +482,18 @@ export function WatchTower() {
         <div className="relative aspect-[4/5] overflow-hidden rounded-[16px] bg-[radial-gradient(ellipse_at_50%_40%,#1D2129_0%,#111318_75%)] sm:aspect-[16/12] lg:aspect-auto lg:min-h-[560px]">
           <div className="absolute inset-0 opacity-30 [background-image:radial-gradient(rgba(255,255,255,0.14)_1px,transparent_1px)] [background-size:18px_18px]" />
           <div className="absolute inset-0">
-            <BangladeshMap stats={regions} selected={selected} onSelect={setSelected} order={order} />
+            <LazyScene fallback={<img src="/home/bangladesh-map.webp" alt="Map of Bangladesh divisions" width={800} height={1000} loading="lazy" className="h-full w-full object-contain" />}>
+              <BangladeshMap stats={regions} selected={selected} onSelect={setSelected} order={order} />
+            </LazyScene>
           </div>
-          <span className="pointer-events-none absolute left-4 top-4 flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[11px] font-medium text-white/80">
+          <span className="pointer-events-none absolute left-4 top-4 flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[12px] font-medium text-white/80">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-green" /> Live
           </span>
           <div className="pointer-events-none absolute bottom-4 left-4 flex flex-col gap-1">
-            <span className="text-[11px] text-white/45">
+            <span className="text-[12px] text-white/45">
               <span className="hidden [@media(pointer:fine)]:inline">Drag to tilt · </span>Click a division
             </span>
-            <span className="text-[10px] text-white/25">Boundaries: geoBoundaries, CC BY 4.0</span>
+            <span className="text-[12px] text-white/25">Boundaries: geoBoundaries, CC BY 4.0</span>
           </div>
         </div>
 
@@ -574,7 +504,7 @@ export function WatchTower() {
                 <motion.div key={sel.name} initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }} transition={{ duration: 0.25 }}>
                   <div className="flex items-center justify-between">
                     <p className="text-[12px] font-medium text-orange">{sel.name} division · today</p>
-                    <button type="button" onClick={() => setSelected(null)} className="text-[12px] text-white/50 hover:text-white">
+                    <button type="button" onClick={() => setSelected(null)} className="-my-3 min-h-11 px-2 text-[12px] text-white/50 hover:text-white">
                       All regions
                     </button>
                   </div>
@@ -607,7 +537,7 @@ export function WatchTower() {
                       <li key={n} className="flex items-center justify-between gap-3 text-[14px]">
                         <span className="flex min-w-0 items-center gap-3">
                           <span className="w-4 text-white/40">{i + 1}</span>
-                          <button type="button" onClick={() => setSelected(r)} className="truncate text-left hover:text-orange">
+                          <button type="button" onClick={() => setSelected(r)} className="min-h-11 truncate text-left hover:text-orange">
                             {n}
                           </button>
                           <span className="hidden text-[12px] text-white/40 sm:inline">{r}</span>
@@ -629,43 +559,12 @@ export function WatchTower() {
               Which region is behind target today?
             </button>
             <p className="max-w-[92%] rounded-[12px] bg-white/[0.08] px-3.5 py-2.5 text-[13px] leading-[20px] text-white/90">
-              <span className="mb-1 block text-[11px] font-medium text-orange">Watch Tower AI</span>
+              <span className="mb-1 block text-[12px] font-medium text-orange">Watch Tower AI</span>
               Sylhet is at 81% of today&apos;s target. 3 of 9 reps haven&apos;t logged an order since noon.
             </p>
           </div>
         </div>
       </Reveal>
-    </section>
-  );
-}
-
-/* ---------- Use cases ---------- */
-export function UseCases() {
-  const cases = [
-    { t: "Owner’s daily check", b: "“What were yesterday’s sales by branch?” answered from live data." },
-    { t: "Payroll on Bangladesh rules", b: "Attendance, leave and tax deductions in one payroll run." },
-    { t: "Purchase to payment", b: "Requisition, approval, purchase order, goods receipt and stock in one trail." },
-    { t: "Inventory planning", b: "Stock levels across warehouses with demand forecasts to plan ahead." },
-    { t: "Field sales control", b: "Sales reps, orders and deliveries tracked live on Watch Tower." },
-    { t: "Manufacturing", b: "Production, raw materials and finished goods linked to sales and stock." },
-  ];
-  return (
-    <section className="bg-surface py-24 sm:py-32">
-      <div className="container-x">
-        <Label>Use cases</Label>
-        <SplitHeading as="h2" text="What it looks like on a normal day." className="h-section mt-3 max-w-[640px]" />
-        <Stagger className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {cases.map((c, i) => (
-            <StaggerItem key={c.t} className="flex min-h-[180px] flex-col justify-between rounded-[20px] bg-white p-6 shadow-[var(--shadow-soft)] sm:p-7">
-              <span className="text-[13px] text-orange">0{i + 1}</span>
-              <div>
-                <h3 className="mt-6 text-[19px] font-medium tracking-[-0.01em]">{c.t}</h3>
-                <p className="mt-2 text-[15px] leading-[24px] text-muted">{c.b}</p>
-              </div>
-            </StaggerItem>
-          ))}
-        </Stagger>
-      </div>
     </section>
   );
 }

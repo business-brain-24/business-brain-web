@@ -24,7 +24,7 @@ const sidebars: Record<string, string[]> = {
 const titles: Record<string, string> = {
   accounting: "September 2026 · All branches",
   procurement: "Open requisitions · This week",
-  budget: "FY 2026–27 · Cost centres",
+  budget: "FY 2026/27 · Cost centres",
   inventory: "Stock on hand · 6 warehouses",
   sales: "Orders · October 2026",
   pos: "Today · 42 outlets live",
@@ -207,7 +207,7 @@ function ApprovalFlow() {
     ["Quotes", "3 vendors", "✓ Compared", "done"],
     ["Approval", "Waiting on CFO", "2 h left in SLA", "active"],
     ["Purchase order", "PO-4412", "Draft", "todo"],
-    ["Goods received", "—", "Not yet", "todo"],
+    ["Goods received", "None", "Not yet", "todo"],
   ];
   return (
     <div className="space-y-4">
@@ -305,7 +305,7 @@ function BinMap() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 + i * 0.025, duration: 0.4 }}
               className={clsx(
-                "flex aspect-[1.4] items-center justify-center rounded-[6px] text-[11px]",
+                "flex aspect-[1.4] items-center justify-center rounded-[6px] text-[12px]",
                 f === 9 ? "border-[1.5px] border-orange bg-orange-soft text-orange-deep" : f === 8 ? "border-[1.5px] border-dashed border-orange bg-orange-soft text-orange-deep" : color[f],
               )}
             >
@@ -496,7 +496,7 @@ function Inspection() {
           <Grow key={t} i={i} className={clsx("flex items-center gap-3 border-t border-line px-4 py-3", s === "fail" && "bg-[#FDF3F2]")}>
             <span
               className={clsx(
-                "flex h-5 w-5 shrink-0 items-center justify-center rounded-[6px] text-[11px] text-white",
+                "flex h-5 w-5 shrink-0 items-center justify-center rounded-[6px] text-[12px] text-white",
                 s === "pass" && "bg-green",
                 s === "fail" && "bg-danger",
                 s === "todo" && "border-[1.5px] border-[#D3D6DD]",
@@ -530,8 +530,8 @@ function AssetCards() {
       {cards.map(([n, s, bv, l2, v2, tag, grad, warn], i) => (
         <Grow key={n} i={i} className={clsx("overflow-hidden rounded-[12px] border text-[13px]", warn ? "border-orange" : "border-line")}>
           <div className={clsx("flex h-[90px] items-start justify-between bg-gradient-to-br p-3", grad)}>
-            <span className="rounded-full bg-white px-2 py-0.5 text-[11px]">{tag}</span>
-            <span className="text-[11px] text-muted">QR</span>
+            <span className="rounded-full bg-white px-2 py-0.5 text-[12px]">{tag}</span>
+            <span className="text-[12px] text-muted">QR</span>
           </div>
           <div className="space-y-1.5 p-3.5">
             <p className="font-medium">{n}</p>
@@ -560,7 +560,7 @@ function AssetCards() {
 function Gantt() {
   const rows: [string, number, number, string][] = [
     ["Foundation", 2, 24, "bg-ink"],
-    ["Structure, floors 1–12", 22, 36, "bg-ink"],
+    ["Structure, floors 1 to 12", 22, 36, "bg-ink"],
     ["Steel delivery", 52, 18, "split"],
     ["MEP works", 58, 28, "bg-line"],
     ["Finishing", 74, 24, "bg-line"],
@@ -606,7 +606,7 @@ function Gantt() {
       </div>
       <div className="flex items-center gap-3 border-t border-line bg-ink px-4 py-3 text-white">
         <span className="text-[12px] text-orange">Brain</span>
-        <span>Start finishing on floors 1–6 before steel arrives to win back 7 days.</span>
+        <span>Start finishing on floors 1 to 6 before steel arrives to win back 7 days.</span>
       </div>
     </div>
   );
@@ -633,7 +633,7 @@ function People() {
             <span className={clsx("h-12 w-12 rounded-full bg-gradient-to-br", g)} />
             <span className="mt-1 font-medium">{n}</span>
             <span className="text-muted">{r}</span>
-            <span className={clsx("rounded-full px-2 py-0.5 text-[11px]", c)}>{s}</span>
+            <span className={clsx("rounded-full px-2 py-0.5 text-[12px]", c)}>{s}</span>
           </Grow>
         ))}
       </div>
@@ -796,7 +796,7 @@ function Kanban() {
                 >
                   <p className="flex items-center justify-between font-medium">
                     {n}
-                    {hot && <span className="rounded-full bg-orange-soft px-2 py-0.5 text-[11px] text-orange-deep">Hot</span>}
+                    {hot && <span className="rounded-full bg-orange-soft px-2 py-0.5 text-[12px] text-orange-deep">Hot</span>}
                   </p>
                   <p className="text-muted">{s}</p>
                   <p>{v}</p>

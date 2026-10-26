@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, LayoutGrid, LogOut } from "lucide-react";
 import { signOut } from "@/lib/session";
+import { ICON } from "@/lib/icons";
 
 export default function UserMenu({ user }: { user: { name: string; role: string } }) {
   const router = useRouter();
@@ -30,7 +31,7 @@ export default function UserMenu({ user }: { user: { name: string; role: string 
         <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[linear-gradient(145deg,#FF8A4C,#C2410C)] text-[14px] font-semibold text-white ring-2 ring-white">
           {user.name.slice(0, 1).toUpperCase()}
         </span>
-        <ChevronDown size={14} className="text-muted" />
+        <ChevronDown size={ICON.sm} className="text-muted" />
       </button>
       <AnimatePresence>
         {open && (
@@ -46,10 +47,10 @@ export default function UserMenu({ user }: { user: { name: string; role: string 
               <p className="text-[12px] text-muted">{user.role}</p>
             </div>
             <Link href="/dashboard" onClick={() => setOpen(false)} className="flex items-center gap-2.5 rounded-[10px] px-3 py-2 text-[14px] hover:bg-surface">
-              <LayoutGrid size={15} /> My apps
+              <LayoutGrid size={ICON.md} /> My apps
             </Link>
             <button onClick={logout} className="flex w-full items-center gap-2.5 rounded-[10px] px-3 py-2 text-[14px] text-danger hover:bg-surface">
-              <LogOut size={15} /> Log out
+              <LogOut size={ICON.md} /> Log out
             </button>
           </motion.div>
         )}

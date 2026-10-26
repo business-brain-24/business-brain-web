@@ -9,7 +9,7 @@ export const THIS_YEAR: Year = 2026;
 export const LAST_YEAR: Year = 2025;
 /** 2026 is year-to-date: January to September. */
 export const monthsIn = (y: Year) => (y === THIS_YEAR ? 9 : 12);
-export const yearLabel = (y: Year) => (y === THIS_YEAR ? "Jan–Sep 2026" : String(y));
+export const yearLabel = (y: Year) => (y === THIS_YEAR ? "Jan to Sep 2026" : String(y));
 
 function rng(seed: number) {
   let a = seed >>> 0;
@@ -200,9 +200,9 @@ export const finance = {
   },
   cash: monthly(14_20_00_000, [0.86, 0.9, 1.04, 1.12, 0.98, 1.06, 0.95, 0.91, 0.97, 1.01, 0.99, 1.08], 51, 0.05),
   ageing: [
-    ["0–30 days", 7_80_00_000],
-    ["31–60 days", 3_10_00_000],
-    ["61–90 days", 1_24_00_000],
+    ["0 to 30 days", 7_80_00_000],
+    ["31 to 60 days", 3_10_00_000],
+    ["61 to 90 days", 1_24_00_000],
     ["90+ days", 86_00_000],
   ] as [string, number][],
   expenses: [
@@ -273,7 +273,7 @@ export const budget = [
   ["Admin", 3_20_00_000, 3_04_00_000],
   ["IT", 1_40_00_000, 1_18_00_000],
   ["HR & training", 90_00_000, 96_00_000],
-] as [string, number, number][]; // budget, actual — Jan–Sep 2026
+] as [string, number, number][]; // budget, actual, Jan to Sep 2026
 
 export const quality = {
   defects: [

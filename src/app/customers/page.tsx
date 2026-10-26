@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/site";
 import Image from "next/image";
 import Link from "next/link";
 import { stories } from "@/lib/data";
@@ -6,7 +7,11 @@ import { Label } from "@/components/ui/Button";
 import { Reveal, SplitHeading, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import CTA from "@/components/ui/CTA";
 
-export const metadata: Metadata = { title: "Success stories" };
+export const metadata: Metadata = pageMeta(
+  "/customers",
+  "Success stories",
+  "How Bangladeshi companies run on Business Brain 24. Read how Akboria and Urmi Group connected sales, production, stores, finance and people in one ERP.",
+);
 
 export default function Customers() {
   return (

@@ -8,6 +8,8 @@ import clsx from "clsx";
 import { getProduct, WATCH_TOWER_DEMO } from "@/lib/data";
 import dynamic from "next/dynamic";
 import LogoHub from "./LogoHub";
+import LazyScene from "@/components/three/LazyScene";
+import { ICON } from "@/lib/icons";
 
 // the 3D mark loads after the page; the animated SVG mark stands in until then
 const LogoNeuron = dynamic(() => import("@/components/three/LogoNeuron"), {
@@ -68,8 +70,8 @@ export default function Hero() {
         <div className="relative flex w-full max-w-[980px] flex-col items-center px-5 pb-12 pt-[118px] text-center sm:pb-16 sm:pt-[136px]">
           {/* eyebrow */}
           <span className="bb-fade-up inline-flex items-center gap-2 rounded-full border border-orange/20 bg-white/80 py-1.5 pl-1.5 pr-3.5 text-[13px] font-medium text-[#3A3F4A] shadow-[0_6px_20px_-12px_rgba(255,107,44,0.6)] backdrop-blur">
-            <span className="flex h-6 items-center gap-1 rounded-full bg-orange px-2 text-[11px] font-semibold uppercase tracking-[0.06em] text-white">
-              <Sparkles size={11} /> Agentic
+            <span className="flex h-6 items-center gap-1 rounded-full bg-orange px-2 text-[12px] font-semibold uppercase tracking-[0.06em] text-white">
+              <Sparkles size={ICON.xs} /> Agentic
             </span>
             The ERP with AI at its core
           </span>
@@ -98,22 +100,22 @@ export default function Hero() {
           </p>
           <p className="bb-fade-up mt-4 max-w-[600px] text-[15px] leading-[25px] text-[#5B616D]" style={{ animationDelay: "0.45s" }}>
             Bring finance, HR, payroll, procurement, inventory, sales, manufacturing and many other modules into one connected system. Reduce
-            repetitive work, coordinate approvals and turn business insights into action — with the controls you set.
+            repetitive work, coordinate approvals and turn business insights into action, with the controls you set.
           </p>
 
           {/* two clear next steps */}
           <div className="bb-fade-up mt-9 grid w-full max-w-[760px] gap-3 text-left sm:grid-cols-2" style={{ animationDelay: "0.55s" }}>
             <Link
               href="/demo"
-              className="group relative flex flex-col overflow-hidden rounded-[18px] bg-ink p-5 text-white shadow-[0_24px_50px_-28px_rgba(11,13,18,0.7)] transition-transform duration-200 hover:-translate-y-0.5"
+              className="group relative flex flex-col overflow-hidden rounded-[16px] bg-ink px-4 py-3.5 text-white shadow-[0_24px_50px_-28px_rgba(11,13,18,0.7)] transition-transform duration-200 hover:-translate-y-0.5"
             >
               <span className="pointer-events-none absolute -right-10 -top-14 h-40 w-40 rounded-full bg-orange/35 blur-3xl" />
-              <span className="relative text-[11px] font-semibold uppercase tracking-[0.12em] text-orange">Business Brain 24 · Free audit</span>
-              <span className="relative mt-2 text-[18px] font-medium leading-snug tracking-[-0.01em]">Put AI at the core of your business</span>
-              <span className="relative mt-1.5 text-[13px] text-white/60">Free audit session on your ERP AI readiness</span>
-              <span className="relative mt-5 inline-flex items-center gap-2 text-[14px] font-medium">
-                <span className="flex h-8 w-8 items-center justify-center rounded-[9px] bg-[linear-gradient(180deg,#FF6B2C_50%,#C2410C_100%)] transition-transform group-hover:translate-x-0.5">
-                  <ChevronRight size={16} />
+              <span className="relative text-[12px] font-semibold uppercase tracking-[0.12em] text-orange">Business Brain 24 · Free audit</span>
+              <span className="relative mt-1 text-[16px] font-medium leading-snug tracking-[-0.01em]">Put AI at the core of your business</span>
+              <span className="relative mt-0.5 text-[13px] text-white/60">Free audit session on your ERP AI readiness</span>
+              <span className="relative mt-3 inline-flex items-center gap-1.5 text-[13px] font-medium">
+                <span className="flex h-7 w-7 items-center justify-center rounded-[8px] bg-[linear-gradient(180deg,#FF6B2C_50%,#C2410C_100%)] transition-transform group-hover:translate-x-0.5">
+                  <ChevronRight size={ICON.sm} />
                 </span>
                 Book my audit
               </span>
@@ -122,14 +124,14 @@ export default function Hero() {
               href={WATCH_TOWER_DEMO}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex flex-col overflow-hidden rounded-[18px] border border-line bg-white p-5 shadow-[0_24px_50px_-34px_rgba(11,13,18,0.45)] transition-all duration-200 hover:-translate-y-0.5 hover:border-orange/40"
+              className="group relative flex flex-col overflow-hidden rounded-[16px] border border-line bg-white px-4 py-3.5 shadow-[0_24px_50px_-34px_rgba(11,13,18,0.45)] transition-all duration-200 hover:-translate-y-0.5 hover:border-orange/40"
             >
-              <span className="text-[11px] font-semibold uppercase tracking-[0.12em] text-orange-deep">Watch Tower · Free demo</span>
-              <span className="mt-2 text-[18px] font-medium leading-snug tracking-[-0.01em]">See your business world</span>
-              <span className="mt-1.5 text-[13px] text-muted">Book a free demo and watch your operation live</span>
-              <span className="mt-5 inline-flex items-center gap-2 text-[14px] font-medium">
-                <span className="flex h-8 w-8 items-center justify-center rounded-[9px] bg-orange-soft text-orange transition-transform group-hover:translate-x-0.5">
-                  <ArrowUpRight size={16} />
+              <span className="text-[12px] font-semibold uppercase tracking-[0.12em] text-orange-deep">Watch Tower · Free demo</span>
+              <span className="mt-1 text-[16px] font-medium leading-snug tracking-[-0.01em]">See your business world</span>
+              <span className="mt-0.5 text-[13px] text-muted">Book a free demo</span>
+              <span className="mt-3 inline-flex items-center gap-1.5 text-[13px] font-medium">
+                <span className="flex h-7 w-7 items-center justify-center rounded-[8px] bg-orange-soft text-orange transition-transform group-hover:translate-x-0.5">
+                  <ArrowUpRight size={ICON.sm} />
                 </span>
                 Open the live demo
               </span>
@@ -144,7 +146,7 @@ export default function Hero() {
           {pillars.map((p) => (
             <span key={p} className="flex items-center gap-2 text-[14px] font-medium text-[#545A66]">
               <span className="flex h-[18px] w-[18px] items-center justify-center rounded-full bg-orange-soft text-orange">
-                <Check size={11} strokeWidth={3.5} />
+                <Check size={ICON.xs} strokeWidth={3.5} />
               </span>
               {p}
             </span>
@@ -268,7 +270,9 @@ function Stage() {
           style={{ x: brainX, y: brainY, rotate: brainR }}
         >
           <motion.div className="h-full w-full" animate={{ y: [0, -8, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}>
-            <LogoNeuron />
+            <LazyScene fallback={<img src="/logo.svg" alt="" width={300} height={300} className="h-full w-full object-contain p-16" />}>
+              <LogoNeuron />
+            </LazyScene>
           </motion.div>
         </motion.div>
 
@@ -360,7 +364,9 @@ function MobileStage() {
       <div className="relative h-[300px] w-[300px]">
         <div className="absolute inset-[-30px] rounded-full bg-[radial-gradient(circle,rgba(255,107,44,0.18)_0%,rgba(255,107,44,0)_65%)]" />
         <motion.div className="relative h-full w-full" animate={{ y: [0, -6, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}>
-          <LogoNeuron />
+          <LazyScene fallback={<img src="/logo.svg" alt="" width={300} height={300} className="h-full w-full object-contain p-10" />}>
+            <LogoNeuron />
+          </LazyScene>
         </motion.div>
       </div>
       <div className="flex flex-wrap justify-center gap-2">
@@ -461,7 +467,7 @@ function Chip({ node, index, on, onHover, onToggle, inline, dimmed, isSource, en
         <AnimatePresence mode="wait" initial={false}>
           {isSource ? (
             <motion.span key="x" initial={{ scale: 0.5, opacity: 0, rotate: -90 }} animate={{ scale: 1, opacity: 1, rotate: 0 }} exit={{ scale: 0.5, opacity: 0 }} transition={{ duration: 0.25 }} className="flex h-[18px] w-[18px] items-center justify-center rounded-full bg-orange">
-              <X size={11} strokeWidth={3.5} className="text-white" />
+              <X size={ICON.xs} strokeWidth={3.5} className="text-white" />
             </motion.span>
           ) : on ? (
             <motion.span key="s" initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -4 }} transition={{ duration: 0.25 }} className="text-[12px] leading-4 text-orange-deep">
@@ -469,7 +475,7 @@ function Chip({ node, index, on, onHover, onToggle, inline, dimmed, isSource, en
             </motion.span>
           ) : (
             <motion.span key="c" initial={{ scale: 0.5, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.5, opacity: 0 }} transition={{ duration: 0.25 }} className="flex h-[18px] w-[18px] items-center justify-center rounded-full bg-green">
-              <Check size={11} strokeWidth={3.5} className="text-white" />
+              <Check size={ICON.xs} strokeWidth={3.5} className="text-white" />
             </motion.span>
           )}
         </AnimatePresence>
@@ -593,7 +599,7 @@ function ModuleNeuron({ node, onClose }: { node: Node; onClose: () => void }) {
         className="absolute flex h-9 w-9 items-center justify-center rounded-full border border-line bg-white text-[#545A66] shadow-[0_8px_20px_#0B0D1214] transition-colors hover:border-orange hover:text-orange"
         style={{ left: SOMA.x + DENDRITE.rx + 70, top: 40 }}
       >
-        <X size={16} />
+        <X size={ICON.md} />
       </motion.button>
     </motion.div>
   );
@@ -652,25 +658,27 @@ function HeroAsk() {
       className="group flex w-full items-center justify-between gap-3 rounded-[12px] border border-line bg-white py-2 pl-[18px] pr-2 shadow-[0_10px_30px_#0B0D120F] transition-shadow hover:shadow-[0_14px_40px_#0B0D121F]"
     >
       <span className="flex min-w-0 items-center gap-2.5">
-        <Sparkles size={16} className="shrink-0 text-orange" />
+        <Sparkles size={ICON.md} className="shrink-0 text-orange" />
         <span className="truncate text-[14px] leading-[18px] text-[#8A8F99]">
           Ask the brain: “{typed}
           <span className="ml-px inline-block h-3.5 w-px translate-y-0.5 animate-pulse bg-orange" />”
         </span>
       </span>
       <span className="flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-[8px] bg-ink text-white transition-transform group-hover:-translate-y-0.5">
-        <ArrowUp size={16} />
+        <ArrowUp size={ICON.md} />
       </span>
     </Link>
   );
 }
 
 /* Kept for the dark Brain AI section further down the page. */
-export function AskBox({ dark = false }: { dark?: boolean }) {
+/** With `text`, the box shows that line instead of cycling through example questions. */
+export function AskBox({ dark = false, text }: { dark?: boolean; text?: string }) {
   const [i, setI] = useState(0);
   const [typed, setTyped] = useState("");
 
   useEffect(() => {
+    if (text) return;
     const full = prompts[i];
     let n = 0;
     setTyped("");
@@ -684,7 +692,7 @@ export function AskBox({ dark = false }: { dark?: boolean }) {
       window.clearInterval(typer);
       window.clearTimeout(next);
     };
-  }, [i]);
+  }, [i, text]);
 
   return (
     <div
@@ -693,10 +701,10 @@ export function AskBox({ dark = false }: { dark?: boolean }) {
         (dark ? "border-white/10 bg-white/5" : "border-line bg-white")
       }
     >
-      <Sparkles size={18} className="shrink-0 text-orange" />
+      <Sparkles size={ICON.lg} className="shrink-0 text-orange" />
       <p className={"min-w-0 flex-1 truncate text-left text-[14px] sm:text-[15px] " + (dark ? "text-white/80" : "text-muted")}>
-        {typed}
-        <span className="ml-0.5 inline-block h-4 w-px translate-y-0.5 animate-pulse bg-orange" />
+        {text ?? typed}
+        {!text && <span className="ml-0.5 inline-block h-4 w-px translate-y-0.5 animate-pulse bg-orange" />}
       </p>
       <AnimatePresence mode="wait">
         <motion.a
@@ -707,7 +715,7 @@ export function AskBox({ dark = false }: { dark?: boolean }) {
           className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[12px] bg-ink text-white"
           aria-label="Ask Brain AI"
         >
-          <ArrowUp size={17} />
+          <ArrowUp size={ICON.md} />
         </motion.a>
       </AnimatePresence>
     </div>

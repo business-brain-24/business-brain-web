@@ -22,6 +22,7 @@ import { ArrowDownRight, ArrowUpRight, BarChart3, Table2 } from "lucide-react";
 import clsx from "clsx";
 import type { Chart, Kpi, Table, Unit } from "@/lib/brain-knowledge";
 import { fmt } from "@/lib/brain-data";
+import { ICON } from "@/lib/icons";
 
 /* Validated categorical order (light surface); see the dataviz palette check. */
 const PALETTE = ["#2a78d6", "#ff6b2c", "#1baf7a", "#eda100", "#e87ba4", "#008300", "#6250d6", "#e34948"];
@@ -235,7 +236,7 @@ export function ChartCard({ chart }: { chart: Chart }) {
                 aria-label={`Show as ${(label as string).toLowerCase()}`}
                 className={clsx("flex h-7 w-7 items-center justify-center rounded-[6px] transition-colors", table === v ? "bg-white text-ink shadow-[0_1px_2px_rgba(11,13,18,0.08)]" : "text-subtle hover:text-ink")}
               >
-                <I size={14} />
+                <I size={ICON.sm} />
               </button>
             );
           })}
@@ -251,7 +252,7 @@ export function ChartCard({ chart }: { chart: Chart }) {
           table={{
             title: chart.title,
             columns: [chart.kind === "pie" ? "Item" : "", ...(chart.kind === "pie" ? ["Value"] : chart.series)],
-            rows: chart.data.map((d) => [String(d.label), ...chart.series.map((s) => (d[s] === undefined ? "—" : fmt(chart.unit, Number(d[s]))))]),
+            rows: chart.data.map((d) => [String(d.label), ...chart.series.map((s) => (d[s] === undefined ? "n/a" : fmt(chart.unit, Number(d[s]))))]),
           }}
           bare
         />
@@ -271,7 +272,7 @@ export function KpiRow({ kpis }: { kpis: Kpi[] }) {
           <p className="mt-1 text-[19px] font-medium leading-6 tracking-[-0.02em] text-ink tabular-nums">{k.value}</p>
           {k.delta && (
             <p className={clsx("mt-1 flex items-center gap-0.5 text-[12px] font-medium", k.good === false ? "text-[#B42318]" : "text-[#067647]")}>
-              {k.delta.startsWith("−") ? <ArrowDownRight size={13} /> : <ArrowUpRight size={13} />}
+              {k.delta.startsWith("−") ? <ArrowDownRight size={ICON.sm} /> : <ArrowUpRight size={ICON.sm} />}
               {k.delta}
             </p>
           )}

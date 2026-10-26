@@ -1,16 +1,21 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/site";
 import { industries } from "@/lib/data";
 import PageHero from "@/components/ui/PageHero";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import CTA from "@/components/ui/CTA";
 
-export const metadata: Metadata = { title: "Industries" };
+export const metadata: Metadata = pageMeta(
+  "/industries",
+  "Industries",
+  "Business Brain 24 configured for your industry: manufacturing, garments, pharma, retail, distribution and more, with the modules each one needs from day one.",
+);
 
 export default function IndustriesIndex() {
   return (
     <>
-      <PageHero label="Industries" title="Configured for how your industry works." sub="Recommended products, workflows and reports for eight industries — ready from day one." />
+      <PageHero label="Industries" title="Configured for how your industry works." sub="Recommended products, workflows and reports for eight industries, ready from day one." />
       <Stagger className="container-x mt-14 grid gap-3 sm:grid-cols-2">
         {industries.map((i) => (
           <StaggerItem key={i.slug}>

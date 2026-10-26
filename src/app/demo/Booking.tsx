@@ -1,11 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { Check } from "lucide-react";
 import Form from "@/components/ui/Form";
 import { Label } from "@/components/ui/Button";
 import { Reveal, SplitHeading } from "@/components/motion/Reveal";
 import { contact, industries } from "@/lib/data";
+import { ICON } from "@/lib/icons";
 
 const sessions = {
   fit: {
@@ -35,11 +37,15 @@ const sessions = {
 } as const;
 
 export default function BookingFromQuery() {
-  return <Booking session={useSearchParams().get("session")} />;
+  const session = useSearchParams().get("session");
+  // A new ?session= (e.g. a link from elsewhere on the site) starts a fresh form.
+  return <Booking key={session ?? "fit"} session={session} />;
 }
 
 export function Booking({ session }: { session?: string | null }) {
-  const s = session === "watch-tower" ? sessions["watch-tower"] : sessions.fit;
+  // Starts from ?session= and then follows the dropdown, so the heading, points and button always match the choice.
+  const [picked, setPicked] = useState<keyof typeof sessions>(session === "watch-tower" ? "watch-tower" : "fit");
+  const s = sessions[picked];
 
   return (
     <section className="container-x grid gap-12 pb-10 pt-[120px] sm:pt-[150px] lg:grid-cols-[1fr_1.1fr] lg:gap-20">
@@ -51,7 +57,7 @@ export function Booking({ session }: { session?: string | null }) {
             {s.points.map((t) => (
               <li key={t} className="flex items-center gap-3">
                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-soft text-orange">
-                  <Check size={14} strokeWidth={3} />
+                  <Check size={ICON.sm} strokeWidth={3} />
                 </span>
                 {t}
               </li>
@@ -63,10 +69,6 @@ export function Booking({ session }: { session?: string | null }) {
               Call{" "}
               <a href={contact.phoneHref} className="font-medium text-ink hover:text-orange">
                 {contact.phone}
-              </a>{" "}
-              or visit{" "}
-              <a href={contact.siteHref} className="font-medium text-ink hover:text-orange">
-                {contact.site}
               </a>
               .
             </p>
@@ -75,16 +77,24 @@ export function Booking({ session }: { session?: string | null }) {
       </div>
       <Reveal delay={0.2} className="rounded-[20px] border border-line p-6 sm:p-8">
         <Form
-          key={s.option}
+          name="demo"
           submit={s.submit}
           done="Your request is in."
           fields={[
-            { name: "session", label: "What would you like to book?", options: [sessions.fit.option, sessions["watch-tower"].option], defaultValue: s.option, full: true },
+            {
+              name: "session",
+              label: "What would you like to book?",
+              options: [sessions.fit.option, sessions["watch-tower"].option],
+              defaultValue: s.option,
+              full: true,
+              onChange: (v) => setPicked(v === sessions["watch-tower"].option ? "watch-tower" : "fit"),
+            },
             { name: "name", label: "Full name", placeholder: "Your name" },
             { name: "email", label: "Work email", type: "email", placeholder: "name@company.com" },
+            { name: "phone", label: "Phone", type: "tel", placeholder: "+880 1XXX-XXXXXX" },
             { name: "company", label: "Company", placeholder: "Company name" },
-            { name: "size", label: "Company size", options: ["1–50", "51–200", "201–1,000", "1,000+"] },
-            { name: "industry", label: "Industry", options: industries.map((i) => i.name), full: true },
+            { name: "size", label: "Company size", options: ["1 to 50", "51 to 200", "201 to 1,000", "1,000+"] },
+            { name: "industry", label: "Industry", options: industries.map((i) => i.name) },
             { name: "notes", label: "What would you like to see?", area: true, placeholder: "Payroll on Bangladesh rules, field sales on Watch Tower…" },
           ]}
         />

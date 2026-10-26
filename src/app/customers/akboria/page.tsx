@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/site";
+import JsonLd, { breadcrumbLd } from "@/components/seo/JsonLd";
 import Image from "next/image";
 import Link from "next/link";
 import { akboriaDelivered, akboriaInProgress, akboriaModules, countItems } from "@/lib/data";
 import { Reveal, SplitHeading, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import CTA from "@/components/ui/CTA";
 
-export const metadata: Metadata = { title: "Akboria · Customer story" };
+export const metadata: Metadata = pageMeta(
+  "/customers/akboria",
+  "Akboria · Customer story",
+  "How Akboria, a sweets brand founded in 1911, runs field sales, showroom POS, central store, production and procurement on one Business Brain 24 system.",
+);
 
 const live = countItems(akboriaDelivered);
 const building = countItems(akboriaInProgress);
@@ -20,9 +26,10 @@ const appScreens: [string, string, boolean][] = [
 export default function Story() {
   return (
     <>
+      <JsonLd data={breadcrumbLd([["Success stories", "/customers"], ["Akboria", "/customers/akboria"]])} />
       <section className="container-x pt-[120px] sm:pt-[150px]">
         <p className="flex flex-wrap gap-1.5 text-[13px] text-muted">
-          <Link href="/resources" className="hover:text-ink">Resources</Link> / <Link href="/customers" className="hover:text-ink">Success stories</Link> / <span className="text-ink">Akboria</span>
+          <Link href="/customers" className="hover:text-ink">Success stories</Link> / <span className="text-ink">Akboria</span>
         </p>
         <SplitHeading text="How Akboria runs a brand from 1911 on one brain." className="h-display mt-5 max-w-[960px]" />
         <Reveal delay={0.3} className="mt-6 flex flex-wrap gap-2">
@@ -49,7 +56,7 @@ export default function Story() {
           </Reveal>
           <Reveal className="border-l-2 border-orange pl-6 sm:pl-8">
             <p className="text-[22px] font-medium leading-[32px] tracking-[-0.02em] sm:text-[24px] sm:leading-[34px]">
-              “From the SR’s phone to the oven to the showroom shelf — every demand now lands in one place, and we see it the same day.”
+              “From the SR’s phone to the oven to the showroom shelf, every demand now lands in one place, and we see it the same day.”
             </p>
           </Reveal>
           <Reveal>

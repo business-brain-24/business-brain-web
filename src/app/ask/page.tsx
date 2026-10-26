@@ -9,7 +9,12 @@ import { BrandMark, Logo } from "@/components/layout/Nav";
 import { starters, type Reply } from "@/lib/brain-knowledge";
 import { dataStarters, respond } from "@/lib/brain-data";
 import { COMPANY } from "@/lib/demo-data";
+import { track } from "@/lib/analytics";
+
+// Preset ids for analytics, so the question text itself is never sent.
+const presetIds = new Map<string, string>([...starters.map((q, i) => [q, `starter_${i + 1}`] as const), ...dataStarters.flatMap((g) => g.questions.map((q, i) => [q, `${g.module.toLowerCase()}_${i + 1}`] as const))]);
 import { ChartCard, DataTable, KpiRow } from "@/components/ask/Visuals";
+import { ICON } from "@/lib/icons";
 
 type Msg = { id: string; from: "user" | "brain"; text: string; reply?: Reply };
 type Chat = { id: string; title: string; msgs: Msg[]; at: number };
@@ -106,6 +111,10 @@ export default function Ask() {
     (q: string, regenerateOf?: string, fresh = false) => {
       const text = q.trim();
       if (!text || busy) return;
+      if (!regenerateOf) {
+        const preset = presetIds.get(text);
+        track("ask_question", preset ? { preset_question_id: preset } : { free_text: true });
+      }
       const reply = respond(text);
       const existing = !fresh && current && chats.some((c) => c.id === current);
       const id = existing ? (current as string) : uid();
@@ -191,17 +200,17 @@ export default function Ask() {
           }
         }}
         placeholder="Ask about sales, payroll, stock…"
-        className="max-h-[200px] min-w-0 flex-1 resize-none bg-transparent py-2.5 text-[15px] leading-[22px] outline-none placeholder:text-subtle focus-visible:outline-none"
+        className="max-h-[200px] min-w-0 flex-1 resize-none bg-transparent py-2.5 text-[16px] leading-[22px] outline-none placeholder:text-subtle sm:text-[15px] focus-visible:outline-none"
         aria-label="Message Brain"
         style={{ outline: "none" }}
       />
       {busy ? (
         <button type="button" onClick={stop} aria-label="Stop" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-ink text-white">
-          <Square size={13} fill="currentColor" />
+          <Square size={ICON.sm} fill="currentColor" />
         </button>
       ) : (
         <button type="submit" disabled={!value.trim()} aria-label="Send" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-ink text-white transition-opacity disabled:opacity-20">
-          <ArrowUp size={18} />
+          <ArrowUp size={ICON.lg} />
         </button>
       )}
     </form>
@@ -226,11 +235,11 @@ export default function Ask() {
         <div className="flex items-center justify-between px-1 pb-2">
           <Logo className="rounded-lg px-1 py-1" />
           <button onClick={() => setSidebar(false)} className="flex h-8 w-8 items-center justify-center rounded-lg text-muted hover:bg-white lg:hidden" aria-label="Close sidebar">
-            <X size={16} />
+            <X size={ICON.md} />
           </button>
         </div>
         <button onClick={newChat} className="flex items-center gap-2.5 rounded-[12px] px-3 py-2.5 text-[14px] font-medium transition-colors hover:bg-white">
-          <SquarePen size={16} /> New chat
+          <SquarePen size={ICON.md} /> New chat
         </button>
 
         <p className="mt-4 px-3 pb-1.5 text-[12px] text-subtle">Chats</p>
@@ -249,7 +258,7 @@ export default function Ask() {
                     }}
                     className={clsx("flex w-full items-center gap-2.5 rounded-[10px] py-2 pl-3 pr-9 text-left text-[13.5px] transition-colors", c.id === current ? "bg-white font-medium" : "hover:bg-white/70")}
                   >
-                    <MessageSquare size={14} className="shrink-0 text-subtle" />
+                    <MessageSquare size={ICON.sm} className="shrink-0 text-subtle" />
                     <span className="truncate">{c.title}</span>
                   </button>
                   <button
@@ -257,7 +266,7 @@ export default function Ask() {
                     aria-label={`Delete “${c.title}”`}
                     className="absolute right-1.5 top-1/2 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-md text-subtle opacity-0 transition-opacity hover:text-ink focus:opacity-100 group-hover:opacity-100"
                   >
-                    <Trash2 size={13} />
+                    <Trash2 size={ICON.sm} />
                   </button>
                 </li>
               ))}
@@ -267,7 +276,7 @@ export default function Ask() {
 
         <div className="mt-3 rounded-[14px] bg-white p-3.5">
           <p className="flex items-center gap-2 text-[13px] font-medium">
-            <Database size={14} className="text-orange" /> Demo company data
+            <Database size={ICON.sm} className="text-orange" /> Demo company data
           </p>
           <p className="mt-1.5 text-[12px] leading-[18px] text-muted">
             Questions about numbers are answered from sample data for {COMPANY}, a fictional food manufacturer.
@@ -282,7 +291,7 @@ export default function Ask() {
       <div className="relative flex min-w-0 flex-1 flex-col overflow-hidden rounded-[18px] border border-line bg-white">
         <header className="flex h-14 shrink-0 items-center gap-2 px-3 sm:px-4">
           <button onClick={() => setSidebar(true)} className="flex h-9 w-9 items-center justify-center rounded-lg text-muted hover:bg-surface lg:hidden" aria-label="Open sidebar">
-            <PanelLeft size={18} />
+            <PanelLeft size={ICON.lg} />
           </button>
           <Link href="/" aria-label="Business Brain 24 home" className="flex h-8 w-8 items-center justify-center lg:hidden">
             <BrandMark className="h-8 w-8" />
@@ -290,7 +299,7 @@ export default function Ask() {
           <p className="text-[15px] font-medium">Brain</p>
           <span className="truncate whitespace-nowrap rounded-full bg-surface px-2.5 py-1 text-[12px] text-muted">{COMPANY} · demo</span>
           <button onClick={newChat} className="ml-auto flex h-9 w-9 items-center justify-center rounded-lg text-muted hover:bg-surface lg:hidden" aria-label="New chat">
-            <SquarePen size={17} />
+            <SquarePen size={ICON.md} />
           </button>
         </header>
 
@@ -359,7 +368,7 @@ export default function Ask() {
             </div>
             <div className="shrink-0 px-4 pb-3">
               <div className="mx-auto w-full max-w-[768px]">{composer}</div>
-              <p className="mt-2 text-center text-[11.5px] text-subtle">
+              <p className="mt-2 text-center text-[12px] text-subtle">
                 Numbers come from sample data for a demo company.{" "}
                 <Link href="/demo" className="underline underline-offset-2 hover:text-ink">
                   Book a fit session
@@ -420,7 +429,7 @@ function BrainMessage({
           <div className="space-y-4">
             {r.demo && (
               <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="-mt-1 flex items-center gap-1.5 text-[12px] text-subtle">
-                <Database size={12} /> Sample data · {COMPANY}
+                <Database size={ICON.xs} /> Sample data · {COMPANY}
               </motion.p>
             )}
             {r.kpis && (
@@ -441,7 +450,7 @@ function BrainMessage({
             {r.bullets && (
               <ul className="space-y-1.5">
                 {r.bullets.map((b) => {
-                  const [head, ...rest] = b.split(" — ");
+                  const [head, ...rest] = b.split(": ");
                   return (
                     <li key={b} className="flex gap-2.5">
                       <span className="mt-[11px] h-1 w-1 shrink-0 rounded-full bg-ink" />
@@ -449,7 +458,7 @@ function BrainMessage({
                         {rest.length ? (
                           <>
                             <span className="font-medium">{head}</span>
-                            <span className="text-muted"> — {rest.join(" — ")}</span>
+                            <span className="text-muted">: {rest.join(": ")}</span>
                           </>
                         ) : (
                           b
@@ -482,10 +491,10 @@ function BrainMessage({
 
             <div className="flex items-center gap-0.5 text-subtle">
               <IconButton label={copied ? "Copied" : "Copy"} onClick={copy}>
-                {copied ? <Check size={15} /> : <Copy size={15} />}
+                {copied ? <Check size={ICON.md} /> : <Copy size={ICON.md} />}
               </IconButton>
               <IconButton label="Regenerate" onClick={onRegenerate}>
-                <RotateCcw size={15} />
+                <RotateCcw size={ICON.md} />
               </IconButton>
             </div>
 

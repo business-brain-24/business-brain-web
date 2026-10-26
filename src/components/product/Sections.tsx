@@ -11,6 +11,7 @@ import type { Product } from "@/lib/data";
 import { Button, Label, TextLink } from "@/components/ui/Button";
 import { Reveal, SplitHeading, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import ProductScreen from "./Screens";
+import { ICON } from "@/lib/icons";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -129,7 +130,7 @@ export function Connected({ p, dark = false }: { p: Product; dark?: boolean }) {
             <div className="flex justify-center py-4">
               <div data-orb className="relative flex h-40 w-40 flex-col items-center justify-center rounded-full bg-[radial-gradient(circle_at_50%_40%,#FFF4EE,#FFD2BC_60%,#FF8A55)] text-center shadow-[0_0_80px_rgba(255,107,44,0.35)] sm:h-44 sm:w-44">
                 <span className="absolute inset-0 animate-pulse-ring rounded-full border border-orange/40" />
-                <span className="text-[11px] text-orange-deep">{p.connected.event}</span>
+                <span className="text-[12px] text-orange-deep">{p.connected.event}</span>
                 <span className="mt-1 text-[17px] font-medium text-ink">{p.connected.state}</span>
               </div>
             </div>
@@ -196,7 +197,7 @@ export function AskSection({ p }: { p: Product }) {
         <div className="relative">
           <Label>Ask Brain AI</Label>
           <h2 className="h-section mt-3">{p.ask.title}</h2>
-          <p className="mt-3 max-w-[380px] text-[15px] leading-[24px] text-white/60">Answers come from live data across every product — with the source shown.</p>
+          <p className="mt-3 max-w-[380px] text-[15px] leading-[24px] text-white/60">Answers come from live data across every product, with the source shown.</p>
         </div>
         <div className="relative min-w-0 space-y-2.5">
           {p.ask.prompts.map((q, i) => (
@@ -210,7 +211,7 @@ export function AskSection({ p }: { p: Product }) {
             </motion.div>
           ))}
           <Link href="/ask" className="mt-4 flex items-center gap-3 rounded-[14px] bg-white py-2 pl-4 pr-2 text-ink">
-            <Sparkles size={16} className="text-orange" />
+            <Sparkles size={ICON.md} className="text-orange" />
             <AnimatePresence mode="wait">
               <motion.span
                 key={active}
@@ -223,7 +224,7 @@ export function AskSection({ p }: { p: Product }) {
               </motion.span>
             </AnimatePresence>
             <span className="flex h-9 w-9 items-center justify-center rounded-[10px] bg-orange text-white">
-              <ArrowUp size={16} />
+              <ArrowUp size={ICON.md} />
             </span>
           </Link>
         </div>
@@ -245,19 +246,23 @@ export function FAQ({ p }: { p: Product }) {
               onClick={() => setOpen(open === i ? null : i)}
               className="flex w-full items-center justify-between gap-6 py-5 text-left text-[16px] font-medium"
               aria-expanded={open === i}
+              aria-controls={`faq-${i}`}
             >
               {f.q}
               <motion.span animate={{ rotate: open === i ? 45 : 0 }} className={clsx("shrink-0", open === i ? "text-orange" : "text-muted")}>
-                <Plus size={18} />
+                <Plus size={ICON.lg} />
               </motion.span>
             </button>
-            <AnimatePresence initial={false}>
-              {open === i && (
-                <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }} className="overflow-hidden">
-                  <p className="max-w-[640px] pb-6 text-[15px] leading-[24px] text-muted">{f.a}</p>
-                </motion.div>
-              )}
-            </AnimatePresence>
+            {/* Every answer stays in the HTML for crawlers; closed ones collapse with grid rows. */}
+            <div
+              id={`faq-${i}`}
+              aria-hidden={open !== i}
+              className={clsx("grid transition-[grid-template-rows,opacity] duration-[350ms] ease-[cubic-bezier(0.22,1,0.36,1)]", open === i ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0")}
+            >
+              <div className="overflow-hidden">
+                <p className="max-w-[640px] pb-6 text-[15px] leading-[24px] text-muted">{f.a}</p>
+              </div>
+            </div>
           </div>
         ))}
       </div>

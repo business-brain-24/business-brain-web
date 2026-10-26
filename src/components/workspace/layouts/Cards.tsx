@@ -7,6 +7,7 @@ import type { Layout } from "@/lib/app-seeds";
 import type { App } from "@/lib/workspace";
 import AppIcon from "../AppIcon";
 import { StatusPill } from "./shared";
+import { ICON } from "@/lib/icons";
 
 type Props = Extract<Layout, { kind: "cards" }> & { app: App };
 
@@ -25,7 +26,7 @@ export default function Cards({ app, filters, items, action }: Props) {
             </button>
           ))}
         </div>
-        <button className="flex h-10 shrink-0 items-center gap-1.5 rounded-full bg-[linear-gradient(180deg,#FF6B2C,#C2410C)] px-4 text-[13px] font-medium text-white"><Plus size={14} /> <span className="hidden sm:inline">{action}</span></button>
+        <button className="flex h-10 shrink-0 items-center gap-1.5 rounded-full bg-[linear-gradient(180deg,#FF6B2C,#C2410C)] px-4 text-[13px] font-medium text-white"><Plus size={ICON.sm} /> <span className="hidden sm:inline">{action}</span></button>
       </div>
 
       <div key={filter} className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
@@ -55,7 +56,7 @@ export default function Cards({ app, filters, items, action }: Props) {
                   </div>
                 </div>
               )}
-              <button className="mt-4 flex items-center gap-1 self-start text-[13px] font-medium text-ink group-hover:text-orange">Open <ArrowUpRight size={14} /></button>
+              <button className="mt-4 flex items-center gap-1 self-start text-[13px] font-medium text-ink group-hover:text-orange">Open <ArrowUpRight size={ICON.sm} /></button>
             </div>
           </div>
         ))}

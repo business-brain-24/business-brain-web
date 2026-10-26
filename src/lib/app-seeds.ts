@@ -34,10 +34,10 @@ export const seeds: Record<string, Layout> = {
     kind: "feed",
     action: "New announcement",
     posts: [
-      { who: P.farhana, role: "Head of HR", time: "2h ago", tag: "Holiday", pinned: true, title: "Office schedule for the Durga Puja holidays", body: "Head office and all depots close from 1–3 November. The Gazipur plant runs a skeleton crew on the night shift; supervisors have the roster in Shift. Salaries for October will be credited on 30 October, before the break.", reads: "92%", comments: 14 },
+      { who: P.farhana, role: "Head of HR", time: "2h ago", tag: "Holiday", pinned: true, title: "Office schedule for the Durga Puja holidays", body: "Head office and all depots close from 1 to 3 November. The Gazipur plant runs a skeleton crew on the night shift; supervisors have the roster in Shift. Salaries for October will be credited on 30 October, before the break.", reads: "92%", comments: 14 },
       { who: P.sadia, role: "Finance lead", time: "Yesterday", tag: "Policy", title: "New expense policy from 1 November", body: "Meal claims above ৳1,500 now need a receipt photo. Fuel is reimbursed at ৳18/km for personal vehicles. Claims older than 30 days will be returned. Submit everything through the Expenses app.", reads: "78%", comments: 9 },
       { who: P.jubair, role: "Operations manager", time: "3 days ago", tag: "Operations", title: "Line 3 at Gazipur is back to full capacity", body: "Thanks to the maintenance team for turning the extruder repair around in 36 hours. We recovered 92% of the lost output by Thursday. Demand planning has been updated.", reads: "88%", comments: 21 },
-      { who: P.kamal, role: "Plant supervisor", time: "Last week", tag: "Safety", title: "Fire drill — Gazipur plant, 5 November at 11:00", body: "All three shifts take part. Assembly point is the north parking yard. Floor wardens, please collect your vests from the security office by Monday.", reads: "95%", comments: 4 },
+      { who: P.kamal, role: "Plant supervisor", time: "Last week", tag: "Safety", title: "Fire drill: Gazipur plant, 5 November at 11:00", body: "All three shifts take part. Assembly point is the north parking yard. Floor wardens, please collect your vests from the security office by Monday.", reads: "95%", comments: 4 },
     ],
   },
   discuss: {
@@ -50,29 +50,29 @@ export const seeds: Record<string, Layout> = {
     ],
     messages: [
       { who: P.rafiq, time: "09:12", text: "Morning all. Rangpur depot closed 112% of last week's target 🎉" },
-      { who: P.tanim, time: "09:14", text: "Nice. Dinajpur is at 81% — two distributors are waiting on credit limit increases." },
+      { who: P.tanim, time: "09:14", text: "Nice. Dinajpur is at 81%: two distributors are waiting on credit limit increases." },
       { who: P.jubair, time: "09:20", text: "Which two? I can ask Sadia to fast-track if their ageing is clean.", me: true },
       { who: P.tanim, time: "09:22", text: "Mollah Traders and Sky Distribution. Both under 30 days outstanding." },
       { who: P.sadia, time: "09:41", text: "Approved both to ৳8 L. They'll see it in the dealer app within the hour." },
-      { who: P.rafiq, time: "10:42", text: "Thanks! Also — biscuits 200g are running low at Bogura, can we move stock from Rangpur?" },
+      { who: P.rafiq, time: "10:42", text: "Thanks! Also, biscuits 200g are running low at Bogura, can we move stock from Rangpur?" },
     ],
   },
   calendar: {
     kind: "calendar",
-    week: "27 Oct – 2 Nov 2026",
+    week: "27 Oct to 2 Nov 2026",
     events: [
       { day: 0, start: "09:30", end: "10:00", title: "Daily stand-up", where: "Room 2", tone: "gray" },
-      { day: 0, start: "11:00", end: "12:30", title: "Supplier review — Akij Packaging", where: "Online", tone: "orange" },
+      { day: 0, start: "11:00", end: "12:30", title: "Supplier review: Akij Packaging", where: "Online", tone: "orange" },
       { day: 0, start: "14:00", end: "15:00", title: "Budget sign-off", where: "Board room", tone: "ink" },
       { day: 1, start: "09:30", end: "10:00", title: "Daily stand-up", where: "Room 2", tone: "gray" },
       { day: 1, start: "13:00", end: "14:30", title: "Dealer portal demo", where: "Room 1", tone: "green" },
-      { day: 2, start: "10:00", end: "12:00", title: "Plant visit — Gazipur", where: "Gazipur", tone: "orange" },
+      { day: 2, start: "10:00", end: "12:00", title: "Plant visit: Gazipur", where: "Gazipur", tone: "orange" },
       { day: 2, start: "16:30", end: "17:00", title: "1:1 with Sadia", where: "Room 1", tone: "ink" },
       { day: 3, start: "09:30", end: "10:00", title: "Daily stand-up", where: "Room 2", tone: "gray" },
       { day: 3, start: "11:30", end: "13:00", title: "Q4 sales review", where: "Board room", tone: "ink" },
-      { day: 4, start: "15:00", end: "16:00", title: "Interview — Area sales manager", where: "Room 3", tone: "green" },
+      { day: 4, start: "15:00", end: "16:00", title: "Interview: Area sales manager", where: "Room 3", tone: "green" },
     ],
-    side: { title: "Coming up", items: [["Today 11:00", "Supplier review — Akij"], ["Today 14:00", "Budget sign-off"], ["Tue 13:00", "Dealer portal demo"], ["Wed 10:00", "Plant visit — Gazipur"]] },
+    side: { title: "Coming up", items: [["Today 11:00", "Supplier review: Akij"], ["Today 14:00", "Budget sign-off"], ["Tue 13:00", "Dealer portal demo"], ["Wed 10:00", "Plant visit: Gazipur"]] },
   },
   todo: {
     kind: "kanban",
@@ -81,7 +81,7 @@ export const seeds: Record<string, Layout> = {
       { name: "To do", cards: [
         { title: "Send Q3 report to the board", sub: "Finance", who: P.jubair, tag: "High", meta: "Due tomorrow" },
         { title: "Update winter price list", sub: "Sales", who: P.rafiq, tag: "Low", meta: "Due 28 Oct" },
-        { title: "Renew fire licence — Tongi warehouse", sub: "Compliance", who: P.shuvo, tag: "Medium", meta: "Due 5 Nov" },
+        { title: "Renew fire licence: Tongi warehouse", sub: "Compliance", who: P.shuvo, tag: "Medium", meta: "Due 5 Nov" },
       ] },
       { name: "In progress", cards: [
         { title: "Approve October payroll", sub: "HR", who: P.jubair, tag: "High", meta: "Due today" },
@@ -90,7 +90,7 @@ export const seeds: Record<string, Layout> = {
       { name: "Waiting", cards: [{ title: "Bank guarantee for City Sugar", sub: "Finance", who: P.sadia, tag: "Medium", meta: "With bank" }] },
       { name: "Done", cards: [
         { title: "Line 3 maintenance sign-off", sub: "Production", who: P.kamal, meta: "Done 24 Oct" },
-        { title: "Dealer credit limits — north", sub: "Sales", who: P.sadia, meta: "Done 25 Oct" },
+        { title: "Dealer credit limits: north", sub: "Sales", who: P.sadia, meta: "Done 25 Oct" },
       ] },
     ],
   },
@@ -119,7 +119,7 @@ export const seeds: Record<string, Layout> = {
       ] },
       { name: "Demo", cards: [{ title: "Apex Footwear", sub: "Retail + POS, 60 stores", who: P.kamal, tag: "৳ 35 L", meta: "Demo Tue 13:00" }] },
       { name: "Proposal", cards: [
-        { title: "Shwapno — 40 outlets", sub: "POS & inventory", who: P.rafiq, tag: "৳ 48 L", meta: "Sent 22 Oct" },
+        { title: "Shwapno: 40 outlets", sub: "POS & inventory", who: P.rafiq, tag: "৳ 48 L", meta: "Sent 22 Oct" },
         { title: "Square Toiletries", sub: "Distribution", who: P.tanim, tag: "৳ 26 L", meta: "Sent 20 Oct" },
       ] },
       { name: "Negotiation", cards: [{ title: "Akij Food ERP", sub: "Full suite, 3 plants", who: P.sadia, tag: "৳ 72 L", meta: "Legal review" }] },
@@ -150,7 +150,7 @@ export const seeds: Record<string, Layout> = {
       { title: "Annual sports day", sub: "Army Stadium", group: "Upcoming", meta: [["Date", "14 Nov"], ["Registered", "96 / 250"]], progress: 38, status: "Open" },
       { title: "Year-end party", sub: "Head office rooftop", group: "Upcoming", meta: [["Date", "28 Dec"], ["Registered", "20 / 400"]], progress: 5, status: "Scheduled" },
       { title: "Eid get-together", sub: "Head office", group: "Past", meta: [["Date", "Jun 2026"], ["Attended", "312"]], progress: 100, status: "Completed" },
-      { title: "Distributor summit — north", sub: "Rangpur", group: "Past", meta: [["Date", "Aug 2026"], ["Attended", "86"]], progress: 100, status: "Completed" },
+      { title: "Distributor summit: north", sub: "Rangpur", group: "Past", meta: [["Date", "Aug 2026"], ["Attended", "86"]], progress: 100, status: "Completed" },
     ],
   },
   apps: {
@@ -174,7 +174,7 @@ export const seeds: Record<string, Layout> = {
       { title: "Company", rows: [
         { label: "Legal name", desc: "Shown on invoices and Mushak forms", value: "Brain Foods Ltd." },
         { label: "BIN", desc: "Business identification number", value: "000123456-0101" },
-        { label: "Fiscal year", desc: "Used for budgets and reports", value: "July – June" },
+        { label: "Fiscal year", desc: "Used for budgets and reports", value: "July to June" },
         { label: "Base currency", desc: "All amounts are stored in this currency", value: "BDT (৳)" },
       ] },
       { title: "Security", rows: [
@@ -214,16 +214,16 @@ export const seeds: Record<string, Layout> = {
     rows: [
       ["Rafiq Uddin", "Rangpur dealers", "Collection", "08:30", "17:00", "Approved"],
       ["Nadia Akter", "Akij office, Tejgaon", "Supplier meeting", "10:00", "13:00", "Approved"],
-      ["Tanim Roy", "City Bank, Motijheel", "Bank guarantee", "11:15", "—", "Pending"],
-      ["Shuvo Das", "Chattogram port", "Container release", "07:00", "—", "Approved"],
-      ["Selim Reza", "BSTI office", "Licence renewal", "12:00", "—", "Pending"],
+      ["Tanim Roy", "City Bank, Motijheel", "Bank guarantee", "11:15", "Not yet", "Pending"],
+      ["Shuvo Das", "Chattogram port", "Container release", "07:00", "Not yet", "Approved"],
+      ["Selim Reza", "BSTI office", "Licence renewal", "12:00", "Not yet", "Pending"],
       ["Mim Sultana", "Gazipur plant", "Training", "09:00", "16:00", "Approved"],
-      ["Arif Khan", "Data centre, Mohakhali", "Server maintenance", "14:00", "—", "Rejected"],
+      ["Arif Khan", "Data centre, Mohakhali", "Server maintenance", "14:00", "Not yet", "Rejected"],
     ],
   },
   shift: {
     kind: "calendar",
-    week: "Gazipur plant · 27 Oct – 2 Nov",
+    week: "Gazipur plant · 27 Oct to 2 Nov",
     events: [0, 1, 2, 3, 4, 5, 6].flatMap((d) => [
       { day: d, start: "06:00", end: "14:00", title: d % 2 ? "Morning · Kamal" : "Morning · Rina", where: "112 staff", tone: "orange" as Tone },
       { day: d, start: "14:00", end: "22:00", title: d % 2 ? "Evening · Rina" : "Evening · Kamal", where: "100 staff", tone: "ink" as Tone },
@@ -251,7 +251,7 @@ export const seeds: Record<string, Layout> = {
       { title: "Employee engagement 2026", sub: "24 questions · anonymous", group: "Open", meta: [["Responses", "248 / 412"], ["Closes", "31 Oct"]], progress: 60, status: "Open" },
       { title: "Canteen feedback", sub: "6 questions", group: "Open", meta: [["Responses", "52 / 214"], ["Closes", "26 Oct"]], progress: 24, status: "Open" },
       { title: "Training needs", sub: "10 questions · managers", group: "Open", meta: [["Responses", "18 / 40"], ["Closes", "5 Nov"]], progress: 45, status: "Open" },
-      { title: "Pulse — September", sub: "5 questions", group: "Closed", meta: [["Responses", "301"], ["eNPS", "+32"]], progress: 100, status: "Completed" },
+      { title: "Pulse: September", sub: "5 questions", group: "Closed", meta: [["Responses", "301"], ["eNPS", "+32"]], progress: 100, status: "Completed" },
       { title: "Transport survey", sub: "8 questions", group: "Closed", meta: [["Responses", "276"], ["Result", "2 new routes"]], progress: 100, status: "Completed" },
     ],
   },
@@ -290,14 +290,14 @@ export const seeds: Record<string, Layout> = {
     action: "Export register",
     cols: ["Employee", "Shift", "In", "Out", "Hours", "Status"],
     rows: [
-      ["Kamal Hasan", "Morning", "05:52", "—", "4h 40m", "Present"],
-      ["Rina Begum", "Morning", "—", "—", "—", "On leave"],
-      ["Sadia Islam", "Office", "09:04", "—", "1h 28m", "Present"],
-      ["Tanim Roy", "Office", "09:41", "—", "0h 51m", "Late"],
-      ["Shuvo Das", "Office", "08:55", "—", "1h 37m", "Present"],
-      ["Mim Sultana", "Office", "—", "—", "—", "Absent"],
+      ["Kamal Hasan", "Morning", "05:52", "Not yet", "4h 40m", "Present"],
+      ["Rina Begum", "Morning", "None", "None", "None", "On leave"],
+      ["Sadia Islam", "Office", "09:04", "Not yet", "1h 28m", "Present"],
+      ["Tanim Roy", "Office", "09:41", "Not yet", "0h 51m", "Late"],
+      ["Shuvo Das", "Office", "08:55", "Not yet", "1h 37m", "Present"],
+      ["Mim Sultana", "Office", "None", "None", "None", "Absent"],
       ["Selim Reza", "Night", "21:58", "06:04", "8h 06m", "Present"],
-      ["Nadia Akter", "Office", "09:12", "—", "1h 20m", "Late"],
+      ["Nadia Akter", "Office", "09:12", "Not yet", "1h 20m", "Late"],
     ],
   },
   recruitment: {
@@ -319,7 +319,7 @@ export const seeds: Record<string, Layout> = {
   },
   leave: {
     kind: "calendar",
-    week: "Team leave · 27 Oct – 2 Nov",
+    week: "Team leave · 27 Oct to 2 Nov",
     events: [
       { day: 0, start: "08:00", end: "18:00", title: "Rina Begum · Sick", tone: "gray" },
       { day: 0, start: "08:00", end: "18:00", title: "Nadia Akter · Casual", tone: "orange" },
@@ -335,7 +335,7 @@ export const seeds: Record<string, Layout> = {
     action: "New claim",
     cols: ["Claim", "Employee", "Category", "Date", "Amount", "Status"],
     rows: [
-      ["EXP-3381", "Rafiq Uddin", "Travel — Rangpur", "22 Oct", "৳ 12,400", "Pending"],
+      ["EXP-3381", "Rafiq Uddin", "Travel: Rangpur", "22 Oct", "৳ 12,400", "Pending"],
       ["EXP-3380", "Nadia Akter", "Supplier lunch", "21 Oct", "৳ 2,150", "Approved"],
       ["EXP-3378", "Shuvo Das", "Fuel", "20 Oct", "৳ 6,800", "Pending"],
       ["EXP-3375", "Sadia Islam", "Training fee", "18 Oct", "৳ 18,000", "Reimbursed"],
@@ -379,7 +379,7 @@ export const seeds: Record<string, Layout> = {
     cols: ["Pass", "Type", "Vehicle / visitor", "Gate", "Time", "Status"],
     rows: [
       ["GP-5521", "Goods out", "Dhaka Metro-Ta 11-2034", "Gate 2", "08:12", "Exited"],
-      ["GP-5522", "Visitor", "Akij Packaging — 2 persons", "Gate 1", "09:40", "Pending"],
+      ["GP-5522", "Visitor", "Akij Packaging: 2 persons", "Gate 1", "09:40", "Pending"],
       ["GP-5523", "Goods in", "Chatta Metro-Ma 14-8890", "Gate 2", "10:05", "Pending"],
       ["GP-5524", "Returnable", "Pallet jack × 2", "Gate 3", "10:30", "Approved"],
       ["GP-5525", "Goods out", "Dhaka Metro-Na 18-5512", "Gate 2", "11:02", "Exited"],
@@ -395,7 +395,7 @@ export const seeds: Record<string, Layout> = {
       ["PO-2290", "Meghna Flour Mills", "Flour 50kg × 400", "19 Oct", "26 Oct", "৳ 42.0 L", "In transit"],
       ["PO-2288", "City Sugar", "Sugar 50kg × 200", "15 Oct", "22 Oct", "৳ 9.8 L", "Late"],
       ["PO-2285", "Bashundhara Paper", "Labels", "12 Oct", "18 Oct", "৳ 6.2 L", "Received"],
-      ["PO-2283", "Titas Gas", "Industrial gas", "10 Oct", "—", "৳ 3.4 L", "Received"],
+      ["PO-2283", "Titas Gas", "Industrial gas", "10 Oct", "None", "৳ 3.4 L", "Received"],
       ["PO-2280", "ACI Chemicals", "Cleaning agents", "8 Oct", "15 Oct", "৳ 1.9 L", "Received"],
     ],
   },

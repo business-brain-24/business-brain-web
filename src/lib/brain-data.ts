@@ -162,11 +162,11 @@ const salesAnswer: Handler = (c) => {
     const cmp = Array.from({ length: span }, (_, i) => i);
     const totals = YEARS.map((y) => sum(pick(sales.monthly, y, cmp)));
     return reply({
-      text: `Comparing the same period (Jan–Sep) each year: sales grew from ${fmt("bdt", totals[0])} in 2024 to ${fmt("bdt", totals[1])} in 2025 (${signed(change(totals[1], totals[0]))}) and ${fmt("bdt", totals[2])} in 2026 (${signed(change(totals[2], totals[1]))}). March–April is the peak every year, around Eid and Pohela Boishakh.`,
-      kpis: YEARS.map((y, i) => ({ label: `Jan–Sep ${y}`, value: fmt("bdt", totals[i]), delta: i ? signed(change(totals[i], totals[i - 1])) : undefined, good: true })),
+      text: `Comparing the same period (Jan to Sep) each year: sales grew from ${fmt("bdt", totals[0])} in 2024 to ${fmt("bdt", totals[1])} in 2025 (${signed(change(totals[1], totals[0]))}) and ${fmt("bdt", totals[2])} in 2026 (${signed(change(totals[2], totals[1]))}). March to April is the peak every year, around Eid and Pohela Boishakh.`,
+      kpis: YEARS.map((y, i) => ({ label: `Jan to Sep ${y}`, value: fmt("bdt", totals[i]), delta: i ? signed(change(totals[i], totals[i - 1])) : undefined, good: true })),
       charts: [
         { kind: "line", title: "Monthly sales, by year", unit: "bdt", data: monthRows(sales.monthly, [...YEARS], cmp), series: YEARS.map(String) },
-        { kind: "bar", title: "Jan–Sep sales, by year", unit: "bdt", data: YEARS.map((y, i) => ({ label: String(y), Sales: totals[i] })), series: ["Sales"] },
+        { kind: "bar", title: "Jan to Sep sales, by year", unit: "bdt", data: YEARS.map((y, i) => ({ label: String(y), Sales: totals[i] })), series: ["Sales"] },
       ],
       follow: ["Sales by division last year", "Which products sold the most this year?", "Show sales by channel"],
     });
@@ -243,8 +243,8 @@ const payrollAnswer: Handler = (c) => {
     const cmp = Array.from({ length: monthsIn(THIS_YEAR) }, (_, i) => i);
     const totals = YEARS.map((y) => sum(pick(payroll.monthly, y, cmp)));
     return reply({
-      text: `For Jan–Sep, payroll grew from ${fmt("bdt", totals[0])} in 2024 to ${fmt("bdt", totals[2])} in 2026, mostly because headcount rose from ${headcount[2024].toLocaleString("en-IN")} to ${headcount[2026].toLocaleString("en-IN")}. April spikes every year with the Eid festival bonus.`,
-      kpis: YEARS.map((y, i) => ({ label: `Jan–Sep ${y}`, value: fmt("bdt", totals[i]), delta: i ? signed(change(totals[i], totals[i - 1])) : undefined })),
+      text: `For Jan to Sep, payroll grew from ${fmt("bdt", totals[0])} in 2024 to ${fmt("bdt", totals[2])} in 2026, mostly because headcount rose from ${headcount[2024].toLocaleString("en-IN")} to ${headcount[2026].toLocaleString("en-IN")}. April spikes every year with the Eid festival bonus.`,
+      kpis: YEARS.map((y, i) => ({ label: `Jan to Sep ${y}`, value: fmt("bdt", totals[i]), delta: i ? signed(change(totals[i], totals[i - 1])) : undefined })),
       charts: [{ kind: "line", title: "Monthly payroll cost, by year", unit: "bdt", data: monthRows(payroll.monthly, [...YEARS], cmp), series: YEARS.map(String) }],
       follow: ["Payroll by department", "Why is overtime high in April?", "Show headcount trend"],
     });
@@ -338,8 +338,8 @@ const manufacturingAnswer: Handler = (c) => {
     const cmp = Array.from({ length: monthsIn(THIS_YEAR) }, (_, i) => i);
     const totals = YEARS.map((y) => sum(pick(manufacturing.output, y, cmp)));
     return reply({
-      text: `Jan–Sep output grew from ${fmt("kg", totals[0])} in 2024 to ${fmt("kg", totals[2])} in 2026 (${signed(change(totals[2], totals[0]))}).`,
-      kpis: YEARS.map((y, i) => ({ label: `Jan–Sep ${y}`, value: fmt("kg", totals[i]), delta: i ? signed(change(totals[i], totals[i - 1])) : undefined, good: true })),
+      text: `Jan to Sep output grew from ${fmt("kg", totals[0])} in 2024 to ${fmt("kg", totals[2])} in 2026 (${signed(change(totals[2], totals[0]))}).`,
+      kpis: YEARS.map((y, i) => ({ label: `Jan to Sep ${y}`, value: fmt("kg", totals[i]), delta: i ? signed(change(totals[i], totals[i - 1])) : undefined, good: true })),
       charts: [{ kind: "line", title: "Monthly output (kg), by year", unit: "kg", data: monthRows(manufacturing.output, [...YEARS], cmp), series: YEARS.map(String) }],
       follow: ["OEE by line", "What is causing downtime?", "Show defects by type"],
     });
@@ -392,9 +392,9 @@ const inventoryAnswer: Handler = (c) => {
   ];
   if (/forecast|run out|stock[- ]?out|shortage|plan|next/.test(c.q)) {
     return reply({
-      text: "Demand jumps in weeks 43–44 for the Durga Puja and wedding season. On the current plan, projected stock falls below demand in week 44, so raise production or transfer stock from Chattogram before then.",
+      text: "Demand jumps in weeks 43 to 44 for the Durga Puja and wedding season. On the current plan, projected stock falls below demand in week 44, so raise production or transfer stock from Chattogram before then.",
       kpis,
-      charts: [{ kind: "line", title: "Demand forecast vs projected stock (tonnes)", unit: "tonnes", data: inventory.forecast, series: ["Forecast demand", "Projected stock"], note: "Weeks 40–47, all categories" }],
+      charts: [{ kind: "line", title: "Demand forecast vs projected stock (tonnes)", unit: "tonnes", data: inventory.forecast, series: ["Forecast demand", "Projected stock"], note: "Weeks 40 to 47, all categories" }],
       follow: ["Which items are slow moving?", "Stock by warehouse", "Production output by month"],
     });
   }
@@ -538,13 +538,13 @@ const financeAnswer: Handler = (c) => {
 const budgetAnswer: Handler = () => {
   const over = budget.filter(([, b, a]) => a > b);
   return reply({
-    text: `For Jan–Sep 2026, ${over.length} cost centres are over budget. Marketing is furthest over at ${signed(change(budget[2][2], budget[2][1]))}; IT is ${signed(change(budget[4][2], budget[4][1]))} under.`,
+    text: `For Jan to Sep 2026, ${over.length} cost centres are over budget. Marketing is furthest over at ${signed(change(budget[2][2], budget[2][1]))}; IT is ${signed(change(budget[4][2], budget[4][1]))} under.`,
     kpis: [
-      { label: "Budget · Jan–Sep", value: fmt("bdt", sum(budget.map((b) => b[1]))) },
+      { label: "Budget · Jan to Sep", value: fmt("bdt", sum(budget.map((b) => b[1]))) },
       { label: "Actual", value: fmt("bdt", sum(budget.map((b) => b[2]))) },
       { label: "Over budget", value: `${over.length} cost centres`, good: false },
     ],
-    charts: [{ kind: "bar", title: "Budget vs actual by cost centre · Jan–Sep 2026", unit: "bdt", data: budget.map(([label, b, a]) => ({ label, Budget: b, Actual: a })), series: ["Budget", "Actual"] }],
+    charts: [{ kind: "bar", title: "Budget vs actual by cost centre · Jan to Sep 2026", unit: "bdt", data: budget.map(([label, b, a]) => ({ label, Budget: b, Actual: a })), series: ["Budget", "Actual"] }],
     tables: [{ title: "Variance", columns: ["Cost centre", "Budget", "Actual", "Variance"], rows: budget.map(([n, b, a]) => [n, fmt("bdt", b), fmt("bdt", a), signed(change(a, b))]) }],
     follow: ["Show expenses by category", "Purchase spend by supplier", "Show profit and loss"],
   });
@@ -692,7 +692,7 @@ const posAnswer: Handler = (c) => {
   if (c.by === "hour" || /busiest|peak|hour/.test(c.q)) {
     return reply({
       text: "Showrooms are busiest from 6 to 8 pm, when evening sales are about twice the lunchtime peak.",
-      kpis: [{ label: "Peak hour", value: "7–8 pm" }],
+      kpis: [{ label: "Peak hour", value: "7 to 8 pm" }],
       charts: [{ kind: "area", title: "Average sales by hour · per outlet", unit: "bdt", data: pos.hourly, series: ["Avg. sales"] }],
       follow: ["Sales by outlet", "Payment methods in showrooms", "Show sales by month"],
     });
@@ -717,16 +717,16 @@ const overviewAnswer: Handler = () => {
   const before = sum(pick(sales.monthly, LAST_YEAR, cmp));
   const years: Year[] = [LAST_YEAR, THIS_YEAR];
   return reply({
-    text: `Here's ${COMPANY} at a glance for Jan–Sep 2026. Sales are ${signed(change(now, before))} on last year, OEE is up, and Sylhet is the one division behind target.`,
+    text: `Here's ${COMPANY} at a glance for Jan to Sep 2026. Sales are ${signed(change(now, before))} on last year, OEE is up, and Sylhet is the one division behind target.`,
     kpis: [
-      { label: "Sales · Jan–Sep", value: fmt("bdt", now), delta: signed(change(now, before)), good: true },
+      { label: "Sales · Jan to Sep", value: fmt("bdt", now), delta: signed(change(now, before)), good: true },
       { label: "Gross margin", value: fmt("pct", (finance.pnl(THIS_YEAR)["Gross profit"] / finance.pnl(THIS_YEAR).Revenue) * 100) },
       { label: "Headcount", value: headcount[THIS_YEAR].toLocaleString("en-IN") },
       { label: "Stock value", value: fmt("bdt", sum(inventory.warehouses.map((w) => w[1]))) },
     ],
     charts: [
       { kind: "line", title: "Monthly sales, 2025 vs 2026", unit: "bdt", data: monthRows(sales.monthly, years, Array.from({ length: 12 }, (_, i) => i)), series: years.map(String) },
-      { kind: "hbar", title: "Sales by division · Jan–Sep 2026", unit: "bdt", data: shareRows(sales.divisions, now, "Sales"), series: ["Sales"] },
+      { kind: "hbar", title: "Sales by division · Jan to Sep 2026", unit: "bdt", data: shareRows(sales.divisions, now, "Sales"), series: ["Sales"] },
     ],
     follow: ["Show profit and loss", "Payroll cost this year", "What is causing downtime?"],
   });

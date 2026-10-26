@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import clsx from "clsx";
 import { catalogues } from "@/lib/catalog";
+import { ICON } from "@/lib/icons";
 
 /** Every module and sub-module, for Betopia and Akboria, with a tab per ERP and expandable modules. */
 export default function ModuleCatalogue() {
@@ -51,7 +52,7 @@ export default function ModuleCatalogue() {
                   <span className="hidden text-[13px] text-muted sm:inline">
                     {m.subs.length} sub-modules{live && live < m.subs.length ? ` · ${live} live` : ""}
                   </span>
-                  <ChevronDown size={18} className={clsx("text-muted transition-transform", isOpen && "rotate-180 text-orange")} />
+                  <ChevronDown size={ICON.lg} className={clsx("text-muted transition-transform", isOpen && "rotate-180 text-orange")} />
                 </span>
               </button>
               {isOpen && (
@@ -62,7 +63,7 @@ export default function ModuleCatalogue() {
                         <div className="flex items-start justify-between gap-3">
                           <p className="text-[15px] font-medium leading-snug">{s.name}</p>
                           {s.status && (
-                            <span className={clsx("shrink-0 rounded-full px-2 py-0.5 text-[11px] font-medium", s.status === "Live" ? "bg-emerald-50 text-emerald-700" : "bg-orange-soft text-orange-deep")}>
+                            <span className={clsx("shrink-0 rounded-full px-2 py-0.5 text-[12px] font-medium", s.status === "Live" ? "bg-emerald-50 text-emerald-700" : "bg-orange-soft text-orange-deep")}>
                               {s.status}
                             </span>
                           )}

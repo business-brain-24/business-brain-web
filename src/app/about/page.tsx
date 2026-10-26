@@ -1,66 +1,50 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/site";
 import PageHero from "@/components/ui/PageHero";
-import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { Button } from "@/components/ui/Button";
+import { Reveal } from "@/components/motion/Reveal";
 import CTA from "@/components/ui/CTA";
+import { WATCH_TOWER_DEMO } from "@/lib/data";
 
-export const metadata: Metadata = { title: "About" };
+export const metadata: Metadata = pageMeta(
+  "/about",
+  "About",
+  "Business Brain 24 brings HR, payroll, finance, purchasing, inventory, sales and manufacturing into one live record with AI at the core. Watch Tower is included.",
+);
+
+// Copy from the content alignment doc (26 Oct 2026). Change it there first.
+const blocks = [
+  {
+    label: "Business Brain",
+    title: "One live record, with AI at the core.",
+    body: "Business Brain 24 brings HR, payroll, finance, purchasing, inventory, sales and manufacturing into one live record, with AI at the core. Ask questions in plain words and get answers and charts straight from your data. Our own MCP server lets you connect ChatGPT or Claude to your ERP. Configured to your workflows and Bangladesh rules.",
+    cta: { href: "/demo", text: "Book a free AI-ERP fit session", external: false },
+  },
+  {
+    label: "Watch Tower",
+    title: "Your whole operation on one live map.",
+    body: "An interactive, live map of your whole operation: field force, branches, orders and vehicles. New orders pop up as they happen, leaderboards show your top performers, and you can ask the AI questions such as “Which region is behind target today?” Watch Tower comes with Business Brain 24.",
+    cta: { href: WATCH_TOWER_DEMO, text: "Book a Watch Tower demo", external: true },
+  },
+];
 
 export default function About() {
-  const stats = [
-    ["AI", "at the core"],
-    ["MCP", "our own server, for ChatGPT & Claude"],
-    ["1", "live record for every module"],
-    ["BD", "labour law, tax and VAT configured"],
-  ];
-  const beliefs = [
-    ["One source of truth", "Data entered once should power every decision in the company."],
-    ["Built with operators", "Every feature starts on a factory floor, a store counter or a finance desk."],
-    ["Trust is the product", "Your payroll and books are safe with us — role-based access, activity tracking, and cloud or on-premise deployment."],
-  ];
-  const journey = [
-    ["2017", "Founded in Dhaka. First payroll customer: 600 workers."],
-    ["2019", "Full ERP suite launched with Accounting and Inventory."],
-    ["2023", "1,000 customers. Expanded to the Middle East."],
-    ["2026", "The AI-centric ERP: run your business, ask it anything."],
-  ];
   return (
     <>
-      <PageHero
-        label="About us"
-        title="We're building the brain every business deserves."
-        sub="Business Brain 24 started in Dhaka in 2017 with one belief: growing companies shouldn't have to choose between rigid ERPs and a mess of spreadsheets."
-      />
-      <Stagger className="container-x mt-20 grid grid-cols-2 gap-y-10 md:grid-cols-4">
-        {stats.map(([v, l], i) => (
-          <StaggerItem key={l} className={i > 0 ? "md:border-l md:border-line md:pl-8" : ""}>
-            <p className={"text-[40px] font-medium tracking-[-0.04em] sm:text-[52px] " + (i === 3 ? "text-orange" : "")}>{v}</p>
-            <p className="text-[13px] text-muted">{l}</p>
-          </StaggerItem>
+      <PageHero label="About us" title="Business Brain 24" sub="The agentic ERP that cuts operating costs and lifts productivity across your enterprise." />
+      <section className="container-x mt-16 grid gap-4 md:grid-cols-2">
+        {blocks.map((b, i) => (
+          <Reveal key={b.label} delay={i * 0.1} className={"flex flex-col rounded-[20px] p-7 sm:p-10 " + (i === 0 ? "bg-ink text-white" : "bg-surface")}>
+            <p className="text-[13px] font-medium text-orange">{b.label}</p>
+            <h2 className="mt-3 text-[28px] font-medium leading-[34px] tracking-[-0.03em] sm:text-[32px] sm:leading-[38px]">{b.title}</h2>
+            <p className={"mt-4 flex-1 text-[16px] leading-[27px] " + (i === 0 ? "text-white/70" : "text-muted")}>{b.body}</p>
+            <div className="mt-8">
+              <Button href={b.cta.href} variant={i === 0 ? "light" : "dark"} external={b.cta.external}>
+                {b.cta.text}
+              </Button>
+            </div>
+          </Reveal>
         ))}
-      </Stagger>
-      <section className="container-x grid gap-10 py-24 md:grid-cols-[1fr_1.6fr]">
-        <h2 className="h-section">What we believe.</h2>
-        <Stagger>
-          {beliefs.map(([t, b]) => (
-            <StaggerItem key={t} className="border-t border-line py-6">
-              <h3 className="text-[18px] font-medium">{t}</h3>
-              <p className="mt-1.5 text-[15px] text-muted">{b}</p>
-            </StaggerItem>
-          ))}
-        </Stagger>
-      </section>
-      <section className="container-x">
-        <Reveal className="rounded-[20px] bg-surface p-7 sm:p-10">
-          <h2 className="text-[28px] font-medium tracking-[-0.03em] sm:text-[34px]">Our journey</h2>
-          <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {journey.map(([y, t], i) => (
-              <div key={y} className={"border-t-2 pt-4 " + (i === 3 ? "border-orange" : "border-ink")}>
-                <p className="text-[13px] text-orange">{y}</p>
-                <p className="mt-2 text-[15px] leading-[23px]">{t}</p>
-              </div>
-            ))}
-          </div>
-        </Reveal>
       </section>
       <CTA />
     </>

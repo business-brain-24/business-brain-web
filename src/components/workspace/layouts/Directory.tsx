@@ -5,6 +5,7 @@ import { LayoutGrid, List, Mail, MapPin, Phone, Plus, Search } from "lucide-reac
 import clsx from "clsx";
 import type { Layout } from "@/lib/app-seeds";
 import { Avatar, StatusPill } from "./shared";
+import { ICON } from "@/lib/icons";
 
 type Props = Extract<Layout, { kind: "directory" }>;
 
@@ -27,14 +28,14 @@ export default function Directory({ groups, people, action }: Props) {
         </div>
         <div className="flex items-center gap-2">
           <label className="flex h-10 flex-1 items-center gap-2 rounded-full border border-line bg-white px-3.5 focus-within:border-orange lg:w-60 lg:flex-none">
-            <Search size={14} className="text-muted" />
+            <Search size={ICON.sm} className="text-muted" />
             <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search people" className="min-w-0 flex-1 bg-transparent text-[13px] outline-none" />
           </label>
           <div className="flex rounded-full border border-line bg-white p-0.5">
-            <button onClick={() => setGrid(true)} aria-label="Grid view" className={clsx("rounded-full p-2", grid && "bg-orange-soft font-medium text-orange-deep")}><LayoutGrid size={14} /></button>
-            <button onClick={() => setGrid(false)} aria-label="List view" className={clsx("rounded-full p-2", !grid && "bg-orange-soft font-medium text-orange-deep")}><List size={14} /></button>
+            <button onClick={() => setGrid(true)} aria-label="Grid view" className={clsx("rounded-full p-2", grid && "bg-orange-soft font-medium text-orange-deep")}><LayoutGrid size={ICON.sm} /></button>
+            <button onClick={() => setGrid(false)} aria-label="List view" className={clsx("rounded-full p-2", !grid && "bg-orange-soft font-medium text-orange-deep")}><List size={ICON.sm} /></button>
           </div>
-          <button className="flex h-10 shrink-0 items-center gap-1.5 rounded-full bg-[linear-gradient(180deg,#FF6B2C,#C2410C)] px-4 text-[13px] font-medium text-white"><Plus size={14} /> <span className="hidden sm:inline">{action}</span></button>
+          <button className="flex h-10 shrink-0 items-center gap-1.5 rounded-full bg-[linear-gradient(180deg,#FF6B2C,#C2410C)] px-4 text-[13px] font-medium text-white"><Plus size={ICON.sm} /> <span className="hidden sm:inline">{action}</span></button>
         </div>
       </div>
 
@@ -48,10 +49,10 @@ export default function Directory({ groups, people, action }: Props) {
               </div>
               <p className="mt-4 text-[16px] font-semibold">{p.name}</p>
               <p className="text-[13px] text-muted">{p.role}</p>
-              <p className="mt-3 flex items-center gap-1.5 text-[12px] text-muted"><MapPin size={12} /> {p.location}</p>
+              <p className="mt-3 flex items-center gap-1.5 text-[12px] text-muted"><MapPin size={ICON.xs} /> {p.location}</p>
               <div className="mt-4 grid grid-cols-2 gap-2">
-                <a href={`mailto:${p.email}`} className="flex h-9 items-center justify-center gap-1.5 rounded-[10px] border border-line text-[12px] hover:border-orange hover:text-orange"><Mail size={13} /> Email</a>
-                <a href={`tel:${p.phone.replace(/[^+\d]/g, "")}`} className="flex h-9 items-center justify-center gap-1.5 rounded-[10px] border border-line text-[12px] hover:border-orange hover:text-orange"><Phone size={13} /> Call</a>
+                <a href={`mailto:${p.email}`} className="flex h-9 items-center justify-center gap-1.5 rounded-[10px] border border-line text-[12px] hover:border-orange hover:text-orange"><Mail size={ICON.sm} /> Email</a>
+                <a href={`tel:${p.phone.replace(/[^+\d]/g, "")}`} className="flex h-9 items-center justify-center gap-1.5 rounded-[10px] border border-line text-[12px] hover:border-orange hover:text-orange"><Phone size={ICON.sm} /> Call</a>
               </div>
             </div>
           ))}

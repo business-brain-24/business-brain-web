@@ -19,6 +19,7 @@ import Feed from "@/components/workspace/layouts/Feed";
 import Directory from "@/components/workspace/layouts/Directory";
 import Cards from "@/components/workspace/layouts/Cards";
 import Settings from "@/components/workspace/layouts/Settings";
+import { ICON } from "@/lib/icons";
 
 export default function AppDashboard() {
   const { app: slug } = useParams<{ app: string }>();
@@ -45,7 +46,7 @@ export default function AppDashboard() {
         <div className="flex flex-wrap items-center justify-between gap-3 px-2 pb-3 pt-1">
           <div className="flex items-center gap-3">
             <Link href="/dashboard" aria-label="All apps" className="flex h-9 w-9 items-center justify-center rounded-full border border-line bg-white hover:border-ink/30">
-              <ArrowLeft size={16} />
+              <ArrowLeft size={ICON.md} />
             </Link>
             <AppIcon app={app} size={40} />
             <div>
@@ -58,7 +59,7 @@ export default function AppDashboard() {
               <span className="relative flex h-2 w-2"><span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" /><span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" /></span>
               Live feed
             </span>
-            <span className="flex items-center gap-1.5 rounded-full border border-line bg-white px-3 py-1.5 text-[13px]"><CalendarDays size={14} /> {today}</span>
+            <span className="flex items-center gap-1.5 rounded-full border border-line bg-white px-3 py-1.5 text-[13px]"><CalendarDays size={ICON.sm} /> {today}</span>
           </div>
         </div>
 
@@ -86,7 +87,7 @@ export default function AppDashboard() {
             </div>
           </div>
           <Link href="/ask" className="inline-flex items-center gap-2 rounded-[12px] bg-[linear-gradient(180deg,#FF6B2C,#C2410C)] px-4 py-2.5 text-[14px] font-medium text-white shadow-[0_10px_24px_-12px_rgba(255,107,44,0.8)] hover:brightness-110">
-            <Sparkles size={15} /> Ask Brain AI about {app.name}
+            <Sparkles size={ICON.md} /> Ask Brain AI about {app.name}
           </Link>
         </div>
         )}

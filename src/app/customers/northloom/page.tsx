@@ -1,16 +1,23 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/site";
+import JsonLd, { breadcrumbLd } from "@/components/seo/JsonLd";
 import Link from "next/link";
 import { Reveal, SplitHeading, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import CTA from "@/components/ui/CTA";
 
-export const metadata: Metadata = { title: "Northloom Textiles · Customer story" };
+export const metadata: Metadata = pageMeta(
+  "/customers/northloom",
+  "Northloom Textiles · Customer story",
+  "How Northloom Textiles replaced six tools with Business Brain 24 and closed the month in one afternoon across four factories and 2,400 employees.",
+);
 
 export default function Story() {
   return (
     <>
+      <JsonLd data={breadcrumbLd([["Success stories", "/customers"], ["Northloom Textiles", "/customers/northloom"]])} />
       <section className="container-x pt-[120px] sm:pt-[150px]">
         <p className="flex flex-wrap gap-1.5 text-[13px] text-muted">
-          <Link href="/resources" className="hover:text-ink">Resources</Link> / <span>Customer stories</span> / <span className="text-ink">Northloom Textiles</span>
+          <Link href="/customers" className="hover:text-ink">Success stories</Link> / <span className="text-ink">Northloom Textiles</span>
         </p>
         <SplitHeading text="How Northloom closed the month in one afternoon." className="h-display mt-5 max-w-[960px]" />
         <Reveal delay={0.3} className="mt-6 flex flex-wrap gap-2">
@@ -24,14 +31,14 @@ export default function Story() {
           <div className="dot-grid absolute inset-0 opacity-10 invert" />
           <div className="absolute -right-24 -top-24 h-[480px] w-[480px] rounded-full bg-[radial-gradient(circle,rgba(255,107,44,0.35),transparent_65%)]" />
           <p className="relative max-w-[700px] text-[22px] font-medium leading-[32px] tracking-[-0.02em] sm:text-[32px] sm:leading-[42px]">
-            “I used to wait three days for a P&L. Now I just ask Brain — and it answers with the numbers and the reason.”
+            “I used to wait three days for a P&L. Now I just ask Brain, and it answers with the numbers and the reason.”
           </p>
         </Reveal>
       </section>
       <section className="container-x grid gap-12 py-20 lg:grid-cols-[2fr_1fr]">
         <div className="space-y-12">
           {[
-            ["The challenge", "Four factories ran on six tools — Tally for accounts, Excel for payroll, a separate attendance system and paper-based store registers. Month-end took five days, and the CFO never fully trusted the numbers."],
+            ["The challenge", "Four factories ran on six tools: Tally for accounts, Excel for payroll, a separate attendance system and paper-based store registers. Month-end took five days, and the CFO never fully trusted the numbers."],
             ["The solution", "Business Brain 24 went live in six weeks: HRMS and Payroll first, then Inventory, Procurement and Accounting. Every product writes to one ledger, so the books close themselves as the factory runs."],
           ].map(([t, b]) => (
             <Reveal key={t}>

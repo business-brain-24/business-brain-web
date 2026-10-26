@@ -1,12 +1,17 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/site";
 import { groups, products } from "@/lib/data";
 import { Label } from "@/components/ui/Button";
 import { Reveal, SplitHeading, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import CTA from "@/components/ui/CTA";
 import ModuleCatalogue from "@/components/products/ModuleCatalogue";
 
-export const metadata: Metadata = { title: "Products" };
+export const metadata: Metadata = pageMeta(
+  "/products",
+  "Products",
+  "Every Business Brain 24 module in one connected ERP: accounting, procurement, inventory, sales, manufacturing, HRMS and payroll, with AI at the core.",
+);
 
 export default function ProductsIndex() {
   return (

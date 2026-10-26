@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Logo } from "./Nav";
 import { contact } from "@/lib/data";
+import { CookieSettingsLink } from "@/components/analytics/Consent";
 
 const cols = [
   {
@@ -15,7 +16,6 @@ const cols = [
       ["Manufacturing", "/products/manufacturing"],
       ["HRMS & Payroll", "/products/hrms"],
       ["All products", "/products"],
-      ["All 55 apps", "/apps"],
     ],
   },
   {
@@ -28,11 +28,10 @@ const cols = [
     ],
   },
   {
-    title: "Resources",
+    title: "Get in touch",
     links: [
-      ["Blog", "/resources"],
       ["Ask Brain AI", "/ask"],
-      ["Pricing", "/pricing"],
+      ["Book a fit session", "/demo"],
       ["Contact", "/contact"],
     ],
   },
@@ -47,8 +46,8 @@ export default function Footer() {
       <div className="flex flex-col justify-between gap-12 md:flex-row">
         <div className="max-w-[300px]">
           <Logo />
-          <p className="mt-4 text-[14px] leading-[22px] text-muted">The AI-centric ERP for growing businesses. Configured for Bangladesh.</p>
-          <a href={contact.phoneHref} className="mt-3 block text-[14px] text-ink transition-colors hover:text-orange">
+          <p className="mt-4 text-[14px] leading-[22px] text-muted">The agentic ERP that cuts operating costs and lifts productivity across your enterprise.</p>
+          <a href={contact.phoneHref} className="mt-3 flex min-h-11 items-center text-[14px] text-ink transition-colors hover:text-orange">
             {contact.phone}
           </a>
         </div>
@@ -56,10 +55,10 @@ export default function Footer() {
           {cols.map((c) => (
             <div key={c.title}>
               <p className="text-[13px] text-subtle">{c.title}</p>
-              <ul className="mt-3 space-y-2.5">
+              <ul className="mt-2 sm:mt-3 sm:space-y-2.5">
                 {c.links.map(([label, href]) => (
                   <li key={href}>
-                    <Link href={href} className="text-[14px] text-ink transition-colors hover:text-orange">
+                    <Link href={href} className="flex min-h-11 items-center text-[14px] text-ink transition-colors hover:text-orange sm:inline sm:min-h-0">
                       {label}
                     </Link>
                   </li>
@@ -71,10 +70,11 @@ export default function Footer() {
       </div>
       <div className="mt-14 flex flex-col gap-3 border-t border-line pt-6 text-[13px] text-subtle sm:flex-row sm:items-center sm:justify-between">
         <p>© 2026 Business Brain 24</p>
-        <div className="flex gap-6">
-          <Link href="/contact" className="hover:text-ink">Privacy</Link>
-          <Link href="/contact" className="hover:text-ink">Terms</Link>
-          <Link href="/contact" className="hover:text-ink">Security</Link>
+        <div className="flex flex-wrap gap-x-6">
+          <Link href="/privacy" className="inline-flex min-h-11 items-center hover:text-ink">Privacy</Link>
+          <Link href="/terms" className="inline-flex min-h-11 items-center hover:text-ink">Terms</Link>
+          <Link href="/security" className="inline-flex min-h-11 items-center hover:text-ink">Security</Link>
+          <CookieSettingsLink className="inline-flex min-h-11 items-center hover:text-ink" />
         </div>
       </div>
     </footer>
