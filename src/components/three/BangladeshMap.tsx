@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useFrameloop } from "./LazyScene";
+import { useFrameloop, useSceneReady } from "./LazyScene";
 import { Canvas, useFrame, useThree, type ThreeEvent } from "@react-three/fiber";
 import { ContactShadows, Html, Line, OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
@@ -216,6 +216,18 @@ function FitCamera() {
   return null;
 }
 
+/** Tells LazyScene the canvas has drawn, so the static map can fade out. */
+function FirstFrame() {
+  const ready = useSceneReady();
+  const done = useRef(false);
+  useFrame(() => {
+    if (done.current) return;
+    done.current = true;
+    ready();
+  });
+  return null;
+}
+
 export default function BangladeshMap(props: {
   stats: RegionStat[];
   selected: string | null;
@@ -241,6 +253,7 @@ export default function BangladeshMap(props: {
       onPointerMissed={(e) => !wasDrag(e) && props.onSelect(null)}
       style={{ touchAction: coarse ? "pan-y" : "none" }}
     >
+      <FirstFrame />
       <ambientLight intensity={0.55} />
       <directionalLight position={[-4, 8, 3]} intensity={1.4} castShadow shadow-mapSize={[1024, 1024]} />
       <directionalLight position={[5, 3, -4]} intensity={0.35} color="#FFB08A" />
