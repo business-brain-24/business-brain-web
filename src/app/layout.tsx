@@ -6,6 +6,7 @@ import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
 import RouteTracker from "@/components/analytics/RouteTracker";
 import ConsentBanner, { consentDefaultsScript } from "@/components/analytics/Consent";
+import ChatWidget from "@/components/layout/ChatWidget";
 import JsonLd, { organizationLd, websiteLd } from "@/components/seo/JsonLd";
 import { GTM_ID } from "@/lib/analytics";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
@@ -58,6 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
         </SmoothScroll>
         <ConsentBanner />
+        <ChatWidget />
       </body>
     </html>
   );
