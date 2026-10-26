@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Hero from "./_components/Hero";
+import DashboardStage from "./_components/DashboardStage";
 import { Apps, AskBrain, Editions, FinalCta, HowItWorks, Industries, Modules, Outcomes, Trust } from "./_components/Sections";
 
 const title = "Do More. Spend Less.";
@@ -24,6 +25,7 @@ export default function DoMoreSpendLess() {
   return (
     <>
       <Hero />
+      <DashboardStage />
       <Outcomes />
       <HowItWorks />
       <Apps />

@@ -237,34 +237,4 @@ export function Industries() {
   );
 }
 
-export function FinalCta() {
-  return (
-    <section data-cta-location="final-cta" className="container-x pb-20 sm:pb-28">
-      <div className="relative overflow-hidden rounded-[32px] border border-white">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/lp/hero-ring-1400.webp" alt="" aria-hidden loading="lazy" className="absolute inset-0 h-full w-full object-cover object-[75%_50%] opacity-90" />
-        <div className="relative px-6 py-16 sm:px-14 sm:py-24">
-          <div className={clsx(s.glass, "max-w-[560px] p-7 sm:p-10")}>
-            <p className={s.eyebrow}>Business Brain 24</p>
-            <h2 className={clsx(s.display, "mt-3 text-[36px] font-semibold leading-[1.05] text-[#161928] sm:text-[52px]")}>
-              From factory to shelf, <span className={s.accent}>one brain.</span>
-            </h2>
-            <p className="mt-4 text-[17px] leading-[27px] text-[#5D6380]">Book a session and see your own operation on Business Brain 24.</p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link href="/demo" data-cta className={clsx(s.btnNavy, "inline-flex h-12 items-center justify-center gap-2 px-6 text-[16px] font-semibold")}>
-                Book a demo <ArrowRight size={18} />
-              </Link>
-              <Link href="/pricing" data-cta className={clsx(s.btnGlass, "inline-flex h-12 items-center justify-center px-6 text-[16px] font-medium text-[#262D6C]")}>
-                Get a quote
-              </Link>
-            </div>
-            <div className="mt-8 flex items-center gap-3 border-t border-[rgba(38,45,108,0.07)] pt-6">
-              <span className="text-[13px] text-[#5D6380]">Powered by</span>
-              <Image src="/lp/betopia-limited.webp" alt="Betopia Limited" width={120} height={40} className="h-7 w-auto" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+export { default as FinalCta } from "./FinalCta";
