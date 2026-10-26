@@ -5,7 +5,8 @@ import { appCatalog, appCount, contact, groups, industries, products, stories } 
 
 export type Unit = "bdt" | "count" | "pct" | "kg" | "tonnes" | "min" | "days";
 export type Chart = {
-  kind: "bar" | "hbar" | "stacked" | "line" | "area" | "pie";
+  /** radar: one row per measure; composed: first series as bars, the rest as lines; radial, funnel, treemap: one "value" per row */
+  kind: "bar" | "hbar" | "stacked" | "line" | "area" | "pie" | "radar" | "composed" | "radial" | "funnel" | "treemap";
   title: string;
   unit: Unit;
   /** one row per x value: { label, [series]: value } */

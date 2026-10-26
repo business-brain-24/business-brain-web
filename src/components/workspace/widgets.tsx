@@ -2,6 +2,9 @@ import { Sparkles, TrendingDown, TrendingUp } from "lucide-react";
 import clsx from "clsx";
 import type { Widget } from "@/lib/overviews";
 import { Avatar, StatusPill } from "./layouts/shared";
+
+/** The arrow shows the direction, so the number is shown without a plus or minus sign. */
+const unsigned = (d: string) => d.replace(/^[+\-−]\s?/, "");
 import { ICON } from "@/lib/icons";
 
 // Brand-led palette for multi-series charts: orange first, then calm neutrals and one green.
@@ -53,8 +56,8 @@ function WidgetView({ w }: { w: Widget }) {
               <p className="text-[12px] text-muted">{k.label}</p>
               <p className="mt-1.5 text-[24px] font-semibold tracking-[-0.03em]">{k.value}</p>
               {k.delta && (
-                <p className={clsx("mt-1 flex items-center gap-1 text-[12px] font-medium", k.delta.startsWith("-") === !k.downIsGood ? "text-rose-600" : "text-emerald-600")}>
-                  {k.delta.startsWith("-") ? <TrendingDown size={ICON.sm} /> : <TrendingUp size={ICON.sm} />} {k.delta}
+                <p className={clsx("mt-1 flex items-center gap-1 text-[12px] font-medium", /^[-−]/.test(k.delta) === !k.downIsGood ? "text-rose-600" : "text-emerald-600")}>
+                  {/^[-−]/.test(k.delta) ? <TrendingDown size={ICON.sm} /> : <TrendingUp size={ICON.sm} />} {unsigned(k.delta)}
                   <span className="font-normal text-muted">{k.note ?? "vs last month"}</span>
                 </p>
               )}

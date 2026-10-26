@@ -1,0 +1,38 @@
+[
+ {
+  "Dept ID": "D-01",
+  "Department": "Management"
+ },
+ {
+  "Dept ID": "D-02",
+  "Department": "Sales"
+ },
+ {
+  "Dept ID": "D-03",
+  "Department": "Marketing"
+ },
+ {
+  "Dept ID": "D-04",
+  "Department": "Supply Chain"
+ },
+ {
+  "Dept ID": "D-05",
+  "Department": "Production"
+ },
+ {
+  "Dept ID": "D-06",
+  "Department": "Quality Control"
+ },
+ {
+  "Dept ID": "D-07",
+  "Department": "Finance & Accounts"
+ },
+ {
+  "Dept ID": "D-08",
+  "Department": "HR & Admin"
+ },
+ {
+  "Dept ID": "D-09",
+  "Department": "IT"
+ }
+]

@@ -166,7 +166,7 @@ export default function Nav() {
               exit={{ opacity: 0, y: -6, transition: { duration: 0.15 } }}
               transition={{ duration: 0.35, ease }}
               onMouseEnter={() => enter(open)}
-              className="mx-auto mt-2 hidden max-w-[1200px] rounded-[18px] border border-line bg-white p-3 shadow-[var(--shadow-float)] lg:block"
+              className="mx-auto mt-2 hidden w-fit rounded-[14px] border border-line bg-white p-2 shadow-[var(--shadow-float)] lg:block"
             >
               {open === "products" ? <ProductsMenu /> : <IndustriesMenu />}
             </motion.div>
@@ -180,69 +180,52 @@ export default function Nav() {
   );
 }
 
-function ProductsMenu() {
-  const cols = [groups.slice(0, 2), groups.slice(2)];
+/* Mega menus: names only, grouped, with one link to the full list. */
+const menuLink = "block rounded-[8px] px-2.5 py-1.5 text-[14px] text-ink transition-colors hover:bg-surface hover:text-orange";
+
+function MenuFooter({ href, children }: { href: string; children: React.ReactNode }) {
   return (
-    <div className="flex">
-      {cols.map((col, ci) => (
-        <div key={ci} className={clsx("w-[300px] px-3 py-4", ci > 0 && "border-l border-line")}>
-          {col.map((g) => (
-            <div key={g} className="mb-3">
-              <p className="px-3 pb-2 text-[13px] font-medium text-orange">{g}</p>
-              {products
-                .filter((p) => p.group === g)
-                .map((p) => (
-                  <Link key={p.slug} href={`/products/${p.slug}`} className="group block rounded-[10px] px-3 py-2.5 transition-colors hover:bg-surface">
-                    <span className="flex items-center gap-1 text-[15px] font-medium">
-                      {p.name}
-                      <span className="-translate-x-1 opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100">→</span>
-                    </span>
-                    <span className="text-[13px] text-muted">{p.short}</span>
-                  </Link>
-                ))}
-            </div>
-          ))}
-        </div>
-      ))}
-      <div className="ml-3 flex flex-1 flex-col justify-between overflow-hidden rounded-[12px] bg-ink p-7 text-white">
-        <div>
-          <p className="text-[13px] font-medium text-orange">Brain AI</p>
-          <p className="mt-3 max-w-[340px] text-[28px] font-medium leading-[32px] tracking-[-0.03em]">Every module. One AI that reads them all.</p>
-          <p className="mt-3 max-w-[340px] text-[14px] leading-[21px] text-white/65">Ask in Bangla or English, or connect ChatGPT or Claude through our MCP server.</p>
-        </div>
-        <Link href="/ask" className="my-6 flex items-center justify-between rounded-[12px] bg-white py-2.5 pl-4 pr-2.5">
-          <span className="text-[14px] text-subtle">What were yesterday&apos;s sales by branch?</span>
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-orange text-white">
-            <ArrowUp size={ICON.md} />
-          </span>
-        </Link>
-        <div className="flex justify-between text-[14px]">
-          <Link href="/products" className="hover:underline">See all products →</Link>
-        </div>
+    <div className="mt-1 flex justify-end border-t border-line px-2.5 pt-2.5">
+      <Link href={href} className="inline-flex items-center gap-1 text-[13px] font-medium text-ink hover:text-orange">
+        {children} <ChevronRight size={ICON.sm} />
+      </Link>
+    </div>
+  );
+}
+
+function ProductsMenu() {
+  return (
+    <div>
+      <div className="flex gap-1">
+        {groups.map((g) => (
+          <div key={g} className="w-[168px]">
+            <p className="px-2.5 pb-1 pt-1.5 text-[12px] font-medium text-orange">{g}</p>
+            {products
+              .filter((p) => p.group === g)
+              .map((p) => (
+                <Link key={p.slug} href={`/products/${p.slug}`} className={menuLink}>
+                  {p.name}
+                </Link>
+              ))}
+          </div>
+        ))}
       </div>
+      <MenuFooter href="/products">See all products</MenuFooter>
     </div>
   );
 }
 
 function IndustriesMenu() {
   return (
-    <div className="flex gap-3">
-      <div className="grid flex-1 grid-cols-2 p-2">
+    <div className="w-[440px]">
+      <div className="grid grid-cols-2 gap-x-1">
         {industries.map((i) => (
-          <Link key={i.slug} href={`/industries/${i.slug}`} className="group rounded-[10px] p-3 transition-colors hover:bg-surface">
-            <span className="flex items-center gap-1 text-[15px] font-medium">
-              {i.name}
-              <span className="-translate-x-1 opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100">→</span>
-            </span>
-            <span className="text-[13px] text-muted">{i.short}</span>
+          <Link key={i.slug} href={`/industries/${i.slug}`} className={menuLink}>
+            {i.name}
           </Link>
         ))}
       </div>
-      <Link href="/customers/northloom" className="flex w-[340px] flex-col justify-end gap-2 rounded-[12px] bg-orange-soft p-6">
-        <span className="text-[13px] font-medium text-orange-deep">Customer story</span>
-        <span className="text-[20px] font-medium leading-[26px] tracking-[-0.02em]">How Northloom closes the month in one afternoon.</span>
-        <span className="text-[14px]">Read the story →</span>
-      </Link>
+      <MenuFooter href="/industries">See all industries</MenuFooter>
     </div>
   );
 }

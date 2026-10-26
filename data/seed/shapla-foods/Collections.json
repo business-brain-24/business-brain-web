@@ -1,0 +1,7226 @@
+[
+ {
+  "Receipt ID": "RCV-000001",
+  "Invoice ID": "INV-000001",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-07-08",
+  "Amount (BDT)": 28964.42,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000002",
+  "Invoice ID": "INV-000003",
+  "Customer ID": "CUS-0024",
+  "Receipt date": "2026-07-08",
+  "Amount (BDT)": 523730.9,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000003",
+  "Invoice ID": "INV-000004",
+  "Customer ID": "CUS-0043",
+  "Receipt date": "2026-07-31",
+  "Amount (BDT)": 116192.16,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000004",
+  "Invoice ID": "INV-000005",
+  "Customer ID": "CUS-0024",
+  "Receipt date": "2026-07-08",
+  "Amount (BDT)": 363401.18,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000005",
+  "Invoice ID": "INV-000006",
+  "Customer ID": "CUS-0011",
+  "Receipt date": "2026-07-16",
+  "Amount (BDT)": 108076.08,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000006",
+  "Invoice ID": "INV-000007",
+  "Customer ID": "CUS-0102",
+  "Receipt date": "2026-07-01",
+  "Amount (BDT)": 5308.17,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000007",
+  "Invoice ID": "INV-000008",
+  "Customer ID": "CUS-0034",
+  "Receipt date": "2026-07-08",
+  "Amount (BDT)": 486030.39,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000008",
+  "Invoice ID": "INV-000009",
+  "Customer ID": "CUS-0023",
+  "Receipt date": "2026-07-16",
+  "Amount (BDT)": 207746.42,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000009",
+  "Invoice ID": "INV-000010",
+  "Customer ID": "CUS-0024",
+  "Receipt date": "2026-07-08",
+  "Amount (BDT)": 260184.76,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000010",
+  "Invoice ID": "INV-000011",
+  "Customer ID": "CUS-0018",
+  "Receipt date": "2026-07-08",
+  "Amount (BDT)": 222773.88,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000011",
+  "Invoice ID": "INV-000012",
+  "Customer ID": "CUS-0014",
+  "Receipt date": "2026-07-08",
+  "Amount (BDT)": 143559.36,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000012",
+  "Invoice ID": "INV-000013",
+  "Customer ID": "CUS-0017",
+  "Receipt date": "2026-07-31",
+  "Amount (BDT)": 127678.92,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000013",
+  "Invoice ID": "INV-000014",
+  "Customer ID": "CUS-0002",
+  "Receipt date": "2026-07-08",
+  "Amount (BDT)": 646852.92,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000014",
+  "Invoice ID": "INV-000015",
+  "Customer ID": "CUS-0017",
+  "Receipt date": "2026-07-31",
+  "Amount (BDT)": 187307.42,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000015",
+  "Invoice ID": "INV-000016",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-07-09",
+  "Amount (BDT)": 410001.88,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000016",
+  "Invoice ID": "INV-000017",
+  "Customer ID": "CUS-0087",
+  "Receipt date": "2026-07-02",
+  "Amount (BDT)": 10110.03,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000017",
+  "Invoice ID": "INV-000018",
+  "Customer ID": "CUS-0001",
+  "Receipt date": "2026-08-01",
+  "Amount (BDT)": 364121.48,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000018",
+  "Invoice ID": "INV-000019",
+  "Customer ID": "CUS-0016",
+  "Receipt date": "2026-08-01",
+  "Amount (BDT)": 221079.29,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000019",
+  "Invoice ID": "INV-000020",
+  "Customer ID": "CUS-0025",
+  "Receipt date": "2026-07-17",
+  "Amount (BDT)": 251730.64,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000020",
+  "Invoice ID": "INV-000021",
+  "Customer ID": "CUS-0015",
+  "Receipt date": "2026-07-17",
+  "Amount (BDT)": 166492.47,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000021",
+  "Invoice ID": "INV-000022",
+  "Customer ID": "CUS-0035",
+  "Receipt date": "2026-08-01",
+  "Amount (BDT)": 250816.86,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000022",
+  "Invoice ID": "INV-000023",
+  "Customer ID": "CUS-0107",
+  "Receipt date": "2026-07-02",
+  "Amount (BDT)": 4858.98,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000023",
+  "Invoice ID": "INV-000025",
+  "Customer ID": "CUS-0039",
+  "Receipt date": "2026-07-09",
+  "Amount (BDT)": 100009.72,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000024",
+  "Invoice ID": "INV-000026",
+  "Customer ID": "CUS-0032",
+  "Receipt date": "2026-08-01",
+  "Amount (BDT)": 206244.86,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000025",
+  "Invoice ID": "INV-000028",
+  "Customer ID": "CUS-0002",
+  "Receipt date": "2026-07-09",
+  "Amount (BDT)": 100571.03,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000026",
+  "Invoice ID": "INV-000029",
+  "Customer ID": "CUS-0113",
+  "Receipt date": "2026-07-02",
+  "Amount (BDT)": 4738.23,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000027",
+  "Invoice ID": "INV-000030",
+  "Customer ID": "CUS-0006",
+  "Receipt date": "2026-07-09",
+  "Amount (BDT)": 307928.01,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000028",
+  "Invoice ID": "INV-000033",
+  "Customer ID": "CUS-0009",
+  "Receipt date": "2026-07-19",
+  "Amount (BDT)": 73586.02,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000029",
+  "Invoice ID": "INV-000034",
+  "Customer ID": "CUS-0096",
+  "Receipt date": "2026-07-04",
+  "Amount (BDT)": 8848.56,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000030",
+  "Invoice ID": "INV-000035",
+  "Customer ID": "CUS-0031",
+  "Receipt date": "2026-07-19",
+  "Amount (BDT)": 306809.34,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000031",
+  "Invoice ID": "INV-000037",
+  "Customer ID": "CUS-0029",
+  "Receipt date": "2026-07-19",
+  "Amount (BDT)": 280470.96,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000032",
+  "Invoice ID": "INV-000038",
+  "Customer ID": "CUS-0054",
+  "Receipt date": "2026-07-04",
+  "Amount (BDT)": 2451.22,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000033",
+  "Invoice ID": "INV-000039",
+  "Customer ID": "CUS-0025",
+  "Receipt date": "2026-07-19",
+  "Amount (BDT)": 97112.06,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000034",
+  "Invoice ID": "INV-000040",
+  "Customer ID": "CUS-0037",
+  "Receipt date": "2026-08-04",
+  "Amount (BDT)": 259207.1,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000035",
+  "Invoice ID": "INV-000041",
+  "Customer ID": "CUS-0014",
+  "Receipt date": "2026-07-12",
+  "Amount (BDT)": 46687.94,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000036",
+  "Invoice ID": "INV-000042",
+  "Customer ID": "CUS-0002",
+  "Receipt date": "2026-07-12",
+  "Amount (BDT)": 52733.17,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000037",
+  "Invoice ID": "INV-000043",
+  "Customer ID": "CUS-0003",
+  "Receipt date": "2026-07-20",
+  "Amount (BDT)": 155462.24,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000038",
+  "Invoice ID": "INV-000044",
+  "Customer ID": "CUS-0001",
+  "Receipt date": "2026-08-04",
+  "Amount (BDT)": 449937.35,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000039",
+  "Invoice ID": "INV-000045",
+  "Customer ID": "CUS-0013",
+  "Receipt date": "2026-08-04",
+  "Amount (BDT)": 60250.58,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000040",
+  "Invoice ID": "INV-000046",
+  "Customer ID": "CUS-0014",
+  "Receipt date": "2026-07-12",
+  "Amount (BDT)": 348105.9,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000041",
+  "Invoice ID": "INV-000049",
+  "Customer ID": "CUS-0015",
+  "Receipt date": "2026-07-20",
+  "Amount (BDT)": 47971.75,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000042",
+  "Invoice ID": "INV-000050",
+  "Customer ID": "CUS-0002",
+  "Receipt date": "2026-07-12",
+  "Amount (BDT)": 277459.87,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000043",
+  "Invoice ID": "INV-000051",
+  "Customer ID": "CUS-0046",
+  "Receipt date": "2026-08-04",
+  "Amount (BDT)": 52718.4,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000044",
+  "Invoice ID": "INV-000052",
+  "Customer ID": "CUS-0018",
+  "Receipt date": "2026-07-13",
+  "Amount (BDT)": 268238.88,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000045",
+  "Invoice ID": "INV-000053",
+  "Customer ID": "CUS-0010",
+  "Receipt date": "2026-07-13",
+  "Amount (BDT)": 201549.6,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000046",
+  "Invoice ID": "INV-000054",
+  "Customer ID": "CUS-0040",
+  "Receipt date": "2026-07-13",
+  "Amount (BDT)": 345431.55,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000047",
+  "Invoice ID": "INV-000055",
+  "Customer ID": "CUS-0016",
+  "Receipt date": "2026-08-05",
+  "Amount (BDT)": 574585.3,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000048",
+  "Invoice ID": "INV-000056",
+  "Customer ID": "CUS-0017",
+  "Receipt date": "2026-08-05",
+  "Amount (BDT)": 146252.74,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000049",
+  "Invoice ID": "INV-000057",
+  "Customer ID": "CUS-0034",
+  "Receipt date": "2026-07-13",
+  "Amount (BDT)": 224408.69,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000050",
+  "Invoice ID": "INV-000058",
+  "Customer ID": "CUS-0036",
+  "Receipt date": "2026-07-21",
+  "Amount (BDT)": 634352.5,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000051",
+  "Invoice ID": "INV-000059",
+  "Customer ID": "CUS-0014",
+  "Receipt date": "2026-07-13",
+  "Amount (BDT)": 178980.48,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000052",
+  "Invoice ID": "INV-000060",
+  "Customer ID": "CUS-0040",
+  "Receipt date": "2026-07-14",
+  "Amount (BDT)": 379262.41,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000053",
+  "Invoice ID": "INV-000061",
+  "Customer ID": "CUS-0003",
+  "Receipt date": "2026-07-22",
+  "Amount (BDT)": 145800.48,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000054",
+  "Invoice ID": "INV-000062",
+  "Customer ID": "CUS-0008",
+  "Receipt date": "2026-07-14",
+  "Amount (BDT)": 179364.33,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000055",
+  "Invoice ID": "INV-000063",
+  "Customer ID": "CUS-0070",
+  "Receipt date": "2026-07-07",
+  "Amount (BDT)": 3419.64,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000056",
+  "Invoice ID": "INV-000065",
+  "Customer ID": "CUS-0108",
+  "Receipt date": "2026-07-07",
+  "Amount (BDT)": 32424.42,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000057",
+  "Invoice ID": "INV-000066",
+  "Customer ID": "CUS-0014",
+  "Receipt date": "2026-07-14",
+  "Amount (BDT)": 65315.12,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000058",
+  "Invoice ID": "INV-000067",
+  "Customer ID": "CUS-0014",
+  "Receipt date": "2026-07-14",
+  "Amount (BDT)": 178502.89,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000059",
+  "Invoice ID": "INV-000068",
+  "Customer ID": "CUS-0032",
+  "Receipt date": "2026-08-06",
+  "Amount (BDT)": 416016.68,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000060",
+  "Invoice ID": "INV-000069",
+  "Customer ID": "CUS-0002",
+  "Receipt date": "2026-07-14",
+  "Amount (BDT)": 61549.99,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000061",
+  "Invoice ID": "INV-000070",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-07-14",
+  "Amount (BDT)": 151770.79,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000062",
+  "Invoice ID": "INV-000071",
+  "Customer ID": "CUS-0011",
+  "Receipt date": "2026-07-22",
+  "Amount (BDT)": 130294.08,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000063",
+  "Invoice ID": "INV-000072",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-07-14",
+  "Amount (BDT)": 533111.7,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000064",
+  "Invoice ID": "INV-000073",
+  "Customer ID": "CUS-0043",
+  "Receipt date": "2026-08-07",
+  "Amount (BDT)": 27742.68,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000065",
+  "Invoice ID": "INV-000074",
+  "Customer ID": "CUS-0021",
+  "Receipt date": "2026-07-15",
+  "Amount (BDT)": 209617.63,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000066",
+  "Invoice ID": "INV-000075",
+  "Customer ID": "CUS-0039",
+  "Receipt date": "2026-07-15",
+  "Amount (BDT)": 505382.22,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000067",
+  "Invoice ID": "INV-000076",
+  "Customer ID": "CUS-0011",
+  "Receipt date": "2026-07-23",
+  "Amount (BDT)": 194908.73,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000068",
+  "Invoice ID": "INV-000077",
+  "Customer ID": "CUS-0028",
+  "Receipt date": "2026-07-15",
+  "Amount (BDT)": 350690.12,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000069",
+  "Invoice ID": "INV-000080",
+  "Customer ID": "CUS-0047",
+  "Receipt date": "2026-08-07",
+  "Amount (BDT)": 80680.32,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000070",
+  "Invoice ID": "INV-000082",
+  "Customer ID": "CUS-0006",
+  "Receipt date": "2026-07-15",
+  "Amount (BDT)": 288778.74,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000071",
+  "Invoice ID": "INV-000083",
+  "Customer ID": "CUS-0027",
+  "Receipt date": "2026-07-23",
+  "Amount (BDT)": 45496.08,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000072",
+  "Invoice ID": "INV-000084",
+  "Customer ID": "CUS-0030",
+  "Receipt date": "2026-07-15",
+  "Amount (BDT)": 112720.95,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000073",
+  "Invoice ID": "INV-000085",
+  "Customer ID": "CUS-0018",
+  "Receipt date": "2026-07-16",
+  "Amount (BDT)": 158861.47,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000074",
+  "Invoice ID": "INV-000086",
+  "Customer ID": "CUS-0013",
+  "Receipt date": "2026-08-08",
+  "Amount (BDT)": 114123.04,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000075",
+  "Invoice ID": "INV-000087",
+  "Customer ID": "CUS-0027",
+  "Receipt date": "2026-07-24",
+  "Amount (BDT)": 384426.76,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000076",
+  "Invoice ID": "INV-000088",
+  "Customer ID": "CUS-0013",
+  "Receipt date": "2026-08-08",
+  "Amount (BDT)": 291782.37,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000077",
+  "Invoice ID": "INV-000089",
+  "Customer ID": "CUS-0030",
+  "Receipt date": "2026-07-16",
+  "Amount (BDT)": 251492.04,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000078",
+  "Invoice ID": "INV-000090",
+  "Customer ID": "CUS-0018",
+  "Receipt date": "2026-07-16",
+  "Amount (BDT)": 122947.44,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000079",
+  "Invoice ID": "INV-000091",
+  "Customer ID": "CUS-0008",
+  "Receipt date": "2026-07-16",
+  "Amount (BDT)": 289122.37,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000080",
+  "Invoice ID": "INV-000092",
+  "Customer ID": "CUS-0021",
+  "Receipt date": "2026-07-16",
+  "Amount (BDT)": 560698.32,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000081",
+  "Invoice ID": "INV-000093",
+  "Customer ID": "CUS-0120",
+  "Receipt date": "2026-07-09",
+  "Amount (BDT)": 36109.08,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000082",
+  "Invoice ID": "INV-000094",
+  "Customer ID": "CUS-0025",
+  "Receipt date": "2026-07-24",
+  "Amount (BDT)": 234147.39,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000083",
+  "Invoice ID": "INV-000095",
+  "Customer ID": "CUS-0063",
+  "Receipt date": "2026-07-09",
+  "Amount (BDT)": 6148.59,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000084",
+  "Invoice ID": "INV-000096",
+  "Customer ID": "CUS-0003",
+  "Receipt date": "2026-07-26",
+  "Amount (BDT)": 188714.34,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000085",
+  "Invoice ID": "INV-000097",
+  "Customer ID": "CUS-0036",
+  "Receipt date": "2026-07-26",
+  "Amount (BDT)": 451239.09,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000086",
+  "Invoice ID": "INV-000098",
+  "Customer ID": "CUS-0038",
+  "Receipt date": "2026-07-18",
+  "Amount (BDT)": 471465.19,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000087",
+  "Invoice ID": "INV-000099",
+  "Customer ID": "CUS-0021",
+  "Receipt date": "2026-07-18",
+  "Amount (BDT)": 223727.24,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000088",
+  "Invoice ID": "INV-000100",
+  "Customer ID": "CUS-0015",
+  "Receipt date": "2026-07-26",
+  "Amount (BDT)": 76024.97,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000089",
+  "Invoice ID": "INV-000101",
+  "Customer ID": "CUS-0012",
+  "Receipt date": "2026-08-10",
+  "Amount (BDT)": 383337.06,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000090",
+  "Invoice ID": "INV-000102",
+  "Customer ID": "CUS-0101",
+  "Receipt date": "2026-07-11",
+  "Amount (BDT)": 4192.44,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000091",
+  "Invoice ID": "INV-000103",
+  "Customer ID": "CUS-0006",
+  "Receipt date": "2026-07-18",
+  "Amount (BDT)": 332761.69,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000092",
+  "Invoice ID": "INV-000104",
+  "Customer ID": "CUS-0089",
+  "Receipt date": "2026-07-11",
+  "Amount (BDT)": 6201.3,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000093",
+  "Invoice ID": "INV-000105",
+  "Customer ID": "CUS-0032",
+  "Receipt date": "2026-08-10",
+  "Amount (BDT)": 98776.94,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000094",
+  "Invoice ID": "INV-000106",
+  "Customer ID": "CUS-0035",
+  "Receipt date": "2026-08-10",
+  "Amount (BDT)": 252973.73,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000095",
+  "Invoice ID": "INV-000107",
+  "Customer ID": "CUS-0050",
+  "Receipt date": "2026-08-11",
+  "Amount (BDT)": 30023.28,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000096",
+  "Invoice ID": "INV-000108",
+  "Customer ID": "CUS-0017",
+  "Receipt date": "2026-08-11",
+  "Amount (BDT)": 212030.98,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000097",
+  "Invoice ID": "INV-000109",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-07-19",
+  "Amount (BDT)": 126613.62,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000098",
+  "Invoice ID": "INV-000110",
+  "Customer ID": "CUS-0027",
+  "Receipt date": "2026-07-27",
+  "Amount (BDT)": 84405.98,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000099",
+  "Invoice ID": "INV-000111",
+  "Customer ID": "CUS-0028",
+  "Receipt date": "2026-07-19",
+  "Amount (BDT)": 101904.77,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000100",
+  "Invoice ID": "INV-000112",
+  "Customer ID": "CUS-0010",
+  "Receipt date": "2026-07-19",
+  "Amount (BDT)": 53114.14,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000101",
+  "Invoice ID": "INV-000113",
+  "Customer ID": "CUS-0008",
+  "Receipt date": "2026-07-19",
+  "Amount (BDT)": 760757.69,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000102",
+  "Invoice ID": "INV-000115",
+  "Customer ID": "CUS-0016",
+  "Receipt date": "2026-08-12",
+  "Amount (BDT)": 356117.53,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000103",
+  "Invoice ID": "INV-000116",
+  "Customer ID": "CUS-0001",
+  "Receipt date": "2026-08-12",
+  "Amount (BDT)": 89267.67,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000104",
+  "Invoice ID": "INV-000118",
+  "Customer ID": "CUS-0017",
+  "Receipt date": "2026-08-12",
+  "Amount (BDT)": 76272.34,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000105",
+  "Invoice ID": "INV-000119",
+  "Customer ID": "CUS-0042",
+  "Receipt date": "2026-08-12",
+  "Amount (BDT)": 19822.32,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000106",
+  "Invoice ID": "INV-000120",
+  "Customer ID": "CUS-0032",
+  "Receipt date": "2026-08-12",
+  "Amount (BDT)": 321924.59,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000107",
+  "Invoice ID": "INV-000121",
+  "Customer ID": "CUS-0028",
+  "Receipt date": "2026-07-20",
+  "Amount (BDT)": 276060.68,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000108",
+  "Invoice ID": "INV-000122",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-07-20",
+  "Amount (BDT)": 173483.16,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000109",
+  "Invoice ID": "INV-000123",
+  "Customer ID": "CUS-0008",
+  "Receipt date": "2026-07-20",
+  "Amount (BDT)": 653376.91,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000110",
+  "Invoice ID": "INV-000124",
+  "Customer ID": "CUS-0007",
+  "Receipt date": "2026-07-28",
+  "Amount (BDT)": 287106,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000111",
+  "Invoice ID": "INV-000125",
+  "Customer ID": "CUS-0037",
+  "Receipt date": "2026-08-13",
+  "Amount (BDT)": 93309.42,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000112",
+  "Invoice ID": "INV-000126",
+  "Customer ID": "CUS-0010",
+  "Receipt date": "2026-07-21",
+  "Amount (BDT)": 231139.7,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000113",
+  "Invoice ID": "INV-000127",
+  "Customer ID": "CUS-0029",
+  "Receipt date": "2026-07-29",
+  "Amount (BDT)": 251060.31,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000114",
+  "Invoice ID": "INV-000128",
+  "Customer ID": "CUS-0037",
+  "Receipt date": "2026-08-13",
+  "Amount (BDT)": 111408.78,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000115",
+  "Invoice ID": "INV-000129",
+  "Customer ID": "CUS-0035",
+  "Receipt date": "2026-08-13",
+  "Amount (BDT)": 383861.07,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000116",
+  "Invoice ID": "INV-000131",
+  "Customer ID": "CUS-0038",
+  "Receipt date": "2026-07-21",
+  "Amount (BDT)": 89834.3,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000117",
+  "Invoice ID": "INV-000132",
+  "Customer ID": "CUS-0003",
+  "Receipt date": "2026-07-29",
+  "Amount (BDT)": 114814.12,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000118",
+  "Invoice ID": "INV-000133",
+  "Customer ID": "CUS-0031",
+  "Receipt date": "2026-07-29",
+  "Amount (BDT)": 106681.88,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000119",
+  "Invoice ID": "INV-000134",
+  "Customer ID": "CUS-0067",
+  "Receipt date": "2026-07-14",
+  "Amount (BDT)": 24855.18,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000120",
+  "Invoice ID": "INV-000135",
+  "Customer ID": "CUS-0034",
+  "Receipt date": "2026-07-21",
+  "Amount (BDT)": 132131.66,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000121",
+  "Invoice ID": "INV-000138",
+  "Customer ID": "CUS-0028",
+  "Receipt date": "2026-07-21",
+  "Amount (BDT)": 277319.28,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000122",
+  "Invoice ID": "INV-000139",
+  "Customer ID": "CUS-0090",
+  "Receipt date": "2026-07-15",
+  "Amount (BDT)": 5019.42,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000123",
+  "Invoice ID": "INV-000140",
+  "Customer ID": "CUS-0105",
+  "Receipt date": "2026-07-15",
+  "Amount (BDT)": 4404.96,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000124",
+  "Invoice ID": "INV-000141",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-07-22",
+  "Amount (BDT)": 127451.17,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000125",
+  "Invoice ID": "INV-000142",
+  "Customer ID": "CUS-0021",
+  "Receipt date": "2026-07-22",
+  "Amount (BDT)": 625008.55,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000126",
+  "Invoice ID": "INV-000143",
+  "Customer ID": "CUS-0012",
+  "Receipt date": "2026-08-14",
+  "Amount (BDT)": 263712.49,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000127",
+  "Invoice ID": "INV-000144",
+  "Customer ID": "CUS-0035",
+  "Receipt date": "2026-08-14",
+  "Amount (BDT)": 128820.73,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000128",
+  "Invoice ID": "INV-000145",
+  "Customer ID": "CUS-0118",
+  "Receipt date": "2026-07-15",
+  "Amount (BDT)": 6737.85,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000129",
+  "Invoice ID": "INV-000147",
+  "Customer ID": "CUS-0041",
+  "Receipt date": "2026-08-15",
+  "Amount (BDT)": 17109.12,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000130",
+  "Invoice ID": "INV-000148",
+  "Customer ID": "CUS-0034",
+  "Receipt date": "2026-07-23",
+  "Amount (BDT)": 187043.87,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000131",
+  "Invoice ID": "INV-000149",
+  "Customer ID": "CUS-0024",
+  "Receipt date": "2026-07-23",
+  "Amount (BDT)": 55632.32,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000132",
+  "Invoice ID": "INV-000150",
+  "Customer ID": "CUS-0003",
+  "Receipt date": "2026-07-31",
+  "Amount (BDT)": 213276.08,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000133",
+  "Invoice ID": "INV-000151",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-07-23",
+  "Amount (BDT)": 158034.24,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000134",
+  "Invoice ID": "INV-000152",
+  "Customer ID": "CUS-0031",
+  "Receipt date": "2026-07-31",
+  "Amount (BDT)": 304431.69,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000135",
+  "Invoice ID": "INV-000153",
+  "Customer ID": "CUS-0110",
+  "Receipt date": "2026-07-16",
+  "Amount (BDT)": 34780.83,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000136",
+  "Invoice ID": "INV-000154",
+  "Customer ID": "CUS-0032",
+  "Receipt date": "2026-08-15",
+  "Amount (BDT)": 466251.1,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000137",
+  "Invoice ID": "INV-000155",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-07-23",
+  "Amount (BDT)": 182400.99,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000138",
+  "Invoice ID": "INV-000157",
+  "Customer ID": "CUS-0014",
+  "Receipt date": "2026-07-23",
+  "Amount (BDT)": 288661.66,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000139",
+  "Invoice ID": "INV-000160",
+  "Customer ID": "CUS-0033",
+  "Receipt date": "2026-08-02",
+  "Amount (BDT)": 308545.1,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000140",
+  "Invoice ID": "INV-000161",
+  "Customer ID": "CUS-0044",
+  "Receipt date": "2026-08-17",
+  "Amount (BDT)": 32341.68,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000141",
+  "Invoice ID": "INV-000162",
+  "Customer ID": "CUS-0007",
+  "Receipt date": "2026-08-02",
+  "Amount (BDT)": 178894.22,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000142",
+  "Invoice ID": "INV-000163",
+  "Customer ID": "CUS-0036",
+  "Receipt date": "2026-08-02",
+  "Amount (BDT)": 398256.44,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000143",
+  "Invoice ID": "INV-000164",
+  "Customer ID": "CUS-0030",
+  "Receipt date": "2026-07-25",
+  "Amount (BDT)": 436729.52,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000144",
+  "Invoice ID": "INV-000166",
+  "Customer ID": "CUS-0049",
+  "Receipt date": "2026-08-17",
+  "Amount (BDT)": 37900.8,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000145",
+  "Invoice ID": "INV-000167",
+  "Customer ID": "CUS-0037",
+  "Receipt date": "2026-08-17",
+  "Amount (BDT)": 103009.65,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000146",
+  "Invoice ID": "INV-000168",
+  "Customer ID": "CUS-0007",
+  "Receipt date": "2026-08-02",
+  "Amount (BDT)": 120157.13,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000147",
+  "Invoice ID": "INV-000169",
+  "Customer ID": "CUS-0041",
+  "Receipt date": "2026-08-17",
+  "Amount (BDT)": 68785.92,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000148",
+  "Invoice ID": "INV-000170",
+  "Customer ID": "CUS-0027",
+  "Receipt date": "2026-08-02",
+  "Amount (BDT)": 773690.82,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000149",
+  "Invoice ID": "INV-000171",
+  "Customer ID": "CUS-0017",
+  "Receipt date": "2026-08-17",
+  "Amount (BDT)": 127506.2,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000150",
+  "Invoice ID": "INV-000172",
+  "Customer ID": "CUS-0014",
+  "Receipt date": "2026-07-26",
+  "Amount (BDT)": 72496.37,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000151",
+  "Invoice ID": "INV-000173",
+  "Customer ID": "CUS-0037",
+  "Receipt date": "2026-08-18",
+  "Amount (BDT)": 121930.46,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000152",
+  "Invoice ID": "INV-000174",
+  "Customer ID": "CUS-0014",
+  "Receipt date": "2026-07-26",
+  "Amount (BDT)": 150858.29,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000153",
+  "Invoice ID": "INV-000175",
+  "Customer ID": "CUS-0037",
+  "Receipt date": "2026-08-18",
+  "Amount (BDT)": 713213.59,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000154",
+  "Invoice ID": "INV-000176",
+  "Customer ID": "CUS-0008",
+  "Receipt date": "2026-07-26",
+  "Amount (BDT)": 262869.36,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000155",
+  "Invoice ID": "INV-000177",
+  "Customer ID": "CUS-0026",
+  "Receipt date": "2026-07-26",
+  "Amount (BDT)": 553943.43,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000156",
+  "Invoice ID": "INV-000178",
+  "Customer ID": "CUS-0023",
+  "Receipt date": "2026-08-03",
+  "Amount (BDT)": 105906.55,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000157",
+  "Invoice ID": "INV-000180",
+  "Customer ID": "CUS-0098",
+  "Receipt date": "2026-07-19",
+  "Amount (BDT)": 8969.31,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000158",
+  "Invoice ID": "INV-000181",
+  "Customer ID": "CUS-0031",
+  "Receipt date": "2026-08-03",
+  "Amount (BDT)": 225847.18,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000159",
+  "Invoice ID": "INV-000182",
+  "Customer ID": "CUS-0073",
+  "Receipt date": "2026-07-19",
+  "Amount (BDT)": 12219.9,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000160",
+  "Invoice ID": "INV-000183",
+  "Customer ID": "CUS-0020",
+  "Receipt date": "2026-08-18",
+  "Amount (BDT)": 248258.91,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000161",
+  "Invoice ID": "INV-000184",
+  "Customer ID": "CUS-0023",
+  "Receipt date": "2026-08-03",
+  "Amount (BDT)": 182783.93,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000162",
+  "Invoice ID": "INV-000185",
+  "Customer ID": "CUS-0093",
+  "Receipt date": "2026-07-20",
+  "Amount (BDT)": 2719.29,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000163",
+  "Invoice ID": "INV-000186",
+  "Customer ID": "CUS-0050",
+  "Receipt date": "2026-08-19",
+  "Amount (BDT)": 36592.08,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000164",
+  "Invoice ID": "INV-000187",
+  "Customer ID": "CUS-0036",
+  "Receipt date": "2026-08-04",
+  "Amount (BDT)": 253025.35,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000165",
+  "Invoice ID": "INV-000188",
+  "Customer ID": "CUS-0023",
+  "Receipt date": "2026-08-04",
+  "Amount (BDT)": 137058.26,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000166",
+  "Invoice ID": "INV-000189",
+  "Customer ID": "CUS-0022",
+  "Receipt date": "2026-08-04",
+  "Amount (BDT)": 327254.9,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000167",
+  "Invoice ID": "INV-000190",
+  "Customer ID": "CUS-0005",
+  "Receipt date": "2026-07-27",
+  "Amount (BDT)": 243040.07,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000168",
+  "Invoice ID": "INV-000191",
+  "Customer ID": "CUS-0038",
+  "Receipt date": "2026-07-27",
+  "Amount (BDT)": 136728.48,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000169",
+  "Invoice ID": "INV-000192",
+  "Customer ID": "CUS-0029",
+  "Receipt date": "2026-08-04",
+  "Amount (BDT)": 168277.2,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000170",
+  "Invoice ID": "INV-000193",
+  "Customer ID": "CUS-0038",
+  "Receipt date": "2026-07-27",
+  "Amount (BDT)": 91707.84,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000171",
+  "Invoice ID": "INV-000194",
+  "Customer ID": "CUS-0048",
+  "Receipt date": "2026-08-19",
+  "Amount (BDT)": 16112.88,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000172",
+  "Invoice ID": "INV-000195",
+  "Customer ID": "CUS-0046",
+  "Receipt date": "2026-08-19",
+  "Amount (BDT)": 49729.68,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000173",
+  "Invoice ID": "INV-000196",
+  "Customer ID": "CUS-0038",
+  "Receipt date": "2026-07-27",
+  "Amount (BDT)": 275623.36,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000174",
+  "Invoice ID": "INV-000197",
+  "Customer ID": "CUS-0007",
+  "Receipt date": "2026-08-04",
+  "Amount (BDT)": 100150.24,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000175",
+  "Invoice ID": "INV-000198",
+  "Customer ID": "CUS-0030",
+  "Receipt date": "2026-07-27",
+  "Amount (BDT)": 429426.13,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000176",
+  "Invoice ID": "INV-000199",
+  "Customer ID": "CUS-0034",
+  "Receipt date": "2026-07-27",
+  "Amount (BDT)": 368754.27,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000177",
+  "Invoice ID": "INV-000200",
+  "Customer ID": "CUS-0049",
+  "Receipt date": "2026-08-19",
+  "Amount (BDT)": 40948.32,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000178",
+  "Invoice ID": "INV-000201",
+  "Customer ID": "CUS-0011",
+  "Receipt date": "2026-08-05",
+  "Amount (BDT)": 121029.18,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000179",
+  "Invoice ID": "INV-000202",
+  "Customer ID": "CUS-0008",
+  "Receipt date": "2026-07-28",
+  "Amount (BDT)": 363037.64,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000180",
+  "Invoice ID": "INV-000203",
+  "Customer ID": "CUS-0012",
+  "Receipt date": "2026-08-20",
+  "Amount (BDT)": 176012.92,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000181",
+  "Invoice ID": "INV-000206",
+  "Customer ID": "CUS-0035",
+  "Receipt date": "2026-08-20",
+  "Amount (BDT)": 221583.41,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000182",
+  "Invoice ID": "INV-000207",
+  "Customer ID": "CUS-0099",
+  "Receipt date": "2026-07-21",
+  "Amount (BDT)": 6114.78,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000183",
+  "Invoice ID": "INV-000208",
+  "Customer ID": "CUS-0039",
+  "Receipt date": "2026-07-28",
+  "Amount (BDT)": 179166.25,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000184",
+  "Invoice ID": "INV-000209",
+  "Customer ID": "CUS-0006",
+  "Receipt date": "2026-07-28",
+  "Amount (BDT)": 35810.78,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000185",
+  "Invoice ID": "INV-000210",
+  "Customer ID": "CUS-0026",
+  "Receipt date": "2026-07-28",
+  "Amount (BDT)": 73475.64,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000186",
+  "Invoice ID": "INV-000211",
+  "Customer ID": "CUS-0026",
+  "Receipt date": "2026-07-28",
+  "Amount (BDT)": 300760.24,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000187",
+  "Invoice ID": "INV-000212",
+  "Customer ID": "CUS-0009",
+  "Receipt date": "2026-08-05",
+  "Amount (BDT)": 358607.76,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000188",
+  "Invoice ID": "INV-000213",
+  "Customer ID": "CUS-0011",
+  "Receipt date": "2026-08-05",
+  "Amount (BDT)": 60973.92,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000189",
+  "Invoice ID": "INV-000214",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-07-28",
+  "Amount (BDT)": 376881.62,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000190",
+  "Invoice ID": "INV-000215",
+  "Customer ID": "CUS-0012",
+  "Receipt date": "2026-08-20",
+  "Amount (BDT)": 367418.09,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000191",
+  "Invoice ID": "INV-000217",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-07-29",
+  "Amount (BDT)": 439051.73,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000192",
+  "Invoice ID": "INV-000218",
+  "Customer ID": "CUS-0101",
+  "Receipt date": "2026-07-22",
+  "Amount (BDT)": 1816.08,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000193",
+  "Invoice ID": "INV-000219",
+  "Customer ID": "CUS-0108",
+  "Receipt date": "2026-07-22",
+  "Amount (BDT)": 1898.19,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000194",
+  "Invoice ID": "INV-000220",
+  "Customer ID": "CUS-0028",
+  "Receipt date": "2026-07-29",
+  "Amount (BDT)": 55175.6,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000195",
+  "Invoice ID": "INV-000221",
+  "Customer ID": "CUS-0039",
+  "Receipt date": "2026-07-29",
+  "Amount (BDT)": 270813.57,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000196",
+  "Invoice ID": "INV-000222",
+  "Customer ID": "CUS-0050",
+  "Receipt date": "2026-08-21",
+  "Amount (BDT)": 55641.6,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000197",
+  "Invoice ID": "INV-000223",
+  "Customer ID": "CUS-0002",
+  "Receipt date": "2026-07-29",
+  "Amount (BDT)": 291310.01,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000198",
+  "Invoice ID": "INV-000224",
+  "Customer ID": "CUS-0042",
+  "Receipt date": "2026-08-21",
+  "Amount (BDT)": 75292.56,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000199",
+  "Invoice ID": "INV-000226",
+  "Customer ID": "CUS-0031",
+  "Receipt date": "2026-08-06",
+  "Amount (BDT)": 117109.44,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000200",
+  "Invoice ID": "INV-000227",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-07-29",
+  "Amount (BDT)": 173015.65,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000201",
+  "Invoice ID": "INV-000228",
+  "Customer ID": "CUS-0035",
+  "Receipt date": "2026-08-21",
+  "Amount (BDT)": 180295.02,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000202",
+  "Invoice ID": "INV-000229",
+  "Customer ID": "CUS-0035",
+  "Receipt date": "2026-08-21",
+  "Amount (BDT)": 334497.29,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000203",
+  "Invoice ID": "INV-000230",
+  "Customer ID": "CUS-0016",
+  "Receipt date": "2026-08-21",
+  "Amount (BDT)": 326977.98,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000204",
+  "Invoice ID": "INV-000231",
+  "Customer ID": "CUS-0105",
+  "Receipt date": "2026-07-23",
+  "Amount (BDT)": 627.9,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000205",
+  "Invoice ID": "INV-000232",
+  "Customer ID": "CUS-0038",
+  "Receipt date": "2026-07-30",
+  "Amount (BDT)": 126750.35,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000206",
+  "Invoice ID": "INV-000233",
+  "Customer ID": "CUS-0035",
+  "Receipt date": "2026-08-22",
+  "Amount (BDT)": 192608.71,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000207",
+  "Invoice ID": "INV-000234",
+  "Customer ID": "CUS-0015",
+  "Receipt date": "2026-08-07",
+  "Amount (BDT)": 222359.69,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000208",
+  "Invoice ID": "INV-000235",
+  "Customer ID": "CUS-0029",
+  "Receipt date": "2026-08-07",
+  "Amount (BDT)": 308568.82,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000209",
+  "Invoice ID": "INV-000237",
+  "Customer ID": "CUS-0040",
+  "Receipt date": "2026-07-30",
+  "Amount (BDT)": 35603.67,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000210",
+  "Invoice ID": "INV-000238",
+  "Customer ID": "CUS-0040",
+  "Receipt date": "2026-07-30",
+  "Amount (BDT)": 585409.92,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000211",
+  "Invoice ID": "INV-000239",
+  "Customer ID": "CUS-0040",
+  "Receipt date": "2026-07-30",
+  "Amount (BDT)": 230354.77,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000212",
+  "Invoice ID": "INV-000240",
+  "Customer ID": "CUS-0044",
+  "Receipt date": "2026-08-22",
+  "Amount (BDT)": 47218.08,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000213",
+  "Invoice ID": "INV-000241",
+  "Customer ID": "CUS-0028",
+  "Receipt date": "2026-07-30",
+  "Amount (BDT)": 304374.57,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000214",
+  "Invoice ID": "INV-000242",
+  "Customer ID": "CUS-0016",
+  "Receipt date": "2026-08-24",
+  "Amount (BDT)": 201814.79,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000215",
+  "Invoice ID": "INV-000243",
+  "Customer ID": "CUS-0007",
+  "Receipt date": "2026-08-09",
+  "Amount (BDT)": 544204.21,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000216",
+  "Invoice ID": "INV-000244",
+  "Customer ID": "CUS-0108",
+  "Receipt date": "2026-07-25",
+  "Amount (BDT)": 2434.32,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000217",
+  "Invoice ID": "INV-000245",
+  "Customer ID": "CUS-0038",
+  "Receipt date": "2026-08-01",
+  "Amount (BDT)": 363794.17,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000218",
+  "Invoice ID": "INV-000246",
+  "Customer ID": "CUS-0023",
+  "Receipt date": "2026-08-09",
+  "Amount (BDT)": 217936.57,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000219",
+  "Invoice ID": "INV-000247",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-08-01",
+  "Amount (BDT)": 242898.53,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000220",
+  "Invoice ID": "INV-000248",
+  "Customer ID": "CUS-0029",
+  "Receipt date": "2026-08-09",
+  "Amount (BDT)": 154384.52,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000221",
+  "Invoice ID": "INV-000249",
+  "Customer ID": "CUS-0009",
+  "Receipt date": "2026-08-09",
+  "Amount (BDT)": 63560.31,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000222",
+  "Invoice ID": "INV-000250",
+  "Customer ID": "CUS-0026",
+  "Receipt date": "2026-08-01",
+  "Amount (BDT)": 1043095.08,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000223",
+  "Invoice ID": "INV-000251",
+  "Customer ID": "CUS-0006",
+  "Receipt date": "2026-08-01",
+  "Amount (BDT)": 175332.48,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000224",
+  "Invoice ID": "INV-000252",
+  "Customer ID": "CUS-0031",
+  "Receipt date": "2026-08-09",
+  "Amount (BDT)": 308688.51,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000225",
+  "Invoice ID": "INV-000253",
+  "Customer ID": "CUS-0036",
+  "Receipt date": "2026-08-10",
+  "Amount (BDT)": 396828.94,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000226",
+  "Invoice ID": "INV-000254",
+  "Customer ID": "CUS-0020",
+  "Receipt date": "2026-08-25",
+  "Amount (BDT)": 46824.72,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000227",
+  "Invoice ID": "INV-000255",
+  "Customer ID": "CUS-0018",
+  "Receipt date": "2026-08-02",
+  "Amount (BDT)": 372114.82,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000228",
+  "Invoice ID": "INV-000257",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-08-02",
+  "Amount (BDT)": 282313.28,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000229",
+  "Invoice ID": "INV-000258",
+  "Customer ID": "CUS-0036",
+  "Receipt date": "2026-08-10",
+  "Amount (BDT)": 95736.98,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000230",
+  "Invoice ID": "INV-000259",
+  "Customer ID": "CUS-0023",
+  "Receipt date": "2026-08-10",
+  "Amount (BDT)": 218446.45,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000231",
+  "Invoice ID": "INV-000260",
+  "Customer ID": "CUS-0023",
+  "Receipt date": "2026-08-10",
+  "Amount (BDT)": 169395.53,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000232",
+  "Invoice ID": "INV-000262",
+  "Customer ID": "CUS-0038",
+  "Receipt date": "2026-08-02",
+  "Amount (BDT)": 123969.42,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000233",
+  "Invoice ID": "INV-000263",
+  "Customer ID": "CUS-0026",
+  "Receipt date": "2026-08-02",
+  "Amount (BDT)": 347508.59,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000234",
+  "Invoice ID": "INV-000264",
+  "Customer ID": "CUS-0025",
+  "Receipt date": "2026-08-10",
+  "Amount (BDT)": 394278.69,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000235",
+  "Invoice ID": "INV-000267",
+  "Customer ID": "CUS-0045",
+  "Receipt date": "2026-08-26",
+  "Amount (BDT)": 24352.86,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000236",
+  "Invoice ID": "INV-000269",
+  "Customer ID": "CUS-0002",
+  "Receipt date": "2026-08-03",
+  "Amount (BDT)": 150404.28,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000237",
+  "Invoice ID": "INV-000270",
+  "Customer ID": "CUS-0050",
+  "Receipt date": "2026-08-26",
+  "Amount (BDT)": 38640,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000238",
+  "Invoice ID": "INV-000271",
+  "Customer ID": "CUS-0042",
+  "Receipt date": "2026-08-26",
+  "Amount (BDT)": 32405.52,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000239",
+  "Invoice ID": "INV-000272",
+  "Customer ID": "CUS-0032",
+  "Receipt date": "2026-08-26",
+  "Amount (BDT)": 264020.15,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000240",
+  "Invoice ID": "INV-000273",
+  "Customer ID": "CUS-0003",
+  "Receipt date": "2026-08-11",
+  "Amount (BDT)": 117606.15,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000241",
+  "Invoice ID": "INV-000274",
+  "Customer ID": "CUS-0031",
+  "Receipt date": "2026-08-11",
+  "Amount (BDT)": 45834.77,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000242",
+  "Invoice ID": "INV-000275",
+  "Customer ID": "CUS-0037",
+  "Receipt date": "2026-08-26",
+  "Amount (BDT)": 98054.01,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000243",
+  "Invoice ID": "INV-000276",
+  "Customer ID": "CUS-0091",
+  "Receipt date": "2026-07-27",
+  "Amount (BDT)": 16383.36,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000244",
+  "Invoice ID": "INV-000277",
+  "Customer ID": "CUS-0045",
+  "Receipt date": "2026-08-27",
+  "Amount (BDT)": 35877.24,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000245",
+  "Invoice ID": "INV-000278",
+  "Customer ID": "CUS-0017",
+  "Receipt date": "2026-08-27",
+  "Amount (BDT)": 248592.76,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000246",
+  "Invoice ID": "INV-000279",
+  "Customer ID": "CUS-0006",
+  "Receipt date": "2026-08-04",
+  "Amount (BDT)": 139342.16,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000247",
+  "Invoice ID": "INV-000280",
+  "Customer ID": "CUS-0016",
+  "Receipt date": "2026-08-27",
+  "Amount (BDT)": 246434.22,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000248",
+  "Invoice ID": "INV-000281",
+  "Customer ID": "CUS-0046",
+  "Receipt date": "2026-08-27",
+  "Amount (BDT)": 111639.36,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000249",
+  "Invoice ID": "INV-000282",
+  "Customer ID": "CUS-0028",
+  "Receipt date": "2026-08-04",
+  "Amount (BDT)": 342097.06,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000250",
+  "Invoice ID": "INV-000283",
+  "Customer ID": "CUS-0002",
+  "Receipt date": "2026-08-04",
+  "Amount (BDT)": 340071.95,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000251",
+  "Invoice ID": "INV-000284",
+  "Customer ID": "CUS-0046",
+  "Receipt date": "2026-08-27",
+  "Amount (BDT)": 27007.68,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000252",
+  "Invoice ID": "INV-000286",
+  "Customer ID": "CUS-0010",
+  "Receipt date": "2026-08-04",
+  "Amount (BDT)": 226451.22,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000253",
+  "Invoice ID": "INV-000287",
+  "Customer ID": "CUS-0038",
+  "Receipt date": "2026-08-04",
+  "Amount (BDT)": 72623.88,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000254",
+  "Invoice ID": "INV-000288",
+  "Customer ID": "CUS-0094",
+  "Receipt date": "2026-07-28",
+  "Amount (BDT)": 44750.16,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000255",
+  "Invoice ID": "INV-000289",
+  "Customer ID": "CUS-0008",
+  "Receipt date": "2026-08-04",
+  "Amount (BDT)": 281169.71,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000256",
+  "Invoice ID": "INV-000290",
+  "Customer ID": "CUS-0039",
+  "Receipt date": "2026-08-04",
+  "Amount (BDT)": 404695.94,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000257",
+  "Invoice ID": "INV-000291",
+  "Customer ID": "CUS-0015",
+  "Receipt date": "2026-08-12",
+  "Amount (BDT)": 178855.49,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000258",
+  "Invoice ID": "INV-000292",
+  "Customer ID": "CUS-0010",
+  "Receipt date": "2026-08-05",
+  "Amount (BDT)": 223661.83,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000259",
+  "Invoice ID": "INV-000293",
+  "Customer ID": "CUS-0010",
+  "Receipt date": "2026-08-05",
+  "Amount (BDT)": 338480.76,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000260",
+  "Invoice ID": "INV-000294",
+  "Customer ID": "CUS-0120",
+  "Receipt date": "2026-07-29",
+  "Amount (BDT)": 5745.6,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000261",
+  "Invoice ID": "INV-000295",
+  "Customer ID": "CUS-0003",
+  "Receipt date": "2026-08-13",
+  "Amount (BDT)": 197709.06,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000262",
+  "Invoice ID": "INV-000296",
+  "Customer ID": "CUS-0011",
+  "Receipt date": "2026-08-13",
+  "Amount (BDT)": 193519.2,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000263",
+  "Invoice ID": "INV-000297",
+  "Customer ID": "CUS-0021",
+  "Receipt date": "2026-08-05",
+  "Amount (BDT)": 433006.69,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000264",
+  "Invoice ID": "INV-000298",
+  "Customer ID": "CUS-0009",
+  "Receipt date": "2026-08-13",
+  "Amount (BDT)": 318138.41,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000265",
+  "Invoice ID": "INV-000299",
+  "Customer ID": "CUS-0034",
+  "Receipt date": "2026-08-05",
+  "Amount (BDT)": 299236.02,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000266",
+  "Invoice ID": "INV-000300",
+  "Customer ID": "CUS-0027",
+  "Receipt date": "2026-08-14",
+  "Amount (BDT)": 361237.32,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000267",
+  "Invoice ID": "INV-000301",
+  "Customer ID": "CUS-0050",
+  "Receipt date": "2026-08-29",
+  "Amount (BDT)": 50809.92,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000268",
+  "Invoice ID": "INV-000303",
+  "Customer ID": "CUS-0036",
+  "Receipt date": "2026-08-14",
+  "Amount (BDT)": 42419.41,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000269",
+  "Invoice ID": "INV-000304",
+  "Customer ID": "CUS-0038",
+  "Receipt date": "2026-08-06",
+  "Amount (BDT)": 146491.38,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000270",
+  "Invoice ID": "INV-000305",
+  "Customer ID": "CUS-0020",
+  "Receipt date": "2026-08-29",
+  "Amount (BDT)": 157859.91,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000271",
+  "Invoice ID": "INV-000306",
+  "Customer ID": "CUS-0031",
+  "Receipt date": "2026-08-14",
+  "Amount (BDT)": 314882.54,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000272",
+  "Invoice ID": "INV-000308",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-08-06",
+  "Amount (BDT)": 229550.58,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000273",
+  "Invoice ID": "INV-000309",
+  "Customer ID": "CUS-0028",
+  "Receipt date": "2026-08-06",
+  "Amount (BDT)": 231909.55,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000274",
+  "Invoice ID": "INV-000310",
+  "Customer ID": "CUS-0020",
+  "Receipt date": "2026-08-29",
+  "Amount (BDT)": 235544.61,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000275",
+  "Invoice ID": "INV-000311",
+  "Customer ID": "CUS-0008",
+  "Receipt date": "2026-08-06",
+  "Amount (BDT)": 252206.37,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000276",
+  "Invoice ID": "INV-000312",
+  "Customer ID": "CUS-0009",
+  "Receipt date": "2026-08-14",
+  "Amount (BDT)": 148252.47,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000277",
+  "Invoice ID": "INV-000313",
+  "Customer ID": "CUS-0034",
+  "Receipt date": "2026-08-06",
+  "Amount (BDT)": 426341.88,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000278",
+  "Invoice ID": "INV-000314",
+  "Customer ID": "CUS-0017",
+  "Receipt date": "2026-08-31",
+  "Amount (BDT)": 135939.38,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000279",
+  "Invoice ID": "INV-000315",
+  "Customer ID": "CUS-0041",
+  "Receipt date": "2026-08-31",
+  "Amount (BDT)": 116816.28,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000280",
+  "Invoice ID": "INV-000316",
+  "Customer ID": "CUS-0044",
+  "Receipt date": "2026-08-31",
+  "Amount (BDT)": 47262.6,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000281",
+  "Invoice ID": "INV-000317",
+  "Customer ID": "CUS-0047",
+  "Receipt date": "2026-08-31",
+  "Amount (BDT)": 107335.2,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000282",
+  "Invoice ID": "INV-000320",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-08-08",
+  "Amount (BDT)": 282849.44,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000283",
+  "Invoice ID": "INV-000321",
+  "Customer ID": "CUS-0104",
+  "Receipt date": "2026-08-01",
+  "Amount (BDT)": 14330.61,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000284",
+  "Invoice ID": "INV-000322",
+  "Customer ID": "CUS-0026",
+  "Receipt date": "2026-08-08",
+  "Amount (BDT)": 298943.65,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000285",
+  "Invoice ID": "INV-000323",
+  "Customer ID": "CUS-0045",
+  "Receipt date": "2026-08-31",
+  "Amount (BDT)": 40456.08,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000286",
+  "Invoice ID": "INV-000324",
+  "Customer ID": "CUS-0036",
+  "Receipt date": "2026-08-16",
+  "Amount (BDT)": 72374.65,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000287",
+  "Invoice ID": "INV-000325",
+  "Customer ID": "CUS-0107",
+  "Receipt date": "2026-08-01",
+  "Amount (BDT)": 289.8,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000288",
+  "Invoice ID": "INV-000326",
+  "Customer ID": "CUS-0031",
+  "Receipt date": "2026-08-16",
+  "Amount (BDT)": 232841.55,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000289",
+  "Invoice ID": "INV-000327",
+  "Customer ID": "CUS-0008",
+  "Receipt date": "2026-08-09",
+  "Amount (BDT)": 193329.44,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000290",
+  "Invoice ID": "INV-000328",
+  "Customer ID": "CUS-0040",
+  "Receipt date": "2026-08-09",
+  "Amount (BDT)": 441878.55,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000291",
+  "Invoice ID": "INV-000329",
+  "Customer ID": "CUS-0012",
+  "Receipt date": "2026-09-01",
+  "Amount (BDT)": 401394.87,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000292",
+  "Invoice ID": "INV-000331",
+  "Customer ID": "CUS-0022",
+  "Receipt date": "2026-08-17",
+  "Amount (BDT)": 195130.98,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000293",
+  "Invoice ID": "INV-000332",
+  "Customer ID": "CUS-0032",
+  "Receipt date": "2026-09-01",
+  "Amount (BDT)": 260246.54,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000294",
+  "Invoice ID": "INV-000333",
+  "Customer ID": "CUS-0035",
+  "Receipt date": "2026-09-01",
+  "Amount (BDT)": 209071.89,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000295",
+  "Invoice ID": "INV-000334",
+  "Customer ID": "CUS-0080",
+  "Receipt date": "2026-08-02",
+  "Amount (BDT)": 2016,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000296",
+  "Invoice ID": "INV-000335",
+  "Customer ID": "CUS-0008",
+  "Receipt date": "2026-08-09",
+  "Amount (BDT)": 477362.14,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000297",
+  "Invoice ID": "INV-000336",
+  "Customer ID": "CUS-0030",
+  "Receipt date": "2026-08-09",
+  "Amount (BDT)": 330945.48,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000298",
+  "Invoice ID": "INV-000337",
+  "Customer ID": "CUS-0028",
+  "Receipt date": "2026-08-09",
+  "Amount (BDT)": 155843.99,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000299",
+  "Invoice ID": "INV-000338",
+  "Customer ID": "CUS-0033",
+  "Receipt date": "2026-08-18",
+  "Amount (BDT)": 244888.76,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000300",
+  "Invoice ID": "INV-000340",
+  "Customer ID": "CUS-0005",
+  "Receipt date": "2026-08-10",
+  "Amount (BDT)": 283083.6,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000301",
+  "Invoice ID": "INV-000341",
+  "Customer ID": "CUS-0033",
+  "Receipt date": "2026-08-18",
+  "Amount (BDT)": 360010.48,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000302",
+  "Invoice ID": "INV-000342",
+  "Customer ID": "CUS-0032",
+  "Receipt date": "2026-09-02",
+  "Amount (BDT)": 85430.02,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000303",
+  "Invoice ID": "INV-000343",
+  "Customer ID": "CUS-0013",
+  "Receipt date": "2026-09-02",
+  "Amount (BDT)": 189953.43,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000304",
+  "Invoice ID": "INV-000344",
+  "Customer ID": "CUS-0009",
+  "Receipt date": "2026-08-18",
+  "Amount (BDT)": 170708.33,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000305",
+  "Invoice ID": "INV-000345",
+  "Customer ID": "CUS-0032",
+  "Receipt date": "2026-09-02",
+  "Amount (BDT)": 179876.4,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000306",
+  "Invoice ID": "INV-000346",
+  "Customer ID": "CUS-0016",
+  "Receipt date": "2026-09-02",
+  "Amount (BDT)": 284253.4,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000307",
+  "Invoice ID": "INV-000347",
+  "Customer ID": "CUS-0028",
+  "Receipt date": "2026-08-11",
+  "Amount (BDT)": 260868.3,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000308",
+  "Invoice ID": "INV-000348",
+  "Customer ID": "CUS-0028",
+  "Receipt date": "2026-08-11",
+  "Amount (BDT)": 142599.62,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000309",
+  "Invoice ID": "INV-000349",
+  "Customer ID": "CUS-0018",
+  "Receipt date": "2026-08-11",
+  "Amount (BDT)": 790208.09,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000310",
+  "Invoice ID": "INV-000351",
+  "Customer ID": "CUS-0003",
+  "Receipt date": "2026-08-19",
+  "Amount (BDT)": 367903.93,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000311",
+  "Invoice ID": "INV-000352",
+  "Customer ID": "CUS-0006",
+  "Receipt date": "2026-08-11",
+  "Amount (BDT)": 133848.98,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000312",
+  "Invoice ID": "INV-000353",
+  "Customer ID": "CUS-0012",
+  "Receipt date": "2026-09-03",
+  "Amount (BDT)": 569655.88,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000313",
+  "Invoice ID": "INV-000354",
+  "Customer ID": "CUS-0063",
+  "Receipt date": "2026-08-04",
+  "Amount (BDT)": 2163.84,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000314",
+  "Invoice ID": "INV-000355",
+  "Customer ID": "CUS-0032",
+  "Receipt date": "2026-09-03",
+  "Amount (BDT)": 449485.34,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000315",
+  "Invoice ID": "INV-000356",
+  "Customer ID": "CUS-0007",
+  "Receipt date": "2026-08-19",
+  "Amount (BDT)": 165813.24,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000316",
+  "Invoice ID": "INV-000357",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-08-11",
+  "Amount (BDT)": 428791.51,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000317",
+  "Invoice ID": "INV-000358",
+  "Customer ID": "CUS-0018",
+  "Receipt date": "2026-08-12",
+  "Amount (BDT)": 95547.84,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000318",
+  "Invoice ID": "INV-000359",
+  "Customer ID": "CUS-0007",
+  "Receipt date": "2026-08-20",
+  "Amount (BDT)": 140649.6,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000319",
+  "Invoice ID": "INV-000360",
+  "Customer ID": "CUS-0043",
+  "Receipt date": "2026-09-04",
+  "Amount (BDT)": 61236,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000320",
+  "Invoice ID": "INV-000361",
+  "Customer ID": "CUS-0016",
+  "Receipt date": "2026-09-04",
+  "Amount (BDT)": 224805.92,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000321",
+  "Invoice ID": "INV-000362",
+  "Customer ID": "CUS-0117",
+  "Receipt date": "2026-08-05",
+  "Amount (BDT)": 30240.63,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000322",
+  "Invoice ID": "INV-000363",
+  "Customer ID": "CUS-0026",
+  "Receipt date": "2026-08-12",
+  "Amount (BDT)": 530398.12,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000323",
+  "Invoice ID": "INV-000364",
+  "Customer ID": "CUS-0032",
+  "Receipt date": "2026-09-04",
+  "Amount (BDT)": 164458.66,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000324",
+  "Invoice ID": "INV-000365",
+  "Customer ID": "CUS-0046",
+  "Receipt date": "2026-09-04",
+  "Amount (BDT)": 67697.28,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000325",
+  "Invoice ID": "INV-000366",
+  "Customer ID": "CUS-0024",
+  "Receipt date": "2026-08-12",
+  "Amount (BDT)": 116170.39,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000326",
+  "Invoice ID": "INV-000367",
+  "Customer ID": "CUS-0013",
+  "Receipt date": "2026-09-04",
+  "Amount (BDT)": 77500.5,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000327",
+  "Invoice ID": "INV-000368",
+  "Customer ID": "CUS-0044",
+  "Receipt date": "2026-09-04",
+  "Amount (BDT)": 54516,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000328",
+  "Invoice ID": "INV-000370",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-08-12",
+  "Amount (BDT)": 407659.08,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000329",
+  "Invoice ID": "INV-000371",
+  "Customer ID": "CUS-0003",
+  "Receipt date": "2026-08-20",
+  "Amount (BDT)": 386525.58,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000330",
+  "Invoice ID": "INV-000372",
+  "Customer ID": "CUS-0011",
+  "Receipt date": "2026-08-20",
+  "Amount (BDT)": 309158.64,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000331",
+  "Invoice ID": "INV-000373",
+  "Customer ID": "CUS-0011",
+  "Receipt date": "2026-08-20",
+  "Amount (BDT)": 259376.54,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000332",
+  "Invoice ID": "INV-000374",
+  "Customer ID": "CUS-0025",
+  "Receipt date": "2026-08-21",
+  "Amount (BDT)": 425103.08,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000333",
+  "Invoice ID": "INV-000375",
+  "Customer ID": "CUS-0011",
+  "Receipt date": "2026-08-21",
+  "Amount (BDT)": 147527.52,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000334",
+  "Invoice ID": "INV-000376",
+  "Customer ID": "CUS-0014",
+  "Receipt date": "2026-08-13",
+  "Amount (BDT)": 111666.9,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000335",
+  "Invoice ID": "INV-000377",
+  "Customer ID": "CUS-0032",
+  "Receipt date": "2026-09-05",
+  "Amount (BDT)": 214493.58,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000336",
+  "Invoice ID": "INV-000378",
+  "Customer ID": "CUS-0018",
+  "Receipt date": "2026-08-13",
+  "Amount (BDT)": 240332.75,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000337",
+  "Invoice ID": "INV-000379",
+  "Customer ID": "CUS-0022",
+  "Receipt date": "2026-08-21",
+  "Amount (BDT)": 139292.5,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000338",
+  "Invoice ID": "INV-000380",
+  "Customer ID": "CUS-0039",
+  "Receipt date": "2026-08-13",
+  "Amount (BDT)": 224883.49,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000339",
+  "Invoice ID": "INV-000381",
+  "Customer ID": "CUS-0005",
+  "Receipt date": "2026-08-13",
+  "Amount (BDT)": 328393.49,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000340",
+  "Invoice ID": "INV-000383",
+  "Customer ID": "CUS-0081",
+  "Receipt date": "2026-08-06",
+  "Amount (BDT)": 8560.44,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000341",
+  "Invoice ID": "INV-000384",
+  "Customer ID": "CUS-0001",
+  "Receipt date": "2026-09-07",
+  "Amount (BDT)": 205192.32,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000342",
+  "Invoice ID": "INV-000387",
+  "Customer ID": "CUS-0043",
+  "Receipt date": "2026-09-07",
+  "Amount (BDT)": 46136.16,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000343",
+  "Invoice ID": "INV-000388",
+  "Customer ID": "CUS-0021",
+  "Receipt date": "2026-08-15",
+  "Amount (BDT)": 193876.2,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000344",
+  "Invoice ID": "INV-000389",
+  "Customer ID": "CUS-0022",
+  "Receipt date": "2026-08-23",
+  "Amount (BDT)": 270091.63,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000345",
+  "Invoice ID": "INV-000390",
+  "Customer ID": "CUS-0016",
+  "Receipt date": "2026-09-07",
+  "Amount (BDT)": 248890.67,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000346",
+  "Invoice ID": "INV-000392",
+  "Customer ID": "CUS-0021",
+  "Receipt date": "2026-08-15",
+  "Amount (BDT)": 237876.28,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000347",
+  "Invoice ID": "INV-000393",
+  "Customer ID": "CUS-0100",
+  "Receipt date": "2026-08-09",
+  "Amount (BDT)": 869.4,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000348",
+  "Invoice ID": "INV-000394",
+  "Customer ID": "CUS-0016",
+  "Receipt date": "2026-09-08",
+  "Amount (BDT)": 232528.56,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000349",
+  "Invoice ID": "INV-000395",
+  "Customer ID": "CUS-0048",
+  "Receipt date": "2026-09-08",
+  "Amount (BDT)": 64102.08,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000350",
+  "Invoice ID": "INV-000396",
+  "Customer ID": "CUS-0021",
+  "Receipt date": "2026-08-16",
+  "Amount (BDT)": 156819.43,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000351",
+  "Invoice ID": "INV-000397",
+  "Customer ID": "CUS-0037",
+  "Receipt date": "2026-09-08",
+  "Amount (BDT)": 145479.6,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000352",
+  "Invoice ID": "INV-000398",
+  "Customer ID": "CUS-0020",
+  "Receipt date": "2026-09-08",
+  "Amount (BDT)": 130585.81,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000353",
+  "Invoice ID": "INV-000399",
+  "Customer ID": "CUS-0003",
+  "Receipt date": "2026-08-24",
+  "Amount (BDT)": 273151.47,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000354",
+  "Invoice ID": "INV-000400",
+  "Customer ID": "CUS-0020",
+  "Receipt date": "2026-09-08",
+  "Amount (BDT)": 311591.03,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000355",
+  "Invoice ID": "INV-000401",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-08-16",
+  "Amount (BDT)": 78809.37,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000356",
+  "Invoice ID": "INV-000402",
+  "Customer ID": "CUS-0037",
+  "Receipt date": "2026-09-08",
+  "Amount (BDT)": 341498.13,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000357",
+  "Invoice ID": "INV-000403",
+  "Customer ID": "CUS-0024",
+  "Receipt date": "2026-08-16",
+  "Amount (BDT)": 80416.03,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000358",
+  "Invoice ID": "INV-000404",
+  "Customer ID": "CUS-0039",
+  "Receipt date": "2026-08-16",
+  "Amount (BDT)": 188207.71,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000359",
+  "Invoice ID": "INV-000406",
+  "Customer ID": "CUS-0028",
+  "Receipt date": "2026-08-17",
+  "Amount (BDT)": 376604.96,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000360",
+  "Invoice ID": "INV-000407",
+  "Customer ID": "CUS-0011",
+  "Receipt date": "2026-08-25",
+  "Amount (BDT)": 491342.63,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000361",
+  "Invoice ID": "INV-000408",
+  "Customer ID": "CUS-0018",
+  "Receipt date": "2026-08-17",
+  "Amount (BDT)": 205105.37,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000362",
+  "Invoice ID": "INV-000410",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-08-17",
+  "Amount (BDT)": 269343.56,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000363",
+  "Invoice ID": "INV-000411",
+  "Customer ID": "CUS-0072",
+  "Receipt date": "2026-08-10",
+  "Amount (BDT)": 260.82,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000364",
+  "Invoice ID": "INV-000412",
+  "Customer ID": "CUS-0016",
+  "Receipt date": "2026-09-09",
+  "Amount (BDT)": 122915.94,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000365",
+  "Invoice ID": "INV-000413",
+  "Customer ID": "CUS-0029",
+  "Receipt date": "2026-08-25",
+  "Amount (BDT)": 688960.19,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000366",
+  "Invoice ID": "INV-000414",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-08-17",
+  "Amount (BDT)": 45371.09,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000367",
+  "Invoice ID": "INV-000415",
+  "Customer ID": "CUS-0010",
+  "Receipt date": "2026-08-17",
+  "Amount (BDT)": 113874.01,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000368",
+  "Invoice ID": "INV-000416",
+  "Customer ID": "CUS-0042",
+  "Receipt date": "2026-09-09",
+  "Amount (BDT)": 43466.64,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000369",
+  "Invoice ID": "INV-000417",
+  "Customer ID": "CUS-0103",
+  "Receipt date": "2026-08-11",
+  "Amount (BDT)": 21445.2,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000370",
+  "Invoice ID": "INV-000418",
+  "Customer ID": "CUS-0002",
+  "Receipt date": "2026-08-18",
+  "Amount (BDT)": 143560.58,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000371",
+  "Invoice ID": "INV-000419",
+  "Customer ID": "CUS-0039",
+  "Receipt date": "2026-08-18",
+  "Amount (BDT)": 162764.88,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000372",
+  "Invoice ID": "INV-000420",
+  "Customer ID": "CUS-0047",
+  "Receipt date": "2026-09-10",
+  "Amount (BDT)": 38717.28,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000373",
+  "Invoice ID": "INV-000421",
+  "Customer ID": "CUS-0005",
+  "Receipt date": "2026-08-18",
+  "Amount (BDT)": 274785.45,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000374",
+  "Invoice ID": "INV-000422",
+  "Customer ID": "CUS-0035",
+  "Receipt date": "2026-09-10",
+  "Amount (BDT)": 156663.94,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000375",
+  "Invoice ID": "INV-000423",
+  "Customer ID": "CUS-0120",
+  "Receipt date": "2026-08-11",
+  "Amount (BDT)": 2825.55,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000376",
+  "Invoice ID": "INV-000424",
+  "Customer ID": "CUS-0005",
+  "Receipt date": "2026-08-18",
+  "Amount (BDT)": 48889.26,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000377",
+  "Invoice ID": "INV-000426",
+  "Customer ID": "CUS-0024",
+  "Receipt date": "2026-08-19",
+  "Amount (BDT)": 107810.23,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000378",
+  "Invoice ID": "INV-000427",
+  "Customer ID": "CUS-0006",
+  "Receipt date": "2026-08-19",
+  "Amount (BDT)": 525109.48,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000379",
+  "Invoice ID": "INV-000428",
+  "Customer ID": "CUS-0026",
+  "Receipt date": "2026-08-19",
+  "Amount (BDT)": 262418.39,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000380",
+  "Invoice ID": "INV-000429",
+  "Customer ID": "CUS-0097",
+  "Receipt date": "2026-08-12",
+  "Amount (BDT)": 9954.63,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000381",
+  "Invoice ID": "INV-000430",
+  "Customer ID": "CUS-0003",
+  "Receipt date": "2026-08-27",
+  "Amount (BDT)": 458767.24,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000382",
+  "Invoice ID": "INV-000432",
+  "Customer ID": "CUS-0001",
+  "Receipt date": "2026-09-11",
+  "Amount (BDT)": 335112.83,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000383",
+  "Invoice ID": "INV-000433",
+  "Customer ID": "CUS-0027",
+  "Receipt date": "2026-08-27",
+  "Amount (BDT)": 237641.04,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000384",
+  "Invoice ID": "INV-000434",
+  "Customer ID": "CUS-0018",
+  "Receipt date": "2026-08-19",
+  "Amount (BDT)": 31045.05,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000385",
+  "Invoice ID": "INV-000435",
+  "Customer ID": "CUS-0060",
+  "Receipt date": "2026-08-12",
+  "Amount (BDT)": 22836.24,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000386",
+  "Invoice ID": "INV-000436",
+  "Customer ID": "CUS-0092",
+  "Receipt date": "2026-08-12",
+  "Amount (BDT)": 1912.68,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000387",
+  "Invoice ID": "INV-000437",
+  "Customer ID": "CUS-0026",
+  "Receipt date": "2026-08-19",
+  "Amount (BDT)": 190300.59,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000388",
+  "Invoice ID": "INV-000438",
+  "Customer ID": "CUS-0024",
+  "Receipt date": "2026-08-19",
+  "Amount (BDT)": 652281.18,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000389",
+  "Invoice ID": "INV-000439",
+  "Customer ID": "CUS-0010",
+  "Receipt date": "2026-08-19",
+  "Amount (BDT)": 289109.02,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000390",
+  "Invoice ID": "INV-000440",
+  "Customer ID": "CUS-0108",
+  "Receipt date": "2026-08-12",
+  "Amount (BDT)": 1605.97,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000391",
+  "Invoice ID": "INV-000441",
+  "Customer ID": "CUS-0005",
+  "Receipt date": "2026-08-19",
+  "Amount (BDT)": 275757.3,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000392",
+  "Invoice ID": "INV-000442",
+  "Customer ID": "CUS-0080",
+  "Receipt date": "2026-08-13",
+  "Amount (BDT)": 4308.57,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000393",
+  "Invoice ID": "INV-000443",
+  "Customer ID": "CUS-0026",
+  "Receipt date": "2026-08-20",
+  "Amount (BDT)": 80391.68,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000394",
+  "Invoice ID": "INV-000444",
+  "Customer ID": "CUS-0065",
+  "Receipt date": "2026-08-13",
+  "Amount (BDT)": 4810.68,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000395",
+  "Invoice ID": "INV-000445",
+  "Customer ID": "CUS-0110",
+  "Receipt date": "2026-08-13",
+  "Amount (BDT)": 3245.76,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000396",
+  "Invoice ID": "INV-000446",
+  "Customer ID": "CUS-0001",
+  "Receipt date": "2026-09-12",
+  "Amount (BDT)": 206418.35,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000397",
+  "Invoice ID": "INV-000449",
+  "Customer ID": "CUS-0034",
+  "Receipt date": "2026-08-20",
+  "Amount (BDT)": 282104.59,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000398",
+  "Invoice ID": "INV-000450",
+  "Customer ID": "CUS-0012",
+  "Receipt date": "2026-09-12",
+  "Amount (BDT)": 245390.65,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000399",
+  "Invoice ID": "INV-000451",
+  "Customer ID": "CUS-0016",
+  "Receipt date": "2026-09-12",
+  "Amount (BDT)": 546943.74,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000400",
+  "Invoice ID": "INV-000452",
+  "Customer ID": "CUS-0010",
+  "Receipt date": "2026-08-20",
+  "Amount (BDT)": 290003.87,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000401",
+  "Invoice ID": "INV-000453",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-08-22",
+  "Amount (BDT)": 44872.63,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000402",
+  "Invoice ID": "INV-000454",
+  "Customer ID": "CUS-0003",
+  "Receipt date": "2026-08-30",
+  "Amount (BDT)": 87770.62,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000403",
+  "Invoice ID": "INV-000455",
+  "Customer ID": "CUS-0027",
+  "Receipt date": "2026-08-30",
+  "Amount (BDT)": 62550.43,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000404",
+  "Invoice ID": "INV-000456",
+  "Customer ID": "CUS-0039",
+  "Receipt date": "2026-08-22",
+  "Amount (BDT)": 162113.73,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000405",
+  "Invoice ID": "INV-000457",
+  "Customer ID": "CUS-0023",
+  "Receipt date": "2026-08-30",
+  "Amount (BDT)": 339894.58,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000406",
+  "Invoice ID": "INV-000458",
+  "Customer ID": "CUS-0080",
+  "Receipt date": "2026-08-15",
+  "Amount (BDT)": 14490,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000407",
+  "Invoice ID": "INV-000459",
+  "Customer ID": "CUS-0027",
+  "Receipt date": "2026-08-30",
+  "Amount (BDT)": 163525.45,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000408",
+  "Invoice ID": "INV-000460",
+  "Customer ID": "CUS-0003",
+  "Receipt date": "2026-08-30",
+  "Amount (BDT)": 145782.54,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000409",
+  "Invoice ID": "INV-000461",
+  "Customer ID": "CUS-0022",
+  "Receipt date": "2026-08-30",
+  "Amount (BDT)": 296759.36,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000410",
+  "Invoice ID": "INV-000462",
+  "Customer ID": "CUS-0068",
+  "Receipt date": "2026-08-15",
+  "Amount (BDT)": 1970.64,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000411",
+  "Invoice ID": "INV-000463",
+  "Customer ID": "CUS-0117",
+  "Receipt date": "2026-08-16",
+  "Amount (BDT)": 1956.15,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000412",
+  "Invoice ID": "INV-000464",
+  "Customer ID": "CUS-0100",
+  "Receipt date": "2026-08-16",
+  "Amount (BDT)": 5090.82,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000413",
+  "Invoice ID": "INV-000465",
+  "Customer ID": "CUS-0040",
+  "Receipt date": "2026-08-23",
+  "Amount (BDT)": 116335.8,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000414",
+  "Invoice ID": "INV-000466",
+  "Customer ID": "CUS-0033",
+  "Receipt date": "2026-08-31",
+  "Amount (BDT)": 58346.02,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000415",
+  "Invoice ID": "INV-000467",
+  "Customer ID": "CUS-0007",
+  "Receipt date": "2026-08-31",
+  "Amount (BDT)": 654520.02,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000416",
+  "Invoice ID": "INV-000468",
+  "Customer ID": "CUS-0009",
+  "Receipt date": "2026-08-31",
+  "Amount (BDT)": 77886.59,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000417",
+  "Invoice ID": "INV-000469",
+  "Customer ID": "CUS-0039",
+  "Receipt date": "2026-08-23",
+  "Amount (BDT)": 112702.77,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000418",
+  "Invoice ID": "INV-000470",
+  "Customer ID": "CUS-0035",
+  "Receipt date": "2026-09-15",
+  "Amount (BDT)": 117335.77,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000419",
+  "Invoice ID": "INV-000471",
+  "Customer ID": "CUS-0011",
+  "Receipt date": "2026-08-31",
+  "Amount (BDT)": 236560.27,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000420",
+  "Invoice ID": "INV-000472",
+  "Customer ID": "CUS-0040",
+  "Receipt date": "2026-08-23",
+  "Amount (BDT)": 249547.79,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000421",
+  "Invoice ID": "INV-000473",
+  "Customer ID": "CUS-0017",
+  "Receipt date": "2026-09-15",
+  "Amount (BDT)": 146673.57,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000422",
+  "Invoice ID": "INV-000474",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-08-23",
+  "Amount (BDT)": 387294.91,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000423",
+  "Invoice ID": "INV-000475",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-08-24",
+  "Amount (BDT)": 107226,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000424",
+  "Invoice ID": "INV-000476",
+  "Customer ID": "CUS-0105",
+  "Receipt date": "2026-08-17",
+  "Amount (BDT)": 4062.24,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000425",
+  "Invoice ID": "INV-000477",
+  "Customer ID": "CUS-0012",
+  "Receipt date": "2026-09-16",
+  "Amount (BDT)": 321844.32,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000426",
+  "Invoice ID": "INV-000478",
+  "Customer ID": "CUS-0039",
+  "Receipt date": "2026-08-24",
+  "Amount (BDT)": 160960.8,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000427",
+  "Invoice ID": "INV-000479",
+  "Customer ID": "CUS-0047",
+  "Receipt date": "2026-09-16",
+  "Amount (BDT)": 99187.2,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000428",
+  "Invoice ID": "INV-000480",
+  "Customer ID": "CUS-0026",
+  "Receipt date": "2026-08-24",
+  "Amount (BDT)": 388025.91,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000429",
+  "Invoice ID": "INV-000482",
+  "Customer ID": "CUS-0108",
+  "Receipt date": "2026-08-17",
+  "Amount (BDT)": 23649.78,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000430",
+  "Invoice ID": "INV-000484",
+  "Customer ID": "CUS-0015",
+  "Receipt date": "2026-09-02",
+  "Amount (BDT)": 591730.9,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000431",
+  "Invoice ID": "INV-000485",
+  "Customer ID": "CUS-0010",
+  "Receipt date": "2026-08-25",
+  "Amount (BDT)": 318196.97,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000432",
+  "Invoice ID": "INV-000486",
+  "Customer ID": "CUS-0003",
+  "Receipt date": "2026-09-02",
+  "Amount (BDT)": 540591.75,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000433",
+  "Invoice ID": "INV-000487",
+  "Customer ID": "CUS-0037",
+  "Receipt date": "2026-09-17",
+  "Amount (BDT)": 336436.94,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000434",
+  "Invoice ID": "INV-000488",
+  "Customer ID": "CUS-0014",
+  "Receipt date": "2026-08-25",
+  "Amount (BDT)": 471598.11,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000435",
+  "Invoice ID": "INV-000489",
+  "Customer ID": "CUS-0032",
+  "Receipt date": "2026-09-17",
+  "Amount (BDT)": 428273.95,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000436",
+  "Invoice ID": "INV-000490",
+  "Customer ID": "CUS-0035",
+  "Receipt date": "2026-09-17",
+  "Amount (BDT)": 686282.44,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000437",
+  "Invoice ID": "INV-000491",
+  "Customer ID": "CUS-0027",
+  "Receipt date": "2026-09-02",
+  "Amount (BDT)": 131267.91,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000438",
+  "Invoice ID": "INV-000492",
+  "Customer ID": "CUS-0022",
+  "Receipt date": "2026-09-02",
+  "Amount (BDT)": 482914.75,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000439",
+  "Invoice ID": "INV-000493",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-08-25",
+  "Amount (BDT)": 303204.98,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000440",
+  "Invoice ID": "INV-000494",
+  "Customer ID": "CUS-0011",
+  "Receipt date": "2026-09-02",
+  "Amount (BDT)": 454140.29,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000441",
+  "Invoice ID": "INV-000495",
+  "Customer ID": "CUS-0036",
+  "Receipt date": "2026-09-02",
+  "Amount (BDT)": 278993.67,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000442",
+  "Invoice ID": "INV-000496",
+  "Customer ID": "CUS-0014",
+  "Receipt date": "2026-08-26",
+  "Amount (BDT)": 424606.38,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000443",
+  "Invoice ID": "INV-000497",
+  "Customer ID": "CUS-0022",
+  "Receipt date": "2026-09-03",
+  "Amount (BDT)": 250062.24,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000444",
+  "Invoice ID": "INV-000498",
+  "Customer ID": "CUS-0032",
+  "Receipt date": "2026-09-18",
+  "Amount (BDT)": 256999.29,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000445",
+  "Invoice ID": "INV-000499",
+  "Customer ID": "CUS-0034",
+  "Receipt date": "2026-08-26",
+  "Amount (BDT)": 63929.98,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000446",
+  "Invoice ID": "INV-000500",
+  "Customer ID": "CUS-0007",
+  "Receipt date": "2026-09-03",
+  "Amount (BDT)": 238704.38,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000447",
+  "Invoice ID": "INV-000501",
+  "Customer ID": "CUS-0045",
+  "Receipt date": "2026-09-18",
+  "Amount (BDT)": 60859.68,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000448",
+  "Invoice ID": "INV-000502",
+  "Customer ID": "CUS-0018",
+  "Receipt date": "2026-08-26",
+  "Amount (BDT)": 333236.26,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000449",
+  "Invoice ID": "INV-000503",
+  "Customer ID": "CUS-0026",
+  "Receipt date": "2026-08-26",
+  "Amount (BDT)": 194336.76,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000450",
+  "Invoice ID": "INV-000504",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-08-27",
+  "Amount (BDT)": 669062.01,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000451",
+  "Invoice ID": "INV-000505",
+  "Customer ID": "CUS-0016",
+  "Receipt date": "2026-09-19",
+  "Amount (BDT)": 190171.42,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000452",
+  "Invoice ID": "INV-000506",
+  "Customer ID": "CUS-0022",
+  "Receipt date": "2026-09-04",
+  "Amount (BDT)": 112810.5,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000453",
+  "Invoice ID": "INV-000507",
+  "Customer ID": "CUS-0010",
+  "Receipt date": "2026-08-27",
+  "Amount (BDT)": 392441.37,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000454",
+  "Invoice ID": "INV-000508",
+  "Customer ID": "CUS-0040",
+  "Receipt date": "2026-08-27",
+  "Amount (BDT)": 141118.45,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000455",
+  "Invoice ID": "INV-000509",
+  "Customer ID": "CUS-0016",
+  "Receipt date": "2026-09-19",
+  "Amount (BDT)": 221523.7,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000456",
+  "Invoice ID": "INV-000510",
+  "Customer ID": "CUS-0028",
+  "Receipt date": "2026-08-27",
+  "Amount (BDT)": 182888.14,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000457",
+  "Invoice ID": "INV-000511",
+  "Customer ID": "CUS-0022",
+  "Receipt date": "2026-09-04",
+  "Amount (BDT)": 171343.21,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000458",
+  "Invoice ID": "INV-000512",
+  "Customer ID": "CUS-0014",
+  "Receipt date": "2026-08-29",
+  "Amount (BDT)": 246535.38,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000459",
+  "Invoice ID": "INV-000513",
+  "Customer ID": "CUS-0009",
+  "Receipt date": "2026-09-06",
+  "Amount (BDT)": 348043.81,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000460",
+  "Invoice ID": "INV-000514",
+  "Customer ID": "CUS-0018",
+  "Receipt date": "2026-08-29",
+  "Amount (BDT)": 375138.29,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000461",
+  "Invoice ID": "INV-000515",
+  "Customer ID": "CUS-0035",
+  "Receipt date": "2026-09-21",
+  "Amount (BDT)": 548540,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000462",
+  "Invoice ID": "INV-000516",
+  "Customer ID": "CUS-0001",
+  "Receipt date": "2026-09-21",
+  "Amount (BDT)": 429454.68,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000463",
+  "Invoice ID": "INV-000517",
+  "Customer ID": "CUS-0001",
+  "Receipt date": "2026-09-21",
+  "Amount (BDT)": 233991.48,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000464",
+  "Invoice ID": "INV-000518",
+  "Customer ID": "CUS-0031",
+  "Receipt date": "2026-09-06",
+  "Amount (BDT)": 577778.15,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000465",
+  "Invoice ID": "INV-000519",
+  "Customer ID": "CUS-0087",
+  "Receipt date": "2026-08-22",
+  "Amount (BDT)": 17827.53,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000466",
+  "Invoice ID": "INV-000520",
+  "Customer ID": "CUS-0035",
+  "Receipt date": "2026-09-21",
+  "Amount (BDT)": 240468.24,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000467",
+  "Invoice ID": "INV-000521",
+  "Customer ID": "CUS-0054",
+  "Receipt date": "2026-08-22",
+  "Amount (BDT)": 9310.56,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000468",
+  "Invoice ID": "INV-000522",
+  "Customer ID": "CUS-0028",
+  "Receipt date": "2026-08-29",
+  "Amount (BDT)": 302730.45,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000469",
+  "Invoice ID": "INV-000524",
+  "Customer ID": "CUS-0038",
+  "Receipt date": "2026-08-30",
+  "Amount (BDT)": 132378.46,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000470",
+  "Invoice ID": "INV-000525",
+  "Customer ID": "CUS-0037",
+  "Receipt date": "2026-09-22",
+  "Amount (BDT)": 566576,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000471",
+  "Invoice ID": "INV-000526",
+  "Customer ID": "CUS-0009",
+  "Receipt date": "2026-09-07",
+  "Amount (BDT)": 218987.37,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000472",
+  "Invoice ID": "INV-000527",
+  "Customer ID": "CUS-0012",
+  "Receipt date": "2026-09-22",
+  "Amount (BDT)": 50296.24,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000473",
+  "Invoice ID": "INV-000528",
+  "Customer ID": "CUS-0031",
+  "Receipt date": "2026-09-07",
+  "Amount (BDT)": 331834.1,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000474",
+  "Invoice ID": "INV-000529",
+  "Customer ID": "CUS-0030",
+  "Receipt date": "2026-08-30",
+  "Amount (BDT)": 477209.37,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000475",
+  "Invoice ID": "INV-000530",
+  "Customer ID": "CUS-0029",
+  "Receipt date": "2026-09-07",
+  "Amount (BDT)": 79518.8,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000476",
+  "Invoice ID": "INV-000531",
+  "Customer ID": "CUS-0006",
+  "Receipt date": "2026-08-30",
+  "Amount (BDT)": 221946.23,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000477",
+  "Invoice ID": "INV-000532",
+  "Customer ID": "CUS-0026",
+  "Receipt date": "2026-08-30",
+  "Amount (BDT)": 179310.09,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000478",
+  "Invoice ID": "INV-000533",
+  "Customer ID": "CUS-0100",
+  "Receipt date": "2026-08-23",
+  "Amount (BDT)": 782.46,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000479",
+  "Invoice ID": "INV-000534",
+  "Customer ID": "CUS-0104",
+  "Receipt date": "2026-08-23",
+  "Amount (BDT)": 1439.34,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000480",
+  "Invoice ID": "INV-000535",
+  "Customer ID": "CUS-0015",
+  "Receipt date": "2026-09-07",
+  "Amount (BDT)": 189426.44,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000481",
+  "Invoice ID": "INV-000536",
+  "Customer ID": "CUS-0030",
+  "Receipt date": "2026-08-31",
+  "Amount (BDT)": 446778.62,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000482",
+  "Invoice ID": "INV-000537",
+  "Customer ID": "CUS-0027",
+  "Receipt date": "2026-09-08",
+  "Amount (BDT)": 79458.96,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000483",
+  "Invoice ID": "INV-000538",
+  "Customer ID": "CUS-0001",
+  "Receipt date": "2026-09-23",
+  "Amount (BDT)": 55031.76,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000484",
+  "Invoice ID": "INV-000539",
+  "Customer ID": "CUS-0055",
+  "Receipt date": "2026-08-24",
+  "Amount (BDT)": 24053.4,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000485",
+  "Invoice ID": "INV-000540",
+  "Customer ID": "CUS-0025",
+  "Receipt date": "2026-09-08",
+  "Amount (BDT)": 189339.95,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000486",
+  "Invoice ID": "INV-000541",
+  "Customer ID": "CUS-0048",
+  "Receipt date": "2026-09-23",
+  "Amount (BDT)": 72429.84,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000487",
+  "Invoice ID": "INV-000542",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-08-31",
+  "Amount (BDT)": 96272.44,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000488",
+  "Invoice ID": "INV-000543",
+  "Customer ID": "CUS-0008",
+  "Receipt date": "2026-08-31",
+  "Amount (BDT)": 583125.06,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000489",
+  "Invoice ID": "INV-000544",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-09-01",
+  "Amount (BDT)": 158483.33,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000490",
+  "Invoice ID": "INV-000545",
+  "Customer ID": "CUS-0022",
+  "Receipt date": "2026-09-09",
+  "Amount (BDT)": 481317.03,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000491",
+  "Invoice ID": "INV-000546",
+  "Customer ID": "CUS-0012",
+  "Receipt date": "2026-09-24",
+  "Amount (BDT)": 34173.22,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000492",
+  "Invoice ID": "INV-000547",
+  "Customer ID": "CUS-0014",
+  "Receipt date": "2026-09-01",
+  "Amount (BDT)": 115120.15,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000493",
+  "Invoice ID": "INV-000548",
+  "Customer ID": "CUS-0018",
+  "Receipt date": "2026-09-01",
+  "Amount (BDT)": 326349.24,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000494",
+  "Invoice ID": "INV-000549",
+  "Customer ID": "CUS-0025",
+  "Receipt date": "2026-09-09",
+  "Amount (BDT)": 152645.54,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000495",
+  "Invoice ID": "INV-000550",
+  "Customer ID": "CUS-0029",
+  "Receipt date": "2026-09-09",
+  "Amount (BDT)": 181446.48,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000496",
+  "Invoice ID": "INV-000551",
+  "Customer ID": "CUS-0119",
+  "Receipt date": "2026-08-25",
+  "Amount (BDT)": 2344.65,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000497",
+  "Invoice ID": "INV-000552",
+  "Customer ID": "CUS-0025",
+  "Receipt date": "2026-09-09",
+  "Amount (BDT)": 372207.53,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000498",
+  "Invoice ID": "INV-000553",
+  "Customer ID": "CUS-0002",
+  "Receipt date": "2026-09-01",
+  "Amount (BDT)": 494444.97,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000499",
+  "Invoice ID": "INV-000555",
+  "Customer ID": "CUS-0031",
+  "Receipt date": "2026-09-09",
+  "Amount (BDT)": 247381.17,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000500",
+  "Invoice ID": "INV-000556",
+  "Customer ID": "CUS-0033",
+  "Receipt date": "2026-09-09",
+  "Amount (BDT)": 970898.46,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000501",
+  "Invoice ID": "INV-000557",
+  "Customer ID": "CUS-0014",
+  "Receipt date": "2026-09-01",
+  "Amount (BDT)": 247677.34,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000502",
+  "Invoice ID": "INV-000559",
+  "Customer ID": "CUS-0022",
+  "Receipt date": "2026-09-10",
+  "Amount (BDT)": 108206.99,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000503",
+  "Invoice ID": "INV-000560",
+  "Customer ID": "CUS-0107",
+  "Receipt date": "2026-08-26",
+  "Amount (BDT)": 1159.2,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000504",
+  "Invoice ID": "INV-000562",
+  "Customer ID": "CUS-0008",
+  "Receipt date": "2026-09-02",
+  "Amount (BDT)": 893827.81,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000505",
+  "Invoice ID": "INV-000563",
+  "Customer ID": "CUS-0006",
+  "Receipt date": "2026-09-02",
+  "Amount (BDT)": 236360.88,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000506",
+  "Invoice ID": "INV-000564",
+  "Customer ID": "CUS-0021",
+  "Receipt date": "2026-09-02",
+  "Amount (BDT)": 165977.36,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000507",
+  "Invoice ID": "INV-000565",
+  "Customer ID": "CUS-0086",
+  "Receipt date": "2026-08-26",
+  "Amount (BDT)": 5216.4,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000508",
+  "Invoice ID": "INV-000566",
+  "Customer ID": "CUS-0018",
+  "Receipt date": "2026-09-02",
+  "Amount (BDT)": 495618.48,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000509",
+  "Invoice ID": "INV-000567",
+  "Customer ID": "CUS-0087",
+  "Receipt date": "2026-08-26",
+  "Amount (BDT)": 3004.26,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000510",
+  "Invoice ID": "INV-000568",
+  "Customer ID": "CUS-0081",
+  "Receipt date": "2026-08-26",
+  "Amount (BDT)": 748.65,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000511",
+  "Invoice ID": "INV-000569",
+  "Customer ID": "CUS-0017",
+  "Receipt date": "2026-09-25",
+  "Amount (BDT)": 764896.19,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000512",
+  "Invoice ID": "INV-000570",
+  "Customer ID": "CUS-0035",
+  "Receipt date": "2026-09-26",
+  "Amount (BDT)": 411667.84,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000513",
+  "Invoice ID": "INV-000571",
+  "Customer ID": "CUS-0027",
+  "Receipt date": "2026-09-11",
+  "Amount (BDT)": 481884.28,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000514",
+  "Invoice ID": "INV-000572",
+  "Customer ID": "CUS-0006",
+  "Receipt date": "2026-09-03",
+  "Amount (BDT)": 207266.12,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000515",
+  "Invoice ID": "INV-000573",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-09-03",
+  "Amount (BDT)": 305217.92,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000516",
+  "Invoice ID": "INV-000574",
+  "Customer ID": "CUS-0018",
+  "Receipt date": "2026-09-03",
+  "Amount (BDT)": 323463.17,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000517",
+  "Invoice ID": "INV-000575",
+  "Customer ID": "CUS-0072",
+  "Receipt date": "2026-08-27",
+  "Amount (BDT)": 4854.15,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000518",
+  "Invoice ID": "INV-000576",
+  "Customer ID": "CUS-0020",
+  "Receipt date": "2026-09-26",
+  "Amount (BDT)": 137250.04,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000519",
+  "Invoice ID": "INV-000577",
+  "Customer ID": "CUS-0030",
+  "Receipt date": "2026-09-03",
+  "Amount (BDT)": 265621.41,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000520",
+  "Invoice ID": "INV-000578",
+  "Customer ID": "CUS-0037",
+  "Receipt date": "2026-09-26",
+  "Amount (BDT)": 91257.6,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000521",
+  "Invoice ID": "INV-000579",
+  "Customer ID": "CUS-0013",
+  "Receipt date": "2026-09-26",
+  "Amount (BDT)": 211430.73,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000522",
+  "Invoice ID": "INV-000580",
+  "Customer ID": "CUS-0024",
+  "Receipt date": "2026-09-03",
+  "Amount (BDT)": 346448.17,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000523",
+  "Invoice ID": "INV-000581",
+  "Customer ID": "CUS-0007",
+  "Receipt date": "2026-09-11",
+  "Amount (BDT)": 142076.8,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000524",
+  "Invoice ID": "INV-000582",
+  "Customer ID": "CUS-0089",
+  "Receipt date": "2026-08-27",
+  "Amount (BDT)": 44745.12,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000525",
+  "Invoice ID": "INV-000583",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-09-03",
+  "Amount (BDT)": 586326.55,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000526",
+  "Invoice ID": "INV-000584",
+  "Customer ID": "CUS-0020",
+  "Receipt date": "2026-09-26",
+  "Amount (BDT)": 250906.27,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000527",
+  "Invoice ID": "INV-000587",
+  "Customer ID": "CUS-0037",
+  "Receipt date": "2026-09-28",
+  "Amount (BDT)": 134568.04,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000528",
+  "Invoice ID": "INV-000589",
+  "Customer ID": "CUS-0008",
+  "Receipt date": "2026-09-05",
+  "Amount (BDT)": 668557.01,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000529",
+  "Invoice ID": "INV-000590",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-09-05",
+  "Amount (BDT)": 379103.52,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000530",
+  "Invoice ID": "INV-000591",
+  "Customer ID": "CUS-0002",
+  "Receipt date": "2026-09-05",
+  "Amount (BDT)": 211552.46,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000531",
+  "Invoice ID": "INV-000592",
+  "Customer ID": "CUS-0022",
+  "Receipt date": "2026-09-13",
+  "Amount (BDT)": 236952.07,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000532",
+  "Invoice ID": "INV-000593",
+  "Customer ID": "CUS-0022",
+  "Receipt date": "2026-09-13",
+  "Amount (BDT)": 163536.57,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000533",
+  "Invoice ID": "INV-000594",
+  "Customer ID": "CUS-0013",
+  "Receipt date": "2026-09-28",
+  "Amount (BDT)": 497593.99,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000534",
+  "Invoice ID": "INV-000595",
+  "Customer ID": "CUS-0081",
+  "Receipt date": "2026-08-29",
+  "Amount (BDT)": 3105.69,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000535",
+  "Invoice ID": "INV-000596",
+  "Customer ID": "CUS-0036",
+  "Receipt date": "2026-09-13",
+  "Amount (BDT)": 185518.37,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000536",
+  "Invoice ID": "INV-000597",
+  "Customer ID": "CUS-0003",
+  "Receipt date": "2026-09-13",
+  "Amount (BDT)": 210618.1,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000537",
+  "Invoice ID": "INV-000598",
+  "Customer ID": "CUS-0037",
+  "Receipt date": "2026-09-28",
+  "Amount (BDT)": 286804.99,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000538",
+  "Invoice ID": "INV-000599",
+  "Customer ID": "CUS-0005",
+  "Receipt date": "2026-09-05",
+  "Amount (BDT)": 105440.83,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000539",
+  "Invoice ID": "INV-000600",
+  "Customer ID": "CUS-0037",
+  "Receipt date": "2026-09-29",
+  "Amount (BDT)": 124726.43,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000540",
+  "Invoice ID": "INV-000601",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-09-06",
+  "Amount (BDT)": 404493.65,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000541",
+  "Invoice ID": "INV-000602",
+  "Customer ID": "CUS-0036",
+  "Receipt date": "2026-09-14",
+  "Amount (BDT)": 94193.31,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000542",
+  "Invoice ID": "INV-000603",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-09-06",
+  "Amount (BDT)": 203964.67,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000543",
+  "Invoice ID": "INV-000604",
+  "Customer ID": "CUS-0011",
+  "Receipt date": "2026-09-14",
+  "Amount (BDT)": 123065.22,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000544",
+  "Invoice ID": "INV-000606",
+  "Customer ID": "CUS-0032",
+  "Receipt date": "2026-09-29",
+  "Amount (BDT)": 134884.51,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000545",
+  "Invoice ID": "INV-000607",
+  "Customer ID": "CUS-0033",
+  "Receipt date": "2026-09-14",
+  "Amount (BDT)": 255550.67,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000546",
+  "Invoice ID": "INV-000608",
+  "Customer ID": "CUS-0003",
+  "Receipt date": "2026-09-14",
+  "Amount (BDT)": 136445.15,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000547",
+  "Invoice ID": "INV-000609",
+  "Customer ID": "CUS-0034",
+  "Receipt date": "2026-09-06",
+  "Amount (BDT)": 191773.01,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000548",
+  "Invoice ID": "INV-000610",
+  "Customer ID": "CUS-0015",
+  "Receipt date": "2026-09-14",
+  "Amount (BDT)": 47097.62,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000549",
+  "Invoice ID": "INV-000611",
+  "Customer ID": "CUS-0018",
+  "Receipt date": "2026-09-07",
+  "Amount (BDT)": 277588.79,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000550",
+  "Invoice ID": "INV-000612",
+  "Customer ID": "CUS-0003",
+  "Receipt date": "2026-09-15",
+  "Amount (BDT)": 274208.76,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000551",
+  "Invoice ID": "INV-000613",
+  "Customer ID": "CUS-0017",
+  "Receipt date": "2026-09-30",
+  "Amount (BDT)": 212143.22,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000552",
+  "Invoice ID": "INV-000614",
+  "Customer ID": "CUS-0035",
+  "Receipt date": "2026-09-30",
+  "Amount (BDT)": 95178.44,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000553",
+  "Invoice ID": "INV-000615",
+  "Customer ID": "CUS-0008",
+  "Receipt date": "2026-09-07",
+  "Amount (BDT)": 497338.78,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000554",
+  "Invoice ID": "INV-000616",
+  "Customer ID": "CUS-0050",
+  "Receipt date": "2026-09-30",
+  "Amount (BDT)": 70943.04,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000555",
+  "Invoice ID": "INV-000617",
+  "Customer ID": "CUS-0016",
+  "Receipt date": "2026-09-30",
+  "Amount (BDT)": 175757.91,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000556",
+  "Invoice ID": "INV-000618",
+  "Customer ID": "CUS-0012",
+  "Receipt date": "2026-09-30",
+  "Amount (BDT)": 147991.2,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000557",
+  "Invoice ID": "INV-000620",
+  "Customer ID": "CUS-0022",
+  "Receipt date": "2026-09-15",
+  "Amount (BDT)": 184174.86,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000558",
+  "Invoice ID": "INV-000621",
+  "Customer ID": "CUS-0022",
+  "Receipt date": "2026-09-15",
+  "Amount (BDT)": 264569.23,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000559",
+  "Invoice ID": "INV-000622",
+  "Customer ID": "CUS-0117",
+  "Receipt date": "2026-08-31",
+  "Amount (BDT)": 1202.67,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000560",
+  "Invoice ID": "INV-000623",
+  "Customer ID": "CUS-0011",
+  "Receipt date": "2026-09-15",
+  "Amount (BDT)": 830411.84,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000561",
+  "Invoice ID": "INV-000624",
+  "Customer ID": "CUS-0018",
+  "Receipt date": "2026-09-07",
+  "Amount (BDT)": 206993.81,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000562",
+  "Invoice ID": "INV-000626",
+  "Customer ID": "CUS-0034",
+  "Receipt date": "2026-09-07",
+  "Amount (BDT)": 141928.58,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000563",
+  "Invoice ID": "INV-000627",
+  "Customer ID": "CUS-0046",
+  "Receipt date": "2026-10-01",
+  "Amount (BDT)": 57225.84,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000564",
+  "Invoice ID": "INV-000628",
+  "Customer ID": "CUS-0034",
+  "Receipt date": "2026-09-08",
+  "Amount (BDT)": 361110.96,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000565",
+  "Invoice ID": "INV-000629",
+  "Customer ID": "CUS-0085",
+  "Receipt date": "2026-09-01",
+  "Amount (BDT)": 5796,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000566",
+  "Invoice ID": "INV-000630",
+  "Customer ID": "CUS-0002",
+  "Receipt date": "2026-09-08",
+  "Amount (BDT)": 121574.12,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000567",
+  "Invoice ID": "INV-000631",
+  "Customer ID": "CUS-0058",
+  "Receipt date": "2026-09-01",
+  "Amount (BDT)": 1043.28,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000568",
+  "Invoice ID": "INV-000633",
+  "Customer ID": "CUS-0006",
+  "Receipt date": "2026-09-08",
+  "Amount (BDT)": 414149.33,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000569",
+  "Invoice ID": "INV-000634",
+  "Customer ID": "CUS-0030",
+  "Receipt date": "2026-09-08",
+  "Amount (BDT)": 139062.66,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000570",
+  "Invoice ID": "INV-000635",
+  "Customer ID": "CUS-0009",
+  "Receipt date": "2026-09-16",
+  "Amount (BDT)": 523291.51,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000571",
+  "Invoice ID": "INV-000636",
+  "Customer ID": "CUS-0114",
+  "Receipt date": "2026-09-01",
+  "Amount (BDT)": 9119.25,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000572",
+  "Invoice ID": "INV-000637",
+  "Customer ID": "CUS-0040",
+  "Receipt date": "2026-09-08",
+  "Amount (BDT)": 149719.95,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000573",
+  "Invoice ID": "INV-000640",
+  "Customer ID": "CUS-0037",
+  "Receipt date": "2026-10-01",
+  "Amount (BDT)": 132447.1,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000574",
+  "Invoice ID": "INV-000641",
+  "Customer ID": "CUS-0039",
+  "Receipt date": "2026-09-08",
+  "Amount (BDT)": 505630.82,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000575",
+  "Invoice ID": "INV-000642",
+  "Customer ID": "CUS-0054",
+  "Receipt date": "2026-09-02",
+  "Amount (BDT)": 2105.88,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000576",
+  "Invoice ID": "INV-000643",
+  "Customer ID": "CUS-0048",
+  "Receipt date": "2026-10-02",
+  "Amount (BDT)": 80095.68,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000577",
+  "Invoice ID": "INV-000644",
+  "Customer ID": "CUS-0021",
+  "Receipt date": "2026-09-09",
+  "Amount (BDT)": 186080.58,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000578",
+  "Invoice ID": "INV-000645",
+  "Customer ID": "CUS-0070",
+  "Receipt date": "2026-09-02",
+  "Amount (BDT)": 7660.38,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000579",
+  "Invoice ID": "INV-000646",
+  "Customer ID": "CUS-0005",
+  "Receipt date": "2026-09-09",
+  "Amount (BDT)": 239580.77,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000580",
+  "Invoice ID": "INV-000647",
+  "Customer ID": "CUS-0023",
+  "Receipt date": "2026-09-17",
+  "Amount (BDT)": 118833.37,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000581",
+  "Invoice ID": "INV-000648",
+  "Customer ID": "CUS-0020",
+  "Receipt date": "2026-10-02",
+  "Amount (BDT)": 137120.6,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000582",
+  "Invoice ID": "INV-000649",
+  "Customer ID": "CUS-0018",
+  "Receipt date": "2026-09-09",
+  "Amount (BDT)": 148304.02,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000583",
+  "Invoice ID": "INV-000650",
+  "Customer ID": "CUS-0091",
+  "Receipt date": "2026-09-02",
+  "Amount (BDT)": 5407.08,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000584",
+  "Invoice ID": "INV-000651",
+  "Customer ID": "CUS-0017",
+  "Receipt date": "2026-10-02",
+  "Amount (BDT)": 490658.28,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000585",
+  "Invoice ID": "INV-000652",
+  "Customer ID": "CUS-0113",
+  "Receipt date": "2026-09-02",
+  "Amount (BDT)": 15446.34,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000586",
+  "Invoice ID": "INV-000653",
+  "Customer ID": "CUS-0011",
+  "Receipt date": "2026-09-17",
+  "Amount (BDT)": 127638.25,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000587",
+  "Invoice ID": "INV-000654",
+  "Customer ID": "CUS-0006",
+  "Receipt date": "2026-09-10",
+  "Amount (BDT)": 614682.98,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000588",
+  "Invoice ID": "INV-000655",
+  "Customer ID": "CUS-0029",
+  "Receipt date": "2026-09-18",
+  "Amount (BDT)": 120578.3,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000589",
+  "Invoice ID": "INV-000656",
+  "Customer ID": "CUS-0003",
+  "Receipt date": "2026-09-18",
+  "Amount (BDT)": 460245.68,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000590",
+  "Invoice ID": "INV-000657",
+  "Customer ID": "CUS-0023",
+  "Receipt date": "2026-09-18",
+  "Amount (BDT)": 742983.05,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000591",
+  "Invoice ID": "INV-000658",
+  "Customer ID": "CUS-0007",
+  "Receipt date": "2026-09-18",
+  "Amount (BDT)": 466515.41,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000592",
+  "Invoice ID": "INV-000660",
+  "Customer ID": "CUS-0106",
+  "Receipt date": "2026-09-03",
+  "Amount (BDT)": 1134,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000593",
+  "Invoice ID": "INV-000661",
+  "Customer ID": "CUS-0046",
+  "Receipt date": "2026-10-03",
+  "Amount (BDT)": 53400.48,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000594",
+  "Invoice ID": "INV-000662",
+  "Customer ID": "CUS-0110",
+  "Receipt date": "2026-09-03",
+  "Amount (BDT)": 30989.28,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000595",
+  "Invoice ID": "INV-000663",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-09-10",
+  "Amount (BDT)": 255064.23,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000596",
+  "Invoice ID": "INV-000664",
+  "Customer ID": "CUS-0027",
+  "Receipt date": "2026-09-18",
+  "Amount (BDT)": 32160.84,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000597",
+  "Invoice ID": "INV-000665",
+  "Customer ID": "CUS-0022",
+  "Receipt date": "2026-09-18",
+  "Amount (BDT)": 248334.33,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000598",
+  "Invoice ID": "INV-000666",
+  "Customer ID": "CUS-0033",
+  "Receipt date": "2026-09-18",
+  "Amount (BDT)": 789411.11,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000599",
+  "Invoice ID": "INV-000667",
+  "Customer ID": "CUS-0032",
+  "Receipt date": "2026-10-03",
+  "Amount (BDT)": 125425.14,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000600",
+  "Invoice ID": "INV-000668",
+  "Customer ID": "CUS-0022",
+  "Receipt date": "2026-09-18",
+  "Amount (BDT)": 97807.5,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000601",
+  "Invoice ID": "INV-000669",
+  "Customer ID": "CUS-0006",
+  "Receipt date": "2026-09-12",
+  "Amount (BDT)": 272003.23,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000602",
+  "Invoice ID": "INV-000670",
+  "Customer ID": "CUS-0030",
+  "Receipt date": "2026-09-12",
+  "Amount (BDT)": 346822.46,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000603",
+  "Invoice ID": "INV-000671",
+  "Customer ID": "CUS-0006",
+  "Receipt date": "2026-09-12",
+  "Amount (BDT)": 250793.18,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000604",
+  "Invoice ID": "INV-000672",
+  "Customer ID": "CUS-0012",
+  "Receipt date": "2026-10-05",
+  "Amount (BDT)": 122860.04,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000605",
+  "Invoice ID": "INV-000673",
+  "Customer ID": "CUS-0005",
+  "Receipt date": "2026-09-12",
+  "Amount (BDT)": 99941.18,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000606",
+  "Invoice ID": "INV-000675",
+  "Customer ID": "CUS-0023",
+  "Receipt date": "2026-09-20",
+  "Amount (BDT)": 297379.65,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000607",
+  "Invoice ID": "INV-000676",
+  "Customer ID": "CUS-0020",
+  "Receipt date": "2026-10-05",
+  "Amount (BDT)": 145520.93,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000608",
+  "Invoice ID": "INV-000677",
+  "Customer ID": "CUS-0020",
+  "Receipt date": "2026-10-05",
+  "Amount (BDT)": 534416.7,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000609",
+  "Invoice ID": "INV-000678",
+  "Customer ID": "CUS-0029",
+  "Receipt date": "2026-09-20",
+  "Amount (BDT)": 187941.62,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000610",
+  "Invoice ID": "INV-000680",
+  "Customer ID": "CUS-0007",
+  "Receipt date": "2026-09-20",
+  "Amount (BDT)": 155298.93,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000611",
+  "Invoice ID": "INV-000681",
+  "Customer ID": "CUS-0011",
+  "Receipt date": "2026-09-20",
+  "Amount (BDT)": 407986.82,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000612",
+  "Invoice ID": "INV-000682",
+  "Customer ID": "CUS-0073",
+  "Receipt date": "2026-09-05",
+  "Amount (BDT)": 5204.01,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000613",
+  "Invoice ID": "INV-000683",
+  "Customer ID": "CUS-0043",
+  "Receipt date": "2026-10-06",
+  "Amount (BDT)": 43952.16,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000614",
+  "Invoice ID": "INV-000684",
+  "Customer ID": "CUS-0002",
+  "Receipt date": "2026-09-13",
+  "Amount (BDT)": 222715.11,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000615",
+  "Invoice ID": "INV-000685",
+  "Customer ID": "CUS-0014",
+  "Receipt date": "2026-09-13",
+  "Amount (BDT)": 277058.07,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000616",
+  "Invoice ID": "INV-000686",
+  "Customer ID": "CUS-0025",
+  "Receipt date": "2026-09-21",
+  "Amount (BDT)": 221913.32,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000617",
+  "Invoice ID": "INV-000687",
+  "Customer ID": "CUS-0061",
+  "Receipt date": "2026-09-06",
+  "Amount (BDT)": 7187.04,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000618",
+  "Invoice ID": "INV-000688",
+  "Customer ID": "CUS-0030",
+  "Receipt date": "2026-09-13",
+  "Amount (BDT)": 201622.75,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000619",
+  "Invoice ID": "INV-000689",
+  "Customer ID": "CUS-0028",
+  "Receipt date": "2026-09-13",
+  "Amount (BDT)": 211653.69,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000620",
+  "Invoice ID": "INV-000690",
+  "Customer ID": "CUS-0026",
+  "Receipt date": "2026-09-13",
+  "Amount (BDT)": 188140.43,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000621",
+  "Invoice ID": "INV-000691",
+  "Customer ID": "CUS-0075",
+  "Receipt date": "2026-09-06",
+  "Amount (BDT)": 6916.56,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000622",
+  "Invoice ID": "INV-000692",
+  "Customer ID": "CUS-0007",
+  "Receipt date": "2026-09-22",
+  "Amount (BDT)": 279506.3,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000623",
+  "Invoice ID": "INV-000694",
+  "Customer ID": "CUS-0039",
+  "Receipt date": "2026-09-14",
+  "Amount (BDT)": 242092.87,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000624",
+  "Invoice ID": "INV-000695",
+  "Customer ID": "CUS-0029",
+  "Receipt date": "2026-09-22",
+  "Amount (BDT)": 313583.87,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000625",
+  "Invoice ID": "INV-000696",
+  "Customer ID": "CUS-0028",
+  "Receipt date": "2026-09-14",
+  "Amount (BDT)": 238580.37,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000626",
+  "Invoice ID": "INV-000697",
+  "Customer ID": "CUS-0007",
+  "Receipt date": "2026-09-22",
+  "Amount (BDT)": 312253.34,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000627",
+  "Invoice ID": "INV-000698",
+  "Customer ID": "CUS-0031",
+  "Receipt date": "2026-09-22",
+  "Amount (BDT)": 117569.74,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000628",
+  "Invoice ID": "INV-000699",
+  "Customer ID": "CUS-0014",
+  "Receipt date": "2026-09-14",
+  "Amount (BDT)": 309011.97,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000629",
+  "Invoice ID": "INV-000701",
+  "Customer ID": "CUS-0007",
+  "Receipt date": "2026-09-23",
+  "Amount (BDT)": 288795.47,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000630",
+  "Invoice ID": "INV-000702",
+  "Customer ID": "CUS-0011",
+  "Receipt date": "2026-09-23",
+  "Amount (BDT)": 243184.84,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000631",
+  "Invoice ID": "INV-000703",
+  "Customer ID": "CUS-0031",
+  "Receipt date": "2026-09-23",
+  "Amount (BDT)": 516729.82,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000632",
+  "Invoice ID": "INV-000704",
+  "Customer ID": "CUS-0032",
+  "Receipt date": "2026-10-08",
+  "Amount (BDT)": 127894.54,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000633",
+  "Invoice ID": "INV-000705",
+  "Customer ID": "CUS-0117",
+  "Receipt date": "2026-09-08",
+  "Amount (BDT)": 5071.5,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000634",
+  "Invoice ID": "INV-000706",
+  "Customer ID": "CUS-0003",
+  "Receipt date": "2026-09-23",
+  "Amount (BDT)": 86597.88,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000635",
+  "Invoice ID": "INV-000707",
+  "Customer ID": "CUS-0029",
+  "Receipt date": "2026-09-23",
+  "Amount (BDT)": 98173.46,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000636",
+  "Invoice ID": "INV-000708",
+  "Customer ID": "CUS-0011",
+  "Receipt date": "2026-09-23",
+  "Amount (BDT)": 113137.72,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000637",
+  "Invoice ID": "INV-000709",
+  "Customer ID": "CUS-0002",
+  "Receipt date": "2026-09-15",
+  "Amount (BDT)": 325435.48,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000638",
+  "Invoice ID": "INV-000710",
+  "Customer ID": "CUS-0102",
+  "Receipt date": "2026-09-08",
+  "Amount (BDT)": 5172.93,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000639",
+  "Invoice ID": "INV-000711",
+  "Customer ID": "CUS-0020",
+  "Receipt date": "2026-10-08",
+  "Amount (BDT)": 266510.64,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000640",
+  "Invoice ID": "INV-000712",
+  "Customer ID": "CUS-0017",
+  "Receipt date": "2026-10-08",
+  "Amount (BDT)": 100218.83,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000641",
+  "Invoice ID": "INV-000713",
+  "Customer ID": "CUS-0051",
+  "Receipt date": "2026-09-08",
+  "Amount (BDT)": 28149.24,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000642",
+  "Invoice ID": "INV-000714",
+  "Customer ID": "CUS-0030",
+  "Receipt date": "2026-09-16",
+  "Amount (BDT)": 102807.53,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000643",
+  "Invoice ID": "INV-000715",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-09-16",
+  "Amount (BDT)": 398838.25,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000644",
+  "Invoice ID": "INV-000716",
+  "Customer ID": "CUS-0025",
+  "Receipt date": "2026-09-24",
+  "Amount (BDT)": 202628.16,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000645",
+  "Invoice ID": "INV-000717",
+  "Customer ID": "CUS-0015",
+  "Receipt date": "2026-09-24",
+  "Amount (BDT)": 122187.66,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000646",
+  "Invoice ID": "INV-000718",
+  "Customer ID": "CUS-0025",
+  "Receipt date": "2026-09-24",
+  "Amount (BDT)": 276756.68,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000647",
+  "Invoice ID": "INV-000719",
+  "Customer ID": "CUS-0091",
+  "Receipt date": "2026-09-09",
+  "Amount (BDT)": 31573.71,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000648",
+  "Invoice ID": "INV-000721",
+  "Customer ID": "CUS-0034",
+  "Receipt date": "2026-09-16",
+  "Amount (BDT)": 682305.7,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000649",
+  "Invoice ID": "INV-000722",
+  "Customer ID": "CUS-0016",
+  "Receipt date": "2026-10-09",
+  "Amount (BDT)": 51728.15,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000650",
+  "Invoice ID": "INV-000723",
+  "Customer ID": "CUS-0021",
+  "Receipt date": "2026-09-16",
+  "Amount (BDT)": 124511.6,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000651",
+  "Invoice ID": "INV-000724",
+  "Customer ID": "CUS-0094",
+  "Receipt date": "2026-09-10",
+  "Amount (BDT)": 16987.74,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000652",
+  "Invoice ID": "INV-000725",
+  "Customer ID": "CUS-0013",
+  "Receipt date": "2026-10-10",
+  "Amount (BDT)": 228987.55,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000653",
+  "Invoice ID": "INV-000727",
+  "Customer ID": "CUS-0031",
+  "Receipt date": "2026-09-25",
+  "Amount (BDT)": 257486.99,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000654",
+  "Invoice ID": "INV-000728",
+  "Customer ID": "CUS-0012",
+  "Receipt date": "2026-10-10",
+  "Amount (BDT)": 345693.8,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000655",
+  "Invoice ID": "INV-000729",
+  "Customer ID": "CUS-0015",
+  "Receipt date": "2026-09-25",
+  "Amount (BDT)": 79839.04,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000656",
+  "Invoice ID": "INV-000730",
+  "Customer ID": "CUS-0026",
+  "Receipt date": "2026-09-17",
+  "Amount (BDT)": 522370.8,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000657",
+  "Invoice ID": "INV-000731",
+  "Customer ID": "CUS-0112",
+  "Receipt date": "2026-09-10",
+  "Amount (BDT)": 2859.36,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000658",
+  "Invoice ID": "INV-000732",
+  "Customer ID": "CUS-0038",
+  "Receipt date": "2026-09-17",
+  "Amount (BDT)": 421456.4,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000659",
+  "Invoice ID": "INV-000733",
+  "Customer ID": "CUS-0028",
+  "Receipt date": "2026-09-17",
+  "Amount (BDT)": 171823.58,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000660",
+  "Invoice ID": "INV-000734",
+  "Customer ID": "CUS-0102",
+  "Receipt date": "2026-09-10",
+  "Amount (BDT)": 1651.86,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000661",
+  "Invoice ID": "INV-000735",
+  "Customer ID": "CUS-0058",
+  "Receipt date": "2026-09-12",
+  "Amount (BDT)": 5622.12,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000662",
+  "Invoice ID": "INV-000736",
+  "Customer ID": "CUS-0014",
+  "Receipt date": "2026-09-19",
+  "Amount (BDT)": 267703.34,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000663",
+  "Invoice ID": "INV-000737",
+  "Customer ID": "CUS-0030",
+  "Receipt date": "2026-09-19",
+  "Amount (BDT)": 185454.22,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000664",
+  "Invoice ID": "INV-000738",
+  "Customer ID": "CUS-0005",
+  "Receipt date": "2026-09-19",
+  "Amount (BDT)": 92507.94,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000665",
+  "Invoice ID": "INV-000739",
+  "Customer ID": "CUS-0016",
+  "Receipt date": "2026-10-12",
+  "Amount (BDT)": 175730.09,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000666",
+  "Invoice ID": "INV-000740",
+  "Customer ID": "CUS-0002",
+  "Receipt date": "2026-09-19",
+  "Amount (BDT)": 317041.2,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000667",
+  "Invoice ID": "INV-000742",
+  "Customer ID": "CUS-0092",
+  "Receipt date": "2026-09-12",
+  "Amount (BDT)": 9894.78,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000668",
+  "Invoice ID": "INV-000743",
+  "Customer ID": "CUS-0009",
+  "Receipt date": "2026-09-27",
+  "Amount (BDT)": 63542.64,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000669",
+  "Invoice ID": "INV-000744",
+  "Customer ID": "CUS-0042",
+  "Receipt date": "2026-10-12",
+  "Amount (BDT)": 48654.48,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000670",
+  "Invoice ID": "INV-000745",
+  "Customer ID": "CUS-0007",
+  "Receipt date": "2026-09-27",
+  "Amount (BDT)": 376212.56,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000671",
+  "Invoice ID": "INV-000746",
+  "Customer ID": "CUS-0006",
+  "Receipt date": "2026-09-19",
+  "Amount (BDT)": 382836.23,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000672",
+  "Invoice ID": "INV-000747",
+  "Customer ID": "CUS-0008",
+  "Receipt date": "2026-09-19",
+  "Amount (BDT)": 211428.42,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000673",
+  "Invoice ID": "INV-000748",
+  "Customer ID": "CUS-0016",
+  "Receipt date": "2026-10-13",
+  "Amount (BDT)": 74680.3,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000674",
+  "Invoice ID": "INV-000751",
+  "Customer ID": "CUS-0040",
+  "Receipt date": "2026-09-20",
+  "Amount (BDT)": 254890.94,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000675",
+  "Invoice ID": "INV-000752",
+  "Customer ID": "CUS-0001",
+  "Receipt date": "2026-10-13",
+  "Amount (BDT)": 318661.75,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000676",
+  "Invoice ID": "INV-000753",
+  "Customer ID": "CUS-0054",
+  "Receipt date": "2026-09-13",
+  "Amount (BDT)": 7646.52,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000677",
+  "Invoice ID": "INV-000754",
+  "Customer ID": "CUS-0022",
+  "Receipt date": "2026-09-28",
+  "Amount (BDT)": 252361.53,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000678",
+  "Invoice ID": "INV-000755",
+  "Customer ID": "CUS-0037",
+  "Receipt date": "2026-10-13",
+  "Amount (BDT)": 164643.5,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000679",
+  "Invoice ID": "INV-000756",
+  "Customer ID": "CUS-0005",
+  "Receipt date": "2026-09-20",
+  "Amount (BDT)": 212681.85,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000680",
+  "Invoice ID": "INV-000757",
+  "Customer ID": "CUS-0002",
+  "Receipt date": "2026-09-20",
+  "Amount (BDT)": 119187.78,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000681",
+  "Invoice ID": "INV-000758",
+  "Customer ID": "CUS-0085",
+  "Receipt date": "2026-09-13",
+  "Amount (BDT)": 2719.29,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000682",
+  "Invoice ID": "INV-000759",
+  "Customer ID": "CUS-0039",
+  "Receipt date": "2026-09-20",
+  "Amount (BDT)": 153395.59,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000683",
+  "Invoice ID": "INV-000760",
+  "Customer ID": "CUS-0029",
+  "Receipt date": "2026-09-29",
+  "Amount (BDT)": 310466.21,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000684",
+  "Invoice ID": "INV-000761",
+  "Customer ID": "CUS-0045",
+  "Receipt date": "2026-10-14",
+  "Amount (BDT)": 58056.6,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000685",
+  "Invoice ID": "INV-000762",
+  "Customer ID": "CUS-0031",
+  "Receipt date": "2026-09-29",
+  "Amount (BDT)": 153596.87,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000686",
+  "Invoice ID": "INV-000763",
+  "Customer ID": "CUS-0026",
+  "Receipt date": "2026-09-21",
+  "Amount (BDT)": 598616.67,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000687",
+  "Invoice ID": "INV-000764",
+  "Customer ID": "CUS-0012",
+  "Receipt date": "2026-10-14",
+  "Amount (BDT)": 231440.74,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000688",
+  "Invoice ID": "INV-000765",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-09-21",
+  "Amount (BDT)": 182602.59,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000689",
+  "Invoice ID": "INV-000766",
+  "Customer ID": "CUS-0039",
+  "Receipt date": "2026-09-21",
+  "Amount (BDT)": 586596.53,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000690",
+  "Invoice ID": "INV-000767",
+  "Customer ID": "CUS-0010",
+  "Receipt date": "2026-09-21",
+  "Amount (BDT)": 292395.91,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000691",
+  "Invoice ID": "INV-000768",
+  "Customer ID": "CUS-0003",
+  "Receipt date": "2026-09-29",
+  "Amount (BDT)": 20404.13,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000692",
+  "Invoice ID": "INV-000771",
+  "Customer ID": "CUS-0113",
+  "Receipt date": "2026-09-14",
+  "Amount (BDT)": 270.48,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000693",
+  "Invoice ID": "INV-000772",
+  "Customer ID": "CUS-0027",
+  "Receipt date": "2026-09-29",
+  "Amount (BDT)": 274283.94,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000694",
+  "Invoice ID": "INV-000773",
+  "Customer ID": "CUS-0028",
+  "Receipt date": "2026-09-21",
+  "Amount (BDT)": 445537.94,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000695",
+  "Invoice ID": "INV-000774",
+  "Customer ID": "CUS-0016",
+  "Receipt date": "2026-10-15",
+  "Amount (BDT)": 89318.17,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000696",
+  "Invoice ID": "INV-000775",
+  "Customer ID": "CUS-0029",
+  "Receipt date": "2026-09-30",
+  "Amount (BDT)": 98913.37,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000697",
+  "Invoice ID": "INV-000776",
+  "Customer ID": "CUS-0027",
+  "Receipt date": "2026-09-30",
+  "Amount (BDT)": 265450.08,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000698",
+  "Invoice ID": "INV-000777",
+  "Customer ID": "CUS-0006",
+  "Receipt date": "2026-09-22",
+  "Amount (BDT)": 142032.24,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000699",
+  "Invoice ID": "INV-000780",
+  "Customer ID": "CUS-0119",
+  "Receipt date": "2026-09-15",
+  "Amount (BDT)": 2951.76,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000700",
+  "Invoice ID": "INV-000781",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-09-22",
+  "Amount (BDT)": 104826.14,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000701",
+  "Invoice ID": "INV-000782",
+  "Customer ID": "CUS-0041",
+  "Receipt date": "2026-10-15",
+  "Amount (BDT)": 17589.6,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000702",
+  "Invoice ID": "INV-000784",
+  "Customer ID": "CUS-0007",
+  "Receipt date": "2026-10-01",
+  "Amount (BDT)": 125884.49,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000703",
+  "Invoice ID": "INV-000785",
+  "Customer ID": "CUS-0027",
+  "Receipt date": "2026-10-01",
+  "Amount (BDT)": 78134.25,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000704",
+  "Invoice ID": "INV-000786",
+  "Customer ID": "CUS-0029",
+  "Receipt date": "2026-10-01",
+  "Amount (BDT)": 73052.96,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000705",
+  "Invoice ID": "INV-000787",
+  "Customer ID": "CUS-0026",
+  "Receipt date": "2026-09-23",
+  "Amount (BDT)": 123824.74,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000706",
+  "Invoice ID": "INV-000790",
+  "Customer ID": "CUS-0039",
+  "Receipt date": "2026-09-23",
+  "Amount (BDT)": 168993.47,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000707",
+  "Invoice ID": "INV-000793",
+  "Customer ID": "CUS-0003",
+  "Receipt date": "2026-10-01",
+  "Amount (BDT)": 181720.83,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000708",
+  "Invoice ID": "INV-000794",
+  "Customer ID": "CUS-0001",
+  "Receipt date": "2026-10-16",
+  "Amount (BDT)": 136997.11,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000709",
+  "Invoice ID": "INV-000795",
+  "Customer ID": "CUS-0022",
+  "Receipt date": "2026-10-01",
+  "Amount (BDT)": 492428.16,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000710",
+  "Invoice ID": "INV-000798",
+  "Customer ID": "CUS-0061",
+  "Receipt date": "2026-09-17",
+  "Amount (BDT)": 8384.88,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000711",
+  "Invoice ID": "INV-000799",
+  "Customer ID": "CUS-0039",
+  "Receipt date": "2026-09-24",
+  "Amount (BDT)": 203388.6,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000712",
+  "Invoice ID": "INV-000801",
+  "Customer ID": "CUS-0062",
+  "Receipt date": "2026-09-17",
+  "Amount (BDT)": 1584.24,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000713",
+  "Invoice ID": "INV-000802",
+  "Customer ID": "CUS-0035",
+  "Receipt date": "2026-10-17",
+  "Amount (BDT)": 73632.71,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000714",
+  "Invoice ID": "INV-000803",
+  "Customer ID": "CUS-0027",
+  "Receipt date": "2026-10-02",
+  "Amount (BDT)": 171674.03,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000715",
+  "Invoice ID": "INV-000806",
+  "Customer ID": "CUS-0030",
+  "Receipt date": "2026-09-26",
+  "Amount (BDT)": 69861.51,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000716",
+  "Invoice ID": "INV-000807",
+  "Customer ID": "CUS-0030",
+  "Receipt date": "2026-09-26",
+  "Amount (BDT)": 59223.53,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000717",
+  "Invoice ID": "INV-000810",
+  "Customer ID": "CUS-0040",
+  "Receipt date": "2026-09-26",
+  "Amount (BDT)": 140516.38,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000718",
+  "Invoice ID": "INV-000811",
+  "Customer ID": "CUS-0021",
+  "Receipt date": "2026-09-26",
+  "Amount (BDT)": 521532.85,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000719",
+  "Invoice ID": "INV-000813",
+  "Customer ID": "CUS-0009",
+  "Receipt date": "2026-10-04",
+  "Amount (BDT)": 477418.56,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000720",
+  "Invoice ID": "INV-000814",
+  "Customer ID": "CUS-0047",
+  "Receipt date": "2026-10-19",
+  "Amount (BDT)": 48878.13,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000721",
+  "Invoice ID": "INV-000817",
+  "Customer ID": "CUS-0001",
+  "Receipt date": "2026-10-19",
+  "Amount (BDT)": 7236.5,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000722",
+  "Invoice ID": "INV-000818",
+  "Customer ID": "CUS-0038",
+  "Receipt date": "2026-09-26",
+  "Amount (BDT)": 67388.63,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000723",
+  "Invoice ID": "INV-000819",
+  "Customer ID": "CUS-0028",
+  "Receipt date": "2026-09-26",
+  "Amount (BDT)": 285786.82,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000724",
+  "Invoice ID": "INV-000820",
+  "Customer ID": "CUS-0008",
+  "Receipt date": "2026-09-26",
+  "Amount (BDT)": 734663.16,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000725",
+  "Invoice ID": "INV-000821",
+  "Customer ID": "CUS-0020",
+  "Receipt date": "2026-10-19",
+  "Amount (BDT)": 174863.01,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000726",
+  "Invoice ID": "INV-000824",
+  "Customer ID": "CUS-0077",
+  "Receipt date": "2026-09-20",
+  "Amount (BDT)": 966,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000727",
+  "Invoice ID": "INV-000827",
+  "Customer ID": "CUS-0074",
+  "Receipt date": "2026-09-20",
+  "Amount (BDT)": 12335.82,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000728",
+  "Invoice ID": "INV-000828",
+  "Customer ID": "CUS-0038",
+  "Receipt date": "2026-09-27",
+  "Amount (BDT)": 226849.25,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000729",
+  "Invoice ID": "INV-000829",
+  "Customer ID": "CUS-0022",
+  "Receipt date": "2026-10-05",
+  "Amount (BDT)": 230598.63,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000730",
+  "Invoice ID": "INV-000830",
+  "Customer ID": "CUS-0001",
+  "Receipt date": "2026-10-20",
+  "Amount (BDT)": 255886.7,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000731",
+  "Invoice ID": "INV-000831",
+  "Customer ID": "CUS-0033",
+  "Receipt date": "2026-10-05",
+  "Amount (BDT)": 113056.78,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000732",
+  "Invoice ID": "INV-000832",
+  "Customer ID": "CUS-0040",
+  "Receipt date": "2026-09-27",
+  "Amount (BDT)": 58572.11,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000733",
+  "Invoice ID": "INV-000833",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-09-27",
+  "Amount (BDT)": 236268.48,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000734",
+  "Invoice ID": "INV-000834",
+  "Customer ID": "CUS-0100",
+  "Receipt date": "2026-09-20",
+  "Amount (BDT)": 9819.18,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000735",
+  "Invoice ID": "INV-000835",
+  "Customer ID": "CUS-0022",
+  "Receipt date": "2026-10-05",
+  "Amount (BDT)": 228939.69,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000736",
+  "Invoice ID": "INV-000836",
+  "Customer ID": "CUS-0114",
+  "Receipt date": "2026-09-20",
+  "Amount (BDT)": 1697.85,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000737",
+  "Invoice ID": "INV-000837",
+  "Customer ID": "CUS-0026",
+  "Receipt date": "2026-09-27",
+  "Amount (BDT)": 178337.52,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000738",
+  "Invoice ID": "INV-000838",
+  "Customer ID": "CUS-0022",
+  "Receipt date": "2026-10-06",
+  "Amount (BDT)": 241799.15,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000739",
+  "Invoice ID": "INV-000840",
+  "Customer ID": "CUS-0105",
+  "Receipt date": "2026-09-21",
+  "Amount (BDT)": 12283.74,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000740",
+  "Invoice ID": "INV-000841",
+  "Customer ID": "CUS-0025",
+  "Receipt date": "2026-10-06",
+  "Amount (BDT)": 61289.34,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000741",
+  "Invoice ID": "INV-000842",
+  "Customer ID": "CUS-0003",
+  "Receipt date": "2026-10-06",
+  "Amount (BDT)": 244087.2,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000742",
+  "Invoice ID": "INV-000843",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-09-28",
+  "Amount (BDT)": 129398.98,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000743",
+  "Invoice ID": "INV-000844",
+  "Customer ID": "CUS-0031",
+  "Receipt date": "2026-10-06",
+  "Amount (BDT)": 444251.81,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000744",
+  "Invoice ID": "INV-000845",
+  "Customer ID": "CUS-0015",
+  "Receipt date": "2026-10-06",
+  "Amount (BDT)": 535471.68,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000745",
+  "Invoice ID": "INV-000846",
+  "Customer ID": "CUS-0049",
+  "Receipt date": "2026-10-21",
+  "Amount (BDT)": 23927.4,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000746",
+  "Invoice ID": "INV-000847",
+  "Customer ID": "CUS-0051",
+  "Receipt date": "2026-09-21",
+  "Amount (BDT)": 8572.2,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000747",
+  "Invoice ID": "INV-000849",
+  "Customer ID": "CUS-0028",
+  "Receipt date": "2026-09-28",
+  "Amount (BDT)": 140626.06,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000748",
+  "Invoice ID": "INV-000850",
+  "Customer ID": "CUS-0002",
+  "Receipt date": "2026-09-28",
+  "Amount (BDT)": 162476.16,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000749",
+  "Invoice ID": "INV-000851",
+  "Customer ID": "CUS-0002",
+  "Receipt date": "2026-09-28",
+  "Amount (BDT)": 257807.2,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000750",
+  "Invoice ID": "INV-000853",
+  "Customer ID": "CUS-0115",
+  "Receipt date": "2026-09-22",
+  "Amount (BDT)": 2695.14,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000751",
+  "Invoice ID": "INV-000854",
+  "Customer ID": "CUS-0022",
+  "Receipt date": "2026-10-07",
+  "Amount (BDT)": 37120.77,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000752",
+  "Invoice ID": "INV-000856",
+  "Customer ID": "CUS-0027",
+  "Receipt date": "2026-10-07",
+  "Amount (BDT)": 207030.03,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000753",
+  "Invoice ID": "INV-000857",
+  "Customer ID": "CUS-0024",
+  "Receipt date": "2026-09-29",
+  "Amount (BDT)": 208607.32,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000754",
+  "Invoice ID": "INV-000859",
+  "Customer ID": "CUS-0043",
+  "Receipt date": "2026-10-22",
+  "Amount (BDT)": 29399.16,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000755",
+  "Invoice ID": "INV-000860",
+  "Customer ID": "CUS-0008",
+  "Receipt date": "2026-09-29",
+  "Amount (BDT)": 579288.85,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000756",
+  "Invoice ID": "INV-000861",
+  "Customer ID": "CUS-0018",
+  "Receipt date": "2026-09-29",
+  "Amount (BDT)": 166687.57,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000757",
+  "Invoice ID": "INV-000862",
+  "Customer ID": "CUS-0027",
+  "Receipt date": "2026-10-08",
+  "Amount (BDT)": 232894.87,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000758",
+  "Invoice ID": "INV-000863",
+  "Customer ID": "CUS-0039",
+  "Receipt date": "2026-09-30",
+  "Amount (BDT)": 270216.04,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000759",
+  "Invoice ID": "INV-000864",
+  "Customer ID": "CUS-0101",
+  "Receipt date": "2026-09-23",
+  "Amount (BDT)": 4400.13,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000760",
+  "Invoice ID": "INV-000865",
+  "Customer ID": "CUS-0047",
+  "Receipt date": "2026-10-23",
+  "Amount (BDT)": 41283.48,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000761",
+  "Invoice ID": "INV-000866",
+  "Customer ID": "CUS-0119",
+  "Receipt date": "2026-09-23",
+  "Amount (BDT)": 579.6,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000762",
+  "Invoice ID": "INV-000868",
+  "Customer ID": "CUS-0049",
+  "Receipt date": "2026-10-23",
+  "Amount (BDT)": 25647.72,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000763",
+  "Invoice ID": "INV-000876",
+  "Customer ID": "CUS-0001",
+  "Receipt date": "2026-10-24",
+  "Amount (BDT)": 53526.82,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000764",
+  "Invoice ID": "INV-000877",
+  "Customer ID": "CUS-0026",
+  "Receipt date": "2026-10-01",
+  "Amount (BDT)": 480279.49,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000765",
+  "Invoice ID": "INV-000878",
+  "Customer ID": "CUS-0014",
+  "Receipt date": "2026-10-01",
+  "Amount (BDT)": 67688.71,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000766",
+  "Invoice ID": "INV-000879",
+  "Customer ID": "CUS-0078",
+  "Receipt date": "2026-09-24",
+  "Amount (BDT)": 386.4,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000767",
+  "Invoice ID": "INV-000882",
+  "Customer ID": "CUS-0030",
+  "Receipt date": "2026-10-01",
+  "Amount (BDT)": 204600.34,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000768",
+  "Invoice ID": "INV-000883",
+  "Customer ID": "CUS-0113",
+  "Receipt date": "2026-09-24",
+  "Amount (BDT)": 2218.65,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000769",
+  "Invoice ID": "INV-000884",
+  "Customer ID": "CUS-0048",
+  "Receipt date": "2026-10-24",
+  "Amount (BDT)": 15331.68,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000770",
+  "Invoice ID": "INV-000887",
+  "Customer ID": "CUS-0002",
+  "Receipt date": "2026-10-01",
+  "Amount (BDT)": 53857.44,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000771",
+  "Invoice ID": "INV-000889",
+  "Customer ID": "CUS-0016",
+  "Receipt date": "2026-10-24",
+  "Amount (BDT)": 102431.55,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000772",
+  "Invoice ID": "INV-000890",
+  "Customer ID": "CUS-0002",
+  "Receipt date": "2026-10-03",
+  "Amount (BDT)": 397012.09,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000773",
+  "Invoice ID": "INV-000891",
+  "Customer ID": "CUS-0022",
+  "Receipt date": "2026-10-11",
+  "Amount (BDT)": 494109,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000774",
+  "Invoice ID": "INV-000894",
+  "Customer ID": "CUS-0020",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 162133.57,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000775",
+  "Invoice ID": "INV-000896",
+  "Customer ID": "CUS-0017",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 132596.1,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000776",
+  "Invoice ID": "INV-000897",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-10-03",
+  "Amount (BDT)": 448468.2,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000777",
+  "Invoice ID": "INV-000899",
+  "Customer ID": "CUS-0045",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 22871.52,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000778",
+  "Invoice ID": "INV-000903",
+  "Customer ID": "CUS-0022",
+  "Receipt date": "2026-10-12",
+  "Amount (BDT)": 137017.44,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000779",
+  "Invoice ID": "INV-000904",
+  "Customer ID": "CUS-0094",
+  "Receipt date": "2026-09-27",
+  "Amount (BDT)": 1434.51,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000780",
+  "Invoice ID": "INV-000905",
+  "Customer ID": "CUS-0021",
+  "Receipt date": "2026-10-04",
+  "Amount (BDT)": 350913.03,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000781",
+  "Invoice ID": "INV-000906",
+  "Customer ID": "CUS-0006",
+  "Receipt date": "2026-10-04",
+  "Amount (BDT)": 140379.12,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000782",
+  "Invoice ID": "INV-000908",
+  "Customer ID": "CUS-0018",
+  "Receipt date": "2026-10-04",
+  "Amount (BDT)": 164826.88,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000783",
+  "Invoice ID": "INV-000909",
+  "Customer ID": "CUS-0034",
+  "Receipt date": "2026-10-05",
+  "Amount (BDT)": 90366.78,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000784",
+  "Invoice ID": "INV-000910",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-10-05",
+  "Amount (BDT)": 164676.62,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000785",
+  "Invoice ID": "INV-000911",
+  "Customer ID": "CUS-0015",
+  "Receipt date": "2026-10-13",
+  "Amount (BDT)": 373696.04,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000786",
+  "Invoice ID": "INV-000913",
+  "Customer ID": "CUS-0006",
+  "Receipt date": "2026-10-05",
+  "Amount (BDT)": 120528.98,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000787",
+  "Invoice ID": "INV-000914",
+  "Customer ID": "CUS-0080",
+  "Receipt date": "2026-09-28",
+  "Amount (BDT)": 1328.25,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000788",
+  "Invoice ID": "INV-000915",
+  "Customer ID": "CUS-0027",
+  "Receipt date": "2026-10-13",
+  "Amount (BDT)": 430422.72,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000789",
+  "Invoice ID": "INV-000916",
+  "Customer ID": "CUS-0033",
+  "Receipt date": "2026-10-13",
+  "Amount (BDT)": 229727.93,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000790",
+  "Invoice ID": "INV-000917",
+  "Customer ID": "CUS-0014",
+  "Receipt date": "2026-10-05",
+  "Amount (BDT)": 150824.69,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000791",
+  "Invoice ID": "INV-000919",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-10-05",
+  "Amount (BDT)": 597390.25,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000792",
+  "Invoice ID": "INV-000920",
+  "Customer ID": "CUS-0029",
+  "Receipt date": "2026-10-13",
+  "Amount (BDT)": 464163,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000793",
+  "Invoice ID": "INV-000921",
+  "Customer ID": "CUS-0015",
+  "Receipt date": "2026-10-13",
+  "Amount (BDT)": 335724.6,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000794",
+  "Invoice ID": "INV-000923",
+  "Customer ID": "CUS-0009",
+  "Receipt date": "2026-10-14",
+  "Amount (BDT)": 202619.55,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000795",
+  "Invoice ID": "INV-000924",
+  "Customer ID": "CUS-0007",
+  "Receipt date": "2026-10-14",
+  "Amount (BDT)": 184245.89,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000796",
+  "Invoice ID": "INV-000925",
+  "Customer ID": "CUS-0041",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 48966.96,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000797",
+  "Invoice ID": "INV-000927",
+  "Customer ID": "CUS-0013",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 121069.91,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000798",
+  "Invoice ID": "INV-000928",
+  "Customer ID": "CUS-0009",
+  "Receipt date": "2026-10-14",
+  "Amount (BDT)": 143761.23,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000799",
+  "Invoice ID": "INV-000930",
+  "Customer ID": "CUS-0024",
+  "Receipt date": "2026-10-06",
+  "Amount (BDT)": 57450.76,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000800",
+  "Invoice ID": "INV-000931",
+  "Customer ID": "CUS-0016",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 155002.42,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000801",
+  "Invoice ID": "INV-000932",
+  "Customer ID": "CUS-0028",
+  "Receipt date": "2026-10-07",
+  "Amount (BDT)": 99048.85,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000802",
+  "Invoice ID": "INV-000933",
+  "Customer ID": "CUS-0002",
+  "Receipt date": "2026-10-07",
+  "Amount (BDT)": 493282.87,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000803",
+  "Invoice ID": "INV-000934",
+  "Customer ID": "CUS-0038",
+  "Receipt date": "2026-10-07",
+  "Amount (BDT)": 355763.11,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000804",
+  "Invoice ID": "INV-000936",
+  "Customer ID": "CUS-0018",
+  "Receipt date": "2026-10-07",
+  "Amount (BDT)": 478446.95,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000805",
+  "Invoice ID": "INV-000937",
+  "Customer ID": "CUS-0055",
+  "Receipt date": "2026-09-30",
+  "Amount (BDT)": 1081.92,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000806",
+  "Invoice ID": "INV-000939",
+  "Customer ID": "CUS-0029",
+  "Receipt date": "2026-10-15",
+  "Amount (BDT)": 99272.48,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000807",
+  "Invoice ID": "INV-000942",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-10-07",
+  "Amount (BDT)": 168441.84,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000808",
+  "Invoice ID": "INV-000945",
+  "Customer ID": "CUS-0007",
+  "Receipt date": "2026-10-15",
+  "Amount (BDT)": 132637.17,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000809",
+  "Invoice ID": "INV-000947",
+  "Customer ID": "CUS-0031",
+  "Receipt date": "2026-10-16",
+  "Amount (BDT)": 263709.89,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000810",
+  "Invoice ID": "INV-000949",
+  "Customer ID": "CUS-0009",
+  "Receipt date": "2026-10-16",
+  "Amount (BDT)": 82271.15,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000811",
+  "Invoice ID": "INV-000952",
+  "Customer ID": "CUS-0073",
+  "Receipt date": "2026-10-01",
+  "Amount (BDT)": 7039.2,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000812",
+  "Invoice ID": "INV-000954",
+  "Customer ID": "CUS-0039",
+  "Receipt date": "2026-10-08",
+  "Amount (BDT)": 110900.02,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000813",
+  "Invoice ID": "INV-000955",
+  "Customer ID": "CUS-0013",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 219980.32,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000814",
+  "Invoice ID": "INV-000958",
+  "Customer ID": "CUS-0062",
+  "Receipt date": "2026-10-01",
+  "Amount (BDT)": 5124.63,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000815",
+  "Invoice ID": "INV-000972",
+  "Customer ID": "CUS-0030",
+  "Receipt date": "2026-10-10",
+  "Amount (BDT)": 666698.79,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000816",
+  "Invoice ID": "INV-000977",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-10-11",
+  "Amount (BDT)": 289353.46,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000817",
+  "Invoice ID": "INV-000979",
+  "Customer ID": "CUS-0048",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 21951.72,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000818",
+  "Invoice ID": "INV-000980",
+  "Customer ID": "CUS-0032",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 127101.12,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000819",
+  "Invoice ID": "INV-000981",
+  "Customer ID": "CUS-0026",
+  "Receipt date": "2026-10-11",
+  "Amount (BDT)": 94343.76,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000820",
+  "Invoice ID": "INV-000983",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-10-11",
+  "Amount (BDT)": 120176.88,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000821",
+  "Invoice ID": "INV-000984",
+  "Customer ID": "CUS-0089",
+  "Receipt date": "2026-10-04",
+  "Amount (BDT)": 3946.74,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000822",
+  "Invoice ID": "INV-000985",
+  "Customer ID": "CUS-0038",
+  "Receipt date": "2026-10-11",
+  "Amount (BDT)": 85690.07,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000823",
+  "Invoice ID": "INV-000986",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-10-11",
+  "Amount (BDT)": 176270.71,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000824",
+  "Invoice ID": "INV-000987",
+  "Customer ID": "CUS-0024",
+  "Receipt date": "2026-10-11",
+  "Amount (BDT)": 521069.59,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000825",
+  "Invoice ID": "INV-000989",
+  "Customer ID": "CUS-0075",
+  "Receipt date": "2026-10-04",
+  "Amount (BDT)": 24077.55,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000826",
+  "Invoice ID": "INV-000990",
+  "Customer ID": "CUS-0003",
+  "Receipt date": "2026-10-20",
+  "Amount (BDT)": 198627.47,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000827",
+  "Invoice ID": "INV-000991",
+  "Customer ID": "CUS-0047",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 75390.84,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000828",
+  "Invoice ID": "INV-000993",
+  "Customer ID": "CUS-0088",
+  "Receipt date": "2026-10-05",
+  "Amount (BDT)": 7520.31,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000829",
+  "Invoice ID": "INV-000994",
+  "Customer ID": "CUS-0026",
+  "Receipt date": "2026-10-12",
+  "Amount (BDT)": 314053.66,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000830",
+  "Invoice ID": "INV-000995",
+  "Customer ID": "CUS-0026",
+  "Receipt date": "2026-10-12",
+  "Amount (BDT)": 112511.95,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000831",
+  "Invoice ID": "INV-000998",
+  "Customer ID": "CUS-0039",
+  "Receipt date": "2026-10-12",
+  "Amount (BDT)": 300546.55,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000832",
+  "Invoice ID": "INV-000999",
+  "Customer ID": "CUS-0034",
+  "Receipt date": "2026-10-12",
+  "Amount (BDT)": 605104.17,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000833",
+  "Invoice ID": "INV-001000",
+  "Customer ID": "CUS-0010",
+  "Receipt date": "2026-10-12",
+  "Amount (BDT)": 217873.68,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000834",
+  "Invoice ID": "INV-001001",
+  "Customer ID": "CUS-0049",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 23972.76,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000835",
+  "Invoice ID": "INV-001003",
+  "Customer ID": "CUS-0048",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 18267.48,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000836",
+  "Invoice ID": "INV-001004",
+  "Customer ID": "CUS-0031",
+  "Receipt date": "2026-10-21",
+  "Amount (BDT)": 146625.68,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000837",
+  "Invoice ID": "INV-001005",
+  "Customer ID": "CUS-0010",
+  "Receipt date": "2026-10-13",
+  "Amount (BDT)": 369338.12,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000838",
+  "Invoice ID": "INV-001006",
+  "Customer ID": "CUS-0045",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 11765.88,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000839",
+  "Invoice ID": "INV-001012",
+  "Customer ID": "CUS-0078",
+  "Receipt date": "2026-10-06",
+  "Amount (BDT)": 17706.78,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000840",
+  "Invoice ID": "INV-001014",
+  "Customer ID": "CUS-0008",
+  "Receipt date": "2026-10-13",
+  "Amount (BDT)": 188338.31,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000841",
+  "Invoice ID": "INV-001015",
+  "Customer ID": "CUS-0008",
+  "Receipt date": "2026-10-14",
+  "Amount (BDT)": 123821.97,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000842",
+  "Invoice ID": "INV-001016",
+  "Customer ID": "CUS-0030",
+  "Receipt date": "2026-10-14",
+  "Amount (BDT)": 89068.29,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000843",
+  "Invoice ID": "INV-001017",
+  "Customer ID": "CUS-0097",
+  "Receipt date": "2026-10-07",
+  "Amount (BDT)": 1587.6,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000844",
+  "Invoice ID": "INV-001018",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-10-14",
+  "Amount (BDT)": 121921.19,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000845",
+  "Invoice ID": "INV-001020",
+  "Customer ID": "CUS-0013",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 149094.23,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000846",
+  "Invoice ID": "INV-001022",
+  "Customer ID": "CUS-0026",
+  "Receipt date": "2026-10-14",
+  "Amount (BDT)": 205963.58,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000847",
+  "Invoice ID": "INV-001024",
+  "Customer ID": "CUS-0034",
+  "Receipt date": "2026-10-14",
+  "Amount (BDT)": 332707.9,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000848",
+  "Invoice ID": "INV-001025",
+  "Customer ID": "CUS-0006",
+  "Receipt date": "2026-10-14",
+  "Amount (BDT)": 301873.99,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000849",
+  "Invoice ID": "INV-001026",
+  "Customer ID": "CUS-0028",
+  "Receipt date": "2026-10-14",
+  "Amount (BDT)": 63644.71,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000850",
+  "Invoice ID": "INV-001031",
+  "Customer ID": "CUS-0095",
+  "Receipt date": "2026-10-08",
+  "Amount (BDT)": 27598.62,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000851",
+  "Invoice ID": "INV-001032",
+  "Customer ID": "CUS-0015",
+  "Receipt date": "2026-10-23",
+  "Amount (BDT)": 250808.38,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000852",
+  "Invoice ID": "INV-001038",
+  "Customer ID": "CUS-0024",
+  "Receipt date": "2026-10-15",
+  "Amount (BDT)": 93901.81,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000853",
+  "Invoice ID": "INV-001039",
+  "Customer ID": "CUS-0002",
+  "Receipt date": "2026-10-15",
+  "Amount (BDT)": 72039.65,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000854",
+  "Invoice ID": "INV-001043",
+  "Customer ID": "CUS-0002",
+  "Receipt date": "2026-10-17",
+  "Amount (BDT)": 101937.07,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000855",
+  "Invoice ID": "INV-001052",
+  "Customer ID": "CUS-0071",
+  "Receipt date": "2026-10-11",
+  "Amount (BDT)": 3849.51,
+  "Method": "Nagad"
+ },
+ {
+  "Receipt ID": "RCV-000856",
+  "Invoice ID": "INV-001053",
+  "Customer ID": "CUS-0001",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 267995.48,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000857",
+  "Invoice ID": "INV-001054",
+  "Customer ID": "CUS-0009",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 167741.95,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000858",
+  "Invoice ID": "INV-001055",
+  "Customer ID": "CUS-0013",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 137754.7,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000859",
+  "Invoice ID": "INV-001057",
+  "Customer ID": "CUS-0002",
+  "Receipt date": "2026-10-18",
+  "Amount (BDT)": 104848.49,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000860",
+  "Invoice ID": "INV-001058",
+  "Customer ID": "CUS-0088",
+  "Receipt date": "2026-10-12",
+  "Amount (BDT)": 3709.44,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000861",
+  "Invoice ID": "INV-001059",
+  "Customer ID": "CUS-0020",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 162763.65,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000862",
+  "Invoice ID": "INV-001062",
+  "Customer ID": "CUS-0024",
+  "Receipt date": "2026-10-19",
+  "Amount (BDT)": 24309.65,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000863",
+  "Invoice ID": "INV-001064",
+  "Customer ID": "CUS-0087",
+  "Receipt date": "2026-10-12",
+  "Amount (BDT)": 7360.92,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000864",
+  "Invoice ID": "INV-001069",
+  "Customer ID": "CUS-0074",
+  "Receipt date": "2026-10-13",
+  "Amount (BDT)": 12166.77,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000865",
+  "Invoice ID": "INV-001072",
+  "Customer ID": "CUS-0099",
+  "Receipt date": "2026-10-13",
+  "Amount (BDT)": 529.2,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000866",
+  "Invoice ID": "INV-001073",
+  "Customer ID": "CUS-0031",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 116978.7,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000867",
+  "Invoice ID": "INV-001075",
+  "Customer ID": "CUS-0031",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 128901.88,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000868",
+  "Invoice ID": "INV-001076",
+  "Customer ID": "CUS-0076",
+  "Receipt date": "2026-10-13",
+  "Amount (BDT)": 16861.11,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000869",
+  "Invoice ID": "INV-001077",
+  "Customer ID": "CUS-0014",
+  "Receipt date": "2026-10-20",
+  "Amount (BDT)": 216561.87,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000870",
+  "Invoice ID": "INV-001078",
+  "Customer ID": "CUS-0005",
+  "Receipt date": "2026-10-20",
+  "Amount (BDT)": 115519.62,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000871",
+  "Invoice ID": "INV-001080",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-10-21",
+  "Amount (BDT)": 38718.56,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000872",
+  "Invoice ID": "INV-001081",
+  "Customer ID": "CUS-0073",
+  "Receipt date": "2026-10-14",
+  "Amount (BDT)": 770.38,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000873",
+  "Invoice ID": "INV-001082",
+  "Customer ID": "CUS-0029",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 101015.81,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000874",
+  "Invoice ID": "INV-001088",
+  "Customer ID": "CUS-0024",
+  "Receipt date": "2026-10-21",
+  "Amount (BDT)": 224335.79,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000875",
+  "Invoice ID": "INV-001090",
+  "Customer ID": "CUS-0058",
+  "Receipt date": "2026-10-14",
+  "Amount (BDT)": 34491.03,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000876",
+  "Invoice ID": "INV-001091",
+  "Customer ID": "CUS-0062",
+  "Receipt date": "2026-10-14",
+  "Amount (BDT)": 2472.96,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000877",
+  "Invoice ID": "INV-001093",
+  "Customer ID": "CUS-0067",
+  "Receipt date": "2026-10-15",
+  "Amount (BDT)": 23454.48,
+  "Method": "Cash"
+ },
+ {
+  "Receipt ID": "RCV-000878",
+  "Invoice ID": "INV-001094",
+  "Customer ID": "CUS-0039",
+  "Receipt date": "2026-10-22",
+  "Amount (BDT)": 207040.15,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000879",
+  "Invoice ID": "INV-001095",
+  "Customer ID": "CUS-0040",
+  "Receipt date": "2026-10-22",
+  "Amount (BDT)": 197243.13,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000880",
+  "Invoice ID": "INV-001097",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-10-22",
+  "Amount (BDT)": 27506.65,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000881",
+  "Invoice ID": "INV-001098",
+  "Customer ID": "CUS-0010",
+  "Receipt date": "2026-10-22",
+  "Amount (BDT)": 111730.24,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000882",
+  "Invoice ID": "INV-001099",
+  "Customer ID": "CUS-0036",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 79580.94,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000883",
+  "Invoice ID": "INV-001100",
+  "Customer ID": "CUS-0040",
+  "Receipt date": "2026-10-22",
+  "Amount (BDT)": 143174.01,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000884",
+  "Invoice ID": "INV-001106",
+  "Customer ID": "CUS-0023",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 65411.53,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000885",
+  "Invoice ID": "INV-001107",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-10-24",
+  "Amount (BDT)": 135512.54,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000886",
+  "Invoice ID": "INV-001112",
+  "Customer ID": "CUS-0063",
+  "Receipt date": "2026-10-18",
+  "Amount (BDT)": 14258.16,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000887",
+  "Invoice ID": "INV-001115",
+  "Customer ID": "CUS-0001",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 100711.29,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000888",
+  "Invoice ID": "INV-001120",
+  "Customer ID": "CUS-0009",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 43648.19,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000889",
+  "Invoice ID": "INV-001121",
+  "Customer ID": "CUS-0017",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 104557.59,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000890",
+  "Invoice ID": "INV-001123",
+  "Customer ID": "CUS-0024",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 95496.63,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000891",
+  "Invoice ID": "INV-001124",
+  "Customer ID": "CUS-0008",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 223764.64,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000892",
+  "Invoice ID": "INV-001131",
+  "Customer ID": "CUS-0019",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 16970.69,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000893",
+  "Invoice ID": "INV-001141",
+  "Customer ID": "CUS-0031",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 271169.34,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000894",
+  "Invoice ID": "INV-001149",
+  "Customer ID": "CUS-0013",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 94829.7,
+  "Method": "Cheque"
+ },
+ {
+  "Receipt ID": "RCV-000895",
+  "Invoice ID": "INV-001152",
+  "Customer ID": "CUS-0035",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 37746.29,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000896",
+  "Invoice ID": "INV-001153",
+  "Customer ID": "CUS-0004",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 26167.68,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000897",
+  "Invoice ID": "INV-001162",
+  "Customer ID": "CUS-0099",
+  "Receipt date": "2026-10-22",
+  "Amount (BDT)": 734.16,
+  "Method": "Bank transfer"
+ },
+ {
+  "Receipt ID": "RCV-000898",
+  "Invoice ID": "INV-001171",
+  "Customer ID": "CUS-0015",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 186057.39,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000899",
+  "Invoice ID": "INV-001177",
+  "Customer ID": "CUS-0111",
+  "Receipt date": "2026-10-24",
+  "Amount (BDT)": 4205.25,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000900",
+  "Invoice ID": "INV-001178",
+  "Customer ID": "CUS-0001",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 179232.03,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000901",
+  "Invoice ID": "INV-001183",
+  "Customer ID": "CUS-0033",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 218337.51,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000902",
+  "Invoice ID": "INV-001186",
+  "Customer ID": "CUS-0027",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 78400.91,
+  "Method": "bKash"
+ },
+ {
+  "Receipt ID": "RCV-000903",
+  "Invoice ID": "INV-001187",
+  "Customer ID": "CUS-0027",
+  "Receipt date": "2026-10-25",
+  "Amount (BDT)": 114003.07,
+  "Method": "Bank transfer"
+ }
+]

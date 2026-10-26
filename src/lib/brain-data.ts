@@ -1,4 +1,5 @@
 import { answer, type Chart, type Kpi, type Reply, type Unit } from "@/lib/brain-knowledge";
+import { shaplaAnswer, shaplaStarters } from "@/lib/brain-shapla";
 import {
   COMPANY,
   LAST_YEAR,
@@ -53,7 +54,10 @@ export function fmt(unit: Unit, v: number): string {
 
 const sum = (a: number[]) => a.reduce((s, v) => s + v, 0);
 const change = (now: number, before: number) => ((now - before) / before) * 100;
+// KPI deltas keep a sign for the arrow; the UI shows only the size. Sentences use words, never a minus sign.
 const signed = (p: number) => `${p >= 0 ? "+" : "−"}${Math.abs(p).toFixed(1)}%`;
+const pct = (p: number) => `${Math.abs(p).toFixed(1)}%`;
+const phrase = (p: number) => `${p >= 0 ? "up" : "down"} ${pct(p)}`;
 
 /* ---------- reading the question ---------- */
 
@@ -162,7 +166,7 @@ const salesAnswer: Handler = (c) => {
     const cmp = Array.from({ length: span }, (_, i) => i);
     const totals = YEARS.map((y) => sum(pick(sales.monthly, y, cmp)));
     return reply({
-      text: `Comparing the same period (Jan to Sep) each year: sales grew from ${fmt("bdt", totals[0])} in 2024 to ${fmt("bdt", totals[1])} in 2025 (${signed(change(totals[1], totals[0]))}) and ${fmt("bdt", totals[2])} in 2026 (${signed(change(totals[2], totals[1]))}). March to April is the peak every year, around Eid and Pohela Boishakh.`,
+      text: `Comparing the same period (Jan to Sep) each year: sales grew from ${fmt("bdt", totals[0])} in 2024 to ${fmt("bdt", totals[1])} in 2025 (${phrase(change(totals[1], totals[0]))}) and ${fmt("bdt", totals[2])} in 2026 (${phrase(change(totals[2], totals[1]))}). March to April is the peak every year, around Eid and Pohela Boishakh.`,
       kpis: YEARS.map((y, i) => ({ label: `Jan to Sep ${y}`, value: fmt("bdt", totals[i]), delta: i ? signed(change(totals[i], totals[i - 1])) : undefined, good: true })),
       charts: [
         { kind: "line", title: "Monthly sales, by year", unit: "bdt", data: monthRows(sales.monthly, [...YEARS], cmp), series: YEARS.map(String) },
@@ -217,7 +221,7 @@ const salesAnswer: Handler = (c) => {
   const rows = monthRows(sales.monthly, [c.year], months).map((r) => ({ label: r.label, Sales: r[String(c.year)] }));
   const best = rows.reduce((a, b) => ((b.Sales as number) > (a.Sales as number) ? b : a));
   return reply({
-    text: `${COMPANY} sold ${fmt("bdt", total)} in ${c.period}${growth !== null ? `, ${signed(growth)} on the same period of ${prevYear}` : ""}. The best month was ${best.label} at ${fmt("bdt", best.Sales as number)}.`,
+    text: `${COMPANY} sold ${fmt("bdt", total)} in ${c.period}${growth !== null ? `, ${phrase(growth)} on the same period of ${prevYear}` : ""}. The best month was ${best.label} at ${fmt("bdt", best.Sales as number)}.`,
     kpis: [...base, { label: "Best month", value: `${best.label} · ${fmt("bdt", best.Sales as number)}` }],
     charts: [
       { kind: "bar", title: `Monthly sales · ${c.period}`, unit: "bdt", data: rows, series: ["Sales"] },
@@ -338,7 +342,7 @@ const manufacturingAnswer: Handler = (c) => {
     const cmp = Array.from({ length: monthsIn(THIS_YEAR) }, (_, i) => i);
     const totals = YEARS.map((y) => sum(pick(manufacturing.output, y, cmp)));
     return reply({
-      text: `Jan to Sep output grew from ${fmt("kg", totals[0])} in 2024 to ${fmt("kg", totals[2])} in 2026 (${signed(change(totals[2], totals[0]))}).`,
+      text: `Jan to Sep output grew from ${fmt("kg", totals[0])} in 2024 to ${fmt("kg", totals[2])} in 2026 (${phrase(change(totals[2], totals[0]))}).`,
       kpis: YEARS.map((y, i) => ({ label: `Jan to Sep ${y}`, value: fmt("kg", totals[i]), delta: i ? signed(change(totals[i], totals[i - 1])) : undefined, good: true })),
       charts: [{ kind: "line", title: "Monthly output (kg), by year", unit: "kg", data: monthRows(manufacturing.output, [...YEARS], cmp), series: YEARS.map(String) }],
       follow: ["OEE by line", "What is causing downtime?", "Show defects by type"],
@@ -434,7 +438,7 @@ const procurementAnswer: Handler = (c) => {
   ];
   if (/price|rate|cost increase|raised/.test(c.q)) {
     return reply({
-      text: "Three key inputs got more expensive this quarter. Raw milk is up 9.7% and cartons 7.9%; flour is the one that fell (−5.6%).",
+      text: "Three key inputs got more expensive this quarter. Raw milk is up 9.7% and cartons 7.9%; flour is the one that fell, by 5.6%.",
       kpis,
       tables: [{ title: "Price changes · Q3 vs Q2 2026", columns: ["Item", "Q2", "Q3", "Change"], rows: procurement.priceMoves }],
       follow: ["Purchase spend by supplier", "Show PO status", "Budget vs actual"],
@@ -513,7 +517,7 @@ const financeAnswer: Handler = (c) => {
     const a = finance.pnl(2024)["Net profit"];
     const b = finance.pnl(2025)["Net profit"];
     return reply({
-      text: `Net profit rose from ${fmt("bdt", a)} in 2024 to ${fmt("bdt", b)} in 2025 (${signed(change(b, a))}), helped by a better gross margin.`,
+      text: `Net profit rose from ${fmt("bdt", a)} in 2024 to ${fmt("bdt", b)} in 2025 (${phrase(change(b, a))}), helped by a better gross margin.`,
       kpis: [
         { label: "Net profit 2024", value: fmt("bdt", a) },
         { label: "Net profit 2025", value: fmt("bdt", b), delta: signed(change(b, a)), good: true },
@@ -538,14 +542,14 @@ const financeAnswer: Handler = (c) => {
 const budgetAnswer: Handler = () => {
   const over = budget.filter(([, b, a]) => a > b);
   return reply({
-    text: `For Jan to Sep 2026, ${over.length} cost centres are over budget. Marketing is furthest over at ${signed(change(budget[2][2], budget[2][1]))}; IT is ${signed(change(budget[4][2], budget[4][1]))} under.`,
+    text: `For Jan to Sep 2026, ${over.length} cost centres are over budget. Marketing is furthest over, by ${pct(change(budget[2][2], budget[2][1]))}; IT is ${pct(change(budget[4][2], budget[4][1]))} under.`,
     kpis: [
       { label: "Budget · Jan to Sep", value: fmt("bdt", sum(budget.map((b) => b[1]))) },
       { label: "Actual", value: fmt("bdt", sum(budget.map((b) => b[2]))) },
       { label: "Over budget", value: `${over.length} cost centres`, good: false },
     ],
     charts: [{ kind: "bar", title: "Budget vs actual by cost centre · Jan to Sep 2026", unit: "bdt", data: budget.map(([label, b, a]) => ({ label, Budget: b, Actual: a })), series: ["Budget", "Actual"] }],
-    tables: [{ title: "Variance", columns: ["Cost centre", "Budget", "Actual", "Variance"], rows: budget.map(([n, b, a]) => [n, fmt("bdt", b), fmt("bdt", a), signed(change(a, b))]) }],
+    tables: [{ title: "Variance", columns: ["Cost centre", "Budget", "Actual", "Variance"], rows: budget.map(([n, b, a]) => [n, fmt("bdt", b), fmt("bdt", a), `${pct(change(a, b))} ${a >= b ? "over" : "under"}`]) }],
     follow: ["Show expenses by category", "Purchase spend by supplier", "Show profit and loss"],
   });
 };
@@ -717,7 +721,7 @@ const overviewAnswer: Handler = () => {
   const before = sum(pick(sales.monthly, LAST_YEAR, cmp));
   const years: Year[] = [LAST_YEAR, THIS_YEAR];
   return reply({
-    text: `Here's ${COMPANY} at a glance for Jan to Sep 2026. Sales are ${signed(change(now, before))} on last year, OEE is up, and Sylhet is the one division behind target.`,
+    text: `Here's ${COMPANY} at a glance for Jan to Sep 2026. Sales are ${phrase(change(now, before))} on last year, OEE is up, and Sylhet is the one division behind target.`,
     kpis: [
       { label: "Sales · Jan to Sep", value: fmt("bdt", now), delta: signed(change(now, before)), good: true },
       { label: "Gross margin", value: fmt("pct", (finance.pnl(THIS_YEAR)["Gross profit"] / finance.pnl(THIS_YEAR).Revenue) * 100) },
@@ -769,8 +773,23 @@ export function dataAnswer(raw: string): Reply | null {
 }
 
 /** Data questions are answered from the sample company; everything else from product knowledge. */
+/* Ask Brain only talks about the business and Business Brain 24. Anything else gets a polite no. */
+const ON_TOPIC = /\b(business|brain|erp|bb24|shapla|sales?|sell|sold|revenue|profit|loss|margin|cost|spend|price|pricing|quote|budget|cash|bank|finance|account|ledger|vat|tax|invoice|bill|receivable|payable|ageing|aging|collect|payment|bkash|nagad|customer|dealer|distributor|retailer|supplier|vendor|purchase|procure|po\b|order|stock|inventory|warehouse|depot|sku|product|category|production|factory|plant|batch|yield|oee|downtime|quality|employee|staff|people|headcount|hr\b|hrms|payroll|salary|overtime|attendance|leave|attrition|hiring|recruit|department|branch|region|division|target|kpi|report|dashboard|chart|forecast|demand|pipeline|project|watch ?tower|mcp|chatgpt|claude|ai\b|module|app|demo|fit session|contact|setup|implement|deploy|cloud|premise|security|integration|scorecard|funnel|trend|compare|month|year|today|yesterday)/;
+const GREETING = /^\s*(hi|hello|hey|salam|assalamu|good (morning|afternoon|evening)|thanks?|thank you)\b/;
+const BANGLA = /[\u0980-\u09FF]/;
+
+const decline = (): Reply => ({
+  text: "Sorry, I can only help with questions about your business and Business Brain 24, like sales, stock, payroll, customers or how the system works. Here are a few things you could ask.",
+  follow: [...shaplaStarters.slice(0, 3), "What is Business Brain 24?"],
+});
+
 export function respond(q: string): Reply {
-  return dataAnswer(q) ?? answer(q);
+  const lower = q.toLowerCase();
+  if (GREETING.test(lower) && lower.split(/\s+/).length <= 4) {
+    return { text: "Hello! Ask me anything about your business: sales, stock, payroll, customers, or how Business Brain 24 works.", follow: shaplaStarters.slice(0, 4) };
+  }
+  if (!ON_TOPIC.test(lower) && !BANGLA.test(q)) return decline();
+  return shaplaAnswer(lower) ?? dataAnswer(q) ?? answer(q);
 }
 
 export const dataStarters: { module: string; questions: string[] }[] = [
@@ -780,5 +799,6 @@ export const dataStarters: { module: string; questions: string[] }[] = [
   { module: "Inventory", questions: ["Show stock by warehouse", "Forecast stock for the next 8 weeks", "Which items are slow moving?", "Days of cover by category"] },
   { module: "Finance", questions: ["Show profit and loss for 2025", "Show receivables ageing", "Show cash balance by month", "Budget vs actual by cost centre"] },
   { module: "People", questions: ["Show headcount trend", "Attrition by department", "Attendance rate this year", "Late arrivals by department"] },
+  { module: "Scorecards", questions: shaplaStarters.slice(0, 4) },
   { module: "More", questions: ["How is my business doing?", "Purchase spend by supplier", "Show the sales pipeline", "Show project progress"] },
 ];

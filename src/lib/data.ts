@@ -78,7 +78,7 @@ export const products: Product[] = [
     title: "Procurement that thinks ahead.",
     sub: "Requisitions, quotes, approvals and POs in one flow. Brain compares suppliers, flags price jumps and raises the PO before you run out.",
     stats: [
-      { value: "−18%", label: "purchase cost" },
+      { value: "18%", label: "lower purchase cost" },
       { value: "3×", label: "faster approvals" },
       { value: "0", label: "lost requisitions" },
     ],
@@ -119,7 +119,7 @@ export const products: Product[] = [
     sub: "Set budgets by branch, project or cost centre. Brain watches every requisition and warns you before a line goes over.",
     stats: [
       { value: "14", label: "cost centres, one view" },
-      { value: "−11%", label: "overspend" },
+      { value: "11%", label: "less overspend" },
       { value: "Live", label: "budget vs. actual" },
     ],
     features: [
@@ -158,7 +158,7 @@ export const products: Product[] = [
     title: "Every bin. Every branch. In real time.",
     sub: "Track stock by lot, batch and bin across every warehouse. Brain predicts stock-outs and moves inventory before you lose a sale.",
     stats: [
-      { value: "−27%", label: "dead stock" },
+      { value: "27%", label: "less dead stock" },
       { value: "99.6%", label: "stock accuracy" },
       { value: "0", label: "manual counts" },
     ],
@@ -198,7 +198,7 @@ export const products: Product[] = [
     title: "From order to cash, without the chase.",
     sub: "Quotes, orders, deliveries and collections in one flow. Brain watches credit, plans routes and tells reps who to visit next.",
     stats: [
-      { value: "−34%", label: "overdue receivables" },
+      { value: "34%", label: "fewer overdue receivables" },
       { value: "96%", label: "on-time delivery" },
       { value: "2×", label: "orders per rep" },
     ],
@@ -279,7 +279,7 @@ export const products: Product[] = [
     sub: "BOMs, work orders, routing and OEE in one place. Brain re-plans production the moment a machine stops or material is late.",
     stats: [
       { value: "+22%", label: "line efficiency" },
-      { value: "−35%", label: "WIP inventory" },
+      { value: "35%", label: "less WIP inventory" },
       { value: "Live", label: "OEE per machine" },
     ],
     features: [
@@ -319,7 +319,7 @@ export const products: Product[] = [
     sub: "Incoming, inline and final inspections on a tablet. Brain spots defect patterns early and opens the corrective action for you.",
     stats: [
       { value: "96.8%", label: "first-pass yield" },
-      { value: "−41%", label: "customer returns" },
+      { value: "41%", label: "fewer customer returns" },
       { value: "AQL", label: "sampling built in" },
     ],
     features: [
@@ -359,7 +359,7 @@ export const products: Product[] = [
     sub: "Tag, track and maintain every machine, vehicle and laptop. Depreciation posts itself, and Brain books service before things break.",
     stats: [
       { value: "2,140", label: "assets tagged" },
-      { value: "−30%", label: "breakdowns" },
+      { value: "30%", label: "fewer breakdowns" },
       { value: "Auto", label: "depreciation" },
     ],
     features: [
@@ -399,7 +399,7 @@ export const products: Product[] = [
     sub: "Plan tasks, track time and cost, and bill on progress. Brain warns you about delays and margin leaks while there's still time to fix them.",
     stats: [
       { value: "18.4%", label: "avg. margin" },
-      { value: "−9 days", label: "average delay" },
+      { value: "9 days", label: "shorter average delay" },
       { value: "Live", label: "cost per project" },
     ],
     features: [
@@ -439,7 +439,7 @@ export const products: Product[] = [
     sub: "Recruitment, onboarding, records, performance and exits. Brain spots attrition risk early and keeps every document compliant.",
     stats: [
       { value: "2,412", label: "employees managed" },
-      { value: "−21%", label: "attrition" },
+      { value: "21%", label: "lower attrition" },
       { value: "1 day", label: "onboarding" },
     ],
     features: [
@@ -655,7 +655,7 @@ export const industries: Industry[] = [
       { name: "CRM", note: "Customers, follow-ups" },
       { name: "Accounting", note: "Receivables, P&L" },
     ],
-    stat: { value: "−34%", label: "overdue receivables" },
+    stat: { value: "34%", label: "fewer overdue receivables" },
     tone: "from-[#241d14] to-[#0b0d12]",
   },
   {
@@ -679,7 +679,7 @@ export const industries: Industry[] = [
       { name: "Procurement", note: "Replenishment" },
       { name: "Accounting", note: "VAT, outlet P&L" },
     ],
-    stat: { value: "−27%", label: "dead stock" },
+    stat: { value: "27%", label: "less dead stock" },
     tone: "from-[#1d2418] to-[#0b0d12]",
   },
   {
@@ -775,7 +775,7 @@ export const industries: Industry[] = [
       { name: "CRM", note: "Flat sales" },
       { name: "Accounting", note: "Project P&L" },
     ],
-    stat: { value: "−9 days", label: "average delay" },
+    stat: { value: "9 days", label: "shorter average delay" },
     tone: "from-[#22201c] to-[#0b0d12]",
   },
   {

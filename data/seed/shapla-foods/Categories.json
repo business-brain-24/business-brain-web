@@ -1,0 +1,34 @@
+[
+ {
+  "Category ID": "CAT-01",
+  "Category": "Biscuits & Bakery"
+ },
+ {
+  "Category ID": "CAT-02",
+  "Category": "Noodles & Snacks"
+ },
+ {
+  "Category ID": "CAT-03",
+  "Category": "Beverages"
+ },
+ {
+  "Category ID": "CAT-04",
+  "Category": "Edible Oil"
+ },
+ {
+  "Category ID": "CAT-05",
+  "Category": "Flour & Staples"
+ },
+ {
+  "Category ID": "CAT-06",
+  "Category": "Spices"
+ },
+ {
+  "Category ID": "CAT-07",
+  "Category": "Tea"
+ },
+ {
+  "Category ID": "CAT-08",
+  "Category": "Dairy"
+ }
+]

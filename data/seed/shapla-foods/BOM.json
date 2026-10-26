@@ -1,0 +1,206 @@
+[
+ {
+  "BOM ID": "BOM-0001",
+  "SKU": "SKU-0001",
+  "RM ID": "RM-001",
+  "Qty per unit": 0.04
+ },
+ {
+  "BOM ID": "BOM-0001",
+  "SKU": "SKU-0001",
+  "RM ID": "RM-002",
+  "Qty per unit": 0.01
+ },
+ {
+  "BOM ID": "BOM-0001",
+  "SKU": "SKU-0001",
+  "RM ID": "RM-003",
+  "Qty per unit": 0.01
+ },
+ {
+  "BOM ID": "BOM-0001",
+  "SKU": "SKU-0001",
+  "RM ID": "RM-006",
+  "Qty per unit": 0.0
+ },
+ {
+  "BOM ID": "BOM-0001",
+  "SKU": "SKU-0001",
+  "RM ID": "RM-017",
+  "Qty per unit": 1
+ },
+ {
+  "BOM ID": "BOM-0002",
+  "SKU": "SKU-0002",
+  "RM ID": "RM-001",
+  "Qty per unit": 0.18
+ },
+ {
+  "BOM ID": "BOM-0002",
+  "SKU": "SKU-0002",
+  "RM ID": "RM-002",
+  "Qty per unit": 0.06
+ },
+ {
+  "BOM ID": "BOM-0002",
+  "SKU": "SKU-0002",
+  "RM ID": "RM-003",
+  "Qty per unit": 0.04
+ },
+ {
+  "BOM ID": "BOM-0002",
+  "SKU": "SKU-0002",
+  "RM ID": "RM-006",
+  "Qty per unit": 0.01
+ },
+ {
+  "BOM ID": "BOM-0002",
+  "SKU": "SKU-0002",
+  "RM ID": "RM-017",
+  "Qty per unit": 1
+ },
+ {
+  "BOM ID": "BOM-0006",
+  "SKU": "SKU-0006",
+  "RM ID": "RM-001",
+  "Qty per unit": 0.2
+ },
+ {
+  "BOM ID": "BOM-0006",
+  "SKU": "SKU-0006",
+  "RM ID": "RM-002",
+  "Qty per unit": 0.05
+ },
+ {
+  "BOM ID": "BOM-0006",
+  "SKU": "SKU-0006",
+  "RM ID": "RM-003",
+  "Qty per unit": 0.03
+ },
+ {
+  "BOM ID": "BOM-0006",
+  "SKU": "SKU-0006",
+  "RM ID": "RM-017",
+  "Qty per unit": 1
+ },
+ {
+  "BOM ID": "BOM-0009",
+  "SKU": "SKU-0009",
+  "RM ID": "RM-001",
+  "Qty per unit": 0.05
+ },
+ {
+  "BOM ID": "BOM-0009",
+  "SKU": "SKU-0009",
+  "RM ID": "RM-003",
+  "Qty per unit": 0.01
+ },
+ {
+  "BOM ID": "BOM-0009",
+  "SKU": "SKU-0009",
+  "RM ID": "RM-020",
+  "Qty per unit": 0.0
+ },
+ {
+  "BOM ID": "BOM-0009",
+  "SKU": "SKU-0009",
+  "RM ID": "RM-017",
+  "Qty per unit": 1
+ },
+ {
+  "BOM ID": "BOM-0011",
+  "SKU": "SKU-0011",
+  "RM ID": "RM-010",
+  "Qty per unit": 0.08
+ },
+ {
+  "BOM ID": "BOM-0011",
+  "SKU": "SKU-0011",
+  "RM ID": "RM-009",
+  "Qty per unit": 0.03
+ },
+ {
+  "BOM ID": "BOM-0011",
+  "SKU": "SKU-0011",
+  "RM ID": "RM-003",
+  "Qty per unit": 0.03
+ },
+ {
+  "BOM ID": "BOM-0011",
+  "SKU": "SKU-0011",
+  "RM ID": "RM-013",
+  "Qty per unit": 0.0
+ },
+ {
+  "BOM ID": "BOM-0011",
+  "SKU": "SKU-0011",
+  "RM ID": "RM-017",
+  "Qty per unit": 1
+ },
+ {
+  "BOM ID": "BOM-0016",
+  "SKU": "SKU-0016",
+  "RM ID": "RM-008",
+  "Qty per unit": 0.06
+ },
+ {
+  "BOM ID": "BOM-0016",
+  "SKU": "SKU-0016",
+  "RM ID": "RM-002",
+  "Qty per unit": 0.03
+ },
+ {
+  "BOM ID": "BOM-0016",
+  "SKU": "SKU-0016",
+  "RM ID": "RM-016",
+  "Qty per unit": 1
+ },
+ {
+  "BOM ID": "BOM-0023",
+  "SKU": "SKU-0023",
+  "RM ID": "RM-004",
+  "Qty per unit": 1.02
+ },
+ {
+  "BOM ID": "BOM-0023",
+  "SKU": "SKU-0023",
+  "RM ID": "RM-016",
+  "Qty per unit": 1
+ },
+ {
+  "BOM ID": "BOM-0029",
+  "SKU": "SKU-0029",
+  "RM ID": "RM-001",
+  "Qty per unit": 1.02
+ },
+ {
+  "BOM ID": "BOM-0029",
+  "SKU": "SKU-0029",
+  "RM ID": "RM-017",
+  "Qty per unit": 1
+ },
+ {
+  "BOM ID": "BOM-0037",
+  "SKU": "SKU-0037",
+  "RM ID": "RM-012",
+  "Qty per unit": 0.21
+ },
+ {
+  "BOM ID": "BOM-0037",
+  "SKU": "SKU-0037",
+  "RM ID": "RM-017",
+  "Qty per unit": 1
+ },
+ {
+  "BOM ID": "BOM-0045",
+  "SKU": "SKU-0045",
+  "RM ID": "RM-015",
+  "Qty per unit": 0.2
+ },
+ {
+  "BOM ID": "BOM-0045",
+  "SKU": "SKU-0045",
+  "RM ID": "RM-017",
+  "Qty per unit": 1
+ }
+]

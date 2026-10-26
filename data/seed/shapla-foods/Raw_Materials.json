@@ -1,0 +1,122 @@
+[
+ {
+  "RM ID": "RM-001",
+  "Material": "Wheat flour (bulk)",
+  "Unit": "kg",
+  "Std cost (BDT)": 48
+ },
+ {
+  "RM ID": "RM-002",
+  "Material": "Refined sugar (bulk)",
+  "Unit": "kg",
+  "Std cost (BDT)": 118
+ },
+ {
+  "RM ID": "RM-003",
+  "Material": "Palm oil (bulk)",
+  "Unit": "kg",
+  "Std cost (BDT)": 160
+ },
+ {
+  "RM ID": "RM-004",
+  "Material": "Crude soybean oil",
+  "Unit": "L",
+  "Std cost (BDT)": 150
+ },
+ {
+  "RM ID": "RM-005",
+  "Material": "Mustard seed",
+  "Unit": "kg",
+  "Std cost (BDT)": 95
+ },
+ {
+  "RM ID": "RM-006",
+  "Material": "Milk powder (bulk)",
+  "Unit": "kg",
+  "Std cost (BDT)": 780
+ },
+ {
+  "RM ID": "RM-007",
+  "Material": "Cocoa powder",
+  "Unit": "kg",
+  "Std cost (BDT)": 650
+ },
+ {
+  "RM ID": "RM-008",
+  "Material": "Mango pulp",
+  "Unit": "kg",
+  "Std cost (BDT)": 120
+ },
+ {
+  "RM ID": "RM-009",
+  "Material": "Lentil (masoor)",
+  "Unit": "kg",
+  "Std cost (BDT)": 105
+ },
+ {
+  "RM ID": "RM-010",
+  "Material": "Chickpea flour (besan)",
+  "Unit": "kg",
+  "Std cost (BDT)": 90
+ },
+ {
+  "RM ID": "RM-011",
+  "Material": "Potato flakes",
+  "Unit": "kg",
+  "Std cost (BDT)": 210
+ },
+ {
+  "RM ID": "RM-012",
+  "Material": "Turmeric (raw)",
+  "Unit": "kg",
+  "Std cost (BDT)": 180
+ },
+ {
+  "RM ID": "RM-013",
+  "Material": "Dry chilli",
+  "Unit": "kg",
+  "Std cost (BDT)": 320
+ },
+ {
+  "RM ID": "RM-014",
+  "Material": "Coriander seed",
+  "Unit": "kg",
+  "Std cost (BDT)": 160
+ },
+ {
+  "RM ID": "RM-015",
+  "Material": "Tea (auction grade)",
+  "Unit": "kg",
+  "Std cost (BDT)": 380
+ },
+ {
+  "RM ID": "RM-016",
+  "Material": "PET bottle 500 ml",
+  "Unit": "pcs",
+  "Std cost (BDT)": 4.5
+ },
+ {
+  "RM ID": "RM-017",
+  "Material": "Laminated pouch",
+  "Unit": "pcs",
+  "Std cost (BDT)": 1.8
+ },
+ {
+  "RM ID": "RM-018",
+  "Material": "Corrugated carton",
+  "Unit": "pcs",
+  "Std cost (BDT)": 22
+ },
+ {
+  "RM ID": "RM-019",
+  "Material": "Glass jar 400 g",
+  "Unit": "pcs",
+  "Std cost (BDT)": 28
+ },
+ {
+  "RM ID": "RM-020",
+  "Material": "Salt (bulk)",
+  "Unit": "kg",
+  "Std cost (BDT)": 20
+ }
+]

@@ -1,0 +1,152 @@
+[
+ {
+  "Account code": 1000,
+  "Account name": "Assets",
+  "Type": "Header"
+ },
+ {
+  "Account code": 1100,
+  "Account name": "Cash in hand",
+  "Type": "Asset"
+ },
+ {
+  "Account code": 1110,
+  "Account name": "Bank: operating account",
+  "Type": "Asset"
+ },
+ {
+  "Account code": 1120,
+  "Account name": "bKash / Nagad merchant",
+  "Type": "Asset"
+ },
+ {
+  "Account code": 1200,
+  "Account name": "Trade receivables",
+  "Type": "Asset"
+ },
+ {
+  "Account code": 1300,
+  "Account name": "Inventory: finished goods",
+  "Type": "Asset"
+ },
+ {
+  "Account code": 1310,
+  "Account name": "Inventory: raw and packing materials",
+  "Type": "Asset"
+ },
+ {
+  "Account code": 1400,
+  "Account name": "VAT current account (input)",
+  "Type": "Asset"
+ },
+ {
+  "Account code": 1500,
+  "Account name": "Property, plant and equipment",
+  "Type": "Asset"
+ },
+ {
+  "Account code": 2000,
+  "Account name": "Liabilities",
+  "Type": "Header"
+ },
+ {
+  "Account code": 2100,
+  "Account name": "Trade payables",
+  "Type": "Liability"
+ },
+ {
+  "Account code": 2200,
+  "Account name": "VAT payable (output)",
+  "Type": "Liability"
+ },
+ {
+  "Account code": 2300,
+  "Account name": "Salaries payable",
+  "Type": "Liability"
+ },
+ {
+  "Account code": 2400,
+  "Account name": "Short-term loan",
+  "Type": "Liability"
+ },
+ {
+  "Account code": 3000,
+  "Account name": "Equity",
+  "Type": "Header"
+ },
+ {
+  "Account code": 3100,
+  "Account name": "Share capital",
+  "Type": "Equity"
+ },
+ {
+  "Account code": 3200,
+  "Account name": "Retained earnings",
+  "Type": "Equity"
+ },
+ {
+  "Account code": 4000,
+  "Account name": "Revenue",
+  "Type": "Header"
+ },
+ {
+  "Account code": 4100,
+  "Account name": "Sales: local",
+  "Type": "Income"
+ },
+ {
+  "Account code": 4200,
+  "Account name": "Sales discounts",
+  "Type": "Income"
+ },
+ {
+  "Account code": 5000,
+  "Account name": "Cost of sales",
+  "Type": "Header"
+ },
+ {
+  "Account code": 5100,
+  "Account name": "Raw material consumed",
+  "Type": "Expense"
+ },
+ {
+  "Account code": 5200,
+  "Account name": "Factory overhead",
+  "Type": "Expense"
+ },
+ {
+  "Account code": 6000,
+  "Account name": "Operating expenses",
+  "Type": "Header"
+ },
+ {
+  "Account code": 6100,
+  "Account name": "Salaries and allowances",
+  "Type": "Expense"
+ },
+ {
+  "Account code": 6200,
+  "Account name": "Depot rent",
+  "Type": "Expense"
+ },
+ {
+  "Account code": 6300,
+  "Account name": "Distribution and transport",
+  "Type": "Expense"
+ },
+ {
+  "Account code": 6400,
+  "Account name": "Marketing and promotion",
+  "Type": "Expense"
+ },
+ {
+  "Account code": 6500,
+  "Account name": "Utilities",
+  "Type": "Expense"
+ },
+ {
+  "Account code": 6600,
+  "Account name": "Bank charges",
+  "Type": "Expense"
+ }
+]

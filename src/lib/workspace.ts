@@ -4,6 +4,7 @@ import {
   PieChart, Radio, Receipt, Settings, ShoppingCart, Timer, TrendingUp, Umbrella, UserCheck, UserSearch, Users, UsersRound, Wallet,
   type LucideIcon,
 } from "lucide-react";
+import { shapla } from "./shapla-seed";
 
 export type Category = "general" | "hrms" | "operational" | "other";
 
@@ -25,6 +26,7 @@ export const categories: { id: Category; name: string; color: string }[] = [
   { id: "other", name: "Other Apps", color: "#64748B" },
 ];
 
+// Apps covered by the Shapla Foods workbook read from shapla-seed.ts (scripts/import-shapla-seed.py).
 const t = (title: string, cols: string[], rows: string[][]) => ({ title, cols, rows });
 
 export const apps: App[] = [
@@ -42,8 +44,8 @@ export const apps: App[] = [
     kpis: [["Open tasks", "14"], ["Due today", "4"], ["Overdue", "1"], ["Done this week", "22"]],
     table: t("My tasks", ["Task", "Project", "Due", "Priority"], [["Approve October payroll", "HR", "Today", "High"], ["Review PO-2291", "Procurement", "Today", "Medium"], ["Send Q3 report to board", "Finance", "Tomorrow", "High"], ["Update price list", "Sales", "28 Oct", "Low"]]) },
   { slug: "contacts", name: "Contacts", icon: Contact, tint: ["#34D399", "#047857"], category: "general",
-    kpis: [["Contacts", "2,148"], ["Companies", "386"], ["Added this month", "64"], ["Suppliers", "142"]],
-    table: t("Recently added", ["Name", "Company", "Type", "Phone"], [["Tanvir Ahmed", "Akij Group", "Supplier", "+880 1711-203344"], ["Farzana Haque", "Shwapno", "Customer", "+880 1819-552210"], ["Imran Hossain", "Pran-RFL", "Customer", "+880 1713-889012"], ["Nusrat Jahan", "Meghna Logistics", "Vendor", "+880 1922-410098"]]) },
+    kpis: shapla.contacts.kpis as [string, string][],
+    table: shapla.contacts.table },
   { slug: "crm", name: "CRM", icon: Handshake, tint: ["#22D3EE", "#0E7490"], category: "general",
     kpis: [["Open deals", "47"], ["Pipeline value", "৳ 3.2 Cr"], ["Won this month", "9"], ["Win rate", "34%"]],
     table: t("Top opportunities", ["Deal", "Stage", "Value", "Owner"], [["Shwapno: 40 outlets", "Proposal", "৳ 48 L", "Rafiq"], ["Akij Food ERP", "Negotiation", "৳ 72 L", "Sadia"], ["Meghna Logistics", "Qualified", "৳ 21 L", "Nadia"], ["Apex Footwear", "Demo", "৳ 35 L", "Kamal"]]) },
@@ -83,11 +85,11 @@ export const apps: App[] = [
     kpis: [["Active surveys", "3"], ["Responses", "318"], ["Response rate", "77%"], ["eNPS", "+32"]],
     table: t("Surveys", ["Survey", "Responses", "Closes", "Status"], [["Employee engagement 2026", "248", "31 Oct", "Open"], ["Canteen feedback", "52", "26 Oct", "Open"], ["Training needs", "18", "05 Nov", "Open"], ["Pulse: September", "301", "30 Sep", "Closed"]]) },
   { slug: "employees", name: "Employees", icon: UsersRound, tint: ["#A855F7", "#14B8A6"], category: "hrms",
-    kpis: [["Employees", "412"], ["Joined this month", "12"], ["Left this month", "4"], ["Avg. tenure", "3.4 yrs"]],
-    table: t("Employees", ["Name", "Designation", "Department", "Joined"], [["Sadia Islam", "Finance lead", "Finance", "2019"], ["Rafiq Uddin", "Sales manager", "Sales", "2020"], ["Kamal Hasan", "Plant supervisor", "Production", "2017"], ["Nadia Akter", "Procurement officer", "Procurement", "2022"]]) },
+    kpis: shapla.employees.kpis as [string, string][],
+    table: shapla.employees.table },
   { slug: "payroll", name: "Payroll", icon: Wallet, tint: ["#F43F5E", "#9D174D"], category: "hrms",
-    kpis: [["October payroll", "৳ 1.84 Cr"], ["Employees paid", "406"], ["Pending approval", "1 run"], ["Tax withheld", "৳ 9.6 L"]],
-    table: t("Payroll runs", ["Run", "Employees", "Net pay", "Status"], [["October 2026", "406", "৳ 1.84 Cr", "Awaiting approval"], ["September 2026", "402", "৳ 1.81 Cr", "Paid"], ["Festival bonus", "398", "৳ 92 L", "Paid"], ["August 2026", "399", "৳ 1.79 Cr", "Paid"]]) },
+    kpis: shapla.payroll.kpis as [string, string][],
+    table: shapla.payroll.table },
   { slug: "attendance", name: "Attendances", icon: Fingerprint, tint: ["#FBBF24", "#C2410C"], category: "hrms",
     kpis: [["Present", "386"], ["Late", "17"], ["Absent", "12"], ["On time rate", "93%"]],
     table: t("Today", ["Employee", "In", "Out", "Status"], [["Kamal Hasan", "05:52", "Not yet", "On time"], ["Sadia Islam", "09:04", "Not yet", "On time"], ["Tanim Roy", "09:41", "Not yet", "Late"], ["Rina Begum", "None", "None", "Absent"]]) },
@@ -107,10 +109,10 @@ export const apps: App[] = [
     table: t("Requisitions", ["PR", "Requested by", "Value", "Status"], [["PR-1184", "Kamal Hasan", "৳ 4.6 L", "Awaiting approval"], ["PR-1183", "Shuvo Das", "৳ 1.2 L", "Approved"], ["PR-1181", "Rina Begum", "৳ 86,000", "Awaiting approval"], ["PR-1179", "Kamal Hasan", "৳ 9.4 L", "Converted to PO"]]) },
   { slug: "demand", name: "Demand", icon: TrendingUp, tint: ["#4ADE80", "#15803D"], category: "operational",
     kpis: [["Forecast (Nov)", "৳ 4.8 Cr"], ["Accuracy", "91%"], ["Items at risk", "6"], ["Trend vs Oct", "+8%"]],
-    table: t("Demand forecast", ["Product", "Oct actual", "Nov forecast", "Change"], [["Biscuits 200g", "42,000", "46,500", "+11%"], ["Juice 1L", "18,200", "16,900", "−7%"], ["Noodles 4-pack", "31,400", "35,000", "+11%"], ["Chips 50g", "56,000", "58,200", "+4%"]]) },
+    table: t("Demand forecast", ["Product", "Oct actual", "Nov forecast", "Change"], [["Biscuits 200g", "42,000", "46,500", "Up 11%"], ["Juice 1L", "18,200", "16,900", "Down 7%"], ["Noodles 4-pack", "31,400", "35,000", "+11%"], ["Chips 50g", "56,000", "58,200", "+4%"]]) },
   { slug: "sales", name: "Sales", icon: BarChart3, tint: ["#F97316", "#9D174D"], category: "operational",
-    kpis: [["Sales today", "৳ 48.2 L"], ["Orders", "612"], ["Target achieved", "87%"], ["Returns", "1.2%"]],
-    table: t("Sales by region", ["Region", "Today", "MTD", "Target"], [["Dhaka", "৳ 18.4 L", "৳ 4.1 Cr", "92%"], ["Chattogram", "৳ 11.2 L", "৳ 2.6 Cr", "88%"], ["Rangpur", "৳ 6.8 L", "৳ 1.4 Cr", "74%"], ["Sylhet", "৳ 5.1 L", "৳ 1.1 Cr", "81%"]]) },
+    kpis: shapla.sales.kpis as [string, string][],
+    table: shapla.sales.table },
   { slug: "dashboards", name: "Dashboards", icon: PieChart, tint: ["#EC4899", "#0EA5E9"], category: "operational",
     kpis: [["Dashboards", "14"], ["Shared with you", "6"], ["Alerts firing", "3"], ["Refreshed", "2m ago"]],
     table: t("Your dashboards", ["Dashboard", "Owner", "Viewers", "Updated"], [["CEO overview", "Admin", "4", "2m ago"], ["Plant output", "Kamal", "12", "5m ago"], ["Cash position", "Sadia", "3", "1h ago"], ["Field sales", "Rafiq", "28", "Live"]]) },
@@ -121,8 +123,8 @@ export const apps: App[] = [
     kpis: [["Passes today", "38"], ["Vehicles inside", "7"], ["Pending", "3"], ["Visitors", "15"]],
     table: t("Today's passes", ["Pass", "Type", "Vehicle / visitor", "Status"], [["GP-5521", "Goods out", "Dhaka Metro-Ta 11-2034", "Exited"], ["GP-5522", "Visitor", "Akij: 2 persons", "Inside"], ["GP-5523", "Goods in", "Chatta Metro-Ma 14-8890", "Pending"], ["GP-5524", "Returnable", "Pallet jack × 2", "Inside"]]) },
   { slug: "procurement", name: "Procurement", icon: Package, tint: ["#A78BFA", "#581C87"], category: "operational",
-    kpis: [["Open POs", "26"], ["Spend this month", "৳ 1.4 Cr"], ["Late deliveries", "3"], ["Suppliers", "142"]],
-    table: t("Purchase orders", ["PO", "Supplier", "Value", "Status"], [["PO-2291", "Akij Packaging", "৳ 18.6 L", "Approved"], ["PO-2290", "Meghna Flour", "৳ 42.0 L", "In transit"], ["PO-2288", "City Sugar", "৳ 9.8 L", "Late"], ["PO-2285", "Bashundhara Paper", "৳ 6.2 L", "Received"]]) },
+    kpis: shapla.procurement.kpis as [string, string][],
+    table: shapla.procurement.table },
   { slug: "timesheets", name: "Timesheets", icon: Timer, tint: ["#F87171", "#1E40AF"], category: "operational",
     kpis: [["Hours this week", "1,842"], ["Billable", "64%"], ["To approve", "12"], ["Overtime", "96 h"]],
     table: t("Pending timesheets", ["Employee", "Week", "Hours", "Project"], [["Tanim Roy", "43", "46", "Dealer portal"], ["Nadia Akter", "43", "40", "WMS rollout"], ["Shuvo Das", "43", "52", "Warehouse"], ["Rina Begum", "43", "38", "Plant expansion"]]) },
@@ -130,16 +132,16 @@ export const apps: App[] = [
     kpis: [["Bills to pay", "14"], ["Due this week", "৳ 32 L"], ["Paid this month", "৳ 1.1 Cr"], ["Avg. lead time", "6 days"]],
     table: t("Supplier bills", ["Bill", "Supplier", "Due", "Amount"], [["BILL-882", "Meghna Flour", "27 Oct", "৳ 42.0 L"], ["BILL-879", "Akij Packaging", "29 Oct", "৳ 18.6 L"], ["BILL-874", "Titas Gas", "30 Oct", "৳ 3.4 L"], ["BILL-871", "City Sugar", "02 Nov", "৳ 9.8 L"]]) },
   { slug: "inventory", name: "Inventory", icon: Boxes, tint: ["#FB923C", "#7E22CE"], category: "operational",
-    kpis: [["Stock value", "৳ 6.8 Cr"], ["SKUs", "1,284"], ["Low stock", "17"], ["Expiring in 30 days", "9"]],
-    table: t("Low stock", ["Item", "Warehouse", "On hand", "Reorder at"], [["Flour 50kg", "Gazipur", "120", "300"], ["Sugar 50kg", "Gazipur", "85", "200"], ["Carton 12×", "Tongi", "1,400", "5,000"], ["Juice 1L", "Chattogram", "640", "1,000"]]) },
+    kpis: shapla.inventory.kpis as [string, string][],
+    table: shapla.inventory.table },
 
   // Other apps
   { slug: "onboarding", name: "Onboarding/Offboarding", icon: UserCheck, tint: ["#818CF8", "#10B981"], category: "other",
     kpis: [["Joining this month", "12"], ["Leaving", "4"], ["Checklists open", "9"], ["Assets to collect", "6"]],
     table: t("In progress", ["Employee", "Type", "Date", "Progress"], [["Arif Khan", "Onboarding", "27 Oct", "6/10"], ["Mim Sultana", "Onboarding", "01 Nov", "2/10"], ["Habib Rahman", "Offboarding", "31 Oct", "5/8"], ["Lina Das", "Onboarding", "03 Nov", "1/10"]]) },
   { slug: "invoicing", name: "Invoicing", icon: FileText, tint: ["#38BDF8", "#1E40AF"], category: "other",
-    kpis: [["Outstanding", "৳ 2.4 Cr"], ["Overdue", "৳ 38 L"], ["Invoiced this month", "৳ 5.1 Cr"], ["Collected", "82%"]],
-    table: t("Recent invoices", ["Invoice", "Customer", "Amount", "Status"], [["INV-10422", "Shwapno", "৳ 12.4 L", "Paid"], ["INV-10421", "Agora", "৳ 8.6 L", "Sent"], ["INV-10418", "Meena Bazar", "৳ 6.1 L", "Overdue"], ["INV-10415", "Unimart", "৳ 4.9 L", "Paid"]]) },
+    kpis: shapla.invoicing.kpis as [string, string][],
+    table: shapla.invoicing.table },
   { slug: "hr-reporting", name: "HR Reporting", icon: LineChart, tint: ["#FDBA74", "#C2410C"], category: "other",
     kpis: [["Reports", "22"], ["Scheduled", "5"], ["Attrition (12m)", "8.4%"], ["Cost per hire", "৳ 18,500"]],
     table: t("Reports", ["Report", "Frequency", "Last run", "Recipients"], [["Monthly headcount", "Monthly", "01 Oct", "4"], ["Overtime by department", "Weekly", "21 Oct", "6"], ["Leave liability", "Monthly", "01 Oct", "2"], ["Attrition analysis", "Quarterly", "01 Oct", "3"]]) },
