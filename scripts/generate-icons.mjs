@@ -1,17 +1,17 @@
-// Generates the favicon, touch and manifest icons, and the default 1200x630 share image from the brain orb
-// (public/brand/business-brain-orb.png, exported from the design file). Run after changing the logo:
+// Generates the favicon, touch and manifest icons, and the default 1200x630 share image from the nebula
+// brain orb (design file board "15 Brain orb · nebula logo"). Run after changing the logo:
 // node scripts/generate-icons.mjs  (outputs are committed)
 import { writeFile, mkdir } from "node:fs/promises";
 import sharp from "sharp";
 
-// Small icons use the tight orb (public/brand/business-brain-orb-tight.png: the ball with its glow faded
-// out before the edge) so the ball fills the tile; the share card uses the full orb with its glow.
-const orb = await sharp("public/brand/business-brain-orb-tight.png").png().toBuffer();
+// Two masters: the primary orb (sphere A, mark 38%) for 96 px and up, and the small-size orb
+// (sphere B with its calm core, mark 46%) for tab icons, where the busy spiral would hide the mark.
 const fullOrb = await sharp("public/brand/business-brain-orb.png").png().toBuffer();
+const smallOrb = await sharp("public/brand/business-brain-orb-small.png").png().toBuffer();
 const png = (size, bg = "#ffffff", pad = 0.12) => {
   const inner = Math.round(size * (1 - pad * 2));
   const a = Math.floor((size - inner) / 2), b = Math.ceil((size - inner) / 2);
-  let img = sharp(orb).resize(inner, inner).extend({ top: a, bottom: b, left: a, right: b, background: bg ?? { r: 0, g: 0, b: 0, alpha: 0 } });
+  let img = sharp(size <= 64 ? smallOrb : fullOrb).resize(inner, inner).extend({ top: a, bottom: b, left: a, right: b, background: bg ?? { r: 0, g: 0, b: 0, alpha: 0 } });
   if (bg) img = img.flatten({ background: bg });
   return img.png().toBuffer();
 };
@@ -41,7 +41,7 @@ await writeFile("src/app/apple-icon.png", apple);
 await writeFile("public/apple-touch-icon.png", apple); // the URL iOS and many crawlers request directly
 await writeFile("public/icon-192.png", await png(192));
 await writeFile("public/icon-512.png", await png(512));
-await writeFile("src/app/icon.png", await png(192, null, 0)); // <link rel="icon"> for browsers that skip the .ico
+await writeFile("src/app/icon.png", await sharp(smallOrb).resize(192, 192).png().toBuffer()); // <link rel="icon">, shown at tab size
 
 // Default share image in brand colours.
 await mkdir("public/og", { recursive: true });

@@ -146,7 +146,7 @@ export default function Footer() {
       {/* the wordmark, cropped by the bottom edge */}
       <div aria-hidden className="pointer-events-none select-none px-4 sm:px-6">
         <div className="mx-auto flex max-w-[1400px] items-end gap-[1.5vw] whitespace-nowrap leading-[0.8] [margin-bottom:-0.12em] text-[clamp(44px,10.4vw,190px)] font-semibold tracking-[-0.055em]">
-          <BrandMark className="mb-[0.08em] h-[0.72em] w-[0.72em] opacity-90" />
+          <BrandMark large className="mb-[0.08em] h-[0.72em] w-[0.72em]" />
           <span className="text-white/[0.92]">Business Brain</span>
         </div>
       </div>

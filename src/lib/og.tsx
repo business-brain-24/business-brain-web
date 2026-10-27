@@ -5,7 +5,7 @@ import { ImageResponse } from "next/og";
 export const ogSize = { width: 1200, height: 630 };
 
 // The brain orb, inlined so the build-time renderer needs no network.
-const ORB = `data:image/png;base64,${readFileSync(join(process.cwd(), "public/brand/business-brain-orb-tight.png")).toString("base64")}`;
+const ORB = `data:image/png;base64,${readFileSync(join(process.cwd(), "public/brand/business-brain-orb-small.png")).toString("base64")}`;
 
 /** 1200x630 share card in brand colours (orange #FF6B2C, ink #0B0D12). Rendered at build time. */
 export function ogCard({ eyebrow, title, sub }: { eyebrow: string; title: string; sub?: string }) {
