@@ -10,7 +10,7 @@ import { ICON } from "@/lib/icons";
 export const metadata: Metadata = pageMeta(
   "/contact",
   "Contact",
-  "Talk to the Business Brain 24 team about sales, support or partnerships. Call, email or send us a message and we will reply within one working day.",
+  "Talk to the Business Brain team about sales, support or partnerships. Call, email or send us a message and we will reply within one working day.",
 );
 
 export default function Contact() {

@@ -47,7 +47,7 @@ export default function AppsBento() {
         <Head a={web} size={72} />
         <Body>{web.body}</Body>
         <div className="relative -mb-9 -mr-9 mt-8 overflow-hidden rounded-tl-[18px] border border-[rgba(38,45,108,0.08)] bg-white shadow-[0_24px_60px_-30px_rgba(38,45,108,0.45)] sm:ml-16 lg:absolute lg:bottom-0 lg:left-[34%] lg:right-0 lg:m-0 lg:h-[46%]">
-          <Image src="/lp/screens/21-command-centre.webp" alt="Business Brain 24 command centre with sample data" width={1440} height={1502} sizes="(min-width: 1024px) 520px, 100vw" className="w-full" />
+          <Image src="/lp/screens/21-command-centre.webp" alt="Business Brain command centre with sample data" width={1440} height={1502} sizes="(min-width: 1024px) 520px, 100vw" className="w-full" />
         </div>
       </article>
 

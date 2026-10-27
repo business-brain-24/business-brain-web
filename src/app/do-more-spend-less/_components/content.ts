@@ -18,7 +18,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-/** Copy and structure from WEBSITE-CONTEXT.md (Business Brain 24 design work, 26 Oct 2026). */
+/** Copy and structure from WEBSITE-CONTEXT.md (Business Brain design work, 26 Oct 2026). */
 
 export const outcomes: { Icon: LucideIcon; title: string; body: string }[] = [
   { Icon: PackageCheck, title: "Stockouts caught early", body: "Agents watch cover by depot and raise the transfer or PO before the shelf runs dry." },
@@ -44,19 +44,19 @@ export type AppCard = { icon: string; name: string; line: string; who: string; b
 
 /** The app family (WEBSITE-CONTEXT.md section 4). `line` is the short form, `body` the card copy. */
 export const apps: AppCard[] = [
-  { icon: "business-brain-24", name: "Business Brain 24", line: "The web workspace for the whole company.", who: "Every desk in the company",
+  { icon: "business-brain-24", name: "Business Brain", line: "The web workspace for the whole company.", who: "Every desk in the company",
     body: "Command centre, sales, make, buy, money and people on one connected core. Every team works from the same live figures." },
-  { icon: "bb24-brain", name: "BB24 Brain", line: "Your agents and Ask Brain in one place.", who: "Owners and managers",
+  { icon: "bb24-brain", name: "Brain", line: "Your agents and Ask Brain in one place.", who: "Owners and managers",
     body: "Your named agents and Ask Brain together. Ask in Bangla or English; any action comes back as a card for you to approve." },
-  { icon: "bb24-field", name: "BB24 Field", line: "Sales reps and delivery, offline and in Bangla.", who: "Sales reps and delivery",
+  { icon: "bb24-field", name: "Business Field", line: "Sales reps and delivery, offline and in Bangla.", who: "Sales reps and delivery",
     body: "Orders, routes and collections in the field. Works offline and in Bangla." },
-  { icon: "bb24-counter", name: "BB24 Counter", line: "Offline-first POS with batch QR and day close.", who: "Shops and outlets",
+  { icon: "bb24-counter", name: "Business Counter", line: "Offline-first POS with batch QR and day close.", who: "Shops and outlets",
     body: "An offline-first counter with batch QR, day close and franchise settlement." },
-  { icon: "bb24-saathi", name: "BB24 Saathi", line: "Dealers order, pay and track their wallet.", who: "Dealers and distributors",
+  { icon: "bb24-saathi", name: "Business Saathi", line: "Dealers order, pay and track their wallet.", who: "Dealers and distributors",
     body: "Dealers place orders, pay and track their wallet without a phone call." },
-  { icon: "bb24-console", name: "BB24 Console", line: "Operations and approvals on your phone.", who: "Operations heads",
+  { icon: "bb24-console", name: "Business Console", line: "Operations and approvals on your phone.", who: "Operations heads",
     body: "Operations and approvals on your phone, with the decisions that need you at the top." },
-  { icon: "bb24-gateway", name: "BB24 Gateway", line: "API, events and MCP for any app or assistant.", who: "Developers and partners",
+  { icon: "bb24-gateway", name: "Business Gateway", line: "API, events and MCP for any app or assistant.", who: "Developers and partners",
     body: "One identity and scopes for every app, partner system or AI assistant." },
 ];
 

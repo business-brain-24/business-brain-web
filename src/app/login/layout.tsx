@@ -3,7 +3,7 @@ import { noindex } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Log in",
-  description: "Log in to the Business Brain 24 demo workspace to explore sample company data across finance, HR, payroll, inventory, sales and manufacturing apps.",
+  description: "Log in to the Business Brain demo workspace to explore sample company data across finance, HR, payroll, inventory, sales and manufacturing apps.",
   ...noindex,
 };
 

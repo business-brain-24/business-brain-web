@@ -127,7 +127,7 @@ export default function Footer() {
         {/* legal and endorsement */}
         <div className="flex flex-col gap-4 border-t border-white/10 py-6 text-[13px] text-white/45 md:flex-row md:items-center md:justify-between">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <span>© 2026 Business Brain 24</span>
+            <span>© 2026 Business Brain</span>
             <span className="flex items-center gap-2.5">
               Powered by
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -148,7 +148,6 @@ export default function Footer() {
         <div className="mx-auto flex max-w-[1400px] items-end gap-[1.5vw] whitespace-nowrap leading-[0.8] [margin-bottom:-0.12em] text-[clamp(44px,10.4vw,190px)] font-semibold tracking-[-0.055em]">
           <BrandMark className="mb-[0.08em] h-[0.72em] w-[0.72em] opacity-90" />
           <span className="text-white/[0.92]">Business Brain</span>
-          <span className="bg-[linear-gradient(180deg,#FF8A57,#C2410C)] bg-clip-text text-transparent">24</span>
         </div>
       </div>
     </footer>

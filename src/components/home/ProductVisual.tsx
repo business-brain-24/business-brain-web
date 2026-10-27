@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { hero } from "@/lib/shapla-hero";
 import { ICON } from "@/lib/icons";
 
-/* Hero product visual: the Business Brain 24 overview for the demo company, Shapla Foods.
+/* Hero product visual: the Business Brain overview for the demo company, Shapla Foods.
    Built from the site's own tokens (ink, orange, surface, line); every number comes from the
    seed workbook. Entrance uses the CSS bb-fade-up animation so nothing can stay hidden. */
 
@@ -255,7 +255,7 @@ function Window() {
       <div className="flex h-14 items-center gap-4 border-b border-line bg-white px-4">
         <span className="flex items-center gap-2 text-[13px] font-medium text-ink">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.svg" alt="" width={22} height={22} /> Business Brain 24
+          <img src="/logo.svg" alt="" width={22} height={22} /> Business Brain
         </span>
         <nav className="mx-auto hidden items-center gap-1 md:flex" aria-hidden>
           {TABS.map((t, i) => (
@@ -303,7 +303,7 @@ function Window() {
 
 export default function ProductVisual() {
   return (
-    <div className="relative w-full px-3 pb-8 sm:px-6" role="img" aria-label="Business Brain 24 overview for Shapla Foods, a demo company">
+    <div className="relative w-full px-3 pb-8 sm:px-6" role="img" aria-label="Business Brain overview for Shapla Foods, a demo company">
       {/* floor: a faint perspective grid in the site's line colour */}
       <div
         aria-hidden

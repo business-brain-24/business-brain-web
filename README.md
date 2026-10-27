@@ -1,6 +1,6 @@
-# Business Brain 24
+# Business Brain
 
-Marketing site and interactive demo for **Business Brain 24 (BB-24)**, an AI-centric ERP for growing businesses in Bangladesh. It covers HR, payroll, finance, purchasing, inventory, sales and manufacturing, with conversational AI on top.
+Marketing site and interactive demo for **Business Brain**, an AI-centric ERP for growing businesses in Bangladesh. It covers HR, payroll, finance, purchasing, inventory, sales and manufacturing, with conversational AI on top.
 
 Built with Next.js 15 (App Router), React 19, TypeScript, Tailwind CSS 4, Framer Motion and Lucide icons.
 

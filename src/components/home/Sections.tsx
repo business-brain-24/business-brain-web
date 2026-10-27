@@ -86,7 +86,7 @@ export function WhyUs() {
     <section className="bg-surface py-24 sm:py-32">
       <div ref={ref} className="container-x grid gap-12 md:grid-cols-[1fr_1.4fr] md:gap-20">
         <div className="min-w-0 md:sticky md:top-32 md:self-start">
-          <Label>Why Business Brain 24</Label>
+          <Label>Why Business Brain</Label>
           <h2 className="h-section mt-3">More answers. Less chasing reports.</h2>
           <p className="mt-4 max-w-[380px] text-[16px] leading-[26px] text-muted">
             One live record and an AI that reads all of it, so the answer is always one question away.
@@ -470,7 +470,7 @@ export function WatchTower() {
           <p className="mt-4 max-w-[560px] text-[16px] leading-[26px] text-muted">
             An interactive, live map of your whole operation: field force, branches, orders and vehicles. New orders pop up as they happen, leaderboards
             show your top performers, and you can ask the AI questions such as &ldquo;Which region is behind target today?&rdquo; Watch Tower comes with
-            Business Brain 24.
+            Business Brain.
           </p>
         </div>
         <Reveal>

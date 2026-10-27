@@ -22,9 +22,9 @@ export function BrandMark({ className }: { className?: string }) {
 
 export function Logo({ className }: { className?: string }) {
   return (
-    <Link href="/" className={clsx("flex items-center gap-2.5", className)} aria-label="Business Brain 24 home">
+    <Link href="/" className={clsx("flex items-center gap-2.5", className)} aria-label="Business Brain home">
       <BrandMark className="h-[30px] w-[30px]" />
-      <span className="whitespace-nowrap text-[15px] font-medium tracking-[-0.01em]">Business Brain 24</span>
+      <span className="whitespace-nowrap text-[15px] font-medium tracking-[-0.01em]">Business Brain</span>
     </Link>
   );
 }

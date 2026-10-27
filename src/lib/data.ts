@@ -931,7 +931,7 @@ export const stories: Story[] = [
     company: "Urmi Group",
     industry: "Garments & Textile",
     badge: "Fully delivered",
-    title: "Urmi Group runs its garments business on Business Brain 24.",
+    title: "Urmi Group runs its garments business on Business Brain.",
     summary: "One of Bangladesh’s leading apparel groups, delivered end to end and live across the business.",
     image: "/customers/urmi/factory.jpg",
     logo: "/customers/urmi/logo.png",

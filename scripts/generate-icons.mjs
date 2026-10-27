@@ -47,7 +47,7 @@ const card = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="1200" h
   <defs><radialGradient id="g" cx="0.9" cy="0.1" r="0.7"><stop offset="0" stop-color="#FF6B2C" stop-opacity="0.35"/><stop offset="1" stop-color="#FF6B2C" stop-opacity="0"/></radialGradient></defs>
   <rect width="1200" height="630" fill="#0B0D12"/><rect width="1200" height="630" fill="url(#g)"/>
   <rect x="72" y="72" width="180" height="180" rx="36" fill="#ffffff"/>
-  <text x="72" y="380" font-family="Helvetica, Arial, sans-serif" font-size="76" font-weight="700" fill="#ffffff" letter-spacing="-2">Business Brain 24</text>
+  <text x="72" y="380" font-family="Helvetica, Arial, sans-serif" font-size="76" font-weight="700" fill="#ffffff" letter-spacing="-2">Business Brain</text>
   <text x="72" y="455" font-family="Helvetica, Arial, sans-serif" font-size="40" fill="#FF6B2C">Do more. Spend less.</text>
   <text x="72" y="520" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#ffffff" fill-opacity="0.65">The agentic ERP that cuts operating costs</text>
   <text x="72" y="562" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#ffffff" fill-opacity="0.65">and lifts productivity across your enterprise.</text>

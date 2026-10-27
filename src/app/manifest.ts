@@ -4,8 +4,8 @@ export const dynamic = "force-static";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Business Brain 24",
-    short_name: "BB24",
+    name: "Business Brain",
+    short_name: "Business Brain",
     description: "The agentic ERP that cuts operating costs and lifts productivity across your enterprise.",
     start_url: "/",
     display: "standalone",

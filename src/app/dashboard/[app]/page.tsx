@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ app: stri
   if (!a) return {};
   return {
     title: a.name,
-    description: fitDescription(`${a.name} in the Business Brain 24 demo workspace: ${a.table.title.toLowerCase()} and live KPIs on sample company data.`, [
+    description: fitDescription(`${a.name} in the Business Brain demo workspace: ${a.table.title.toLowerCase()} and live KPIs on sample company data.`, [
       "Every app shares one connected record.",
       "Ask Brain AI about any number you see.",
       "Explore it freely; nothing here is real.",

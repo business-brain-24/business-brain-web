@@ -1,6 +1,6 @@
 import { appCatalog, appCount, contact, groups, industries, products, stories } from "@/lib/data";
 
-/* A small, rule-based "assistant" that answers questions about Business Brain 24
+/* A small, rule-based "assistant" that answers questions about Business Brain
    from the site's own data. Demo only: no network calls. */
 
 export type Unit = "bdt" | "count" | "pct" | "kg" | "tonnes" | "min" | "days";
@@ -66,7 +66,7 @@ const findIndustry = (q: string) =>
 const stop = new Set(["there", "their", "which", "about", "would", "could", "should", "where", "business", "brain"]);
 
 export const starters = [
-  "What is Business Brain 24?",
+  "What is Business Brain?",
   "Can I connect ChatGPT or Claude?",
   "What is Watch Tower?",
   "How can it help my business?",
@@ -99,7 +99,7 @@ export function answer(raw: string): Reply {
   // MCP / bring your own AI
   if (has(q, "mcp", "chatgpt", "claude", "openai", "own ai", "my ai", "connect ai", /gpt/)) {
     return {
-      text: "Business Brain 24 has its own MCP server. It plugs ChatGPT or Claude into your ERP, so you can use the AI assistant you already know with your own data, within the access you set.",
+      text: "Business Brain has its own MCP server. It plugs ChatGPT or Claude into your ERP, so you can use the AI assistant you already know with your own data, within the access you set.",
       bullets: [
         "Works with ChatGPT and Claude",
         "Answers come from your live ERP data",
@@ -114,7 +114,7 @@ export function answer(raw: string): Reply {
   // Watch Tower
   if (has(q, "watch tower", "watchtower", "control centre", "control center", "live map", "leaderboard", "truck", "field force", "field sales")) {
     return {
-      text: "Watch Tower is your AI control centre: an interactive, live map of your whole operation, including field force, branches, orders and trucks. It comes with Business Brain 24.",
+      text: "Watch Tower is your AI control centre: an interactive, live map of your whole operation, including field force, branches, orders and trucks. It comes with Business Brain.",
       bullets: [
         "New orders pop up on the map as they happen",
         "Leaderboards show your top performers",
@@ -128,7 +128,7 @@ export function answer(raw: string): Reply {
   // Bangladesh compliance
   if (has(q, "bangladesh", "labour", "labor", "income tax", "supplementary duty", "compliance", "nbr", "mushak")) {
     return {
-      text: "Business Brain 24 is configured for Bangladesh. Labour law, income tax, VAT and supplementary duty are built into HR, payroll and finance.",
+      text: "Business Brain is configured for Bangladesh. Labour law, income tax, VAT and supplementary duty are built into HR, payroll and finance.",
       bullets: [
         "Payroll on Bangladesh rules: attendance, leave and tax deductions in one run",
         "VAT and supplementary duty in purchasing, sales and finance",
@@ -142,7 +142,7 @@ export function answer(raw: string): Reply {
   // implementation / migration
   if (has(q, "setup", "set up", "implement", "go live", "go-live", "onboard", "migrat", "tally", "quickbooks", "excel", "how long", "training", "how does it work", "process")) {
     return {
-      text: "Implementation is modular. We configure Business Brain 24 to your workflows in six steps:",
+      text: "Implementation is modular. We configure Business Brain to your workflows in six steps:",
       bullets: [
         "1. Assess requirements",
         "2. Select modules",
@@ -159,7 +159,7 @@ export function answer(raw: string): Reply {
   // Brain AI
   if (has(q, /\bai\b/, "assistant", /\bchat/, /\bask\b/, "gpt", "insight")) {
     return {
-      text: "AI is at the core of Business Brain 24. Ask questions in plain words, in Bangla or English, and get answers and charts straight from your data.",
+      text: "AI is at the core of Business Brain. Ask questions in plain words, in Bangla or English, and get answers and charts straight from your data.",
       bullets: [
         "“What were yesterday’s sales by branch?” answered from live data",
         "Cross-module insights, demand forecasting and audit anomaly flags",
@@ -188,7 +188,7 @@ export function answer(raw: string): Reply {
   // security
   if (has(q, "secur", "safe", "data", "privacy", "cloud", "on-prem", "backup", "hosting")) {
     return {
-      text: "Your data stays yours. Business Brain 24 runs in the cloud or on-premise. The deployment option is agreed during scoping.",
+      text: "Your data stays yours. Business Brain runs in the cloud or on-premise. The deployment option is agreed during scoping.",
       bullets: [
         "Role-based access with activity tracking",
         "Company, branch and warehouse-level reporting",
@@ -231,7 +231,7 @@ export function answer(raw: string): Reply {
   if (industry || has(q, "industry", "industries", "sector")) {
     if (!industry) {
       return {
-        text: `Business Brain 24 comes pre-configured for ${industries.length} industries, each with the right modules and reports switched on.`,
+        text: `Business Brain comes pre-configured for ${industries.length} industries, each with the right modules and reports switched on.`,
         bullets: industries.map((i) => `${i.name}: ${i.short}`),
         links: [{ label: "Browse industries", href: "/industries" }],
         follow: ["How does it work for garments?", "How does it work for retail?", "Which modules do you have?"],
@@ -259,7 +259,7 @@ export function answer(raw: string): Reply {
   // modules / features overview
   if (has(q, "module", "product", "feature", "what do you have", "what can it do", "offer", "include", "list")) {
     return {
-      text: `Business Brain 24 has ${products.length} products in ${groups.length} groups. Start with the ones you need: each one you add later already knows your data.`,
+      text: `Business Brain has ${products.length} products in ${groups.length} groups. Start with the ones you need: each one you add later already knows your data.`,
       bullets: groups.map((g) => `${g}: ${products.filter((p) => p.group === g).map((p) => p.name).join(", ")}`),
       links: [{ label: "Explore all products", href: "/products" }],
       follow: ["Tell me about Accounting", "Tell me about Inventory", "How can it help my business?"],
@@ -284,7 +284,7 @@ export function answer(raw: string): Reply {
   // customers
   if (has(q, "customer", "client", "who use", "case stud", "success", "akboria", "urmi", "reference")) {
     return {
-      text: "A couple of the businesses running on Business Brain 24:",
+      text: "A couple of the businesses running on Business Brain:",
       bullets: stories.map((s) => `${s.company} (${s.industry}): ${s.summary}`),
       links: [{ label: "Read success stories", href: "/customers" }],
       follow: ["What is Watch Tower?", "How does it work?", "Book a fit session"],
@@ -294,13 +294,13 @@ export function answer(raw: string): Reply {
   // what is it / overview / greeting
   if (has(q, "what is", "about", "overview", "explain", "business brain", "hello", "hi ", "hey")) {
     return {
-      text: "Business Brain 24 is the agentic ERP that cuts operating costs and lifts productivity across your enterprise. It brings HR, payroll, finance, purchasing, inventory, sales and manufacturing into one live record, with AI at the core, and our own MCP server lets you connect ChatGPT or Claude. Configured to your workflows and Bangladesh rules.",
+      text: "Business Brain is the agentic ERP that cuts operating costs and lifts productivity across your enterprise. It brings HR, payroll, finance, purchasing, inventory, sales and manufacturing into one live record, with AI at the core, and our own MCP server lets you connect ChatGPT or Claude. Configured to your workflows and Bangladesh rules.",
       follow: ["Can I connect ChatGPT or Claude?", "What is Watch Tower?", "How can it help my business?"],
     };
   }
 
   return {
-    text: "I can tell you about Business Brain 24: what it does, which modules it has, how it would help your business, pricing and setup. What would you like to know?",
+    text: "I can tell you about Business Brain: what it does, which modules it has, how it would help your business, pricing and setup. What would you like to know?",
     follow: starters,
   };
 }

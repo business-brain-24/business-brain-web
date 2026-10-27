@@ -1,4 +1,4 @@
-Shapla Foods Ltd — seed data for Business Brain 24
+Shapla Foods Ltd — seed data for Business Brain
 Fictional FMCG company in Bangladesh. All names, phones (010 prefix, not allocated in BD), emails (.test) and barcodes are dummy.
 Period: 1 Jul – 25 Oct 2026 (Fridays off). Currency BDT. VAT % and salary split (basic 50%, house rent 25%, medical 10%) are illustrative, not tax or labour advice.
 Tables and keys:

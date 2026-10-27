@@ -9,7 +9,7 @@ export function ogCard({ eyebrow, title, sub }: { eyebrow: string; title: string
       <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", padding: 72, background: "#0B0D12", color: "#fff", fontFamily: "sans-serif" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
           <div style={{ width: 44, height: 44, borderRadius: 10, background: "linear-gradient(180deg,#FF6B2C 50%,#C2410C 100%)" }} />
-          <div style={{ fontSize: 30, fontWeight: 600 }}>Business Brain 24</div>
+          <div style={{ fontSize: 30, fontWeight: 600 }}>Business Brain</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: 28, color: "#FF6B2C" }}>{eyebrow}</div>

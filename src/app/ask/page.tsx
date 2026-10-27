@@ -293,7 +293,7 @@ export default function Ask() {
           <button onClick={() => setSidebar(true)} className="flex h-9 w-9 items-center justify-center rounded-lg text-muted hover:bg-surface lg:hidden" aria-label="Open sidebar">
             <PanelLeft size={ICON.lg} />
           </button>
-          <Link href="/" aria-label="Business Brain 24 home" className="flex h-8 w-8 items-center justify-center lg:hidden">
+          <Link href="/" aria-label="Business Brain home" className="flex h-8 w-8 items-center justify-center lg:hidden">
             <BrandMark className="h-8 w-8" />
           </Link>
           <p className="text-[15px] font-medium">Shapla assistant</p>

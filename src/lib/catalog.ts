@@ -8,7 +8,7 @@ export type Catalogue = { id: string; name: string; tagline: string; modules: Mo
 const betopia: Catalogue = {
   id: "betopia",
   name: "Betopia ERP",
-  tagline: "The full Business Brain 24 suite as Betopia runs it: 55 apps across operations, people, everyday collaboration and specialised work.",
+  tagline: "The full Business Brain suite as Betopia runs it: 55 apps across operations, people, everyday collaboration and specialised work.",
   modules: [
     {
       name: "Operational",
