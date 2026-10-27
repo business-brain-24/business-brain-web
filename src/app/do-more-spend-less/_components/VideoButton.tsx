@@ -39,7 +39,7 @@ export default function VideoButton() {
         <div
           role="dialog"
           aria-modal="true"
-          aria-label="Business Brain 24 intro video"
+          aria-label="Business Brain intro video"
           onClick={() => setOpen(false)}
           className="fixed inset-0 z-[80] flex items-center justify-center bg-[#13173B]/60 p-4 backdrop-blur-md"
         >

@@ -8,19 +8,19 @@ const description =
   "One brain for factory, stock, sales and money. AI agents read live figures, propose the next step and act only through your approvals. Book a demo.";
 
 export const metadata: Metadata = {
-  title: { absolute: `${title} · Business Brain 24` },
+  title: { absolute: `${title} · Business Brain` },
   description,
   alternates: { canonical: "/do-more-spend-less" },
   openGraph: {
-    title: "Business Brain 24 · The agentic ERP",
+    title: "Business Brain · The agentic ERP",
     description,
     url: "/do-more-spend-less",
-    images: [{ url: "/lp/og.jpg", width: 1200, height: 630, alt: "Business Brain 24. Do More. Spend Less." }],
+    images: [{ url: "/lp/og.jpg", width: 1200, height: 630, alt: "Business Brain. Do More. Spend Less." }],
   },
   twitter: { card: "summary_large_image", images: ["/lp/og.jpg"] },
 };
 
-/** Campaign landing page in the Business Brain 24 glass design (WEBSITE-CONTEXT.md, 26 Oct 2026). */
+/** Campaign landing page in the Business Brain glass design (WEBSITE-CONTEXT.md, 26 Oct 2026). */
 export default function DoMoreSpendLess() {
   return (
     <>

@@ -178,7 +178,7 @@ Legend: ✅ done in code · 🔶 done, needs a check after deploy · ⏳ waiting
 | Instruction | Status | Where |
 | --- | --- | --- |
 | Remove Use Case section | ✅ | `UseCases` removed from `home/Sections.tsx` and `app/page.tsx` |
-| Remove "Clear approvals, one record" from Why Business Brain 24 | ✅ | `WhyUs` items |
+| Remove "Clear approvals, one record" from Why Business Brain | ✅ | `WhyUs` items |
 | Remove the buttons under "Built for your business" | ✅ | Deployment pills removed from `Compliance` |
 | Remove Customer section from landing page | ✅ | `Reviews` removed; stories still at `/customers` |
 | Watch Tower: redesign or a glimpse of the actual portal | ⏳ Need portal screenshots | Copy updated to the doc's wording; the live portal needs a sign-in |

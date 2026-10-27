@@ -4,7 +4,7 @@ import { ogCard, ogSize } from "@/lib/og";
 export const dynamic = "force-static";
 export const size = ogSize;
 export const contentType = "image/png";
-export const alt = "Business Brain 24 industry";
+export const alt = "Business Brain industry";
 
 export function generateStaticParams() {
   return industries.map((i) => ({ slug: i.slug }));

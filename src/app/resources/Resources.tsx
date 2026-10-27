@@ -60,7 +60,7 @@ export default function Resources() {
           <div className="flex flex-col justify-between gap-6 rounded-[20px] bg-surface p-7 sm:p-10 md:flex-row md:items-center">
             <div>
               <h2 className="text-[24px] font-medium tracking-[-0.02em]">Guides and stories are on the way.</h2>
-              <p className="mt-1 text-[15px] text-muted">Meanwhile, read how our customers run on Business Brain 24.</p>
+              <p className="mt-1 text-[15px] text-muted">Meanwhile, read how our customers run on Business Brain.</p>
             </div>
             <Button href="/customers">Success stories</Button>
           </div>
@@ -81,7 +81,7 @@ export default function Resources() {
               <div>
                 <p className="text-[13px] text-orange">Featured · Customer story</p>
                 <h2 className="mt-3 text-[28px] font-medium leading-[34px] tracking-[-0.03em]">How Northloom closed the month in one afternoon</h2>
-                <p className="mt-3 text-[15px] text-muted">2,400 employees, 4 factories, 6 tools replaced. A look at their 6-week move to Business Brain 24.</p>
+                <p className="mt-3 text-[15px] text-muted">2,400 employees, 4 factories, 6 tools replaced. A look at their 6-week move to Business Brain.</p>
               </div>
               <span className="text-[15px] font-medium">Read story →</span>
             </div>

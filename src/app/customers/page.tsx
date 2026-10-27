@@ -10,7 +10,7 @@ import CTA from "@/components/ui/CTA";
 export const metadata: Metadata = pageMeta(
   "/customers",
   "Success stories",
-  "How Bangladeshi companies run on Business Brain 24. Read how Akboria and Urmi Group connected sales, production, stores, finance and people in one ERP.",
+  "How Bangladeshi companies run on Business Brain. Read how Akboria and Urmi Group connected sales, production, stores, finance and people in one ERP.",
 );
 
 export default function Customers() {
@@ -21,7 +21,7 @@ export default function Customers() {
         <SplitHeading text="Companies that run on one brain." className="h-display mt-4 max-w-[900px]" />
         <Reveal delay={0.3}>
           <p className="mt-5 max-w-[560px] text-[17px] leading-[27px] text-muted">
-            Case studies from factories, showrooms and field teams that replaced spreadsheets and disconnected tools with Business Brain 24.
+            Case studies from factories, showrooms and field teams that replaced spreadsheets and disconnected tools with Business Brain.
           </p>
         </Reveal>
       </section>

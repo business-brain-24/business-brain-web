@@ -9,7 +9,7 @@ import { ICON } from "@/lib/icons";
 export const metadata: Metadata = pageMeta(
   "/careers",
   "Careers",
-  "Join the Business Brain 24 team and build the AI-centric ERP that runs growing businesses in Bangladesh. See open roles and how we work together.",
+  "Join the Business Brain team and build the AI-centric ERP that runs growing businesses in Bangladesh. See open roles and how we work together.",
 );
 
 const roles = [

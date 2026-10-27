@@ -10,7 +10,7 @@ import CTA from "@/components/ui/CTA";
 export const metadata: Metadata = pageMeta(
   "/customers/akboria",
   "Akboria · Customer story",
-  "How Akboria, a sweets brand founded in 1911, runs field sales, showroom POS, central store, production and procurement on one Business Brain 24 system.",
+  "How Akboria, a sweets brand founded in 1911, runs field sales, showroom POS, central store, production and procurement on one Business Brain system.",
 );
 
 const live = countItems(akboriaDelivered);
@@ -62,7 +62,7 @@ export default function Story() {
           <Reveal>
             <p className="text-[13px] font-medium text-orange">The solution</p>
             <p className="mt-3 text-[18px] leading-[30px]">
-              Business Brain 24 connects the whole chain: field and showroom demand flow into the central store, drive the production plan, trigger purchasing from approved vendors, and roll up into a live management dashboard.
+              Business Brain connects the whole chain: field and showroom demand flow into the central store, drive the production plan, trigger purchasing from approved vendors, and roll up into a live management dashboard.
             </p>
           </Reveal>
           <div>

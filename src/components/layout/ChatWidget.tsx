@@ -43,10 +43,10 @@ export default function ChatWidget() {
     ou("init", {
       deploymentId: DEPLOYMENT_ID,
       position: "bottom-right",
-      // Omazy's widget settings paint the bubble in the bb24 brand orange once the chat frame
+      // Omazy's widget settings paint the bubble in the Business Brain orange once the chat frame
       // boots, so the mark is the all-white version, which reads on orange and on ink.
       primaryColor: "#F47A2A",
-      launcherIcon: { kind: "image", url: "/brand/bb24-mark-white.svg" },
+      launcherIcon: { kind: "image", url: "/brand/business-brain-mark-white.svg" },
     });
   }, []);
 

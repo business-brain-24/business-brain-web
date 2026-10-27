@@ -8,7 +8,7 @@ import CTA from "@/components/ui/CTA";
 export const metadata: Metadata = pageMeta(
   "/customers/northloom",
   "Northloom Textiles · Customer story",
-  "How Northloom Textiles replaced six tools with Business Brain 24 and closed the month in one afternoon across four factories and 2,400 employees.",
+  "How Northloom Textiles replaced six tools with Business Brain and closed the month in one afternoon across four factories and 2,400 employees.",
 );
 
 export default function Story() {
@@ -39,7 +39,7 @@ export default function Story() {
         <div className="space-y-12">
           {[
             ["The challenge", "Four factories ran on six tools: Tally for accounts, Excel for payroll, a separate attendance system and paper-based store registers. Month-end took five days, and the CFO never fully trusted the numbers."],
-            ["The solution", "Business Brain 24 went live in six weeks: HRMS and Payroll first, then Inventory, Procurement and Accounting. Every product writes to one ledger, so the books close themselves as the factory runs."],
+            ["The solution", "Business Brain went live in six weeks: HRMS and Payroll first, then Inventory, Procurement and Accounting. Every product writes to one ledger, so the books close themselves as the factory runs."],
           ].map(([t, b]) => (
             <Reveal key={t}>
               <p className="text-[13px] font-medium text-orange">{t}</p>

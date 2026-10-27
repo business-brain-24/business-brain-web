@@ -37,11 +37,11 @@ export default function FinalCta() {
 
       <div className="container-x flex flex-col pb-16 pt-[86vw] sm:pt-[58vw] lg:min-h-[min(92vh,820px)] lg:justify-center lg:py-28">
         <div className={clsx(s.glassStrong, "w-full max-w-[580px] !rounded-[28px] p-7 sm:p-10")}>
-          <p className={s.eyebrow}>Business Brain 24</p>
+          <p className={s.eyebrow}>Business Brain</p>
           <h2 className={clsx(s.display, "mt-3 text-[36px] font-semibold leading-[1.05] text-[#161928] sm:text-[56px]")}>
             From factory to shelf, <span className={s.accent}>one brain.</span>
           </h2>
-          <p className="mt-4 text-[17px] leading-[27px] text-[#5D6380]">Book a session and see your own operation on Business Brain 24.</p>
+          <p className="mt-4 text-[17px] leading-[27px] text-[#5D6380]">Book a session and see your own operation on Business Brain.</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link href="/demo" data-cta className={clsx(s.btnNavy, "inline-flex h-12 items-center justify-center gap-2 px-6 text-[16px] font-semibold")}>
               Book a demo <ArrowRight size={18} />

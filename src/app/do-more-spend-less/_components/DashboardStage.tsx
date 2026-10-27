@@ -66,7 +66,7 @@ export default function DashboardStage() {
       <Floor />
 
       <div className="container-x relative">
-        <p className={clsx(s.eyebrow, "text-center")}>Inside Business Brain 24</p>
+        <p className={clsx(s.eyebrow, "text-center")}>Inside Business Brain</p>
         <h2 className={clsx(s.display, "mx-auto mt-3 max-w-[760px] text-center text-[30px] font-semibold leading-[1.1] text-[#161928] sm:text-[44px]")}>
           Run the whole company <span className={s.accent}>from one brain.</span>
         </h2>
@@ -79,7 +79,7 @@ export default function DashboardStage() {
         >
           {wide && (
             <>
-              <Phone src="m1-home" alt="Business Brain 24 mobile home with sample data" side="left" y={reduce ? 0 : sideY} />
+              <Phone src="m1-home" alt="Business Brain mobile home with sample data" side="left" y={reduce ? 0 : sideY} />
               <Phone src="m6-agents" alt="Agents on mobile with sample data" side="right" y={reduce ? 0 : sideY} />
             </>
           )}

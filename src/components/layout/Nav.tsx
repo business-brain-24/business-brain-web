@@ -15,16 +15,17 @@ import UserMenu from "@/components/layout/UserMenu";
 import { useUser } from "@/lib/session";
 import { ICON } from "@/lib/icons";
 
+/** The brain orb, the web and UI logo. The flat two-colour mark (/logo.svg) stays for the hero art and one-colour uses. */
 export function BrandMark({ className }: { className?: string }) {
   // eslint-disable-next-line @next/next/no-img-element
-  return <img src="/logo.svg" alt="" width={30} height={30} className={clsx("shrink-0", className)} />;
+  return <img src="/brand/business-brain-orb-128.webp" alt="" width={30} height={30} className={clsx("shrink-0", className)} />;
 }
 
 export function Logo({ className }: { className?: string }) {
   return (
-    <Link href="/" className={clsx("flex items-center gap-2.5", className)} aria-label="Business Brain 24 home">
+    <Link href="/" className={clsx("flex items-center gap-2.5", className)} aria-label="Business Brain home">
       <BrandMark className="h-[30px] w-[30px]" />
-      <span className="whitespace-nowrap text-[15px] font-medium tracking-[-0.01em]">Business Brain 24</span>
+      <span className="whitespace-nowrap text-[15px] font-medium tracking-[-0.01em]">Business Brain</span>
     </Link>
   );
 }

@@ -94,9 +94,9 @@ export default function Hero() {
           </span>
 
           {/* headline: brand line, then the promise with the payoff in orange */}
-          <h1 aria-label="Business Brain 24: Do More. Spend Less." className="mt-5 font-medium tracking-[-0.045em] text-black">
+          <h1 aria-label="Business Brain: Do More. Spend Less." className="mt-5 font-medium tracking-[-0.045em] text-black">
             <span aria-hidden className="block overflow-hidden pb-1 text-[20px] leading-[26px] tracking-[-0.02em] text-[#545A66] sm:text-[22px] sm:leading-[28px]">
-              <span className="bb-rise inline-block">Business Brain 24</span>
+              <span className="bb-rise inline-block">Business Brain</span>
             </span>
             <span aria-hidden className="mt-1 block text-[42px] leading-[46px] sm:text-[56px] sm:leading-[60px] lg:text-[64px] lg:leading-[68px]">
               {["Do", "More."].map((w, i) => (

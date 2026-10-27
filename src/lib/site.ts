@@ -2,7 +2,7 @@ import { industries, products, stories } from "./data";
 
 /** The only public host. www and pages.dev copies redirect here or carry noindex. */
 export const SITE_URL = "https://businessbrain24.com";
-export const SITE_NAME = "Business Brain 24";
+export const SITE_NAME = "Business Brain";
 export const SITE_EMAIL = "hello@businessbrain24.com";
 
 export const absolute = (path: string) => `${SITE_URL}${path === "/" ? "" : path}`;

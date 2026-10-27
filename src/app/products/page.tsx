@@ -10,7 +10,7 @@ import ModuleCatalogue from "@/components/products/ModuleCatalogue";
 export const metadata: Metadata = pageMeta(
   "/products",
   "Products",
-  "Every Business Brain 24 module in one connected ERP: accounting, procurement, inventory, sales, manufacturing, HRMS and payroll, with AI at the core.",
+  "Every Business Brain module in one connected ERP: accounting, procurement, inventory, sales, manufacturing, HRMS and payroll, with AI at the core.",
 );
 
 export default function ProductsIndex() {

@@ -9,7 +9,7 @@ import CTA from "@/components/ui/CTA";
 export const metadata: Metadata = pageMeta(
   "/industries",
   "Industries",
-  "Business Brain 24 configured for your industry: manufacturing, garments, pharma, retail, distribution and more, with the modules each one needs from day one.",
+  "Business Brain configured for your industry: manufacturing, garments, pharma, retail, distribution and more, with the modules each one needs from day one.",
 );
 
 export default function IndustriesIndex() {

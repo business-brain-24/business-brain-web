@@ -1,10 +1,10 @@
-# Business Brain (BB-24): Persistent Codebase Memory
+# Business Brain: Persistent Codebase Memory
 
 > **Last Updated**: 2026-10-17
 > **Status**: Active & Evergreen
 
 ## 1. Project Identity & Philosophy
-- **Identity**: Next.js 15 enterprise SaaS web application for Business Brain (BB-24), an AI-driven operational intelligence & ERP system.
+- **Identity**: Next.js 15 enterprise SaaS web application for Business Brain, an AI-driven operational intelligence & ERP system.
 - **Promise**: Unifying accounting, procurement, budget, inventory, HR, sales, and manufacturing with conversational AI queries ("Ask Business Brain") and real-time operational insights.
 - **Architecture**: Next.js App Router (15.5.28), React 19, TypeScript, Lucide Icons, and modern design system.
 
