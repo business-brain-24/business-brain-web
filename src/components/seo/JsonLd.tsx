@@ -15,7 +15,7 @@ export const organizationLd: Ld = {
   "@id": `${SITE_URL}/#organization`,
   name: SITE_NAME,
   url: SITE_URL,
-  logo: absolute("/logo.svg"),
+  logo: absolute("/brand/business-brain-orb-512.png"),
   email: SITE_EMAIL,
   telephone: contact.phone.replace(/[\s-]/g, ""),
   contactPoint: [{ "@type": "ContactPoint", telephone: contact.phone.replace(/[\s-]/g, ""), email: SITE_EMAIL, contactType: "sales", areaServed: "BD" }],

@@ -15,9 +15,10 @@ import UserMenu from "@/components/layout/UserMenu";
 import { useUser } from "@/lib/session";
 import { ICON } from "@/lib/icons";
 
+/** The brain orb, the web and UI logo. The flat two-colour mark (/logo.svg) stays for the hero art and one-colour uses. */
 export function BrandMark({ className }: { className?: string }) {
   // eslint-disable-next-line @next/next/no-img-element
-  return <img src="/logo.svg" alt="" width={30} height={30} className={clsx("shrink-0", className)} />;
+  return <img src="/brand/business-brain-orb-128.webp" alt="" width={30} height={30} className={clsx("shrink-0", className)} />;
 }
 
 export function Logo({ className }: { className?: string }) {

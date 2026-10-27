@@ -1,6 +1,11 @@
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
 export const ogSize = { width: 1200, height: 630 };
+
+// The brain orb, inlined so the build-time renderer needs no network.
+const ORB = `data:image/png;base64,${readFileSync(join(process.cwd(), "public/brand/business-brain-orb-tight.png")).toString("base64")}`;
 
 /** 1200x630 share card in brand colours (orange #FF6B2C, ink #0B0D12). Rendered at build time. */
 export function ogCard({ eyebrow, title, sub }: { eyebrow: string; title: string; sub?: string }) {
@@ -8,7 +13,8 @@ export function ogCard({ eyebrow, title, sub }: { eyebrow: string; title: string
     (
       <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", padding: 72, background: "#0B0D12", color: "#fff", fontFamily: "sans-serif" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <div style={{ width: 44, height: 44, borderRadius: 10, background: "linear-gradient(180deg,#FF6B2C 50%,#C2410C 100%)" }} />
+          {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
+          <img src={ORB} width={48} height={48} />
           <div style={{ fontSize: 30, fontWeight: 600 }}>Business Brain</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>

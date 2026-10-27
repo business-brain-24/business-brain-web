@@ -167,7 +167,7 @@ export function Trust() {
             <p className={clsx(s.mono, "text-[11px] uppercase tracking-[0.14em] text-[#8E98D3]")}>Headless gateway · API sample</p>
             <pre className={clsx(s.mono, "mt-4 overflow-x-auto whitespace-pre text-[13px] leading-[21px]")}>
               <span className="text-[#55C7C7]">GET</span> /v1/brands/alpen/sales?period=mtd{"\n"}
-              <span className="text-[#8E98D3]">Authorization: Bearer bb24_live_••••</span>
+              <span className="text-[#8E98D3]">Authorization: Bearer bb_live_••••</span>
               {"\n\n"}
               <span className="text-[#55C7C7]">200 OK</span>
               {"\n"}

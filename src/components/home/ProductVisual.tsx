@@ -255,7 +255,7 @@ function Window() {
       <div className="flex h-14 items-center gap-4 border-b border-line bg-white px-4">
         <span className="flex items-center gap-2 text-[13px] font-medium text-ink">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.svg" alt="" width={22} height={22} /> Business Brain
+          <img src="/brand/business-brain-orb-128.webp" alt="" width={22} height={22} /> Business Brain
         </span>
         <nav className="mx-auto hidden items-center gap-1 md:flex" aria-hidden>
           {TABS.map((t, i) => (

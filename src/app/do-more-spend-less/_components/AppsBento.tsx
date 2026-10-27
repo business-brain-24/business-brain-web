@@ -34,11 +34,11 @@ function Phone({ src, className }: { src: string; className?: string }) {
  * Console and the developer Gateway close it. Single column on phones, two columns on tablets.
  */
 export default function AppsBento() {
-  const web = appByIcon("business-brain-24");
-  const brain = appByIcon("bb24-brain");
-  const trio = ["bb24-field", "bb24-counter", "bb24-saathi"].map(appByIcon);
-  const consoleApp = appByIcon("bb24-console");
-  const gateway = appByIcon("bb24-gateway");
+  const web = appByIcon("business-brain");
+  const brain = appByIcon("brain");
+  const trio = ["business-field", "business-counter", "business-saathi"].map(appByIcon);
+  const consoleApp = appByIcon("business-console");
+  const gateway = appByIcon("business-gateway");
 
   return (
     <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-12">
