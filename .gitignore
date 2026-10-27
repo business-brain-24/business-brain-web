@@ -43,3 +43,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 /public/_img/
+
+# wrangler pages dev local state
+.wrangler/
