@@ -10,6 +10,7 @@ export const absolute = (path: string) => `${SITE_URL}${path === "/" ? "" : path
 /** Fixed public landing pages. /login, /dashboard and /thanks are left out on purpose. */
 export const staticRoutes = [
   "/",
+  "/overview",
   "/products",
   "/industries",
   "/customers",
