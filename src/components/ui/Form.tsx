@@ -41,6 +41,7 @@ export default function Form({ name, fields, submit, done }: { name: FormName; f
     setSending(true);
     setFailed("");
     const values = Object.fromEntries(fields.map((f) => [f.name, String(data.get(f.name) ?? "").trim()]));
+    values.website_url = String(data.get("website_url") ?? "");
     const res = await submitLead(name, values, token);
     setSending(false);
     if (!res.ok) {
@@ -85,6 +86,8 @@ export default function Form({ name, fields, submit, done }: { name: FormName; f
               {errors[f.name] && <span className="text-[13px] text-danger">{errors[f.name]}</span>}
             </label>
           ))}
+          {/* Honeypot: hidden from people and screen readers, so only bots fill it. */}
+          <input type="text" name="website_url" tabIndex={-1} autoComplete="off" aria-hidden className="absolute -left-[9999px] h-px w-px opacity-0" />
           <Turnstile onToken={setToken} />
           {failed && (
             <p role="alert" className="rounded-[10px] bg-danger/10 px-4 py-3 text-[14px] text-danger sm:col-span-2">
