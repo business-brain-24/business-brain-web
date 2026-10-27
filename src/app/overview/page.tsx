@@ -14,14 +14,14 @@ import {
 } from "@/components/home/Sections";
 import CTA from "@/components/ui/CTA";
 
-// Title comes from the layout default.
+// The previous home page, kept at its own URL.
 export const metadata: Metadata = pageMeta(
-  "/",
-  undefined,
+  "/overview",
+  "Overview",
   "The agentic ERP that cuts operating costs and lifts productivity: finance, HR, payroll, procurement, inventory and sales in one system, with AI at the core.",
 );
 
-export default function Home() {
+export default function Overview() {
   return (
     <>
       <Hero />
