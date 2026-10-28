@@ -60,7 +60,7 @@ function Tiles() {
             </span>
           </div>
           <div className="flex items-end justify-between gap-2 bg-surface px-3 py-2.5">
-            <span className="text-[20px] font-medium leading-none tracking-[-0.03em] tabular-nums text-ink">{value}</span>
+            <span className="text-[20px] font-display font-semibold leading-none tracking-[-0.03em] tabular-nums text-ink">{value}</span>
             <span className="hidden text-right text-[12px] leading-[16px] text-muted sm:block">
               {a[0]} <span className="tabular-nums text-ink">{a[1]}</span>
               <br />
@@ -89,18 +89,18 @@ function OrderToCash() {
               <span className="sm:hidden">{SHORT[i]}</span>
               <span className="hidden sm:inline">{f.label}</span>
             </p>
-            <p className={clsx("text-[20px] font-medium tracking-[-0.03em] tabular-nums", i === active ? "text-ink" : "text-subtle")}>{num(f.value)}</p>
+            <p className={clsx("text-[20px] font-display font-semibold tracking-[-0.03em] tabular-nums", i === active ? "text-ink" : "text-subtle")}>{num(f.value)}</p>
             <div className="mt-2 flex h-[150px] items-end">
               <div
                 className={clsx("w-full rounded-t-[6px] border-t-2", i === active ? "border-orange" : "border-ink/40")}
-                style={{ height: `${(f.value / max) * 100}%`, ...(i === active ? hatch("rgba(255,107,44,0.55)", "rgba(255,107,44,0.12)") : hatch("rgba(11,13,18,0.18)", "rgba(11,13,18,0.03)")) }}
+                style={{ height: `${(f.value / max) * 100}%`, ...(i === active ? hatch("rgba(241,98,34,0.55)", "rgba(241,98,34,0.12)") : hatch("rgba(22,25,40,0.18)", "rgba(22,25,40,0.03)")) }}
               />
             </div>
           </div>
         ))}
       </div>
       {/* Ask bar, the way Brain sits on top of every chart */}
-      <div className="absolute inset-x-3 bottom-3 rounded-[12px] border border-line bg-white/95 p-2 shadow-[0_12px_30px_-16px_rgba(11,13,18,0.35)] backdrop-blur">
+      <div className="absolute inset-x-3 bottom-3 rounded-[12px] border border-line bg-white/95 p-2 shadow-[0_12px_30px_-16px_rgba(22,25,40,0.35)] backdrop-blur">
         <p className="flex items-center gap-1.5 px-1 text-[12px] text-subtle">
           <Sparkles size={ICON.sm} className="text-orange" /> What would you like to explore next?
         </p>
@@ -122,10 +122,10 @@ function OrderToCash() {
 function CategoryMix() {
   const top = hero.categories.slice(0, 4);
   const max = top[0].value;
-  const fills = ["#FF6B2C", "#0B0D12", "#8A909C", "#B4B9C3"];
+  const fills = ["#F16222", "#161928", "#8B91A8", "#B4B9C3"];
   return (
     <Card title="Sales by category" sub="Net of VAT, since July" className="hidden lg:block">
-      <p className="mt-3 text-[30px] font-medium leading-none tracking-[-0.04em] tabular-nums">{money(hero.netSales)}</p>
+      <p className="mt-3 text-[30px] font-display font-semibold leading-none tracking-[-0.04em] tabular-nums">{money(hero.netSales)}</p>
       <ul className="mt-4 space-y-3 border-t border-line pt-3">
         {top.map((c, i) => (
           <li key={c.label}>
@@ -164,9 +164,9 @@ function WeeklySales() {
         </span>
         <svg viewBox={`0 0 ${W} ${H}`} className="mt-6 h-[96px] w-full" preserveAspectRatio="none" aria-hidden>
           {w.map((v, i) => (
-            <rect key={i} x={x(i) + 1} y={y(v)} width={W / w.length - 2} height={H - y(v)} fill="rgba(255,107,44,0.08)" />
+            <rect key={i} x={x(i) + 1} y={y(v)} width={W / w.length - 2} height={H - y(v)} fill="rgba(241,98,34,0.08)" />
           ))}
-          <path d={d} fill="none" stroke="#FF6B2C" strokeWidth="2" vectorEffect="non-scaling-stroke" />
+          <path d={d} fill="none" stroke="#F16222" strokeWidth="2" vectorEffect="non-scaling-stroke" />
         </svg>
         <div className="mt-1.5 flex justify-between text-[12px] text-subtle">
           {["Jul", "Aug", "Sep", "Oct"].map((m) => (
@@ -188,7 +188,7 @@ function OrdersByDay() {
   return (
     <Card title="Orders" sub="By weekday · Fridays off">
       <div className="mt-8 flex items-end justify-between gap-4">
-        <p className="text-[30px] font-medium leading-none tracking-[-0.04em] tabular-nums">{num(total)}</p>
+        <p className="text-[30px] font-display font-semibold leading-none tracking-[-0.04em] tabular-nums">{num(total)}</p>
         <div className="relative">
           <span className="absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-line bg-white px-2 py-0.5 text-[12px] text-muted shadow-sm">
             Peak: <span className="font-medium text-ink">{peak.label}</span>
@@ -232,14 +232,14 @@ function YieldGauge() {
                 y1={88 - 64 * Math.sin(a)}
                 x2={90 + 84 * Math.cos(a)}
                 y2={88 - 84 * Math.sin(a)}
-                stroke={i < on ? (i >= on - 4 ? "#FF6B2C" : "#0B0D12") : "#E7E9EE"}
+                stroke={i < on ? (i >= on - 4 ? "#F16222" : "#161928") : "#E7E9EE"}
                 strokeWidth="5"
                 strokeLinecap="round"
               />
             );
           })}
         </svg>
-        <p className="absolute inset-x-0 bottom-0 text-center text-[24px] font-medium leading-none tracking-[-0.03em] tabular-nums">{hero.yield}%</p>
+        <p className="absolute inset-x-0 bottom-0 text-center text-[24px] font-display font-semibold leading-none tracking-[-0.03em] tabular-nums">{hero.yield}%</p>
       </div>
     </Card>
   );
@@ -251,7 +251,7 @@ const TABS = ["Overview", "Sales", "Finance", "Inventory", "People", "Production
 
 function Window() {
   return (
-    <div className="overflow-hidden rounded-[22px] border border-line bg-[#FAFAFB] text-left shadow-[0_40px_90px_-40px_rgba(11,13,18,0.45)]">
+    <div className="overflow-hidden rounded-[22px] border border-line bg-[#FAFAFB] text-left shadow-[0_40px_90px_-40px_rgba(22,25,40,0.45)]">
       <div className="flex h-14 items-center gap-4 border-b border-line bg-white px-4">
         <span className="flex items-center gap-2 text-[13px] font-medium text-ink">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -276,7 +276,7 @@ function Window() {
         <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
             <p className="text-[12px] text-subtle">Shapla Foods Ltd · demo company</p>
-            <p className="text-[28px] font-medium leading-tight tracking-[-0.04em] text-ink sm:text-[34px]">Overview</p>
+            <p className="text-[28px] font-display font-semibold leading-tight tracking-[-0.04em] text-ink sm:text-[34px]">Overview</p>
           </div>
           <div className="flex items-center gap-2 text-[12px]">
             <span className="rounded-[10px] border border-line bg-white px-3 py-1.5 text-ink">1 Jul to 25 Oct 2026</span>

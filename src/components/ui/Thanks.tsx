@@ -1,11 +1,13 @@
 import { Check } from "lucide-react";
 import { Button, TextLink } from "./Button";
 import { contact } from "@/lib/data";
+import { HeroBackdrop } from "@/components/ui/PageHero";
 
 /** Thank-you page after a successful lead. The URL is what ad platforms count as a conversion. */
 export default function Thanks({ title, sub }: { title: string; sub: string }) {
   return (
-    <section className="container-x flex min-h-[70vh] flex-col items-center justify-center pb-10 pt-[120px] text-center">
+    <section className="container-x relative isolate flex min-h-[70vh] flex-col items-center justify-center pb-10 pt-[120px] text-center">
+        <HeroBackdrop />
       <span className="flex h-14 w-14 items-center justify-center rounded-full bg-orange text-white">
         <Check size={26} />
       </span>

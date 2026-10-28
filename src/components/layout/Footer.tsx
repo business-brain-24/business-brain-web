@@ -56,28 +56,28 @@ export default function Footer() {
   const footerPath = usePathname();
   if (footerPath === "/ask" || footerPath.startsWith("/dashboard")) return null;
   return (
-    <footer className="relative isolate overflow-hidden bg-[#0B0D12] text-white">
+    <footer className="relative isolate overflow-hidden bg-[#161928] text-white">
       {/* warm glow and a faint grid, so the ink is not flat */}
-      <div aria-hidden className="absolute -right-40 -top-56 -z-10 h-[620px] w-[620px] rounded-full bg-[radial-gradient(closest-side,rgba(255,107,44,0.22),rgba(124,92,250,0.10),transparent)] blur-2xl" />
+      <div aria-hidden className="absolute -right-40 -top-56 -z-10 h-[620px] w-[620px] rounded-full bg-[radial-gradient(closest-side,rgba(241,98,34,0.22),rgba(124,92,250,0.10),transparent)] blur-2xl" />
       <div
         aria-hidden
         className="absolute inset-0 -z-10 opacity-[0.05] [mask-image:linear-gradient(180deg,#000,transparent_70%)]"
         style={{ backgroundImage: "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)", backgroundSize: "56px 56px" }}
       />
-      <div aria-hidden className="h-px w-full bg-[linear-gradient(90deg,transparent,rgba(255,107,44,0.6),transparent)]" />
+      <div aria-hidden className="h-px w-full bg-[linear-gradient(90deg,transparent,rgba(241,98,34,0.6),transparent)]" />
 
       <div className="container-x pt-16 sm:pt-20">
         {/* closing call to action */}
         <div className="flex flex-col gap-8 border-b border-white/10 pb-12 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <h2 className="text-[34px] font-medium leading-[1.05] tracking-[-0.03em] sm:text-[48px]">
-              Do More. <span className="whitespace-nowrap bg-[linear-gradient(180deg,#FF8A57,#FF6B2C)] bg-clip-text text-transparent">Spend Less.</span>
+            <h2 className="text-[34px] font-display font-semibold leading-[1.05] tracking-[-0.03em] sm:text-[48px]">
+              Do More. <span className="whitespace-nowrap bg-[linear-gradient(180deg,#FF8A57,#F16222)] bg-clip-text text-transparent">Spend Less.</span>
             </h2>
             <p className="mt-3 max-w-[460px] text-[15px] leading-[24px] text-white/60">The agentic ERP that cuts operating costs and lifts productivity across your enterprise.</p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Link href="/demo" data-cta className="group inline-flex h-12 items-center gap-2.5 whitespace-nowrap rounded-full bg-white py-1 pl-1 pr-5 text-[15px] font-medium text-[#0B0D12]">
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[linear-gradient(180deg,#FF6B2C,#C2410C)] text-white transition-transform duration-300 group-hover:rotate-12">
+            <Link href="/demo" data-cta className="group inline-flex h-12 items-center gap-2.5 whitespace-nowrap rounded-full bg-white py-1 pl-1 pr-5 text-[15px] font-medium text-[#161928]">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[linear-gradient(180deg,#F16222,#C2410C)] text-white transition-transform duration-300 group-hover:rotate-12">
                 <Sparkles size={ICON.md} strokeWidth={2.2} />
               </span>
               Talk to the Brain
@@ -108,7 +108,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-[22px] font-medium tracking-[-0.02em]">Stay in the loop</p>
+            <p className="text-[22px] font-display font-semibold tracking-[-0.02em]">Stay in the loop</p>
             <p className="mt-1.5 text-[14px] leading-[22px] text-white/60">The Operator&apos;s Brief: one email a month on running a smarter company.</p>
             <div className="mt-5">
               <Newsletter dark />

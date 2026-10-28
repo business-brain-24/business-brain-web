@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/Button";
 import { Reveal, SplitHeading, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import CTA from "@/components/ui/CTA";
 import ModuleCatalogue from "@/components/products/ModuleCatalogue";
+import { HeroBackdrop } from "@/components/ui/PageHero";
 
 export const metadata: Metadata = pageMeta(
   "/products",
@@ -16,7 +17,8 @@ export const metadata: Metadata = pageMeta(
 export default function ProductsIndex() {
   return (
     <>
-      <section className="container-x pt-[120px] sm:pt-[150px]">
+      <section className="container-x relative isolate pt-[120px] sm:pt-[150px]">
+        <HeroBackdrop />
         <Label>Products</Label>
         <SplitHeading text="Fourteen products. One brain." className="h-display mt-4 max-w-[860px]" />
         <Reveal delay={0.3}>
@@ -28,7 +30,7 @@ export default function ProductsIndex() {
       {groups.map((g) => (
         <section key={g} className="container-x mt-16 sm:mt-24">
           <div className="flex items-baseline justify-between border-b border-line pb-4">
-            <h2 className="text-[22px] font-medium tracking-[-0.02em]">{g}</h2>
+            <h2 className="text-[22px] font-display font-semibold tracking-[-0.02em]">{g}</h2>
             <span className="text-[13px] text-subtle">{products.filter((p) => p.group === g).length} products</span>
           </div>
           <Stagger className="grid sm:grid-cols-2 lg:grid-cols-3">

@@ -4,6 +4,7 @@ import JsonLd, { breadcrumbLd } from "@/components/seo/JsonLd";
 import Link from "next/link";
 import { Reveal, SplitHeading, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import CTA from "@/components/ui/CTA";
+import { HeroBackdrop } from "@/components/ui/PageHero";
 
 export const metadata: Metadata = pageMeta(
   "/customers/northloom",
@@ -15,7 +16,8 @@ export default function Story() {
   return (
     <>
       <JsonLd data={breadcrumbLd([["Success stories", "/customers"], ["Northloom Textiles", "/customers/northloom"]])} />
-      <section className="container-x pt-[120px] sm:pt-[150px]">
+      <section className="container-x relative isolate pt-[120px] sm:pt-[150px]">
+        <HeroBackdrop />
         <p className="flex flex-wrap gap-1.5 text-[13px] text-muted">
           <Link href="/customers" className="hover:text-ink">Success stories</Link> / <span className="text-ink">Northloom Textiles</span>
         </p>
@@ -29,8 +31,8 @@ export default function Story() {
       <section className="px-2 pt-12 sm:px-3">
         <Reveal className="relative mx-auto flex h-[300px] max-w-[1400px] items-end overflow-hidden rounded-[20px] bg-gradient-to-br from-[#2a1d14] to-ink p-6 text-white sm:h-[460px] sm:rounded-[28px] sm:p-12">
           <div className="dot-grid absolute inset-0 opacity-10 invert" />
-          <div className="absolute -right-24 -top-24 h-[480px] w-[480px] rounded-full bg-[radial-gradient(circle,rgba(255,107,44,0.35),transparent_65%)]" />
-          <p className="relative max-w-[700px] text-[22px] font-medium leading-[32px] tracking-[-0.02em] sm:text-[32px] sm:leading-[42px]">
+          <div className="absolute -right-24 -top-24 h-[480px] w-[480px] rounded-full bg-[radial-gradient(circle,rgba(241,98,34,0.35),transparent_65%)]" />
+          <p className="relative max-w-[700px] text-[22px] font-display font-semibold leading-[32px] tracking-[-0.02em] sm:text-[32px] sm:leading-[42px]">
             “I used to wait three days for a P&L. Now I just ask Brain, and it answers with the numbers and the reason.”
           </p>
         </Reveal>
@@ -54,15 +56,15 @@ export default function Story() {
                 ["18%", "lower purchase cost"],
                 ["4 min", "payroll for 2,400"],
               ].map(([v, l]) => (
-                <StaggerItem key={l} className="rounded-[16px] bg-surface p-6">
-                  <p className="text-[36px] font-medium tracking-[-0.04em]">{v}</p>
+                <StaggerItem key={l} className="glass p-6">
+                  <p className="text-[36px] font-display font-semibold tracking-[-0.04em]">{v}</p>
                   <p className="text-[13px] text-muted">{l}</p>
                 </StaggerItem>
               ))}
             </Stagger>
           </div>
         </div>
-        <Reveal className="h-fit rounded-[16px] border border-line p-6 lg:sticky lg:top-28">
+        <Reveal className="h-fit glass p-6 lg:sticky lg:top-28">
           <p className="text-[13px] text-subtle">Products used</p>
           <div className="mt-3 flex flex-wrap gap-2">
             {["HRMS", "Payroll", "Inventory", "Procurement", "Accounting", "Brain AI"].map((t) => (

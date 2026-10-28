@@ -21,8 +21,8 @@ export default function IndustriesIndex() {
           <StaggerItem key={i.slug}>
             <Link href={`/industries/${i.slug}`} className={`group relative flex min-h-[220px] flex-col justify-end overflow-hidden rounded-[20px] bg-gradient-to-br p-7 text-white ${i.tone}`}>
               <div className="dot-grid absolute inset-0 opacity-10 invert transition-opacity group-hover:opacity-20" />
-              <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[radial-gradient(circle,rgba(255,107,44,0.35),transparent_65%)] transition-transform duration-700 group-hover:scale-125" />
-              <p className="relative text-[22px] font-medium tracking-[-0.02em]">{i.name}</p>
+              <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[radial-gradient(circle,rgba(241,98,34,0.35),transparent_65%)] transition-transform duration-700 group-hover:scale-125" />
+              <p className="relative text-[22px] font-display font-semibold tracking-[-0.02em]">{i.name}</p>
               <p className="relative mt-1 text-[14px] text-white/65">{i.short}</p>
             </Link>
           </StaggerItem>

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { akboriaDelivered, akboriaInProgress, akboriaModules, countItems } from "@/lib/data";
 import { Reveal, SplitHeading, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import CTA from "@/components/ui/CTA";
+import { HeroBackdrop } from "@/components/ui/PageHero";
 
 export const metadata: Metadata = pageMeta(
   "/customers/akboria",
@@ -27,7 +28,8 @@ export default function Story() {
   return (
     <>
       <JsonLd data={breadcrumbLd([["Success stories", "/customers"], ["Akboria", "/customers/akboria"]])} />
-      <section className="container-x pt-[120px] sm:pt-[150px]">
+      <section className="container-x relative isolate pt-[120px] sm:pt-[150px]">
+        <HeroBackdrop />
         <p className="flex flex-wrap gap-1.5 text-[13px] text-muted">
           <Link href="/customers" className="hover:text-ink">Success stories</Link> / <span className="text-ink">Akboria</span>
         </p>
@@ -41,7 +43,7 @@ export default function Story() {
       <section className="px-2 pt-12 sm:px-3">
         <Reveal className="relative mx-auto h-[260px] max-w-[1400px] overflow-hidden rounded-[20px] bg-[#FBF1D9] sm:h-[560px] sm:rounded-[28px]">
           <Image src="/customers/akboria/range.jpg" alt="Akboria laccha shemai product range" fill priority sizes="100vw" className="object-cover object-right" />
-          <span className="absolute bottom-4 left-4 rounded-[14px] bg-white px-3 py-2.5 sm:bottom-8 sm:left-8 sm:px-4 sm:py-3.5">
+          <span className="absolute bottom-4 left-4 glass px-3 py-2.5 sm:bottom-8 sm:left-8 sm:px-4 sm:py-3.5">
             <Image src="/customers/akboria/logo.png" alt="Akboria" width={132} height={60} className="h-auto w-[92px] sm:w-[132px]" />
           </span>
         </Reveal>
@@ -55,7 +57,7 @@ export default function Story() {
             </p>
           </Reveal>
           <Reveal className="border-l-2 border-orange pl-6 sm:pl-8">
-            <p className="text-[22px] font-medium leading-[32px] tracking-[-0.02em] sm:text-[24px] sm:leading-[34px]">
+            <p className="text-[22px] font-display font-semibold leading-[32px] tracking-[-0.02em] sm:text-[24px] sm:leading-[34px]">
               “From the SR’s phone to the oven to the showroom shelf, every demand now lands in one place, and we see it the same day.”
             </p>
           </Reveal>
@@ -77,7 +79,7 @@ export default function Story() {
             </Stagger>
           </div>
         </div>
-        <Reveal className="h-fit rounded-[16px] border border-line p-6 lg:sticky lg:top-28">
+        <Reveal className="h-fit glass p-6 lg:sticky lg:top-28">
           <p className="text-[13px] text-subtle">Modules in scope</p>
           <div className="mt-3 flex flex-wrap gap-2">
             {["Sales & SR", "POS", "Central store", "Manufacturing", "Procurement", "Dashboards"].map((t) => (
@@ -96,7 +98,7 @@ export default function Story() {
           <div className="mx-auto flex max-w-[1200px] flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <Reveal>
               <p className="text-[13px] font-medium text-orange">Secondary sales app · Live</p>
-              <h2 className="mt-3 max-w-[620px] text-[32px] font-medium leading-[38px] tracking-[-0.03em] sm:text-[44px] sm:leading-[48px]">One app for everyone who sells Akboria.</h2>
+              <h2 className="mt-3 max-w-[620px] text-[32px] font-display font-semibold leading-[38px] tracking-[-0.03em] sm:text-[44px] sm:leading-[48px]">One app for everyone who sells Akboria.</h2>
             </Reveal>
             <Reveal delay={0.1} className="max-w-[400px]">
               <p className="text-[16px] leading-[25px] text-muted">Built in Bangla for the field. Each role sees its own dashboard, targets and approvals.</p>
@@ -122,7 +124,7 @@ export default function Story() {
         <div className="flex flex-col justify-between gap-4 border-b border-ink pb-5 sm:flex-row sm:items-end">
           <div>
             <p className="text-[13px] font-medium text-orange">What we’ve delivered</p>
-            <h2 className="mt-3 text-[32px] font-medium leading-[38px] tracking-[-0.03em] sm:text-[44px] sm:leading-[48px]">{live} features live. {building} on the way.</h2>
+            <h2 className="mt-3 text-[32px] font-display font-semibold leading-[38px] tracking-[-0.03em] sm:text-[44px] sm:leading-[48px]">{live} features live. {building} on the way.</h2>
           </div>
           <div className="flex gap-2 text-[13px]">
             <span className="flex items-center gap-2 rounded-full bg-green-soft px-3 py-1.5"><span className="h-1.5 w-1.5 rounded-full bg-green" />Live</span>

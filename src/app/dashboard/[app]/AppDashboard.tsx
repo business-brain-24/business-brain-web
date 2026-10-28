@@ -86,7 +86,7 @@ export default function AppDashboard() {
               <p className="font-medium">{user.name} · {user.role}</p>
             </div>
           </div>
-          <Link href="/ask" className="inline-flex items-center gap-2 rounded-[12px] bg-[linear-gradient(180deg,#FF6B2C,#C2410C)] px-4 py-2.5 text-[14px] font-medium text-white shadow-[0_10px_24px_-12px_rgba(255,107,44,0.8)] hover:brightness-110">
+          <Link href="/ask" className="inline-flex items-center gap-2 rounded-[12px] bg-[linear-gradient(180deg,#F16222,#C2410C)] px-4 py-2.5 text-[14px] font-medium text-white shadow-[0_10px_24px_-12px_rgba(241,98,34,0.8)] hover:brightness-110">
             <Sparkles size={ICON.md} /> Ask Brain AI about {app.name}
           </Link>
         </div>

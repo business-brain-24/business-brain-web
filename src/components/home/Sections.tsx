@@ -172,7 +172,7 @@ export function Blocks() {
           <Tile key={t} t={t} />
         ))}
         <div data-core className="col-span-2 col-start-2 row-span-2 row-start-2 flex aspect-square flex-col items-center justify-center rounded-[14px] bg-ink text-white">
-          <span className="h-3 w-3 rounded-full bg-orange shadow-[0_0_24px_6px_rgba(255,107,44,0.55)]" />
+          <span className="h-3 w-3 rounded-full bg-orange shadow-[0_0_24px_6px_rgba(241,98,34,0.55)]" />
           <span className="mt-3 text-[13px] font-medium">Brain</span>
         </div>
         {tiles.slice(6).map((t) => (
@@ -185,7 +185,7 @@ export function Blocks() {
 
 function Tile({ t }: { t: string }) {
   return (
-    <div data-tile className="flex aspect-square items-end rounded-[12px] border border-line bg-white p-2 text-[12px] font-medium text-ink shadow-[0_1px_2px_rgba(11,13,18,0.04)] sm:p-2.5 sm:text-[12px]">
+    <div data-tile className="flex aspect-square items-end rounded-[12px] border border-line bg-white p-2 text-[12px] font-medium text-ink shadow-[0_1px_2px_rgba(22,25,40,0.04)] sm:p-2.5 sm:text-[12px]">
       {t}
     </div>
   );
@@ -212,7 +212,7 @@ export function Compliance() {
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {rules.map((r) => (
             <div key={r.t}>
-              <p className="text-[20px] font-medium tracking-[-0.02em]">{r.t}</p>
+              <p className="text-[20px] font-display font-semibold tracking-[-0.02em]">{r.t}</p>
               <p className="mt-1 text-[13px] leading-[20px] text-muted">{r.b}</p>
             </div>
           ))}
@@ -300,11 +300,11 @@ export function ProductsBento() {
         </StaggerItem>
         <StaggerItem className="md:col-span-2">
           <Link href="/products" className="group flex min-h-[340px] flex-col justify-between rounded-[20px] bg-ink p-6 text-white sm:p-7">
-            <span className="flex h-11 w-11 items-center justify-center rounded-[10px] bg-[linear-gradient(180deg,#FF6B2C_50%,#C2410C_100%)] transition-transform duration-300 group-hover:rotate-45">
+            <span className="flex h-11 w-11 items-center justify-center rounded-[10px] bg-[linear-gradient(180deg,#F16222_50%,#C2410C_100%)] transition-transform duration-300 group-hover:rotate-45">
               <ArrowUpRight size={ICON.lg} />
             </span>
             <div>
-              <p className="text-[28px] font-medium leading-[32px] tracking-[-0.03em] sm:text-[32px]">See all modules</p>
+              <p className="text-[28px] font-display font-semibold leading-[32px] tracking-[-0.03em] sm:text-[32px]">See all modules</p>
               <p className="mt-3 text-[14px] leading-[22px] text-white/65">Plus CRM, projects, Watch Tower and our own MCP server.</p>
             </div>
           </Link>
@@ -318,7 +318,7 @@ function BentoText({ label, title, body }: { label: string; title: string; body:
   return (
     <div className="relative">
       <Label>{label}</Label>
-      <p className="mt-2 text-[20px] font-medium leading-[26px] tracking-[-0.02em] sm:text-[22px]">{title}</p>
+      <p className="mt-2 text-[20px] font-display font-semibold leading-[26px] tracking-[-0.02em] sm:text-[22px]">{title}</p>
       <p className="mt-2 text-[14px] leading-[22px] text-muted">{body}</p>
     </div>
   );
@@ -335,7 +335,7 @@ export function BrainAI() {
   return (
     <section className="px-2 sm:px-3">
       <div className="relative overflow-hidden rounded-[20px] bg-ink py-20 text-white sm:rounded-[28px] sm:py-28">
-        <div className="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-[radial-gradient(circle,rgba(255,107,44,0.25),transparent_65%)]" />
+        <div className="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-[radial-gradient(circle,rgba(241,98,34,0.25),transparent_65%)]" />
         <div className="container-x relative grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
           <div>
             <Label>Ask your business</Label>
@@ -508,7 +508,7 @@ export function WatchTower() {
                       All regions
                     </button>
                   </div>
-                  <p className={clsx("mt-3 text-[34px] font-medium tracking-[-0.03em]", sel.pct < 90 ? "text-[#F97066]" : "text-white")}>
+                  <p className={clsx("mt-3 text-[34px] font-display font-semibold tracking-[-0.03em]", sel.pct < 90 ? "text-[#F97066]" : "text-white")}>
                     {sel.pct}%<span className="ml-2 text-[13px] font-normal tracking-normal text-white/50">of target</span>
                   </p>
                   <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-white/10">

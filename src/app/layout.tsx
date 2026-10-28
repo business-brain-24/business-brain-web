@@ -10,6 +10,7 @@ import ChatWidget from "@/components/layout/ChatWidget";
 import JsonLd, { organizationLd, websiteLd } from "@/components/seo/JsonLd";
 import { GTM_ID } from "@/lib/analytics";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
+import { fontVariables } from "@/lib/fonts";
 
 const description =
   "The agentic ERP that cuts operating costs and lifts productivity across your enterprise. Finance, HR, payroll, procurement, inventory, sales, manufacturing and more in one connected system, with AI at the core.";
@@ -40,7 +41,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={fontVariables}>
       <head>
         {/* Consent Mode defaults must exist before GTM loads. */}
         <script dangerouslySetInnerHTML={{ __html: consentDefaultsScript }} />

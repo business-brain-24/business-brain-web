@@ -6,6 +6,7 @@ import { stories } from "@/lib/data";
 import { Label } from "@/components/ui/Button";
 import { Reveal, SplitHeading, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import CTA from "@/components/ui/CTA";
+import { HeroBackdrop } from "@/components/ui/PageHero";
 
 export const metadata: Metadata = pageMeta(
   "/customers",
@@ -16,7 +17,8 @@ export const metadata: Metadata = pageMeta(
 export default function Customers() {
   return (
     <>
-      <section className="container-x pt-[120px] sm:pt-[150px]">
+      <section className="container-x relative isolate pt-[120px] sm:pt-[150px]">
+        <HeroBackdrop />
         <Label>Success stories</Label>
         <SplitHeading text="Companies that run on one brain." className="h-display mt-4 max-w-[900px]" />
         <Reveal delay={0.3}>
@@ -41,7 +43,7 @@ export default function Customers() {
                   </>
                 ) : (
                   <div className="flex h-full items-end bg-gradient-to-br from-[#2a1d14] to-ink p-8">
-                    <p className="max-w-[440px] text-[20px] font-medium leading-[30px] tracking-[-0.02em] text-white sm:text-[22px]">{s.quote}</p>
+                    <p className="max-w-[440px] text-[20px] font-display font-semibold leading-[30px] tracking-[-0.02em] text-white sm:text-[22px]">{s.quote}</p>
                   </div>
                 )}
               </div>
@@ -49,7 +51,7 @@ export default function Customers() {
                 <span className="rounded-full bg-surface px-3 py-1.5 text-[13px]">{s.industry}</span>
                 <span className={`rounded-full px-3 py-1.5 text-[13px] ${s.page ? "bg-orange-soft text-orange-deep" : "bg-green-soft text-[#067647]"}`}>{s.badge}</span>
               </div>
-              <h2 className="mt-5 text-[24px] font-medium leading-[30px] tracking-[-0.02em] sm:text-[28px] sm:leading-[34px]">{s.title}</h2>
+              <h2 className="mt-5 text-[24px] font-display font-semibold leading-[30px] tracking-[-0.02em] sm:text-[28px] sm:leading-[34px]">{s.title}</h2>
               <p className="mt-3 text-[15px] leading-[24px] text-muted">{s.summary}</p>
               {s.page && (
                 <p className="mt-4 text-[14px] font-medium">

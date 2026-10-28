@@ -37,8 +37,8 @@ import { fmt } from "@/lib/brain-data";
 import { ICON } from "@/lib/icons";
 
 /* Validated categorical order (light surface); see the dataviz palette check. */
-const PALETTE = ["#2a78d6", "#ff6b2c", "#1baf7a", "#eda100", "#e87ba4", "#008300", "#6250d6", "#e34948"];
-const ORANGE = "#ff6b2c";
+const PALETTE = ["#2a78d6", "#F16222", "#1baf7a", "#eda100", "#e87ba4", "#008300", "#6250d6", "#e34948"];
+const ORANGE = "#F16222";
 const REFERENCE = "#b4b9c3";
 
 /* Colour follows meaning, not position: this year is always orange, budgets and targets are grey references. */
@@ -61,7 +61,7 @@ const FIXED: Record<string, string> = {
 
 const colorFor = (series: string[], i: number) => FIXED[series[i]] ?? (series.length === 1 ? ORANGE : PALETTE[i % PALETTE.length]);
 
-const AXIS = { fill: "#8a909c", fontSize: 11 };
+const AXIS = { fill: "#8B91A8", fontSize: 11 };
 
 function compact(unit: Unit, v: number) {
   if (v === 0) return "0";
@@ -79,7 +79,7 @@ function compact(unit: Unit, v: number) {
 function Tip({ active, payload, label, unit }: TooltipContentProps<number, string> & { unit: Unit }) {
   if (!active || !payload?.length) return null;
   return (
-    <div className="rounded-[10px] border border-line bg-white px-3 py-2 text-[12px] shadow-[0_8px_24px_rgba(11,13,18,0.1)]">
+    <div className="rounded-[10px] border border-line bg-white px-3 py-2 text-[12px] shadow-[0_8px_24px_rgba(22,25,40,0.1)]">
       <p className="mb-1 font-medium text-ink">{label ?? payload[0].name}</p>
       {payload.map((p) => (
         <p key={String(p.dataKey ?? p.name)} className="flex items-center gap-2 text-muted">
@@ -108,7 +108,7 @@ function Legend({ items }: { items: { name: string; color: string; value?: strin
 
 function Plot({ chart }: { chart: Chart }) {
   const { kind, data, series, unit } = chart;
-  const tooltip = <Tooltip cursor={{ fill: "rgba(11,13,18,0.04)", stroke: "#d3d6dd" }} content={(p) => <Tip {...(p as TooltipContentProps<number, string>)} unit={unit} />} />;
+  const tooltip = <Tooltip cursor={{ fill: "rgba(22,25,40,0.04)", stroke: "#d3d6dd" }} content={(p) => <Tip {...(p as TooltipContentProps<number, string>)} unit={unit} />} />;
   const grid = <CartesianGrid vertical={false} stroke="#eef0f3" />;
 
   if (kind === "pie") {
@@ -147,7 +147,7 @@ function Plot({ chart }: { chart: Chart }) {
       <ResponsiveContainer width="100%" height={data.length * 34 + 16}>
         <BarChart data={data} layout="vertical" margin={{ top: 0, right: 56, bottom: 0, left: 0 }} barCategoryGap={6}>
           <XAxis type="number" hide />
-          <YAxis type="category" dataKey="label" tick={{ ...AXIS, fill: "#545a66", fontSize: 12 }} axisLine={false} tickLine={false} width={Math.min(170, longest * 6.6 + 12)} />
+          <YAxis type="category" dataKey="label" tick={{ ...AXIS, fill: "#5D6380", fontSize: 12 }} axisLine={false} tickLine={false} width={Math.min(170, longest * 6.6 + 12)} />
           {tooltip}
           {series.map((s, i) => (
             <Bar
@@ -157,7 +157,7 @@ function Plot({ chart }: { chart: Chart }) {
               radius={[0, 4, 4, 0]}
               maxBarSize={22}
               animationDuration={700}
-              label={{ position: "right", fill: "#545a66", fontSize: 11, formatter: (v: unknown) => compact(unit, Number(v)) }}
+              label={{ position: "right", fill: "#5D6380", fontSize: 11, formatter: (v: unknown) => compact(unit, Number(v)) }}
             />
           ))}
         </BarChart>
@@ -200,7 +200,7 @@ function Plot({ chart }: { chart: Chart }) {
         <ResponsiveContainer width="100%" height={300}>
           <RadarChart data={data} outerRadius="72%" margin={{ top: 8, right: 24, bottom: 8, left: 24 }}>
             <PolarGrid stroke="#e3e6eb" />
-            <PolarAngleAxis dataKey="label" tick={{ ...AXIS, fill: "#545a66", fontSize: 12 }} />
+            <PolarAngleAxis dataKey="label" tick={{ ...AXIS, fill: "#5D6380", fontSize: 12 }} />
             <PolarRadiusAxis domain={[0, 100]} tick={false} axisLine={false} />
             {tooltip}
             {series.map((s, i) => (
@@ -264,7 +264,7 @@ function Plot({ chart }: { chart: Chart }) {
         <FunnelChart margin={{ top: 4, right: 150, bottom: 4, left: 8 }}>
           {tooltip}
           <Funnel data={rows} dataKey="value" nameKey="label" isAnimationActive animationDuration={700}>
-            <LabelList position="right" dataKey="label" fill="#545a66" stroke="none" fontSize={12} />
+            <LabelList position="right" dataKey="label" fill="#5D6380" stroke="none" fontSize={12} />
             <LabelList position="center" dataKey="value" fill="#fff" stroke="none" fontSize={12} formatter={(v: unknown) => compact(unit, Number(v))} />
           </Funnel>
         </FunnelChart>
@@ -354,7 +354,7 @@ export function ChartCard({ chart }: { chart: Chart }) {
                 onClick={() => setTable(v as boolean)}
                 aria-pressed={table === v}
                 aria-label={`Show as ${(label as string).toLowerCase()}`}
-                className={clsx("flex h-7 w-7 items-center justify-center rounded-[6px] transition-colors", table === v ? "bg-white text-ink shadow-[0_1px_2px_rgba(11,13,18,0.08)]" : "text-subtle hover:text-ink")}
+                className={clsx("flex h-7 w-7 items-center justify-center rounded-[6px] transition-colors", table === v ? "bg-white text-ink shadow-[0_1px_2px_rgba(22,25,40,0.08)]" : "text-subtle hover:text-ink")}
               >
                 <I size={ICON.sm} />
               </button>

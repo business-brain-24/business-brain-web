@@ -16,7 +16,7 @@ export default function CTA({ title = "Put AI at the core of your business" }: {
           loading="lazy"
           className="pointer-events-none absolute inset-y-0 right-0 -z-10 h-full w-full object-cover object-[78%_50%] opacity-35 [mask-image:linear-gradient(90deg,transparent_0%,#000_45%)] sm:opacity-60 lg:w-[70%] lg:opacity-100"
         />
-        <div className="pointer-events-none absolute -bottom-40 -left-24 -z-10 h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle,rgba(255,107,44,0.16),transparent_65%)]" />
+        <div className="pointer-events-none absolute -bottom-40 -left-24 -z-10 h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle,rgba(241,98,34,0.16),transparent_65%)]" />
         <Reveal className="container-x relative flex flex-col justify-between gap-10 lg:flex-row lg:items-end">
           <div>
             <h2 className="h-section max-w-[640px] text-ink">{title}</h2>

@@ -31,7 +31,7 @@ export default function Contact() {
             const I = Icon as typeof Mail;
             return (
               <StaggerItem key={t as string}>
-                <a href={href as string} className="flex items-center gap-4 rounded-[14px] border border-line p-5 transition-colors hover:border-ink">
+                <a href={href as string} className="flex items-center gap-4 glass p-5 transition-colors hover:border-ink">
                   <I size={ICON.lg} className="text-orange" />
                   <span className="text-[15px]">{t as string}</span>
                 </a>
@@ -39,7 +39,7 @@ export default function Contact() {
             );
           })}
           {offices.map(([c, a]) => (
-            <StaggerItem key={c} className="flex gap-4 rounded-[14px] bg-surface p-5">
+            <StaggerItem key={c} className="flex gap-4 glass p-5">
               <MapPin size={ICON.lg} className="mt-0.5 text-orange" />
               <div>
                 <p className="text-[15px] font-medium">{c}</p>
@@ -48,7 +48,7 @@ export default function Contact() {
             </StaggerItem>
           ))}
         </Stagger>
-        <Reveal className="rounded-[20px] border border-line p-6 sm:p-8">
+        <Reveal className="glass p-6 sm:p-8">
           <Form
             name="contact"
             submit="Send message"

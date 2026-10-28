@@ -45,7 +45,7 @@ export default function ModuleCatalogue() {
             <div key={m.name}>
               <button onClick={() => setOpen(isOpen ? null : m.name)} aria-expanded={isOpen} className="flex w-full items-start justify-between gap-6 py-6 text-left">
                 <div className="max-w-[760px]">
-                  <p className="text-[20px] font-medium tracking-[-0.02em]">{m.name}</p>
+                  <p className="text-[20px] font-display font-semibold tracking-[-0.02em]">{m.name}</p>
                   <p className="mt-2 text-[14px] leading-[22px] text-muted">{m.desc}</p>
                 </div>
                 <span className="flex shrink-0 items-center gap-3 pt-1">
@@ -72,7 +72,7 @@ export default function ModuleCatalogue() {
                         {s.href && <p className="mt-3 text-[13px] font-medium text-ink group-hover:text-orange">Learn more →</p>}
                       </>
                     );
-                    const cls = "bb-fade-up group block h-full rounded-[14px] border border-line bg-white p-4 transition-colors";
+                    const cls = "bb-fade-up group block h-full glass p-4 transition-colors";
                     return s.href ? (
                       <Link key={s.name} href={s.href} style={{ animationDelay: `${Math.min(i, 9) * 0.03}s` }} className={clsx(cls, "hover:border-orange/40")}>
                         {body}

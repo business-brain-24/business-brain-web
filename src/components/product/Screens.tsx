@@ -117,7 +117,7 @@ const Grow = ({ children, i = 0, className }: { children: React.ReactNode; i?: n
 
 const Brain = ({ children }: { children: React.ReactNode }) => (
   <div className="flex items-start gap-3 rounded-[12px] bg-ink p-4 text-[13px] leading-[19px] text-white">
-    <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-orange shadow-[0_0_12px_3px_rgba(255,107,44,0.6)]" />
+    <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-orange shadow-[0_0_12px_3px_rgba(241,98,34,0.6)]" />
     <span>
       <span className="font-medium text-orange">Brain · </span>
       {children}
@@ -140,7 +140,7 @@ function Ledger() {
         {kpis.map(([l, v, d, c], i) => (
           <Grow key={l} i={i} className="rounded-[12px] border border-line p-4">
             <p className="text-[12px] text-muted">{l}</p>
-            <p className="mt-1 text-[20px] font-medium tracking-[-0.03em] sm:text-[24px]">{v}</p>
+            <p className="mt-1 text-[20px] font-display font-semibold tracking-[-0.03em] sm:text-[24px]">{v}</p>
             <p className={clsx("mt-1 text-[12px]", c)}>{d}</p>
           </Grow>
         ))}
@@ -352,7 +352,7 @@ function RouteMap() {
           <motion.path
             d="M14 20 L34 50 L58 30 L82 68"
             fill="none"
-            stroke="#FF6B2C"
+            stroke="#F16222"
             strokeWidth="0.8"
             strokeDasharray="2 1.5"
             initial={{ pathLength: 0 }}
@@ -548,7 +548,7 @@ function AssetCards() {
       <Grow i={3} className="flex flex-col justify-between rounded-[12px] bg-surface p-4 text-[13px] sm:col-span-2 xl:col-span-1">
         <div>
           <p className="text-[12px] text-subtle">Depreciation · October</p>
-          <p className="mt-1 text-[24px] font-medium tracking-[-0.03em]">৳ 31.2 L</p>
+          <p className="mt-1 text-[24px] font-display font-semibold tracking-[-0.03em]">৳ 31.2 L</p>
           <p className="text-muted">Posted to ledger automatically</p>
         </div>
         <p className="mt-4">Schedule →</p>
@@ -792,7 +792,7 @@ function Kanban() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 + ci * 0.12 + i * 0.08, duration: 0.5 }}
                   whileHover={{ y: -3 }}
-                  className={clsx("space-y-1.5 rounded-[10px] border bg-white p-3", hot ? "border-orange shadow-[0_0_0_3px_rgba(255,107,44,0.12)]" : "border-line")}
+                  className={clsx("space-y-1.5 rounded-[10px] border bg-white p-3", hot ? "border-orange shadow-[0_0_0_3px_rgba(241,98,34,0.12)]" : "border-line")}
                 >
                   <p className="flex items-center justify-between font-medium">
                     {n}

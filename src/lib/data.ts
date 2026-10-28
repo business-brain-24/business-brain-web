@@ -632,7 +632,7 @@ export const industries: Industry[] = [
       { name: "Accounting", note: "Batch costing" },
     ],
     stat: { value: "+22%", label: "line efficiency" },
-    tone: "from-[#1c2027] to-[#0b0d12]",
+    tone: "from-[#1c2027] to-[#161928]",
   },
   {
     slug: "trading",
@@ -656,7 +656,7 @@ export const industries: Industry[] = [
       { name: "Accounting", note: "Receivables, P&L" },
     ],
     stat: { value: "34%", label: "fewer overdue receivables" },
-    tone: "from-[#241d14] to-[#0b0d12]",
+    tone: "from-[#241d14] to-[#161928]",
   },
   {
     slug: "retail",
@@ -680,7 +680,7 @@ export const industries: Industry[] = [
       { name: "Accounting", note: "VAT, outlet P&L" },
     ],
     stat: { value: "27%", label: "less dead stock" },
-    tone: "from-[#1d2418] to-[#0b0d12]",
+    tone: "from-[#1d2418] to-[#161928]",
   },
   {
     slug: "pharma",
@@ -704,7 +704,7 @@ export const industries: Industry[] = [
       { name: "Accounting", note: "Costing, VAT" },
     ],
     stat: { value: "4 min", label: "full batch trace" },
-    tone: "from-[#141d24] to-[#0b0d12]",
+    tone: "from-[#141d24] to-[#161928]",
   },
   {
     slug: "agro",
@@ -728,7 +728,7 @@ export const industries: Industry[] = [
       { name: "Accounting", note: "Margins" },
     ],
     stat: { value: "+6%", label: "processing yield" },
-    tone: "from-[#1a2214] to-[#0b0d12]",
+    tone: "from-[#1a2214] to-[#161928]",
   },
   {
     slug: "garments",
@@ -752,7 +752,7 @@ export const industries: Industry[] = [
       { name: "Accounting", note: "LC, costing, P&L" },
     ],
     stat: { value: "80%", label: "faster month-end close" },
-    tone: "from-[#2a1d14] to-[#0b0d12]",
+    tone: "from-[#2a1d14] to-[#161928]",
   },
   {
     slug: "construction",
@@ -776,7 +776,7 @@ export const industries: Industry[] = [
       { name: "Accounting", note: "Project P&L" },
     ],
     stat: { value: "9 days", label: "shorter average delay" },
-    tone: "from-[#22201c] to-[#0b0d12]",
+    tone: "from-[#22201c] to-[#161928]",
   },
   {
     slug: "group",
@@ -800,7 +800,7 @@ export const industries: Industry[] = [
       { name: "Brain AI", note: "Group insights" },
     ],
     stat: { value: "1 click", label: "group consolidation" },
-    tone: "from-[#151a26] to-[#0b0d12]",
+    tone: "from-[#151a26] to-[#161928]",
   },
 ];
 

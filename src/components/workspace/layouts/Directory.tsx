@@ -35,7 +35,7 @@ export default function Directory({ groups, people, action }: Props) {
             <button onClick={() => setGrid(true)} aria-label="Grid view" className={clsx("rounded-full p-2", grid && "bg-orange-soft font-medium text-orange-deep")}><LayoutGrid size={ICON.sm} /></button>
             <button onClick={() => setGrid(false)} aria-label="List view" className={clsx("rounded-full p-2", !grid && "bg-orange-soft font-medium text-orange-deep")}><List size={ICON.sm} /></button>
           </div>
-          <button className="flex h-10 shrink-0 items-center gap-1.5 rounded-full bg-[linear-gradient(180deg,#FF6B2C,#C2410C)] px-4 text-[13px] font-medium text-white"><Plus size={ICON.sm} /> <span className="hidden sm:inline">{action}</span></button>
+          <button className="flex h-10 shrink-0 items-center gap-1.5 rounded-full bg-[linear-gradient(180deg,#F16222,#C2410C)] px-4 text-[13px] font-medium text-white"><Plus size={ICON.sm} /> <span className="hidden sm:inline">{action}</span></button>
         </div>
       </div>
 

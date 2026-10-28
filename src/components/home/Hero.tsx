@@ -75,7 +75,7 @@ export default function Hero() {
   usePrefetch3D();
   return (
     <section className="px-2 pt-2 sm:px-3 sm:pt-3" style={{ fontFamily: "system-ui, sans-serif" }}>
-      <div className="relative flex w-full flex-col items-center overflow-clip rounded-[20px] bg-[#F2F2F3]">
+      <div className="relative flex w-full flex-col items-center overflow-clip rounded-[20px] bg-[#F7F3EA]">
         <motion.div
           aria-hidden
           initial={{ opacity: 0 }}
@@ -86,7 +86,7 @@ export default function Hero() {
 
         <div className="relative flex w-full max-w-[1120px] flex-col items-center px-5 pb-10 pt-[104px] text-center sm:pb-12 sm:pt-[112px]">
           {/* eyebrow */}
-          <span className="bb-fade-up inline-flex items-center gap-2 rounded-full border border-orange/20 bg-white/80 py-1.5 pl-1.5 pr-3.5 text-[13px] font-medium text-[#3A3F4A] shadow-[0_6px_20px_-12px_rgba(255,107,44,0.6)] backdrop-blur">
+          <span className="bb-fade-up inline-flex items-center gap-2 rounded-full border border-orange/20 bg-white/80 py-1.5 pl-1.5 pr-3.5 text-[13px] font-medium text-[#262D6C] shadow-[0_6px_20px_-12px_rgba(241,98,34,0.6)] backdrop-blur">
             <span className="flex h-6 items-center gap-1 rounded-full bg-orange px-2 text-[12px] font-semibold uppercase tracking-[0.06em] text-white">
               <Sparkles size={ICON.xs} /> Agentic
             </span>
@@ -95,7 +95,7 @@ export default function Hero() {
 
           {/* headline: brand line, then the promise with the payoff in orange */}
           <h1 aria-label="Business Brain: Do More. Spend Less." className="mt-5 font-medium tracking-[-0.045em] text-black">
-            <span aria-hidden className="block overflow-hidden pb-1 text-[20px] leading-[26px] tracking-[-0.02em] text-[#545A66] sm:text-[22px] sm:leading-[28px]">
+            <span aria-hidden className="block overflow-hidden pb-1 text-[20px] leading-[26px] tracking-[-0.02em] text-[#5D6380] sm:text-[22px] sm:leading-[28px]">
               <span className="bb-rise inline-block">Business Brain</span>
             </span>
             <span aria-hidden className="mt-1 block text-[42px] leading-[46px] sm:text-[56px] sm:leading-[60px] lg:text-[64px] lg:leading-[68px]">
@@ -105,7 +105,7 @@ export default function Hero() {
                 </span>
               ))}
               <span className="inline-block overflow-hidden pb-[0.1em] align-bottom">
-                <span className="bb-rise inline-block bg-[linear-gradient(100deg,#FF6B2C_10%,#C2410C_90%)] bg-clip-text text-transparent" style={{ animationDelay: "0.22s" }}>
+                <span className="bb-rise inline-block bg-[linear-gradient(100deg,#F16222_10%,#C2410C_90%)] bg-clip-text text-transparent" style={{ animationDelay: "0.22s" }}>
                   Spend Less.
                 </span>
               </span>
@@ -115,7 +115,7 @@ export default function Hero() {
           <p className="bb-fade-up mt-4 max-w-[860px] text-[18px] font-medium leading-[27px] tracking-[-0.01em] text-ink sm:text-[20px] sm:leading-[28px]" style={{ animationDelay: "0.35s" }}>
             The agentic ERP that cuts operating costs and lifts productivity across your enterprise.
           </p>
-          <p className="bb-fade-up mt-3 max-w-[860px] text-[15px] leading-[24px] text-[#5B616D]" style={{ animationDelay: "0.45s" }}>
+          <p className="bb-fade-up mt-3 max-w-[860px] text-[15px] leading-[24px] text-[#5D6380]" style={{ animationDelay: "0.45s" }}>
             Bring finance, HR, payroll, procurement, inventory, sales, manufacturing and many other modules into one connected system. Reduce
             repetitive work, coordinate approvals and turn business insights into action, with the controls you set.
           </p>
@@ -137,7 +137,7 @@ export default function Hero() {
 
         <div className="relative flex w-full flex-wrap items-center justify-center gap-x-8 gap-y-3 px-5 pb-12 pt-10">
           {pillars.map((p) => (
-            <span key={p} className="flex items-center gap-2 text-[14px] font-medium text-[#545A66]">
+            <span key={p} className="flex items-center gap-2 text-[14px] font-medium text-[#5D6380]">
               <span className="flex h-[18px] w-[18px] items-center justify-center rounded-full bg-orange-soft text-orange">
                 <Check size={ICON.xs} strokeWidth={3.5} />
               </span>
@@ -237,21 +237,21 @@ function Stage() {
                   fill="none"
                   strokeWidth={1.5}
                   initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1, stroke: on ? "#FF6B2C" : "#D3D5DA", opacity: focus ? 0.12 : 1 }}
+                  animate={{ pathLength: 1, stroke: on ? "#F16222" : "#D3D5DA", opacity: focus ? 0.12 : 1 }}
                   transition={{ pathLength: { duration: 1.2, ease, delay: 0.7 + i * 0.08 }, stroke: { duration: 0.5 }, opacity: { duration: 0.4 } }}
                 />
                 {on && !focus && <Pulses path={n.path} />}
               </g>
             );
           })}
-          <motion.path d="M708 40 L708 150" fill="none" stroke="#FF6B2C" strokeWidth={1.5} initial={{ pathLength: 0 }} animate={{ pathLength: 1, opacity: focus ? 0.12 : 1 }} transition={{ duration: 0.8, ease, delay: 0.9, opacity: { duration: 0.4 } }} />
+          <motion.path d="M708 40 L708 150" fill="none" stroke="#F16222" strokeWidth={1.5} initial={{ pathLength: 0 }} animate={{ pathLength: 1, opacity: focus ? 0.12 : 1 }} transition={{ duration: 0.8, ease, delay: 0.9, opacity: { duration: 0.4 } }} />
           {!focus && <Pulses path="M708 40 L708 150" />}
         </svg>
 
         {/* glow + brain */}
         <motion.div
           aria-hidden
-          className="absolute left-[528px] top-[130px] h-[360px] w-[360px] rounded-full bg-[radial-gradient(circle,rgba(255,107,44,0.18)_0%,rgba(255,107,44,0)_65%)]"
+          className="absolute left-[528px] top-[130px] h-[360px] w-[360px] rounded-full bg-[radial-gradient(circle,rgba(241,98,34,0.18)_0%,rgba(241,98,34,0)_65%)]"
           animate={{ scale: focus ? 1.6 : hover !== null ? 1.15 : [1, 1.08, 1] }}
           transition={hover !== null ? { duration: 0.4 } : { duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
@@ -274,7 +274,7 @@ function Stage() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: focus ? 0 : 1, y: 0 }}
           transition={{ duration: 0.7, ease, delay: focus ? 0 : 0.8 }}
-          className="absolute left-1/2 top-0 flex -translate-x-1/2 items-center gap-2.5 rounded-[10px] bg-ink py-[9px] pl-2.5 pr-4 shadow-[0_10px_30px_#0B0D122E]"
+          className="absolute left-1/2 top-0 flex -translate-x-1/2 items-center gap-2.5 rounded-[10px] bg-ink py-[9px] pl-2.5 pr-4 shadow-[0_10px_30px_#1619282E]"
         >
           <Ring value={books} />
           <span className="text-[14px] font-medium leading-[18px] text-white tabular-nums">Books {books}% closed</span>
@@ -355,7 +355,7 @@ function MobileStage() {
         <span className="text-[14px] font-medium text-white tabular-nums">Books {books}% closed</span>
       </div>
       <div className="relative h-[300px] w-[300px]">
-        <div className="absolute inset-[-30px] rounded-full bg-[radial-gradient(circle,rgba(255,107,44,0.18)_0%,rgba(255,107,44,0)_65%)]" />
+        <div className="absolute inset-[-30px] rounded-full bg-[radial-gradient(circle,rgba(241,98,34,0.18)_0%,rgba(241,98,34,0)_65%)]" />
         <motion.div className="relative h-full w-full" animate={{ y: [0, -6, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}>
           <LazyScene fallback={<img src="/logo.svg" alt="" width={300} height={300} className="h-full w-full object-contain p-10" />}>
             <LogoNeuron />
@@ -453,7 +453,7 @@ function Chip({ node, index, on, onHover, onToggle, inline, dimmed, isSource, en
         }}
         className={clsx(
           "flex items-center gap-2.5 whitespace-nowrap rounded-full border bg-white px-3.5 py-2.5 transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-0.5",
-          on ? "border-orange shadow-[0_0_0_4px_#FF6B2C1A]" : "border-line",
+          on ? "border-orange shadow-[0_0_0_4px_#F162221A]" : "border-line",
         )}
       >
         <span className="text-[14px] font-medium leading-[18px] text-black">{node.name}</span>
@@ -515,7 +515,7 @@ function ModuleNeuron({ node, onClose }: { node: Node; onClose: () => void }) {
   return (
     <motion.div className="absolute inset-0" exit={{ opacity: 0 }} transition={{ duration: 0.25 }}>
       <svg width={STAGE_W} height={STAGE_H} viewBox={`0 0 ${STAGE_W} ${STAGE_H}`} className="pointer-events-none absolute inset-0" aria-hidden>
-        <motion.path d={axon} fill="none" stroke="#FF6B2C" strokeWidth={2} initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 0.45, ease }} />
+        <motion.path d={axon} fill="none" stroke="#F16222" strokeWidth={2} initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 0.45, ease }} />
         <Pulses path={axon} />
         {features.map((f, i) => {
           const p = dendritePoint(i, features.length);
@@ -528,7 +528,7 @@ function ModuleNeuron({ node, onClose }: { node: Node; onClose: () => void }) {
               <motion.path
                 d={d}
                 fill="none"
-                stroke="#FF6B2C"
+                stroke="#F16222"
                 strokeOpacity={0.55}
                 strokeWidth={1.5}
                 initial={{ pathLength: 0 }}
@@ -547,11 +547,11 @@ function ModuleNeuron({ node, onClose }: { node: Node; onClose: () => void }) {
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.6 }}
         transition={{ duration: 0.45, ease, delay: 0.2 }}
-        className="absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1 rounded-[18px] border border-orange bg-white px-5 py-3.5 text-center shadow-[0_0_0_6px_#FF6B2C1A,0_18px_40px_#0B0D121F]"
+        className="absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1 rounded-[18px] border border-orange bg-white px-5 py-3.5 text-center shadow-[0_0_0_6px_#F162221A,0_18px_40px_#1619281F]"
         style={{ left: SOMA.x, top: SOMA.y, width: SOMA.half * 2 }}
       >
         <span className="text-[16px] font-semibold leading-5 tracking-[-0.01em] text-black">{node.name}</span>
-        <span className="text-[12px] leading-4 text-[#545A66]">{product.short}</span>
+        <span className="text-[12px] leading-4 text-[#5D6380]">{product.short}</span>
         <Link href={node.href} className="group mt-1 text-[12px] font-medium text-orange-deep hover:text-orange">
           Open module <span className="inline-block transition-transform group-hover:translate-x-0.5">→</span>
         </Link>
@@ -573,9 +573,9 @@ function ModuleNeuron({ node, onClose }: { node: Node; onClose: () => void }) {
             <Link
               href={node.href}
               title={f.body}
-              className="group flex -translate-x-1/2 -translate-y-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-line bg-white py-2 pl-2.5 pr-3.5 shadow-[0_8px_22px_#0B0D1212] transition-[border-color,box-shadow] duration-300 hover:border-orange hover:shadow-[0_0_0_4px_#FF6B2C1A]"
+              className="group flex -translate-x-1/2 -translate-y-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-line bg-white py-2 pl-2.5 pr-3.5 shadow-[0_8px_22px_#16192812] transition-[border-color,box-shadow] duration-300 hover:border-orange hover:shadow-[0_0_0_4px_#F162221A]"
             >
-              <span className="h-2 w-2 rounded-full bg-orange shadow-[0_0_0_3px_#FF6B2C26]" />
+              <span className="h-2 w-2 rounded-full bg-orange shadow-[0_0_0_3px_#F1622226]" />
               <span className="text-[13px] font-medium leading-4 text-black">{f.title}</span>
             </Link>
           </motion.div>
@@ -589,7 +589,7 @@ function ModuleNeuron({ node, onClose }: { node: Node; onClose: () => void }) {
         initial={{ opacity: 0, scale: 0.6 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3, delay: 0.5 }}
-        className="absolute flex h-9 w-9 items-center justify-center rounded-full border border-line bg-white text-[#545A66] shadow-[0_8px_20px_#0B0D1214] transition-colors hover:border-orange hover:text-orange"
+        className="absolute flex h-9 w-9 items-center justify-center rounded-full border border-line bg-white text-[#5D6380] shadow-[0_8px_20px_#16192814] transition-colors hover:border-orange hover:text-orange"
         style={{ left: SOMA.x + DENDRITE.rx + 70, top: 40 }}
       >
         <X size={ICON.md} />
@@ -603,9 +603,9 @@ function Pulses({ path }: { path: string }) {
   return (
     <>
       {[
-        [2.5, "#FF6B2C", 0],
-        [2, "#FF6B2C99", 0.18],
-        [1.5, "#FF6B2C66", 0.36],
+        [2.5, "#F16222", 0],
+        [2, "#F1622299", 0.18],
+        [1.5, "#F1622266", 0.36],
       ].map(([r, fill, delay]) => (
         <circle key={String(delay)} r={r as number} fill={fill as string}>
           <animateMotion dur="1.8s" repeatCount="indefinite" path={path} begin={`${delay}s`} keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines="0.4 0 0.2 1" />
@@ -620,7 +620,7 @@ function Ring({ value }: { value: number }) {
   return (
     <svg width="20" height="20" viewBox="0 0 24 24" className="-rotate-90" aria-hidden>
       <circle cx="12" cy="12" r="9" fill="none" stroke="rgb(255 255 255 / 18%)" strokeWidth="3" />
-      <circle cx="12" cy="12" r="9" fill="none" stroke="#FF6B2C" strokeWidth="3" strokeLinecap="round" strokeDasharray={c} strokeDashoffset={c * (1 - value / 100)} className="transition-[stroke-dashoffset] duration-500" />
+      <circle cx="12" cy="12" r="9" fill="none" stroke="#F16222" strokeWidth="3" strokeLinecap="round" strokeDasharray={c} strokeDashoffset={c * (1 - value / 100)} className="transition-[stroke-dashoffset] duration-500" />
     </svg>
   );
 }
@@ -648,7 +648,7 @@ function HeroAsk() {
   return (
     <Link
       href={`/ask?q=${encodeURIComponent(prompts[i])}`}
-      className="group flex w-full items-center justify-between gap-3 rounded-[12px] border border-line bg-white py-2 pl-[18px] pr-2 shadow-[0_10px_30px_#0B0D120F] transition-shadow hover:shadow-[0_14px_40px_#0B0D121F]"
+      className="group flex w-full items-center justify-between gap-3 rounded-[12px] border border-line bg-white py-2 pl-[18px] pr-2 shadow-[0_10px_30px_#1619280F] transition-shadow hover:shadow-[0_14px_40px_#1619281F]"
     >
       <span className="flex min-w-0 items-center gap-2.5">
         <Sparkles size={ICON.md} className="shrink-0 text-orange" />

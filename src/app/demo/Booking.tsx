@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/Button";
 import { Reveal, SplitHeading } from "@/components/motion/Reveal";
 import { contact, industries } from "@/lib/data";
 import { ICON } from "@/lib/icons";
+import { HeroBackdrop } from "@/components/ui/PageHero";
 
 const sessions = {
   fit: {
@@ -48,7 +49,8 @@ export function Booking({ session }: { session?: string | null }) {
   const s = sessions[picked];
 
   return (
-    <section className="container-x grid gap-12 pb-10 pt-[120px] sm:pt-[150px] lg:grid-cols-[1fr_1.1fr] lg:gap-20">
+    <section className="container-x relative isolate grid gap-12 pb-10 pt-[120px] sm:pt-[150px] lg:grid-cols-[1fr_1.1fr] lg:gap-20">
+        <HeroBackdrop />
       <div>
         <Label>{s.label}</Label>
         <SplitHeading text={s.title} className="h-section mt-3 !text-[clamp(34px,5vw,56px)]" />
@@ -63,7 +65,7 @@ export function Booking({ session }: { session?: string | null }) {
               </li>
             ))}
           </ul>
-          <div className="mt-10 rounded-[16px] bg-surface p-6">
+          <div className="mt-10 glass p-6">
             <p className="text-[16px] leading-[25px]">Prefer to talk first?</p>
             <p className="mt-2 text-[14px] text-muted">
               Call{" "}
@@ -75,7 +77,7 @@ export function Booking({ session }: { session?: string | null }) {
           </div>
         </Reveal>
       </div>
-      <Reveal delay={0.2} className="rounded-[20px] border border-line p-6 sm:p-8">
+      <Reveal delay={0.2} className="glass p-6 sm:p-8">
         <Form
           name="demo"
           submit={s.submit}

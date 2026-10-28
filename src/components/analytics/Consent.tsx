@@ -77,7 +77,7 @@ export default function ConsentBanner() {
 
   const btn = "min-h-11 rounded-[10px] px-4 text-[14px] font-medium transition-colors";
   return (
-    <div role="dialog" aria-label="Cookie choices" className="fixed inset-x-2 bottom-2 z-[60] mx-auto max-w-[720px] rounded-[16px] border border-line bg-white p-4 shadow-[0_8px_40px_rgba(11,13,18,0.16)] sm:bottom-4 sm:p-5">
+    <div role="dialog" aria-label="Cookie choices" className="fixed inset-x-2 bottom-2 z-[60] mx-auto max-w-[720px] rounded-[16px] border border-line bg-white p-4 shadow-[0_8px_40px_rgba(22,25,40,0.16)] sm:bottom-4 sm:p-5">
       <p className="text-[14px] leading-[21px] text-ink">
         We use cookies to measure the site and, with your consent, for advertising.{" "}
         <Link href="/privacy" className="underline underline-offset-2">Privacy policy</Link>
@@ -96,7 +96,7 @@ export default function ConsentBanner() {
               </span>
               <input
                 type="checkbox"
-                className="h-5 w-5 accent-[#FF6B2C]"
+                className="h-5 w-5 accent-[#F16222]"
                 checked={on as boolean}
                 disabled={!key}
                 onChange={(e) => key && setDraft((d) => ({ ...d, [key as string]: e.target.checked }))}

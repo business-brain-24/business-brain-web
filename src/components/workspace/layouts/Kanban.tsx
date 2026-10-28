@@ -6,7 +6,7 @@ import { ICON } from "@/lib/icons";
 
 type Props = Extract<Layout, { kind: "kanban" }>;
 
-const accents = ["#94A3B8", "#FF6B2C", "#F59E0B", "#64748B", "#10B981"];
+const accents = ["#94A3B8", "#F16222", "#F59E0B", "#64748B", "#10B981"];
 
 /** Board layout: columns of cards that move left to right as work progresses. */
 export default function Kanban({ columns, action }: Props) {
@@ -15,7 +15,7 @@ export default function Kanban({ columns, action }: Props) {
     <div>
       <div className="mb-3 flex items-center justify-between">
         <p className="text-[13px] text-muted">{total} items across {columns.length} stages</p>
-        <button className="flex h-9 items-center gap-1.5 rounded-full bg-[linear-gradient(180deg,#FF6B2C,#C2410C)] px-3.5 text-[13px] font-medium text-white">
+        <button className="flex h-9 items-center gap-1.5 rounded-full bg-[linear-gradient(180deg,#F16222,#C2410C)] px-3.5 text-[13px] font-medium text-white">
           <Plus size={ICON.sm} /> {action}
         </button>
       </div>

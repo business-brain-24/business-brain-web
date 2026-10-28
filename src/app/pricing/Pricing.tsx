@@ -80,7 +80,7 @@ export default function Pricing() {
                 <motion.span initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: "spring", delay: 0.15 }} className="flex h-14 w-14 items-center justify-center rounded-full bg-orange text-white">
                   <Check size={26} />
                 </motion.span>
-                <p className="text-[22px] font-medium tracking-[-0.02em]">Your requirements are in.</p>
+                <p className="text-[22px] font-display font-semibold tracking-[-0.02em]">Your requirements are in.</p>
                 <p className="text-[15px] text-muted">Our team will review them and reply with a tailored quote within one working day.</p>
               </motion.div>
             ) : (
