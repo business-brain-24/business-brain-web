@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import { Check, ChevronDown, ChevronRight } from "lucide-react";
+import { ArrowRight, Check, ChevronDown } from "lucide-react";
 import clsx from "clsx";
 import Turnstile from "./Turnstile";
 import { contact } from "@/lib/data";
@@ -61,7 +61,7 @@ export default function Form({ name, fields, submit, done }: { name: FormName; f
           <motion.span initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: "spring", delay: 0.15 }} className="flex h-14 w-14 items-center justify-center rounded-full bg-orange text-white">
             <Check size={26} />
           </motion.span>
-          <p className="text-[22px] font-medium tracking-[-0.02em]">{done}</p>
+          <p className="text-[22px] font-display font-semibold tracking-[-0.02em]">{done}</p>
           <p className="text-[15px] text-muted">We&apos;ll reply within one working day.</p>
         </motion.div>
       ) : (
@@ -117,13 +117,9 @@ export function Select({ className, children, ...props }: React.SelectHTMLAttrib
 
 export function SubmitButton({ sending, children }: { sending: boolean; children: React.ReactNode }) {
   return (
-    <button type="submit" disabled={sending} aria-busy={sending} className="group mt-2 inline-flex w-fit rounded-[12px] bg-ink/12 p-[3px] disabled:opacity-60 sm:col-span-2">
-      <span className="flex items-center gap-3 rounded-[10px] bg-ink py-[3px] pl-[3px] pr-4 text-white transition-transform group-active:scale-[0.98]">
-        <span className="flex h-9 w-9 items-center justify-center rounded-[8px] bg-[linear-gradient(180deg,#FF6B2C_50%,#C2410C_100%)]">
-          <ChevronRight size={ICON.md} strokeWidth={2.2} className="transition-transform duration-200 group-hover:translate-x-0.5" />
-        </span>
-        <span className="text-[15px] font-medium">{sending ? "Sending…" : children}</span>
-      </span>
+    <button type="submit" disabled={sending} aria-busy={sending} className="btn-signal group mt-2 inline-flex h-12 w-fit items-center gap-2 px-6 text-[15px] font-semibold disabled:opacity-60 sm:col-span-2">
+      {sending ? "Sending…" : children}
+      <ArrowRight size={ICON.md} strokeWidth={2} className="transition-transform duration-200 group-hover:translate-x-0.5" />
     </button>
   );
 }
@@ -139,6 +135,6 @@ export function PrivacyNote() {
 // 16px on phones stops iOS Safari zooming on focus; 15px from sm up.
 export const input = (err?: string) =>
   clsx(
-    "h-12 w-full rounded-[10px] border bg-white px-3.5 text-[16px] sm:text-[15px] outline-none transition-[border,box-shadow] focus:border-orange focus:shadow-[0_0_0_4px_rgba(255,107,44,0.14)]",
+    "h-12 w-full rounded-[12px] border bg-white/90 px-3.5 text-[16px] text-ink sm:text-[15px] outline-none transition-[border,box-shadow] placeholder:text-subtle focus:border-orange focus:shadow-[0_0_0_4px_rgba(241,98,34,0.14)]",
     err ? "border-danger" : "border-line",
   );

@@ -34,12 +34,12 @@ export default function About() {
       <PageHero label="About us" title="Business Brain" sub="The agentic ERP that cuts operating costs and lifts productivity across your enterprise." />
       <section className="container-x mt-16 grid gap-4 md:grid-cols-2">
         {blocks.map((b, i) => (
-          <Reveal key={b.label} delay={i * 0.1} className={"flex flex-col rounded-[20px] p-7 sm:p-10 " + (i === 0 ? "bg-ink text-white" : "bg-surface")}>
-            <p className="text-[13px] font-medium text-orange">{b.label}</p>
-            <h2 className="mt-3 text-[28px] font-medium leading-[34px] tracking-[-0.03em] sm:text-[32px] sm:leading-[38px]">{b.title}</h2>
-            <p className={"mt-4 flex-1 text-[16px] leading-[27px] " + (i === 0 ? "text-white/70" : "text-muted")}>{b.body}</p>
+          <Reveal key={b.label} delay={i * 0.1} className="glass flex flex-col !rounded-[28px] p-7 sm:p-10">
+            <p className="eyebrow">{b.label}</p>
+            <h2 className="mt-3 text-[28px] font-display font-semibold leading-[34px] tracking-[-0.03em] sm:text-[32px] sm:leading-[38px]">{b.title}</h2>
+            <p className="mt-4 flex-1 text-[16px] leading-[27px] text-muted">{b.body}</p>
             <div className="mt-8">
-              <Button href={b.cta.href} variant={i === 0 ? "light" : "dark"} external={b.cta.external}>
+              <Button href={b.cta.href} variant={i === 0 ? "dark" : "navy"} external={b.cta.external}>
                 {b.cta.text}
               </Button>
             </div>

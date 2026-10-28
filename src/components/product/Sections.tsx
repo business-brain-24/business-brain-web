@@ -20,10 +20,11 @@ export function ProductHero({ p }: { p: Product }) {
   const centered = p.layout === "centered";
   const mirror = p.layout === "mirror";
   return (
-    <section className="relative overflow-hidden pt-[104px] sm:pt-[128px]">
+    <section className="relative isolate overflow-hidden pt-[104px] sm:pt-[128px]">
+      <div className="hero-backdrop -z-10" aria-hidden />
       <div
         className={clsx(
-          "pointer-events-none absolute h-[700px] w-[700px] rounded-full bg-[radial-gradient(circle,rgba(255,107,44,0.12),transparent_65%)]",
+          "pointer-events-none absolute h-[700px] w-[700px] rounded-full bg-[radial-gradient(circle,rgba(241,98,34,0.12),transparent_65%)]",
           centered ? "left-1/2 top-0 -translate-x-1/2" : mirror ? "-left-60 -top-40" : "-right-60 -top-40",
         )}
       />
@@ -54,7 +55,7 @@ export function ProductHero({ p }: { p: Product }) {
         <Stagger className={clsx("mt-12 flex flex-wrap gap-x-12 gap-y-6 border-t border-line pt-8", centered && "justify-center")}>
           {p.stats.map((s) => (
             <StaggerItem key={s.label}>
-              <p className="text-[28px] font-medium tracking-[-0.03em] sm:text-[34px]">{s.value}</p>
+              <p className="text-[28px] font-display font-semibold tracking-[-0.03em] sm:text-[34px]">{s.value}</p>
               <p className="text-[13px] text-muted">{s.label}</p>
             </StaggerItem>
           ))}
@@ -128,7 +129,7 @@ export function Connected({ p, dark = false }: { p: Product; dark?: boolean }) {
               ))}
             </div>
             <div className="flex justify-center py-4">
-              <div data-orb className="relative flex h-40 w-40 flex-col items-center justify-center rounded-full bg-[radial-gradient(circle_at_50%_40%,#FFF4EE,#FFD2BC_60%,#FF8A55)] text-center shadow-[0_0_80px_rgba(255,107,44,0.35)] sm:h-44 sm:w-44">
+              <div data-orb className="relative flex h-40 w-40 flex-col items-center justify-center rounded-full bg-[radial-gradient(circle_at_50%_40%,#FFF4EE,#FFD2BC_60%,#FF8A55)] text-center shadow-[0_0_80px_rgba(241,98,34,0.35)] sm:h-44 sm:w-44">
                 <span className="absolute inset-0 animate-pulse-ring rounded-full border border-orange/40" />
                 <span className="text-[12px] text-orange-deep">{p.connected.event}</span>
                 <span className="mt-1 text-[17px] font-medium text-ink">{p.connected.state}</span>
@@ -164,7 +165,7 @@ export function Features({ p, wide = false }: { p: Product; wide?: boolean }) {
               whileHover={{ y: -4 }}
               transition={{ duration: 0.25 }}
               className={clsx(
-                "group h-full rounded-[14px] border border-line bg-white p-6 transition-shadow hover:shadow-[var(--shadow-soft)]",
+                "group h-full glass p-6 transition-shadow hover:shadow-[var(--shadow-soft)]",
                 wide && "flex gap-5",
               )}
             >
@@ -210,7 +211,7 @@ export function AskSection({ p }: { p: Product }) {
               “{q}”
             </motion.div>
           ))}
-          <Link href="/ask" className="mt-4 flex items-center gap-3 rounded-[14px] bg-white py-2 pl-4 pr-2 text-ink">
+          <Link href="/ask" className="mt-4 flex items-center gap-3 glass py-2 pl-4 pr-2 text-ink">
             <Sparkles size={ICON.md} className="text-orange" />
             <AnimatePresence mode="wait">
               <motion.span
@@ -277,7 +278,7 @@ export function Related({ items }: { items: Product[] }) {
       <p className="text-[13px] text-subtle">Works best with</p>
       <div className="mt-4 grid gap-3 sm:grid-cols-3">
         {items.map((r) => (
-          <Link key={r.slug} href={`/products/${r.slug}`} className="group rounded-[14px] border border-line p-5 transition-colors hover:border-ink">
+          <Link key={r.slug} href={`/products/${r.slug}`} className="group glass p-5 transition-colors hover:border-ink">
             <p className="text-[13px] text-orange">{r.group}</p>
             <p className="mt-1 flex items-center justify-between text-[17px] font-medium">
               {r.name}

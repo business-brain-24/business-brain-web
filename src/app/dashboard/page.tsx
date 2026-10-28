@@ -62,7 +62,7 @@ export default function Dashboard() {
     <section className="mx-auto max-w-[1500px] p-3 sm:p-5">
       {/* command header */}
       <div className="bb-fade-up relative overflow-hidden rounded-[24px] border border-line bg-white p-5 sm:p-8">
-        <div className="pointer-events-none absolute -right-20 -top-32 h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle,rgba(255,107,44,0.14),transparent_65%)]" />
+        <div className="pointer-events-none absolute -right-20 -top-32 h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle,rgba(241,98,34,0.14),transparent_65%)]" />
 
         <div className="relative max-w-[760px]">
           <div>
@@ -129,7 +129,7 @@ export default function Dashboard() {
               <div key={a.slug} style={{ animationDelay: `${Math.min(i, 12) * 0.025}s` }} className="bb-fade-up group relative">
                 <Link
                   href={`/dashboard/${a.slug}`}
-                  className="flex h-full items-center gap-4 rounded-[18px] border border-line bg-white p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-orange/40 hover:shadow-[0_18px_40px_-28px_rgba(255,107,44,0.6)]"
+                  className="flex h-full items-center gap-4 rounded-[18px] border border-line bg-white p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-orange/40 hover:shadow-[0_18px_40px_-28px_rgba(241,98,34,0.6)]"
                 >
                   <AppIcon app={a} size={52} />
                   <div className="min-w-0 flex-1">

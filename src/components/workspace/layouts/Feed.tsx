@@ -14,7 +14,7 @@ export default function Feed({ posts, action }: Props) {
         <div className="flex items-center gap-3 rounded-[18px] border border-line bg-white p-3">
           <Avatar name="Jubair" size={36} />
           <p className="flex-1 rounded-full bg-surface px-4 py-2.5 text-[14px] text-muted">Share an update with the company…</p>
-          <button className="flex h-10 items-center gap-1.5 rounded-full bg-[linear-gradient(180deg,#FF6B2C,#C2410C)] px-4 text-[13px] font-medium text-white"><Plus size={ICON.sm} /> <span className="hidden sm:inline">{action}</span></button>
+          <button className="flex h-10 items-center gap-1.5 rounded-full bg-[linear-gradient(180deg,#F16222,#C2410C)] px-4 text-[13px] font-medium text-white"><Plus size={ICON.sm} /> <span className="hidden sm:inline">{action}</span></button>
         </div>
         {posts.map((p, i) => (
           <article key={p.title} style={{ animationDelay: `${i * 0.06}s` }} className="bb-fade-up rounded-[18px] border border-line bg-white p-5">

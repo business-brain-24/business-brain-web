@@ -103,8 +103,8 @@ export default function Nav() {
           className={clsx(
             "mx-auto flex max-w-[1400px] items-center justify-between rounded-[18px] border border-white/80 px-3 backdrop-blur-xl transition-all duration-300 sm:px-4",
             scrolled || open
-              ? "h-[60px] bg-white/85 shadow-[0_10px_30px_-14px_rgba(11,13,18,0.22)]"
-              : "h-[64px] bg-white/55 shadow-[0_8px_24px_-16px_rgba(11,13,18,0.18)]",
+              ? "h-[60px] bg-white/85 shadow-[0_10px_30px_-14px_rgba(22,25,40,0.22)]"
+              : "h-[64px] bg-white/55 shadow-[0_8px_24px_-16px_rgba(22,25,40,0.18)]",
           )}
         >
           <Logo />
@@ -170,7 +170,7 @@ export default function Nav() {
               exit={{ opacity: 0, y: -6, transition: { duration: 0.15 } }}
               transition={{ duration: 0.35, ease }}
               onMouseEnter={() => enter(open)}
-              className="mx-auto mt-2 hidden w-fit max-w-[calc(100vw-24px)] rounded-[22px] border border-white bg-white/90 p-3 shadow-[0_30px_80px_-30px_rgba(11,13,18,0.35)] backdrop-blur-2xl lg:block"
+              className="mx-auto mt-2 hidden w-fit max-w-[calc(100vw-24px)] rounded-[22px] border border-white bg-white/90 p-3 shadow-[0_30px_80px_-30px_rgba(22,25,40,0.35)] backdrop-blur-2xl lg:block"
             >
               {open === "products" ? <ProductsMenu /> : <IndustriesMenu />}
             </motion.div>
@@ -196,7 +196,7 @@ function TalkButton({ className, large }: { className?: string; large?: boolean 
         className,
       )}
     >
-      <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[linear-gradient(180deg,#FF6B2C,#C2410C)] transition-transform duration-300 group-hover:rotate-12">
+      <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[linear-gradient(180deg,#F16222,#C2410C)] transition-transform duration-300 group-hover:rotate-12">
         <Sparkles size={ICON.sm} strokeWidth={2.2} />
       </span>
       Talk to the Brain
@@ -271,7 +271,7 @@ function ProductsMenu() {
       <Link href="/ask" className="group relative hidden w-[250px] shrink-0 flex-col justify-end overflow-hidden rounded-[16px] bg-ink p-5 text-white xl:flex">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/lp/orb.webp" alt="" className="absolute -right-10 -top-8 w-[240px] opacity-90 transition-transform duration-700 group-hover:scale-105" />
-        <span aria-hidden className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,13,18,0)_25%,rgba(11,13,18,0.85)_55%,#0b0d12_100%)]" />
+        <span aria-hidden className="absolute inset-0 bg-[linear-gradient(180deg,rgba(22,25,40,0)_25%,rgba(22,25,40,0.85)_55%,#161928_100%)]" />
         <span className="relative text-[11px] font-medium uppercase tracking-[0.14em] text-white/60">Ask Brain AI</span>
         <span className="relative mt-2 text-[18px] font-medium leading-[24px] tracking-[-0.01em]">Ask your ERP in Bangla or English.</span>
         <span className="relative mt-1.5 text-[13px] leading-[19px] text-white/70">Answers and charts come straight from the ledger.</span>
@@ -341,7 +341,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
           <motion.div key={k} variants={item} className="border-b border-line">
             <button
               onClick={() => setSection(section === k ? null : k)}
-              className="flex w-full items-center justify-between py-5 text-[24px] font-medium capitalize tracking-[-0.02em]"
+              className="flex w-full items-center justify-between py-5 text-[24px] font-display font-semibold capitalize tracking-[-0.02em]"
               aria-expanded={section === k}
             >
               {k}
@@ -381,7 +381,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
           ["/contact", "Contact"],
         ].map(([href, label]) => (
           <motion.div key={href} variants={item}>
-            <Link href={href} className="block border-b border-line py-5 text-[24px] font-medium tracking-[-0.02em]">
+            <Link href={href} className="block border-b border-line py-5 text-[24px] font-display font-semibold tracking-[-0.02em]">
               {label}
             </Link>
           </motion.div>

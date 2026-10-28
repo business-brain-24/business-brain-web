@@ -26,7 +26,7 @@ export default function Cards({ app, filters, items, action }: Props) {
             </button>
           ))}
         </div>
-        <button className="flex h-10 shrink-0 items-center gap-1.5 rounded-full bg-[linear-gradient(180deg,#FF6B2C,#C2410C)] px-4 text-[13px] font-medium text-white"><Plus size={ICON.sm} /> <span className="hidden sm:inline">{action}</span></button>
+        <button className="flex h-10 shrink-0 items-center gap-1.5 rounded-full bg-[linear-gradient(180deg,#F16222,#C2410C)] px-4 text-[13px] font-medium text-white"><Plus size={ICON.sm} /> <span className="hidden sm:inline">{action}</span></button>
       </div>
 
       <div key={filter} className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
@@ -52,7 +52,7 @@ export default function Cards({ app, filters, items, action }: Props) {
                 <div className="mt-4">
                   <div className="flex justify-between text-[12px] text-muted"><span>Progress</span><span className="font-medium text-ink">{it.progress}%</span></div>
                   <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-surface">
-                    <div className="bb-grow-x h-full rounded-full bg-[linear-gradient(90deg,#FF6B2C,#C2410C)]" style={{ width: `${it.progress}%`, animationDelay: `${0.2 + i * 0.05}s` }} />
+                    <div className="bb-grow-x h-full rounded-full bg-[linear-gradient(90deg,#F16222,#C2410C)]" style={{ width: `${it.progress}%`, animationDelay: `${0.2 + i * 0.05}s` }} />
                   </div>
                 </div>
               )}

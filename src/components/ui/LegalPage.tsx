@@ -21,7 +21,7 @@ export default function LegalPage({ label, title, updated, sections }: { label: 
         ) : (
           sections.map((s) => (
             <section key={s.heading}>
-              <h2 className="text-[22px] font-medium tracking-[-0.02em]">{s.heading}</h2>
+              <h2 className="text-[22px] font-display font-semibold tracking-[-0.02em]">{s.heading}</h2>
               {s.body.map((p, i) => (
                 <p key={i} className="mt-3 text-muted">{p}</p>
               ))}

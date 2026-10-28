@@ -1,49 +1,38 @@
 import Link from "next/link";
 import clsx from "clsx";
-import { ChevronRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { ICON } from "@/lib/icons";
 
 type Props = {
   href: string;
   children: React.ReactNode;
-  variant?: "dark" | "light";
+  /** dark: orange signal (primary). navy: strong secondary. light: frosted glass (quiet). */
+  variant?: "dark" | "navy" | "light";
   size?: "md" | "sm";
   className?: string;
+  /** Replaces the trailing arrow, e.g. an outward arrow for external links. */
   icon?: React.ReactNode;
   /** Opens in a new tab, for links that leave the site. */
   external?: boolean;
 };
 
-/** Framed button: translucent ring, solid inner, orange chevron tile. */
+/** The landing page buttons, used site-wide: signal, navy and glass. */
 export function Button({ href, children, variant = "dark", size = "md", className, icon, external }: Props) {
-  const dark = variant === "dark";
   return (
     <Link
       href={href}
       data-cta
       {...(external && { target: "_blank", rel: "noopener noreferrer" })}
       className={clsx(
-        "group inline-flex w-fit shrink-0 rounded-[12px] p-[3px] transition-colors duration-200",
-        dark ? "bg-ink/12 hover:bg-orange/30" : "bg-white/25 hover:bg-white/40",
+        "group inline-flex w-fit shrink-0 items-center justify-center gap-2 whitespace-nowrap font-semibold",
+        variant === "dark" ? "btn-signal" : variant === "navy" ? "btn-navy" : "btn-glass",
+        size === "md" ? "h-12 px-6 text-[15px]" : "h-10 px-4 text-[14px]",
         className,
       )}
     >
-      <span
-        className={clsx(
-          "flex items-center rounded-[10px] transition-transform duration-150 group-active:scale-[0.98]",
-          size === "md" ? "gap-3 py-[3px] pl-[3px] pr-4" : "gap-2.5 py-[3px] pl-[3px] pr-3",
-          dark ? "bg-ink text-white" : "bg-white text-ink",
-        )}
-      >
-        <span
-          className={clsx(
-            "flex items-center justify-center rounded-[8px] bg-[linear-gradient(180deg,#FF6B2C_50%,#C2410C_100%)] text-white transition-transform duration-200",
-            size === "md" ? "h-9 w-9" : "h-7 w-7",
-          )}
-        >
-          <span className="transition-transform duration-200 group-hover:translate-x-0.5">{icon ?? <ChevronRight size={size === "md" ? ICON.md : ICON.sm} strokeWidth={2.2} />}</span>
-        </span>
-        <span className={clsx("font-medium whitespace-nowrap", size === "md" ? "text-[15px]" : "text-[13px]")}>{children}</span>
+      {children}
+      <span className="transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden>
+        {icon ?? <ArrowRight size={size === "md" ? ICON.md : ICON.sm} strokeWidth={2} />}
       </span>
     </Link>
   );
@@ -54,7 +43,7 @@ export function TextLink({ href, children, className }: { href: string; children
     <Link
       href={href}
       className={clsx(
-        "inline-flex items-center gap-1 text-[15px] font-medium underline decoration-transparent decoration-orange underline-offset-4 transition-colors hover:decoration-orange",
+        "inline-flex items-center gap-1 text-[15px] font-semibold text-navy underline decoration-transparent underline-offset-4 transition-colors hover:text-orange-deep hover:decoration-orange",
         className,
       )}
     >
@@ -63,6 +52,7 @@ export function TextLink({ href, children, className }: { href: string; children
   );
 }
 
+/** Section label: the landing page's mono uppercase eyebrow. */
 export function Label({ children, className }: { children: React.ReactNode; className?: string }) {
-  return <p className={clsx("text-[13px] font-medium text-orange", className)}>{children}</p>;
+  return <p className={clsx("eyebrow", className)}>{children}</p>;
 }

@@ -31,12 +31,11 @@ export function IndustryHero({ ind }: { ind: Industry }) {
   const nodes = ind.bundle.map((b, i) => ({ ...b, x: [14, 72, 30, 84, 56][i], y: [26, 18, 70, 62, 44][i] }));
 
   return (
-    <section className="px-2 pt-[76px] sm:px-3 sm:pt-[84px]">
-      <div ref={ref} className={clsx("relative overflow-hidden rounded-[20px] bg-gradient-to-br text-white sm:rounded-[28px]", ind.tone, ind.layout === "c" ? "min-h-[620px] sm:min-h-[680px]" : "min-h-[560px] sm:min-h-[600px]")}>
+    <section className="relative isolate overflow-hidden">
+      <div className="hero-backdrop -z-10" aria-hidden />
+      <div ref={ref} className={clsx("relative", ind.layout === "c" ? "min-h-[620px] sm:min-h-[680px]" : "min-h-[560px] sm:min-h-[620px]")}>
         <div data-field className="absolute inset-0">
-          <div className="dot-grid absolute inset-0 opacity-[0.12] invert" />
-          <div className="absolute right-[-10%] top-[-20%] h-[640px] w-[640px] rounded-full bg-[radial-gradient(circle,rgba(255,107,44,0.35),transparent_65%)]" />
-          <svg className="absolute inset-0 hidden h-full w-full md:block" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <svg className="absolute inset-0 hidden h-full w-full md:block" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden>
             {nodes.map((n, i) => (
               <motion.line
                 key={i}
@@ -44,7 +43,7 @@ export function IndustryHero({ ind }: { ind: Industry }) {
                 y1="50%"
                 x2={`${n.x}%`}
                 y2={`${n.y}%`}
-                stroke="rgba(255,107,44,0.35)"
+                stroke="rgba(241,98,34,0.35)"
                 strokeWidth="1"
                 vectorEffect="non-scaling-stroke"
                 initial={{ pathLength: 0 }}
@@ -60,22 +59,23 @@ export function IndustryHero({ ind }: { ind: Industry }) {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1 + i * 0.1 }}
-              className="absolute hidden -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-[12px] text-white/90 backdrop-blur md:block"
+              className="glass-strong absolute hidden -translate-x-1/2 -translate-y-1/2 !rounded-full px-3.5 py-1.5 text-[13px] font-medium text-navy md:block"
               style={{ left: `${n.x}%`, top: `${n.y}%` }}
             >
               {n.name}
             </motion.span>
           ))}
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-        <div className={clsx("container-x relative flex min-h-[inherit] flex-col justify-end pb-12 sm:pb-16", centered && "items-center text-center")}>
-          <p className="text-[13px] font-medium text-orange">Industries · {ind.name}</p>
-          <SplitHeading text={ind.title} className={clsx("h-display mt-4 max-w-[860px]", centered && "mx-auto")} />
+        {/* keep the copy side calm over the lines and chips */}
+        <div className="absolute inset-0 bg-[linear-gradient(0deg,#F7F3EA_8%,rgba(247,243,234,0.6)_45%,rgba(247,243,234,0)_80%)]" aria-hidden />
+        <div className={clsx("container-x relative flex min-h-[inherit] flex-col justify-end pb-12 pt-[120px] sm:pb-16", centered && "items-center text-center")}>
+          <p className="eyebrow">Industries · {ind.name}</p>
+          <SplitHeading text={ind.title} className={clsx("h-display mt-4 max-w-[860px] text-ink", centered && "mx-auto")} />
           <Reveal delay={0.4}>
-            <p className={clsx("mt-5 max-w-[560px] text-[16px] leading-[26px] text-white/75 sm:text-[17px]", centered && "mx-auto")}>{ind.sub}</p>
+            <p className={clsx("mt-5 max-w-[600px] text-[17px] leading-[27px] text-muted sm:text-[19px] sm:leading-[30px]", centered && "mx-auto")}>{ind.sub}</p>
             <div className={clsx("mt-8 flex flex-wrap items-center gap-5", centered && "justify-center")}>
-              <Button href="/demo" variant="light">Talk to an expert</Button>
-              <TextLink href="/customers/northloom" className="text-white">See customer story</TextLink>
+              <Button href="/demo">Talk to an expert</Button>
+              <TextLink href="/industries">All industries</TextLink>
             </div>
           </Reveal>
         </div>
@@ -91,9 +91,9 @@ export function Pains({ ind }: { ind: Industry }) {
     <section className={clsx("container-x grid gap-12 py-20 sm:py-28", !stacked && "lg:grid-cols-[1fr_1.4fr] lg:gap-20")}>
       <div className={clsx(reverse && "lg:order-2", !stacked && "lg:sticky lg:top-32 lg:self-start")}>
         <h2 className="h-section max-w-[560px]">{ind.painTitle}</h2>
-        <div className="mt-8 flex aspect-[4/3] max-w-[460px] items-end rounded-[20px] bg-surface p-6">
+        <div className="mt-8 flex aspect-[4/3] max-w-[460px] items-end glass p-6">
           <div>
-            <p className="text-[44px] font-medium tracking-[-0.04em] text-orange sm:text-[56px]">{ind.stat.value}</p>
+            <p className="accent-text font-display text-[44px] font-semibold tracking-[-0.03em] sm:text-[56px]">{ind.stat.value}</p>
             <p className="text-[14px] text-muted">{ind.stat.label}</p>
           </div>
         </div>
@@ -101,9 +101,9 @@ export function Pains({ ind }: { ind: Industry }) {
       <Stagger className={clsx(stacked && "grid gap-x-12 sm:grid-cols-2")}>
         {ind.pains.map((pn, i) => (
           <StaggerItem key={pn.title} className="flex gap-6 border-t border-line py-7">
-            <span className="w-8 shrink-0 pt-1 text-[13px] text-orange">0{i + 1}</span>
+            <span className="w-8 shrink-0 pt-1 font-mono text-[13px] text-orange-deep">0{i + 1}</span>
             <div>
-              <h3 className="text-[18px] font-medium">{pn.title}</h3>
+              <h3 className="text-[18px] font-semibold text-ink">{pn.title}</h3>
               <p className="mt-1.5 text-[15px] leading-[23px] text-muted">{pn.body}</p>
             </div>
           </StaggerItem>
@@ -117,11 +117,11 @@ export function Bundle({ ind }: { ind: Industry }) {
   const tinted = ind.layout === "d";
   return (
     <section className="container-x py-6">
-      <div className={clsx("rounded-[20px] p-6 sm:p-10", tinted ? "bg-orange-soft" : "bg-surface")}>
+      <div className={clsx("glass !rounded-[28px] p-6 sm:p-10", tinted && "!bg-orange-soft/70")}>
         <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
           <div>
             <Label>Recommended bundle</Label>
-            <h2 className="mt-2 text-[28px] font-medium tracking-[-0.03em] sm:text-[34px]">The {ind.name.split(" ")[0]} stack</h2>
+            <h2 className="mt-2 text-[28px] font-display font-semibold tracking-[-0.03em] sm:text-[34px]">The {ind.name.split(" ")[0]} stack</h2>
           </div>
           <TextLink href="/demo">Book a fit session</TextLink>
         </div>
@@ -147,10 +147,10 @@ export function Bundle({ ind }: { ind: Industry }) {
 export function Testimonial({ ind }: { ind: Industry }) {
   return (
     <section className="container-x grid gap-4 py-20 sm:py-24 lg:grid-cols-[1.6fr_1fr]">
-      <Reveal className="flex flex-col justify-between rounded-[20px] bg-surface p-7 sm:p-10">
-        <p className="text-[21px] font-medium leading-[31px] tracking-[-0.02em] sm:text-[26px] sm:leading-[36px]">“{testimonial.quote}”</p>
+      <Reveal className="flex flex-col justify-between glass p-7 sm:p-10">
+        <p className="text-[21px] font-display font-semibold leading-[31px] tracking-[-0.02em] sm:text-[26px] sm:leading-[36px]">“{testimonial.quote}”</p>
         <div className="mt-8 flex items-center gap-3">
-          <span className="h-11 w-11 rounded-full bg-[linear-gradient(135deg,#FFD2BC,#FF6B2C)]" />
+          <span className="h-11 w-11 rounded-full bg-[linear-gradient(135deg,#FFD2BC,#F16222)]" />
           <div>
             <p className="text-[15px] font-medium">{testimonial.name}</p>
             <p className="text-[13px] text-muted">{testimonial.role}</p>
@@ -158,13 +158,13 @@ export function Testimonial({ ind }: { ind: Industry }) {
         </div>
       </Reveal>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
-        <Reveal delay={0.1} className="rounded-[20px] border border-line p-7">
+        <Reveal delay={0.1} className="glass p-7">
           <p className="text-[13px] text-muted">Faster month-end close</p>
-          <p className="mt-3 text-[48px] font-medium tracking-[-0.04em] text-orange">80%</p>
+          <p className="mt-3 text-[48px] font-display font-semibold tracking-[-0.04em] text-orange">80%</p>
         </Reveal>
-        <Reveal delay={0.2} className="rounded-[20px] bg-surface p-7">
+        <Reveal delay={0.2} className="glass p-7">
           <p className="text-[13px] text-muted">Avg. go-live for {ind.name.split(" ")[0].toLowerCase()}</p>
-          <p className="mt-3 text-[48px] font-medium tracking-[-0.04em]">6 wks</p>
+          <p className="mt-3 text-[48px] font-display font-semibold tracking-[-0.04em]">6 wks</p>
         </Reveal>
       </div>
     </section>

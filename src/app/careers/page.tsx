@@ -36,7 +36,7 @@ export default function Careers() {
       </PageHero>
       <Stagger className="container-x mt-16 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {perks.map(([t, b]) => (
-          <StaggerItem key={t} className="rounded-[16px] bg-surface p-6">
+          <StaggerItem key={t} className="glass p-6">
             <p className="text-[17px] font-medium">{t}</p>
             <p className="mt-2 text-[14px] text-muted">{b}</p>
           </StaggerItem>

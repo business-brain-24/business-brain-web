@@ -35,7 +35,7 @@ export default function Calendar({ week, events, side }: Props) {
             <div className="flex rounded-full border border-line p-0.5 text-[12px]">
               {["Day", "Week", "Month"].map((v) => <span key={v} className={clsx("rounded-full px-3 py-1", v === "Week" ? "bg-orange-soft font-medium text-orange-deep" : "text-muted")}>{v}</span>)}
             </div>
-            <button className="flex h-8 items-center gap-1 rounded-full bg-[linear-gradient(180deg,#FF6B2C,#C2410C)] px-3 text-[12px] font-medium text-white"><Plus size={ICON.sm} /> New</button>
+            <button className="flex h-8 items-center gap-1 rounded-full bg-[linear-gradient(180deg,#F16222,#C2410C)] px-3 text-[12px] font-medium text-white"><Plus size={ICON.sm} /> New</button>
           </div>
         </div>
         <div className="overflow-x-auto">

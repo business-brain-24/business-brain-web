@@ -13,7 +13,7 @@ const DEPTH = 0.16;
 const LIFT = 0.14;
 const BASE = new THREE.Color("#D9DCE2");
 const HOVER = new THREE.Color("#F4F5F7");
-const ORANGE = new THREE.Color("#FF6B2C");
+const ORANGE = new THREE.Color("#F16222");
 const GREEN = "#12B76A";
 const RED = "#F04438";
 
@@ -112,7 +112,7 @@ function Division({
 
       {stat && (!compact || selected || hovered) && (
         <Html position={[shape.center.x + 0.1, shape.center.y, DEPTH + 0.05]} zIndexRange={[20, 0]} style={{ pointerEvents: "none" }}>
-          <div className="-translate-y-1/2 whitespace-nowrap rounded-full bg-[#0B0D12]/80 px-2 py-1 text-[12px] leading-none text-white/85 backdrop-blur-sm">
+          <div className="-translate-y-1/2 whitespace-nowrap rounded-full bg-[#161928]/80 px-2 py-1 text-[12px] leading-none text-white/85 backdrop-blur-sm">
             {stat.name} <span className={behind ? "text-[#F97066]" : "text-white/50"}>{stat.pct}%</span>
           </div>
         </Html>
@@ -140,11 +140,11 @@ function Truck({ from, to, speed, offset }: { from: THREE.Vector3; to: THREE.Vec
   return (
     <group>
       <mesh geometry={tube}>
-        <meshBasicMaterial color="#FF6B2C" transparent opacity={0.4} />
+        <meshBasicMaterial color="#F16222" transparent opacity={0.4} />
       </mesh>
       <mesh ref={dot}>
         <sphereGeometry args={[0.035, 12, 12]} />
-        <meshBasicMaterial color="#FF6B2C" />
+        <meshBasicMaterial color="#F16222" />
       </mesh>
     </group>
   );

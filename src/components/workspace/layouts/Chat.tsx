@@ -74,7 +74,7 @@ export default function Chat({ channels, active, topic, messages: seed }: Props)
           <input value={text} onChange={(e) => setText(e.target.value)} placeholder={`Message #${active}`} className="h-9 min-w-0 flex-1 bg-transparent text-[14px] outline-none" />
           <button type="button" aria-label="Mention" className="text-muted hover:text-ink"><AtSign size={ICON.md} /></button>
           <button type="button" aria-label="Emoji" className="text-muted hover:text-ink"><Smile size={ICON.md} /></button>
-          <button type="submit" aria-label="Send" className="flex h-9 w-9 items-center justify-center rounded-[10px] bg-[linear-gradient(180deg,#FF6B2C,#C2410C)] text-white"><SendHorizontal size={ICON.md} /></button>
+          <button type="submit" aria-label="Send" className="flex h-9 w-9 items-center justify-center rounded-[10px] bg-[linear-gradient(180deg,#F16222,#C2410C)] text-white"><SendHorizontal size={ICON.md} /></button>
         </form>
       </div>
     </div>

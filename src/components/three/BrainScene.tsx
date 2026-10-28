@@ -5,7 +5,7 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
 import * as THREE from "three";
 
-const ORANGE = new THREE.Color("#FF6B2C");
+const ORANGE = new THREE.Color("#F16222");
 const INK = new THREE.Color("#3b404b");
 const GREY = new THREE.Color("#b9bec8");
 
@@ -90,11 +90,11 @@ function Brain({ count }: { count: number }) {
         <bufferGeometry>
           <bufferAttribute attach="attributes-position" args={[lines, 3]} />
         </bufferGeometry>
-        <lineBasicMaterial color="#FF6B2C" transparent opacity={0.16} />
+        <lineBasicMaterial color="#F16222" transparent opacity={0.16} />
       </lineSegments>
       <mesh>
         <sphereGeometry args={[0.55, 32, 32]} />
-        <meshBasicMaterial color="#FF6B2C" transparent opacity={0.08} />
+        <meshBasicMaterial color="#F16222" transparent opacity={0.08} />
       </mesh>
     </group>
   );
@@ -136,7 +136,7 @@ function Connections({ nodes, showLabels }: { nodes: NodeDef[]; showLabels: bool
       {nodes.map((n, i) => (
         <group key={n.label}>
           <mesh geometry={tubes[i]}>
-            <meshBasicMaterial color="#FF6B2C" transparent opacity={0.35} />
+            <meshBasicMaterial color="#F16222" transparent opacity={0.35} />
           </mesh>
           <mesh
             ref={(el) => {
@@ -144,15 +144,15 @@ function Connections({ nodes, showLabels }: { nodes: NodeDef[]; showLabels: bool
             }}
           >
             <sphereGeometry args={[0.028, 12, 12]} />
-            <meshBasicMaterial color="#FF6B2C" transparent />
+            <meshBasicMaterial color="#F16222" transparent />
           </mesh>
           <mesh position={n.pos}>
             <sphereGeometry args={[0.045, 16, 16]} />
-            <meshBasicMaterial color="#0B0D12" />
+            <meshBasicMaterial color="#161928" />
           </mesh>
           {showLabels && (
             <Html position={n.pos} center zIndexRange={[10, 0]}>
-              <div className="pointer-events-none mt-8 whitespace-nowrap rounded-full border border-line bg-white/95 px-2.5 py-1 text-[12px] font-medium text-ink shadow-[0_6px_18px_rgba(11,13,18,0.08)] sm:px-3 sm:text-[12px]">
+              <div className="pointer-events-none mt-8 whitespace-nowrap rounded-full border border-line bg-white/95 px-2.5 py-1 text-[12px] font-medium text-ink shadow-[0_6px_18px_rgba(22,25,40,0.08)] sm:px-3 sm:text-[12px]">
                 {n.label}
               </div>
             </Html>

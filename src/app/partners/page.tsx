@@ -28,9 +28,9 @@ export default function Partners() {
           ["Active partners", "85+"],
           ["Countries", "6"],
         ].map(([l, v]) => (
-          <StaggerItem key={l} className="flex items-center justify-between rounded-[16px] bg-surface px-6 py-7">
+          <StaggerItem key={l} className="flex items-center justify-between glass px-6 py-7">
             <span className="text-[14px] text-muted">{l}</span>
-            <span className="text-[30px] font-medium tracking-[-0.03em]">{v}</span>
+            <span className="text-[30px] font-display font-semibold tracking-[-0.03em]">{v}</span>
           </StaggerItem>
         ))}
       </Stagger>
@@ -44,11 +44,11 @@ export default function Partners() {
           ].map(([Icon, t, b]) => {
             const I = Icon as typeof LineChart;
             return (
-              <StaggerItem key={t as string} className="group rounded-[16px] border border-line p-7 transition-shadow hover:shadow-[var(--shadow-soft)]">
+              <StaggerItem key={t as string} className="group glass p-7 transition-shadow hover:shadow-[var(--shadow-soft)]">
                 <span className="flex h-11 w-11 items-center justify-center rounded-[10px] bg-surface transition-colors group-hover:bg-orange group-hover:text-white">
                   <I size={ICON.lg} />
                 </span>
-                <p className="mt-6 text-[20px] font-medium">{t as string}</p>
+                <p className="mt-6 text-[20px] font-display font-semibold">{t as string}</p>
                 <p className="mt-2 text-[15px] leading-[23px] text-muted">{b as string}</p>
               </StaggerItem>
             );

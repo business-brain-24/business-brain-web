@@ -30,7 +30,7 @@ export default function Apps() {
         <section key={g.name} className="container-x mt-16 sm:mt-[72px]">
           <div className="flex items-baseline justify-between gap-4 border-b border-ink pb-4">
             <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4">
-              <h2 className="text-[24px] font-medium tracking-[-0.02em] sm:text-[28px]">{g.name}</h2>
+              <h2 className="text-[24px] font-display font-semibold tracking-[-0.02em] sm:text-[28px]">{g.name}</h2>
               <p className="text-[15px] text-muted">{g.note}</p>
             </div>
             <span className="shrink-0 text-[13px] text-subtle">{g.apps.length} apps</span>

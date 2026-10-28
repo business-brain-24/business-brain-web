@@ -8,7 +8,7 @@ const unsigned = (d: string) => d.replace(/^[+\-−]\s?/, "");
 import { ICON } from "@/lib/icons";
 
 // Brand-led palette for multi-series charts: orange first, then calm neutrals and one green.
-const PALETTE = ["#FF6B2C", "#FDBA8C", "#0F766E", "#94A3B8", "#C2410C", "#FCD9C4"];
+const PALETTE = ["#F16222", "#FDBA8C", "#0F766E", "#94A3B8", "#C2410C", "#FCD9C4"];
 
 const span: Record<number, string> = {
   3: "lg:col-span-3",
@@ -121,7 +121,7 @@ function WidgetView({ w }: { w: Widget }) {
                 <div key={it.label}>
                   <div className="flex justify-between text-[13px]"><span>{it.label}</span><span className="font-medium">{it.display ?? it.value}</span></div>
                   <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-surface">
-                    <div className="bb-grow-x h-full rounded-full" style={{ width: `${(it.value / max) * 100}%`, background: i === 0 ? "#FF6B2C" : "#FDBA8C", animationDelay: `${0.1 + i * 0.05}s` }} />
+                    <div className="bb-grow-x h-full rounded-full" style={{ width: `${(it.value / max) * 100}%`, background: i === 0 ? "#F16222" : "#FDBA8C", animationDelay: `${0.1 + i * 0.05}s` }} />
                   </div>
                 </div>
               ))}
@@ -136,7 +136,7 @@ function WidgetView({ w }: { w: Widget }) {
               return (
                 <div key={it.label} className="flex min-w-0 flex-1 flex-col items-center gap-1.5">
                   <span className={clsx("text-[11px] font-medium", top ? "text-orange" : "text-muted")}>{it.display ?? it.value}</span>
-                  <div className="bb-grow w-full rounded-t-[6px]" style={{ height: `${(it.value / max) * 150}px`, background: top ? "#FF6B2C" : "#FDD5BE", animationDelay: `${0.1 + i * 0.04}s` }} />
+                  <div className="bb-grow w-full rounded-t-[6px]" style={{ height: `${(it.value / max) * 150}px`, background: top ? "#F16222" : "#FDD5BE", animationDelay: `${0.1 + i * 0.04}s` }} />
                   <span className="w-full truncate text-center text-[11px] text-muted">{it.label}</span>
                 </div>
               );
@@ -185,8 +185,8 @@ function WidgetView({ w }: { w: Widget }) {
                 acc += len;
                 return el;
               })}
-              <text x="70" y="66" textAnchor="middle" className="rotate-90" style={{ transformOrigin: "70px 70px" }} fontSize="20" fontWeight="600" fill="#0B0D12">{w.center ?? total}</text>
-              <text x="70" y="84" textAnchor="middle" className="rotate-90" style={{ transformOrigin: "70px 70px" }} fontSize="10" fill="#545A66">{w.centerLabel ?? "total"}</text>
+              <text x="70" y="66" textAnchor="middle" className="rotate-90" style={{ transformOrigin: "70px 70px" }} fontSize="20" fontWeight="600" fill="#161928">{w.center ?? total}</text>
+              <text x="70" y="84" textAnchor="middle" className="rotate-90" style={{ transformOrigin: "70px 70px" }} fontSize="10" fill="#5D6380">{w.centerLabel ?? "total"}</text>
             </svg>
             <ul className="w-full space-y-2">
               {w.slices.map((s, i) => (
@@ -215,7 +215,7 @@ function WidgetView({ w }: { w: Widget }) {
                 <div key={s.label} className="flex items-center gap-3">
                   <span className="w-28 shrink-0 text-[13px]">{s.label}</span>
                   <div className="flex-1">
-                    <div className="bb-grow-x mx-auto flex h-9 items-center justify-center rounded-[8px] text-[13px] font-semibold" style={{ width: `${Math.max(pct, 14)}%`, background: i === w.stages.length - 1 ? "#FF6B2C" : `rgba(255,107,44,${0.12 + i * 0.12})`, color: i === w.stages.length - 1 ? "#fff" : "#7C2D12", animationDelay: `${i * 0.06}s` }}>
+                    <div className="bb-grow-x mx-auto flex h-9 items-center justify-center rounded-[8px] text-[13px] font-semibold" style={{ width: `${Math.max(pct, 14)}%`, background: i === w.stages.length - 1 ? "#F16222" : `rgba(241,98,34,${0.12 + i * 0.12})`, color: i === w.stages.length - 1 ? "#fff" : "#7C2D12", animationDelay: `${i * 0.06}s` }}>
                       {s.display ?? s.value}
                     </div>
                   </div>
@@ -239,7 +239,7 @@ function WidgetView({ w }: { w: Widget }) {
                   <span className="shrink-0 text-muted">{it.right ?? `${it.value}%`}</span>
                 </div>
                 <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-surface">
-                  <div className="bb-grow-x h-full rounded-full" style={{ width: `${Math.min(it.value, 100)}%`, background: it.value >= (w.goal ?? 100) ? "#0F766E" : it.value < (w.warnBelow ?? 0) ? "#FDBA8C" : "#FF6B2C" }} />
+                  <div className="bb-grow-x h-full rounded-full" style={{ width: `${Math.min(it.value, 100)}%`, background: it.value >= (w.goal ?? 100) ? "#0F766E" : it.value < (w.warnBelow ?? 0) ? "#FDBA8C" : "#F16222" }} />
                 </div>
               </div>
             ))}
@@ -254,8 +254,8 @@ function WidgetView({ w }: { w: Widget }) {
           <div className="flex flex-col items-center">
             <svg viewBox="0 0 180 100" className="w-full max-w-[240px]">
               <path d="M20,90 A70,70 0 0 1 160,90" fill="none" stroke="#F1F3F6" strokeWidth="14" strokeLinecap="round" />
-              <path d="M20,90 A70,70 0 0 1 160,90" fill="none" stroke="#FF6B2C" strokeWidth="14" strokeLinecap="round" strokeDasharray={`${(Math.min(w.value, 100) / 100) * C} ${C}`} />
-              <text x="90" y="78" textAnchor="middle" fontSize="28" fontWeight="600" fill="#0B0D12">{w.display ?? `${w.value}%`}</text>
+              <path d="M20,90 A70,70 0 0 1 160,90" fill="none" stroke="#F16222" strokeWidth="14" strokeLinecap="round" strokeDasharray={`${(Math.min(w.value, 100) / 100) * C} ${C}`} />
+              <text x="90" y="78" textAnchor="middle" fontSize="28" fontWeight="600" fill="#161928">{w.display ?? `${w.value}%`}</text>
             </svg>
             <p className="mt-1 text-center text-[13px] text-muted">{w.caption}</p>
           </div>
@@ -312,7 +312,7 @@ function WidgetView({ w }: { w: Widget }) {
                   <tr key={r}>
                     <td className="whitespace-nowrap pr-2 text-[12px]">{r}</td>
                     {w.values[ri].map((v, ci) => (
-                      <td key={ci} title={`${v}${w.unit ?? ""}`} className="h-8 min-w-8 rounded-[6px] text-center font-medium" style={{ background: `rgba(255,107,44,${0.08 + (v / max) * 0.8})`, color: v / max > 0.55 ? "#fff" : "#7C2D12" }}>
+                      <td key={ci} title={`${v}${w.unit ?? ""}`} className="h-8 min-w-8 rounded-[6px] text-center font-medium" style={{ background: `rgba(241,98,34,${0.08 + (v / max) * 0.8})`, color: v / max > 0.55 ? "#fff" : "#7C2D12" }}>
                         {v}
                       </td>
                     ))}

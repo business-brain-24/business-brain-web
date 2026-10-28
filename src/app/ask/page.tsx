@@ -185,7 +185,7 @@ export default function Ask() {
         e.preventDefault();
         ask(value);
       }}
-      className="flex items-end gap-2 rounded-[26px] border border-line bg-white p-2 pl-5 shadow-[0_6px_24px_rgba(11,13,18,0.07)] transition-colors focus-within:border-ink/25"
+      className="flex items-end gap-2 rounded-[26px] border border-line bg-white p-2 pl-5 shadow-[0_6px_24px_rgba(22,25,40,0.07)] transition-colors focus-within:border-ink/25"
     >
       <textarea
         ref={input}
@@ -306,7 +306,7 @@ export default function Ask() {
         {empty ? (
           <div className="flex min-h-0 flex-1 flex-col overflow-y-auto px-4" data-lenis-prevent>
             <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease }} className="mx-auto flex w-full max-w-[720px] flex-1 flex-col justify-center py-10">
-              <h1 className="text-center text-[28px] font-medium tracking-[-0.03em] sm:text-[34px]">What would you like to know about Shapla?</h1>
+              <h1 className="text-center text-[28px] font-display font-semibold tracking-[-0.03em] sm:text-[34px]">What would you like to know about Shapla?</h1>
               <p className="mt-2 text-center text-[15px] text-muted">Ask about sales, finance, payroll, logistics, stock or production. Get the numbers and the charts.</p>
               <div className="mt-8">{composer}</div>
 
@@ -359,7 +359,7 @@ export default function Ask() {
                 {thinking && (
                   <div className="flex items-center gap-3">
                     <Avatar />
-                    <span className="bg-[linear-gradient(90deg,#8a909c_0%,#0b0d12_50%,#8a909c_100%)] bg-[length:200%_100%] bg-clip-text text-[14px] text-transparent animate-[bb-shimmer_1.4s_linear_infinite]">
+                    <span className="bg-[linear-gradient(90deg,#8B91A8_0%,#161928_50%,#8B91A8_100%)] bg-[length:200%_100%] bg-clip-text text-[14px] text-transparent animate-[bb-shimmer_1.4s_linear_infinite]">
                       {thinking}…
                     </span>
                   </div>
@@ -473,7 +473,7 @@ function BrainMessage({
               <div className="flex flex-wrap gap-x-8 gap-y-3">
                 {r.stats.map((s) => (
                   <div key={s.label}>
-                    <p className="text-[22px] font-medium leading-7 tracking-[-0.02em]">{s.value}</p>
+                    <p className="text-[22px] font-display font-semibold leading-7 tracking-[-0.02em]">{s.value}</p>
                     <p className="text-[13px] text-muted">{s.label}</p>
                   </div>
                 ))}
