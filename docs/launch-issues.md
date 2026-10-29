@@ -81,13 +81,19 @@ Legend: ✅ done · 🔶 done, check on the live site · ⏳ waiting on someone 
 
 ## #9 Universal tracker (open)
 
-All code is in place (`src/lib/analytics.ts`, `RouteTracker`, consent mode). No ID is set, so nothing is tracked today.
+GA4 is live straight from gtag.js (`G-KTMCS84Y2Z`, PR "Analytics: GA4 live"). `track()` sends every event to GA4 and to `dataLayer`; when `NEXT_PUBLIC_GTM_ID` is set, the direct tag switches off and GTM takes over.
 
-| Waiting on | Who |
-| --- | --- |
-| GTM, GA4, Meta Pixel, LinkedIn, Google Ads IDs and the GTM container | Marketing |
-| `NEXT_PUBLIC_GTM_ID` in Pages production and preview | Imran, after the IDs |
-| Cloudflare Web Analytics toggle | Imran |
+| Item | Status | Where |
+| --- | --- | --- |
+| GA4 config in `<head>` after consent defaults, `send_page_view: false`, gtag.js after hydration | ✅ | `src/app/layout.tsx`, `GA4_ID` in `src/lib/analytics.ts` |
+| One `page_view` per navigation from `RouteTracker` | ✅ | Turn off history-based page views in GA4 enhanced measurement |
+| Events: `cta_click`, `form_start`, `generate_lead`, `newsletter_signup`, `phone_click`, `email_click`, `watch_tower_demo_click`, `video_play`, `ask_question`, `module_tab`, `chat_open` | ✅ | `track()` calls; `chat_open` from the Omazy launcher click |
+| Consent: ads denied everywhere until consent; analytics on by default, denied until consent in EU, EEA, UK and Switzerland | ✅ | `consentDefaultsScript` in `Consent.tsx`; privacy text must say so (#10) |
+| GA4 admin: key events, custom dimensions, retention, unwanted referrals, enhanced measurement | ⏳ | GA4 property settings |
+| Internal traffic filter | ⏳ | Needs the office IP ranges |
+| Search Console and Google Ads links | ⏳ | After Search Console verification (#44) and an Ads account |
+| GTM container with Meta, LinkedIn and Google Ads | ⏳ Marketing | IDs needed |
+| Cloudflare Web Analytics | ⏳ Imran | Dashboard toggle |
 
 ## #10 Cookie consent, privacy, terms (open)
 
