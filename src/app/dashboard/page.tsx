@@ -15,15 +15,11 @@ const prompts = ["Which region sells the most?", "Who joined most recently?", "W
 
 export default function Dashboard() {
   const router = useRouter();
-  const user = useUser();
+  const user = useUser({ demo: true });
   const [tab, setTab] = useState<Category | "all" | "fav">("all");
   const [query, setQuery] = useState("");
   const [ask, setAsk] = useState("");
   const [favs, setFavs] = useState<string[]>([]);
-
-  useEffect(() => {
-    if (user === null) router.replace("/login");
-  }, [user, router]);
 
   useEffect(() => {
     try {

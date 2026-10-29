@@ -117,9 +117,9 @@ export function Select({ className, children, ...props }: React.SelectHTMLAttrib
 
 export function SubmitButton({ sending, children }: { sending: boolean; children: React.ReactNode }) {
   return (
-    <button type="submit" disabled={sending} aria-busy={sending} className="btn-signal group mt-2 inline-flex h-12 w-fit items-center gap-2 px-6 text-[15px] font-semibold disabled:opacity-60 sm:col-span-2">
+    <button type="submit" disabled={sending} aria-busy={sending} className="btn-signal group mt-2 inline-flex h-[52px] w-fit items-center gap-2.5 px-6 text-[16px] font-semibold disabled:opacity-60 sm:col-span-2">
       {sending ? "Sending…" : children}
-      <ArrowRight size={ICON.md} strokeWidth={2} className="transition-transform duration-200 group-hover:translate-x-0.5" />
+      <ArrowRight size={18} strokeWidth={2} className="transition-transform duration-200 group-hover:translate-x-0.5" />
     </button>
   );
 }

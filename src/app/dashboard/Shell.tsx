@@ -11,7 +11,7 @@ import { ICON } from "@/lib/icons";
 
 /** Full-screen workspace shell: the marketing nav and footer are hidden here, like the Ask chat. */
 export default function Shell({ children }: { children: React.ReactNode }) {
-  const user = useUser();
+  const user = useUser({ demo: true });
   const pathname = usePathname();
 
   return (

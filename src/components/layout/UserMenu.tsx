@@ -22,7 +22,7 @@ export default function UserMenu({ user }: { user: { name: string; role: string 
   const logout = () => {
     signOut();
     setOpen(false);
-    router.push("/login");
+    router.push("/");
   };
 
   return (

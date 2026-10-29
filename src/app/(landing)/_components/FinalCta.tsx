@@ -43,8 +43,8 @@ export default function FinalCta() {
           </h2>
           <p className="mt-4 text-[17px] leading-[27px] text-[#5D6380]">Book a session and see your own operation on Business Brain.</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link href="/demo" data-cta className={clsx(s.btnNavy, "inline-flex h-12 items-center justify-center gap-2 px-6 text-[16px] font-semibold")}>
-              Book a demo <ArrowRight size={18} />
+            <Link href="/demo" data-cta className={clsx(s.btnSignal, "inline-flex h-[52px] items-center justify-center gap-2.5 px-6 text-[16px] font-semibold")}>
+              Book a demo <ArrowRight size={18} strokeWidth={2} />
             </Link>
             <Link href="/pricing" data-cta className={clsx(s.btnGlass, "inline-flex h-12 items-center justify-center px-6 text-[16px] font-medium text-[#262D6C]")}>
               Get a quote

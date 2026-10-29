@@ -24,13 +24,10 @@ import { ICON } from "@/lib/icons";
 export default function AppDashboard() {
   const { app: slug } = useParams<{ app: string }>();
   const router = useRouter();
-  const user = useUser();
+  const user = useUser({ demo: true });
   const app = apps.find((a) => a.slug === slug);
   const [view, setView] = useState<"overview" | "work">("overview");
 
-  useEffect(() => {
-    if (user === null) router.replace("/login");
-  }, [user, router]);
 
   if (!app) notFound();
   if (!user) return null;
