@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 /**
  * Omazy CX chat agent (workspace bb24). The key is the public widget key; Omazy only serves it
- * on the allowlisted origins businessbrain24.com and www.businessbrain24.com, so the chat does
+ * on the allowlisted origins (getbusinessbrain.ai, plus the old businessbrain24.com), so the chat does
  * not open on pages.dev previews or localhost. The loader draws only the launcher until opened.
  */
 const DEPLOYMENT_ID = "wgt_26f9ed8b5b98e13106";

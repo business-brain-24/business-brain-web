@@ -4,8 +4,8 @@ export const WATCH_TOWER_DEMO = "https://world.akboriaerp.com/?source=seed";
 export const contact = {
   phone: "+880 1332-840930",
   phoneHref: "tel:+8801332840930",
-  site: "businessbrain24.com",
-  siteHref: "https://businessbrain24.com",
+  site: "getbusinessbrain.ai",
+  siteHref: "https://getbusinessbrain.ai",
 };
 
 export type Group = "Finance" | "Supply chain" | "Operations" | "People" | "Growth";

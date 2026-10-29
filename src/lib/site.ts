@@ -1,7 +1,7 @@
 import { industries, products, stories } from "./data";
 
-/** The only public host. www and pages.dev copies redirect here or carry noindex. */
-export const SITE_URL = "https://businessbrain24.com";
+/** The only public host. www and businessbrain24.com redirect here; pages.dev copies carry noindex. */
+export const SITE_URL = "https://getbusinessbrain.ai";
 export const SITE_NAME = "Business Brain";
 export const SITE_EMAIL = "hello@getbusinessbrain.ai";
 
