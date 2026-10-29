@@ -21,10 +21,17 @@ const readChoice = (): Choice | null => {
   }
 };
 
-/** Inline <head> script. Runs before GTM: Consent Mode v2 defaults to denied, then applies a stored choice. */
+/** Regions where analytics also waits for consent: EU, EEA, UK and Switzerland. */
+const STRICT = "AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE IS LI NO GB CH".split(" ");
+
+/**
+ * Inline <head> script. Runs before any tag. Consent Mode v2: advertising is denied everywhere until the visitor
+ * accepts; analytics is on by default except in STRICT regions, where it waits for consent too. A stored choice wins.
+ */
 export const consentDefaultsScript = `
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'granted',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',region:${JSON.stringify(STRICT)},wait_for_update:500});
 gtag('set','ads_data_redaction',true);
 try{var m=document.cookie.match(/(?:^|; )${CONSENT_COOKIE}=([^;]*)/);if(m){var c=JSON.parse(decodeURIComponent(m[1]));var ad=c.ad?'granted':'denied';
 gtag('consent','update',{ad_storage:ad,ad_user_data:ad,ad_personalization:ad,analytics_storage:c.a?'granted':'denied'});

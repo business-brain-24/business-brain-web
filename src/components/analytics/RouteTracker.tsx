@@ -35,6 +35,7 @@ export default function RouteTracker() {
       if (href.startsWith("tel:")) track("phone_click", { cta_location });
       else if (href.startsWith("mailto:")) track("email_click", { cta_location });
       else if (href.startsWith(WATCH_TOWER_DEMO.split("?")[0])) track("watch_tower_demo_click", { cta_location });
+      if (a.matches('button[aria-label="Open chat"]')) track("chat_open", { cta_location: window.location.pathname });
       if (a.hasAttribute("data-cta")) track("cta_click", { cta_text: (a.textContent ?? "").trim().slice(0, 80), cta_location, destination: href });
     };
 

@@ -1,6 +1,8 @@
 /**
  * The one tracking entry point. Components call track(), never a vendor API.
- * GTM reads dataLayer and fans events out to GA4, Meta, LinkedIn and Google Ads.
+ * Until there is a GTM container, GA4 loads straight from gtag.js and track() sends each event to it.
+ * With NEXT_PUBLIC_GTM_ID set, GTM reads dataLayer and fans events out to GA4, Meta, LinkedIn and Google Ads,
+ * and the direct GA4 tag switches off so nothing is counted twice.
  * Never pass personal data (name, email, phone, free text) in params.
  */
 
@@ -9,15 +11,19 @@ type Params = Record<string, string | number | boolean | undefined>;
 declare global {
   interface Window {
     dataLayer?: unknown[];
+    gtag?: (...args: unknown[]) => void;
   }
 }
 
 export const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID ?? "";
+/** Business Brain GA4 web stream (getbusinessbrain.ai). A public ID; empty when GTM takes over. */
+export const GA4_ID = GTM_ID ? "" : (process.env.NEXT_PUBLIC_GA4_ID ?? "G-KTMCS84Y2Z");
 
 export function track(event: string, params: Params = {}) {
   if (typeof window === "undefined") return;
   if (window.location.pathname.startsWith("/dashboard") && event !== "demo_login") return; // demo data
   (window.dataLayer ||= []).push({ event, ...params });
+  if (GA4_ID) window.gtag?.("event", event, params);
 }
 
 /* ---------- Attribution: first and last touch ---------- */
