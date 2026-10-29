@@ -30,6 +30,20 @@ https://:version.:project.pages.dev/*
 /thanks/*
   X-Robots-Tag: noindex
 
+/pricing
+  X-Robots-Tag: noindex
+
+/resources
+  X-Robots-Tag: noindex
+
+/customers/northloom
+  X-Robots-Tag: noindex
+
+# Markdown copies for AI assistants (linked from llms.txt); the HTML page stays the one in search.
+/md/*
+  Content-Type: text/markdown; charset=utf-8
+  X-Robots-Tag: noindex
+
 /_next/static/*
   Cache-Control: public, max-age=31536000, immutable
 

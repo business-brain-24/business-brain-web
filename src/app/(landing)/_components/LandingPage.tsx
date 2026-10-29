@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import JsonLd, { productSuiteLd } from "@/components/seo/JsonLd";
 import Hero from "./Hero";
 import DashboardStage from "./DashboardStage";
 import { Apps, AskBrain, Editions, FinalCta, HowItWorks, Industries, Modules, Outcomes, Trust } from "./Sections";
@@ -25,6 +26,7 @@ export const landingMetadata: Metadata = {
 export default function LandingPage() {
   return (
     <>
+      <JsonLd data={productSuiteLd} />
       <Hero />
       <DashboardStage />
       <Outcomes />

@@ -15,7 +15,10 @@ export const organizationLd: Ld = {
   "@id": `${SITE_URL}/#organization`,
   name: SITE_NAME,
   url: SITE_URL,
+  description: `${SITE_NAME} is the agentic ERP for growing companies and groups, configured for Bangladesh. AI agents read live figures and act through approvals.`,
   logo: absolute("/brand/business-brain-orb-512.png"),
+  areaServed: "BD",
+  parentOrganization: { "@type": "Organization", name: "Betopia Limited", url: "https://www.betopialimited.com" },
   email: SITE_EMAIL,
   telephone: contact.phone.replace(/[\s-]/g, ""),
   contactPoint: [{ "@type": "ContactPoint", telephone: contact.phone.replace(/[\s-]/g, ""), email: SITE_EMAIL, contactType: "sales", areaServed: "BD" }],
@@ -33,6 +36,19 @@ export const breadcrumbLd = (items: [string, string][]): Ld => ({
   "@type": "BreadcrumbList",
   itemListElement: [["Home", "/"] as [string, string], ...items].map(([name, path], i) => ({ "@type": "ListItem", position: i + 1, name, item: absolute(path) })),
 });
+
+/** The product as a whole, on the home page. */
+export const productSuiteLd: Ld = {
+  "@type": "SoftwareApplication",
+  "@id": `${SITE_URL}/#software`,
+  name: SITE_NAME,
+  url: SITE_URL,
+  description: "Agentic ERP: finance, HR and payroll, procurement, inventory, sales, manufacturing and more in one connected system. AI agents read live figures, propose the next step and act only through your approvals.",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web, Android",
+  inLanguage: ["en", "bn"],
+  publisher: { "@id": `${SITE_URL}/#organization` },
+};
 
 // No aggregateRating or review: there are no verified reviews.
 export const softwareLd = (p: Product): Ld => ({
