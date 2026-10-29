@@ -204,7 +204,7 @@ export function Editions() {
             <Link
               href="/pricing"
               data-cta
-              className={clsx("mt-8 inline-flex h-12 items-center justify-center gap-2 text-[15px] font-semibold", e.highlight ? s.btnNavy : clsx(s.btnGlass, "text-[#262D6C]"))}
+              className={clsx("mt-8 inline-flex items-center justify-center font-semibold", e.highlight ? clsx(s.btnSignal, "h-[52px] gap-2.5 text-[16px]") : clsx(s.btnGlass, "h-12 gap-2 text-[15px] text-[#262D6C]"))}
             >
               Get a quote
             </Link>

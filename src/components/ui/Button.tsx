@@ -24,15 +24,15 @@ export function Button({ href, children, variant = "dark", size = "md", classNam
       data-cta
       {...(external && { target: "_blank", rel: "noopener noreferrer" })}
       className={clsx(
-        "group inline-flex w-fit shrink-0 items-center justify-center gap-2 whitespace-nowrap font-semibold",
+        "group inline-flex w-fit shrink-0 items-center justify-center whitespace-nowrap font-semibold",
         variant === "dark" ? "btn-signal" : variant === "navy" ? "btn-navy" : "btn-glass",
-        size === "md" ? "h-12 px-6 text-[15px]" : "h-10 px-4 text-[14px]",
+        size === "md" ? "h-[52px] gap-2.5 px-6 text-[16px]" : "h-11 gap-2 px-4 text-[14px]",
         className,
       )}
     >
       {children}
       <span className="transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden>
-        {icon ?? <ArrowRight size={size === "md" ? ICON.md : ICON.sm} strokeWidth={2} />}
+        {icon ?? <ArrowRight size={size === "md" ? 18 : ICON.md} strokeWidth={2} />}
       </span>
     </Link>
   );

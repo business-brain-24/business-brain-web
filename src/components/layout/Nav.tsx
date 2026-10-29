@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   ArrowRight, ArrowUp, Banknote, Boxes, Building2, Calculator, CalendarClock, ChevronDown, ChevronRight, Factory, FolderKanban, Handshake,
-  HardHat, LayoutGrid, Menu, Network, PiggyBank, Pill, ShieldCheck, Shirt, ShoppingCart, Sparkles, Store, Truck, Users, Wheat, X, type LucideIcon,
+  HardHat, LayoutGrid, Menu, Network, PiggyBank, Pill, ShieldCheck, Shirt, ShoppingCart, Store, Truck, Users, Wheat, X, type LucideIcon,
 } from "lucide-react";
 import clsx from "clsx";
 import { industries, products, stories } from "@/lib/data";
@@ -55,6 +55,26 @@ export default function Nav() {
   useEffect(() => {
     setOpen(null);
     setMobile(false);
+  }, [pathname]);
+
+  // Where the hero has its own primary button (the home page), the nav CTA waits until that
+  // button has scrolled out of view, so the two never show at once.
+  const [heroCta, setHeroCta] = useState(false);
+  useEffect(() => {
+    const el = document.querySelector('[data-cta-location="hero"] a[data-cta]');
+    if (!el) return setHeroCta(false);
+    // visible below the nav bar (72px) and above the bottom of the screen
+    const check = () => {
+      const r = el.getBoundingClientRect();
+      setHeroCta(r.bottom > 72 && r.top < window.innerHeight);
+    };
+    check();
+    window.addEventListener("scroll", check, { passive: true });
+    window.addEventListener("resize", check);
+    return () => {
+      window.removeEventListener("scroll", check);
+      window.removeEventListener("resize", check);
+    };
   }, [pathname]);
 
   useEffect(() => {
@@ -145,12 +165,11 @@ export default function Nav() {
                 </Link>
                 <UserMenu user={user} />
               </>
-            ) : (
-              <Link href="/login" className="hidden text-[14px] text-ink sm:block">
-                Log in
-              </Link>
-            )}
-            <TalkButton className="hidden sm:inline-flex" />
+            ) : null}
+            <TalkButton
+              className={clsx("hidden transition-[opacity,transform] duration-300 sm:inline-flex", heroCta && "pointer-events-none translate-y-1 opacity-0")}
+              hidden={heroCta}
+            />
             <button
               className="flex h-11 w-11 items-center justify-center rounded-lg lg:hidden"
               onClick={() => setMobile(true)}
@@ -185,21 +204,22 @@ export default function Nav() {
 }
 
 /** The one call to action in the bar: books a session with the team behind the Brain. */
-function TalkButton({ className, large }: { className?: string; large?: boolean }) {
+/** The nav's primary call to action, in the same signal style as every other primary button. */
+function TalkButton({ className, large, hidden }: { className?: string; large?: boolean; hidden?: boolean }) {
   return (
     <Link
       href="/demo"
       data-cta
+      aria-hidden={hidden || undefined}
+      tabIndex={hidden ? -1 : undefined}
       className={clsx(
-        "group items-center gap-2 rounded-full bg-ink py-1 pl-1 font-medium text-white transition-colors hover:bg-[#1c1f28]",
-        large ? "h-12 pr-5 text-[15px]" : "h-10 pr-4 text-[14px]",
+        "btn-signal group items-center font-semibold",
+        large ? "h-[52px] gap-2.5 px-6 text-[16px]" : "h-11 gap-2 px-5 text-[15px]",
         className,
       )}
     >
-      <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[linear-gradient(180deg,#F16222,#C2410C)] transition-transform duration-300 group-hover:rotate-12">
-        <Sparkles size={ICON.sm} strokeWidth={2.2} />
-      </span>
       Talk to the Brain
+      <ArrowRight size={large ? 18 : ICON.md} strokeWidth={2} className="transition-transform duration-200 group-hover:translate-x-0.5" />
     </Link>
   );
 }
@@ -388,10 +408,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
         ))}
       </motion.div>
       <div className="flex gap-2.5 border-t border-line p-4 pb-[max(16px,env(safe-area-inset-bottom))] sm:px-6">
-        <Link href="/login" className="flex h-12 flex-1 items-center justify-center rounded-full border border-line text-[15px]">
-          Log in
-        </Link>
-        <TalkButton large className="flex flex-[1.4] justify-center" />
+        <TalkButton large className="flex flex-1 justify-center" />
       </div>
     </motion.div>
   );
