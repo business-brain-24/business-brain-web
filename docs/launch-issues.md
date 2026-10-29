@@ -14,7 +14,7 @@ Legend: ✅ done in code · 🔶 done, needs a check after deploy · ⏳ waiting
 | `sitemap.ts` lists every public page, products/industries built from `data.ts`, customer stories | ✅ | `src/app/sitemap.ts`, routes in `src/lib/site.ts` |
 | Leave `/login`, `/dashboard/*` out of the sitemap | ✅ | `staticRoutes` in `src/lib/site.ts` (also leaves out `/thanks/*`) |
 | robots: allow public, disallow `/login` and `/dashboard/`, `Sitemap:` line | ✅ | `src/app/robots.txt/route.ts` (plain text so it can carry `Content-Signal`) |
-| Only `https://businessbrain24.com`, build date as `lastModified` | ✅ | `SITE_URL` in `src/lib/site.ts` |
+| Only `https://getbusinessbrain.ai`, build date as `lastModified` | ✅ | `SITE_URL` in `src/lib/site.ts` |
 | Content signals `search=yes, ai-input=yes` | ✅ | robots route |
 | `ai-train` value | ⏳ Imran | Left unset (no preference) until decided |
 | Check final robots.txt on the live domain (Cloudflare prepends its block) | 🔶 | After deploy |
@@ -132,7 +132,7 @@ Legend: ✅ done in code · 🔶 done, needs a check after deploy · ⏳ waiting
 | Branded 404 with nav and links to Products, Pricing, fit session | ✅ | `src/app/not-found.tsx` |
 | Claims: "200+"/"120+ companies", Northloom, Orbitex, office addresses, webinar date, careers roles | ⏳ Marketing | No copy changed |
 | Home testimonials (Rahim Uddin etc.) | ⏳ Marketing | These names now appear only as Watch Tower sample data in `home/Sections.tsx` |
-| Run `npx linkinator https://businessbrain24.com --recurse` | 🔶 | After deploy |
+| Run `npx linkinator https://getbusinessbrain.ai --recurse` | 🔶 | After deploy |
 
 ## #13 Page speed
 

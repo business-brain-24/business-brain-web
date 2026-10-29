@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { pageMeta } from "@/lib/site";
+import { pageMeta, SITE_EMAIL } from "@/lib/site";
 import { ArrowUpRight } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import { Button } from "@/components/ui/Button";
@@ -47,7 +47,7 @@ export default function Careers() {
         <Stagger>
           {roles.map(([t, m]) => (
             <StaggerItem key={t}>
-              <a href="mailto:careers@businessbrain24.com" className="group flex items-center justify-between gap-6 border-b border-line py-6 first:border-t">
+              <a href={`mailto:${SITE_EMAIL}?subject=${encodeURIComponent(`Application: ${t}`)}`} className="group flex items-center justify-between gap-6 border-b border-line py-6 first:border-t">
                 <div>
                   <p className="text-[18px] font-medium transition-transform duration-300 group-hover:translate-x-1">{t}</p>
                   <p className="mt-1 text-[14px] text-muted">{m}</p>

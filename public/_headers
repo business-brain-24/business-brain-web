@@ -1,6 +1,6 @@
 # Cloudflare Pages response headers. Copied into out/ at build time.
 
-# Keep preview and pages.dev copies out of search. Only businessbrain24.com is indexed.
+# Keep preview and pages.dev copies out of search. Only getbusinessbrain.ai is indexed.
 https://:project.pages.dev/*
   X-Robots-Tag: noindex
 
