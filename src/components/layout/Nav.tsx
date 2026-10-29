@@ -129,7 +129,14 @@ export default function Nav() {
         >
           <Logo />
 
-          <nav className="hidden items-center gap-0.5 text-[14px] text-ink/70 lg:flex" aria-label="Main">
+          {/* Default state (top of the page): logo left, menu right. Once scrolled, the menu sits in the
+              middle and the CTA takes the right. `layout` slides it between the two. */}
+          <motion.nav
+            layout="position"
+            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            className={clsx("hidden items-center gap-0.5 text-[14px] text-ink/70 lg:flex", !scrolled && !open && "ml-auto mr-1")}
+            aria-label="Main"
+          >
             {(["products", "industries"] as const).map((k) => (
               <button
                 key={k}
@@ -155,7 +162,7 @@ export default function Nav() {
                 {l.label}
               </Link>
             ))}
-          </nav>
+          </motion.nav>
 
           <div className="flex items-center gap-2 sm:gap-4">
             {user ? (
@@ -167,7 +174,11 @@ export default function Nav() {
               </>
             ) : null}
             <TalkButton
-              className={clsx("hidden transition-[opacity,transform] duration-300 sm:inline-flex", heroCta && "pointer-events-none translate-y-1 opacity-0")}
+              className={clsx(
+                "hidden overflow-hidden whitespace-nowrap transition-[opacity,transform,max-width,padding] duration-300 sm:inline-flex",
+                // while hidden it also takes no width, so the menu can sit flush right
+                heroCta ? "pointer-events-none max-w-0 translate-y-1 !px-0 opacity-0" : "max-w-[240px]",
+              )}
               hidden={heroCta}
             />
             <button

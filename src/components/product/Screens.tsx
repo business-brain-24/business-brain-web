@@ -55,7 +55,6 @@ export default function ProductScreen({ product }: { product: Product }) {
         <span className="h-2.5 w-2.5 rounded-full bg-line" />
         <span className="h-2.5 w-2.5 rounded-full bg-line" />
         <span className="h-2.5 w-2.5 rounded-full bg-line" />
-        <span className="ml-3 truncate text-[12px] text-subtle">app.businessbrain24.com / {slug}</span>
       </div>
       <div className="flex">
         <aside className="hidden w-[210px] shrink-0 flex-col gap-0.5 border-r border-line p-3 text-[13px] text-muted lg:flex">
