@@ -115,7 +115,7 @@ export default function DashboardStage() {
                         transition={{ duration: DWELL / 1000 + 1, ease: "linear" }}
                       >
                         <Image
-                          src={`/lp/screens/${sc.id}.webp`}
+                          src={`/lp/shots/${sc.id}.webp`}
                           alt={`${sc.name} screen with illustrative demo data`}
                           width={1440}
                           height={1400}
@@ -174,7 +174,7 @@ export default function DashboardStage() {
                   n === 1 && "-translate-y-3",
                 )}
               >
-                <Image src={`/lp/screens/${m}.webp`} alt="" width={520} height={1124} sizes="150px" className="w-full" />
+                <Image src={`/lp/shots/${m}.webp`} alt="" width={520} height={1124} sizes="150px" className="w-full" />
               </div>
             ))}
           </div>
@@ -194,7 +194,7 @@ function Phone({ src, alt, side, y }: { src: string; alt: string; side: "left" |
       className={clsx("absolute top-[8%] z-0 w-[19%]", left ? "left-[2%]" : "right-[2%]")}
     >
       <div className="overflow-hidden rounded-[30px] border-[5px] border-white shadow-[0_30px_60px_-30px_rgba(38,45,108,0.5)]">
-        <Image src={`/lp/screens/${src}.webp`} alt={alt} width={520} height={1124} sizes="220px" className="w-full" />
+        <Image src={`/lp/shots/${src}.webp`} alt={alt} width={520} height={1124} sizes="220px" className="w-full" />
       </div>
     </motion.div>
   );
