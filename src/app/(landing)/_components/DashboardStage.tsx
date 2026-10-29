@@ -95,9 +95,7 @@ export default function DashboardStage() {
                     <span key={c} className="h-2.5 w-2.5 rounded-full" style={{ background: c }} />
                   ))}
                 </span>
-                <span className={clsx(s.mono, "min-w-0 flex-1 truncate text-center text-[11px] text-[#8B91A8] sm:text-[12px]")}>
-                  app.businessbrain24.com / {sc.path}
-                </span>
+                <span className="flex-1" />
                 <span className="hidden rounded-full bg-[#F3F0FF] px-2.5 py-0.5 text-[11px] font-medium text-[#5633CF] sm:inline">Sample data</span>
               </div>
               <div className={clsx("relative overflow-hidden rounded-[14px] bg-white sm:rounded-[16px]", wide ? "aspect-[16/10]" : "aspect-[4/3]")}>
