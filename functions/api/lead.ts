@@ -26,7 +26,7 @@ type Ctx = { request: Request; env: Env; waitUntil(p: Promise<unknown>): void };
 
 const FORMS: Record<string, string[]> = {
   contact: ["email", "phone", "topic", "message"],
-  demo: ["session", "name", "email", "phone", "company", "size", "industry", "notes"],
+  demo: ["session", "email", "phone", "company", "size", "industry", "notes"],
   quote: ["name", "email", "company", "users", "industry"],
   newsletter: ["email"],
 };
@@ -36,7 +36,7 @@ const KEEP = 90 * 24 * 3600; // seconds a lead copy stays in KV
 // The demo form's size labels, as the CRM's worker brackets.
 const SIZE_BRACKET: Record<string, string> = { "1 to 300": "1-300", "301 to 1,000": "301-1000", "1,001 to 2,500": "1001-2500", "2,501+": "2501+" };
 
-/** The contact form has no name field; the CRM still wants one, so it is read from the email: rahim.ahmed@x.com is "Rahim Ahmed". */
+/** The contact and demo forms have no name field; the CRM still wants one, so it is read from the email: rahim.ahmed@x.com is "Rahim Ahmed". */
 function nameFromEmail(email: string) {
   const local = (email.split("@")[0] ?? "").replace(/[0-9]+/g, " ");
   const words = local.split(/[._+\-\s]+/).filter(Boolean).map((w) => w[0].toUpperCase() + w.slice(1).toLowerCase());
@@ -47,7 +47,7 @@ function nameFromEmail(email: string) {
 function crmPayload(form: string, f: Record<string, string>) {
   if (form === "contact") return { name: f.name || nameFromEmail(f.email), email: f.email, phone: f.phone, topic: f.topic, message: f.message };
   if (form === "demo")
-    return { session: f.session, name: f.name, email: f.email, phone: f.phone, company: f.company, size: SIZE_BRACKET[f.size] ?? f.size, industry: f.industry, notes: f.notes };
+    return { session: f.session, name: f.name || nameFromEmail(f.email), email: f.email, phone: f.phone, company: f.company, size: SIZE_BRACKET[f.size] ?? f.size, industry: f.industry, notes: f.notes };
   return null;
 }
 
