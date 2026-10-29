@@ -16,7 +16,8 @@ const PHONE = /^\+?[\d\s()-]*\d(?:[\s()-]*\d){6,}[\s()-]*$/;
 
 type Field = { name: string; label: string; type?: string; placeholder?: string; options?: string[]; full?: boolean; area?: boolean; defaultValue?: string; onChange?: (value: string) => void };
 
-export default function Form({ name, fields, submit, done }: { name: FormName; fields: Field[]; submit: string; done: string }) {
+/** `extra` holds values sent with the form that the visitor does not fill in, such as the demo session. */
+export default function Form({ name, fields, submit, done, extra }: { name: FormName; fields: Field[]; submit: string; done: string; extra?: Record<string, string> }) {
   const router = useRouter();
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
@@ -41,6 +42,7 @@ export default function Form({ name, fields, submit, done }: { name: FormName; f
     setSending(true);
     setFailed("");
     const values = Object.fromEntries(fields.map((f) => [f.name, String(data.get(f.name) ?? "").trim()]));
+    Object.assign(values, extra);
     values.website_url = String(data.get("website_url") ?? "");
     const res = await submitLead(name, values, token);
     setSending(false);

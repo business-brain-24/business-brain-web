@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { Check } from "lucide-react";
 import Form from "@/components/ui/Form";
@@ -44,9 +43,8 @@ export default function BookingFromQuery() {
 }
 
 export function Booking({ session }: { session?: string | null }) {
-  // Starts from ?session= and then follows the dropdown, so the heading, points and button always match the choice.
-  const [picked, setPicked] = useState<keyof typeof sessions>(session === "watch-tower" ? "watch-tower" : "fit");
-  const s = sessions[picked];
+  // The session comes from ?session= (the audit unless the link says watch-tower) and is sent with the form.
+  const s = sessions[session === "watch-tower" ? "watch-tower" : "fit"];
 
   return (
     <section className="container-x relative isolate grid gap-12 pb-10 pt-[120px] sm:pt-[150px] lg:grid-cols-[1fr_1.1fr] lg:gap-20">
@@ -81,21 +79,15 @@ export function Booking({ session }: { session?: string | null }) {
         <Form
           name="demo"
           submit={s.submit}
+          extra={{ session: s.option }}
           done="Your request is in."
           fields={[
-            {
-              name: "session",
-              label: "What would you like to book?",
-              options: [sessions.fit.option, sessions["watch-tower"].option],
-              defaultValue: s.option,
-              full: true,
-              onChange: (v) => setPicked(v === sessions["watch-tower"].option ? "watch-tower" : "fit"),
-            },
+            { name: "name", label: "Full name", placeholder: "Your name" },
             { name: "email", label: "Work email", type: "email", placeholder: "name@company.com" },
             { name: "phone", label: "Phone", type: "tel", placeholder: "+880 1XXX-XXXXXX" },
             { name: "company", label: "Company", placeholder: "Company name" },
             { name: "size", label: "Company size", options: ["1 to 300", "301 to 1,000", "1,001 to 2,500", "2,501+"] },
-            { name: "industry", label: "Industry", options: industries.map((i) => i.name), full: true },
+            { name: "industry", label: "Industry", options: industries.map((i) => i.name) },
             { name: "notes", label: "What would you like to see?", area: true, placeholder: "Payroll on Bangladesh rules, field sales on Watch Tower…" },
           ]}
         />

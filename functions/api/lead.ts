@@ -26,7 +26,7 @@ type Ctx = { request: Request; env: Env; waitUntil(p: Promise<unknown>): void };
 
 const FORMS: Record<string, string[]> = {
   contact: ["email", "phone", "topic", "message"],
-  demo: ["session", "email", "phone", "company", "size", "industry", "notes"],
+  demo: ["session", "name", "email", "phone", "company", "size", "industry", "notes"],
   quote: ["name", "email", "company", "users", "industry"],
   newsletter: ["email"],
 };
@@ -36,7 +36,7 @@ const KEEP = 90 * 24 * 3600; // seconds a lead copy stays in KV
 // The demo form's size labels, as the CRM's worker brackets.
 const SIZE_BRACKET: Record<string, string> = { "1 to 300": "1-300", "301 to 1,000": "301-1000", "1,001 to 2,500": "1001-2500", "2,501+": "2501+" };
 
-/** The contact and demo forms have no name field; the CRM still wants one, so it is read from the email: rahim.ahmed@x.com is "Rahim Ahmed". */
+/** The contact form has no name field; the CRM still wants one, so it is read from the email: rahim.ahmed@x.com is "Rahim Ahmed". */
 function nameFromEmail(email: string) {
   const local = (email.split("@")[0] ?? "").replace(/[0-9]+/g, " ");
   const words = local.split(/[._+\-\s]+/).filter(Boolean).map((w) => w[0].toUpperCase() + w.slice(1).toLowerCase());
