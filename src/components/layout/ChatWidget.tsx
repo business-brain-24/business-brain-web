@@ -11,6 +11,10 @@ import { usePathname } from "next/navigation";
  */
 const DEPLOYMENT_ID = "wgt_26f9ed8b5b98e13106";
 const SRC = "https://ou.chat/widget.js";
+// The launcher shows the nebula orb. Omazy's own settings still hold the old mark and repaint it
+// once the chat boots, so the orb is put back whenever that happens (see keepOrb below).
+const ORB = "/brand/business-brain-orb-128.webp";
+const ICON = { kind: "image", url: ORB };
 
 type OuWidget = ((...args: unknown[]) => void) & { q?: unknown[] };
 declare global {
@@ -43,11 +47,28 @@ export default function ChatWidget() {
     ou("init", {
       deploymentId: DEPLOYMENT_ID,
       position: "bottom-right",
-      // Omazy's widget settings paint the bubble in the Business Brain orange once the chat frame
-      // boots, so the mark is the all-white version, which reads on orange and on ink.
       primaryColor: "#F47A2A",
-      launcherIcon: { kind: "image", url: "/brand/business-brain-mark-white.svg" },
+      launcherIcon: ICON,
     });
+  }, []);
+
+  useEffect(() => {
+    // The loader caches the last icon Omazy sent and paints it first on the next visit; seed it with the orb.
+    try {
+      localStorage.setItem(`ouchat:icon:${DEPLOYMENT_ID}`, JSON.stringify(ICON));
+    } catch {}
+    const keepOrb = () => {
+      const img = document.querySelector<HTMLImageElement>('button[aria-label="Open chat"] img');
+      if (img && !img.src.endsWith(ORB)) {
+        img.src = ORB;
+        try {
+          localStorage.setItem(`ouchat:icon:${DEPLOYMENT_ID}`, JSON.stringify(ICON));
+        } catch {}
+      }
+    };
+    const mo = new MutationObserver(keepOrb);
+    mo.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ["src"] });
+    return () => mo.disconnect();
   }, []);
 
   useEffect(() => {
