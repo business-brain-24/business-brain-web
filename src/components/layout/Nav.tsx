@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { AnimatePresence, animate, motion, useMotionValue } from "framer-motion";
 import {
   ArrowRight, ArrowUp, Banknote, Boxes, Building2, Calculator, CalendarClock, ChevronDown, ChevronRight, Factory, FolderKanban, Handshake,
   HardHat, LayoutGrid, Menu, Network, PiggyBank, Pill, ShieldCheck, Shirt, ShoppingCart, Store, Truck, Users, Wheat, X, type LucideIcon,
@@ -45,28 +45,25 @@ export default function Nav() {
   const pathname = usePathname();
   const user = useUser();
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     setOpen(null);
     setMobile(false);
   }, [pathname]);
 
-  // Where the hero has its own primary button (the home page), the nav CTA waits until that
-  // button has scrolled out of view, so the two never show at once.
-  const [heroCta, setHeroCta] = useState(false);
+  /*
+   * One rule on every page. The nav is "docked" once the page's hero has scrolled under the bar:
+   * the hero's own primary button where there is one (the home page), otherwise the page headline.
+   * Undocked: logo left, menu right, no CTA. Docked: menu centred, CTA on the right.
+   */
+  const [docked, setDocked] = useState(false);
   useEffect(() => {
-    const el = document.querySelector('[data-cta-location="hero"] a[data-cta]');
-    if (!el) return setHeroCta(false);
-    // visible below the nav bar (72px) and above the bottom of the screen
+    const anchor = () => document.querySelector('[data-cta-location="hero"] a[data-cta]') ?? document.querySelector("main h1");
     const check = () => {
-      const r = el.getBoundingClientRect();
-      setHeroCta(r.bottom > 72 && r.top < window.innerHeight);
+      setScrolled(window.scrollY > 24);
+      const el = anchor();
+      const bottom = el ? el.getBoundingClientRect().bottom : 160 - window.scrollY;
+      setDocked(bottom < 76); // 76px: the bottom edge of the nav bar
     };
     check();
     window.addEventListener("scroll", check, { passive: true });
@@ -76,6 +73,38 @@ export default function Nav() {
       window.removeEventListener("resize", check);
     };
   }, [pathname]);
+
+  // The menu slides between two measured positions: flush right (undocked) and the exact centre of the bar (docked).
+  const barRef = useRef<HTMLDivElement>(null);
+  const navRef = useRef<HTMLElement>(null);
+  const rightRef = useRef<HTMLDivElement>(null);
+  const navX = useMotionValue(0);
+  const [placed, setPlaced] = useState(false);
+  const firstPlace = useRef(true);
+  const lastDocked = useRef(docked);
+  useLayoutEffect(() => {
+    const bar = barRef.current;
+    const nav = navRef.current;
+    if (!bar || !nav) return;
+    const place = () => {
+      const barW = bar.clientWidth;
+      const navW = nav.offsetWidth;
+      const pad = parseFloat(getComputedStyle(bar).paddingRight) || 0;
+      const rightW = rightRef.current?.offsetWidth ?? 0; // signed-in user menu, if any (the CTA is absent when undocked)
+      const x = Math.round(docked ? (barW - navW) / 2 : barW - pad - navW - (rightW ? rightW + 12 : 0));
+      // first placement and resizes jump straight there; only a dock change slides
+      if (firstPlace.current || lastDocked.current === docked) navX.set(x);
+      else animate(navX, x, { duration: 0.5, ease });
+      firstPlace.current = false;
+      lastDocked.current = docked;
+      setPlaced(true);
+    };
+    place();
+    const ro = new ResizeObserver(place);
+    ro.observe(bar);
+    ro.observe(nav);
+    return () => ro.disconnect();
+  }, [docked, user, navX]);
 
   useEffect(() => {
     const lenis = getLenis();
@@ -120,8 +149,9 @@ export default function Nav() {
     <>
       <header className="fixed inset-x-0 top-0 z-50 px-2 pt-2 sm:px-3 sm:pt-3" onMouseLeave={leave}>
         <div
+          ref={barRef}
           className={clsx(
-            "mx-auto flex max-w-[1400px] items-center justify-between rounded-[18px] border border-white/80 px-3 backdrop-blur-xl transition-all duration-300 sm:px-4",
+            "relative mx-auto flex max-w-[1400px] items-center justify-between rounded-[18px] border border-white/80 px-3 backdrop-blur-xl transition-all duration-300 sm:px-4",
             scrolled || open
               ? "h-[60px] bg-white/85 shadow-[0_10px_30px_-14px_rgba(22,25,40,0.22)]"
               : "h-[64px] bg-white/55 shadow-[0_8px_24px_-16px_rgba(22,25,40,0.18)]",
@@ -129,12 +159,10 @@ export default function Nav() {
         >
           <Logo />
 
-          {/* Default state (top of the page): logo left, menu right. Once scrolled, the menu sits in the
-              middle and the CTA takes the right. `layout` slides it between the two. */}
           <motion.nav
-            layout="position"
-            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className={clsx("hidden items-center gap-0.5 text-[14px] text-ink/70 lg:flex", !scrolled && !open && "ml-auto mr-1")}
+            ref={navRef}
+            style={{ x: navX, visibility: placed ? undefined : "hidden" }}
+            className="absolute inset-y-0 left-0 hidden items-center gap-0.5 text-[14px] text-ink/70 lg:flex"
             aria-label="Main"
           >
             {(["products", "industries"] as const).map((k) => (
@@ -164,7 +192,7 @@ export default function Nav() {
             ))}
           </motion.nav>
 
-          <div className="flex items-center gap-2 sm:gap-4">
+          <div ref={rightRef} className="flex items-center gap-2 sm:gap-4">
             {user ? (
               <>
                 <Link href="/dashboard" className="hidden items-center gap-1.5 whitespace-nowrap text-[14px] text-ink xl:flex">
@@ -173,14 +201,20 @@ export default function Nav() {
                 <UserMenu user={user} />
               </>
             ) : null}
-            <TalkButton
-              className={clsx(
-                "hidden overflow-hidden whitespace-nowrap transition-[opacity,transform,max-width,padding] duration-300 sm:inline-flex",
-                // while hidden it also takes no width, so the menu can sit flush right
-                heroCta ? "pointer-events-none max-w-0 translate-y-1 !px-0 opacity-0" : "max-w-[240px]",
+            <AnimatePresence initial={false}>
+              {docked && (
+                <motion.div
+                  key="cta"
+                  initial={{ width: 0, opacity: 0 }}
+                  animate={{ width: "auto", opacity: 1 }}
+                  exit={{ width: 0, opacity: 0 }}
+                  transition={{ duration: 0.45, ease }}
+                  className="hidden overflow-hidden sm:block"
+                >
+                  <TalkButton className="inline-flex whitespace-nowrap" />
+                </motion.div>
               )}
-              hidden={heroCta}
-            />
+            </AnimatePresence>
             <button
               className="flex h-11 w-11 items-center justify-center rounded-lg lg:hidden"
               onClick={() => setMobile(true)}
@@ -216,13 +250,11 @@ export default function Nav() {
 
 /** The one call to action in the bar: books a session with the team behind the Brain. */
 /** The nav's primary call to action, in the same signal style as every other primary button. */
-function TalkButton({ className, large, hidden }: { className?: string; large?: boolean; hidden?: boolean }) {
+function TalkButton({ className, large }: { className?: string; large?: boolean }) {
   return (
     <Link
       href="/demo"
       data-cta
-      aria-hidden={hidden || undefined}
-      tabIndex={hidden ? -1 : undefined}
       className={clsx(
         "btn-signal group items-center font-semibold",
         large ? "h-[52px] gap-2.5 px-6 text-[16px]" : "h-11 gap-2 px-5 text-[15px]",
