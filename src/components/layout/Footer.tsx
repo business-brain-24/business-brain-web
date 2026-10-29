@@ -20,7 +20,6 @@ const cols: { title: string; links: [string, string][] }[] = [
       ["Manufacturing", "/products/manufacturing"],
       ["HRMS & Payroll", "/products/hrms"],
       ["All products", "/products"],
-      ["All 55 apps", "/apps"],
     ],
   },
   {

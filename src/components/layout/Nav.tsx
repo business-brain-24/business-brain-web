@@ -266,7 +266,7 @@ function ProductsMenu() {
             </div>
           ))}
         </div>
-        <MenuFooter links={[["/apps", "All 55 apps"], ["/products", "See all products"]]} />
+        <MenuFooter links={[["/products", "See all products"]]} />
       </div>
       <Link href="/ask" className="group relative hidden w-[250px] shrink-0 flex-col justify-end overflow-hidden rounded-[16px] bg-ink p-5 text-white xl:flex">
         {/* eslint-disable-next-line @next/next/no-img-element */}
