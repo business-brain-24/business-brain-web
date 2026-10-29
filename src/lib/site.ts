@@ -25,8 +25,8 @@ export const staticRoutes = [
   "/security",
 ];
 
-/** Customer stories with their own page. Northloom is a hand-built page outside `stories`. */
-export const storyRoutes = [...stories.filter((s) => s.page).map((s) => `/customers/${s.slug}`), "/customers/northloom"];
+/** Customer stories with their own page. Northloom (hand-built, outside `stories`) stays out until confirmed (#12). */
+export const storyRoutes = stories.filter((s) => s.page).map((s) => `/customers/${s.slug}`);
 
 export const productRoutes = products.map((p) => `/products/${p.slug}`);
 export const industryRoutes = industries.map((i) => `/industries/${i.slug}`);

@@ -156,7 +156,7 @@ export const products: Product[] = [
     group: "Supply chain",
     layout: "centered",
     title: "Every bin. Every branch. In real time.",
-    sub: "Track stock by lot, batch and bin across every warehouse. Brain predicts stock-outs and moves inventory before you lose a sale.",
+    sub: "Track stock by lot, batch and bin across every warehouse. Brain flags likely stock-outs early and moves inventory before you lose a sale.",
     stats: [
       { value: "27%", label: "less dead stock" },
       { value: "99.6%", label: "stock accuracy" },

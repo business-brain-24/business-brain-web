@@ -6,11 +6,15 @@ import { Reveal, SplitHeading, Stagger, StaggerItem } from "@/components/motion/
 import CTA from "@/components/ui/CTA";
 import { HeroBackdrop } from "@/components/ui/PageHero";
 
-export const metadata: Metadata = pageMeta(
+/** Out of search and the sitemap until its claims are confirmed (#12). */
+export const metadata: Metadata = {
+  ...pageMeta(
   "/customers/northloom",
   "Northloom Textiles · Customer story",
   "How Northloom Textiles replaced six tools with Business Brain and closed the month in one afternoon across four factories and 2,400 employees.",
-);
+  ),
+  robots: { index: false, follow: true },
+};
 
 export default function Story() {
   return (
