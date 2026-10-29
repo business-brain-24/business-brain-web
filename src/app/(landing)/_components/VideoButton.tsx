@@ -6,7 +6,9 @@ import { Play, X } from "lucide-react";
 import { track } from "@/lib/analytics";
 import s from "../lp.module.css";
 
-/** "See it work": opens the 29 s intro in a modal. The video only downloads once opened. */
+const YOUTUBE_ID = "D_4a1fVBLB4";
+
+/** "See it work": opens the product video from YouTube in a modal. Nothing loads until it is opened. */
 export default function VideoButton() {
   const [open, setOpen] = useState(false);
   const close = useRef<HTMLButtonElement>(null);
@@ -25,7 +27,7 @@ export default function VideoButton() {
         type="button"
         onClick={() => {
           setOpen(true);
-          track("video_play", { video: "intro_9x16", cta_location: "hero" });
+          track("video_play", { video: "youtube_D_4a1fVBLB4", cta_location: "hero" });
         }}
         className={clsx(s.btnGlass, "inline-flex h-[52px] items-center gap-2.5 pl-2 pr-5 text-[16px] font-medium text-[#262D6C]")}
       >
@@ -43,15 +45,13 @@ export default function VideoButton() {
           onClick={() => setOpen(false)}
           className="fixed inset-0 z-[80] flex items-center justify-center bg-[#13173B]/60 p-4 backdrop-blur-md"
         >
-          <div onClick={(e) => e.stopPropagation()} className="relative h-[min(86vh,760px)] aspect-[9/16] overflow-hidden rounded-[24px] bg-black shadow-2xl">
-            <video
-              src="/lp/intro-9x16.mp4"
-              poster="/lp/video-poster.webp"
-              autoPlay
-              muted
-              playsInline
-              controls
-              className="h-full w-full object-cover"
+          <div onClick={(e) => e.stopPropagation()} className="relative aspect-video w-[min(92vw,1100px)] overflow-hidden rounded-[24px] bg-black shadow-2xl">
+            <iframe
+              src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_ID}?autoplay=1&rel=0`}
+              title="Business Brain video"
+              allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+              allowFullScreen
+              className="h-full w-full border-0"
             />
             <button
               ref={close}
