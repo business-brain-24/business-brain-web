@@ -44,7 +44,7 @@ export type AppCard = { icon: string; name: string; line: string; who: string; b
 
 /** The app family (WEBSITE-CONTEXT.md section 4). `line` is the short form, `body` the card copy. */
 export const apps: AppCard[] = [
-  { icon: "business-brain", name: "Business Brain", line: "The web workspace for the whole company.", who: "Every desk in the company",
+  { icon: "business-brain-orb", name: "Business Brain", line: "The web workspace for the whole company.", who: "Every desk in the company",
     body: "Command centre, sales, make, buy, money and people on one connected core. Every team works from the same live figures." },
   { icon: "brain", name: "Brain", line: "Your agents and Ask Brain in one place.", who: "Owners and managers",
     body: "Your named agents and Ask Brain together. Ask in Bangla or English; any action comes back as a card for you to approve." },

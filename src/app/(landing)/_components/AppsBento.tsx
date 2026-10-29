@@ -24,7 +24,7 @@ function Body({ children, dark }: { children: React.ReactNode; dark?: boolean })
 function Phone({ src, className }: { src: string; className?: string }) {
   return (
     <div className={clsx("pointer-events-none absolute w-[150px] overflow-hidden rounded-[26px] border-[4px] border-white shadow-[0_24px_50px_-24px_rgba(38,45,108,0.55)] sm:w-[170px]", className)}>
-      <Image src={`/lp/screens/${src}.webp`} alt="" width={520} height={1124} sizes="170px" className="w-full" />
+      <Image src={`/lp/shots/${src}.webp`} alt="" width={520} height={1124} sizes="170px" className="w-full" />
     </div>
   );
 }
@@ -34,7 +34,7 @@ function Phone({ src, className }: { src: string; className?: string }) {
  * Console and the developer Gateway close it. Single column on phones, two columns on tablets.
  */
 export default function AppsBento() {
-  const web = appByIcon("business-brain");
+  const web = appByIcon("business-brain-orb");
   const brain = appByIcon("brain");
   const trio = ["business-field", "business-counter", "business-saathi"].map(appByIcon);
   const consoleApp = appByIcon("business-console");
@@ -47,7 +47,7 @@ export default function AppsBento() {
         <Head a={web} size={72} />
         <Body>{web.body}</Body>
         <div className="relative -mb-9 -mr-9 mt-8 overflow-hidden rounded-tl-[18px] border border-[rgba(38,45,108,0.08)] bg-white shadow-[0_24px_60px_-30px_rgba(38,45,108,0.45)] sm:ml-16 lg:absolute lg:bottom-0 lg:left-[34%] lg:right-0 lg:m-0 lg:h-[46%]">
-          <Image src="/lp/screens/21-command-centre.webp" alt="Business Brain command centre with sample data" width={1440} height={1502} sizes="(min-width: 1024px) 520px, 100vw" className="w-full" />
+          <Image src="/lp/shots/21-command-centre.webp" alt="Business Brain command centre with sample data" width={1440} height={1502} sizes="(min-width: 1024px) 520px, 100vw" className="w-full" />
         </div>
       </article>
 

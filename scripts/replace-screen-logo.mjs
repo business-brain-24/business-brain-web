@@ -1,6 +1,6 @@
-// Replaces the old "Business Brain 24" logo baked into the product screenshots (public/lp/screens)
+// Replaces the old "Business Brain 24" logo baked into the product screenshots (public/lp/shots)
 // with the nebula orb and "Business Brain". Run once after adding new screenshots:
-// node scripts/replace-screen-logo.mjs public/lp/screens/21-command-centre.webp ...
+// node scripts/replace-screen-logo.mjs public/lp/shots/21-command-centre.webp ...
 import sharp from "sharp";
 
 const orb = await sharp("public/brand/business-brain-orb-256.webp").resize(36, 36).png().toBuffer();

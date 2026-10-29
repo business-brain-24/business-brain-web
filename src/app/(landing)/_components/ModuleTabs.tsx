@@ -47,7 +47,7 @@ export default function ModuleTabs() {
             </div>
             <div className="max-h-[560px] overflow-hidden rounded-[18px] border border-[rgba(38,45,108,0.07)] bg-white">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={`/lp/screens/${m.screen}.webp`} alt={`${m.name} screen with illustrative demo data`} width={1440} height={1300} loading="lazy" className="w-full" />
+              <img src={`/lp/shots/${m.screen}.webp`} alt={`${m.name} screen with illustrative demo data`} width={1440} height={1300} loading="lazy" className="w-full" />
             </div>
           </motion.div>
         </AnimatePresence>

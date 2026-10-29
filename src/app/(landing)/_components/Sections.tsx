@@ -122,7 +122,7 @@ export function AskBrain() {
       <div className="relative mx-auto w-full max-w-[340px]">
         <Image src="/lp/orb.webp" alt="" width={480} height={480} aria-hidden className="absolute -left-16 -top-14 w-[260px] opacity-80 blur-[2px]" />
         <div className="relative overflow-hidden rounded-[40px] border-[6px] border-white shadow-[0_30px_80px_-30px_rgba(38,45,108,0.45)]">
-          <Image src="/lp/screens/m3-ask-brain.webp" alt="Ask Brain on a phone, answering a question in Bangla with sample data" width={600} height={1297} className="w-full" />
+          <Image src="/lp/shots/m3-ask-brain.webp" alt="Ask Brain on a phone, answering a question in Bangla with sample data" width={600} height={1297} className="w-full" />
         </div>
       </div>
       <div>
