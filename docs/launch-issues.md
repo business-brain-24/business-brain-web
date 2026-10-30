@@ -1,7 +1,7 @@
 # Launch readiness: issue tracker
 
 Status of every instruction in the launch issues ([#15](https://github.com/business-brain-24/business-brain-web/issues/15)).
-Updated 29 Oct 2026, after the move to `https://getbusinessbrain.ai`. Update this file as items close.
+Updated 30 Oct 2026, after the move to `https://getbusinessbrain.ai`. Update this file as items close.
 
 Legend: ✅ done · 🔶 done, check on the live site · ⏳ waiting on someone · ➖ not started
 
@@ -81,7 +81,7 @@ Legend: ✅ done · 🔶 done, check on the live site · ⏳ waiting on someone 
 
 ## #9 Universal tracker (open)
 
-GA4 is live straight from gtag.js (`G-KTMCS84Y2Z`, PR "Analytics: GA4 live"). `track()` sends every event to GA4 and to `dataLayer`; when `NEXT_PUBLIC_GTM_ID` is set, the direct tag switches off and GTM takes over.
+GA4 is live straight from gtag.js (`G-KTMCS84Y2Z`, PR "Analytics: GA4 live"). `track()` sends every event to GA4 and to `dataLayer`; when `NEXT_PUBLIC_GTM_ID` is set, the direct tag switches off and GTM takes over. Only `getbusinessbrain.ai` reports to GA4 (`ANALYTICS_HOST`, PR #47), so pages.dev previews and localhost send nothing.
 
 | Item | Status | Where |
 | --- | --- | --- |
@@ -89,7 +89,9 @@ GA4 is live straight from gtag.js (`G-KTMCS84Y2Z`, PR "Analytics: GA4 live"). `t
 | One `page_view` per navigation from `RouteTracker` | ✅ | Turn off history-based page views in GA4 enhanced measurement |
 | Events: `cta_click`, `form_start`, `generate_lead`, `newsletter_signup`, `phone_click`, `email_click`, `watch_tower_demo_click`, `video_play`, `ask_question`, `module_tab`, `chat_open` | ✅ | `track()` calls; `chat_open` from the Omazy launcher click |
 | Consent: ads denied everywhere until consent; analytics on by default, denied until consent in EU, EEA, UK and Switzerland | ✅ | `consentDefaultsScript` in `Consent.tsx`; privacy text must say so (#10) |
-| GA4 admin: key events, custom dimensions, retention, unwanted referrals, enhanced measurement | ⏳ | GA4 property settings |
+| GA4 admin: 14-month retention, unwanted referrals (ou.chat, omazy.ai, businessbrain24.com), enhanced measurement without history page views or form interactions | ✅ | Property p561442840, stream 16228109960 (30 Oct) |
+| Custom dimensions: `cta_location`, `cta_text`, `form_name`, `industry`, `size` | ✅ | GA4 custom definitions (30 Oct) |
+| Key events: `generate_lead`, `newsletter_signup`, `phone_click`, `email_click`, `watch_tower_demo_click` | ⏳ | Test hits sent 30 Oct; star each one under Admin > Events > Recent events once it shows (up to 24 hours) |
 | Internal traffic filter | ⏳ | Needs the office IP ranges |
 | Search Console and Google Ads links | ⏳ | After Search Console verification (#44) and an Ads account |
 | GTM container with Meta, LinkedIn and Google Ads | ⏳ Marketing | IDs needed |
