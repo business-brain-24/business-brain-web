@@ -8,7 +8,7 @@ import RouteTracker from "@/components/analytics/RouteTracker";
 import ConsentBanner, { consentDefaultsScript } from "@/components/analytics/Consent";
 import ChatWidget from "@/components/layout/ChatWidget";
 import JsonLd, { organizationLd, websiteLd } from "@/components/seo/JsonLd";
-import { GA4_ID, GTM_ID } from "@/lib/analytics";
+import { ANALYTICS_HOST, GA4_ID, GTM_ID } from "@/lib/analytics";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { fontVariables } from "@/lib/fonts";
 
@@ -46,7 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Consent Mode defaults must exist before GTM loads. */}
         <script dangerouslySetInnerHTML={{ __html: consentDefaultsScript }} />
         {/* GA4 config queues ahead of the first page_view; RouteTracker sends page views, so the tag does not. */}
-        {GA4_ID && <script dangerouslySetInnerHTML={{ __html: `gtag('js',new Date());gtag('config','${GA4_ID}',{send_page_view:false});` }} />}
+        {GA4_ID && <script dangerouslySetInnerHTML={{ __html: `if(location.hostname==='${ANALYTICS_HOST}'){gtag('js',new Date());gtag('config','${GA4_ID}',{send_page_view:false});}` }} />}
         <JsonLd data={[organizationLd, websiteLd]} />
       </head>
       <body>

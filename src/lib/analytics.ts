@@ -18,12 +18,14 @@ declare global {
 export const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID ?? "";
 /** Business Brain GA4 web stream (getbusinessbrain.ai). A public ID; empty when GTM takes over. */
 export const GA4_ID = GTM_ID ? "" : (process.env.NEXT_PUBLIC_GA4_ID ?? "G-KTMCS84Y2Z");
+/** Only the public host reports to GA4: pages.dev previews and other copies of the site stay out of the data. */
+export const ANALYTICS_HOST = "getbusinessbrain.ai";
 
 export function track(event: string, params: Params = {}) {
   if (typeof window === "undefined") return;
   if (window.location.pathname.startsWith("/dashboard") && event !== "demo_login") return; // demo data
   (window.dataLayer ||= []).push({ event, ...params });
-  if (GA4_ID) window.gtag?.("event", event, params);
+  if (GA4_ID && window.location.hostname === ANALYTICS_HOST) window.gtag?.("event", event, params);
 }
 
 /* ---------- Attribution: first and last touch ---------- */
