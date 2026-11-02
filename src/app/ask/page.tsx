@@ -185,7 +185,7 @@ export default function Ask() {
         e.preventDefault();
         ask(value);
       }}
-      className="flex items-end gap-2 rounded-[26px] border border-line bg-white p-2 pl-5 shadow-[0_6px_24px_rgba(22,25,40,0.07)] transition-colors focus-within:border-ink/25"
+      className="glass-strong flex items-end gap-2 !rounded-[22px] p-2 pl-5 transition-shadow focus-within:shadow-[0_0_0_3px_rgba(241,98,34,0.18)]"
     >
       <textarea
         ref={input}
@@ -205,11 +205,11 @@ export default function Ask() {
         style={{ outline: "none" }}
       />
       {busy ? (
-        <button type="button" onClick={stop} aria-label="Stop" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-ink text-white">
+        <button type="button" onClick={stop} aria-label="Stop" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#262D6C] text-white">
           <Square size={ICON.sm} fill="currentColor" />
         </button>
       ) : (
-        <button type="submit" disabled={!value.trim()} aria-label="Send" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-ink text-white transition-opacity disabled:opacity-20">
+        <button type="submit" disabled={!value.trim()} aria-label="Send" className="btn-signal flex h-10 w-10 shrink-0 items-center justify-center !rounded-full text-white transition-opacity disabled:opacity-30">
           <ArrowUp size={ICON.lg} />
         </button>
       )}
@@ -217,7 +217,8 @@ export default function Ask() {
   );
 
   return (
-    <section className="flex h-[100svh] gap-2 p-2 sm:gap-3 sm:p-3">
+    <section className="relative isolate flex h-[100svh] gap-2 overflow-hidden bg-cream p-2 sm:gap-3 sm:p-3">
+      <div className="hero-backdrop -z-10" aria-hidden />
       {/* sidebar */}
       <AnimatePresence>
         {sidebar && (
@@ -227,7 +228,7 @@ export default function Ask() {
       <aside
         className={clsx(
           // above the site header only while it is a slide-in drawer; on desktop the header's menus must cover it
-          "z-[56] flex w-[272px] shrink-0 flex-col rounded-[18px] bg-surface p-3 transition-transform duration-300 lg:z-auto",
+          "glass z-[56] flex w-[272px] shrink-0 flex-col !rounded-[20px] p-3 transition-transform duration-300 lg:z-auto",
           "fixed bottom-2 left-2 top-2 lg:static lg:translate-x-0",
           sidebar ? "translate-x-0" : "-translate-x-[110%]",
         )}
@@ -238,7 +239,7 @@ export default function Ask() {
             <X size={ICON.md} />
           </button>
         </div>
-        <button onClick={newChat} className="flex items-center gap-2.5 rounded-[12px] px-3 py-2.5 text-[14px] font-medium transition-colors hover:bg-white">
+        <button onClick={newChat} className="flex items-center gap-2.5 rounded-[12px] px-3 py-2.5 text-[14px] font-medium transition-colors hover:bg-white/60">
           <SquarePen size={ICON.md} /> New chat
         </button>
 
@@ -256,7 +257,7 @@ export default function Ask() {
                       setCurrent(c.id);
                       setSidebar(false);
                     }}
-                    className={clsx("flex w-full items-center gap-2.5 rounded-[10px] py-2 pl-3 pr-9 text-left text-[13.5px] transition-colors", c.id === current ? "bg-white font-medium" : "hover:bg-white/70")}
+                    className={clsx("flex w-full items-center gap-2.5 rounded-[10px] py-2 pl-3 pr-9 text-left text-[13.5px] transition-colors", c.id === current ? "bg-white/90 font-medium text-[#262D6C] shadow-[0_4px_14px_-8px_rgba(38,45,108,0.35)]" : "hover:bg-white/60")}
                   >
                     <MessageSquare size={ICON.sm} className="shrink-0 text-subtle" />
                     <span className="truncate">{c.title}</span>
@@ -274,7 +275,7 @@ export default function Ask() {
           )}
         </div>
 
-        <div className="mt-3 rounded-[14px] bg-white p-3.5">
+        <div className="mt-3 rounded-[14px] border border-white bg-white/75 p-3.5">
           <p className="flex items-center gap-2 text-[13px] font-medium">
             <Database size={ICON.sm} className="text-orange" /> Shapla Foods assistant
           </p>
@@ -288,7 +289,7 @@ export default function Ask() {
       </aside>
 
       {/* main */}
-      <div className="relative flex min-w-0 flex-1 flex-col overflow-hidden rounded-[18px] border border-line bg-white">
+      <div className="glass relative flex min-w-0 flex-1 flex-col overflow-hidden !rounded-[20px]">
         <header className="flex h-14 shrink-0 items-center gap-2 px-3 sm:px-4">
           <button onClick={() => setSidebar(true)} className="flex h-9 w-9 items-center justify-center rounded-lg text-muted hover:bg-surface lg:hidden" aria-label="Open sidebar">
             <PanelLeft size={ICON.lg} />
@@ -296,8 +297,8 @@ export default function Ask() {
           <Link href="/" aria-label="Business Brain home" className="flex h-8 w-8 items-center justify-center lg:hidden">
             <BrandMark className="h-8 w-8" />
           </Link>
-          <p className="text-[15px] font-medium">Shapla assistant</p>
-          <span className="truncate whitespace-nowrap rounded-full bg-surface px-2.5 py-1 text-[12px] text-muted">{COMPANY} · demo</span>
+          <p className="text-[15px] font-semibold text-[#262D6C]">Shapla assistant</p>
+          <span className="truncate whitespace-nowrap rounded-full border border-white bg-white/70 px-2.5 py-1 text-[12px] text-muted">{COMPANY} · demo</span>
           <button onClick={newChat} className="ml-auto flex h-9 w-9 items-center justify-center rounded-lg text-muted hover:bg-surface lg:hidden" aria-label="New chat">
             <SquarePen size={ICON.md} />
           </button>
@@ -306,7 +307,8 @@ export default function Ask() {
         {empty ? (
           <div className="flex min-h-0 flex-1 flex-col overflow-y-auto px-4" data-lenis-prevent>
             <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease }} className="mx-auto flex w-full max-w-[720px] flex-1 flex-col justify-center py-10">
-              <h1 className="text-center text-[28px] font-display font-semibold tracking-[-0.03em] sm:text-[34px]">What would you like to know about Shapla?</h1>
+              <p className="eyebrow text-center">Ask Brain · Shapla Foods demo</p>
+              <h1 className="mt-3 text-center text-[30px] font-display font-semibold leading-[1.1] tracking-[-0.03em] text-ink sm:text-[40px]">What would you like to know about <span className="accent-text">Shapla?</span></h1>
               <p className="mt-2 text-center text-[15px] text-muted">Ask about sales, finance, payroll, logistics, stock or production. Get the numbers and the charts.</p>
               <div className="mt-8">{composer}</div>
 
@@ -315,7 +317,7 @@ export default function Ask() {
                   <button
                     key={t.module}
                     onClick={() => setTab(i)}
-                    className={clsx("shrink-0 rounded-full px-3.5 py-1.5 text-[13px] transition-colors", i === tab ? "bg-ink text-white" : "bg-surface text-muted hover:text-ink")}
+                    className={clsx("shrink-0 rounded-full px-3.5 py-1.5 text-[13px] transition-colors", i === tab ? "bg-[#262D6C] text-white" : "border border-white bg-white/60 text-muted hover:text-ink")}
                   >
                     {t.module}
                   </button>
@@ -324,7 +326,7 @@ export default function Ask() {
               <AnimatePresence mode="wait">
                 <motion.div key={tab} initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }} className="mt-3 grid gap-2 sm:grid-cols-2">
                   {TABS[tab].questions.map((s) => (
-                    <button key={s} onClick={() => ask(s)} className="rounded-[14px] border border-line px-4 py-3 text-left text-[14px] text-ink transition-colors hover:bg-surface">
+                    <button key={s} onClick={() => ask(s)} className="rounded-[14px] border border-white bg-white/65 px-4 py-3 text-left text-[14px] text-ink transition-colors hover:border-orange/40 hover:bg-white">
                       {s}
                     </button>
                   ))}
@@ -339,7 +341,7 @@ export default function Ask() {
                 {msgs.map((m, i) =>
                   m.from === "user" ? (
                     <motion.div key={m.id} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, ease }} className="flex justify-end">
-                      <p className="max-w-[80%] whitespace-pre-wrap rounded-[22px] bg-[#F0F1F3] px-5 py-2.5 text-[15px] leading-[23px]">{m.text}</p>
+                      <p className="max-w-[80%] whitespace-pre-wrap rounded-[22px] rounded-br-[8px] bg-[#262D6C] px-5 py-2.5 text-white text-[15px] leading-[23px]">{m.text}</p>
                     </motion.div>
                   ) : (
                     <BrainMessage
@@ -482,7 +484,7 @@ function BrainMessage({
             {r.links && (
               <div className="flex flex-wrap gap-2">
                 {r.links.map((l) => (
-                  <Link key={l.href} href={l.href} className="rounded-full border border-line px-3.5 py-1.5 text-[13px] font-medium transition-colors hover:border-orange hover:text-orange-deep">
+                  <Link key={l.href} href={l.href} className="rounded-full border border-white bg-white/70 px-3.5 py-1.5 text-[13px] font-medium transition-colors hover:border-orange hover:text-orange-deep">
                     {l.label} →
                   </Link>
                 ))}
@@ -499,11 +501,11 @@ function BrainMessage({
             </div>
 
             {showFollow && (
-              <motion.div initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="border-t border-line pt-4">
+              <motion.div initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="border-t border-[rgba(38,45,108,0.08)] pt-4">
                 <p className="mb-2 text-[12px] text-subtle">Ask next</p>
                 <div className="flex flex-col items-start gap-1.5">
                   {r.follow.map((f) => (
-                    <button key={f} onClick={() => onAsk(f)} className="rounded-[10px] px-2 py-1 text-left text-[14px] text-ink transition-colors hover:bg-surface">
+                    <button key={f} onClick={() => onAsk(f)} className="rounded-[10px] px-2 py-1 text-left text-[14px] text-ink transition-colors hover:bg-white/70">
                       <span className="mr-2 text-orange">↳</span>
                       {f}
                     </button>

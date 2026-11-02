@@ -4,6 +4,7 @@ import clsx from "clsx";
 import { ArrowRight, Headphones, ListChecks, MousePointer2, ShoppingCart, Sparkles, Tags, Truck } from "lucide-react";
 import s from "../lp.module.css";
 import VideoButton from "./VideoButton";
+import HeroAsk from "./HeroAsk";
 
 /**
  * Centred copy over the glass ring stage, after the Zoho ERP hero layout. The stage shows
@@ -38,6 +39,7 @@ export default function Hero() {
           </Link>
           <VideoButton />
         </div>
+        <HeroAsk />
       </div>
 
       <Stage />
