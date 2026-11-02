@@ -42,7 +42,7 @@ export default function HeroAsk() {
         e.preventDefault();
         go();
       }}
-      className={clsx(s.glassStrong, "mx-auto mt-8 flex w-full max-w-[620px] items-center gap-3 !rounded-[18px] py-2 pl-4 pr-2 text-left")}
+      className={clsx(s.glassStrong, s.askBox, "mx-auto mt-8 flex w-full max-w-[620px] items-center gap-3 !rounded-[18px] py-2 pl-4 pr-2 text-left")}
     >
       <Sparkles size={18} strokeWidth={1.75} className="shrink-0 text-[#F16222]" aria-hidden />
       <input
@@ -51,6 +51,7 @@ export default function HeroAsk() {
         placeholder={`Ask the brain: “${typed}”`}
         aria-label="Ask the brain a question about Shapla Foods"
         className="min-w-0 flex-1 bg-transparent py-2 text-[15px] text-[#161928] outline-none placeholder:text-[#8B91A8] sm:text-[16px]"
+        style={{ outline: "none" }}
       />
       <button type="submit" aria-label="Ask" className={clsx(s.btnSignal, "flex h-10 w-10 shrink-0 items-center justify-center !rounded-[12px] text-white")}>
         <ArrowUp size={18} strokeWidth={2} />

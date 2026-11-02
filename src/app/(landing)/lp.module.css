@@ -159,3 +159,11 @@
     animation: none;
   }
 }
+
+/* Hero Ask box: on focus an orange ring and soft glow sit around the whole box, not an outline inside it. */
+.askBox {
+  transition: box-shadow 0.3s ease;
+}
+.askBox:focus-within {
+  box-shadow: 0 0 0 2px rgba(241, 98, 34, 0.55), 0 0 0 7px rgba(241, 98, 34, 0.12), 0 14px 44px -8px rgba(241, 98, 34, 0.45);
+}

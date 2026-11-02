@@ -1061,6 +1061,40 @@ export const shaplaModules: { module: string; questions: string[] }[] = [
   { module: "Production", questions: ["How is the factory doing?", "What goes into our milk biscuit?", "Production yield by product", "Show production output", "Production plan vs actual"] },
 ];
 
+/* Teasing, jokes and small talk get a light, good-humoured answer, then a nudge back to the numbers. */
+const INSULT = /(know nothing|you('| a)?re (stupid|dumb|useless|wrong|bad|slow|boring|an idiot|not smart|fake)|\b(stupid|dumb|idiot|useless|rubbish|trash|garbage|nonsense)\b|you suck|worst (bot|assistant|ai))/;
+const JOKE = /(joke|make me laugh|something funny|cheer me up)/;
+const WHO = /(who (are|made|built) you|what are you|are you (real|human|alive|a bot|chatgpt|claude|gpt|ai)|\b(chatgpt|gpt|claude|gemini)\b)/;
+const LAUGH = /^(lol|lmao|haha+|hehe+|😂|🤣|😆)+[!. ]*$/;
+const SMALL = /(i love you|marry me|how are you|i('| a)?m bored|good (bot|job)|you('| a)?re (great|smart|amazing|the best))/;
+
+function smallTalk(q: string): Reply | null {
+  const pick = (xs: string[]) => xs[[...q].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7) % xs.length];
+  const owes = by(S.customers.map((c) => ({ c, out: sum(S.invoices.filter((i) => i.cus === c.id).map((i) => i.out)) })), (x) => x.out)[0];
+  const follow = ["What needs my attention today?", "Who owes us the most?", "How is Shapla doing?"];
+  if (INSULT.test(q))
+    return { text: pick([
+      `Fair, I know nothing about football, poetry or your weekend. But I do know ${owes.c.name} owes us ${money(owes.out)}. Shall I show you who else?`,
+      `Ouch. I'll file that under "customer feedback", right next to the ${S.pendingOrders.length} pending orders. Want to see what I do know?`,
+      "Jon Snow knew nothing too, and he still ended up in charge. Ask me about Shapla and let's see who knows what.",
+      `Bold claim from someone who hasn't checked the ${num(S.invoices.length)} invoices I've read today. Try me on sales, stock or payroll.`,
+    ]), follow };
+  if (JOKE.test(q))
+    return { text: pick([
+      "Why did the biscuit go to the doctor? It was feeling crumby. Our biscuits, though, are doing fine. Want the sales?",
+      "I'd tell you a joke about receivables, but you'd have to wait 45 days to get it.",
+      "An accountant walks into a bar. The bar doesn't balance. Luckily, our books do. Ask me how.",
+      "What's a warehouse's favourite music? Heavy metal shelving. I'll stick to stock levels, I promise.",
+    ]), follow: ["Show receivables ageing", "Which products sell the most?", "Stock value by category"] };
+  if (WHO.test(q))
+    return { text: "I'm Brain, Shapla Foods' assistant inside Business Brain. Not ChatGPT, not a person: a brain that has read every order, invoice, payslip and production run Shapla has. Ask me anything about the business.", follow };
+  if (LAUGH.test(q.trim()))
+    return { text: pick(["Glad I amuse you. Now let me impress you: ask me about this month's sales.", "I'll take that as a compliment. Shall we look at something serious, like who owes us money?"]), follow };
+  if (SMALL.test(q))
+    return { text: pick(["Thank you! I run on coffee-free electricity and clean ledgers. What shall we look at?", "Doing great: every number balances today. How can I help with Shapla?"]), follow };
+  return null;
+}
+
 const decline = (): Reply => ({
   text: "Sorry, I'm Shapla Foods' assistant, so I can only help with questions about Shapla: our sales, finance, payroll, people, logistics, stock, purchasing and production. Here are a few things you could ask.",
   follow: shaplaStarters.slice(0, 4),
@@ -1071,6 +1105,8 @@ export function shaplaAgent(question: string): Reply {
   if (GREETING.test(q) && q.split(/\s+/).length <= 4) {
     return { text: "Hello! I'm Shapla Foods' assistant. Ask me anything about our sales, finance, payroll, people, logistics, stock, purchasing or production.", follow: shaplaStarters.slice(0, 4) };
   }
+  const quip = smallTalk(q);
+  if (quip) return quip;
   const named = findNamed(question);
   if (named) return named;
   if (!ON_TOPIC.test(q) && !BANGLA.test(question)) return decline();
