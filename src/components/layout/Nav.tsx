@@ -211,7 +211,10 @@ export default function Nav() {
                   transition={{ duration: 0.45, ease }}
                   className="hidden overflow-hidden sm:block"
                 >
-                  <TalkButton className="inline-flex whitespace-nowrap" />
+                  <div className="flex items-center gap-2">
+                    <DemoButton className="hidden whitespace-nowrap xl:inline-flex" />
+                    <TalkButton className="inline-flex whitespace-nowrap" />
+                  </div>
                 </motion.div>
               )}
             </AnimatePresence>
@@ -250,10 +253,11 @@ export default function Nav() {
 
 /** The one call to action in the bar: books a session with the team behind the Brain. */
 /** The nav's primary call to action, in the same signal style as every other primary button. */
+/** Opens the Ask Brain agent chat. */
 function TalkButton({ className, large }: { className?: string; large?: boolean }) {
   return (
     <Link
-      href="/demo"
+      href="/ask"
       data-cta
       className={clsx(
         "btn-signal group items-center font-semibold",
@@ -263,6 +267,19 @@ function TalkButton({ className, large }: { className?: string; large?: boolean 
     >
       Talk to the Brain
       <ArrowRight size={large ? 18 : ICON.md} strokeWidth={2} className="transition-transform duration-200 group-hover:translate-x-0.5" />
+    </Link>
+  );
+}
+
+/** The quiet glass partner to TalkButton: books a demo through the contact form. */
+function DemoButton({ className, large }: { className?: string; large?: boolean }) {
+  return (
+    <Link
+      href="/contact"
+      data-cta
+      className={clsx("btn-glass items-center justify-center font-semibold text-[#262D6C]", large ? "h-[52px] px-6 text-[16px]" : "h-11 px-5 text-[15px]", className)}
+    >
+      Book a demo
     </Link>
   );
 }
@@ -451,6 +468,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
         ))}
       </motion.div>
       <div className="flex gap-2.5 border-t border-line p-4 pb-[max(16px,env(safe-area-inset-bottom))] sm:px-6">
+        <DemoButton large className="flex flex-1 justify-center" />
         <TalkButton large className="flex flex-1 justify-center" />
       </div>
     </motion.div>
