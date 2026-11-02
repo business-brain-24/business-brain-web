@@ -27,8 +27,27 @@ OUT_HERO = ROOT / "src" / "lib" / "shapla-hero.ts"
 NS = {"m": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
 REL = "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id"
 EXCEL_EPOCH = date(1899, 12, 30)
-AS_OF = date(2026, 10, 25)  # last day in the workbook
+AS_OF = date(2026, 10, 25)  # replaced in main() by the last order date in the workbook
 DATE_COLS = re.compile(r"date|as of", re.I)
+MONTHS = []  # "2026-07", ... set in main() from the order dates
+
+
+def mname(key, short=False):
+    return date.fromisoformat(key + "-01").strftime("%b" if short else "%B")
+
+
+def ordinal(n):
+    return f"{n}{'th' if 10 <= n % 100 <= 20 else {1: 'st', 2: 'nd', 3: 'rd'}.get(n % 10, 'th')}"
+
+
+def partial_note():
+    """How the last month is labelled when the data stops before its end: "*November to the 5th"."""
+    return f"*{mname(MONTHS[-1])} to the {ordinal(AS_OF.day)}"
+
+
+def period():
+    first = date.fromisoformat(MONTHS[0] + "-01")
+    return f"{first.day} {first.strftime('%b')} to {AS_OF.day} {AS_OF.strftime('%b %Y')}"
 
 
 # ---------- reading the workbook ----------
@@ -141,9 +160,9 @@ def build(t):
     emp = {r["Employee ID"]: r for r in t["Employees"]}
     region = {r["Region ID"]: r["Region"].replace(" Region", "") for r in t["Regions"]}
     month = lambda iso: iso[:7]
-    MONTHS = ["2026-07", "2026-08", "2026-09", "2026-10"]
-    MLAB = ["Jul", "Aug", "Sep", "Oct*"]
-    this_month = "2026-10"
+    MLAB = [mname(m, True) for m in MONTHS[:-1]] + [mname(MONTHS[-1], True) + "*"]
+    this_month = MONTHS[-1]
+    cur = mname(this_month)
     v = {}
 
     # Employees and payroll
@@ -188,12 +207,12 @@ def build(t):
 
     split = lambda g: (g * 0.5, g * 0.25, g * 0.10, g * 0.15)  # basic, house rent, medical, other (illustrative)
     v["payroll"] = {
-        "kpis": [["October gross", lakh_crore(gross)], ["Employees paid", str(len(emps))], ["Basic", lakh_crore(gross * 0.5)], ["Allowances", lakh_crore(gross * 0.5)]],
+        "kpis": [[f"{cur} gross", lakh_crore(gross)], ["Employees paid", str(len(emps))], ["Basic", lakh_crore(gross * 0.5)], ["Allowances", lakh_crore(gross * 0.5)]],
         "table": {"title": "Payroll by department", "cols": ["Department", "Employees", "Gross", "Status"], "rows": [[k, str(by_dept[k]), lakh_crore(dept_gross[k]), "Awaiting approval"] for k, _ in sorted(dept_gross.items(), key=lambda x: -x[1])[:4]]},
         "cols": ["Employee", "Department", "Basic", "House rent", "Medical", "Other", "Gross", "Status"],
         "rows": [[e["Name"], dept[e["Dept ID"]], *["৳ " + indian(round(x)) for x in split(e["Gross salary (BDT/month)"])], "৳ " + indian(e["Gross salary (BDT/month)"]), "Awaiting approval"] for e in sorted(emps, key=lambda e: -e["Gross salary (BDT/month)"])],
         "overview": [
-            {"type": "kpis", "items": [{"label": "October gross", "value": lakh_crore(gross)}, {"label": "Employees", "value": str(len(emps))}, {"label": "Average gross", "value": lakh_crore(gross / len(emps))}, {"label": "Status", "value": "Awaiting approval"}]},
+            {"type": "kpis", "items": [{"label": f"{cur} gross", "value": lakh_crore(gross)}, {"label": "Employees", "value": str(len(emps))}, {"label": "Average gross", "value": lakh_crore(gross / len(emps))}, {"label": "Status", "value": "Awaiting approval"}]},
             {"w": 5, "type": "donut", "title": "Where the money goes", "center": lakh_crore(gross), "centerLabel": "gross", "slices": [{"label": "Basic", "value": round(gross * 0.5), "display": lakh_crore(gross * 0.5)}, {"label": "House rent", "value": round(gross * 0.25), "display": lakh_crore(gross * 0.25)}, {"label": "Medical", "value": round(gross * 0.1), "display": lakh_crore(gross * 0.1)}, {"label": "Other", "value": round(gross * 0.15), "display": lakh_crore(gross * 0.15)}]},
             {"w": 7, "type": "bars", "horizontal": True, "title": "Cost by department", "items": [{"label": k, "value": round(x / 1e5, 1), "display": lakh_crore(x)} for k, x in sorted(dept_gross.items(), key=lambda x: -x[1])]},
             {"w": 12, "type": "insight", "text": "The salary split (basic 50%, house rent 25%, medical 10%, other 15%) is illustrative sample data, not tax or labour advice."},
@@ -243,12 +262,12 @@ def build(t):
         officer_mtd[emp[o["Sales officer (Emp ID)"]]["Name"]] += o["Net amount (BDT)"]
     mtd = sum(reg_mtd.values())
     v["sales"] = {
-        "kpis": [[f"Sales on {d(last_day)}", lakh_crore(sum(o["Net amount (BDT)"] for o in today))], ["Orders in October", indian(len(oct_orders))], ["Month to date", lakh_crore(mtd)], ["Avg. order", lakh_crore(mtd / len(oct_orders))]],
+        "kpis": [[f"Sales on {d(last_day)}", lakh_crore(sum(o["Net amount (BDT)"] for o in today))], [f"Orders in {cur}", indian(len(oct_orders))], ["Month to date", lakh_crore(mtd)], ["Avg. order", lakh_crore(mtd / len(oct_orders))]],
         "table": {"title": "Sales by region", "cols": ["Region", d(last_day), "Month to date", "Orders"], "rows": [[r, lakh_crore(reg_today[r]), lakh_crore(x), str(reg_orders[r])] for r, x in sorted(reg_mtd.items(), key=lambda x: -x[1])[:4]]},
         "overview": [
-            {"type": "kpis", "items": [{"label": f"Sales on {d(last_day)}", "value": lakh_crore(sum(o["Net amount (BDT)"] for o in today))}, {"label": "Month to date", "value": lakh_crore(mtd), "note": "1 to 25 Oct, net of VAT"}, {"label": "Orders in October", "value": indian(len(oct_orders))}, {"label": "Customers ordering", "value": str(len({o["Customer ID"] for o in oct_orders}))}]},
-            {"w": 8, "type": "line", "title": "Monthly sales", "sub": "৳ crore, net of VAT · *October to the 25th", "labels": MLAB, "series": [{"name": "Sales", "data": [round(net_by_month[m] / 1e7, 2) for m in MONTHS]}]},
-            {"w": 4, "type": "donut", "title": "Sales by category", "sub": "Month to date", "center": lakh_crore(mtd), "centerLabel": "October", "slices": [{"label": k, "value": round(x), "display": lakh_crore(x)} for k, x in sorted(cat_mtd.items(), key=lambda x: -x[1])]},
+            {"type": "kpis", "items": [{"label": f"Sales on {d(last_day)}", "value": lakh_crore(sum(o["Net amount (BDT)"] for o in today))}, {"label": "Month to date", "value": lakh_crore(mtd), "note": f"1 to {AS_OF.day} {AS_OF.strftime('%b')}, net of VAT"}, {"label": f"Orders in {cur}", "value": indian(len(oct_orders))}, {"label": "Customers ordering", "value": str(len({o["Customer ID"] for o in oct_orders}))}]},
+            {"w": 8, "type": "line", "title": "Monthly sales", "sub": f"৳ crore, net of VAT · {partial_note()}", "labels": MLAB, "series": [{"name": "Sales", "data": [round(net_by_month[m] / 1e7, 2) for m in MONTHS]}]},
+            {"w": 4, "type": "donut", "title": "Sales by category", "sub": "Month to date", "center": lakh_crore(mtd), "centerLabel": cur, "slices": [{"label": k, "value": round(x), "display": lakh_crore(x)} for k, x in sorted(cat_mtd.items(), key=lambda x: -x[1])]},
             {"w": 6, "type": "bars", "horizontal": True, "title": "Sales by region", "sub": "Month to date", "items": [{"label": r, "value": round(x / 1e5, 1), "display": lakh_crore(x)} for r, x in sorted(reg_mtd.items(), key=lambda x: -x[1])]},
             {"w": 6, "type": "bars", "horizontal": True, "title": "Top products", "sub": "Month to date", "items": [{"label": k, "value": round(x / 1e5, 1), "display": lakh_crore(x)} for k, x in sorted(prod_mtd.items(), key=lambda x: -x[1])[:6]]},
             {"w": 12, "type": "leaders", "title": "Top sales officers", "sub": "Month to date", "rows": [{"name": k, "value": lakh_crore(x)} for k, x in sorted(officer_mtd.items(), key=lambda x: -x[1])[:5]]},
@@ -283,15 +302,15 @@ def build(t):
         col_m[month(c["Receipt date"])] += c["Amount (BDT)"]
     recent = sorted(invs, key=lambda i: (i["Invoice date"], i["Invoice ID"]), reverse=True)
     v["invoicing"] = {
-        "kpis": [["Outstanding", lakh_crore(outstanding)], ["Overdue", lakh_crore(overdue)], ["Invoiced in October", lakh_crore(inv_oct)], ["Collected", pct(collected_rate)]],
+        "kpis": [["Outstanding", lakh_crore(outstanding)], ["Overdue", lakh_crore(overdue)], [f"Invoiced in {cur}", lakh_crore(inv_oct)], ["Collected", pct(collected_rate)]],
         "table": {"title": "Recent invoices", "cols": ["Invoice", "Customer", "Amount", "Status"], "rows": [[i["Invoice ID"], cus[i["Customer ID"]]["Customer"], lakh_crore(i["Amount (BDT)"]), inv_status(i)] for i in recent[:4]]},
         "cols": ["Invoice", "Customer", "Issued", "Due", "Amount", "Status"],
         "rows": [[i["Invoice ID"], cus[i["Customer ID"]]["Customer"], d(i["Invoice date"]), d(i["Due date"]), lakh_crore(i["Amount (BDT)"]), inv_status(i)] for i in recent[:40]],
         "overview": [
-            {"type": "kpis", "items": [{"label": "Invoiced in October", "value": lakh_crore(inv_oct)}, {"label": "Outstanding", "value": lakh_crore(outstanding)}, {"label": "Overdue", "value": lakh_crore(overdue)}, {"label": "Collected", "value": pct(collected_rate), "note": "of everything invoiced since July"}]},
+            {"type": "kpis", "items": [{"label": f"Invoiced in {cur}", "value": lakh_crore(inv_oct)}, {"label": "Outstanding", "value": lakh_crore(outstanding)}, {"label": "Overdue", "value": lakh_crore(overdue)}, {"label": "Collected", "value": pct(collected_rate), "note": f"of everything invoiced since {mname(MONTHS[0])}"}]},
             {"w": 7, "type": "bars", "title": "Receivables ageing", "sub": "Days past due · ৳ lakh", "items": [{"label": k, "value": round(ageing[k] / 1e5, 1), "display": lakh_crore(ageing[k])} for k in ["Not due", "1 to 30", "31 to 60", "61 to 90", "90+"]]},
             {"w": 5, "type": "leaders", "avatars": False, "title": "Largest balances", "rows": [{"name": k, "sub": f"{n} open invoice{'s' if n > 1 else ''}", "value": lakh_crore(x)} for k, (x, n) in sorted(bal.items(), key=lambda x: -x[1][0])[:5]]},
-            {"w": 12, "type": "line", "title": "Invoiced vs collected", "sub": "৳ crore · *October to the 25th", "labels": MLAB, "series": [{"name": "Invoiced", "data": [round(inv_m[m] / 1e7, 2) for m in MONTHS]}, {"name": "Collected", "data": [round(col_m[m] / 1e7, 2) for m in MONTHS]}]},
+            {"w": 12, "type": "line", "title": "Invoiced vs collected", "sub": f"৳ crore · {partial_note()}", "labels": MLAB, "series": [{"name": "Invoiced", "data": [round(inv_m[m] / 1e7, 2) for m in MONTHS]}, {"name": "Collected", "data": [round(col_m[m] / 1e7, 2) for m in MONTHS]}]},
         ],
     }
 
@@ -334,14 +353,14 @@ def build(t):
     recent_po = sorted(pos, key=lambda p: (p["PO date"], p["PO ID"]), reverse=True)
     items = lambda p: lines[p["PO ID"]][0] + (f" +{len(lines[p['PO ID']]) - 1}" if len(lines[p["PO ID"]]) > 1 else "")
     v["procurement"] = {
-        "kpis": [["Open POs", str(len(open_pos))], ["Spend in October", lakh_crore(spend_oct)], ["Late deliveries", str(len(late))], ["Suppliers", str(len(sups))]],
+        "kpis": [["Open POs", str(len(open_pos))], [f"Spend in {cur}", lakh_crore(spend_oct)], ["Late deliveries", str(len(late))], ["Suppliers", str(len(sups))]],
         "table": {"title": "Purchase orders", "cols": ["PO", "Supplier", "Value", "Status"], "rows": [[p["PO ID"], sup[p["Supplier ID"]]["Supplier"], lakh_crore(p["Total (BDT)"]), p["Status"]] for p in recent_po[:4]]},
         "cols": ["PO", "Supplier", "Items", "Ordered", "Expected", "Value", "Status"],
         "rows": [[p["PO ID"], sup[p["Supplier ID"]]["Supplier"], items(p), d(p["PO date"]), d(p["Expected date"]), lakh_crore(p["Total (BDT)"]), p["Status"]] for p in recent_po[:30]],
         "overview": [
-            {"type": "kpis", "items": [{"label": "Spend in October", "value": lakh_crore(spend_oct)}, {"label": "Open POs", "value": str(len(open_pos))}, {"label": "Late deliveries", "value": str(len(late))}, {"label": "Suppliers", "value": str(len(sups))}]},
-            {"w": 7, "type": "bars", "horizontal": True, "title": "Spend by supplier", "sub": "July to October", "items": [{"label": k, "value": round(x / 1e5, 1), "display": lakh_crore(x)} for k, x in sorted(spend_sup.items(), key=lambda x: -x[1])[:6]]},
-            {"w": 5, "type": "bars", "title": "Spend by month", "sub": "৳ crore · *October to the 25th", "items": [{"label": lab, "value": round(spend_m[m] / 1e7, 2), "display": lakh_crore(spend_m[m])} for m, lab in zip(MONTHS, MLAB)]},
+            {"type": "kpis", "items": [{"label": f"Spend in {cur}", "value": lakh_crore(spend_oct)}, {"label": "Open POs", "value": str(len(open_pos))}, {"label": "Late deliveries", "value": str(len(late))}, {"label": "Suppliers", "value": str(len(sups))}]},
+            {"w": 7, "type": "bars", "horizontal": True, "title": "Spend by supplier", "sub": f"{mname(MONTHS[0])} to {cur}", "items": [{"label": k, "value": round(x / 1e5, 1), "display": lakh_crore(x)} for k, x in sorted(spend_sup.items(), key=lambda x: -x[1])[:6]]},
+            {"w": 5, "type": "bars", "title": "Spend by month", "sub": f"৳ crore · {partial_note()}", "items": [{"label": lab, "value": round(spend_m[m] / 1e7, 2), "display": lakh_crore(spend_m[m])} for m, lab in zip(MONTHS, MLAB)]},
             {"w": 12, "type": "list", "status": True, "title": "Open purchase orders", "rows": [{"label": f"{p['PO ID']} · {sup[p['Supplier ID']]['Supplier']} · {lakh_crore(p['Total (BDT)'])}", "sub": f"{items(p)} · expected {d(p['Expected date'])}", "value": p["Status"]} for p in sorted(open_pos, key=lambda p: p["Expected date"])[:6]]},
         ],
     }
@@ -444,7 +463,7 @@ def build_agent(t):
     for l in t["Sales_Order_Lines"]:
         sales_lines[l["SO ID"]].append(l)
     so_date = {o["SO ID"]: o["Order date"] for o in t["Sales_Orders"]}
-    months = ["2026-07", "2026-08", "2026-09", "2026-10"]
+    months = MONTHS
     mi = {m: i for i, m in enumerate(months)}
     z = lambda: [0.0] * len(months)
     r0 = lambda x: round(x)
@@ -482,6 +501,21 @@ def build_agent(t):
         if o["Status"] == "Pending":
             pending.append({"id": o["SO ID"], "date": o["Order date"], "cus": o["Customer ID"], "dep": o["Depot (Location ID)"], "total": r0(o["Total (BDT)"])})
 
+    monthly = {k: [0.0] * len(months) for k in ["gross", "discount", "vat", "orders", "lines", "units"]}
+    status = Counter(o["Status"] for o in t["Sales_Orders"])
+    for l in t["Sales_Order_Lines"]:
+        m = mi[so_date[l["SO ID"]][:7]]
+        g = l["Qty (units)"] * l["Unit price (BDT)"]
+        monthly["gross"][m] += g
+        monthly["discount"][m] += g - l["Net (BDT)"]
+        monthly["vat"][m] += l["VAT (BDT)"]
+        monthly["lines"][m] += 1
+        monthly["units"][m] += l["Qty (units)"]
+    for o in t["Sales_Orders"]:
+        monthly["orders"][mi[o["Order date"][:7]]] += 1
+    monthly = {k: [r0(x) for x in v] for k, v in monthly.items()}
+    monthly["status"] = dict(status)
+
     inv = [{"id": i["Invoice ID"], "so": i["SO ID"], "date": i["Invoice date"], "due": i["Due date"], "cus": i["Customer ID"], "amt": r0(i["Amount (BDT)"]), "paid": r0(i["Paid (BDT)"]), "out": r0(i["Outstanding (BDT)"]), "st": i["Payment status"]} for i in t["Invoices"]]
     col = defaultdict(lambda: defaultdict(float))
     for c in t["Collections"]:
@@ -495,8 +529,11 @@ def build_agent(t):
         bom[b["SKU"]].append([b["RM ID"], b["Qty per unit"]])
 
     data = {
-        "company": {"name": co["Company name"], "industry": co["Industry"], "headOffice": co["Head office"], "factory": co["Factory"], "fiscalYear": co["Fiscal year"].replace(" – ", " to "), "period": "1 Jul to 25 Oct 2026", "asOf": AS_OF.isoformat()},
-        "months": ["Jul", "Aug", "Sep", "Oct"],
+        "company": {"name": co["Company name"], "industry": co["Industry"], "headOffice": co["Head office"], "factory": co["Factory"], "fiscalYear": co["Fiscal year"].replace(" – ", " to "), "period": period(), "asOf": AS_OF.isoformat()},
+        "months": [mname(m, True) for m in months],
+        "monthNames": [mname(m) for m in months],
+        "monthKeys": months,
+        "monthly": monthly,
         "locations": [{"id": r["Location ID"], "name": r["Name"], "type": r["Type"], "division": r["Division"], "district": r["District"]} for r in t["Locations"]],
         "categories": {r["Category ID"]: r["Category"] for r in t["Categories"]},
         "departments": {r["Dept ID"]: r["Department"] for r in t["Departments"]},
@@ -544,7 +581,10 @@ def build_agent(t):
     hero = {
         "weekly": [r0(v) for _, v in sorted(weeks.items())],
         "netSales": r0(sum(sum(v["net"]) for v in pm.values())),
-        "octSales": r0(sum(v["net"][3] for v in pm.values())),
+        "octSales": r0(sum(v["net"][-1] for v in pm.values())),
+        "currentMonth": mname(months[-1]),
+        "months": [mname(m, True) for m in months],
+        "period": period(),
         "categories": [{"label": k, "value": r0(v)} for k, v in sorted(cat_net.items(), key=lambda x: -x[1])[:5]],
         "receivables": r0(out),
         "overdue": r0(overdue),
@@ -596,6 +636,9 @@ def main():
         else:
             tables[name] = to_records(rows)
         (OUT_DATA / f"{name}.json").write_text(json.dumps(tables[name], ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    global AS_OF
+    AS_OF = date.fromisoformat(max(o["Order date"] for o in tables["Sales_Orders"]))
+    MONTHS[:] = sorted({o["Order date"][:7] for o in tables["Sales_Orders"]})
     views = build(tables)
     body = json.dumps(views, ensure_ascii=False, indent=2)
     OUT_TS.write_text(

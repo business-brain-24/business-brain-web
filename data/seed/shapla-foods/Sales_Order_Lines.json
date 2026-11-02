@@ -64488,5 +64488,6335 @@
   "Discount %": 0,
   "Net (BDT)": 6652.8,
   "VAT (BDT)": 997.92
+ },
+ {
+  "SO ID": "SO-001188",
+  "Line": 6450,
+  "SKU": "SKU-0022",
+  "Qty (units)": 27,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 567,
+  "VAT (BDT)": 85.05
+ },
+ {
+  "SO ID": "SO-001188",
+  "Line": 6451,
+  "SKU": "SKU-0023",
+  "Qty (units)": 27,
+  "Unit price (BDT)": 159.6,
+  "Discount %": 0,
+  "Net (BDT)": 4309.2,
+  "VAT (BDT)": 646.38
+ },
+ {
+  "SO ID": "SO-001189",
+  "Line": 6452,
+  "SKU": "SKU-0025",
+  "Qty (units)": 80,
+  "Unit price (BDT)": 772.8,
+  "Discount %": 2,
+  "Net (BDT)": 60587.52,
+  "VAT (BDT)": 9088.13
+ },
+ {
+  "SO ID": "SO-001189",
+  "Line": 6453,
+  "SKU": "SKU-0050",
+  "Qty (units)": 864,
+  "Unit price (BDT)": 604.8,
+  "Discount %": 0,
+  "Net (BDT)": 522547.2,
+  "VAT (BDT)": 78382.08
+ },
+ {
+  "SO ID": "SO-001189",
+  "Line": 6454,
+  "SKU": "SKU-0002",
+  "Qty (units)": 288,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 0,
+  "Net (BDT)": 14515.2,
+  "VAT (BDT)": 2177.28
+ },
+ {
+  "SO ID": "SO-001189",
+  "Line": 6455,
+  "SKU": "SKU-0013",
+  "Qty (units)": 4320,
+  "Unit price (BDT)": 8.4,
+  "Discount %": 2,
+  "Net (BDT)": 35562.24,
+  "VAT (BDT)": 5334.34
+ },
+ {
+  "SO ID": "SO-001189",
+  "Line": 6456,
+  "SKU": "SKU-0004",
+  "Qty (units)": 504,
+  "Unit price (BDT)": 21,
+  "Discount %": 5,
+  "Net (BDT)": 10054.8,
+  "VAT (BDT)": 1508.22
+ },
+ {
+  "SO ID": "SO-001189",
+  "Line": 6457,
+  "SKU": "SKU-0036",
+  "Qty (units)": 300,
+  "Unit price (BDT)": 126,
+  "Discount %": 0,
+  "Net (BDT)": 37800,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001189",
+  "Line": 6458,
+  "SKU": "SKU-0044",
+  "Qty (units)": 1104,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 0,
+  "Net (BDT)": 74188.8,
+  "VAT (BDT)": 11128.32
+ },
+ {
+  "SO ID": "SO-001190",
+  "Line": 6459,
+  "SKU": "SKU-0026",
+  "Qty (units)": 360,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 2,
+  "Net (BDT)": 47416.32,
+  "VAT (BDT)": 7112.45
+ },
+ {
+  "SO ID": "SO-001190",
+  "Line": 6460,
+  "SKU": "SKU-0038",
+  "Qty (units)": 480,
+  "Unit price (BDT)": 88.2,
+  "Discount %": 5,
+  "Net (BDT)": 40219.2,
+  "VAT (BDT)": 6032.88
+ },
+ {
+  "SO ID": "SO-001190",
+  "Line": 6461,
+  "SKU": "SKU-0035",
+  "Qty (units)": 780,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 5,
+  "Net (BDT)": 87141.6,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001190",
+  "Line": 6462,
+  "SKU": "SKU-0049",
+  "Qty (units)": 132,
+  "Unit price (BDT)": 789.6,
+  "Discount %": 0,
+  "Net (BDT)": 104227.2,
+  "VAT (BDT)": 15634.08
+ },
+ {
+  "SO ID": "SO-001190",
+  "Line": 6463,
+  "SKU": "SKU-0034",
+  "Qty (units)": 700,
+  "Unit price (BDT)": 35.28,
+  "Discount %": 3,
+  "Net (BDT)": 23955.12,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001190",
+  "Line": 6464,
+  "SKU": "SKU-0043",
+  "Qty (units)": 1056,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 0,
+  "Net (BDT)": 70963.2,
+  "VAT (BDT)": 10644.48
+ },
+ {
+  "SO ID": "SO-001190",
+  "Line": 6465,
+  "SKU": "SKU-0036",
+  "Qty (units)": 400,
+  "Unit price (BDT)": 126,
+  "Discount %": 0,
+  "Net (BDT)": 50400,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001191",
+  "Line": 6466,
+  "SKU": "SKU-0023",
+  "Qty (units)": 24,
+  "Unit price (BDT)": 159.6,
+  "Discount %": 0,
+  "Net (BDT)": 3830.4,
+  "VAT (BDT)": 574.56
+ },
+ {
+  "SO ID": "SO-001191",
+  "Line": 6467,
+  "SKU": "SKU-0043",
+  "Qty (units)": 624,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 2,
+  "Net (BDT)": 41094.14,
+  "VAT (BDT)": 6164.12
+ },
+ {
+  "SO ID": "SO-001191",
+  "Line": 6468,
+  "SKU": "SKU-0029",
+  "Qty (units)": 800,
+  "Unit price (BDT)": 54.6,
+  "Discount %": 5,
+  "Net (BDT)": 41496,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001191",
+  "Line": 6469,
+  "SKU": "SKU-0020",
+  "Qty (units)": 60,
+  "Unit price (BDT)": 25.2,
+  "Discount %": 0,
+  "Net (BDT)": 1512,
+  "VAT (BDT)": 226.8
+ },
+ {
+  "SO ID": "SO-001192",
+  "Line": 6470,
+  "SKU": "SKU-0003",
+  "Qty (units)": 288,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 2,
+  "Net (BDT)": 13039.49,
+  "VAT (BDT)": 1955.92
+ },
+ {
+  "SO ID": "SO-001192",
+  "Line": 6471,
+  "SKU": "SKU-0050",
+  "Qty (units)": 216,
+  "Unit price (BDT)": 604.8,
+  "Discount %": 0,
+  "Net (BDT)": 130636.8,
+  "VAT (BDT)": 19595.52
+ },
+ {
+  "SO ID": "SO-001192",
+  "Line": 6472,
+  "SKU": "SKU-0044",
+  "Qty (units)": 1056,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 2,
+  "Net (BDT)": 69543.94,
+  "VAT (BDT)": 10431.59
+ },
+ {
+  "SO ID": "SO-001192",
+  "Line": 6473,
+  "SKU": "SKU-0046",
+  "Qty (units)": 600,
+  "Unit price (BDT)": 226.8,
+  "Discount %": 0,
+  "Net (BDT)": 136080,
+  "VAT (BDT)": 20412
+ },
+ {
+  "SO ID": "SO-001192",
+  "Line": 6474,
+  "SKU": "SKU-0016",
+  "Qty (units)": 792,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 16632,
+  "VAT (BDT)": 2494.8
+ },
+ {
+  "SO ID": "SO-001192",
+  "Line": 6475,
+  "SKU": "SKU-0031",
+  "Qty (units)": 80,
+  "Unit price (BDT)": 63,
+  "Discount %": 0,
+  "Net (BDT)": 5040,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001192",
+  "Line": 6476,
+  "SKU": "SKU-0034",
+  "Qty (units)": 275,
+  "Unit price (BDT)": 35.28,
+  "Discount %": 0,
+  "Net (BDT)": 9702,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001192",
+  "Line": 6477,
+  "SKU": "SKU-0008",
+  "Qty (units)": 864,
+  "Unit price (BDT)": 37.8,
+  "Discount %": 2,
+  "Net (BDT)": 32006.02,
+  "VAT (BDT)": 4800.9
+ },
+ {
+  "SO ID": "SO-001193",
+  "Line": 6478,
+  "SKU": "SKU-0006",
+  "Qty (units)": 360,
+  "Unit price (BDT)": 75.6,
+  "Discount %": 3,
+  "Net (BDT)": 26399.52,
+  "VAT (BDT)": 3959.93
+ },
+ {
+  "SO ID": "SO-001193",
+  "Line": 6479,
+  "SKU": "SKU-0046",
+  "Qty (units)": 720,
+  "Unit price (BDT)": 226.8,
+  "Discount %": 0,
+  "Net (BDT)": 163296,
+  "VAT (BDT)": 24494.4
+ },
+ {
+  "SO ID": "SO-001193",
+  "Line": 6480,
+  "SKU": "SKU-0010",
+  "Qty (units)": 216,
+  "Unit price (BDT)": 138.6,
+  "Discount %": 5,
+  "Net (BDT)": 28440.72,
+  "VAT (BDT)": 4266.11
+ },
+ {
+  "SO ID": "SO-001193",
+  "Line": 6481,
+  "SKU": "SKU-0016",
+  "Qty (units)": 288,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 6048,
+  "VAT (BDT)": 907.2
+ },
+ {
+  "SO ID": "SO-001193",
+  "Line": 6482,
+  "SKU": "SKU-0042",
+  "Qty (units)": 720,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 3,
+  "Net (BDT)": 35199.36,
+  "VAT (BDT)": 5279.9
+ },
+ {
+  "SO ID": "SO-001194",
+  "Line": 6483,
+  "SKU": "SKU-0002",
+  "Qty (units)": 552,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 0,
+  "Net (BDT)": 27820.8,
+  "VAT (BDT)": 4173.12
+ },
+ {
+  "SO ID": "SO-001194",
+  "Line": 6484,
+  "SKU": "SKU-0036",
+  "Qty (units)": 360,
+  "Unit price (BDT)": 126,
+  "Discount %": 0,
+  "Net (BDT)": 45360,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001194",
+  "Line": 6485,
+  "SKU": "SKU-0013",
+  "Qty (units)": 1152,
+  "Unit price (BDT)": 8.4,
+  "Discount %": 3,
+  "Net (BDT)": 9386.5,
+  "VAT (BDT)": 1407.98
+ },
+ {
+  "SO ID": "SO-001194",
+  "Line": 6486,
+  "SKU": "SKU-0015",
+  "Qty (units)": 1008,
+  "Unit price (BDT)": 29.4,
+  "Discount %": 3,
+  "Net (BDT)": 28746.14,
+  "VAT (BDT)": 4311.92
+ },
+ {
+  "SO ID": "SO-001194",
+  "Line": 6487,
+  "SKU": "SKU-0029",
+  "Qty (units)": 400,
+  "Unit price (BDT)": 54.6,
+  "Discount %": 0,
+  "Net (BDT)": 21840,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001194",
+  "Line": 6488,
+  "SKU": "SKU-0008",
+  "Qty (units)": 1536,
+  "Unit price (BDT)": 37.8,
+  "Discount %": 0,
+  "Net (BDT)": 58060.8,
+  "VAT (BDT)": 8709.12
+ },
+ {
+  "SO ID": "SO-001194",
+  "Line": 6489,
+  "SKU": "SKU-0024",
+  "Qty (units)": 60,
+  "Unit price (BDT)": 315,
+  "Discount %": 0,
+  "Net (BDT)": 18900,
+  "VAT (BDT)": 2835
+ },
+ {
+  "SO ID": "SO-001194",
+  "Line": 6490,
+  "SKU": "SKU-0004",
+  "Qty (units)": 288,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 6048,
+  "VAT (BDT)": 907.2
+ },
+ {
+  "SO ID": "SO-001195",
+  "Line": 6491,
+  "SKU": "SKU-0049",
+  "Qty (units)": 288,
+  "Unit price (BDT)": 789.6,
+  "Discount %": 2,
+  "Net (BDT)": 222856.7,
+  "VAT (BDT)": 33428.51
+ },
+ {
+  "SO ID": "SO-001195",
+  "Line": 6492,
+  "SKU": "SKU-0037",
+  "Qty (units)": 160,
+  "Unit price (BDT)": 79.8,
+  "Discount %": 2,
+  "Net (BDT)": 12512.64,
+  "VAT (BDT)": 1876.9
+ },
+ {
+  "SO ID": "SO-001195",
+  "Line": 6493,
+  "SKU": "SKU-0019",
+  "Qty (units)": 72,
+  "Unit price (BDT)": 12.6,
+  "Discount %": 3,
+  "Net (BDT)": 879.98,
+  "VAT (BDT)": 132
+ },
+ {
+  "SO ID": "SO-001195",
+  "Line": 6494,
+  "SKU": "SKU-0023",
+  "Qty (units)": 144,
+  "Unit price (BDT)": 159.6,
+  "Discount %": 0,
+  "Net (BDT)": 22982.4,
+  "VAT (BDT)": 3447.36
+ },
+ {
+  "SO ID": "SO-001195",
+  "Line": 6495,
+  "SKU": "SKU-0001",
+  "Qty (units)": 2496,
+  "Unit price (BDT)": 12.6,
+  "Discount %": 2,
+  "Net (BDT)": 30820.61,
+  "VAT (BDT)": 4623.09
+ },
+ {
+  "SO ID": "SO-001195",
+  "Line": 6496,
+  "SKU": "SKU-0038",
+  "Qty (units)": 1400,
+  "Unit price (BDT)": 88.2,
+  "Discount %": 0,
+  "Net (BDT)": 123480,
+  "VAT (BDT)": 18522
+ },
+ {
+  "SO ID": "SO-001195",
+  "Line": 6497,
+  "SKU": "SKU-0029",
+  "Qty (units)": 460,
+  "Unit price (BDT)": 54.6,
+  "Discount %": 5,
+  "Net (BDT)": 23860.2,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001195",
+  "Line": 6498,
+  "SKU": "SKU-0012",
+  "Qty (units)": 384,
+  "Unit price (BDT)": 71.4,
+  "Discount %": 0,
+  "Net (BDT)": 27417.6,
+  "VAT (BDT)": 4112.64
+ },
+ {
+  "SO ID": "SO-001195",
+  "Line": 6499,
+  "SKU": "SKU-0050",
+  "Qty (units)": 336,
+  "Unit price (BDT)": 604.8,
+  "Discount %": 0,
+  "Net (BDT)": 203212.8,
+  "VAT (BDT)": 30481.92
+ },
+ {
+  "SO ID": "SO-001196",
+  "Line": 6500,
+  "SKU": "SKU-0035",
+  "Qty (units)": 300,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 0,
+  "Net (BDT)": 35280,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001196",
+  "Line": 6501,
+  "SKU": "SKU-0050",
+  "Qty (units)": 672,
+  "Unit price (BDT)": 604.8,
+  "Discount %": 2,
+  "Net (BDT)": 398297.09,
+  "VAT (BDT)": 59744.56
+ },
+ {
+  "SO ID": "SO-001196",
+  "Line": 6502,
+  "SKU": "SKU-0027",
+  "Qty (units)": 180,
+  "Unit price (BDT)": 260.4,
+  "Discount %": 0,
+  "Net (BDT)": 46872,
+  "VAT (BDT)": 7030.8
+ },
+ {
+  "SO ID": "SO-001197",
+  "Line": 6503,
+  "SKU": "SKU-0026",
+  "Qty (units)": 132,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 5,
+  "Net (BDT)": 16853.76,
+  "VAT (BDT)": 2528.06
+ },
+ {
+  "SO ID": "SO-001197",
+  "Line": 6504,
+  "SKU": "SKU-0008",
+  "Qty (units)": 240,
+  "Unit price (BDT)": 37.8,
+  "Discount %": 3,
+  "Net (BDT)": 8799.84,
+  "VAT (BDT)": 1319.98
+ },
+ {
+  "SO ID": "SO-001197",
+  "Line": 6505,
+  "SKU": "SKU-0040",
+  "Qty (units)": 192,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 0,
+  "Net (BDT)": 17740.8,
+  "VAT (BDT)": 2661.12
+ },
+ {
+  "SO ID": "SO-001197",
+  "Line": 6506,
+  "SKU": "SKU-0045",
+  "Qty (units)": 1160,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 0,
+  "Net (BDT)": 136416,
+  "VAT (BDT)": 20462.4
+ },
+ {
+  "SO ID": "SO-001197",
+  "Line": 6507,
+  "SKU": "SKU-0021",
+  "Qty (units)": 76,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 0,
+  "Net (BDT)": 5107.2,
+  "VAT (BDT)": 766.08
+ },
+ {
+  "SO ID": "SO-001197",
+  "Line": 6508,
+  "SKU": "SKU-0013",
+  "Qty (units)": 2592,
+  "Unit price (BDT)": 8.4,
+  "Discount %": 3,
+  "Net (BDT)": 21119.62,
+  "VAT (BDT)": 3167.94
+ },
+ {
+  "SO ID": "SO-001197",
+  "Line": 6509,
+  "SKU": "SKU-0038",
+  "Qty (units)": 280,
+  "Unit price (BDT)": 88.2,
+  "Discount %": 2,
+  "Net (BDT)": 24202.08,
+  "VAT (BDT)": 3630.31
+ },
+ {
+  "SO ID": "SO-001197",
+  "Line": 6510,
+  "SKU": "SKU-0039",
+  "Qty (units)": 880,
+  "Unit price (BDT)": 63,
+  "Discount %": 0,
+  "Net (BDT)": 55440,
+  "VAT (BDT)": 8316
+ },
+ {
+  "SO ID": "SO-001197",
+  "Line": 6511,
+  "SKU": "SKU-0022",
+  "Qty (units)": 288,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 6048,
+  "VAT (BDT)": 907.2
+ },
+ {
+  "SO ID": "SO-001198",
+  "Line": 6512,
+  "SKU": "SKU-0044",
+  "Qty (units)": 96,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 0,
+  "Net (BDT)": 6451.2,
+  "VAT (BDT)": 967.68
+ },
+ {
+  "SO ID": "SO-001198",
+  "Line": 6513,
+  "SKU": "SKU-0037",
+  "Qty (units)": 320,
+  "Unit price (BDT)": 79.8,
+  "Discount %": 5,
+  "Net (BDT)": 24259.2,
+  "VAT (BDT)": 3638.88
+ },
+ {
+  "SO ID": "SO-001198",
+  "Line": 6514,
+  "SKU": "SKU-0020",
+  "Qty (units)": 264,
+  "Unit price (BDT)": 25.2,
+  "Discount %": 5,
+  "Net (BDT)": 6320.16,
+  "VAT (BDT)": 948.02
+ },
+ {
+  "SO ID": "SO-001198",
+  "Line": 6515,
+  "SKU": "SKU-0001",
+  "Qty (units)": 384,
+  "Unit price (BDT)": 12.6,
+  "Discount %": 5,
+  "Net (BDT)": 4596.48,
+  "VAT (BDT)": 689.47
+ },
+ {
+  "SO ID": "SO-001198",
+  "Line": 6516,
+  "SKU": "SKU-0018",
+  "Qty (units)": 216,
+  "Unit price (BDT)": 21,
+  "Discount %": 3,
+  "Net (BDT)": 4399.92,
+  "VAT (BDT)": 659.99
+ },
+ {
+  "SO ID": "SO-001199",
+  "Line": 6517,
+  "SKU": "SKU-0022",
+  "Qty (units)": 456,
+  "Unit price (BDT)": 21,
+  "Discount %": 5,
+  "Net (BDT)": 9097.2,
+  "VAT (BDT)": 1364.58
+ },
+ {
+  "SO ID": "SO-001199",
+  "Line": 6518,
+  "SKU": "SKU-0049",
+  "Qty (units)": 420,
+  "Unit price (BDT)": 789.6,
+  "Discount %": 2,
+  "Net (BDT)": 324999.36,
+  "VAT (BDT)": 48749.9
+ },
+ {
+  "SO ID": "SO-001199",
+  "Line": 6519,
+  "SKU": "SKU-0024",
+  "Qty (units)": 108,
+  "Unit price (BDT)": 315,
+  "Discount %": 5,
+  "Net (BDT)": 32319,
+  "VAT (BDT)": 4847.85
+ },
+ {
+  "SO ID": "SO-001199",
+  "Line": 6520,
+  "SKU": "SKU-0047",
+  "Qty (units)": 288,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 5,
+  "Net (BDT)": 36771.84,
+  "VAT (BDT)": 5515.78
+ },
+ {
+  "SO ID": "SO-001199",
+  "Line": 6521,
+  "SKU": "SKU-0015",
+  "Qty (units)": 528,
+  "Unit price (BDT)": 29.4,
+  "Discount %": 0,
+  "Net (BDT)": 15523.2,
+  "VAT (BDT)": 2328.48
+ },
+ {
+  "SO ID": "SO-001199",
+  "Line": 6522,
+  "SKU": "SKU-0052",
+  "Qty (units)": 264,
+  "Unit price (BDT)": 100.8,
+  "Discount %": 5,
+  "Net (BDT)": 25280.64,
+  "VAT (BDT)": 3792.1
+ },
+ {
+  "SO ID": "SO-001199",
+  "Line": 6523,
+  "SKU": "SKU-0025",
+  "Qty (units)": 64,
+  "Unit price (BDT)": 772.8,
+  "Discount %": 0,
+  "Net (BDT)": 49459.2,
+  "VAT (BDT)": 7418.88
+ },
+ {
+  "SO ID": "SO-001199",
+  "Line": 6524,
+  "SKU": "SKU-0021",
+  "Qty (units)": 104,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 0,
+  "Net (BDT)": 6988.8,
+  "VAT (BDT)": 1048.32
+ },
+ {
+  "SO ID": "SO-001199",
+  "Line": 6525,
+  "SKU": "SKU-0014",
+  "Qty (units)": 240,
+  "Unit price (BDT)": 33.6,
+  "Discount %": 0,
+  "Net (BDT)": 8064,
+  "VAT (BDT)": 1209.6
+ },
+ {
+  "SO ID": "SO-001200",
+  "Line": 6526,
+  "SKU": "SKU-0048",
+  "Qty (units)": 888,
+  "Unit price (BDT)": 403.2,
+  "Discount %": 3,
+  "Net (BDT)": 347300.35,
+  "VAT (BDT)": 52095.05
+ },
+ {
+  "SO ID": "SO-001200",
+  "Line": 6527,
+  "SKU": "SKU-0010",
+  "Qty (units)": 144,
+  "Unit price (BDT)": 138.6,
+  "Discount %": 0,
+  "Net (BDT)": 19958.4,
+  "VAT (BDT)": 2993.76
+ },
+ {
+  "SO ID": "SO-001200",
+  "Line": 6528,
+  "SKU": "SKU-0007",
+  "Qty (units)": 120,
+  "Unit price (BDT)": 100.8,
+  "Discount %": 0,
+  "Net (BDT)": 12096,
+  "VAT (BDT)": 1814.4
+ },
+ {
+  "SO ID": "SO-001200",
+  "Line": 6529,
+  "SKU": "SKU-0017",
+  "Qty (units)": 612,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 3,
+  "Net (BDT)": 54852.34,
+  "VAT (BDT)": 8227.85
+ },
+ {
+  "SO ID": "SO-001201",
+  "Line": 6530,
+  "SKU": "SKU-0033",
+  "Qty (units)": 80,
+  "Unit price (BDT)": 113.4,
+  "Discount %": 0,
+  "Net (BDT)": 9072,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001201",
+  "Line": 6531,
+  "SKU": "SKU-0038",
+  "Qty (units)": 760,
+  "Unit price (BDT)": 88.2,
+  "Discount %": 5,
+  "Net (BDT)": 63680.4,
+  "VAT (BDT)": 9552.06
+ },
+ {
+  "SO ID": "SO-001201",
+  "Line": 6532,
+  "SKU": "SKU-0029",
+  "Qty (units)": 200,
+  "Unit price (BDT)": 54.6,
+  "Discount %": 0,
+  "Net (BDT)": 10920,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001201",
+  "Line": 6533,
+  "SKU": "SKU-0018",
+  "Qty (units)": 144,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 3024,
+  "VAT (BDT)": 453.6
+ },
+ {
+  "SO ID": "SO-001202",
+  "Line": 6534,
+  "SKU": "SKU-0021",
+  "Qty (units)": 120,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 0,
+  "Net (BDT)": 8064,
+  "VAT (BDT)": 1209.6
+ },
+ {
+  "SO ID": "SO-001202",
+  "Line": 6535,
+  "SKU": "SKU-0005",
+  "Qty (units)": 504,
+  "Unit price (BDT)": 21,
+  "Discount %": 5,
+  "Net (BDT)": 10054.8,
+  "VAT (BDT)": 1508.22
+ },
+ {
+  "SO ID": "SO-001202",
+  "Line": 6536,
+  "SKU": "SKU-0044",
+  "Qty (units)": 1296,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 0,
+  "Net (BDT)": 87091.2,
+  "VAT (BDT)": 13063.68
+ },
+ {
+  "SO ID": "SO-001202",
+  "Line": 6537,
+  "SKU": "SKU-0043",
+  "Qty (units)": 1344,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 3,
+  "Net (BDT)": 87607.3,
+  "VAT (BDT)": 13141.1
+ },
+ {
+  "SO ID": "SO-001202",
+  "Line": 6538,
+  "SKU": "SKU-0001",
+  "Qty (units)": 2112,
+  "Unit price (BDT)": 12.6,
+  "Discount %": 5,
+  "Net (BDT)": 25280.64,
+  "VAT (BDT)": 3792.1
+ },
+ {
+  "SO ID": "SO-001202",
+  "Line": 6539,
+  "SKU": "SKU-0007",
+  "Qty (units)": 456,
+  "Unit price (BDT)": 100.8,
+  "Discount %": 0,
+  "Net (BDT)": 45964.8,
+  "VAT (BDT)": 6894.72
+ },
+ {
+  "SO ID": "SO-001202",
+  "Line": 6540,
+  "SKU": "SKU-0022",
+  "Qty (units)": 768,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 16128,
+  "VAT (BDT)": 2419.2
+ },
+ {
+  "SO ID": "SO-001203",
+  "Line": 6541,
+  "SKU": "SKU-0048",
+  "Qty (units)": 792,
+  "Unit price (BDT)": 403.2,
+  "Discount %": 0,
+  "Net (BDT)": 319334.4,
+  "VAT (BDT)": 47900.16
+ },
+ {
+  "SO ID": "SO-001203",
+  "Line": 6542,
+  "SKU": "SKU-0040",
+  "Qty (units)": 1152,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 0,
+  "Net (BDT)": 106444.8,
+  "VAT (BDT)": 15966.72
+ },
+ {
+  "SO ID": "SO-001203",
+  "Line": 6543,
+  "SKU": "SKU-0042",
+  "Qty (units)": 600,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 5,
+  "Net (BDT)": 28728,
+  "VAT (BDT)": 4309.2
+ },
+ {
+  "SO ID": "SO-001203",
+  "Line": 6544,
+  "SKU": "SKU-0016",
+  "Qty (units)": 384,
+  "Unit price (BDT)": 21,
+  "Discount %": 5,
+  "Net (BDT)": 7660.8,
+  "VAT (BDT)": 1149.12
+ },
+ {
+  "SO ID": "SO-001203",
+  "Line": 6545,
+  "SKU": "SKU-0014",
+  "Qty (units)": 1584,
+  "Unit price (BDT)": 33.6,
+  "Discount %": 0,
+  "Net (BDT)": 53222.4,
+  "VAT (BDT)": 7983.36
+ },
+ {
+  "SO ID": "SO-001204",
+  "Line": 6546,
+  "SKU": "SKU-0035",
+  "Qty (units)": 55,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 0,
+  "Net (BDT)": 6468,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001204",
+  "Line": 6547,
+  "SKU": "SKU-0022",
+  "Qty (units)": 29,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 609,
+  "VAT (BDT)": 91.35
+ },
+ {
+  "SO ID": "SO-001204",
+  "Line": 6548,
+  "SKU": "SKU-0042",
+  "Qty (units)": 58,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 0,
+  "Net (BDT)": 2923.2,
+  "VAT (BDT)": 438.48
+ },
+ {
+  "SO ID": "SO-001205",
+  "Line": 6549,
+  "SKU": "SKU-0045",
+  "Qty (units)": 80,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 0,
+  "Net (BDT)": 9408,
+  "VAT (BDT)": 1411.2
+ },
+ {
+  "SO ID": "SO-001205",
+  "Line": 6550,
+  "SKU": "SKU-0016",
+  "Qty (units)": 72,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 1512,
+  "VAT (BDT)": 226.8
+ },
+ {
+  "SO ID": "SO-001205",
+  "Line": 6551,
+  "SKU": "SKU-0047",
+  "Qty (units)": 144,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 0,
+  "Net (BDT)": 19353.6,
+  "VAT (BDT)": 2903.04
+ },
+ {
+  "SO ID": "SO-001206",
+  "Line": 6552,
+  "SKU": "SKU-0002",
+  "Qty (units)": 120,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 0,
+  "Net (BDT)": 6048,
+  "VAT (BDT)": 907.2
+ },
+ {
+  "SO ID": "SO-001206",
+  "Line": 6553,
+  "SKU": "SKU-0018",
+  "Qty (units)": 288,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 6048,
+  "VAT (BDT)": 907.2
+ },
+ {
+  "SO ID": "SO-001206",
+  "Line": 6554,
+  "SKU": "SKU-0027",
+  "Qty (units)": 276,
+  "Unit price (BDT)": 260.4,
+  "Discount %": 0,
+  "Net (BDT)": 71870.4,
+  "VAT (BDT)": 10780.56
+ },
+ {
+  "SO ID": "SO-001206",
+  "Line": 6555,
+  "SKU": "SKU-0046",
+  "Qty (units)": 260,
+  "Unit price (BDT)": 226.8,
+  "Discount %": 3,
+  "Net (BDT)": 57198.96,
+  "VAT (BDT)": 8579.84
+ },
+ {
+  "SO ID": "SO-001206",
+  "Line": 6556,
+  "SKU": "SKU-0007",
+  "Qty (units)": 312,
+  "Unit price (BDT)": 100.8,
+  "Discount %": 5,
+  "Net (BDT)": 29877.12,
+  "VAT (BDT)": 4481.57
+ },
+ {
+  "SO ID": "SO-001206",
+  "Line": 6557,
+  "SKU": "SKU-0023",
+  "Qty (units)": 240,
+  "Unit price (BDT)": 159.6,
+  "Discount %": 0,
+  "Net (BDT)": 38304,
+  "VAT (BDT)": 5745.6
+ },
+ {
+  "SO ID": "SO-001207",
+  "Line": 6558,
+  "SKU": "SKU-0005",
+  "Qty (units)": 1080,
+  "Unit price (BDT)": 21,
+  "Discount %": 2,
+  "Net (BDT)": 22226.4,
+  "VAT (BDT)": 3333.96
+ },
+ {
+  "SO ID": "SO-001207",
+  "Line": 6559,
+  "SKU": "SKU-0042",
+  "Qty (units)": 1020,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 0,
+  "Net (BDT)": 51408,
+  "VAT (BDT)": 7711.2
+ },
+ {
+  "SO ID": "SO-001207",
+  "Line": 6560,
+  "SKU": "SKU-0035",
+  "Qty (units)": 200,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 0,
+  "Net (BDT)": 23520,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001208",
+  "Line": 6561,
+  "SKU": "SKU-0035",
+  "Qty (units)": 100,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 3,
+  "Net (BDT)": 11407.2,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001208",
+  "Line": 6562,
+  "SKU": "SKU-0021",
+  "Qty (units)": 36,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 0,
+  "Net (BDT)": 2419.2,
+  "VAT (BDT)": 362.88
+ },
+ {
+  "SO ID": "SO-001208",
+  "Line": 6563,
+  "SKU": "SKU-0003",
+  "Qty (units)": 528,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 3,
+  "Net (BDT)": 23661.79,
+  "VAT (BDT)": 3549.27
+ },
+ {
+  "SO ID": "SO-001208",
+  "Line": 6564,
+  "SKU": "SKU-0011",
+  "Qty (units)": 3072,
+  "Unit price (BDT)": 33.6,
+  "Discount %": 0,
+  "Net (BDT)": 103219.2,
+  "VAT (BDT)": 15482.88
+ },
+ {
+  "SO ID": "SO-001208",
+  "Line": 6565,
+  "SKU": "SKU-0002",
+  "Qty (units)": 624,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 3,
+  "Net (BDT)": 30506.11,
+  "VAT (BDT)": 4575.92
+ },
+ {
+  "SO ID": "SO-001208",
+  "Line": 6566,
+  "SKU": "SKU-0013",
+  "Qty (units)": 4032,
+  "Unit price (BDT)": 8.4,
+  "Discount %": 3,
+  "Net (BDT)": 32852.74,
+  "VAT (BDT)": 4927.91
+ },
+ {
+  "SO ID": "SO-001208",
+  "Line": 6567,
+  "SKU": "SKU-0009",
+  "Qty (units)": 2304,
+  "Unit price (BDT)": 16.8,
+  "Discount %": 5,
+  "Net (BDT)": 36771.84,
+  "VAT (BDT)": 5515.78
+ },
+ {
+  "SO ID": "SO-001208",
+  "Line": 6568,
+  "SKU": "SKU-0031",
+  "Qty (units)": 300,
+  "Unit price (BDT)": 63,
+  "Discount %": 0,
+  "Net (BDT)": 18900,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001209",
+  "Line": 6569,
+  "SKU": "SKU-0024",
+  "Qty (units)": 114,
+  "Unit price (BDT)": 315,
+  "Discount %": 5,
+  "Net (BDT)": 34114.5,
+  "VAT (BDT)": 5117.18
+ },
+ {
+  "SO ID": "SO-001209",
+  "Line": 6570,
+  "SKU": "SKU-0019",
+  "Qty (units)": 552,
+  "Unit price (BDT)": 12.6,
+  "Discount %": 5,
+  "Net (BDT)": 6607.44,
+  "VAT (BDT)": 991.12
+ },
+ {
+  "SO ID": "SO-001209",
+  "Line": 6571,
+  "SKU": "SKU-0032",
+  "Qty (units)": 72,
+  "Unit price (BDT)": 37.8,
+  "Discount %": 2,
+  "Net (BDT)": 2667.17,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001209",
+  "Line": 6572,
+  "SKU": "SKU-0010",
+  "Qty (units)": 204,
+  "Unit price (BDT)": 138.6,
+  "Discount %": 5,
+  "Net (BDT)": 26860.68,
+  "VAT (BDT)": 4029.1
+ },
+ {
+  "SO ID": "SO-001209",
+  "Line": 6573,
+  "SKU": "SKU-0023",
+  "Qty (units)": 132,
+  "Unit price (BDT)": 159.6,
+  "Discount %": 0,
+  "Net (BDT)": 21067.2,
+  "VAT (BDT)": 3160.08
+ },
+ {
+  "SO ID": "SO-001209",
+  "Line": 6574,
+  "SKU": "SKU-0011",
+  "Qty (units)": 1632,
+  "Unit price (BDT)": 33.6,
+  "Discount %": 0,
+  "Net (BDT)": 54835.2,
+  "VAT (BDT)": 8225.28
+ },
+ {
+  "SO ID": "SO-001209",
+  "Line": 6575,
+  "SKU": "SKU-0021",
+  "Qty (units)": 100,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 2,
+  "Net (BDT)": 6585.6,
+  "VAT (BDT)": 987.84
+ },
+ {
+  "SO ID": "SO-001209",
+  "Line": 6576,
+  "SKU": "SKU-0043",
+  "Qty (units)": 1776,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 3,
+  "Net (BDT)": 115766.78,
+  "VAT (BDT)": 17365.02
+ },
+ {
+  "SO ID": "SO-001210",
+  "Line": 6577,
+  "SKU": "SKU-0016",
+  "Qty (units)": 624,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 13104,
+  "VAT (BDT)": 1965.6
+ },
+ {
+  "SO ID": "SO-001210",
+  "Line": 6578,
+  "SKU": "SKU-0024",
+  "Qty (units)": 54,
+  "Unit price (BDT)": 315,
+  "Discount %": 2,
+  "Net (BDT)": 16669.8,
+  "VAT (BDT)": 2500.47
+ },
+ {
+  "SO ID": "SO-001210",
+  "Line": 6579,
+  "SKU": "SKU-0006",
+  "Qty (units)": 384,
+  "Unit price (BDT)": 75.6,
+  "Discount %": 5,
+  "Net (BDT)": 27578.88,
+  "VAT (BDT)": 4136.83
+ },
+ {
+  "SO ID": "SO-001210",
+  "Line": 6580,
+  "SKU": "SKU-0025",
+  "Qty (units)": 128,
+  "Unit price (BDT)": 772.8,
+  "Discount %": 3,
+  "Net (BDT)": 95950.85,
+  "VAT (BDT)": 14392.63
+ },
+ {
+  "SO ID": "SO-001210",
+  "Line": 6581,
+  "SKU": "SKU-0031",
+  "Qty (units)": 480,
+  "Unit price (BDT)": 63,
+  "Discount %": 3,
+  "Net (BDT)": 29332.8,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001210",
+  "Line": 6582,
+  "SKU": "SKU-0048",
+  "Qty (units)": 144,
+  "Unit price (BDT)": 403.2,
+  "Discount %": 0,
+  "Net (BDT)": 58060.8,
+  "VAT (BDT)": 8709.12
+ },
+ {
+  "SO ID": "SO-001210",
+  "Line": 6583,
+  "SKU": "SKU-0030",
+  "Qty (units)": 90,
+  "Unit price (BDT)": 107.52,
+  "Discount %": 0,
+  "Net (BDT)": 9676.8,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001210",
+  "Line": 6584,
+  "SKU": "SKU-0039",
+  "Qty (units)": 560,
+  "Unit price (BDT)": 63,
+  "Discount %": 5,
+  "Net (BDT)": 33516,
+  "VAT (BDT)": 5027.4
+ },
+ {
+  "SO ID": "SO-001210",
+  "Line": 6585,
+  "SKU": "SKU-0027",
+  "Qty (units)": 120,
+  "Unit price (BDT)": 260.4,
+  "Discount %": 2,
+  "Net (BDT)": 30623.04,
+  "VAT (BDT)": 4593.46
+ },
+ {
+  "SO ID": "SO-001211",
+  "Line": 6586,
+  "SKU": "SKU-0047",
+  "Qty (units)": 168,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 5,
+  "Net (BDT)": 21450.24,
+  "VAT (BDT)": 3217.54
+ },
+ {
+  "SO ID": "SO-001211",
+  "Line": 6587,
+  "SKU": "SKU-0043",
+  "Qty (units)": 1440,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 5,
+  "Net (BDT)": 91929.6,
+  "VAT (BDT)": 13789.44
+ },
+ {
+  "SO ID": "SO-001211",
+  "Line": 6588,
+  "SKU": "SKU-0032",
+  "Qty (units)": 408,
+  "Unit price (BDT)": 37.8,
+  "Discount %": 3,
+  "Net (BDT)": 14959.73,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001211",
+  "Line": 6589,
+  "SKU": "SKU-0030",
+  "Qty (units)": 130,
+  "Unit price (BDT)": 107.52,
+  "Discount %": 5,
+  "Net (BDT)": 13278.72,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001211",
+  "Line": 6590,
+  "SKU": "SKU-0038",
+  "Qty (units)": 240,
+  "Unit price (BDT)": 88.2,
+  "Discount %": 3,
+  "Net (BDT)": 20532.96,
+  "VAT (BDT)": 3079.94
+ },
+ {
+  "SO ID": "SO-001211",
+  "Line": 6591,
+  "SKU": "SKU-0046",
+  "Qty (units)": 320,
+  "Unit price (BDT)": 226.8,
+  "Discount %": 0,
+  "Net (BDT)": 72576,
+  "VAT (BDT)": 10886.4
+ },
+ {
+  "SO ID": "SO-001211",
+  "Line": 6592,
+  "SKU": "SKU-0035",
+  "Qty (units)": 440,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 0,
+  "Net (BDT)": 51744,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001212",
+  "Line": 6593,
+  "SKU": "SKU-0040",
+  "Qty (units)": 48,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 0,
+  "Net (BDT)": 4435.2,
+  "VAT (BDT)": 665.28
+ },
+ {
+  "SO ID": "SO-001212",
+  "Line": 6594,
+  "SKU": "SKU-0011",
+  "Qty (units)": 336,
+  "Unit price (BDT)": 33.6,
+  "Discount %": 0,
+  "Net (BDT)": 11289.6,
+  "VAT (BDT)": 1693.44
+ },
+ {
+  "SO ID": "SO-001212",
+  "Line": 6595,
+  "SKU": "SKU-0047",
+  "Qty (units)": 48,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 0,
+  "Net (BDT)": 6451.2,
+  "VAT (BDT)": 967.68
+ },
+ {
+  "SO ID": "SO-001212",
+  "Line": 6596,
+  "SKU": "SKU-0003",
+  "Qty (units)": 96,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 0,
+  "Net (BDT)": 4435.2,
+  "VAT (BDT)": 665.28
+ },
+ {
+  "SO ID": "SO-001213",
+  "Line": 6597,
+  "SKU": "SKU-0022",
+  "Qty (units)": 552,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 11592,
+  "VAT (BDT)": 1738.8
+ },
+ {
+  "SO ID": "SO-001213",
+  "Line": 6598,
+  "SKU": "SKU-0049",
+  "Qty (units)": 444,
+  "Unit price (BDT)": 789.6,
+  "Discount %": 0,
+  "Net (BDT)": 350582.4,
+  "VAT (BDT)": 52587.36
+ },
+ {
+  "SO ID": "SO-001213",
+  "Line": 6599,
+  "SKU": "SKU-0024",
+  "Qty (units)": 114,
+  "Unit price (BDT)": 315,
+  "Discount %": 0,
+  "Net (BDT)": 35910,
+  "VAT (BDT)": 5386.5
+ },
+ {
+  "SO ID": "SO-001213",
+  "Line": 6600,
+  "SKU": "SKU-0047",
+  "Qty (units)": 336,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 0,
+  "Net (BDT)": 45158.4,
+  "VAT (BDT)": 6773.76
+ },
+ {
+  "SO ID": "SO-001213",
+  "Line": 6601,
+  "SKU": "SKU-0015",
+  "Qty (units)": 576,
+  "Unit price (BDT)": 29.4,
+  "Discount %": 0,
+  "Net (BDT)": 16934.4,
+  "VAT (BDT)": 2540.16
+ },
+ {
+  "SO ID": "SO-001213",
+  "Line": 6602,
+  "SKU": "SKU-0052",
+  "Qty (units)": 228,
+  "Unit price (BDT)": 100.8,
+  "Discount %": 5,
+  "Net (BDT)": 21833.28,
+  "VAT (BDT)": 3274.99
+ },
+ {
+  "SO ID": "SO-001213",
+  "Line": 6603,
+  "SKU": "SKU-0002",
+  "Qty (units)": 528,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 2,
+  "Net (BDT)": 26078.98,
+  "VAT (BDT)": 3911.85
+ },
+ {
+  "SO ID": "SO-001213",
+  "Line": 6604,
+  "SKU": "SKU-0021",
+  "Qty (units)": 80,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 3,
+  "Net (BDT)": 5214.72,
+  "VAT (BDT)": 782.21
+ },
+ {
+  "SO ID": "SO-001213",
+  "Line": 6605,
+  "SKU": "SKU-0014",
+  "Qty (units)": 240,
+  "Unit price (BDT)": 33.6,
+  "Discount %": 5,
+  "Net (BDT)": 7660.8,
+  "VAT (BDT)": 1149.12
+ },
+ {
+  "SO ID": "SO-001214",
+  "Line": 6606,
+  "SKU": "SKU-0028",
+  "Qty (units)": 288,
+  "Unit price (BDT)": 184.8,
+  "Discount %": 2,
+  "Net (BDT)": 52157.95,
+  "VAT (BDT)": 7823.69
+ },
+ {
+  "SO ID": "SO-001214",
+  "Line": 6607,
+  "SKU": "SKU-0015",
+  "Qty (units)": 528,
+  "Unit price (BDT)": 29.4,
+  "Discount %": 3,
+  "Net (BDT)": 15057.5,
+  "VAT (BDT)": 2258.63
+ },
+ {
+  "SO ID": "SO-001214",
+  "Line": 6608,
+  "SKU": "SKU-0023",
+  "Qty (units)": 228,
+  "Unit price (BDT)": 159.6,
+  "Discount %": 0,
+  "Net (BDT)": 36388.8,
+  "VAT (BDT)": 5458.32
+ },
+ {
+  "SO ID": "SO-001214",
+  "Line": 6609,
+  "SKU": "SKU-0018",
+  "Qty (units)": 552,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 11592,
+  "VAT (BDT)": 1738.8
+ },
+ {
+  "SO ID": "SO-001214",
+  "Line": 6610,
+  "SKU": "SKU-0022",
+  "Qty (units)": 576,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 12096,
+  "VAT (BDT)": 1814.4
+ },
+ {
+  "SO ID": "SO-001214",
+  "Line": 6611,
+  "SKU": "SKU-0008",
+  "Qty (units)": 336,
+  "Unit price (BDT)": 37.8,
+  "Discount %": 0,
+  "Net (BDT)": 12700.8,
+  "VAT (BDT)": 1905.12
+ },
+ {
+  "SO ID": "SO-001214",
+  "Line": 6612,
+  "SKU": "SKU-0001",
+  "Qty (units)": 2304,
+  "Unit price (BDT)": 12.6,
+  "Discount %": 3,
+  "Net (BDT)": 28159.49,
+  "VAT (BDT)": 4223.92
+ },
+ {
+  "SO ID": "SO-001215",
+  "Line": 6613,
+  "SKU": "SKU-0035",
+  "Qty (units)": 400,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 5,
+  "Net (BDT)": 44688,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001215",
+  "Line": 6614,
+  "SKU": "SKU-0052",
+  "Qty (units)": 168,
+  "Unit price (BDT)": 100.8,
+  "Discount %": 0,
+  "Net (BDT)": 16934.4,
+  "VAT (BDT)": 2540.16
+ },
+ {
+  "SO ID": "SO-001215",
+  "Line": 6615,
+  "SKU": "SKU-0044",
+  "Qty (units)": 144,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 0,
+  "Net (BDT)": 9676.8,
+  "VAT (BDT)": 1451.52
+ },
+ {
+  "SO ID": "SO-001215",
+  "Line": 6616,
+  "SKU": "SKU-0003",
+  "Qty (units)": 48,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 3,
+  "Net (BDT)": 2151.07,
+  "VAT (BDT)": 322.66
+ },
+ {
+  "SO ID": "SO-001215",
+  "Line": 6617,
+  "SKU": "SKU-0007",
+  "Qty (units)": 48,
+  "Unit price (BDT)": 100.8,
+  "Discount %": 3,
+  "Net (BDT)": 4693.25,
+  "VAT (BDT)": 703.99
+ },
+ {
+  "SO ID": "SO-001215",
+  "Line": 6618,
+  "SKU": "SKU-0051",
+  "Qty (units)": 96,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 2,
+  "Net (BDT)": 4346.5,
+  "VAT (BDT)": 651.98
+ },
+ {
+  "SO ID": "SO-001215",
+  "Line": 6619,
+  "SKU": "SKU-0006",
+  "Qty (units)": 792,
+  "Unit price (BDT)": 75.6,
+  "Discount %": 5,
+  "Net (BDT)": 56881.44,
+  "VAT (BDT)": 8532.22
+ },
+ {
+  "SO ID": "SO-001216",
+  "Line": 6620,
+  "SKU": "SKU-0002",
+  "Qty (units)": 696,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 0,
+  "Net (BDT)": 35078.4,
+  "VAT (BDT)": 5261.76
+ },
+ {
+  "SO ID": "SO-001216",
+  "Line": 6621,
+  "SKU": "SKU-0024",
+  "Qty (units)": 102,
+  "Unit price (BDT)": 315,
+  "Discount %": 0,
+  "Net (BDT)": 32130,
+  "VAT (BDT)": 4819.5
+ },
+ {
+  "SO ID": "SO-001216",
+  "Line": 6622,
+  "SKU": "SKU-0019",
+  "Qty (units)": 456,
+  "Unit price (BDT)": 12.6,
+  "Discount %": 0,
+  "Net (BDT)": 5745.6,
+  "VAT (BDT)": 861.84
+ },
+ {
+  "SO ID": "SO-001216",
+  "Line": 6623,
+  "SKU": "SKU-0036",
+  "Qty (units)": 40,
+  "Unit price (BDT)": 126,
+  "Discount %": 0,
+  "Net (BDT)": 5040,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001216",
+  "Line": 6624,
+  "SKU": "SKU-0047",
+  "Qty (units)": 96,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 3,
+  "Net (BDT)": 12515.33,
+  "VAT (BDT)": 1877.3
+ },
+ {
+  "SO ID": "SO-001216",
+  "Line": 6625,
+  "SKU": "SKU-0009",
+  "Qty (units)": 2112,
+  "Unit price (BDT)": 16.8,
+  "Discount %": 0,
+  "Net (BDT)": 35481.6,
+  "VAT (BDT)": 5322.24
+ },
+ {
+  "SO ID": "SO-001217",
+  "Line": 6626,
+  "SKU": "SKU-0038",
+  "Qty (units)": 280,
+  "Unit price (BDT)": 88.2,
+  "Discount %": 0,
+  "Net (BDT)": 24696,
+  "VAT (BDT)": 3704.4
+ },
+ {
+  "SO ID": "SO-001217",
+  "Line": 6627,
+  "SKU": "SKU-0051",
+  "Qty (units)": 264,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 5,
+  "Net (BDT)": 11586.96,
+  "VAT (BDT)": 1738.04
+ },
+ {
+  "SO ID": "SO-001217",
+  "Line": 6628,
+  "SKU": "SKU-0031",
+  "Qty (units)": 560,
+  "Unit price (BDT)": 63,
+  "Discount %": 3,
+  "Net (BDT)": 34221.6,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001218",
+  "Line": 6629,
+  "SKU": "SKU-0046",
+  "Qty (units)": 300,
+  "Unit price (BDT)": 226.8,
+  "Discount %": 0,
+  "Net (BDT)": 68040,
+  "VAT (BDT)": 10206
+ },
+ {
+  "SO ID": "SO-001218",
+  "Line": 6630,
+  "SKU": "SKU-0047",
+  "Qty (units)": 168,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 2,
+  "Net (BDT)": 22127.62,
+  "VAT (BDT)": 3319.14
+ },
+ {
+  "SO ID": "SO-001218",
+  "Line": 6631,
+  "SKU": "SKU-0008",
+  "Qty (units)": 576,
+  "Unit price (BDT)": 37.8,
+  "Discount %": 5,
+  "Net (BDT)": 20684.16,
+  "VAT (BDT)": 3102.62
+ },
+ {
+  "SO ID": "SO-001219",
+  "Line": 6632,
+  "SKU": "SKU-0050",
+  "Qty (units)": 768,
+  "Unit price (BDT)": 604.8,
+  "Discount %": 3,
+  "Net (BDT)": 450551.81,
+  "VAT (BDT)": 67582.77
+ },
+ {
+  "SO ID": "SO-001219",
+  "Line": 6633,
+  "SKU": "SKU-0014",
+  "Qty (units)": 240,
+  "Unit price (BDT)": 33.6,
+  "Discount %": 3,
+  "Net (BDT)": 7822.08,
+  "VAT (BDT)": 1173.31
+ },
+ {
+  "SO ID": "SO-001219",
+  "Line": 6634,
+  "SKU": "SKU-0008",
+  "Qty (units)": 480,
+  "Unit price (BDT)": 37.8,
+  "Discount %": 0,
+  "Net (BDT)": 18144,
+  "VAT (BDT)": 2721.6
+ },
+ {
+  "SO ID": "SO-001220",
+  "Line": 6635,
+  "SKU": "SKU-0039",
+  "Qty (units)": 80,
+  "Unit price (BDT)": 63,
+  "Discount %": 0,
+  "Net (BDT)": 5040,
+  "VAT (BDT)": 756
+ },
+ {
+  "SO ID": "SO-001220",
+  "Line": 6636,
+  "SKU": "SKU-0021",
+  "Qty (units)": 4,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 0,
+  "Net (BDT)": 268.8,
+  "VAT (BDT)": 40.32
+ },
+ {
+  "SO ID": "SO-001220",
+  "Line": 6637,
+  "SKU": "SKU-0035",
+  "Qty (units)": 40,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 0,
+  "Net (BDT)": 4704,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001220",
+  "Line": 6638,
+  "SKU": "SKU-0047",
+  "Qty (units)": 24,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 0,
+  "Net (BDT)": 3225.6,
+  "VAT (BDT)": 483.84
+ },
+ {
+  "SO ID": "SO-001220",
+  "Line": 6639,
+  "SKU": "SKU-0032",
+  "Qty (units)": 96,
+  "Unit price (BDT)": 37.8,
+  "Discount %": 0,
+  "Net (BDT)": 3628.8,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001220",
+  "Line": 6640,
+  "SKU": "SKU-0008",
+  "Qty (units)": 192,
+  "Unit price (BDT)": 37.8,
+  "Discount %": 0,
+  "Net (BDT)": 7257.6,
+  "VAT (BDT)": 1088.64
+ },
+ {
+  "SO ID": "SO-001220",
+  "Line": 6641,
+  "SKU": "SKU-0005",
+  "Qty (units)": 72,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 1512,
+  "VAT (BDT)": 226.8
+ },
+ {
+  "SO ID": "SO-001221",
+  "Line": 6642,
+  "SKU": "SKU-0049",
+  "Qty (units)": 7,
+  "Unit price (BDT)": 789.6,
+  "Discount %": 0,
+  "Net (BDT)": 5527.2,
+  "VAT (BDT)": 829.08
+ },
+ {
+  "SO ID": "SO-001222",
+  "Line": 6643,
+  "SKU": "SKU-0031",
+  "Qty (units)": 120,
+  "Unit price (BDT)": 63,
+  "Discount %": 0,
+  "Net (BDT)": 7560,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001222",
+  "Line": 6644,
+  "SKU": "SKU-0033",
+  "Qty (units)": 180,
+  "Unit price (BDT)": 113.4,
+  "Discount %": 3,
+  "Net (BDT)": 19799.64,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001222",
+  "Line": 6645,
+  "SKU": "SKU-0007",
+  "Qty (units)": 408,
+  "Unit price (BDT)": 100.8,
+  "Discount %": 0,
+  "Net (BDT)": 41126.4,
+  "VAT (BDT)": 6168.96
+ },
+ {
+  "SO ID": "SO-001222",
+  "Line": 6646,
+  "SKU": "SKU-0051",
+  "Qty (units)": 504,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 3,
+  "Net (BDT)": 22586.26,
+  "VAT (BDT)": 3387.94
+ },
+ {
+  "SO ID": "SO-001222",
+  "Line": 6647,
+  "SKU": "SKU-0022",
+  "Qty (units)": 504,
+  "Unit price (BDT)": 21,
+  "Discount %": 3,
+  "Net (BDT)": 10266.48,
+  "VAT (BDT)": 1539.97
+ },
+ {
+  "SO ID": "SO-001222",
+  "Line": 6648,
+  "SKU": "SKU-0044",
+  "Qty (units)": 144,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 0,
+  "Net (BDT)": 9676.8,
+  "VAT (BDT)": 1451.52
+ },
+ {
+  "SO ID": "SO-001222",
+  "Line": 6649,
+  "SKU": "SKU-0028",
+  "Qty (units)": 324,
+  "Unit price (BDT)": 184.8,
+  "Discount %": 5,
+  "Net (BDT)": 56881.44,
+  "VAT (BDT)": 8532.22
+ },
+ {
+  "SO ID": "SO-001222",
+  "Line": 6650,
+  "SKU": "SKU-0036",
+  "Qty (units)": 100,
+  "Unit price (BDT)": 126,
+  "Discount %": 5,
+  "Net (BDT)": 11970,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001222",
+  "Line": 6651,
+  "SKU": "SKU-0014",
+  "Qty (units)": 240,
+  "Unit price (BDT)": 33.6,
+  "Discount %": 0,
+  "Net (BDT)": 8064,
+  "VAT (BDT)": 1209.6
+ },
+ {
+  "SO ID": "SO-001223",
+  "Line": 6652,
+  "SKU": "SKU-0048",
+  "Qty (units)": 144,
+  "Unit price (BDT)": 403.2,
+  "Discount %": 0,
+  "Net (BDT)": 58060.8,
+  "VAT (BDT)": 8709.12
+ },
+ {
+  "SO ID": "SO-001223",
+  "Line": 6653,
+  "SKU": "SKU-0012",
+  "Qty (units)": 48,
+  "Unit price (BDT)": 71.4,
+  "Discount %": 0,
+  "Net (BDT)": 3427.2,
+  "VAT (BDT)": 514.08
+ },
+ {
+  "SO ID": "SO-001223",
+  "Line": 6654,
+  "SKU": "SKU-0051",
+  "Qty (units)": 48,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 0,
+  "Net (BDT)": 2217.6,
+  "VAT (BDT)": 332.64
+ },
+ {
+  "SO ID": "SO-001223",
+  "Line": 6655,
+  "SKU": "SKU-0047",
+  "Qty (units)": 48,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 0,
+  "Net (BDT)": 6451.2,
+  "VAT (BDT)": 967.68
+ },
+ {
+  "SO ID": "SO-001224",
+  "Line": 6656,
+  "SKU": "SKU-0043",
+  "Qty (units)": 624,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 0,
+  "Net (BDT)": 41932.8,
+  "VAT (BDT)": 6289.92
+ },
+ {
+  "SO ID": "SO-001224",
+  "Line": 6657,
+  "SKU": "SKU-0048",
+  "Qty (units)": 120,
+  "Unit price (BDT)": 403.2,
+  "Discount %": 0,
+  "Net (BDT)": 48384,
+  "VAT (BDT)": 7257.6
+ },
+ {
+  "SO ID": "SO-001224",
+  "Line": 6658,
+  "SKU": "SKU-0041",
+  "Qty (units)": 600,
+  "Unit price (BDT)": 58.8,
+  "Discount %": 0,
+  "Net (BDT)": 35280,
+  "VAT (BDT)": 5292
+ },
+ {
+  "SO ID": "SO-001225",
+  "Line": 6659,
+  "SKU": "SKU-0038",
+  "Qty (units)": 32,
+  "Unit price (BDT)": 88.2,
+  "Discount %": 0,
+  "Net (BDT)": 2822.4,
+  "VAT (BDT)": 423.36
+ },
+ {
+  "SO ID": "SO-001225",
+  "Line": 6660,
+  "SKU": "SKU-0011",
+  "Qty (units)": 9,
+  "Unit price (BDT)": 33.6,
+  "Discount %": 0,
+  "Net (BDT)": 302.4,
+  "VAT (BDT)": 45.36
+ },
+ {
+  "SO ID": "SO-001225",
+  "Line": 6661,
+  "SKU": "SKU-0050",
+  "Qty (units)": 9,
+  "Unit price (BDT)": 604.8,
+  "Discount %": 0,
+  "Net (BDT)": 5443.2,
+  "VAT (BDT)": 816.48
+ },
+ {
+  "SO ID": "SO-001226",
+  "Line": 6662,
+  "SKU": "SKU-0023",
+  "Qty (units)": 180,
+  "Unit price (BDT)": 159.6,
+  "Discount %": 0,
+  "Net (BDT)": 28728,
+  "VAT (BDT)": 4309.2
+ },
+ {
+  "SO ID": "SO-001226",
+  "Line": 6663,
+  "SKU": "SKU-0035",
+  "Qty (units)": 420,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 0,
+  "Net (BDT)": 49392,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001226",
+  "Line": 6664,
+  "SKU": "SKU-0011",
+  "Qty (units)": 432,
+  "Unit price (BDT)": 33.6,
+  "Discount %": 0,
+  "Net (BDT)": 14515.2,
+  "VAT (BDT)": 2177.28
+ },
+ {
+  "SO ID": "SO-001226",
+  "Line": 6665,
+  "SKU": "SKU-0028",
+  "Qty (units)": 384,
+  "Unit price (BDT)": 184.8,
+  "Discount %": 2,
+  "Net (BDT)": 69543.94,
+  "VAT (BDT)": 10431.59
+ },
+ {
+  "SO ID": "SO-001226",
+  "Line": 6666,
+  "SKU": "SKU-0003",
+  "Qty (units)": 504,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 0,
+  "Net (BDT)": 23284.8,
+  "VAT (BDT)": 3492.72
+ },
+ {
+  "SO ID": "SO-001226",
+  "Line": 6667,
+  "SKU": "SKU-0042",
+  "Qty (units)": 840,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 5,
+  "Net (BDT)": 40219.2,
+  "VAT (BDT)": 6032.88
+ },
+ {
+  "SO ID": "SO-001226",
+  "Line": 6668,
+  "SKU": "SKU-0016",
+  "Qty (units)": 552,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 11592,
+  "VAT (BDT)": 1738.8
+ },
+ {
+  "SO ID": "SO-001227",
+  "Line": 6669,
+  "SKU": "SKU-0035",
+  "Qty (units)": 140,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 0,
+  "Net (BDT)": 16464,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001227",
+  "Line": 6670,
+  "SKU": "SKU-0018",
+  "Qty (units)": 408,
+  "Unit price (BDT)": 21,
+  "Discount %": 5,
+  "Net (BDT)": 8139.6,
+  "VAT (BDT)": 1220.94
+ },
+ {
+  "SO ID": "SO-001227",
+  "Line": 6671,
+  "SKU": "SKU-0004",
+  "Qty (units)": 1008,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 21168,
+  "VAT (BDT)": 3175.2
+ },
+ {
+  "SO ID": "SO-001227",
+  "Line": 6672,
+  "SKU": "SKU-0031",
+  "Qty (units)": 380,
+  "Unit price (BDT)": 63,
+  "Discount %": 0,
+  "Net (BDT)": 23940,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001227",
+  "Line": 6673,
+  "SKU": "SKU-0007",
+  "Qty (units)": 432,
+  "Unit price (BDT)": 100.8,
+  "Discount %": 0,
+  "Net (BDT)": 43545.6,
+  "VAT (BDT)": 6531.84
+ },
+ {
+  "SO ID": "SO-001227",
+  "Line": 6674,
+  "SKU": "SKU-0032",
+  "Qty (units)": 144,
+  "Unit price (BDT)": 37.8,
+  "Discount %": 5,
+  "Net (BDT)": 5171.04,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001227",
+  "Line": 6675,
+  "SKU": "SKU-0051",
+  "Qty (units)": 408,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 5,
+  "Net (BDT)": 17907.12,
+  "VAT (BDT)": 2686.07
+ },
+ {
+  "SO ID": "SO-001228",
+  "Line": 6676,
+  "SKU": "SKU-0029",
+  "Qty (units)": 480,
+  "Unit price (BDT)": 54.6,
+  "Discount %": 3,
+  "Net (BDT)": 25421.76,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001228",
+  "Line": 6677,
+  "SKU": "SKU-0051",
+  "Qty (units)": 552,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 0,
+  "Net (BDT)": 25502.4,
+  "VAT (BDT)": 3825.36
+ },
+ {
+  "SO ID": "SO-001228",
+  "Line": 6678,
+  "SKU": "SKU-0047",
+  "Qty (units)": 264,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 5,
+  "Net (BDT)": 33707.52,
+  "VAT (BDT)": 5056.13
+ },
+ {
+  "SO ID": "SO-001228",
+  "Line": 6679,
+  "SKU": "SKU-0046",
+  "Qty (units)": 140,
+  "Unit price (BDT)": 226.8,
+  "Discount %": 5,
+  "Net (BDT)": 30164.4,
+  "VAT (BDT)": 4524.66
+ },
+ {
+  "SO ID": "SO-001228",
+  "Line": 6680,
+  "SKU": "SKU-0021",
+  "Qty (units)": 8,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 0,
+  "Net (BDT)": 537.6,
+  "VAT (BDT)": 80.64
+ },
+ {
+  "SO ID": "SO-001228",
+  "Line": 6681,
+  "SKU": "SKU-0014",
+  "Qty (units)": 912,
+  "Unit price (BDT)": 33.6,
+  "Discount %": 0,
+  "Net (BDT)": 30643.2,
+  "VAT (BDT)": 4596.48
+ },
+ {
+  "SO ID": "SO-001229",
+  "Line": 6682,
+  "SKU": "SKU-0006",
+  "Qty (units)": 408,
+  "Unit price (BDT)": 75.6,
+  "Discount %": 5,
+  "Net (BDT)": 29302.56,
+  "VAT (BDT)": 4395.38
+ },
+ {
+  "SO ID": "SO-001229",
+  "Line": 6683,
+  "SKU": "SKU-0013",
+  "Qty (units)": 576,
+  "Unit price (BDT)": 8.4,
+  "Discount %": 0,
+  "Net (BDT)": 4838.4,
+  "VAT (BDT)": 725.76
+ },
+ {
+  "SO ID": "SO-001229",
+  "Line": 6684,
+  "SKU": "SKU-0042",
+  "Qty (units)": 1200,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 3,
+  "Net (BDT)": 58665.6,
+  "VAT (BDT)": 8799.84
+ },
+ {
+  "SO ID": "SO-001230",
+  "Line": 6685,
+  "SKU": "SKU-0007",
+  "Qty (units)": 34,
+  "Unit price (BDT)": 100.8,
+  "Discount %": 0,
+  "Net (BDT)": 3427.2,
+  "VAT (BDT)": 514.08
+ },
+ {
+  "SO ID": "SO-001230",
+  "Line": 6686,
+  "SKU": "SKU-0027",
+  "Qty (units)": 14,
+  "Unit price (BDT)": 260.4,
+  "Discount %": 0,
+  "Net (BDT)": 3645.6,
+  "VAT (BDT)": 546.84
+ },
+ {
+  "SO ID": "SO-001230",
+  "Line": 6687,
+  "SKU": "SKU-0028",
+  "Qty (units)": 41,
+  "Unit price (BDT)": 184.8,
+  "Discount %": 0,
+  "Net (BDT)": 7576.8,
+  "VAT (BDT)": 1136.52
+ },
+ {
+  "SO ID": "SO-001231",
+  "Line": 6688,
+  "SKU": "SKU-0041",
+  "Qty (units)": 900,
+  "Unit price (BDT)": 58.8,
+  "Discount %": 2,
+  "Net (BDT)": 51861.6,
+  "VAT (BDT)": 7779.24
+ },
+ {
+  "SO ID": "SO-001231",
+  "Line": 6689,
+  "SKU": "SKU-0025",
+  "Qty (units)": 12,
+  "Unit price (BDT)": 772.8,
+  "Discount %": 0,
+  "Net (BDT)": 9273.6,
+  "VAT (BDT)": 1391.04
+ },
+ {
+  "SO ID": "SO-001231",
+  "Line": 6690,
+  "SKU": "SKU-0005",
+  "Qty (units)": 72,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 1512,
+  "VAT (BDT)": 226.8
+ },
+ {
+  "SO ID": "SO-001232",
+  "Line": 6691,
+  "SKU": "SKU-0036",
+  "Qty (units)": 220,
+  "Unit price (BDT)": 126,
+  "Discount %": 2,
+  "Net (BDT)": 27165.6,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001232",
+  "Line": 6692,
+  "SKU": "SKU-0032",
+  "Qty (units)": 312,
+  "Unit price (BDT)": 37.8,
+  "Discount %": 5,
+  "Net (BDT)": 11203.92,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001232",
+  "Line": 6693,
+  "SKU": "SKU-0046",
+  "Qty (units)": 60,
+  "Unit price (BDT)": 226.8,
+  "Discount %": 0,
+  "Net (BDT)": 13608,
+  "VAT (BDT)": 2041.2
+ },
+ {
+  "SO ID": "SO-001233",
+  "Line": 6694,
+  "SKU": "SKU-0012",
+  "Qty (units)": 16,
+  "Unit price (BDT)": 71.4,
+  "Discount %": 0,
+  "Net (BDT)": 1142.4,
+  "VAT (BDT)": 171.36
+ },
+ {
+  "SO ID": "SO-001234",
+  "Line": 6695,
+  "SKU": "SKU-0022",
+  "Qty (units)": 240,
+  "Unit price (BDT)": 21,
+  "Discount %": 3,
+  "Net (BDT)": 4888.8,
+  "VAT (BDT)": 733.32
+ },
+ {
+  "SO ID": "SO-001234",
+  "Line": 6696,
+  "SKU": "SKU-0050",
+  "Qty (units)": 864,
+  "Unit price (BDT)": 604.8,
+  "Discount %": 0,
+  "Net (BDT)": 522547.2,
+  "VAT (BDT)": 78382.08
+ },
+ {
+  "SO ID": "SO-001234",
+  "Line": 6697,
+  "SKU": "SKU-0051",
+  "Qty (units)": 888,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 0,
+  "Net (BDT)": 41025.6,
+  "VAT (BDT)": 6153.84
+ },
+ {
+  "SO ID": "SO-001234",
+  "Line": 6698,
+  "SKU": "SKU-0004",
+  "Qty (units)": 1728,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 36288,
+  "VAT (BDT)": 5443.2
+ },
+ {
+  "SO ID": "SO-001235",
+  "Line": 6699,
+  "SKU": "SKU-0040",
+  "Qty (units)": 40,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 0,
+  "Net (BDT)": 3696,
+  "VAT (BDT)": 554.4
+ },
+ {
+  "SO ID": "SO-001235",
+  "Line": 6700,
+  "SKU": "SKU-0041",
+  "Qty (units)": 17,
+  "Unit price (BDT)": 58.8,
+  "Discount %": 0,
+  "Net (BDT)": 999.6,
+  "VAT (BDT)": 149.94
+ },
+ {
+  "SO ID": "SO-001235",
+  "Line": 6701,
+  "SKU": "SKU-0013",
+  "Qty (units)": 57,
+  "Unit price (BDT)": 8.4,
+  "Discount %": 0,
+  "Net (BDT)": 478.8,
+  "VAT (BDT)": 71.82
+ },
+ {
+  "SO ID": "SO-001236",
+  "Line": 6702,
+  "SKU": "SKU-0010",
+  "Qty (units)": 72,
+  "Unit price (BDT)": 138.6,
+  "Discount %": 0,
+  "Net (BDT)": 9979.2,
+  "VAT (BDT)": 1496.88
+ },
+ {
+  "SO ID": "SO-001236",
+  "Line": 6703,
+  "SKU": "SKU-0019",
+  "Qty (units)": 456,
+  "Unit price (BDT)": 12.6,
+  "Discount %": 2,
+  "Net (BDT)": 5630.69,
+  "VAT (BDT)": 844.6
+ },
+ {
+  "SO ID": "SO-001236",
+  "Line": 6704,
+  "SKU": "SKU-0021",
+  "Qty (units)": 88,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 0,
+  "Net (BDT)": 5913.6,
+  "VAT (BDT)": 887.04
+ },
+ {
+  "SO ID": "SO-001236",
+  "Line": 6705,
+  "SKU": "SKU-0046",
+  "Qty (units)": 200,
+  "Unit price (BDT)": 226.8,
+  "Discount %": 2,
+  "Net (BDT)": 44452.8,
+  "VAT (BDT)": 6667.92
+ },
+ {
+  "SO ID": "SO-001236",
+  "Line": 6706,
+  "SKU": "SKU-0043",
+  "Qty (units)": 432,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 5,
+  "Net (BDT)": 27578.88,
+  "VAT (BDT)": 4136.83
+ },
+ {
+  "SO ID": "SO-001236",
+  "Line": 6707,
+  "SKU": "SKU-0045",
+  "Qty (units)": 480,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 0,
+  "Net (BDT)": 56448,
+  "VAT (BDT)": 8467.2
+ },
+ {
+  "SO ID": "SO-001236",
+  "Line": 6708,
+  "SKU": "SKU-0023",
+  "Qty (units)": 36,
+  "Unit price (BDT)": 159.6,
+  "Discount %": 5,
+  "Net (BDT)": 5458.32,
+  "VAT (BDT)": 818.75
+ },
+ {
+  "SO ID": "SO-001236",
+  "Line": 6709,
+  "SKU": "SKU-0029",
+  "Qty (units)": 180,
+  "Unit price (BDT)": 54.6,
+  "Discount %": 0,
+  "Net (BDT)": 9828,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001237",
+  "Line": 6710,
+  "SKU": "SKU-0002",
+  "Qty (units)": 600,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 5,
+  "Net (BDT)": 28728,
+  "VAT (BDT)": 4309.2
+ },
+ {
+  "SO ID": "SO-001237",
+  "Line": 6711,
+  "SKU": "SKU-0031",
+  "Qty (units)": 40,
+  "Unit price (BDT)": 63,
+  "Discount %": 0,
+  "Net (BDT)": 2520,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001237",
+  "Line": 6712,
+  "SKU": "SKU-0018",
+  "Qty (units)": 336,
+  "Unit price (BDT)": 21,
+  "Discount %": 5,
+  "Net (BDT)": 6703.2,
+  "VAT (BDT)": 1005.48
+ },
+ {
+  "SO ID": "SO-001238",
+  "Line": 6713,
+  "SKU": "SKU-0048",
+  "Qty (units)": 360,
+  "Unit price (BDT)": 403.2,
+  "Discount %": 0,
+  "Net (BDT)": 145152,
+  "VAT (BDT)": 21772.8
+ },
+ {
+  "SO ID": "SO-001238",
+  "Line": 6714,
+  "SKU": "SKU-0017",
+  "Qty (units)": 288,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 0,
+  "Net (BDT)": 26611.2,
+  "VAT (BDT)": 3991.68
+ },
+ {
+  "SO ID": "SO-001238",
+  "Line": 6715,
+  "SKU": "SKU-0051",
+  "Qty (units)": 360,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 3,
+  "Net (BDT)": 16133.04,
+  "VAT (BDT)": 2419.96
+ },
+ {
+  "SO ID": "SO-001239",
+  "Line": 6716,
+  "SKU": "SKU-0019",
+  "Qty (units)": 312,
+  "Unit price (BDT)": 12.6,
+  "Discount %": 0,
+  "Net (BDT)": 3931.2,
+  "VAT (BDT)": 589.68
+ },
+ {
+  "SO ID": "SO-001239",
+  "Line": 6717,
+  "SKU": "SKU-0025",
+  "Qty (units)": 552,
+  "Unit price (BDT)": 772.8,
+  "Discount %": 5,
+  "Net (BDT)": 405256.32,
+  "VAT (BDT)": 60788.45
+ },
+ {
+  "SO ID": "SO-001239",
+  "Line": 6718,
+  "SKU": "SKU-0004",
+  "Qty (units)": 288,
+  "Unit price (BDT)": 21,
+  "Discount %": 2,
+  "Net (BDT)": 5927.04,
+  "VAT (BDT)": 889.06
+ },
+ {
+  "SO ID": "SO-001239",
+  "Line": 6719,
+  "SKU": "SKU-0021",
+  "Qty (units)": 80,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 0,
+  "Net (BDT)": 5376,
+  "VAT (BDT)": 806.4
+ },
+ {
+  "SO ID": "SO-001239",
+  "Line": 6720,
+  "SKU": "SKU-0029",
+  "Qty (units)": 320,
+  "Unit price (BDT)": 54.6,
+  "Discount %": 0,
+  "Net (BDT)": 17472,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001240",
+  "Line": 6721,
+  "SKU": "SKU-0044",
+  "Qty (units)": 1584,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 0,
+  "Net (BDT)": 106444.8,
+  "VAT (BDT)": 15966.72
+ },
+ {
+  "SO ID": "SO-001240",
+  "Line": 6722,
+  "SKU": "SKU-0037",
+  "Qty (units)": 920,
+  "Unit price (BDT)": 79.8,
+  "Discount %": 3,
+  "Net (BDT)": 71213.52,
+  "VAT (BDT)": 10682.03
+ },
+ {
+  "SO ID": "SO-001240",
+  "Line": 6723,
+  "SKU": "SKU-0038",
+  "Qty (units)": 1280,
+  "Unit price (BDT)": 88.2,
+  "Discount %": 0,
+  "Net (BDT)": 112896,
+  "VAT (BDT)": 16934.4
+ },
+ {
+  "SO ID": "SO-001240",
+  "Line": 6724,
+  "SKU": "SKU-0008",
+  "Qty (units)": 720,
+  "Unit price (BDT)": 37.8,
+  "Discount %": 0,
+  "Net (BDT)": 27216,
+  "VAT (BDT)": 4082.4
+ },
+ {
+  "SO ID": "SO-001240",
+  "Line": 6725,
+  "SKU": "SKU-0001",
+  "Qty (units)": 1632,
+  "Unit price (BDT)": 12.6,
+  "Discount %": 0,
+  "Net (BDT)": 20563.2,
+  "VAT (BDT)": 3084.48
+ },
+ {
+  "SO ID": "SO-001240",
+  "Line": 6726,
+  "SKU": "SKU-0036",
+  "Qty (units)": 200,
+  "Unit price (BDT)": 126,
+  "Discount %": 2,
+  "Net (BDT)": 24696,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001240",
+  "Line": 6727,
+  "SKU": "SKU-0020",
+  "Qty (units)": 432,
+  "Unit price (BDT)": 25.2,
+  "Discount %": 0,
+  "Net (BDT)": 10886.4,
+  "VAT (BDT)": 1632.96
+ },
+ {
+  "SO ID": "SO-001240",
+  "Line": 6728,
+  "SKU": "SKU-0041",
+  "Qty (units)": 1080,
+  "Unit price (BDT)": 58.8,
+  "Discount %": 0,
+  "Net (BDT)": 63504,
+  "VAT (BDT)": 9525.6
+ },
+ {
+  "SO ID": "SO-001241",
+  "Line": 6729,
+  "SKU": "SKU-0031",
+  "Qty (units)": 260,
+  "Unit price (BDT)": 63,
+  "Discount %": 0,
+  "Net (BDT)": 16380,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001241",
+  "Line": 6730,
+  "SKU": "SKU-0047",
+  "Qty (units)": 528,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 0,
+  "Net (BDT)": 70963.2,
+  "VAT (BDT)": 10644.48
+ },
+ {
+  "SO ID": "SO-001241",
+  "Line": 6731,
+  "SKU": "SKU-0003",
+  "Qty (units)": 120,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 5,
+  "Net (BDT)": 5266.8,
+  "VAT (BDT)": 790.02
+ },
+ {
+  "SO ID": "SO-001241",
+  "Line": 6732,
+  "SKU": "SKU-0019",
+  "Qty (units)": 552,
+  "Unit price (BDT)": 12.6,
+  "Discount %": 0,
+  "Net (BDT)": 6955.2,
+  "VAT (BDT)": 1043.28
+ },
+ {
+  "SO ID": "SO-001241",
+  "Line": 6733,
+  "SKU": "SKU-0026",
+  "Qty (units)": 396,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 0,
+  "Net (BDT)": 53222.4,
+  "VAT (BDT)": 7983.36
+ },
+ {
+  "SO ID": "SO-001242",
+  "Line": 6734,
+  "SKU": "SKU-0029",
+  "Qty (units)": 140,
+  "Unit price (BDT)": 54.6,
+  "Discount %": 0,
+  "Net (BDT)": 7644,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001242",
+  "Line": 6735,
+  "SKU": "SKU-0026",
+  "Qty (units)": 312,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 5,
+  "Net (BDT)": 39836.16,
+  "VAT (BDT)": 5975.42
+ },
+ {
+  "SO ID": "SO-001242",
+  "Line": 6736,
+  "SKU": "SKU-0048",
+  "Qty (units)": 456,
+  "Unit price (BDT)": 403.2,
+  "Discount %": 2,
+  "Net (BDT)": 180182.02,
+  "VAT (BDT)": 27027.3
+ },
+ {
+  "SO ID": "SO-001243",
+  "Line": 6737,
+  "SKU": "SKU-0003",
+  "Qty (units)": 240,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 0,
+  "Net (BDT)": 11088,
+  "VAT (BDT)": 1663.2
+ },
+ {
+  "SO ID": "SO-001243",
+  "Line": 6738,
+  "SKU": "SKU-0050",
+  "Qty (units)": 216,
+  "Unit price (BDT)": 604.8,
+  "Discount %": 5,
+  "Net (BDT)": 124104.96,
+  "VAT (BDT)": 18615.74
+ },
+ {
+  "SO ID": "SO-001243",
+  "Line": 6739,
+  "SKU": "SKU-0044",
+  "Qty (units)": 960,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 5,
+  "Net (BDT)": 61286.4,
+  "VAT (BDT)": 9192.96
+ },
+ {
+  "SO ID": "SO-001243",
+  "Line": 6740,
+  "SKU": "SKU-0046",
+  "Qty (units)": 720,
+  "Unit price (BDT)": 226.8,
+  "Discount %": 0,
+  "Net (BDT)": 163296,
+  "VAT (BDT)": 24494.4
+ },
+ {
+  "SO ID": "SO-001243",
+  "Line": 6741,
+  "SKU": "SKU-0016",
+  "Qty (units)": 576,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 12096,
+  "VAT (BDT)": 1814.4
+ },
+ {
+  "SO ID": "SO-001243",
+  "Line": 6742,
+  "SKU": "SKU-0031",
+  "Qty (units)": 120,
+  "Unit price (BDT)": 63,
+  "Discount %": 5,
+  "Net (BDT)": 7182,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001243",
+  "Line": 6743,
+  "SKU": "SKU-0042",
+  "Qty (units)": 840,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 0,
+  "Net (BDT)": 42336,
+  "VAT (BDT)": 6350.4
+ },
+ {
+  "SO ID": "SO-001243",
+  "Line": 6744,
+  "SKU": "SKU-0008",
+  "Qty (units)": 864,
+  "Unit price (BDT)": 37.8,
+  "Discount %": 0,
+  "Net (BDT)": 32659.2,
+  "VAT (BDT)": 4898.88
+ },
+ {
+  "SO ID": "SO-001244",
+  "Line": 6745,
+  "SKU": "SKU-0017",
+  "Qty (units)": 60,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 5,
+  "Net (BDT)": 5266.8,
+  "VAT (BDT)": 790.02
+ },
+ {
+  "SO ID": "SO-001244",
+  "Line": 6746,
+  "SKU": "SKU-0041",
+  "Qty (units)": 1980,
+  "Unit price (BDT)": 58.8,
+  "Discount %": 0,
+  "Net (BDT)": 116424,
+  "VAT (BDT)": 17463.6
+ },
+ {
+  "SO ID": "SO-001244",
+  "Line": 6747,
+  "SKU": "SKU-0044",
+  "Qty (units)": 624,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 5,
+  "Net (BDT)": 39836.16,
+  "VAT (BDT)": 5975.42
+ },
+ {
+  "SO ID": "SO-001244",
+  "Line": 6748,
+  "SKU": "SKU-0043",
+  "Qty (units)": 576,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 5,
+  "Net (BDT)": 36771.84,
+  "VAT (BDT)": 5515.78
+ },
+ {
+  "SO ID": "SO-001244",
+  "Line": 6749,
+  "SKU": "SKU-0020",
+  "Qty (units)": 276,
+  "Unit price (BDT)": 25.2,
+  "Discount %": 2,
+  "Net (BDT)": 6816.1,
+  "VAT (BDT)": 1022.42
+ },
+ {
+  "SO ID": "SO-001244",
+  "Line": 6750,
+  "SKU": "SKU-0005",
+  "Qty (units)": 288,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 6048,
+  "VAT (BDT)": 907.2
+ },
+ {
+  "SO ID": "SO-001244",
+  "Line": 6751,
+  "SKU": "SKU-0032",
+  "Qty (units)": 624,
+  "Unit price (BDT)": 37.8,
+  "Discount %": 2,
+  "Net (BDT)": 23115.46,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001244",
+  "Line": 6752,
+  "SKU": "SKU-0049",
+  "Qty (units)": 348,
+  "Unit price (BDT)": 789.6,
+  "Discount %": 2,
+  "Net (BDT)": 269285.18,
+  "VAT (BDT)": 40392.78
+ },
+ {
+  "SO ID": "SO-001245",
+  "Line": 6753,
+  "SKU": "SKU-0006",
+  "Qty (units)": 44,
+  "Unit price (BDT)": 75.6,
+  "Discount %": 0,
+  "Net (BDT)": 3326.4,
+  "VAT (BDT)": 498.96
+ },
+ {
+  "SO ID": "SO-001245",
+  "Line": 6754,
+  "SKU": "SKU-0001",
+  "Qty (units)": 35,
+  "Unit price (BDT)": 12.6,
+  "Discount %": 0,
+  "Net (BDT)": 441,
+  "VAT (BDT)": 66.15
+ },
+ {
+  "SO ID": "SO-001245",
+  "Line": 6755,
+  "SKU": "SKU-0050",
+  "Qty (units)": 36,
+  "Unit price (BDT)": 604.8,
+  "Discount %": 0,
+  "Net (BDT)": 21772.8,
+  "VAT (BDT)": 3265.92
+ },
+ {
+  "SO ID": "SO-001246",
+  "Line": 6756,
+  "SKU": "SKU-0002",
+  "Qty (units)": 528,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 3,
+  "Net (BDT)": 25812.86,
+  "VAT (BDT)": 3871.93
+ },
+ {
+  "SO ID": "SO-001246",
+  "Line": 6757,
+  "SKU": "SKU-0009",
+  "Qty (units)": 2016,
+  "Unit price (BDT)": 16.8,
+  "Discount %": 2,
+  "Net (BDT)": 33191.42,
+  "VAT (BDT)": 4978.71
+ },
+ {
+  "SO ID": "SO-001246",
+  "Line": 6758,
+  "SKU": "SKU-0050",
+  "Qty (units)": 816,
+  "Unit price (BDT)": 604.8,
+  "Discount %": 0,
+  "Net (BDT)": 493516.8,
+  "VAT (BDT)": 74027.52
+ },
+ {
+  "SO ID": "SO-001247",
+  "Line": 6759,
+  "SKU": "SKU-0039",
+  "Qty (units)": 280,
+  "Unit price (BDT)": 63,
+  "Discount %": 0,
+  "Net (BDT)": 17640,
+  "VAT (BDT)": 2646
+ },
+ {
+  "SO ID": "SO-001247",
+  "Line": 6760,
+  "SKU": "SKU-0026",
+  "Qty (units)": 48,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 3,
+  "Net (BDT)": 6257.66,
+  "VAT (BDT)": 938.65
+ },
+ {
+  "SO ID": "SO-001247",
+  "Line": 6761,
+  "SKU": "SKU-0042",
+  "Qty (units)": 660,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 5,
+  "Net (BDT)": 31600.8,
+  "VAT (BDT)": 4740.12
+ },
+ {
+  "SO ID": "SO-001247",
+  "Line": 6762,
+  "SKU": "SKU-0045",
+  "Qty (units)": 200,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 2,
+  "Net (BDT)": 23049.6,
+  "VAT (BDT)": 3457.44
+ },
+ {
+  "SO ID": "SO-001247",
+  "Line": 6763,
+  "SKU": "SKU-0019",
+  "Qty (units)": 216,
+  "Unit price (BDT)": 12.6,
+  "Discount %": 0,
+  "Net (BDT)": 2721.6,
+  "VAT (BDT)": 408.24
+ },
+ {
+  "SO ID": "SO-001247",
+  "Line": 6764,
+  "SKU": "SKU-0041",
+  "Qty (units)": 1200,
+  "Unit price (BDT)": 58.8,
+  "Discount %": 3,
+  "Net (BDT)": 68443.2,
+  "VAT (BDT)": 10266.48
+ },
+ {
+  "SO ID": "SO-001248",
+  "Line": 6765,
+  "SKU": "SKU-0016",
+  "Qty (units)": 120,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 2520,
+  "VAT (BDT)": 378
+ },
+ {
+  "SO ID": "SO-001248",
+  "Line": 6766,
+  "SKU": "SKU-0041",
+  "Qty (units)": 360,
+  "Unit price (BDT)": 58.8,
+  "Discount %": 3,
+  "Net (BDT)": 20532.96,
+  "VAT (BDT)": 3079.94
+ },
+ {
+  "SO ID": "SO-001248",
+  "Line": 6767,
+  "SKU": "SKU-0027",
+  "Qty (units)": 456,
+  "Unit price (BDT)": 260.4,
+  "Discount %": 2,
+  "Net (BDT)": 116367.55,
+  "VAT (BDT)": 17455.13
+ },
+ {
+  "SO ID": "SO-001248",
+  "Line": 6768,
+  "SKU": "SKU-0049",
+  "Qty (units)": 72,
+  "Unit price (BDT)": 789.6,
+  "Discount %": 3,
+  "Net (BDT)": 55145.66,
+  "VAT (BDT)": 8271.85
+ },
+ {
+  "SO ID": "SO-001248",
+  "Line": 6769,
+  "SKU": "SKU-0003",
+  "Qty (units)": 480,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 0,
+  "Net (BDT)": 22176,
+  "VAT (BDT)": 3326.4
+ },
+ {
+  "SO ID": "SO-001248",
+  "Line": 6770,
+  "SKU": "SKU-0007",
+  "Qty (units)": 144,
+  "Unit price (BDT)": 100.8,
+  "Discount %": 0,
+  "Net (BDT)": 14515.2,
+  "VAT (BDT)": 2177.28
+ },
+ {
+  "SO ID": "SO-001249",
+  "Line": 6771,
+  "SKU": "SKU-0017",
+  "Qty (units)": 312,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 5,
+  "Net (BDT)": 27387.36,
+  "VAT (BDT)": 4108.1
+ },
+ {
+  "SO ID": "SO-001249",
+  "Line": 6772,
+  "SKU": "SKU-0038",
+  "Qty (units)": 480,
+  "Unit price (BDT)": 88.2,
+  "Discount %": 0,
+  "Net (BDT)": 42336,
+  "VAT (BDT)": 6350.4
+ },
+ {
+  "SO ID": "SO-001249",
+  "Line": 6773,
+  "SKU": "SKU-0010",
+  "Qty (units)": 108,
+  "Unit price (BDT)": 138.6,
+  "Discount %": 0,
+  "Net (BDT)": 14968.8,
+  "VAT (BDT)": 2245.32
+ },
+ {
+  "SO ID": "SO-001249",
+  "Line": 6774,
+  "SKU": "SKU-0005",
+  "Qty (units)": 360,
+  "Unit price (BDT)": 21,
+  "Discount %": 5,
+  "Net (BDT)": 7182,
+  "VAT (BDT)": 1077.3
+ },
+ {
+  "SO ID": "SO-001250",
+  "Line": 6775,
+  "SKU": "SKU-0038",
+  "Qty (units)": 8,
+  "Unit price (BDT)": 88.2,
+  "Discount %": 0,
+  "Net (BDT)": 705.6,
+  "VAT (BDT)": 105.84
+ },
+ {
+  "SO ID": "SO-001251",
+  "Line": 6776,
+  "SKU": "SKU-0033",
+  "Qty (units)": 540,
+  "Unit price (BDT)": 113.4,
+  "Discount %": 0,
+  "Net (BDT)": 61236,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001251",
+  "Line": 6777,
+  "SKU": "SKU-0028",
+  "Qty (units)": 132,
+  "Unit price (BDT)": 184.8,
+  "Discount %": 0,
+  "Net (BDT)": 24393.6,
+  "VAT (BDT)": 3659.04
+ },
+ {
+  "SO ID": "SO-001251",
+  "Line": 6778,
+  "SKU": "SKU-0035",
+  "Qty (units)": 600,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 0,
+  "Net (BDT)": 70560,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001251",
+  "Line": 6779,
+  "SKU": "SKU-0031",
+  "Qty (units)": 200,
+  "Unit price (BDT)": 63,
+  "Discount %": 3,
+  "Net (BDT)": 12222,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001251",
+  "Line": 6780,
+  "SKU": "SKU-0005",
+  "Qty (units)": 720,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 15120,
+  "VAT (BDT)": 2268
+ },
+ {
+  "SO ID": "SO-001251",
+  "Line": 6781,
+  "SKU": "SKU-0049",
+  "Qty (units)": 396,
+  "Unit price (BDT)": 789.6,
+  "Discount %": 0,
+  "Net (BDT)": 312681.6,
+  "VAT (BDT)": 46902.24
+ },
+ {
+  "SO ID": "SO-001251",
+  "Line": 6782,
+  "SKU": "SKU-0014",
+  "Qty (units)": 1200,
+  "Unit price (BDT)": 33.6,
+  "Discount %": 3,
+  "Net (BDT)": 39110.4,
+  "VAT (BDT)": 5866.56
+ },
+ {
+  "SO ID": "SO-001251",
+  "Line": 6783,
+  "SKU": "SKU-0008",
+  "Qty (units)": 384,
+  "Unit price (BDT)": 37.8,
+  "Discount %": 0,
+  "Net (BDT)": 14515.2,
+  "VAT (BDT)": 2177.28
+ },
+ {
+  "SO ID": "SO-001252",
+  "Line": 6784,
+  "SKU": "SKU-0017",
+  "Qty (units)": 372,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 5,
+  "Net (BDT)": 32654.16,
+  "VAT (BDT)": 4898.12
+ },
+ {
+  "SO ID": "SO-001252",
+  "Line": 6785,
+  "SKU": "SKU-0012",
+  "Qty (units)": 408,
+  "Unit price (BDT)": 71.4,
+  "Discount %": 0,
+  "Net (BDT)": 29131.2,
+  "VAT (BDT)": 4369.68
+ },
+ {
+  "SO ID": "SO-001252",
+  "Line": 6786,
+  "SKU": "SKU-0031",
+  "Qty (units)": 440,
+  "Unit price (BDT)": 63,
+  "Discount %": 3,
+  "Net (BDT)": 26888.4,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001252",
+  "Line": 6787,
+  "SKU": "SKU-0051",
+  "Qty (units)": 264,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 2,
+  "Net (BDT)": 11952.86,
+  "VAT (BDT)": 1792.93
+ },
+ {
+  "SO ID": "SO-001252",
+  "Line": 6788,
+  "SKU": "SKU-0026",
+  "Qty (units)": 324,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 0,
+  "Net (BDT)": 43545.6,
+  "VAT (BDT)": 6531.84
+ },
+ {
+  "SO ID": "SO-001253",
+  "Line": 6789,
+  "SKU": "SKU-0005",
+  "Qty (units)": 1152,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 24192,
+  "VAT (BDT)": 3628.8
+ },
+ {
+  "SO ID": "SO-001253",
+  "Line": 6790,
+  "SKU": "SKU-0001",
+  "Qty (units)": 2880,
+  "Unit price (BDT)": 12.6,
+  "Discount %": 5,
+  "Net (BDT)": 34473.6,
+  "VAT (BDT)": 5171.04
+ },
+ {
+  "SO ID": "SO-001253",
+  "Line": 6791,
+  "SKU": "SKU-0035",
+  "Qty (units)": 200,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 3,
+  "Net (BDT)": 22814.4,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001254",
+  "Line": 6792,
+  "SKU": "SKU-0034",
+  "Qty (units)": 875,
+  "Unit price (BDT)": 35.28,
+  "Discount %": 0,
+  "Net (BDT)": 30870,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001254",
+  "Line": 6793,
+  "SKU": "SKU-0012",
+  "Qty (units)": 648,
+  "Unit price (BDT)": 71.4,
+  "Discount %": 5,
+  "Net (BDT)": 43953.84,
+  "VAT (BDT)": 6593.08
+ },
+ {
+  "SO ID": "SO-001254",
+  "Line": 6794,
+  "SKU": "SKU-0051",
+  "Qty (units)": 216,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 0,
+  "Net (BDT)": 9979.2,
+  "VAT (BDT)": 1496.88
+ },
+ {
+  "SO ID": "SO-001254",
+  "Line": 6795,
+  "SKU": "SKU-0011",
+  "Qty (units)": 1440,
+  "Unit price (BDT)": 33.6,
+  "Discount %": 0,
+  "Net (BDT)": 48384,
+  "VAT (BDT)": 7257.6
+ },
+ {
+  "SO ID": "SO-001254",
+  "Line": 6796,
+  "SKU": "SKU-0006",
+  "Qty (units)": 600,
+  "Unit price (BDT)": 75.6,
+  "Discount %": 0,
+  "Net (BDT)": 45360,
+  "VAT (BDT)": 6804
+ },
+ {
+  "SO ID": "SO-001254",
+  "Line": 6797,
+  "SKU": "SKU-0045",
+  "Qty (units)": 240,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 0,
+  "Net (BDT)": 28224,
+  "VAT (BDT)": 4233.6
+ },
+ {
+  "SO ID": "SO-001255",
+  "Line": 6798,
+  "SKU": "SKU-0026",
+  "Qty (units)": 336,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 0,
+  "Net (BDT)": 45158.4,
+  "VAT (BDT)": 6773.76
+ },
+ {
+  "SO ID": "SO-001255",
+  "Line": 6799,
+  "SKU": "SKU-0052",
+  "Qty (units)": 888,
+  "Unit price (BDT)": 100.8,
+  "Discount %": 0,
+  "Net (BDT)": 89510.4,
+  "VAT (BDT)": 13426.56
+ },
+ {
+  "SO ID": "SO-001255",
+  "Line": 6800,
+  "SKU": "SKU-0035",
+  "Qty (units)": 740,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 2,
+  "Net (BDT)": 85283.52,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001255",
+  "Line": 6801,
+  "SKU": "SKU-0049",
+  "Qty (units)": 132,
+  "Unit price (BDT)": 789.6,
+  "Discount %": 0,
+  "Net (BDT)": 104227.2,
+  "VAT (BDT)": 15634.08
+ },
+ {
+  "SO ID": "SO-001255",
+  "Line": 6802,
+  "SKU": "SKU-0034",
+  "Qty (units)": 800,
+  "Unit price (BDT)": 35.28,
+  "Discount %": 0,
+  "Net (BDT)": 28224,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001255",
+  "Line": 6803,
+  "SKU": "SKU-0043",
+  "Qty (units)": 912,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 0,
+  "Net (BDT)": 61286.4,
+  "VAT (BDT)": 9192.96
+ },
+ {
+  "SO ID": "SO-001255",
+  "Line": 6804,
+  "SKU": "SKU-0036",
+  "Qty (units)": 380,
+  "Unit price (BDT)": 126,
+  "Discount %": 0,
+  "Net (BDT)": 47880,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001256",
+  "Line": 6805,
+  "SKU": "SKU-0043",
+  "Qty (units)": 384,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 0,
+  "Net (BDT)": 25804.8,
+  "VAT (BDT)": 3870.72
+ },
+ {
+  "SO ID": "SO-001256",
+  "Line": 6806,
+  "SKU": "SKU-0010",
+  "Qty (units)": 240,
+  "Unit price (BDT)": 138.6,
+  "Discount %": 0,
+  "Net (BDT)": 33264,
+  "VAT (BDT)": 4989.6
+ },
+ {
+  "SO ID": "SO-001256",
+  "Line": 6807,
+  "SKU": "SKU-0015",
+  "Qty (units)": 1296,
+  "Unit price (BDT)": 29.4,
+  "Discount %": 0,
+  "Net (BDT)": 38102.4,
+  "VAT (BDT)": 5715.36
+ },
+ {
+  "SO ID": "SO-001256",
+  "Line": 6808,
+  "SKU": "SKU-0036",
+  "Qty (units)": 400,
+  "Unit price (BDT)": 126,
+  "Discount %": 5,
+  "Net (BDT)": 47880,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001257",
+  "Line": 6809,
+  "SKU": "SKU-0025",
+  "Qty (units)": 100,
+  "Unit price (BDT)": 772.8,
+  "Discount %": 0,
+  "Net (BDT)": 77280,
+  "VAT (BDT)": 11592
+ },
+ {
+  "SO ID": "SO-001257",
+  "Line": 6810,
+  "SKU": "SKU-0050",
+  "Qty (units)": 960,
+  "Unit price (BDT)": 604.8,
+  "Discount %": 3,
+  "Net (BDT)": 563189.76,
+  "VAT (BDT)": 84478.46
+ },
+ {
+  "SO ID": "SO-001257",
+  "Line": 6811,
+  "SKU": "SKU-0002",
+  "Qty (units)": 264,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 2,
+  "Net (BDT)": 13039.49,
+  "VAT (BDT)": 1955.92
+ },
+ {
+  "SO ID": "SO-001257",
+  "Line": 6812,
+  "SKU": "SKU-0013",
+  "Qty (units)": 4752,
+  "Unit price (BDT)": 8.4,
+  "Discount %": 0,
+  "Net (BDT)": 39916.8,
+  "VAT (BDT)": 5987.52
+ },
+ {
+  "SO ID": "SO-001257",
+  "Line": 6813,
+  "SKU": "SKU-0004",
+  "Qty (units)": 648,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 13608,
+  "VAT (BDT)": 2041.2
+ },
+ {
+  "SO ID": "SO-001257",
+  "Line": 6814,
+  "SKU": "SKU-0051",
+  "Qty (units)": 552,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 0,
+  "Net (BDT)": 25502.4,
+  "VAT (BDT)": 3825.36
+ },
+ {
+  "SO ID": "SO-001257",
+  "Line": 6815,
+  "SKU": "SKU-0044",
+  "Qty (units)": 960,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 3,
+  "Net (BDT)": 62576.64,
+  "VAT (BDT)": 9386.5
+ },
+ {
+  "SO ID": "SO-001258",
+  "Line": 6816,
+  "SKU": "SKU-0032",
+  "Qty (units)": 48,
+  "Unit price (BDT)": 37.8,
+  "Discount %": 0,
+  "Net (BDT)": 1814.4,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001258",
+  "Line": 6817,
+  "SKU": "SKU-0022",
+  "Qty (units)": 120,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 2520,
+  "VAT (BDT)": 378
+ },
+ {
+  "SO ID": "SO-001258",
+  "Line": 6818,
+  "SKU": "SKU-0038",
+  "Qty (units)": 120,
+  "Unit price (BDT)": 88.2,
+  "Discount %": 0,
+  "Net (BDT)": 10584,
+  "VAT (BDT)": 1587.6
+ },
+ {
+  "SO ID": "SO-001258",
+  "Line": 6819,
+  "SKU": "SKU-0005",
+  "Qty (units)": 72,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 1512,
+  "VAT (BDT)": 226.8
+ },
+ {
+  "SO ID": "SO-001258",
+  "Line": 6820,
+  "SKU": "SKU-0037",
+  "Qty (units)": 80,
+  "Unit price (BDT)": 79.8,
+  "Discount %": 0,
+  "Net (BDT)": 6384,
+  "VAT (BDT)": 957.6
+ },
+ {
+  "SO ID": "SO-001258",
+  "Line": 6821,
+  "SKU": "SKU-0030",
+  "Qty (units)": 60,
+  "Unit price (BDT)": 107.52,
+  "Discount %": 0,
+  "Net (BDT)": 6451.2,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001259",
+  "Line": 6822,
+  "SKU": "SKU-0021",
+  "Qty (units)": 476,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 2,
+  "Net (BDT)": 31347.46,
+  "VAT (BDT)": 4702.12
+ },
+ {
+  "SO ID": "SO-001259",
+  "Line": 6823,
+  "SKU": "SKU-0028",
+  "Qty (units)": 108,
+  "Unit price (BDT)": 184.8,
+  "Discount %": 0,
+  "Net (BDT)": 19958.4,
+  "VAT (BDT)": 2993.76
+ },
+ {
+  "SO ID": "SO-001259",
+  "Line": 6824,
+  "SKU": "SKU-0035",
+  "Qty (units)": 460,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 0,
+  "Net (BDT)": 54096,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001259",
+  "Line": 6825,
+  "SKU": "SKU-0031",
+  "Qty (units)": 280,
+  "Unit price (BDT)": 63,
+  "Discount %": 0,
+  "Net (BDT)": 17640,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001259",
+  "Line": 6826,
+  "SKU": "SKU-0005",
+  "Qty (units)": 720,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 15120,
+  "VAT (BDT)": 2268
+ },
+ {
+  "SO ID": "SO-001259",
+  "Line": 6827,
+  "SKU": "SKU-0049",
+  "Qty (units)": 384,
+  "Unit price (BDT)": 789.6,
+  "Discount %": 0,
+  "Net (BDT)": 303206.4,
+  "VAT (BDT)": 45480.96
+ },
+ {
+  "SO ID": "SO-001259",
+  "Line": 6828,
+  "SKU": "SKU-0014",
+  "Qty (units)": 960,
+  "Unit price (BDT)": 33.6,
+  "Discount %": 3,
+  "Net (BDT)": 31288.32,
+  "VAT (BDT)": 4693.25
+ },
+ {
+  "SO ID": "SO-001259",
+  "Line": 6829,
+  "SKU": "SKU-0008",
+  "Qty (units)": 336,
+  "Unit price (BDT)": 37.8,
+  "Discount %": 3,
+  "Net (BDT)": 12319.78,
+  "VAT (BDT)": 1847.97
+ },
+ {
+  "SO ID": "SO-001260",
+  "Line": 6830,
+  "SKU": "SKU-0044",
+  "Qty (units)": 40,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 0,
+  "Net (BDT)": 2688,
+  "VAT (BDT)": 403.2
+ },
+ {
+  "SO ID": "SO-001261",
+  "Line": 6831,
+  "SKU": "SKU-0036",
+  "Qty (units)": 320,
+  "Unit price (BDT)": 126,
+  "Discount %": 5,
+  "Net (BDT)": 38304,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001261",
+  "Line": 6832,
+  "SKU": "SKU-0023",
+  "Qty (units)": 228,
+  "Unit price (BDT)": 159.6,
+  "Discount %": 0,
+  "Net (BDT)": 36388.8,
+  "VAT (BDT)": 5458.32
+ },
+ {
+  "SO ID": "SO-001261",
+  "Line": 6833,
+  "SKU": "SKU-0015",
+  "Qty (units)": 96,
+  "Unit price (BDT)": 29.4,
+  "Discount %": 0,
+  "Net (BDT)": 2822.4,
+  "VAT (BDT)": 423.36
+ },
+ {
+  "SO ID": "SO-001261",
+  "Line": 6834,
+  "SKU": "SKU-0042",
+  "Qty (units)": 180,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 0,
+  "Net (BDT)": 9072,
+  "VAT (BDT)": 1360.8
+ },
+ {
+  "SO ID": "SO-001261",
+  "Line": 6835,
+  "SKU": "SKU-0030",
+  "Qty (units)": 60,
+  "Unit price (BDT)": 107.52,
+  "Discount %": 5,
+  "Net (BDT)": 6128.64,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001261",
+  "Line": 6836,
+  "SKU": "SKU-0039",
+  "Qty (units)": 480,
+  "Unit price (BDT)": 63,
+  "Discount %": 0,
+  "Net (BDT)": 30240,
+  "VAT (BDT)": 4536
+ },
+ {
+  "SO ID": "SO-001261",
+  "Line": 6837,
+  "SKU": "SKU-0020",
+  "Qty (units)": 108,
+  "Unit price (BDT)": 25.2,
+  "Discount %": 0,
+  "Net (BDT)": 2721.6,
+  "VAT (BDT)": 408.24
+ },
+ {
+  "SO ID": "SO-001261",
+  "Line": 6838,
+  "SKU": "SKU-0003",
+  "Qty (units)": 576,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 2,
+  "Net (BDT)": 26078.98,
+  "VAT (BDT)": 3911.85
+ },
+ {
+  "SO ID": "SO-001262",
+  "Line": 6839,
+  "SKU": "SKU-0038",
+  "Qty (units)": 320,
+  "Unit price (BDT)": 88.2,
+  "Discount %": 5,
+  "Net (BDT)": 26812.8,
+  "VAT (BDT)": 4021.92
+ },
+ {
+  "SO ID": "SO-001262",
+  "Line": 6840,
+  "SKU": "SKU-0051",
+  "Qty (units)": 336,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 0,
+  "Net (BDT)": 15523.2,
+  "VAT (BDT)": 2328.48
+ },
+ {
+  "SO ID": "SO-001262",
+  "Line": 6841,
+  "SKU": "SKU-0031",
+  "Qty (units)": 560,
+  "Unit price (BDT)": 63,
+  "Discount %": 0,
+  "Net (BDT)": 35280,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001263",
+  "Line": 6842,
+  "SKU": "SKU-0014",
+  "Qty (units)": 96,
+  "Unit price (BDT)": 33.6,
+  "Discount %": 0,
+  "Net (BDT)": 3225.6,
+  "VAT (BDT)": 483.84
+ },
+ {
+  "SO ID": "SO-001263",
+  "Line": 6843,
+  "SKU": "SKU-0047",
+  "Qty (units)": 72,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 0,
+  "Net (BDT)": 9676.8,
+  "VAT (BDT)": 1451.52
+ },
+ {
+  "SO ID": "SO-001263",
+  "Line": 6844,
+  "SKU": "SKU-0030",
+  "Qty (units)": 40,
+  "Unit price (BDT)": 107.52,
+  "Discount %": 0,
+  "Net (BDT)": 4300.8,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001263",
+  "Line": 6845,
+  "SKU": "SKU-0024",
+  "Qty (units)": 132,
+  "Unit price (BDT)": 315,
+  "Discount %": 2,
+  "Net (BDT)": 40748.4,
+  "VAT (BDT)": 6112.26
+ },
+ {
+  "SO ID": "SO-001263",
+  "Line": 6846,
+  "SKU": "SKU-0029",
+  "Qty (units)": 60,
+  "Unit price (BDT)": 54.6,
+  "Discount %": 2,
+  "Net (BDT)": 3210.48,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001263",
+  "Line": 6847,
+  "SKU": "SKU-0020",
+  "Qty (units)": 96,
+  "Unit price (BDT)": 25.2,
+  "Discount %": 3,
+  "Net (BDT)": 2346.62,
+  "VAT (BDT)": 351.99
+ },
+ {
+  "SO ID": "SO-001263",
+  "Line": 6848,
+  "SKU": "SKU-0033",
+  "Qty (units)": 40,
+  "Unit price (BDT)": 113.4,
+  "Discount %": 3,
+  "Net (BDT)": 4399.92,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001263",
+  "Line": 6849,
+  "SKU": "SKU-0035",
+  "Qty (units)": 580,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 0,
+  "Net (BDT)": 68208,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001263",
+  "Line": 6850,
+  "SKU": "SKU-0031",
+  "Qty (units)": 60,
+  "Unit price (BDT)": 63,
+  "Discount %": 0,
+  "Net (BDT)": 3780,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001264",
+  "Line": 6851,
+  "SKU": "SKU-0037",
+  "Qty (units)": 160,
+  "Unit price (BDT)": 79.8,
+  "Discount %": 0,
+  "Net (BDT)": 12768,
+  "VAT (BDT)": 1915.2
+ },
+ {
+  "SO ID": "SO-001264",
+  "Line": 6852,
+  "SKU": "SKU-0045",
+  "Qty (units)": 80,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 0,
+  "Net (BDT)": 9408,
+  "VAT (BDT)": 1411.2
+ },
+ {
+  "SO ID": "SO-001264",
+  "Line": 6853,
+  "SKU": "SKU-0022",
+  "Qty (units)": 120,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 2520,
+  "VAT (BDT)": 378
+ },
+ {
+  "SO ID": "SO-001264",
+  "Line": 6854,
+  "SKU": "SKU-0025",
+  "Qty (units)": 12,
+  "Unit price (BDT)": 772.8,
+  "Discount %": 0,
+  "Net (BDT)": 9273.6,
+  "VAT (BDT)": 1391.04
+ },
+ {
+  "SO ID": "SO-001264",
+  "Line": 6855,
+  "SKU": "SKU-0039",
+  "Qty (units)": 240,
+  "Unit price (BDT)": 63,
+  "Discount %": 0,
+  "Net (BDT)": 15120,
+  "VAT (BDT)": 2268
+ },
+ {
+  "SO ID": "SO-001264",
+  "Line": 6856,
+  "SKU": "SKU-0042",
+  "Qty (units)": 240,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 0,
+  "Net (BDT)": 12096,
+  "VAT (BDT)": 1814.4
+ },
+ {
+  "SO ID": "SO-001265",
+  "Line": 6857,
+  "SKU": "SKU-0021",
+  "Qty (units)": 120,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 5,
+  "Net (BDT)": 7660.8,
+  "VAT (BDT)": 1149.12
+ },
+ {
+  "SO ID": "SO-001265",
+  "Line": 6858,
+  "SKU": "SKU-0017",
+  "Qty (units)": 108,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 0,
+  "Net (BDT)": 9979.2,
+  "VAT (BDT)": 1496.88
+ },
+ {
+  "SO ID": "SO-001265",
+  "Line": 6859,
+  "SKU": "SKU-0039",
+  "Qty (units)": 520,
+  "Unit price (BDT)": 63,
+  "Discount %": 0,
+  "Net (BDT)": 32760,
+  "VAT (BDT)": 4914
+ },
+ {
+  "SO ID": "SO-001266",
+  "Line": 6860,
+  "SKU": "SKU-0027",
+  "Qty (units)": 276,
+  "Unit price (BDT)": 260.4,
+  "Discount %": 0,
+  "Net (BDT)": 71870.4,
+  "VAT (BDT)": 10780.56
+ },
+ {
+  "SO ID": "SO-001266",
+  "Line": 6861,
+  "SKU": "SKU-0031",
+  "Qty (units)": 320,
+  "Unit price (BDT)": 63,
+  "Discount %": 0,
+  "Net (BDT)": 20160,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001266",
+  "Line": 6862,
+  "SKU": "SKU-0020",
+  "Qty (units)": 288,
+  "Unit price (BDT)": 25.2,
+  "Discount %": 0,
+  "Net (BDT)": 7257.6,
+  "VAT (BDT)": 1088.64
+ },
+ {
+  "SO ID": "SO-001266",
+  "Line": 6863,
+  "SKU": "SKU-0033",
+  "Qty (units)": 60,
+  "Unit price (BDT)": 113.4,
+  "Discount %": 0,
+  "Net (BDT)": 6804,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001267",
+  "Line": 6864,
+  "SKU": "SKU-0038",
+  "Qty (units)": 45,
+  "Unit price (BDT)": 88.2,
+  "Discount %": 0,
+  "Net (BDT)": 3969,
+  "VAT (BDT)": 595.35
+ },
+ {
+  "SO ID": "SO-001267",
+  "Line": 6865,
+  "SKU": "SKU-0011",
+  "Qty (units)": 8,
+  "Unit price (BDT)": 33.6,
+  "Discount %": 0,
+  "Net (BDT)": 268.8,
+  "VAT (BDT)": 40.32
+ },
+ {
+  "SO ID": "SO-001267",
+  "Line": 6866,
+  "SKU": "SKU-0050",
+  "Qty (units)": 13,
+  "Unit price (BDT)": 604.8,
+  "Discount %": 0,
+  "Net (BDT)": 7862.4,
+  "VAT (BDT)": 1179.36
+ },
+ {
+  "SO ID": "SO-001268",
+  "Line": 6867,
+  "SKU": "SKU-0046",
+  "Qty (units)": 160,
+  "Unit price (BDT)": 226.8,
+  "Discount %": 0,
+  "Net (BDT)": 36288,
+  "VAT (BDT)": 5443.2
+ },
+ {
+  "SO ID": "SO-001268",
+  "Line": 6868,
+  "SKU": "SKU-0048",
+  "Qty (units)": 624,
+  "Unit price (BDT)": 403.2,
+  "Discount %": 0,
+  "Net (BDT)": 251596.8,
+  "VAT (BDT)": 37739.52
+ },
+ {
+  "SO ID": "SO-001268",
+  "Line": 6869,
+  "SKU": "SKU-0012",
+  "Qty (units)": 456,
+  "Unit price (BDT)": 71.4,
+  "Discount %": 2,
+  "Net (BDT)": 31907.23,
+  "VAT (BDT)": 4786.08
+ },
+ {
+  "SO ID": "SO-001268",
+  "Line": 6870,
+  "SKU": "SKU-0017",
+  "Qty (units)": 228,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 2,
+  "Net (BDT)": 20645.86,
+  "VAT (BDT)": 3096.88
+ },
+ {
+  "SO ID": "SO-001268",
+  "Line": 6871,
+  "SKU": "SKU-0027",
+  "Qty (units)": 228,
+  "Unit price (BDT)": 260.4,
+  "Discount %": 0,
+  "Net (BDT)": 59371.2,
+  "VAT (BDT)": 8905.68
+ },
+ {
+  "SO ID": "SO-001268",
+  "Line": 6872,
+  "SKU": "SKU-0016",
+  "Qty (units)": 216,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 4536,
+  "VAT (BDT)": 680.4
+ },
+ {
+  "SO ID": "SO-001268",
+  "Line": 6873,
+  "SKU": "SKU-0037",
+  "Qty (units)": 880,
+  "Unit price (BDT)": 79.8,
+  "Discount %": 0,
+  "Net (BDT)": 70224,
+  "VAT (BDT)": 10533.6
+ },
+ {
+  "SO ID": "SO-001268",
+  "Line": 6874,
+  "SKU": "SKU-0023",
+  "Qty (units)": 312,
+  "Unit price (BDT)": 159.6,
+  "Discount %": 5,
+  "Net (BDT)": 47305.44,
+  "VAT (BDT)": 7095.82
+ },
+ {
+  "SO ID": "SO-001269",
+  "Line": 6875,
+  "SKU": "SKU-0023",
+  "Qty (units)": 29,
+  "Unit price (BDT)": 159.6,
+  "Discount %": 0,
+  "Net (BDT)": 4628.4,
+  "VAT (BDT)": 694.26
+ },
+ {
+  "SO ID": "SO-001269",
+  "Line": 6876,
+  "SKU": "SKU-0003",
+  "Qty (units)": 36,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 0,
+  "Net (BDT)": 1663.2,
+  "VAT (BDT)": 249.48
+ },
+ {
+  "SO ID": "SO-001269",
+  "Line": 6877,
+  "SKU": "SKU-0052",
+  "Qty (units)": 12,
+  "Unit price (BDT)": 100.8,
+  "Discount %": 0,
+  "Net (BDT)": 1209.6,
+  "VAT (BDT)": 181.44
+ },
+ {
+  "SO ID": "SO-001270",
+  "Line": 6878,
+  "SKU": "SKU-0052",
+  "Qty (units)": 348,
+  "Unit price (BDT)": 100.8,
+  "Discount %": 3,
+  "Net (BDT)": 34026.05,
+  "VAT (BDT)": 5103.91
+ },
+ {
+  "SO ID": "SO-001270",
+  "Line": 6879,
+  "SKU": "SKU-0026",
+  "Qty (units)": 324,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 0,
+  "Net (BDT)": 43545.6,
+  "VAT (BDT)": 6531.84
+ },
+ {
+  "SO ID": "SO-001270",
+  "Line": 6880,
+  "SKU": "SKU-0011",
+  "Qty (units)": 1056,
+  "Unit price (BDT)": 33.6,
+  "Discount %": 5,
+  "Net (BDT)": 33707.52,
+  "VAT (BDT)": 5056.13
+ },
+ {
+  "SO ID": "SO-001270",
+  "Line": 6881,
+  "SKU": "SKU-0017",
+  "Qty (units)": 324,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 0,
+  "Net (BDT)": 29937.6,
+  "VAT (BDT)": 4490.64
+ },
+ {
+  "SO ID": "SO-001270",
+  "Line": 6882,
+  "SKU": "SKU-0043",
+  "Qty (units)": 1152,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 2,
+  "Net (BDT)": 75866.11,
+  "VAT (BDT)": 11379.92
+ },
+ {
+  "SO ID": "SO-001270",
+  "Line": 6883,
+  "SKU": "SKU-0034",
+  "Qty (units)": 150,
+  "Unit price (BDT)": 35.28,
+  "Discount %": 0,
+  "Net (BDT)": 5292,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001271",
+  "Line": 6884,
+  "SKU": "SKU-0048",
+  "Qty (units)": 1680,
+  "Unit price (BDT)": 403.2,
+  "Discount %": 2,
+  "Net (BDT)": 663828.48,
+  "VAT (BDT)": 99574.27
+ },
+ {
+  "SO ID": "SO-001271",
+  "Line": 6885,
+  "SKU": "SKU-0011",
+  "Qty (units)": 1152,
+  "Unit price (BDT)": 33.6,
+  "Discount %": 0,
+  "Net (BDT)": 38707.2,
+  "VAT (BDT)": 5806.08
+ },
+ {
+  "SO ID": "SO-001271",
+  "Line": 6886,
+  "SKU": "SKU-0015",
+  "Qty (units)": 576,
+  "Unit price (BDT)": 29.4,
+  "Discount %": 0,
+  "Net (BDT)": 16934.4,
+  "VAT (BDT)": 2540.16
+ },
+ {
+  "SO ID": "SO-001272",
+  "Line": 6887,
+  "SKU": "SKU-0005",
+  "Qty (units)": 6,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 126,
+  "VAT (BDT)": 18.9
+ },
+ {
+  "SO ID": "SO-001273",
+  "Line": 6888,
+  "SKU": "SKU-0041",
+  "Qty (units)": 1500,
+  "Unit price (BDT)": 58.8,
+  "Discount %": 5,
+  "Net (BDT)": 83790,
+  "VAT (BDT)": 12568.5
+ },
+ {
+  "SO ID": "SO-001273",
+  "Line": 6889,
+  "SKU": "SKU-0021",
+  "Qty (units)": 96,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 0,
+  "Net (BDT)": 6451.2,
+  "VAT (BDT)": 967.68
+ },
+ {
+  "SO ID": "SO-001273",
+  "Line": 6890,
+  "SKU": "SKU-0050",
+  "Qty (units)": 240,
+  "Unit price (BDT)": 604.8,
+  "Discount %": 0,
+  "Net (BDT)": 145152,
+  "VAT (BDT)": 21772.8
+ },
+ {
+  "SO ID": "SO-001273",
+  "Line": 6891,
+  "SKU": "SKU-0034",
+  "Qty (units)": 750,
+  "Unit price (BDT)": 35.28,
+  "Discount %": 5,
+  "Net (BDT)": 25137,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001273",
+  "Line": 6892,
+  "SKU": "SKU-0026",
+  "Qty (units)": 72,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 0,
+  "Net (BDT)": 9676.8,
+  "VAT (BDT)": 1451.52
+ },
+ {
+  "SO ID": "SO-001273",
+  "Line": 6893,
+  "SKU": "SKU-0046",
+  "Qty (units)": 220,
+  "Unit price (BDT)": 226.8,
+  "Discount %": 3,
+  "Net (BDT)": 48399.12,
+  "VAT (BDT)": 7259.87
+ },
+ {
+  "SO ID": "SO-001273",
+  "Line": 6894,
+  "SKU": "SKU-0030",
+  "Qty (units)": 210,
+  "Unit price (BDT)": 107.52,
+  "Discount %": 3,
+  "Net (BDT)": 21901.82,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001273",
+  "Line": 6895,
+  "SKU": "SKU-0052",
+  "Qty (units)": 336,
+  "Unit price (BDT)": 100.8,
+  "Discount %": 0,
+  "Net (BDT)": 33868.8,
+  "VAT (BDT)": 5080.32
+ },
+ {
+  "SO ID": "SO-001273",
+  "Line": 6896,
+  "SKU": "SKU-0017",
+  "Qty (units)": 324,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 5,
+  "Net (BDT)": 28440.72,
+  "VAT (BDT)": 4266.11
+ },
+ {
+  "SO ID": "SO-001274",
+  "Line": 6897,
+  "SKU": "SKU-0037",
+  "Qty (units)": 1080,
+  "Unit price (BDT)": 79.8,
+  "Discount %": 3,
+  "Net (BDT)": 83598.48,
+  "VAT (BDT)": 12539.77
+ },
+ {
+  "SO ID": "SO-001274",
+  "Line": 6898,
+  "SKU": "SKU-0023",
+  "Qty (units)": 264,
+  "Unit price (BDT)": 159.6,
+  "Discount %": 0,
+  "Net (BDT)": 42134.4,
+  "VAT (BDT)": 6320.16
+ },
+ {
+  "SO ID": "SO-001274",
+  "Line": 6899,
+  "SKU": "SKU-0015",
+  "Qty (units)": 240,
+  "Unit price (BDT)": 29.4,
+  "Discount %": 5,
+  "Net (BDT)": 6703.2,
+  "VAT (BDT)": 1005.48
+ },
+ {
+  "SO ID": "SO-001275",
+  "Line": 6900,
+  "SKU": "SKU-0045",
+  "Qty (units)": 1440,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 0,
+  "Net (BDT)": 169344,
+  "VAT (BDT)": 25401.6
+ },
+ {
+  "SO ID": "SO-001275",
+  "Line": 6901,
+  "SKU": "SKU-0041",
+  "Qty (units)": 480,
+  "Unit price (BDT)": 58.8,
+  "Discount %": 2,
+  "Net (BDT)": 27659.52,
+  "VAT (BDT)": 4148.93
+ },
+ {
+  "SO ID": "SO-001275",
+  "Line": 6902,
+  "SKU": "SKU-0030",
+  "Qty (units)": 170,
+  "Unit price (BDT)": 107.52,
+  "Discount %": 5,
+  "Net (BDT)": 17364.48,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001275",
+  "Line": 6903,
+  "SKU": "SKU-0047",
+  "Qty (units)": 1368,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 0,
+  "Net (BDT)": 183859.2,
+  "VAT (BDT)": 27578.88
+ },
+ {
+  "SO ID": "SO-001275",
+  "Line": 6904,
+  "SKU": "SKU-0012",
+  "Qty (units)": 696,
+  "Unit price (BDT)": 71.4,
+  "Discount %": 2,
+  "Net (BDT)": 48700.51,
+  "VAT (BDT)": 7305.08
+ },
+ {
+  "SO ID": "SO-001276",
+  "Line": 6905,
+  "SKU": "SKU-0006",
+  "Qty (units)": 45,
+  "Unit price (BDT)": 75.6,
+  "Discount %": 0,
+  "Net (BDT)": 3402,
+  "VAT (BDT)": 510.3
+ },
+ {
+  "SO ID": "SO-001276",
+  "Line": 6906,
+  "SKU": "SKU-0024",
+  "Qty (units)": 28,
+  "Unit price (BDT)": 315,
+  "Discount %": 0,
+  "Net (BDT)": 8820,
+  "VAT (BDT)": 1323
+ },
+ {
+  "SO ID": "SO-001276",
+  "Line": 6907,
+  "SKU": "SKU-0050",
+  "Qty (units)": 40,
+  "Unit price (BDT)": 604.8,
+  "Discount %": 0,
+  "Net (BDT)": 24192,
+  "VAT (BDT)": 3628.8
+ },
+ {
+  "SO ID": "SO-001277",
+  "Line": 6908,
+  "SKU": "SKU-0022",
+  "Qty (units)": 72,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 1512,
+  "VAT (BDT)": 226.8
+ },
+ {
+  "SO ID": "SO-001277",
+  "Line": 6909,
+  "SKU": "SKU-0021",
+  "Qty (units)": 24,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 0,
+  "Net (BDT)": 1612.8,
+  "VAT (BDT)": 241.92
+ },
+ {
+  "SO ID": "SO-001277",
+  "Line": 6910,
+  "SKU": "SKU-0043",
+  "Qty (units)": 288,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 0,
+  "Net (BDT)": 19353.6,
+  "VAT (BDT)": 2903.04
+ },
+ {
+  "SO ID": "SO-001277",
+  "Line": 6911,
+  "SKU": "SKU-0004",
+  "Qty (units)": 288,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 6048,
+  "VAT (BDT)": 907.2
+ },
+ {
+  "SO ID": "SO-001277",
+  "Line": 6912,
+  "SKU": "SKU-0026",
+  "Qty (units)": 12,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 0,
+  "Net (BDT)": 1612.8,
+  "VAT (BDT)": 241.92
+ },
+ {
+  "SO ID": "SO-001277",
+  "Line": 6913,
+  "SKU": "SKU-0008",
+  "Qty (units)": 144,
+  "Unit price (BDT)": 37.8,
+  "Discount %": 0,
+  "Net (BDT)": 5443.2,
+  "VAT (BDT)": 816.48
+ },
+ {
+  "SO ID": "SO-001277",
+  "Line": 6914,
+  "SKU": "SKU-0002",
+  "Qty (units)": 120,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 0,
+  "Net (BDT)": 6048,
+  "VAT (BDT)": 907.2
+ },
+ {
+  "SO ID": "SO-001278",
+  "Line": 6915,
+  "SKU": "SKU-0010",
+  "Qty (units)": 300,
+  "Unit price (BDT)": 138.6,
+  "Discount %": 3,
+  "Net (BDT)": 40332.6,
+  "VAT (BDT)": 6049.89
+ },
+ {
+  "SO ID": "SO-001278",
+  "Line": 6916,
+  "SKU": "SKU-0017",
+  "Qty (units)": 540,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 5,
+  "Net (BDT)": 47401.2,
+  "VAT (BDT)": 7110.18
+ },
+ {
+  "SO ID": "SO-001278",
+  "Line": 6917,
+  "SKU": "SKU-0051",
+  "Qty (units)": 168,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 5,
+  "Net (BDT)": 7373.52,
+  "VAT (BDT)": 1106.03
+ },
+ {
+  "SO ID": "SO-001278",
+  "Line": 6918,
+  "SKU": "SKU-0033",
+  "Qty (units)": 600,
+  "Unit price (BDT)": 113.4,
+  "Discount %": 2,
+  "Net (BDT)": 66679.2,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001279",
+  "Line": 6919,
+  "SKU": "SKU-0001",
+  "Qty (units)": 768,
+  "Unit price (BDT)": 12.6,
+  "Discount %": 2,
+  "Net (BDT)": 9483.26,
+  "VAT (BDT)": 1422.49
+ },
+ {
+  "SO ID": "SO-001279",
+  "Line": 6920,
+  "SKU": "SKU-0014",
+  "Qty (units)": 1248,
+  "Unit price (BDT)": 33.6,
+  "Discount %": 2,
+  "Net (BDT)": 41094.14,
+  "VAT (BDT)": 6164.12
+ },
+ {
+  "SO ID": "SO-001279",
+  "Line": 6921,
+  "SKU": "SKU-0010",
+  "Qty (units)": 60,
+  "Unit price (BDT)": 138.6,
+  "Discount %": 5,
+  "Net (BDT)": 7900.2,
+  "VAT (BDT)": 1185.03
+ },
+ {
+  "SO ID": "SO-001279",
+  "Line": 6922,
+  "SKU": "SKU-0036",
+  "Qty (units)": 440,
+  "Unit price (BDT)": 126,
+  "Discount %": 2,
+  "Net (BDT)": 54331.2,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001279",
+  "Line": 6923,
+  "SKU": "SKU-0044",
+  "Qty (units)": 912,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 5,
+  "Net (BDT)": 58222.08,
+  "VAT (BDT)": 8733.31
+ },
+ {
+  "SO ID": "SO-001279",
+  "Line": 6924,
+  "SKU": "SKU-0042",
+  "Qty (units)": 840,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 2,
+  "Net (BDT)": 41489.28,
+  "VAT (BDT)": 6223.39
+ },
+ {
+  "SO ID": "SO-001279",
+  "Line": 6925,
+  "SKU": "SKU-0045",
+  "Qty (units)": 440,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 5,
+  "Net (BDT)": 49156.8,
+  "VAT (BDT)": 7373.52
+ },
+ {
+  "SO ID": "SO-001279",
+  "Line": 6926,
+  "SKU": "SKU-0017",
+  "Qty (units)": 60,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 2,
+  "Net (BDT)": 5433.12,
+  "VAT (BDT)": 814.97
+ },
+ {
+  "SO ID": "SO-001279",
+  "Line": 6927,
+  "SKU": "SKU-0012",
+  "Qty (units)": 48,
+  "Unit price (BDT)": 71.4,
+  "Discount %": 5,
+  "Net (BDT)": 3255.84,
+  "VAT (BDT)": 488.38
+ },
+ {
+  "SO ID": "SO-001280",
+  "Line": 6928,
+  "SKU": "SKU-0024",
+  "Qty (units)": 156,
+  "Unit price (BDT)": 315,
+  "Discount %": 0,
+  "Net (BDT)": 49140,
+  "VAT (BDT)": 7371
+ },
+ {
+  "SO ID": "SO-001280",
+  "Line": 6929,
+  "SKU": "SKU-0026",
+  "Qty (units)": 132,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 5,
+  "Net (BDT)": 16853.76,
+  "VAT (BDT)": 2528.06
+ },
+ {
+  "SO ID": "SO-001280",
+  "Line": 6930,
+  "SKU": "SKU-0005",
+  "Qty (units)": 1584,
+  "Unit price (BDT)": 21,
+  "Discount %": 3,
+  "Net (BDT)": 32266.08,
+  "VAT (BDT)": 4839.91
+ },
+ {
+  "SO ID": "SO-001280",
+  "Line": 6931,
+  "SKU": "SKU-0047",
+  "Qty (units)": 192,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 0,
+  "Net (BDT)": 25804.8,
+  "VAT (BDT)": 3870.72
+ },
+ {
+  "SO ID": "SO-001280",
+  "Line": 6932,
+  "SKU": "SKU-0036",
+  "Qty (units)": 220,
+  "Unit price (BDT)": 126,
+  "Discount %": 3,
+  "Net (BDT)": 26888.4,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001281",
+  "Line": 6933,
+  "SKU": "SKU-0035",
+  "Qty (units)": 680,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 0,
+  "Net (BDT)": 79968,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001281",
+  "Line": 6934,
+  "SKU": "SKU-0033",
+  "Qty (units)": 140,
+  "Unit price (BDT)": 113.4,
+  "Discount %": 2,
+  "Net (BDT)": 15558.48,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001281",
+  "Line": 6935,
+  "SKU": "SKU-0008",
+  "Qty (units)": 720,
+  "Unit price (BDT)": 37.8,
+  "Discount %": 0,
+  "Net (BDT)": 27216,
+  "VAT (BDT)": 4082.4
+ },
+ {
+  "SO ID": "SO-001281",
+  "Line": 6936,
+  "SKU": "SKU-0028",
+  "Qty (units)": 24,
+  "Unit price (BDT)": 184.8,
+  "Discount %": 3,
+  "Net (BDT)": 4302.14,
+  "VAT (BDT)": 645.32
+ },
+ {
+  "SO ID": "SO-001281",
+  "Line": 6937,
+  "SKU": "SKU-0037",
+  "Qty (units)": 400,
+  "Unit price (BDT)": 79.8,
+  "Discount %": 5,
+  "Net (BDT)": 30324,
+  "VAT (BDT)": 4548.6
+ },
+ {
+  "SO ID": "SO-001281",
+  "Line": 6938,
+  "SKU": "SKU-0014",
+  "Qty (units)": 1152,
+  "Unit price (BDT)": 33.6,
+  "Discount %": 3,
+  "Net (BDT)": 37545.98,
+  "VAT (BDT)": 5631.9
+ },
+ {
+  "SO ID": "SO-001281",
+  "Line": 6939,
+  "SKU": "SKU-0048",
+  "Qty (units)": 216,
+  "Unit price (BDT)": 403.2,
+  "Discount %": 0,
+  "Net (BDT)": 87091.2,
+  "VAT (BDT)": 13063.68
+ },
+ {
+  "SO ID": "SO-001281",
+  "Line": 6940,
+  "SKU": "SKU-0013",
+  "Qty (units)": 288,
+  "Unit price (BDT)": 8.4,
+  "Discount %": 3,
+  "Net (BDT)": 2346.62,
+  "VAT (BDT)": 351.99
+ },
+ {
+  "SO ID": "SO-001282",
+  "Line": 6941,
+  "SKU": "SKU-0049",
+  "Qty (units)": 168,
+  "Unit price (BDT)": 789.6,
+  "Discount %": 2,
+  "Net (BDT)": 129999.74,
+  "VAT (BDT)": 19499.96
+ },
+ {
+  "SO ID": "SO-001282",
+  "Line": 6942,
+  "SKU": "SKU-0027",
+  "Qty (units)": 384,
+  "Unit price (BDT)": 260.4,
+  "Discount %": 5,
+  "Net (BDT)": 94993.92,
+  "VAT (BDT)": 14249.09
+ },
+ {
+  "SO ID": "SO-001282",
+  "Line": 6943,
+  "SKU": "SKU-0003",
+  "Qty (units)": 840,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 2,
+  "Net (BDT)": 38031.84,
+  "VAT (BDT)": 5704.78
+ },
+ {
+  "SO ID": "SO-001282",
+  "Line": 6944,
+  "SKU": "SKU-0024",
+  "Qty (units)": 60,
+  "Unit price (BDT)": 315,
+  "Discount %": 5,
+  "Net (BDT)": 17955,
+  "VAT (BDT)": 2693.25
+ },
+ {
+  "SO ID": "SO-001282",
+  "Line": 6945,
+  "SKU": "SKU-0039",
+  "Qty (units)": 320,
+  "Unit price (BDT)": 63,
+  "Discount %": 3,
+  "Net (BDT)": 19555.2,
+  "VAT (BDT)": 2933.28
+ },
+ {
+  "SO ID": "SO-001283",
+  "Line": 6946,
+  "SKU": "SKU-0029",
+  "Qty (units)": 42,
+  "Unit price (BDT)": 54.6,
+  "Discount %": 0,
+  "Net (BDT)": 2293.2,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001283",
+  "Line": 6947,
+  "SKU": "SKU-0017",
+  "Qty (units)": 31,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 0,
+  "Net (BDT)": 2864.4,
+  "VAT (BDT)": 429.66
+ },
+ {
+  "SO ID": "SO-001284",
+  "Line": 6948,
+  "SKU": "SKU-0035",
+  "Qty (units)": 340,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 0,
+  "Net (BDT)": 39984,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001284",
+  "Line": 6949,
+  "SKU": "SKU-0050",
+  "Qty (units)": 912,
+  "Unit price (BDT)": 604.8,
+  "Discount %": 0,
+  "Net (BDT)": 551577.6,
+  "VAT (BDT)": 82736.64
+ },
+ {
+  "SO ID": "SO-001284",
+  "Line": 6950,
+  "SKU": "SKU-0004",
+  "Qty (units)": 216,
+  "Unit price (BDT)": 21,
+  "Discount %": 2,
+  "Net (BDT)": 4445.28,
+  "VAT (BDT)": 666.79
+ },
+ {
+  "SO ID": "SO-001284",
+  "Line": 6951,
+  "SKU": "SKU-0031",
+  "Qty (units)": 620,
+  "Unit price (BDT)": 63,
+  "Discount %": 0,
+  "Net (BDT)": 39060,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001284",
+  "Line": 6952,
+  "SKU": "SKU-0051",
+  "Qty (units)": 168,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 3,
+  "Net (BDT)": 7528.75,
+  "VAT (BDT)": 1129.31
+ },
+ {
+  "SO ID": "SO-001285",
+  "Line": 6953,
+  "SKU": "SKU-0007",
+  "Qty (units)": 312,
+  "Unit price (BDT)": 100.8,
+  "Discount %": 0,
+  "Net (BDT)": 31449.6,
+  "VAT (BDT)": 4717.44
+ },
+ {
+  "SO ID": "SO-001285",
+  "Line": 6954,
+  "SKU": "SKU-0016",
+  "Qty (units)": 336,
+  "Unit price (BDT)": 21,
+  "Discount %": 2,
+  "Net (BDT)": 6914.88,
+  "VAT (BDT)": 1037.23
+ },
+ {
+  "SO ID": "SO-001285",
+  "Line": 6955,
+  "SKU": "SKU-0017",
+  "Qty (units)": 60,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 0,
+  "Net (BDT)": 5544,
+  "VAT (BDT)": 831.6
+ },
+ {
+  "SO ID": "SO-001285",
+  "Line": 6956,
+  "SKU": "SKU-0042",
+  "Qty (units)": 360,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 0,
+  "Net (BDT)": 18144,
+  "VAT (BDT)": 2721.6
+ },
+ {
+  "SO ID": "SO-001285",
+  "Line": 6957,
+  "SKU": "SKU-0033",
+  "Qty (units)": 280,
+  "Unit price (BDT)": 113.4,
+  "Discount %": 0,
+  "Net (BDT)": 31752,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001285",
+  "Line": 6958,
+  "SKU": "SKU-0048",
+  "Qty (units)": 552,
+  "Unit price (BDT)": 403.2,
+  "Discount %": 0,
+  "Net (BDT)": 222566.4,
+  "VAT (BDT)": 33384.96
+ },
+ {
+  "SO ID": "SO-001285",
+  "Line": 6959,
+  "SKU": "SKU-0040",
+  "Qty (units)": 816,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 3,
+  "Net (BDT)": 73136.45,
+  "VAT (BDT)": 10970.47
+ },
+ {
+  "SO ID": "SO-001285",
+  "Line": 6960,
+  "SKU": "SKU-0028",
+  "Qty (units)": 300,
+  "Unit price (BDT)": 184.8,
+  "Discount %": 3,
+  "Net (BDT)": 53776.8,
+  "VAT (BDT)": 8066.52
+ },
+ {
+  "SO ID": "SO-001286",
+  "Line": 6961,
+  "SKU": "SKU-0040",
+  "Qty (units)": 1104,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 3,
+  "Net (BDT)": 98949.31,
+  "VAT (BDT)": 14842.4
+ },
+ {
+  "SO ID": "SO-001286",
+  "Line": 6962,
+  "SKU": "SKU-0001",
+  "Qty (units)": 1920,
+  "Unit price (BDT)": 12.6,
+  "Discount %": 2,
+  "Net (BDT)": 23708.16,
+  "VAT (BDT)": 3556.22
+ },
+ {
+  "SO ID": "SO-001286",
+  "Line": 6963,
+  "SKU": "SKU-0013",
+  "Qty (units)": 3744,
+  "Unit price (BDT)": 8.4,
+  "Discount %": 0,
+  "Net (BDT)": 31449.6,
+  "VAT (BDT)": 4717.44
+ },
+ {
+  "SO ID": "SO-001286",
+  "Line": 6964,
+  "SKU": "SKU-0049",
+  "Qty (units)": 156,
+  "Unit price (BDT)": 789.6,
+  "Discount %": 2,
+  "Net (BDT)": 120714.05,
+  "VAT (BDT)": 18107.11
+ },
+ {
+  "SO ID": "SO-001286",
+  "Line": 6965,
+  "SKU": "SKU-0034",
+  "Qty (units)": 650,
+  "Unit price (BDT)": 35.28,
+  "Discount %": 0,
+  "Net (BDT)": 22932,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001286",
+  "Line": 6966,
+  "SKU": "SKU-0023",
+  "Qty (units)": 84,
+  "Unit price (BDT)": 159.6,
+  "Discount %": 2,
+  "Net (BDT)": 13138.27,
+  "VAT (BDT)": 1970.74
+ },
+ {
+  "SO ID": "SO-001286",
+  "Line": 6967,
+  "SKU": "SKU-0010",
+  "Qty (units)": 324,
+  "Unit price (BDT)": 138.6,
+  "Discount %": 3,
+  "Net (BDT)": 43559.21,
+  "VAT (BDT)": 6533.88
+ },
+ {
+  "SO ID": "SO-001287",
+  "Line": 6968,
+  "SKU": "SKU-0043",
+  "Qty (units)": 624,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 5,
+  "Net (BDT)": 39836.16,
+  "VAT (BDT)": 5975.42
+ },
+ {
+  "SO ID": "SO-001287",
+  "Line": 6969,
+  "SKU": "SKU-0026",
+  "Qty (units)": 180,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 0,
+  "Net (BDT)": 24192,
+  "VAT (BDT)": 3628.8
+ },
+ {
+  "SO ID": "SO-001287",
+  "Line": 6970,
+  "SKU": "SKU-0012",
+  "Qty (units)": 672,
+  "Unit price (BDT)": 71.4,
+  "Discount %": 2,
+  "Net (BDT)": 47021.18,
+  "VAT (BDT)": 7053.18
+ },
+ {
+  "SO ID": "SO-001288",
+  "Line": 6971,
+  "SKU": "SKU-0022",
+  "Qty (units)": 43,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 903,
+  "VAT (BDT)": 135.45
+ },
+ {
+  "SO ID": "SO-001289",
+  "Line": 6972,
+  "SKU": "SKU-0048",
+  "Qty (units)": 240,
+  "Unit price (BDT)": 403.2,
+  "Discount %": 0,
+  "Net (BDT)": 96768,
+  "VAT (BDT)": 14515.2
+ },
+ {
+  "SO ID": "SO-001289",
+  "Line": 6973,
+  "SKU": "SKU-0013",
+  "Qty (units)": 4896,
+  "Unit price (BDT)": 8.4,
+  "Discount %": 5,
+  "Net (BDT)": 39070.08,
+  "VAT (BDT)": 5860.51
+ },
+ {
+  "SO ID": "SO-001289",
+  "Line": 6974,
+  "SKU": "SKU-0050",
+  "Qty (units)": 768,
+  "Unit price (BDT)": 604.8,
+  "Discount %": 3,
+  "Net (BDT)": 450551.81,
+  "VAT (BDT)": 67582.77
+ },
+ {
+  "SO ID": "SO-001289",
+  "Line": 6975,
+  "SKU": "SKU-0002",
+  "Qty (units)": 216,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 2,
+  "Net (BDT)": 10668.67,
+  "VAT (BDT)": 1600.3
+ },
+ {
+  "SO ID": "SO-001289",
+  "Line": 6976,
+  "SKU": "SKU-0033",
+  "Qty (units)": 420,
+  "Unit price (BDT)": 113.4,
+  "Discount %": 5,
+  "Net (BDT)": 45246.6,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001289",
+  "Line": 6977,
+  "SKU": "SKU-0030",
+  "Qty (units)": 120,
+  "Unit price (BDT)": 107.52,
+  "Discount %": 3,
+  "Net (BDT)": 12515.33,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001289",
+  "Line": 6978,
+  "SKU": "SKU-0003",
+  "Qty (units)": 72,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 2,
+  "Net (BDT)": 3259.87,
+  "VAT (BDT)": 488.98
+ },
+ {
+  "SO ID": "SO-001290",
+  "Line": 6979,
+  "SKU": "SKU-0023",
+  "Qty (units)": 24,
+  "Unit price (BDT)": 159.6,
+  "Discount %": 3,
+  "Net (BDT)": 3715.49,
+  "VAT (BDT)": 557.32
+ },
+ {
+  "SO ID": "SO-001290",
+  "Line": 6980,
+  "SKU": "SKU-0043",
+  "Qty (units)": 624,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 5,
+  "Net (BDT)": 39836.16,
+  "VAT (BDT)": 5975.42
+ },
+ {
+  "SO ID": "SO-001290",
+  "Line": 6981,
+  "SKU": "SKU-0029",
+  "Qty (units)": 960,
+  "Unit price (BDT)": 54.6,
+  "Discount %": 0,
+  "Net (BDT)": 52416,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001290",
+  "Line": 6982,
+  "SKU": "SKU-0020",
+  "Qty (units)": 60,
+  "Unit price (BDT)": 25.2,
+  "Discount %": 0,
+  "Net (BDT)": 1512,
+  "VAT (BDT)": 226.8
+ },
+ {
+  "SO ID": "SO-001291",
+  "Line": 6983,
+  "SKU": "SKU-0025",
+  "Qty (units)": 40,
+  "Unit price (BDT)": 772.8,
+  "Discount %": 0,
+  "Net (BDT)": 30912,
+  "VAT (BDT)": 4636.8
+ },
+ {
+  "SO ID": "SO-001291",
+  "Line": 6984,
+  "SKU": "SKU-0052",
+  "Qty (units)": 336,
+  "Unit price (BDT)": 100.8,
+  "Discount %": 5,
+  "Net (BDT)": 32175.36,
+  "VAT (BDT)": 4826.3
+ },
+ {
+  "SO ID": "SO-001291",
+  "Line": 6985,
+  "SKU": "SKU-0008",
+  "Qty (units)": 1344,
+  "Unit price (BDT)": 37.8,
+  "Discount %": 5,
+  "Net (BDT)": 48263.04,
+  "VAT (BDT)": 7239.46
+ },
+ {
+  "SO ID": "SO-001291",
+  "Line": 6986,
+  "SKU": "SKU-0029",
+  "Qty (units)": 180,
+  "Unit price (BDT)": 54.6,
+  "Discount %": 2,
+  "Net (BDT)": 9631.44,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001291",
+  "Line": 6987,
+  "SKU": "SKU-0028",
+  "Qty (units)": 204,
+  "Unit price (BDT)": 184.8,
+  "Discount %": 2,
+  "Net (BDT)": 36945.22,
+  "VAT (BDT)": 5541.78
+ },
+ {
+  "SO ID": "SO-001291",
+  "Line": 6988,
+  "SKU": "SKU-0036",
+  "Qty (units)": 80,
+  "Unit price (BDT)": 126,
+  "Discount %": 0,
+  "Net (BDT)": 10080,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001291",
+  "Line": 6989,
+  "SKU": "SKU-0026",
+  "Qty (units)": 276,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 0,
+  "Net (BDT)": 37094.4,
+  "VAT (BDT)": 5564.16
+ },
+ {
+  "SO ID": "SO-001291",
+  "Line": 6990,
+  "SKU": "SKU-0017",
+  "Qty (units)": 228,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 0,
+  "Net (BDT)": 21067.2,
+  "VAT (BDT)": 3160.08
+ },
+ {
+  "SO ID": "SO-001291",
+  "Line": 6991,
+  "SKU": "SKU-0018",
+  "Qty (units)": 504,
+  "Unit price (BDT)": 21,
+  "Discount %": 2,
+  "Net (BDT)": 10372.32,
+  "VAT (BDT)": 1555.85
+ },
+ {
+  "SO ID": "SO-001292",
+  "Line": 6992,
+  "SKU": "SKU-0047",
+  "Qty (units)": 48,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 0,
+  "Net (BDT)": 6451.2,
+  "VAT (BDT)": 967.68
+ },
+ {
+  "SO ID": "SO-001292",
+  "Line": 6993,
+  "SKU": "SKU-0035",
+  "Qty (units)": 60,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 0,
+  "Net (BDT)": 7056,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001292",
+  "Line": 6994,
+  "SKU": "SKU-0040",
+  "Qty (units)": 240,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 0,
+  "Net (BDT)": 22176,
+  "VAT (BDT)": 3326.4
+ },
+ {
+  "SO ID": "SO-001292",
+  "Line": 6995,
+  "SKU": "SKU-0001",
+  "Qty (units)": 576,
+  "Unit price (BDT)": 12.6,
+  "Discount %": 0,
+  "Net (BDT)": 7257.6,
+  "VAT (BDT)": 1088.64
+ },
+ {
+  "SO ID": "SO-001292",
+  "Line": 6996,
+  "SKU": "SKU-0042",
+  "Qty (units)": 120,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 0,
+  "Net (BDT)": 6048,
+  "VAT (BDT)": 907.2
+ },
+ {
+  "SO ID": "SO-001292",
+  "Line": 6997,
+  "SKU": "SKU-0027",
+  "Qty (units)": 48,
+  "Unit price (BDT)": 260.4,
+  "Discount %": 0,
+  "Net (BDT)": 12499.2,
+  "VAT (BDT)": 1874.88
+ },
+ {
+  "SO ID": "SO-001292",
+  "Line": 6998,
+  "SKU": "SKU-0018",
+  "Qty (units)": 48,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 1008,
+  "VAT (BDT)": 151.2
+ },
+ {
+  "SO ID": "SO-001292",
+  "Line": 6999,
+  "SKU": "SKU-0013",
+  "Qty (units)": 432,
+  "Unit price (BDT)": 8.4,
+  "Discount %": 0,
+  "Net (BDT)": 3628.8,
+  "VAT (BDT)": 544.32
+ },
+ {
+  "SO ID": "SO-001292",
+  "Line": 7000,
+  "SKU": "SKU-0032",
+  "Qty (units)": 72,
+  "Unit price (BDT)": 37.8,
+  "Discount %": 0,
+  "Net (BDT)": 2721.6,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001293",
+  "Line": 7001,
+  "SKU": "SKU-0039",
+  "Qty (units)": 41,
+  "Unit price (BDT)": 63,
+  "Discount %": 0,
+  "Net (BDT)": 2583,
+  "VAT (BDT)": 387.45
+ },
+ {
+  "SO ID": "SO-001293",
+  "Line": 7002,
+  "SKU": "SKU-0017",
+  "Qty (units)": 18,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 0,
+  "Net (BDT)": 1663.2,
+  "VAT (BDT)": 249.48
+ },
+ {
+  "SO ID": "SO-001293",
+  "Line": 7003,
+  "SKU": "SKU-0006",
+  "Qty (units)": 25,
+  "Unit price (BDT)": 75.6,
+  "Discount %": 0,
+  "Net (BDT)": 1890,
+  "VAT (BDT)": 283.5
+ },
+ {
+  "SO ID": "SO-001293",
+  "Line": 7004,
+  "SKU": "SKU-0004",
+  "Qty (units)": 33,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 693,
+  "VAT (BDT)": 103.95
+ },
+ {
+  "SO ID": "SO-001294",
+  "Line": 7005,
+  "SKU": "SKU-0021",
+  "Qty (units)": 100,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 0,
+  "Net (BDT)": 6720,
+  "VAT (BDT)": 1008
+ },
+ {
+  "SO ID": "SO-001294",
+  "Line": 7006,
+  "SKU": "SKU-0017",
+  "Qty (units)": 120,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 5,
+  "Net (BDT)": 10533.6,
+  "VAT (BDT)": 1580.04
+ },
+ {
+  "SO ID": "SO-001294",
+  "Line": 7007,
+  "SKU": "SKU-0034",
+  "Qty (units)": 475,
+  "Unit price (BDT)": 35.28,
+  "Discount %": 5,
+  "Net (BDT)": 15920.1,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001295",
+  "Line": 7008,
+  "SKU": "SKU-0041",
+  "Qty (units)": 840,
+  "Unit price (BDT)": 58.8,
+  "Discount %": 0,
+  "Net (BDT)": 49392,
+  "VAT (BDT)": 7408.8
+ },
+ {
+  "SO ID": "SO-001295",
+  "Line": 7009,
+  "SKU": "SKU-0025",
+  "Qty (units)": 8,
+  "Unit price (BDT)": 772.8,
+  "Discount %": 2,
+  "Net (BDT)": 6058.75,
+  "VAT (BDT)": 908.81
+ },
+ {
+  "SO ID": "SO-001295",
+  "Line": 7010,
+  "SKU": "SKU-0031",
+  "Qty (units)": 260,
+  "Unit price (BDT)": 63,
+  "Discount %": 0,
+  "Net (BDT)": 16380,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001296",
+  "Line": 7011,
+  "SKU": "SKU-0002",
+  "Qty (units)": 648,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 0,
+  "Net (BDT)": 32659.2,
+  "VAT (BDT)": 4898.88
+ },
+ {
+  "SO ID": "SO-001296",
+  "Line": 7012,
+  "SKU": "SKU-0049",
+  "Qty (units)": 240,
+  "Unit price (BDT)": 789.6,
+  "Discount %": 5,
+  "Net (BDT)": 180028.8,
+  "VAT (BDT)": 27004.32
+ },
+ {
+  "SO ID": "SO-001296",
+  "Line": 7013,
+  "SKU": "SKU-0039",
+  "Qty (units)": 640,
+  "Unit price (BDT)": 63,
+  "Discount %": 0,
+  "Net (BDT)": 40320,
+  "VAT (BDT)": 6048
+ },
+ {
+  "SO ID": "SO-001296",
+  "Line": 7014,
+  "SKU": "SKU-0016",
+  "Qty (units)": 504,
+  "Unit price (BDT)": 21,
+  "Discount %": 2,
+  "Net (BDT)": 10372.32,
+  "VAT (BDT)": 1555.85
+ },
+ {
+  "SO ID": "SO-001297",
+  "Line": 7015,
+  "SKU": "SKU-0038",
+  "Qty (units)": 1040,
+  "Unit price (BDT)": 88.2,
+  "Discount %": 3,
+  "Net (BDT)": 88976.16,
+  "VAT (BDT)": 13346.42
+ },
+ {
+  "SO ID": "SO-001297",
+  "Line": 7016,
+  "SKU": "SKU-0001",
+  "Qty (units)": 3552,
+  "Unit price (BDT)": 12.6,
+  "Discount %": 0,
+  "Net (BDT)": 44755.2,
+  "VAT (BDT)": 6713.28
+ },
+ {
+  "SO ID": "SO-001297",
+  "Line": 7017,
+  "SKU": "SKU-0046",
+  "Qty (units)": 60,
+  "Unit price (BDT)": 226.8,
+  "Discount %": 0,
+  "Net (BDT)": 13608,
+  "VAT (BDT)": 2041.2
+ },
+ {
+  "SO ID": "SO-001297",
+  "Line": 7018,
+  "SKU": "SKU-0009",
+  "Qty (units)": 864,
+  "Unit price (BDT)": 16.8,
+  "Discount %": 2,
+  "Net (BDT)": 14224.9,
+  "VAT (BDT)": 2133.74
+ },
+ {
+  "SO ID": "SO-001297",
+  "Line": 7019,
+  "SKU": "SKU-0030",
+  "Qty (units)": 110,
+  "Unit price (BDT)": 107.52,
+  "Discount %": 0,
+  "Net (BDT)": 11827.2,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001297",
+  "Line": 7020,
+  "SKU": "SKU-0032",
+  "Qty (units)": 744,
+  "Unit price (BDT)": 37.8,
+  "Discount %": 0,
+  "Net (BDT)": 28123.2,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001298",
+  "Line": 7021,
+  "SKU": "SKU-0011",
+  "Qty (units)": 864,
+  "Unit price (BDT)": 33.6,
+  "Discount %": 0,
+  "Net (BDT)": 29030.4,
+  "VAT (BDT)": 4354.56
+ },
+ {
+  "SO ID": "SO-001298",
+  "Line": 7022,
+  "SKU": "SKU-0005",
+  "Qty (units)": 1152,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 24192,
+  "VAT (BDT)": 3628.8
+ },
+ {
+  "SO ID": "SO-001298",
+  "Line": 7023,
+  "SKU": "SKU-0019",
+  "Qty (units)": 264,
+  "Unit price (BDT)": 12.6,
+  "Discount %": 0,
+  "Net (BDT)": 3326.4,
+  "VAT (BDT)": 498.96
+ },
+ {
+  "SO ID": "SO-001298",
+  "Line": 7024,
+  "SKU": "SKU-0015",
+  "Qty (units)": 672,
+  "Unit price (BDT)": 29.4,
+  "Discount %": 0,
+  "Net (BDT)": 19756.8,
+  "VAT (BDT)": 2963.52
+ },
+ {
+  "SO ID": "SO-001298",
+  "Line": 7025,
+  "SKU": "SKU-0022",
+  "Qty (units)": 312,
+  "Unit price (BDT)": 21,
+  "Discount %": 3,
+  "Net (BDT)": 6355.44,
+  "VAT (BDT)": 953.32
+ },
+ {
+  "SO ID": "SO-001298",
+  "Line": 7026,
+  "SKU": "SKU-0003",
+  "Qty (units)": 576,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 5,
+  "Net (BDT)": 25280.64,
+  "VAT (BDT)": 3792.1
+ },
+ {
+  "SO ID": "SO-001298",
+  "Line": 7027,
+  "SKU": "SKU-0014",
+  "Qty (units)": 1200,
+  "Unit price (BDT)": 33.6,
+  "Discount %": 2,
+  "Net (BDT)": 39513.6,
+  "VAT (BDT)": 5927.04
+ },
+ {
+  "SO ID": "SO-001298",
+  "Line": 7028,
+  "SKU": "SKU-0013",
+  "Qty (units)": 3024,
+  "Unit price (BDT)": 8.4,
+  "Discount %": 2,
+  "Net (BDT)": 24893.57,
+  "VAT (BDT)": 3734.04
+ },
+ {
+  "SO ID": "SO-001299",
+  "Line": 7029,
+  "SKU": "SKU-0023",
+  "Qty (units)": 240,
+  "Unit price (BDT)": 159.6,
+  "Discount %": 0,
+  "Net (BDT)": 38304,
+  "VAT (BDT)": 5745.6
+ },
+ {
+  "SO ID": "SO-001299",
+  "Line": 7030,
+  "SKU": "SKU-0036",
+  "Qty (units)": 460,
+  "Unit price (BDT)": 126,
+  "Discount %": 2,
+  "Net (BDT)": 56800.8,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001299",
+  "Line": 7031,
+  "SKU": "SKU-0041",
+  "Qty (units)": 1080,
+  "Unit price (BDT)": 58.8,
+  "Discount %": 0,
+  "Net (BDT)": 63504,
+  "VAT (BDT)": 9525.6
+ },
+ {
+  "SO ID": "SO-001299",
+  "Line": 7032,
+  "SKU": "SKU-0045",
+  "Qty (units)": 800,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 0,
+  "Net (BDT)": 94080,
+  "VAT (BDT)": 14112
+ },
+ {
+  "SO ID": "SO-001299",
+  "Line": 7033,
+  "SKU": "SKU-0017",
+  "Qty (units)": 144,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 0,
+  "Net (BDT)": 13305.6,
+  "VAT (BDT)": 1995.84
+ },
+ {
+  "SO ID": "SO-001300",
+  "Line": 7034,
+  "SKU": "SKU-0020",
+  "Qty (units)": 324,
+  "Unit price (BDT)": 25.2,
+  "Discount %": 0,
+  "Net (BDT)": 8164.8,
+  "VAT (BDT)": 1224.72
+ },
+ {
+  "SO ID": "SO-001300",
+  "Line": 7035,
+  "SKU": "SKU-0031",
+  "Qty (units)": 580,
+  "Unit price (BDT)": 63,
+  "Discount %": 0,
+  "Net (BDT)": 36540,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001300",
+  "Line": 7036,
+  "SKU": "SKU-0047",
+  "Qty (units)": 408,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 0,
+  "Net (BDT)": 54835.2,
+  "VAT (BDT)": 8225.28
+ },
+ {
+  "SO ID": "SO-001301",
+  "Line": 7037,
+  "SKU": "SKU-0034",
+  "Qty (units)": 300,
+  "Unit price (BDT)": 35.28,
+  "Discount %": 0,
+  "Net (BDT)": 10584,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001301",
+  "Line": 7038,
+  "SKU": "SKU-0006",
+  "Qty (units)": 432,
+  "Unit price (BDT)": 75.6,
+  "Discount %": 5,
+  "Net (BDT)": 31026.24,
+  "VAT (BDT)": 4653.94
+ },
+ {
+  "SO ID": "SO-001301",
+  "Line": 7039,
+  "SKU": "SKU-0002",
+  "Qty (units)": 432,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 0,
+  "Net (BDT)": 21772.8,
+  "VAT (BDT)": 3265.92
+ },
+ {
+  "SO ID": "SO-001301",
+  "Line": 7040,
+  "SKU": "SKU-0018",
+  "Qty (units)": 312,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 6552,
+  "VAT (BDT)": 982.8
+ },
+ {
+  "SO ID": "SO-001301",
+  "Line": 7041,
+  "SKU": "SKU-0049",
+  "Qty (units)": 192,
+  "Unit price (BDT)": 789.6,
+  "Discount %": 5,
+  "Net (BDT)": 144023.04,
+  "VAT (BDT)": 21603.46
+ },
+ {
+  "SO ID": "SO-001301",
+  "Line": 7042,
+  "SKU": "SKU-0015",
+  "Qty (units)": 1200,
+  "Unit price (BDT)": 29.4,
+  "Discount %": 0,
+  "Net (BDT)": 35280,
+  "VAT (BDT)": 5292
+ },
+ {
+  "SO ID": "SO-001301",
+  "Line": 7043,
+  "SKU": "SKU-0033",
+  "Qty (units)": 340,
+  "Unit price (BDT)": 113.4,
+  "Discount %": 0,
+  "Net (BDT)": 38556,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001302",
+  "Line": 7044,
+  "SKU": "SKU-0029",
+  "Qty (units)": 380,
+  "Unit price (BDT)": 54.6,
+  "Discount %": 0,
+  "Net (BDT)": 20748,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001302",
+  "Line": 7045,
+  "SKU": "SKU-0051",
+  "Qty (units)": 480,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 0,
+  "Net (BDT)": 22176,
+  "VAT (BDT)": 3326.4
+ },
+ {
+  "SO ID": "SO-001302",
+  "Line": 7046,
+  "SKU": "SKU-0047",
+  "Qty (units)": 336,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 2,
+  "Net (BDT)": 44255.23,
+  "VAT (BDT)": 6638.28
+ },
+ {
+  "SO ID": "SO-001302",
+  "Line": 7047,
+  "SKU": "SKU-0046",
+  "Qty (units)": 120,
+  "Unit price (BDT)": 226.8,
+  "Discount %": 0,
+  "Net (BDT)": 27216,
+  "VAT (BDT)": 4082.4
+ },
+ {
+  "SO ID": "SO-001302",
+  "Line": 7048,
+  "SKU": "SKU-0015",
+  "Qty (units)": 288,
+  "Unit price (BDT)": 29.4,
+  "Discount %": 0,
+  "Net (BDT)": 8467.2,
+  "VAT (BDT)": 1270.08
+ },
+ {
+  "SO ID": "SO-001302",
+  "Line": 7049,
+  "SKU": "SKU-0014",
+  "Qty (units)": 720,
+  "Unit price (BDT)": 33.6,
+  "Discount %": 3,
+  "Net (BDT)": 23466.24,
+  "VAT (BDT)": 3519.94
+ },
+ {
+  "SO ID": "SO-001303",
+  "Line": 7050,
+  "SKU": "SKU-0045",
+  "Qty (units)": 1200,
+  "Unit price (BDT)": 117.6,
+  "Discount %": 0,
+  "Net (BDT)": 141120,
+  "VAT (BDT)": 21168
+ },
+ {
+  "SO ID": "SO-001303",
+  "Line": 7051,
+  "SKU": "SKU-0037",
+  "Qty (units)": 600,
+  "Unit price (BDT)": 79.8,
+  "Discount %": 0,
+  "Net (BDT)": 47880,
+  "VAT (BDT)": 7182
+ },
+ {
+  "SO ID": "SO-001303",
+  "Line": 7052,
+  "SKU": "SKU-0028",
+  "Qty (units)": 264,
+  "Unit price (BDT)": 184.8,
+  "Discount %": 3,
+  "Net (BDT)": 47323.58,
+  "VAT (BDT)": 7098.54
+ },
+ {
+  "SO ID": "SO-001303",
+  "Line": 7053,
+  "SKU": "SKU-0005",
+  "Qty (units)": 288,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 6048,
+  "VAT (BDT)": 907.2
+ },
+ {
+  "SO ID": "SO-001303",
+  "Line": 7054,
+  "SKU": "SKU-0052",
+  "Qty (units)": 252,
+  "Unit price (BDT)": 100.8,
+  "Discount %": 0,
+  "Net (BDT)": 25401.6,
+  "VAT (BDT)": 3810.24
+ },
+ {
+  "SO ID": "SO-001303",
+  "Line": 7055,
+  "SKU": "SKU-0046",
+  "Qty (units)": 400,
+  "Unit price (BDT)": 226.8,
+  "Discount %": 3,
+  "Net (BDT)": 87998.4,
+  "VAT (BDT)": 13199.76
+ },
+ {
+  "SO ID": "SO-001303",
+  "Line": 7056,
+  "SKU": "SKU-0026",
+  "Qty (units)": 120,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 0,
+  "Net (BDT)": 16128,
+  "VAT (BDT)": 2419.2
+ },
+ {
+  "SO ID": "SO-001304",
+  "Line": 7057,
+  "SKU": "SKU-0003",
+  "Qty (units)": 216,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 3,
+  "Net (BDT)": 9679.82,
+  "VAT (BDT)": 1451.97
+ },
+ {
+  "SO ID": "SO-001304",
+  "Line": 7058,
+  "SKU": "SKU-0021",
+  "Qty (units)": 44,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 0,
+  "Net (BDT)": 2956.8,
+  "VAT (BDT)": 443.52
+ },
+ {
+  "SO ID": "SO-001304",
+  "Line": 7059,
+  "SKU": "SKU-0024",
+  "Qty (units)": 18,
+  "Unit price (BDT)": 315,
+  "Discount %": 0,
+  "Net (BDT)": 5670,
+  "VAT (BDT)": 850.5
+ },
+ {
+  "SO ID": "SO-001304",
+  "Line": 7060,
+  "SKU": "SKU-0027",
+  "Qty (units)": 192,
+  "Unit price (BDT)": 260.4,
+  "Discount %": 2,
+  "Net (BDT)": 48996.86,
+  "VAT (BDT)": 7349.53
+ },
+ {
+  "SO ID": "SO-001304",
+  "Line": 7061,
+  "SKU": "SKU-0023",
+  "Qty (units)": 108,
+  "Unit price (BDT)": 159.6,
+  "Discount %": 3,
+  "Net (BDT)": 16719.7,
+  "VAT (BDT)": 2507.96
+ },
+ {
+  "SO ID": "SO-001304",
+  "Line": 7062,
+  "SKU": "SKU-0020",
+  "Qty (units)": 216,
+  "Unit price (BDT)": 25.2,
+  "Discount %": 5,
+  "Net (BDT)": 5171.04,
+  "VAT (BDT)": 775.66
+ },
+ {
+  "SO ID": "SO-001305",
+  "Line": 7063,
+  "SKU": "SKU-0017",
+  "Qty (units)": 60,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 5,
+  "Net (BDT)": 5266.8,
+  "VAT (BDT)": 790.02
+ },
+ {
+  "SO ID": "SO-001305",
+  "Line": 7064,
+  "SKU": "SKU-0005",
+  "Qty (units)": 1008,
+  "Unit price (BDT)": 21,
+  "Discount %": 5,
+  "Net (BDT)": 20109.6,
+  "VAT (BDT)": 3016.44
+ },
+ {
+  "SO ID": "SO-001305",
+  "Line": 7065,
+  "SKU": "SKU-0018",
+  "Qty (units)": 1224,
+  "Unit price (BDT)": 21,
+  "Discount %": 2,
+  "Net (BDT)": 25189.92,
+  "VAT (BDT)": 3778.49
+ },
+ {
+  "SO ID": "SO-001306",
+  "Line": 7066,
+  "SKU": "SKU-0047",
+  "Qty (units)": 96,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 0,
+  "Net (BDT)": 12902.4,
+  "VAT (BDT)": 1935.36
+ },
+ {
+  "SO ID": "SO-001306",
+  "Line": 7067,
+  "SKU": "SKU-0009",
+  "Qty (units)": 288,
+  "Unit price (BDT)": 16.8,
+  "Discount %": 0,
+  "Net (BDT)": 4838.4,
+  "VAT (BDT)": 725.76
+ },
+ {
+  "SO ID": "SO-001306",
+  "Line": 7068,
+  "SKU": "SKU-0030",
+  "Qty (units)": 120,
+  "Unit price (BDT)": 107.52,
+  "Discount %": 5,
+  "Net (BDT)": 12257.28,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001306",
+  "Line": 7069,
+  "SKU": "SKU-0017",
+  "Qty (units)": 360,
+  "Unit price (BDT)": 92.4,
+  "Discount %": 0,
+  "Net (BDT)": 33264,
+  "VAT (BDT)": 4989.6
+ },
+ {
+  "SO ID": "SO-001307",
+  "Line": 7070,
+  "SKU": "SKU-0006",
+  "Qty (units)": 41,
+  "Unit price (BDT)": 75.6,
+  "Discount %": 0,
+  "Net (BDT)": 3099.6,
+  "VAT (BDT)": 464.94
+ },
+ {
+  "SO ID": "SO-001307",
+  "Line": 7071,
+  "SKU": "SKU-0024",
+  "Qty (units)": 30,
+  "Unit price (BDT)": 315,
+  "Discount %": 0,
+  "Net (BDT)": 9450,
+  "VAT (BDT)": 1417.5
+ },
+ {
+  "SO ID": "SO-001307",
+  "Line": 7072,
+  "SKU": "SKU-0050",
+  "Qty (units)": 31,
+  "Unit price (BDT)": 604.8,
+  "Discount %": 0,
+  "Net (BDT)": 18748.8,
+  "VAT (BDT)": 2812.32
+ },
+ {
+  "SO ID": "SO-001308",
+  "Line": 7073,
+  "SKU": "SKU-0002",
+  "Qty (units)": 264,
+  "Unit price (BDT)": 50.4,
+  "Discount %": 2,
+  "Net (BDT)": 13039.49,
+  "VAT (BDT)": 1955.92
+ },
+ {
+  "SO ID": "SO-001308",
+  "Line": 7074,
+  "SKU": "SKU-0013",
+  "Qty (units)": 1872,
+  "Unit price (BDT)": 8.4,
+  "Discount %": 2,
+  "Net (BDT)": 15410.3,
+  "VAT (BDT)": 2311.55
+ },
+ {
+  "SO ID": "SO-001308",
+  "Line": 7075,
+  "SKU": "SKU-0003",
+  "Qty (units)": 768,
+  "Unit price (BDT)": 46.2,
+  "Discount %": 0,
+  "Net (BDT)": 35481.6,
+  "VAT (BDT)": 5322.24
+ },
+ {
+  "SO ID": "SO-001308",
+  "Line": 7076,
+  "SKU": "SKU-0036",
+  "Qty (units)": 120,
+  "Unit price (BDT)": 126,
+  "Discount %": 3,
+  "Net (BDT)": 14666.4,
+  "VAT (BDT)": 0
+ },
+ {
+  "SO ID": "SO-001308",
+  "Line": 7077,
+  "SKU": "SKU-0018",
+  "Qty (units)": 552,
+  "Unit price (BDT)": 21,
+  "Discount %": 2,
+  "Net (BDT)": 11360.16,
+  "VAT (BDT)": 1704.02
+ },
+ {
+  "SO ID": "SO-001309",
+  "Line": 7078,
+  "SKU": "SKU-0016",
+  "Qty (units)": 144,
+  "Unit price (BDT)": 21,
+  "Discount %": 0,
+  "Net (BDT)": 3024,
+  "VAT (BDT)": 453.6
+ },
+ {
+  "SO ID": "SO-001309",
+  "Line": 7079,
+  "SKU": "SKU-0047",
+  "Qty (units)": 120,
+  "Unit price (BDT)": 134.4,
+  "Discount %": 0,
+  "Net (BDT)": 16128,
+  "VAT (BDT)": 2419.2
+ },
+ {
+  "SO ID": "SO-001309",
+  "Line": 7080,
+  "SKU": "SKU-0010",
+  "Qty (units)": 72,
+  "Unit price (BDT)": 138.6,
+  "Discount %": 0,
+  "Net (BDT)": 9979.2,
+  "VAT (BDT)": 1496.88
+ },
+ {
+  "SO ID": "SO-001309",
+  "Line": 7081,
+  "SKU": "SKU-0021",
+  "Qty (units)": 24,
+  "Unit price (BDT)": 67.2,
+  "Discount %": 0,
+  "Net (BDT)": 1612.8,
+  "VAT (BDT)": 241.92
+ },
+ {
+  "SO ID": "SO-001309",
+  "Line": 7082,
+  "SKU": "SKU-0049",
+  "Qty (units)": 24,
+  "Unit price (BDT)": 789.6,
+  "Discount %": 0,
+  "Net (BDT)": 18950.4,
+  "VAT (BDT)": 2842.56
  }
 ]

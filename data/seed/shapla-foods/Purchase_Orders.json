@@ -202,7 +202,7 @@
   "PO date": "2026-10-10",
   "Supplier ID": "SUP-018",
   "Deliver to": "LOC-001",
-  "Status": "Pending approval",
+  "Status": "Approved",
   "Total (BDT)": 7860200,
   "Expected date": "2026-10-13"
  },
@@ -247,7 +247,7 @@
   "PO date": "2026-10-12",
   "Supplier ID": "SUP-017",
   "Deliver to": "LOC-001",
-  "Status": "Pending approval",
+  "Status": "Approved",
   "Total (BDT)": 934230,
   "Expected date": "2026-10-18"
  },
@@ -571,7 +571,7 @@
   "PO date": "2026-10-25",
   "Supplier ID": "SUP-004",
   "Deliver to": "LOC-001",
-  "Status": "Approved",
+  "Status": "Received",
   "Total (BDT)": 1829830,
   "Expected date": "2026-11-03"
  },
@@ -814,7 +814,7 @@
   "PO date": "2026-10-13",
   "Supplier ID": "SUP-010",
   "Deliver to": "LOC-001",
-  "Status": "Pending approval",
+  "Status": "Received",
   "Total (BDT)": 471360,
   "Expected date": "2026-10-17"
  },
@@ -949,7 +949,7 @@
   "PO date": "2026-10-15",
   "Supplier ID": "SUP-002",
   "Deliver to": "LOC-001",
-  "Status": "Approved",
+  "Status": "Received",
   "Total (BDT)": 2328200,
   "Expected date": "2026-10-19"
  },
@@ -967,7 +967,7 @@
   "PO date": "2026-10-24",
   "Supplier ID": "SUP-018",
   "Deliver to": "LOC-001",
-  "Status": "Pending approval",
+  "Status": "Received",
   "Total (BDT)": 25305,
   "Expected date": "2026-10-29"
  },
@@ -1012,7 +1012,7 @@
   "PO date": "2026-10-14",
   "Supplier ID": "SUP-011",
   "Deliver to": "LOC-001",
-  "Status": "Approved",
+  "Status": "Received",
   "Total (BDT)": 2294535,
   "Expected date": "2026-10-25"
  },
@@ -1111,7 +1111,7 @@
   "PO date": "2026-10-17",
   "Supplier ID": "SUP-004",
   "Deliver to": "LOC-001",
-  "Status": "Pending approval",
+  "Status": "Approved",
   "Total (BDT)": 2305140,
   "Expected date": "2026-10-20"
  },
@@ -1129,7 +1129,7 @@
   "PO date": "2026-10-15",
   "Supplier ID": "SUP-012",
   "Deliver to": "LOC-001",
-  "Status": "Approved",
+  "Status": "Received",
   "Total (BDT)": 18500,
   "Expected date": "2026-10-24"
  },
@@ -1201,7 +1201,7 @@
   "PO date": "2026-10-16",
   "Supplier ID": "SUP-005",
   "Deliver to": "LOC-001",
-  "Status": "Approved",
+  "Status": "Received",
   "Total (BDT)": 407665,
   "Expected date": "2026-10-20"
  },
@@ -1258,5 +1258,95 @@
   "Status": "Received",
   "Total (BDT)": 2054915,
   "Expected date": "2026-07-16"
+ },
+ {
+  "PO ID": "PO-00141",
+  "PO date": "2026-10-26",
+  "Supplier ID": "SUP-015",
+  "Deliver to": "LOC-001",
+  "Status": "Approved",
+  "Total (BDT)": 92000,
+  "Expected date": "2026-10-31"
+ },
+ {
+  "PO ID": "PO-00142",
+  "PO date": "2026-10-27",
+  "Supplier ID": "SUP-008",
+  "Deliver to": "LOC-001",
+  "Status": "Received",
+  "Total (BDT)": 56690,
+  "Expected date": "2026-10-30"
+ },
+ {
+  "PO ID": "PO-00143",
+  "PO date": "2026-10-29",
+  "Supplier ID": "SUP-010",
+  "Deliver to": "LOC-001",
+  "Status": "Approved",
+  "Total (BDT)": 236200,
+  "Expected date": "2026-11-12"
+ },
+ {
+  "PO ID": "PO-00144",
+  "PO date": "2026-10-29",
+  "Supplier ID": "SUP-001",
+  "Deliver to": "LOC-001",
+  "Status": "Approved",
+  "Total (BDT)": 80600,
+  "Expected date": "2026-11-09"
+ },
+ {
+  "PO ID": "PO-00145",
+  "PO date": "2026-11-01",
+  "Supplier ID": "SUP-007",
+  "Deliver to": "LOC-001",
+  "Status": "Approved",
+  "Total (BDT)": 3068950,
+  "Expected date": "2026-11-12"
+ },
+ {
+  "PO ID": "PO-00146",
+  "PO date": "2026-11-02",
+  "Supplier ID": "SUP-016",
+  "Deliver to": "LOC-001",
+  "Status": "Approved",
+  "Total (BDT)": 2667820,
+  "Expected date": "2026-11-16"
+ },
+ {
+  "PO ID": "PO-00147",
+  "PO date": "2026-11-03",
+  "Supplier ID": "SUP-010",
+  "Deliver to": "LOC-001",
+  "Status": "Approved",
+  "Total (BDT)": 3005300,
+  "Expected date": "2026-11-13"
+ },
+ {
+  "PO ID": "PO-00148",
+  "PO date": "2026-11-04",
+  "Supplier ID": "SUP-013",
+  "Deliver to": "LOC-001",
+  "Status": "Approved",
+  "Total (BDT)": 938500,
+  "Expected date": "2026-11-11"
+ },
+ {
+  "PO ID": "PO-00149",
+  "PO date": "2026-11-05",
+  "Supplier ID": "SUP-002",
+  "Deliver to": "LOC-001",
+  "Status": "Approved",
+  "Total (BDT)": 384115,
+  "Expected date": "2026-11-15"
+ },
+ {
+  "PO ID": "PO-00150",
+  "PO date": "2026-11-04",
+  "Supplier ID": "SUP-004",
+  "Deliver to": "LOC-001",
+  "Status": "Pending approval",
+  "Total (BDT)": 1846680,
+  "Expected date": "2026-11-13"
  }
 ]

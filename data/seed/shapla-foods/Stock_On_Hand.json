@@ -2,482 +2,482 @@
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0001",
-  "Qty (units)": 14304,
-  "Qty (cases)": 149,
+  "Qty (units)": 20242,
+  "Qty (cases)": 210,
   "Reorder level (units)": 7680,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0002",
-  "Qty (units)": 5112,
-  "Qty (cases)": 213,
+  "Qty (units)": 3120,
+  "Qty (cases)": 130,
   "Reorder level (units)": 1920,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0003",
-  "Qty (units)": 9216,
-  "Qty (cases)": 384,
+  "Qty (units)": 7008,
+  "Qty (cases)": 292,
   "Reorder level (units)": 1920,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0004",
-  "Qty (units)": 26208,
-  "Qty (cases)": 364,
+  "Qty (units)": 22896,
+  "Qty (cases)": 318,
   "Reorder level (units)": 5760,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0005",
-  "Qty (units)": 20880,
-  "Qty (cases)": 290,
+  "Qty (units)": 14688,
+  "Qty (cases)": 204,
   "Reorder level (units)": 5760,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0006",
-  "Qty (units)": 4200,
-  "Qty (cases)": 175,
+  "Qty (units)": 3432,
+  "Qty (cases)": 143,
   "Reorder level (units)": 1920,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0007",
-  "Qty (units)": 7272,
-  "Qty (cases)": 303,
+  "Qty (units)": 5904,
+  "Qty (cases)": 246,
   "Reorder level (units)": 1920,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0008",
-  "Qty (units)": 17184,
-  "Qty (cases)": 358,
+  "Qty (units)": 11280,
+  "Qty (cases)": 235,
   "Reorder level (units)": 3840,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0009",
-  "Qty (units)": 10176,
-  "Qty (cases)": 106,
+  "Qty (units)": 25759,
+  "Qty (cases)": 268,
   "Reorder level (units)": 7680,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0010",
-  "Qty (units)": 4452,
-  "Qty (cases)": 371,
+  "Qty (units)": 3588,
+  "Qty (cases)": 299,
   "Reorder level (units)": 960,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0011",
-  "Qty (units)": 11568,
-  "Qty (cases)": 241,
+  "Qty (units)": 5664,
+  "Qty (cases)": 118,
   "Reorder level (units)": 3840,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0012",
-  "Qty (units)": 7560,
-  "Qty (cases)": 315,
+  "Qty (units)": 5232,
+  "Qty (cases)": 218,
   "Reorder level (units)": 1920,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0013",
-  "Qty (units)": 44352,
-  "Qty (cases)": 308,
+  "Qty (units)": 19296,
+  "Qty (cases)": 134,
   "Reorder level (units)": 11520,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0014",
-  "Qty (units)": 16320,
-  "Qty (cases)": 340,
+  "Qty (units)": 8688,
+  "Qty (cases)": 181,
   "Reorder level (units)": 3840,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0015",
-  "Qty (units)": 6192,
-  "Qty (cases)": 129,
+  "Qty (units)": 9084,
+  "Qty (cases)": 189,
   "Reorder level (units)": 3840,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0016",
-  "Qty (units)": 9456,
-  "Qty (cases)": 394,
+  "Qty (units)": 4656,
+  "Qty (cases)": 194,
   "Reorder level (units)": 1920,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0017",
-  "Qty (units)": 2604,
-  "Qty (cases)": 217,
+  "Qty (units)": 1200,
+  "Qty (cases)": 100,
   "Reorder level (units)": 960,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0018",
-  "Qty (units)": 5952,
-  "Qty (cases)": 248,
+  "Qty (units)": 3888,
+  "Qty (cases)": 162,
   "Reorder level (units)": 1920,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0019",
-  "Qty (units)": 1824,
-  "Qty (cases)": 76,
+  "Qty (units)": 5244,
+  "Qty (cases)": 218,
   "Reorder level (units)": 1920,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0020",
-  "Qty (units)": 3324,
-  "Qty (cases)": 277,
+  "Qty (units)": 1008,
+  "Qty (cases)": 84,
   "Reorder level (units)": 960,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0021",
-  "Qty (units)": 1164,
-  "Qty (cases)": 291,
+  "Qty (units)": 488,
+  "Qty (cases)": 122,
   "Reorder level (units)": 320,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0022",
-  "Qty (units)": 7872,
-  "Qty (cases)": 328,
+  "Qty (units)": 3240,
+  "Qty (cases)": 135,
   "Reorder level (units)": 1920,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0023",
-  "Qty (units)": 2856,
-  "Qty (cases)": 238,
+  "Qty (units)": 2196,
+  "Qty (cases)": 183,
   "Reorder level (units)": 960,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0024",
-  "Qty (units)": 1692,
-  "Qty (cases)": 282,
+  "Qty (units)": 864,
+  "Qty (cases)": 144,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0025",
-  "Qty (units)": 492,
-  "Qty (cases)": 123,
+  "Qty (units)": 826,
+  "Qty (cases)": 206,
   "Reorder level (units)": 320,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0026",
-  "Qty (units)": 3036,
-  "Qty (cases)": 253,
+  "Qty (units)": 528,
+  "Qty (cases)": 44,
   "Reorder level (units)": 960,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0027",
-  "Qty (units)": 4440,
-  "Qty (cases)": 370,
+  "Qty (units)": 3840,
+  "Qty (cases)": 320,
   "Reorder level (units)": 960,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0028",
-  "Qty (units)": 3480,
-  "Qty (cases)": 290,
+  "Qty (units)": 2064,
+  "Qty (cases)": 172,
   "Reorder level (units)": 960,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0029",
-  "Qty (units)": 860,
-  "Qty (cases)": 43,
+  "Qty (units)": 3090,
+  "Qty (cases)": 154,
   "Reorder level (units)": 1600,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0030",
-  "Qty (units)": 1030,
-  "Qty (cases)": 103,
+  "Qty (units)": 1988,
+  "Qty (cases)": 198,
   "Reorder level (units)": 800,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0031",
-  "Qty (units)": 7400,
-  "Qty (cases)": 370,
+  "Qty (units)": 5100,
+  "Qty (cases)": 255,
   "Reorder level (units)": 1600,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0032",
-  "Qty (units)": 3720,
-  "Qty (cases)": 155,
+  "Qty (units)": 6611,
+  "Qty (cases)": 275,
   "Reorder level (units)": 1920,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0033",
-  "Qty (units)": 4540,
-  "Qty (cases)": 227,
+  "Qty (units)": 3220,
+  "Qty (cases)": 161,
   "Reorder level (units)": 1600,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0034",
-  "Qty (units)": 7175,
-  "Qty (cases)": 287,
+  "Qty (units)": 6375,
+  "Qty (cases)": 255,
   "Reorder level (units)": 2000,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0035",
-  "Qty (units)": 2280,
-  "Qty (cases)": 114,
+  "Qty (units)": 3564,
+  "Qty (cases)": 178,
   "Reorder level (units)": 1600,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0036",
-  "Qty (units)": 5380,
-  "Qty (cases)": 269,
+  "Qty (units)": 2900,
+  "Qty (cases)": 145,
   "Reorder level (units)": 1600,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0037",
-  "Qty (units)": 7160,
-  "Qty (cases)": 179,
+  "Qty (units)": 6080,
+  "Qty (cases)": 152,
   "Reorder level (units)": 3200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0038",
-  "Qty (units)": 10400,
-  "Qty (cases)": 260,
+  "Qty (units)": 6080,
+  "Qty (cases)": 152,
   "Reorder level (units)": 3200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0039",
-  "Qty (units)": 10760,
-  "Qty (cases)": 269,
+  "Qty (units)": 9360,
+  "Qty (cases)": 234,
   "Reorder level (units)": 3200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0040",
-  "Qty (units)": 4080,
-  "Qty (cases)": 85,
+  "Qty (units)": 9416,
+  "Qty (cases)": 196,
   "Reorder level (units)": 3840,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0041",
-  "Qty (units)": 2940,
-  "Qty (cases)": 49,
+  "Qty (units)": 10085,
+  "Qty (cases)": 168,
   "Reorder level (units)": 4800,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0042",
-  "Qty (units)": 3840,
-  "Qty (cases)": 64,
+  "Qty (units)": 10315,
+  "Qty (cases)": 171,
   "Reorder level (units)": 4800,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0043",
-  "Qty (units)": 15120,
-  "Qty (cases)": 315,
+  "Qty (units)": 6480,
+  "Qty (cases)": 135,
   "Reorder level (units)": 3840,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0044",
-  "Qty (units)": 16752,
-  "Qty (cases)": 349,
+  "Qty (units)": 9408,
+  "Qty (cases)": 196,
   "Reorder level (units)": 3840,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0045",
-  "Qty (units)": 11680,
-  "Qty (cases)": 292,
+  "Qty (units)": 28171,
+  "Qty (cases)": 704,
   "Reorder level (units)": 3200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0046",
-  "Qty (units)": 4860,
-  "Qty (cases)": 243,
+  "Qty (units)": 2660,
+  "Qty (cases)": 133,
   "Reorder level (units)": 1600,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0047",
-  "Qty (units)": 2424,
-  "Qty (cases)": 101,
+  "Qty (units)": 2691,
+  "Qty (cases)": 112,
   "Reorder level (units)": 1920,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0048",
-  "Qty (units)": 5640,
-  "Qty (cases)": 235,
+  "Qty (units)": 3648,
+  "Qty (cases)": 152,
   "Reorder level (units)": 1920,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0049",
-  "Qty (units)": 3864,
-  "Qty (cases)": 322,
+  "Qty (units)": 2940,
+  "Qty (cases)": 245,
   "Reorder level (units)": 960,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0050",
-  "Qty (units)": 7896,
-  "Qty (cases)": 329,
+  "Qty (units)": 3240,
+  "Qty (cases)": 135,
   "Reorder level (units)": 1920,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0051",
-  "Qty (units)": 9024,
-  "Qty (cases)": 376,
+  "Qty (units)": 5544,
+  "Qty (cases)": 231,
   "Reorder level (units)": 1920,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-002",
   "SKU": "SKU-0052",
-  "Qty (units)": 2088,
-  "Qty (cases)": 174,
+  "Qty (units)": 528,
+  "Qty (cases)": 44,
   "Reorder level (units)": 960,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0001",
-  "Qty (units)": 3456,
-  "Qty (cases)": 36,
+  "Qty (units)": 322,
+  "Qty (cases)": 3,
   "Reorder level (units)": 960,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0002",
-  "Qty (units)": 1248,
-  "Qty (cases)": 52,
+  "Qty (units)": 240,
+  "Qty (cases)": 10,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0003",
-  "Qty (units)": 984,
-  "Qty (cases)": 41,
+  "Qty (units)": 240,
+  "Qty (cases)": 10,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0004",
-  "Qty (units)": 3888,
-  "Qty (cases)": 54,
+  "Qty (units)": 2127,
+  "Qty (cases)": 29,
   "Reorder level (units)": 720,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0005",
-  "Qty (units)": 1872,
-  "Qty (cases)": 26,
+  "Qty (units)": 720,
+  "Qty (cases)": 10,
   "Reorder level (units)": 720,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0006",
-  "Qty (units)": 864,
-  "Qty (cases)": 36,
+  "Qty (units)": 795,
+  "Qty (cases)": 33,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0007",
-  "Qty (units)": 984,
-  "Qty (cases)": 41,
+  "Qty (units)": 864,
+  "Qty (cases)": 36,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0008",
-  "Qty (units)": 288,
-  "Qty (cases)": 6,
+  "Qty (units)": 1344,
+  "Qty (cases)": 28,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
@@ -485,119 +485,119 @@
   "Qty (units)": 5088,
   "Qty (cases)": 53,
   "Reorder level (units)": 960,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0010",
-  "Qty (units)": 180,
-  "Qty (cases)": 15,
+  "Qty (units)": 120,
+  "Qty (cases)": 10,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0011",
-  "Qty (units)": 1968,
-  "Qty (cases)": 41,
+  "Qty (units)": 951,
+  "Qty (cases)": 19,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0012",
-  "Qty (units)": 1248,
-  "Qty (cases)": 52,
+  "Qty (units)": 240,
+  "Qty (cases)": 10,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0013",
-  "Qty (units)": 8208,
-  "Qty (cases)": 57,
+  "Qty (units)": 1527,
+  "Qty (cases)": 10,
   "Reorder level (units)": 1440,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0014",
-  "Qty (units)": 1104,
-  "Qty (cases)": 23,
+  "Qty (units)": 480,
+  "Qty (cases)": 10,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0015",
-  "Qty (units)": 1728,
-  "Qty (cases)": 36,
+  "Qty (units)": 480,
+  "Qty (cases)": 10,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0016",
-  "Qty (units)": 144,
-  "Qty (cases)": 6,
+  "Qty (units)": 96,
+  "Qty (cases)": 4,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0017",
-  "Qty (units)": 648,
-  "Qty (cases)": 54,
+  "Qty (units)": 330,
+  "Qty (cases)": 27,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0018",
-  "Qty (units)": 480,
-  "Qty (cases)": 20,
+  "Qty (units)": 264,
+  "Qty (cases)": 11,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0019",
-  "Qty (units)": 336,
-  "Qty (cases)": 14,
+  "Qty (units)": 240,
+  "Qty (cases)": 10,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0020",
-  "Qty (units)": 84,
-  "Qty (cases)": 7,
+  "Qty (units)": 120,
+  "Qty (cases)": 10,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0021",
-  "Qty (units)": 48,
-  "Qty (cases)": 12,
+  "Qty (units)": 16,
+  "Qty (cases)": 4,
   "Reorder level (units)": 40,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0022",
-  "Qty (units)": 384,
-  "Qty (cases)": 16,
+  "Qty (units)": 624,
+  "Qty (cases)": 26,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0023",
-  "Qty (units)": 336,
-  "Qty (cases)": 28,
+  "Qty (units)": 156,
+  "Qty (cases)": 13,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
@@ -605,7 +605,7 @@
   "Qty (units)": 144,
   "Qty (cases)": 24,
   "Reorder level (units)": 60,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
@@ -613,15 +613,15 @@
   "Qty (units)": 52,
   "Qty (cases)": 13,
   "Reorder level (units)": 40,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0026",
-  "Qty (units)": 408,
-  "Qty (cases)": 34,
+  "Qty (units)": 228,
+  "Qty (cases)": 19,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
@@ -629,199 +629,199 @@
   "Qty (units)": 204,
   "Qty (cases)": 17,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0028",
-  "Qty (units)": 108,
-  "Qty (cases)": 9,
+  "Qty (units)": 120,
+  "Qty (cases)": 10,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0029",
-  "Qty (units)": 640,
-  "Qty (cases)": 32,
+  "Qty (units)": 460,
+  "Qty (cases)": 23,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0030",
-  "Qty (units)": 110,
-  "Qty (cases)": 11,
+  "Qty (units)": 100,
+  "Qty (cases)": 10,
   "Reorder level (units)": 100,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0031",
-  "Qty (units)": 240,
-  "Qty (cases)": 12,
+  "Qty (units)": 200,
+  "Qty (cases)": 10,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0032",
-  "Qty (units)": 264,
-  "Qty (cases)": 11,
+  "Qty (units)": 240,
+  "Qty (cases)": 10,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0033",
-  "Qty (units)": 240,
-  "Qty (cases)": 12,
+  "Qty (units)": 200,
+  "Qty (cases)": 10,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0034",
-  "Qty (units)": 1375,
-  "Qty (cases)": 55,
+  "Qty (units)": 200,
+  "Qty (cases)": 8,
   "Reorder level (units)": 250,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0035",
-  "Qty (units)": 1200,
-  "Qty (cases)": 60,
+  "Qty (units)": 680,
+  "Qty (cases)": 34,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0036",
-  "Qty (units)": 540,
-  "Qty (cases)": 27,
+  "Qty (units)": 200,
+  "Qty (cases)": 10,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0037",
-  "Qty (units)": 2040,
-  "Qty (cases)": 51,
+  "Qty (units)": 1687,
+  "Qty (cases)": 42,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0038",
-  "Qty (units)": 2200,
-  "Qty (cases)": 55,
+  "Qty (units)": 488,
+  "Qty (cases)": 12,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0039",
-  "Qty (units)": 1360,
-  "Qty (cases)": 34,
+  "Qty (units)": 432,
+  "Qty (cases)": 10,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0040",
-  "Qty (units)": 576,
-  "Qty (cases)": 12,
+  "Qty (units)": 488,
+  "Qty (cases)": 10,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0041",
-  "Qty (units)": 2640,
-  "Qty (cases)": 44,
+  "Qty (units)": 1543,
+  "Qty (cases)": 25,
   "Reorder level (units)": 600,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0042",
-  "Qty (units)": 1320,
-  "Qty (cases)": 22,
+  "Qty (units)": 1080,
+  "Qty (cases)": 18,
   "Reorder level (units)": 600,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0043",
-  "Qty (units)": 2112,
-  "Qty (cases)": 44,
+  "Qty (units)": 816,
+  "Qty (cases)": 17,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0044",
-  "Qty (units)": 1248,
-  "Qty (cases)": 26,
+  "Qty (units)": 927,
+  "Qty (cases)": 19,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0045",
-  "Qty (units)": 1160,
-  "Qty (cases)": 29,
+  "Qty (units)": 400,
+  "Qty (cases)": 10,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0046",
-  "Qty (units)": 800,
-  "Qty (cases)": 40,
+  "Qty (units)": 600,
+  "Qty (cases)": 30,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0047",
-  "Qty (units)": 720,
-  "Qty (cases)": 30,
+  "Qty (units)": 135,
+  "Qty (cases)": 5,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0048",
-  "Qty (units)": 912,
-  "Qty (cases)": 38,
+  "Qty (units)": 0,
+  "Qty (cases)": 0,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0049",
-  "Qty (units)": 276,
-  "Qty (cases)": 23,
+  "Qty (units)": 96,
+  "Qty (cases)": 8,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0050",
-  "Qty (units)": 480,
-  "Qty (cases)": 20,
+  "Qty (units)": 51,
+  "Qty (cases)": 2,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
   "SKU": "SKU-0051",
-  "Qty (units)": 576,
-  "Qty (cases)": 24,
+  "Qty (units)": 240,
+  "Qty (cases)": 10,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-003",
@@ -829,15 +829,15 @@
   "Qty (units)": 552,
   "Qty (cases)": 46,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0001",
-  "Qty (units)": 672,
-  "Qty (cases)": 7,
+  "Qty (units)": 3456,
+  "Qty (cases)": 36,
   "Reorder level (units)": 960,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
@@ -845,39 +845,39 @@
   "Qty (units)": 672,
   "Qty (cases)": 28,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0003",
-  "Qty (units)": 1176,
-  "Qty (cases)": 49,
+  "Qty (units)": 864,
+  "Qty (cases)": 36,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0004",
-  "Qty (units)": 1584,
-  "Qty (cases)": 22,
+  "Qty (units)": 2016,
+  "Qty (cases)": 28,
   "Reorder level (units)": 720,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0005",
-  "Qty (units)": 3600,
-  "Qty (cases)": 50,
+  "Qty (units)": 1512,
+  "Qty (cases)": 21,
   "Reorder level (units)": 720,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0006",
-  "Qty (units)": 1128,
-  "Qty (cases)": 47,
+  "Qty (units)": 744,
+  "Qty (cases)": 31,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
@@ -885,7 +885,7 @@
   "Qty (units)": 1392,
   "Qty (cases)": 58,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
@@ -893,7 +893,7 @@
   "Qty (units)": 1920,
   "Qty (cases)": 40,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
@@ -901,15 +901,15 @@
   "Qty (units)": 1152,
   "Qty (cases)": 12,
   "Reorder level (units)": 960,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0010",
-  "Qty (units)": 612,
-  "Qty (cases)": 51,
+  "Qty (units)": 420,
+  "Qty (cases)": 35,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
@@ -917,7 +917,7 @@
   "Qty (units)": 576,
   "Qty (cases)": 12,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
@@ -925,23 +925,23 @@
   "Qty (units)": 1104,
   "Qty (cases)": 46,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0013",
-  "Qty (units)": 1296,
-  "Qty (cases)": 9,
+  "Qty (units)": 5760,
+  "Qty (cases)": 40,
   "Reorder level (units)": 1440,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0014",
-  "Qty (units)": 960,
-  "Qty (cases)": 20,
+  "Qty (units)": 480,
+  "Qty (cases)": 10,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
@@ -949,23 +949,23 @@
   "Qty (units)": 1680,
   "Qty (cases)": 35,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0016",
-  "Qty (units)": 504,
-  "Qty (cases)": 21,
+  "Qty (units)": 240,
+  "Qty (cases)": 10,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0017",
-  "Qty (units)": 96,
-  "Qty (cases)": 8,
+  "Qty (units)": 324,
+  "Qty (cases)": 27,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
@@ -973,7 +973,7 @@
   "Qty (units)": 288,
   "Qty (cases)": 12,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
@@ -981,7 +981,7 @@
   "Qty (units)": 1224,
   "Qty (cases)": 51,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
@@ -989,23 +989,23 @@
   "Qty (units)": 432,
   "Qty (cases)": 36,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0021",
-  "Qty (units)": 136,
-  "Qty (cases)": 34,
+  "Qty (units)": 124,
+  "Qty (cases)": 31,
   "Reorder level (units)": 40,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0022",
-  "Qty (units)": 264,
-  "Qty (cases)": 11,
+  "Qty (units)": 240,
+  "Qty (cases)": 10,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
@@ -1013,23 +1013,23 @@
   "Qty (units)": 288,
   "Qty (cases)": 24,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0024",
-  "Qty (units)": 330,
-  "Qty (cases)": 55,
+  "Qty (units)": 144,
+  "Qty (cases)": 24,
   "Reorder level (units)": 60,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0025",
-  "Qty (units)": 236,
-  "Qty (cases)": 59,
+  "Qty (units)": 84,
+  "Qty (cases)": 21,
   "Reorder level (units)": 40,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
@@ -1037,15 +1037,15 @@
   "Qty (units)": 564,
   "Qty (cases)": 47,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0027",
-  "Qty (units)": 396,
-  "Qty (cases)": 33,
+  "Qty (units)": 276,
+  "Qty (cases)": 23,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
@@ -1053,7 +1053,7 @@
   "Qty (units)": 636,
   "Qty (cases)": 53,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
@@ -1061,23 +1061,23 @@
   "Qty (units)": 560,
   "Qty (cases)": 28,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0030",
-  "Qty (units)": 210,
-  "Qty (cases)": 21,
+  "Qty (units)": 100,
+  "Qty (cases)": 10,
   "Reorder level (units)": 100,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0031",
-  "Qty (units)": 100,
-  "Qty (cases)": 5,
+  "Qty (units)": 200,
+  "Qty (cases)": 10,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
@@ -1085,15 +1085,15 @@
   "Qty (units)": 312,
   "Qty (cases)": 13,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0033",
-  "Qty (units)": 380,
-  "Qty (cases)": 19,
+  "Qty (units)": 200,
+  "Qty (cases)": 10,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
@@ -1101,23 +1101,23 @@
   "Qty (units)": 1075,
   "Qty (cases)": 43,
   "Reorder level (units)": 250,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0035",
-  "Qty (units)": 160,
-  "Qty (cases)": 8,
+  "Qty (units)": 660,
+  "Qty (cases)": 33,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0036",
-  "Qty (units)": 740,
-  "Qty (cases)": 37,
+  "Qty (units)": 560,
+  "Qty (cases)": 28,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
@@ -1125,23 +1125,23 @@
   "Qty (units)": 1560,
   "Qty (cases)": 39,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0038",
-  "Qty (units)": 2320,
-  "Qty (cases)": 58,
+  "Qty (units)": 1720,
+  "Qty (cases)": 43,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0039",
-  "Qty (units)": 2320,
-  "Qty (cases)": 58,
+  "Qty (units)": 1760,
+  "Qty (cases)": 44,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
@@ -1149,7 +1149,7 @@
   "Qty (units)": 1536,
   "Qty (cases)": 32,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
@@ -1157,7 +1157,7 @@
   "Qty (units)": 2460,
   "Qty (cases)": 41,
   "Reorder level (units)": 600,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
@@ -1165,7 +1165,7 @@
   "Qty (units)": 1980,
   "Qty (cases)": 33,
   "Reorder level (units)": 600,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
@@ -1173,23 +1173,23 @@
   "Qty (units)": 1344,
   "Qty (cases)": 28,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0044",
-  "Qty (units)": 1296,
-  "Qty (cases)": 27,
+  "Qty (units)": 1824,
+  "Qty (cases)": 38,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0045",
-  "Qty (units)": 280,
-  "Qty (cases)": 7,
+  "Qty (units)": 400,
+  "Qty (cases)": 10,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
@@ -1197,47 +1197,47 @@
   "Qty (units)": 1020,
   "Qty (cases)": 51,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0047",
-  "Qty (units)": 888,
-  "Qty (cases)": 37,
+  "Qty (units)": 240,
+  "Qty (cases)": 10,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0048",
-  "Qty (units)": 984,
-  "Qty (cases)": 41,
+  "Qty (units)": 840,
+  "Qty (cases)": 35,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0049",
-  "Qty (units)": 492,
-  "Qty (cases)": 41,
+  "Qty (units)": 485,
+  "Qty (cases)": 40,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0050",
-  "Qty (units)": 984,
-  "Qty (cases)": 41,
+  "Qty (units)": 864,
+  "Qty (cases)": 36,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
   "SKU": "SKU-0051",
-  "Qty (units)": 576,
-  "Qty (cases)": 24,
+  "Qty (units)": 240,
+  "Qty (cases)": 10,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-004",
@@ -1245,31 +1245,31 @@
   "Qty (units)": 360,
   "Qty (cases)": 30,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0001",
-  "Qty (units)": 1344,
-  "Qty (cases)": 14,
+  "Qty (units)": 960,
+  "Qty (cases)": 10,
   "Reorder level (units)": 960,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0002",
-  "Qty (units)": 360,
-  "Qty (cases)": 15,
+  "Qty (units)": 240,
+  "Qty (cases)": 10,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0003",
-  "Qty (units)": 360,
-  "Qty (cases)": 15,
+  "Qty (units)": 936,
+  "Qty (cases)": 39,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
@@ -1277,15 +1277,15 @@
   "Qty (units)": 2304,
   "Qty (cases)": 32,
   "Reorder level (units)": 720,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0005",
-  "Qty (units)": 1440,
-  "Qty (cases)": 20,
+  "Qty (units)": 2808,
+  "Qty (cases)": 39,
   "Reorder level (units)": 720,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
@@ -1293,31 +1293,31 @@
   "Qty (units)": 240,
   "Qty (cases)": 10,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0007",
-  "Qty (units)": 384,
-  "Qty (cases)": 16,
+  "Qty (units)": 638,
+  "Qty (cases)": 26,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0008",
-  "Qty (units)": 720,
-  "Qty (cases)": 15,
+  "Qty (units)": 480,
+  "Qty (cases)": 10,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0009",
-  "Qty (units)": 4896,
-  "Qty (cases)": 51,
+  "Qty (units)": 4608,
+  "Qty (cases)": 48,
   "Reorder level (units)": 960,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
@@ -1325,15 +1325,15 @@
   "Qty (units)": 684,
   "Qty (cases)": 57,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0011",
-  "Qty (units)": 2832,
-  "Qty (cases)": 59,
+  "Qty (units)": 1680,
+  "Qty (cases)": 35,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
@@ -1341,7 +1341,7 @@
   "Qty (units)": 648,
   "Qty (cases)": 27,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
@@ -1349,23 +1349,23 @@
   "Qty (units)": 6912,
   "Qty (cases)": 48,
   "Reorder level (units)": 1440,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0014",
-  "Qty (units)": 1968,
-  "Qty (cases)": 41,
+  "Qty (units)": 1488,
+  "Qty (cases)": 31,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0015",
-  "Qty (units)": 912,
-  "Qty (cases)": 19,
+  "Qty (units)": 1584,
+  "Qty (cases)": 33,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
@@ -1373,23 +1373,23 @@
   "Qty (units)": 1368,
   "Qty (cases)": 57,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0017",
-  "Qty (units)": 504,
-  "Qty (cases)": 42,
+  "Qty (units)": 144,
+  "Qty (cases)": 12,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0018",
-  "Qty (units)": 768,
-  "Qty (cases)": 32,
+  "Qty (units)": 744,
+  "Qty (cases)": 31,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
@@ -1397,111 +1397,111 @@
   "Qty (units)": 720,
   "Qty (cases)": 30,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0020",
-  "Qty (units)": 408,
-  "Qty (cases)": 34,
+  "Qty (units)": 120,
+  "Qty (cases)": 10,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0021",
-  "Qty (units)": 172,
-  "Qty (cases)": 43,
+  "Qty (units)": 40,
+  "Qty (cases)": 10,
   "Reorder level (units)": 40,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0022",
-  "Qty (units)": 240,
+  "Qty (units)": 261,
   "Qty (cases)": 10,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0023",
-  "Qty (units)": 168,
-  "Qty (cases)": 14,
+  "Qty (units)": 237,
+  "Qty (cases)": 19,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0024",
-  "Qty (units)": 36,
-  "Qty (cases)": 6,
+  "Qty (units)": 60,
+  "Qty (cases)": 10,
   "Reorder level (units)": 60,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0025",
-  "Qty (units)": 172,
-  "Qty (cases)": 43,
+  "Qty (units)": 40,
+  "Qty (cases)": 10,
   "Reorder level (units)": 40,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0026",
-  "Qty (units)": 108,
-  "Qty (cases)": 9,
+  "Qty (units)": 432,
+  "Qty (cases)": 36,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0027",
-  "Qty (units)": 372,
-  "Qty (cases)": 31,
+  "Qty (units)": 358,
+  "Qty (cases)": 29,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0028",
-  "Qty (units)": 300,
-  "Qty (cases)": 25,
+  "Qty (units)": 271,
+  "Qty (cases)": 22,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0029",
-  "Qty (units)": 140,
-  "Qty (cases)": 7,
+  "Qty (units)": 580,
+  "Qty (cases)": 29,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0030",
-  "Qty (units)": 340,
-  "Qty (cases)": 34,
+  "Qty (units)": 220,
+  "Qty (cases)": 22,
   "Reorder level (units)": 100,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0031",
-  "Qty (units)": 600,
-  "Qty (cases)": 30,
+  "Qty (units)": 500,
+  "Qty (cases)": 25,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0032",
-  "Qty (units)": 840,
-  "Qty (cases)": 35,
+  "Qty (units)": 240,
+  "Qty (cases)": 10,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
@@ -1509,7 +1509,7 @@
   "Qty (units)": 1120,
   "Qty (cases)": 56,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
@@ -1517,23 +1517,23 @@
   "Qty (units)": 775,
   "Qty (cases)": 31,
   "Reorder level (units)": 250,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0035",
-  "Qty (units)": 740,
-  "Qty (cases)": 37,
+  "Qty (units)": 400,
+  "Qty (cases)": 20,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0036",
-  "Qty (units)": 960,
-  "Qty (cases)": 48,
+  "Qty (units)": 280,
+  "Qty (cases)": 14,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
@@ -1541,15 +1541,15 @@
   "Qty (units)": 800,
   "Qty (cases)": 20,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0038",
-  "Qty (units)": 1360,
-  "Qty (cases)": 34,
+  "Qty (units)": 1560,
+  "Qty (cases)": 39,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
@@ -1557,39 +1557,39 @@
   "Qty (units)": 2200,
   "Qty (cases)": 55,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0040",
-  "Qty (units)": 1008,
-  "Qty (cases)": 21,
+  "Qty (units)": 672,
+  "Qty (cases)": 14,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0041",
-  "Qty (units)": 1140,
-  "Qty (cases)": 19,
+  "Qty (units)": 2040,
+  "Qty (cases)": 34,
   "Reorder level (units)": 600,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0042",
-  "Qty (units)": 2280,
-  "Qty (cases)": 38,
+  "Qty (units)": 1260,
+  "Qty (cases)": 21,
   "Reorder level (units)": 600,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0043",
-  "Qty (units)": 432,
-  "Qty (cases)": 9,
+  "Qty (units)": 1488,
+  "Qty (cases)": 31,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
@@ -1597,7 +1597,7 @@
   "Qty (units)": 2832,
   "Qty (cases)": 59,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
@@ -1605,39 +1605,39 @@
   "Qty (units)": 1760,
   "Qty (cases)": 44,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0046",
-  "Qty (units)": 280,
-  "Qty (cases)": 14,
+  "Qty (units)": 200,
+  "Qty (cases)": 10,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0047",
-  "Qty (units)": 264,
-  "Qty (cases)": 11,
+  "Qty (units)": 720,
+  "Qty (cases)": 30,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0048",
-  "Qty (units)": 1368,
-  "Qty (cases)": 57,
+  "Qty (units)": 240,
+  "Qty (cases)": 10,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0049",
-  "Qty (units)": 660,
-  "Qty (cases)": 55,
+  "Qty (units)": 120,
+  "Qty (cases)": 10,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
@@ -1645,7 +1645,7 @@
   "Qty (units)": 576,
   "Qty (cases)": 24,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
@@ -1653,31 +1653,31 @@
   "Qty (units)": 360,
   "Qty (cases)": 15,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-005",
   "SKU": "SKU-0052",
-  "Qty (units)": 408,
-  "Qty (cases)": 34,
+  "Qty (units)": 120,
+  "Qty (cases)": 10,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0001",
-  "Qty (units)": 1344,
-  "Qty (cases)": 14,
+  "Qty (units)": 384,
+  "Qty (cases)": 4,
   "Reorder level (units)": 960,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0002",
-  "Qty (units)": 792,
-  "Qty (cases)": 33,
+  "Qty (units)": 504,
+  "Qty (cases)": 21,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
@@ -1685,23 +1685,23 @@
   "Qty (units)": 960,
   "Qty (cases)": 40,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0004",
-  "Qty (units)": 2376,
-  "Qty (cases)": 33,
+  "Qty (units)": 1656,
+  "Qty (cases)": 23,
   "Reorder level (units)": 720,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0005",
-  "Qty (units)": 4320,
-  "Qty (cases)": 60,
+  "Qty (units)": 3672,
+  "Qty (cases)": 51,
   "Reorder level (units)": 720,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
@@ -1709,79 +1709,79 @@
   "Qty (units)": 1080,
   "Qty (cases)": 45,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0007",
-  "Qty (units)": 480,
-  "Qty (cases)": 20,
+  "Qty (units)": 384,
+  "Qty (cases)": 16,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0008",
-  "Qty (units)": 1728,
-  "Qty (cases)": 36,
+  "Qty (units)": 1680,
+  "Qty (cases)": 35,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0009",
-  "Qty (units)": 480,
-  "Qty (cases)": 5,
+  "Qty (units)": 3744,
+  "Qty (cases)": 39,
   "Reorder level (units)": 960,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0010",
-  "Qty (units)": 576,
-  "Qty (cases)": 48,
+  "Qty (units)": 372,
+  "Qty (cases)": 31,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0011",
-  "Qty (units)": 2592,
-  "Qty (cases)": 54,
+  "Qty (units)": 960,
+  "Qty (cases)": 20,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0012",
-  "Qty (units)": 144,
-  "Qty (cases)": 6,
+  "Qty (units)": 648,
+  "Qty (cases)": 27,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0013",
-  "Qty (units)": 4320,
-  "Qty (cases)": 30,
+  "Qty (units)": 4896,
+  "Qty (cases)": 34,
   "Reorder level (units)": 1440,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0014",
-  "Qty (units)": 2304,
-  "Qty (cases)": 48,
+  "Qty (units)": 2064,
+  "Qty (cases)": 43,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0015",
-  "Qty (units)": 2640,
-  "Qty (cases)": 55,
+  "Qty (units)": 2352,
+  "Qty (cases)": 49,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
@@ -1789,119 +1789,119 @@
   "Qty (units)": 1248,
   "Qty (cases)": 52,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0017",
-  "Qty (units)": 180,
-  "Qty (cases)": 15,
+  "Qty (units)": 120,
+  "Qty (cases)": 10,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0018",
-  "Qty (units)": 720,
-  "Qty (cases)": 30,
+  "Qty (units)": 648,
+  "Qty (cases)": 27,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0019",
-  "Qty (units)": 1080,
-  "Qty (cases)": 45,
+  "Qty (units)": 408,
+  "Qty (cases)": 17,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0020",
-  "Qty (units)": 216,
-  "Qty (cases)": 18,
+  "Qty (units)": 120,
+  "Qty (cases)": 10,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0021",
-  "Qty (units)": 176,
-  "Qty (cases)": 44,
+  "Qty (units)": 72,
+  "Qty (cases)": 18,
   "Reorder level (units)": 40,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0022",
-  "Qty (units)": 960,
-  "Qty (cases)": 40,
+  "Qty (units)": 763,
+  "Qty (cases)": 31,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0023",
-  "Qty (units)": 516,
-  "Qty (cases)": 43,
+  "Qty (units)": 384,
+  "Qty (cases)": 32,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0024",
-  "Qty (units)": 42,
-  "Qty (cases)": 7,
+  "Qty (units)": 120,
+  "Qty (cases)": 20,
   "Reorder level (units)": 60,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0025",
-  "Qty (units)": 176,
-  "Qty (cases)": 44,
+  "Qty (units)": 92,
+  "Qty (cases)": 23,
   "Reorder level (units)": 40,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0026",
-  "Qty (units)": 108,
-  "Qty (cases)": 9,
+  "Qty (units)": 0,
+  "Qty (cases)": 0,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0027",
-  "Qty (units)": 336,
-  "Qty (cases)": 28,
+  "Qty (units)": 288,
+  "Qty (cases)": 24,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0028",
-  "Qty (units)": 600,
-  "Qty (cases)": 50,
+  "Qty (units)": 336,
+  "Qty (cases)": 28,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0029",
-  "Qty (units)": 380,
-  "Qty (cases)": 19,
+  "Qty (units)": 320,
+  "Qty (cases)": 16,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0030",
-  "Qty (units)": 410,
-  "Qty (cases)": 41,
+  "Qty (units)": 390,
+  "Qty (cases)": 39,
   "Reorder level (units)": 100,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
@@ -1909,135 +1909,135 @@
   "Qty (units)": 1200,
   "Qty (cases)": 60,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0032",
-  "Qty (units)": 552,
-  "Qty (cases)": 23,
+  "Qty (units)": 168,
+  "Qty (cases)": 7,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0033",
-  "Qty (units)": 420,
-  "Qty (cases)": 21,
+  "Qty (units)": 380,
+  "Qty (cases)": 19,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0034",
-  "Qty (units)": 1375,
-  "Qty (cases)": 55,
+  "Qty (units)": 625,
+  "Qty (cases)": 25,
   "Reorder level (units)": 250,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0035",
-  "Qty (units)": 200,
-  "Qty (cases)": 10,
+  "Qty (units)": 445,
+  "Qty (cases)": 22,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0036",
-  "Qty (units)": 400,
-  "Qty (cases)": 20,
+  "Qty (units)": 200,
+  "Qty (cases)": 10,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0037",
-  "Qty (units)": 1200,
-  "Qty (cases)": 30,
+  "Qty (units)": 560,
+  "Qty (cases)": 14,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0038",
-  "Qty (units)": 1600,
-  "Qty (cases)": 40,
+  "Qty (units)": 400,
+  "Qty (cases)": 10,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0039",
-  "Qty (units)": 2200,
-  "Qty (cases)": 55,
+  "Qty (units)": 1880,
+  "Qty (cases)": 47,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0040",
-  "Qty (units)": 1680,
-  "Qty (cases)": 35,
+  "Qty (units)": 1152,
+  "Qty (cases)": 24,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0041",
-  "Qty (units)": 540,
-  "Qty (cases)": 9,
+  "Qty (units)": 600,
+  "Qty (cases)": 10,
   "Reorder level (units)": 600,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0042",
-  "Qty (units)": 1920,
-  "Qty (cases)": 32,
+  "Qty (units)": 1742,
+  "Qty (cases)": 29,
   "Reorder level (units)": 600,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0043",
-  "Qty (units)": 2352,
-  "Qty (cases)": 49,
+  "Qty (units)": 480,
+  "Qty (cases)": 10,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0044",
-  "Qty (units)": 1824,
-  "Qty (cases)": 38,
+  "Qty (units)": 480,
+  "Qty (cases)": 10,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0045",
-  "Qty (units)": 1360,
-  "Qty (cases)": 34,
+  "Qty (units)": 160,
+  "Qty (cases)": 4,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0046",
-  "Qty (units)": 1080,
-  "Qty (cases)": 54,
+  "Qty (units)": 420,
+  "Qty (cases)": 21,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0047",
-  "Qty (units)": 432,
-  "Qty (cases)": 18,
+  "Qty (units)": 360,
+  "Qty (cases)": 15,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
@@ -2045,23 +2045,23 @@
   "Qty (units)": 480,
   "Qty (cases)": 20,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0049",
-  "Qty (units)": 408,
-  "Qty (cases)": 34,
+  "Qty (units)": 120,
+  "Qty (cases)": 10,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0050",
-  "Qty (units)": 1200,
-  "Qty (cases)": 50,
+  "Qty (units)": 240,
+  "Qty (cases)": 10,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
@@ -2069,31 +2069,31 @@
   "Qty (units)": 864,
   "Qty (cases)": 36,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-006",
   "SKU": "SKU-0052",
-  "Qty (units)": 72,
-  "Qty (cases)": 6,
+  "Qty (units)": 204,
+  "Qty (cases)": 17,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0001",
-  "Qty (units)": 3264,
-  "Qty (cases)": 34,
+  "Qty (units)": 3840,
+  "Qty (cases)": 40,
   "Reorder level (units)": 960,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0002",
-  "Qty (units)": 1008,
-  "Qty (cases)": 42,
+  "Qty (units)": 312,
+  "Qty (cases)": 13,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
@@ -2101,23 +2101,23 @@
   "Qty (units)": 600,
   "Qty (cases)": 25,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0004",
-  "Qty (units)": 432,
-  "Qty (cases)": 6,
+  "Qty (units)": 720,
+  "Qty (cases)": 10,
   "Reorder level (units)": 720,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0005",
-  "Qty (units)": 1656,
-  "Qty (cases)": 23,
+  "Qty (units)": 2016,
+  "Qty (cases)": 28,
   "Reorder level (units)": 720,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
@@ -2125,15 +2125,15 @@
   "Qty (units)": 480,
   "Qty (cases)": 20,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0007",
-  "Qty (units)": 768,
-  "Qty (cases)": 32,
+  "Qty (units)": 360,
+  "Qty (cases)": 15,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
@@ -2141,23 +2141,23 @@
   "Qty (units)": 2544,
   "Qty (cases)": 53,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0009",
-  "Qty (units)": 5376,
-  "Qty (cases)": 56,
+  "Qty (units)": 3264,
+  "Qty (cases)": 34,
   "Reorder level (units)": 960,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0010",
-  "Qty (units)": 708,
-  "Qty (cases)": 59,
+  "Qty (units)": 492,
+  "Qty (cases)": 41,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
@@ -2165,39 +2165,39 @@
   "Qty (units)": 1920,
   "Qty (cases)": 40,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0012",
-  "Qty (units)": 984,
-  "Qty (cases)": 41,
+  "Qty (units)": 600,
+  "Qty (cases)": 25,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0013",
-  "Qty (units)": 1728,
-  "Qty (cases)": 12,
+  "Qty (units)": 1440,
+  "Qty (cases)": 10,
   "Reorder level (units)": 1440,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0014",
-  "Qty (units)": 1296,
-  "Qty (cases)": 27,
+  "Qty (units)": 1056,
+  "Qty (cases)": 22,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0015",
-  "Qty (units)": 288,
-  "Qty (cases)": 6,
+  "Qty (units)": 1440,
+  "Qty (cases)": 30,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
@@ -2205,31 +2205,31 @@
   "Qty (units)": 1032,
   "Qty (cases)": 43,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0017",
-  "Qty (units)": 216,
-  "Qty (cases)": 18,
+  "Qty (units)": 120,
+  "Qty (cases)": 10,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0018",
-  "Qty (units)": 456,
-  "Qty (cases)": 19,
+  "Qty (units)": 648,
+  "Qty (cases)": 27,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0019",
-  "Qty (units)": 1320,
-  "Qty (cases)": 55,
+  "Qty (units)": 336,
+  "Qty (cases)": 14,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
@@ -2237,7 +2237,7 @@
   "Qty (units)": 432,
   "Qty (cases)": 36,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
@@ -2245,103 +2245,103 @@
   "Qty (units)": 64,
   "Qty (cases)": 16,
   "Reorder level (units)": 40,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0022",
-  "Qty (units)": 1200,
-  "Qty (cases)": 50,
+  "Qty (units)": 696,
+  "Qty (cases)": 29,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0023",
-  "Qty (units)": 612,
-  "Qty (cases)": 51,
+  "Qty (units)": 468,
+  "Qty (cases)": 39,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0024",
-  "Qty (units)": 84,
-  "Qty (cases)": 14,
+  "Qty (units)": 60,
+  "Qty (cases)": 10,
   "Reorder level (units)": 60,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0025",
-  "Qty (units)": 84,
-  "Qty (cases)": 21,
+  "Qty (units)": 136,
+  "Qty (cases)": 34,
   "Reorder level (units)": 40,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0026",
-  "Qty (units)": 132,
-  "Qty (cases)": 11,
+  "Qty (units)": 444,
+  "Qty (cases)": 37,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0027",
-  "Qty (units)": 108,
-  "Qty (cases)": 9,
+  "Qty (units)": 396,
+  "Qty (cases)": 33,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0028",
-  "Qty (units)": 204,
-  "Qty (cases)": 17,
+  "Qty (units)": 120,
+  "Qty (cases)": 10,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0029",
-  "Qty (units)": 1020,
-  "Qty (cases)": 51,
+  "Qty (units)": 560,
+  "Qty (cases)": 28,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0030",
-  "Qty (units)": 330,
-  "Qty (cases)": 33,
+  "Qty (units)": 200,
+  "Qty (cases)": 20,
   "Reorder level (units)": 100,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0031",
-  "Qty (units)": 1180,
-  "Qty (cases)": 59,
+  "Qty (units)": 1025,
+  "Qty (cases)": 51,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0032",
-  "Qty (units)": 1368,
-  "Qty (cases)": 57,
+  "Qty (units)": 960,
+  "Qty (cases)": 40,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0033",
-  "Qty (units)": 280,
-  "Qty (cases)": 14,
+  "Qty (units)": 620,
+  "Qty (cases)": 31,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
@@ -2349,39 +2349,39 @@
   "Qty (units)": 1225,
   "Qty (cases)": 49,
   "Reorder level (units)": 250,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0035",
-  "Qty (units)": 1160,
-  "Qty (cases)": 58,
+  "Qty (units)": 560,
+  "Qty (cases)": 28,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0036",
-  "Qty (units)": 300,
-  "Qty (cases)": 15,
+  "Qty (units)": 580,
+  "Qty (cases)": 29,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0037",
-  "Qty (units)": 1920,
-  "Qty (cases)": 48,
+  "Qty (units)": 1760,
+  "Qty (cases)": 44,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0038",
-  "Qty (units)": 1640,
-  "Qty (cases)": 41,
+  "Qty (units)": 1280,
+  "Qty (cases)": 32,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
@@ -2389,23 +2389,23 @@
   "Qty (units)": 1320,
   "Qty (cases)": 33,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0040",
-  "Qty (units)": 336,
-  "Qty (cases)": 7,
+  "Qty (units)": 480,
+  "Qty (cases)": 10,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0041",
-  "Qty (units)": 1800,
-  "Qty (cases)": 30,
+  "Qty (units)": 900,
+  "Qty (cases)": 15,
   "Reorder level (units)": 600,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
@@ -2413,23 +2413,23 @@
   "Qty (units)": 1020,
   "Qty (cases)": 17,
   "Reorder level (units)": 600,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0043",
-  "Qty (units)": 912,
-  "Qty (cases)": 19,
+  "Qty (units)": 480,
+  "Qty (cases)": 10,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0044",
-  "Qty (units)": 1776,
-  "Qty (cases)": 37,
+  "Qty (units)": 1632,
+  "Qty (cases)": 34,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
@@ -2437,7 +2437,7 @@
   "Qty (units)": 2280,
   "Qty (cases)": 57,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
@@ -2445,15 +2445,15 @@
   "Qty (units)": 200,
   "Qty (cases)": 10,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0047",
-  "Qty (units)": 168,
-  "Qty (cases)": 7,
+  "Qty (units)": 264,
+  "Qty (cases)": 11,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
@@ -2461,31 +2461,31 @@
   "Qty (units)": 792,
   "Qty (cases)": 33,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0049",
-  "Qty (units)": 564,
-  "Qty (cases)": 47,
+  "Qty (units)": 204,
+  "Qty (cases)": 17,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0050",
-  "Qty (units)": 168,
-  "Qty (cases)": 7,
+  "Qty (units)": 624,
+  "Qty (cases)": 26,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
   "SKU": "SKU-0051",
-  "Qty (units)": 1320,
-  "Qty (cases)": 55,
+  "Qty (units)": 816,
+  "Qty (cases)": 34,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-007",
@@ -2493,7 +2493,7 @@
   "Qty (units)": 120,
   "Qty (cases)": 10,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
@@ -2501,23 +2501,23 @@
   "Qty (units)": 4032,
   "Qty (cases)": 42,
   "Reorder level (units)": 960,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0002",
-  "Qty (units)": 1440,
-  "Qty (cases)": 60,
+  "Qty (units)": 1128,
+  "Qty (cases)": 47,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0003",
-  "Qty (units)": 288,
-  "Qty (cases)": 12,
+  "Qty (units)": 240,
+  "Qty (cases)": 10,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
@@ -2525,15 +2525,15 @@
   "Qty (units)": 3240,
   "Qty (cases)": 45,
   "Reorder level (units)": 720,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0005",
-  "Qty (units)": 2160,
-  "Qty (cases)": 30,
+  "Qty (units)": 426,
+  "Qty (cases)": 5,
   "Reorder level (units)": 720,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
@@ -2541,7 +2541,7 @@
   "Qty (units)": 1008,
   "Qty (cases)": 42,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
@@ -2549,15 +2549,15 @@
   "Qty (units)": 1200,
   "Qty (cases)": 50,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0008",
-  "Qty (units)": 528,
-  "Qty (cases)": 11,
+  "Qty (units)": 1920,
+  "Qty (cases)": 40,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
@@ -2565,7 +2565,7 @@
   "Qty (units)": 1248,
   "Qty (cases)": 13,
   "Reorder level (units)": 960,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
@@ -2573,23 +2573,23 @@
   "Qty (units)": 456,
   "Qty (cases)": 38,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0011",
-  "Qty (units)": 1008,
-  "Qty (cases)": 21,
+  "Qty (units)": 576,
+  "Qty (cases)": 12,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0012",
-  "Qty (units)": 192,
-  "Qty (cases)": 8,
+  "Qty (units)": 240,
+  "Qty (cases)": 10,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
@@ -2597,47 +2597,47 @@
   "Qty (units)": 7200,
   "Qty (cases)": 50,
   "Reorder level (units)": 1440,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0014",
-  "Qty (units)": 960,
-  "Qty (cases)": 20,
+  "Qty (units)": 480,
+  "Qty (cases)": 10,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0015",
-  "Qty (units)": 1248,
-  "Qty (cases)": 26,
+  "Qty (units)": 480,
+  "Qty (cases)": 10,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0016",
-  "Qty (units)": 456,
-  "Qty (cases)": 19,
+  "Qty (units)": 240,
+  "Qty (cases)": 10,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0017",
-  "Qty (units)": 264,
-  "Qty (cases)": 22,
+  "Qty (units)": 204,
+  "Qty (cases)": 17,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0018",
-  "Qty (units)": 696,
-  "Qty (cases)": 29,
+  "Qty (units)": 240,
+  "Qty (cases)": 10,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
@@ -2645,39 +2645,39 @@
   "Qty (units)": 864,
   "Qty (cases)": 36,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0020",
-  "Qty (units)": 60,
-  "Qty (cases)": 5,
+  "Qty (units)": 120,
+  "Qty (cases)": 10,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0021",
-  "Qty (units)": 108,
-  "Qty (cases)": 27,
+  "Qty (units)": 40,
+  "Qty (cases)": 10,
   "Reorder level (units)": 40,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0022",
-  "Qty (units)": 456,
-  "Qty (cases)": 19,
+  "Qty (units)": 792,
+  "Qty (cases)": 33,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0023",
-  "Qty (units)": 348,
-  "Qty (cases)": 29,
+  "Qty (units)": 120,
+  "Qty (cases)": 10,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
@@ -2685,15 +2685,15 @@
   "Qty (units)": 342,
   "Qty (cases)": 57,
   "Reorder level (units)": 60,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0025",
-  "Qty (units)": 20,
-  "Qty (cases)": 5,
+  "Qty (units)": 108,
+  "Qty (cases)": 27,
   "Reorder level (units)": 40,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
@@ -2701,7 +2701,7 @@
   "Qty (units)": 312,
   "Qty (cases)": 26,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
@@ -2709,39 +2709,39 @@
   "Qty (units)": 180,
   "Qty (cases)": 15,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0028",
-  "Qty (units)": 408,
-  "Qty (cases)": 34,
+  "Qty (units)": 204,
+  "Qty (cases)": 17,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0029",
-  "Qty (units)": 180,
-  "Qty (cases)": 9,
+  "Qty (units)": 500,
+  "Qty (cases)": 25,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0030",
-  "Qty (units)": 320,
-  "Qty (cases)": 32,
+  "Qty (units)": 300,
+  "Qty (cases)": 30,
   "Reorder level (units)": 100,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0031",
-  "Qty (units)": 360,
-  "Qty (cases)": 18,
+  "Qty (units)": 80,
+  "Qty (cases)": 4,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
@@ -2749,7 +2749,7 @@
   "Qty (units)": 504,
   "Qty (cases)": 21,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
@@ -2757,23 +2757,23 @@
   "Qty (units)": 720,
   "Qty (cases)": 36,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0034",
-  "Qty (units)": 275,
-  "Qty (cases)": 11,
+  "Qty (units)": 250,
+  "Qty (cases)": 10,
   "Reorder level (units)": 250,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0035",
-  "Qty (units)": 460,
-  "Qty (cases)": 23,
+  "Qty (units)": 560,
+  "Qty (cases)": 28,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
@@ -2781,7 +2781,7 @@
   "Qty (units)": 560,
   "Qty (cases)": 28,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
@@ -2789,7 +2789,7 @@
   "Qty (units)": 1480,
   "Qty (cases)": 37,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
@@ -2797,47 +2797,47 @@
   "Qty (units)": 1680,
   "Qty (cases)": 42,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0039",
-  "Qty (units)": 320,
-  "Qty (cases)": 8,
+  "Qty (units)": 1080,
+  "Qty (cases)": 27,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0040",
-  "Qty (units)": 768,
-  "Qty (cases)": 16,
+  "Qty (units)": 1344,
+  "Qty (cases)": 28,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0041",
-  "Qty (units)": 3600,
-  "Qty (cases)": 60,
+  "Qty (units)": 840,
+  "Qty (cases)": 14,
   "Reorder level (units)": 600,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0042",
-  "Qty (units)": 1020,
-  "Qty (cases)": 17,
+  "Qty (units)": 1380,
+  "Qty (cases)": 23,
   "Reorder level (units)": 600,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0043",
-  "Qty (units)": 528,
-  "Qty (cases)": 11,
+  "Qty (units)": 480,
+  "Qty (cases)": 10,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
@@ -2845,47 +2845,47 @@
   "Qty (units)": 2880,
   "Qty (cases)": 60,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0045",
-  "Qty (units)": 320,
-  "Qty (cases)": 8,
+  "Qty (units)": 1200,
+  "Qty (cases)": 30,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0046",
-  "Qty (units)": 1060,
-  "Qty (cases)": 53,
+  "Qty (units)": 760,
+  "Qty (cases)": 38,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0047",
-  "Qty (units)": 1368,
-  "Qty (cases)": 57,
+  "Qty (units)": 720,
+  "Qty (cases)": 30,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0048",
-  "Qty (units)": 408,
-  "Qty (cases)": 17,
+  "Qty (units)": 288,
+  "Qty (cases)": 12,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0049",
-  "Qty (units)": 336,
-  "Qty (cases)": 28,
+  "Qty (units)": 120,
+  "Qty (cases)": 10,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
@@ -2893,15 +2893,15 @@
   "Qty (units)": 456,
   "Qty (cases)": 19,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
   "SKU": "SKU-0051",
-  "Qty (units)": 624,
-  "Qty (cases)": 26,
+  "Qty (units)": 960,
+  "Qty (cases)": 40,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-008",
@@ -2909,31 +2909,31 @@
   "Qty (units)": 420,
   "Qty (cases)": 35,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0001",
-  "Qty (units)": 1824,
-  "Qty (cases)": 19,
+  "Qty (units)": 960,
+  "Qty (cases)": 10,
   "Reorder level (units)": 960,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0002",
-  "Qty (units)": 672,
-  "Qty (cases)": 28,
+  "Qty (units)": 696,
+  "Qty (cases)": 29,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0003",
-  "Qty (units)": 744,
-  "Qty (cases)": 31,
+  "Qty (units)": 888,
+  "Qty (cases)": 37,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
@@ -2941,15 +2941,15 @@
   "Qty (units)": 720,
   "Qty (cases)": 10,
   "Reorder level (units)": 720,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0005",
-  "Qty (units)": 2376,
-  "Qty (cases)": 33,
+  "Qty (units)": 1512,
+  "Qty (cases)": 21,
   "Reorder level (units)": 720,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
@@ -2957,7 +2957,7 @@
   "Qty (units)": 1344,
   "Qty (cases)": 56,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
@@ -2965,7 +2965,7 @@
   "Qty (units)": 768,
   "Qty (cases)": 32,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
@@ -2973,15 +2973,15 @@
   "Qty (units)": 480,
   "Qty (cases)": 10,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0009",
-  "Qty (units)": 4992,
-  "Qty (cases)": 52,
+  "Qty (units)": 3072,
+  "Qty (cases)": 32,
   "Reorder level (units)": 960,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
@@ -2989,7 +2989,7 @@
   "Qty (units)": 372,
   "Qty (cases)": 31,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
@@ -2997,15 +2997,15 @@
   "Qty (units)": 480,
   "Qty (cases)": 10,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0012",
-  "Qty (units)": 744,
-  "Qty (cases)": 31,
+  "Qty (units)": 696,
+  "Qty (cases)": 29,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
@@ -3013,39 +3013,39 @@
   "Qty (units)": 8496,
   "Qty (cases)": 59,
   "Reorder level (units)": 1440,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0014",
-  "Qty (units)": 2736,
-  "Qty (cases)": 57,
+  "Qty (units)": 1104,
+  "Qty (cases)": 23,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0015",
-  "Qty (units)": 2688,
-  "Qty (cases)": 56,
+  "Qty (units)": 2400,
+  "Qty (cases)": 50,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0016",
-  "Qty (units)": 432,
-  "Qty (cases)": 18,
+  "Qty (units)": 816,
+  "Qty (cases)": 34,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0017",
-  "Qty (units)": 672,
-  "Qty (cases)": 56,
+  "Qty (units)": 324,
+  "Qty (cases)": 27,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
@@ -3053,7 +3053,7 @@
   "Qty (units)": 504,
   "Qty (cases)": 21,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
@@ -3061,23 +3061,23 @@
   "Qty (units)": 1368,
   "Qty (cases)": 57,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0020",
-  "Qty (units)": 84,
-  "Qty (cases)": 7,
+  "Qty (units)": 348,
+  "Qty (cases)": 29,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0021",
-  "Qty (units)": 196,
-  "Qty (cases)": 49,
+  "Qty (units)": 92,
+  "Qty (cases)": 23,
   "Reorder level (units)": 40,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
@@ -3085,7 +3085,7 @@
   "Qty (units)": 1224,
   "Qty (cases)": 51,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
@@ -3093,7 +3093,7 @@
   "Qty (units)": 144,
   "Qty (cases)": 12,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
@@ -3101,31 +3101,31 @@
   "Qty (units)": 186,
   "Qty (cases)": 31,
   "Reorder level (units)": 60,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0025",
-  "Qty (units)": 224,
-  "Qty (cases)": 56,
+  "Qty (units)": 104,
+  "Qty (cases)": 26,
   "Reorder level (units)": 40,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0026",
-  "Qty (units)": 276,
-  "Qty (cases)": 23,
+  "Qty (units)": 456,
+  "Qty (cases)": 38,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0027",
-  "Qty (units)": 108,
-  "Qty (cases)": 9,
+  "Qty (units)": 420,
+  "Qty (cases)": 35,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
@@ -3133,23 +3133,23 @@
   "Qty (units)": 396,
   "Qty (cases)": 33,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0029",
-  "Qty (units)": 860,
-  "Qty (cases)": 43,
+  "Qty (units)": 0,
+  "Qty (cases)": 0,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0030",
-  "Qty (units)": 310,
-  "Qty (cases)": 31,
+  "Qty (units)": 100,
+  "Qty (cases)": 10,
   "Reorder level (units)": 100,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
@@ -3157,15 +3157,15 @@
   "Qty (units)": 540,
   "Qty (cases)": 27,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0032",
-  "Qty (units)": 744,
-  "Qty (cases)": 31,
+  "Qty (units)": 480,
+  "Qty (cases)": 20,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
@@ -3173,15 +3173,15 @@
   "Qty (units)": 1100,
   "Qty (cases)": 55,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0034",
-  "Qty (units)": 1125,
-  "Qty (cases)": 45,
+  "Qty (units)": 250,
+  "Qty (cases)": 10,
   "Reorder level (units)": 250,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
@@ -3189,7 +3189,7 @@
   "Qty (units)": 840,
   "Qty (cases)": 42,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
@@ -3197,7 +3197,7 @@
   "Qty (units)": 780,
   "Qty (cases)": 39,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
@@ -3205,15 +3205,15 @@
   "Qty (units)": 680,
   "Qty (cases)": 17,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0038",
-  "Qty (units)": 760,
-  "Qty (cases)": 19,
+  "Qty (units)": 1200,
+  "Qty (cases)": 30,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
@@ -3221,39 +3221,39 @@
   "Qty (units)": 2120,
   "Qty (cases)": 53,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0040",
-  "Qty (units)": 1440,
-  "Qty (cases)": 30,
+  "Qty (units)": 480,
+  "Qty (cases)": 10,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0041",
-  "Qty (units)": 2460,
-  "Qty (cases)": 41,
+  "Qty (units)": 960,
+  "Qty (cases)": 16,
   "Reorder level (units)": 600,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0042",
-  "Qty (units)": 2880,
-  "Qty (cases)": 48,
+  "Qty (units)": 1320,
+  "Qty (cases)": 22,
   "Reorder level (units)": 600,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0043",
-  "Qty (units)": 1152,
-  "Qty (cases)": 24,
+  "Qty (units)": 768,
+  "Qty (cases)": 16,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
@@ -3261,39 +3261,39 @@
   "Qty (units)": 2496,
   "Qty (cases)": 52,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0045",
-  "Qty (units)": 840,
-  "Qty (cases)": 21,
+  "Qty (units)": 400,
+  "Qty (cases)": 10,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0046",
-  "Qty (units)": 320,
-  "Qty (cases)": 16,
+  "Qty (units)": 180,
+  "Qty (cases)": 9,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0047",
-  "Qty (units)": 840,
-  "Qty (cases)": 35,
+  "Qty (units)": 192,
+  "Qty (cases)": 8,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0048",
-  "Qty (units)": 1152,
-  "Qty (cases)": 48,
+  "Qty (units)": 1008,
+  "Qty (cases)": 42,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
@@ -3301,55 +3301,55 @@
   "Qty (units)": 276,
   "Qty (cases)": 23,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0050",
-  "Qty (units)": 216,
-  "Qty (cases)": 9,
+  "Qty (units)": 384,
+  "Qty (cases)": 16,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0051",
-  "Qty (units)": 480,
-  "Qty (cases)": 20,
+  "Qty (units)": 240,
+  "Qty (cases)": 10,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-009",
   "SKU": "SKU-0052",
-  "Qty (units)": 144,
-  "Qty (cases)": 12,
+  "Qty (units)": 120,
+  "Qty (cases)": 10,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0001",
-  "Qty (units)": 1056,
-  "Qty (cases)": 11,
+  "Qty (units)": 960,
+  "Qty (cases)": 10,
   "Reorder level (units)": 960,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0002",
-  "Qty (units)": 1104,
-  "Qty (cases)": 46,
+  "Qty (units)": 480,
+  "Qty (cases)": 20,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0003",
-  "Qty (units)": 1416,
-  "Qty (cases)": 59,
+  "Qty (units)": 888,
+  "Qty (cases)": 37,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
@@ -3357,15 +3357,15 @@
   "Qty (units)": 1584,
   "Qty (cases)": 22,
   "Reorder level (units)": 720,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0005",
-  "Qty (units)": 2592,
-  "Qty (cases)": 36,
+  "Qty (units)": 2088,
+  "Qty (cases)": 29,
   "Reorder level (units)": 720,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
@@ -3373,15 +3373,15 @@
   "Qty (units)": 1104,
   "Qty (cases)": 46,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0007",
-  "Qty (units)": 528,
-  "Qty (cases)": 22,
+  "Qty (units)": 792,
+  "Qty (cases)": 33,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
@@ -3389,15 +3389,15 @@
   "Qty (units)": 1296,
   "Qty (cases)": 27,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0009",
-  "Qty (units)": 4704,
-  "Qty (cases)": 49,
+  "Qty (units)": 2400,
+  "Qty (cases)": 25,
   "Reorder level (units)": 960,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
@@ -3405,15 +3405,15 @@
   "Qty (units)": 120,
   "Qty (cases)": 10,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0011",
-  "Qty (units)": 336,
-  "Qty (cases)": 7,
+  "Qty (units)": 480,
+  "Qty (cases)": 10,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
@@ -3421,15 +3421,15 @@
   "Qty (units)": 312,
   "Qty (cases)": 13,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0013",
-  "Qty (units)": 8064,
-  "Qty (cases)": 56,
+  "Qty (units)": 4032,
+  "Qty (cases)": 28,
   "Reorder level (units)": 1440,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
@@ -3437,23 +3437,23 @@
   "Qty (units)": 2064,
   "Qty (cases)": 43,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0015",
-  "Qty (units)": 528,
-  "Qty (cases)": 11,
+  "Qty (units)": 483,
+  "Qty (cases)": 10,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0016",
-  "Qty (units)": 168,
-  "Qty (cases)": 7,
+  "Qty (units)": 840,
+  "Qty (cases)": 35,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
@@ -3461,7 +3461,7 @@
   "Qty (units)": 528,
   "Qty (cases)": 44,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
@@ -3469,15 +3469,15 @@
   "Qty (units)": 816,
   "Qty (cases)": 34,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0019",
-  "Qty (units)": 192,
-  "Qty (cases)": 8,
+  "Qty (units)": 576,
+  "Qty (cases)": 24,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
@@ -3485,23 +3485,23 @@
   "Qty (units)": 204,
   "Qty (cases)": 17,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0021",
-  "Qty (units)": 212,
-  "Qty (cases)": 53,
+  "Qty (units)": 56,
+  "Qty (cases)": 14,
   "Reorder level (units)": 40,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0022",
-  "Qty (units)": 1200,
-  "Qty (cases)": 50,
+  "Qty (units)": 432,
+  "Qty (cases)": 18,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
@@ -3509,15 +3509,15 @@
   "Qty (units)": 324,
   "Qty (cases)": 27,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0024",
-  "Qty (units)": 228,
-  "Qty (cases)": 38,
+  "Qty (units)": 222,
+  "Qty (cases)": 37,
   "Reorder level (units)": 60,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
@@ -3525,15 +3525,15 @@
   "Qty (units)": 212,
   "Qty (cases)": 53,
   "Reorder level (units)": 40,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0026",
-  "Qty (units)": 684,
-  "Qty (cases)": 57,
+  "Qty (units)": 636,
+  "Qty (cases)": 53,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
@@ -3541,7 +3541,7 @@
   "Qty (units)": 384,
   "Qty (cases)": 32,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
@@ -3549,15 +3549,15 @@
   "Qty (units)": 360,
   "Qty (cases)": 30,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0029",
-  "Qty (units)": 800,
-  "Qty (cases)": 40,
+  "Qty (units)": 480,
+  "Qty (cases)": 24,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
@@ -3565,15 +3565,15 @@
   "Qty (units)": 430,
   "Qty (cases)": 43,
   "Reorder level (units)": 100,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0031",
-  "Qty (units)": 700,
-  "Qty (cases)": 35,
+  "Qty (units)": 400,
+  "Qty (cases)": 20,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
@@ -3581,15 +3581,15 @@
   "Qty (units)": 936,
   "Qty (cases)": 39,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0033",
-  "Qty (units)": 780,
-  "Qty (cases)": 39,
+  "Qty (units)": 240,
+  "Qty (cases)": 12,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
@@ -3597,15 +3597,15 @@
   "Qty (units)": 575,
   "Qty (cases)": 23,
   "Reorder level (units)": 250,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0035",
-  "Qty (units)": 980,
-  "Qty (cases)": 49,
+  "Qty (units)": 880,
+  "Qty (cases)": 44,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
@@ -3613,7 +3613,7 @@
   "Qty (units)": 780,
   "Qty (cases)": 39,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
@@ -3621,7 +3621,7 @@
   "Qty (units)": 720,
   "Qty (cases)": 18,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
@@ -3629,15 +3629,15 @@
   "Qty (units)": 2040,
   "Qty (cases)": 51,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0039",
-  "Qty (units)": 1640,
-  "Qty (cases)": 41,
+  "Qty (units)": 1360,
+  "Qty (cases)": 34,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
@@ -3645,47 +3645,47 @@
   "Qty (units)": 2880,
   "Qty (cases)": 60,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0041",
-  "Qty (units)": 2280,
-  "Qty (cases)": 38,
+  "Qty (units)": 1080,
+  "Qty (cases)": 18,
   "Reorder level (units)": 600,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0042",
-  "Qty (units)": 2640,
-  "Qty (cases)": 44,
+  "Qty (units)": 1980,
+  "Qty (cases)": 33,
   "Reorder level (units)": 600,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0043",
-  "Qty (units)": 2400,
-  "Qty (cases)": 50,
+  "Qty (units)": 1056,
+  "Qty (cases)": 22,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0044",
-  "Qty (units)": 1728,
-  "Qty (cases)": 36,
+  "Qty (units)": 1680,
+  "Qty (cases)": 35,
   "Reorder level (units)": 480,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0045",
-  "Qty (units)": 2160,
-  "Qty (cases)": 54,
+  "Qty (units)": 1960,
+  "Qty (cases)": 49,
   "Reorder level (units)": 400,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
@@ -3693,7 +3693,7 @@
   "Qty (units)": 620,
   "Qty (cases)": 31,
   "Reorder level (units)": 200,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
@@ -3701,7 +3701,7 @@
   "Qty (units)": 768,
   "Qty (cases)": 32,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
@@ -3709,7 +3709,7 @@
   "Qty (units)": 984,
   "Qty (cases)": 41,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
@@ -3717,7 +3717,7 @@
   "Qty (units)": 132,
   "Qty (cases)": 11,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
@@ -3725,22 +3725,22 @@
   "Qty (units)": 1032,
   "Qty (cases)": 43,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0051",
-  "Qty (units)": 384,
-  "Qty (cases)": 16,
+  "Qty (units)": 240,
+  "Qty (cases)": 10,
   "Reorder level (units)": 240,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  },
  {
   "Location ID": "LOC-010",
   "SKU": "SKU-0052",
-  "Qty (units)": 96,
-  "Qty (cases)": 8,
+  "Qty (units)": 408,
+  "Qty (cases)": 34,
   "Reorder level (units)": 120,
-  "As of": "2026-10-25"
+  "As of": "2026-11-05"
  }
 ]

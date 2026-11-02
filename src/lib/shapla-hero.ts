@@ -18,125 +18,136 @@ export const hero = {
     16403605,
     14428400,
     11106384,
-    12194276
+    12194276,
+    16403135,
+    9728538
   ],
-  "netSales": 224525926,
-  "octSales": 45270905,
+  "netSales": 250657599,
+  "octSales": 13164146,
+  "currentMonth": "November",
+  "months": [
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov"
+  ],
+  "period": "1 Jul to 5 Nov 2026",
   "categories": [
     {
       "label": "Dairy",
-      "value": 67566453
+      "value": 77846720
     },
     {
       "label": "Spices",
-      "value": 43540913
+      "value": 47387413
     },
     {
       "label": "Edible Oil",
-      "value": 23849130
+      "value": 26589775
     },
     {
       "label": "Flour & Staples",
-      "value": 21957352
+      "value": 24496029
     },
     {
       "label": "Biscuits & Bakery",
-      "value": 21214829
+      "value": 23052511
     }
   ],
-  "receivables": 57149778,
-  "overdue": 35104686,
-  "openPOs": 13,
-  "openPOValue": 24221220,
-  "stockValue": 47288329,
-  "yield": 98.0,
+  "receivables": 63439781,
+  "overdue": 38993645,
+  "openPOs": 15,
+  "openPOValue": 29165990,
+  "stockValue": 37561283,
+  "yield": 98.1,
   "people": 112,
   "customers": 120,
   "collected": 76,
   "lowStock": [
     {
-      "item": "Maida 1 kg",
-      "at": "Chattogram Depot",
-      "pct": 50
+      "item": "Full Cream Milk Powder 500 g",
+      "at": "Dhaka Depot",
+      "pct": 0
     },
     {
-      "item": "Instant Noodles Masala 62 g",
+      "item": "Mustard Oil 500 ml",
       "at": "Khulna Depot",
-      "pct": 50
+      "pct": 0
     },
     {
-      "item": "Drinking Water 1.5 L",
-      "at": "Sylhet Depot",
-      "pct": 50
+      "item": "Atta 1 kg",
+      "at": "Rangpur Depot",
+      "pct": 0
     }
   ],
   "ageing": [
     {
       "label": "0",
-      "value": 22045092
+      "value": 24446136
     },
     {
       "label": "30",
-      "value": 24117589
+      "value": 26585204
     },
     {
       "label": "60",
-      "value": 4217076
+      "value": 3567428
     },
     {
       "label": "90",
-      "value": 5864938
+      "value": 6180216
     },
     {
       "label": "90+",
-      "value": 905083
+      "value": 2660797
     }
   ],
   "products": 52,
   "funnel": [
     {
       "label": "Orders placed",
-      "value": 1187
+      "value": 1309
     },
     {
       "label": "Invoiced",
-      "value": 1118
+      "value": 1237
     },
     {
       "label": "Paid in part or full",
-      "value": 903
+      "value": 999
     },
     {
       "label": "Paid in full",
-      "value": 785
+      "value": 864
     }
   ],
   "weekday": [
     {
       "label": "Sat",
-      "value": 198
+      "value": 208
     },
     {
       "label": "Sun",
-      "value": 198
-    },
-    {
-      "label": "Mon",
-      "value": 181
-    },
-    {
-      "label": "Tue",
-      "value": 199
-    },
-    {
-      "label": "Wed",
       "value": 211
     },
     {
+      "label": "Mon",
+      "value": 204
+    },
+    {
+      "label": "Tue",
+      "value": 227
+    },
+    {
+      "label": "Wed",
+      "value": 236
+    },
+    {
       "label": "Thu",
-      "value": 200
+      "value": 223
     }
   ],
-  "lowStockCount": 43,
+  "lowStockCount": 19,
   "depots": 8
 };
