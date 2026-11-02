@@ -11,6 +11,13 @@
  *   LEAD_WEBHOOK_TOKEN  Optional bearer token for the webhook.
  *   SLACK_LEADS_WEBHOOK_URL  Slack incoming webhook for #leads. Every stored lead is posted there with
  *                       source Business Brain.
+ *   LEADS_PER_IP_HOUR   Optional. Leads one address may send in an hour before the rest are held
+ *                       (default 60). Raise it for a fair, where a hall shares the venue Wi-Fi.
+ *
+ * Same rules as the other Betopia sites (Beto, Joya, QSor): every lead carries a reference such as
+ * BB-1A2B3C4D · CTO Office in the CRM notes and in Slack; a lead over the hourly limit is held (kept in
+ * KV as held:<id>, the visitor thanked, nothing sent to the CRM or #leads); and the CRM's 429
+ * "Submission in progress", which it answers while it is busy with another lead, is retried.
  *
  * Contact and demo forms create a CRM lead through LEADS_API_URL; quote and newsletter, which the
  * CRM API has no form type for, are kept in KV (and the webhook, if set).
@@ -22,7 +29,7 @@ interface KV {
   get(key: string): Promise<string | null>;
   put(key: string, value: string, opts?: { expirationTtl?: number }): Promise<void>;
 }
-type Env = { LEADS?: KV; LEADS_API_URL?: string; LEADS_API_KEY?: string; TURNSTILE_SECRET?: string; LEAD_WEBHOOK_URL?: string; LEAD_WEBHOOK_TOKEN?: string; SLACK_LEADS_WEBHOOK_URL?: string };
+type Env = { LEADS?: KV; LEADS_API_URL?: string; LEADS_API_KEY?: string; TURNSTILE_SECRET?: string; LEAD_WEBHOOK_URL?: string; LEAD_WEBHOOK_TOKEN?: string; SLACK_LEADS_WEBHOOK_URL?: string; LEADS_PER_IP_HOUR?: string };
 type CrmReply = { success?: boolean; error?: string; lead_id?: number };
 type Ctx = { request: Request; env: Env; waitUntil(p: Promise<unknown>): void };
 
@@ -32,7 +39,11 @@ const FORMS: Record<string, string[]> = {
   quote: ["name", "email", "company", "users", "industry"],
   newsletter: ["email"],
 };
-const RATE_LIMIT = 5; // submissions per IP per 10 minutes
+const RATE_LIMIT = 60; // leads per IP per hour, unless LEADS_PER_IP_HOUR says otherwise
+const LEAD_OWNER = "CTO Office";
+const SOURCE_LINE = "Source: Business Brain website (getbusinessbrain.ai)";
+/** BB-1A2B3C4D: the first eight characters of the lead's id, which is also its KV key. */
+const leadRef = (id: string) => `BB-${id.replace(/-/g, "").slice(0, 8).toUpperCase()}`;
 const KEEP = 90 * 24 * 3600; // seconds a lead copy stays in KV
 
 // The demo form's size labels, as the CRM's worker brackets.
@@ -45,12 +56,32 @@ function nameFromEmail(email: string) {
   return words.join(" ") || "Website visitor";
 }
 
-/** The CRM API takes a flat object per form; only these fields are sent. */
-function crmPayload(form: string, f: Record<string, string>) {
-  if (form === "contact") return { name: f.name || nameFromEmail(f.email), email: f.email, phone: f.phone, topic: f.topic, message: f.message };
+/** The CRM API takes a flat object per form; only these fields are sent. The source and the lead's
+ * reference ride at the end of the free text, as on the other Betopia sites. */
+function crmPayload(form: string, f: Record<string, string>, ref: string) {
+  const footer = `${SOURCE_LINE}\nReference: ${ref} · ${LEAD_OWNER}`;
+  const withFooter = (text: string) => (text ? `${text}\n\n${footer}` : footer);
+  if (form === "contact") return { name: f.name || nameFromEmail(f.email), email: f.email, phone: f.phone, topic: f.topic, message: withFooter(f.message) };
   if (form === "demo")
-    return { session: f.session, name: f.name || nameFromEmail(f.email), email: f.email, phone: f.phone, company: f.company, size: SIZE_BRACKET[f.size] ?? f.size, industry: f.industry, notes: f.notes };
+    return { session: f.session, name: f.name || nameFromEmail(f.email), email: f.email, phone: f.phone, company: f.company, size: SIZE_BRACKET[f.size] ?? f.size, industry: f.industry, notes: withFooter(f.notes) };
   return null;
+}
+
+/** One CRM post, retried while the CRM answers 429 (busy with another submission) or is down. */
+async function postCrm(env: Env, body: unknown) {
+  let r: Response | null = null;
+  let data: CrmReply | null = null;
+  for (let i = 0; i < 3; i++) {
+    try {
+      r = await fetch(env.LEADS_API_URL!, { method: "POST", headers: { "content-type": "application/json", "x-api-key": env.LEADS_API_KEY! }, body: JSON.stringify(body) });
+      data = (await r.json().catch(() => null)) as CrmReply | null;
+    } catch {
+      r = null;
+    }
+    if (r && r.status !== 429 && r.status < 500) break;
+    if (i < 2) await new Promise((ok) => setTimeout(ok, 1500 * (i + 1)));
+  }
+  return { r, data };
 }
 
 /** Puts a CRM validation message on the field it is about, so the form can highlight it. */
@@ -71,7 +102,7 @@ function slackMessage(lead: Record<string, unknown>) {
   const lines = Object.entries(f).filter(([, v]) => v).map(([k, v]) => `*${FIELD_LABEL[k] ?? k}:* ${slackText(v.slice(0, 1500))}`);
   const crmLine = !crm ? "not sent (no CRM form type)" : crm.lead_id ? `lead #${crm.lead_id}${crm.status === 409 ? " (duplicate in 24 h)" : ""}` : `failed (${crm.status ?? 0}), follow up by hand`;
   const from = ["last_utm_source", "last_utm_medium", "last_utm_campaign"].map((k) => attr[k]).filter(Boolean).join(" / ") || String(attr.last_referrer ?? attr.first_referrer ?? "");
-  const context = [`Source: Business Brain`, `CRM: ${crmLine}`, lead.country && `Country: ${lead.country}`, from && `From: ${from}`, lead.page && `Page: ${lead.page}`].filter(Boolean).map((t) => slackText(String(t)));
+  const context = [`Source: Business Brain`, `Ref: ${leadRef(String(lead.id))} · ${LEAD_OWNER}`, `CRM: ${crmLine}`, lead.country && `Country: ${lead.country}`, from && `From: ${from}`, lead.page && `Page: ${lead.page}`].filter(Boolean).map((t) => slackText(String(t)));
   const title = `New Business Brain lead: ${FORM_TITLE[form] ?? form}${f.company ? ` from ${f.company}` : ""}`;
   return {
     text: title,
@@ -118,12 +149,16 @@ export const onRequestPost = async ({ request, env, waitUntil }: Ctx) => {
   // Honeypot: people never see this field, so a value means a bot. Answer as if it worked.
   if (String(fields.website_url ?? "").trim()) return json({ ok: true, id: crypto.randomUUID() });
 
-  // Rate limit by IP.
+  // Per-address limit, by the hour. Over it, the lead is held: kept for review, the visitor thanked,
+  // nothing sent to the CRM or #leads, so a script learns nothing and floods nobody.
+  const id = crypto.randomUUID();
+  let held = false;
   if (env.LEADS) {
-    const key = `rl:${ip}`;
+    const key = `rl:${ip}:${new Date().toISOString().slice(0, 13)}`;
     const n = Number((await env.LEADS.get(key)) ?? 0);
-    if (n >= RATE_LIMIT) return json({ ok: false, error: "Too many submissions. Please try again in a few minutes." }, 429);
-    await env.LEADS.put(key, String(n + 1), { expirationTtl: 600 });
+    const limit = Number(env.LEADS_PER_IP_HOUR) > 0 ? Number(env.LEADS_PER_IP_HOUR) : RATE_LIMIT;
+    if (n >= limit) held = true;
+    else await env.LEADS.put(key, String(n + 1), { expirationTtl: 3600 });
   }
 
   // Turnstile. Without a secret configured (local dev) the check is skipped.
@@ -137,7 +172,6 @@ export const onRequestPost = async ({ request, env, waitUntil }: Ctx) => {
     if (!r.success) return json({ ok: false, error: "Verification failed. Please reload and try again." }, 403);
   }
 
-  const id = crypto.randomUUID();
   const clean = Object.fromEntries(Object.entries(fields).filter(([k]) => k !== "website_url").map(([k, v]) => [k, String(v ?? "").trim().slice(0, 5000)]));
   const lead: Record<string, unknown> = {
     id,
@@ -151,18 +185,15 @@ export const onRequestPost = async ({ request, env, waitUntil }: Ctx) => {
     country: request.headers.get("cf-ipcountry") ?? "",
   };
   const keep = () => env.LEADS?.put(`lead:${lead.received_at}:${id}`, JSON.stringify(lead), { expirationTtl: KEEP });
+  if (held) {
+    await env.LEADS?.put(`held:${id}`, JSON.stringify({ ...lead, ref: leadRef(id) }), { expirationTtl: KEEP });
+    return json({ ok: true, id });
+  }
 
   // Contact and demo: create the CRM lead now, so its answer reaches the visitor.
-  const crm = crmPayload(form, clean);
+  const crm = crmPayload(form, clean, leadRef(id));
   if (crm && env.LEADS_API_URL && env.LEADS_API_KEY) {
-    let r: Response | null = null;
-    let data: CrmReply | null = null;
-    try {
-      r = await fetch(env.LEADS_API_URL, { method: "POST", headers: { "content-type": "application/json", "x-api-key": env.LEADS_API_KEY }, body: JSON.stringify(crm) });
-      data = (await r.json().catch(() => null)) as CrmReply | null;
-    } catch {
-      r = null;
-    }
+    const { r, data } = await postCrm(env, crm);
     if (r && (r.status === 201 || r.status === 409)) {
       // 409: the same enquiry arrived in the last 24 hours, so the CRM already has it.
       lead.crm = { status: r.status, lead_id: data?.lead_id ?? null };
@@ -171,8 +202,6 @@ export const onRequestPost = async ({ request, env, waitUntil }: Ctx) => {
       const error = data?.error || "Please check the highlighted fields.";
       const field = fieldOf(error);
       return json({ ok: false, error, ...(field && { errors: { [field]: error } }) }, 422);
-    } else if (r && r.status === 429) {
-      return json({ ok: false, error: "We already have a few requests from you in the last hour. We'll be in touch, or call us." }, 429);
     } else {
       // CRM down or unexpected: keep the lead so nothing is lost, and flag it for follow-up.
       lead.crm = { status: r?.status ?? 0, error: data?.error ?? "unreachable" };
