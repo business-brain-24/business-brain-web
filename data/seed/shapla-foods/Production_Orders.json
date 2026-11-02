@@ -126,10 +126,10 @@
   "SKU": "SKU-0045",
   "Plant": "LOC-001",
   "Planned qty": 8000,
-  "Produced qty": 0,
-  "Good qty": 0,
-  "Rejected qty": 0,
-  "Status": "Planned"
+  "Produced qty": 8000,
+  "Good qty": 7885,
+  "Rejected qty": 115,
+  "Status": "Done"
  },
  {
   "MO ID": "MO-00013",
@@ -775,10 +775,10 @@
   "SKU": "SKU-0045",
   "Plant": "LOC-001",
   "Planned qty": 16000,
-  "Produced qty": 0,
-  "Good qty": 0,
-  "Rejected qty": 0,
-  "Status": "Planned"
+  "Produced qty": 16000,
+  "Good qty": 15846,
+  "Rejected qty": 154,
+  "Status": "Done"
  },
  {
   "MO ID": "MO-00072",
@@ -988,5 +988,170 @@
   "Good qty": 36885,
   "Rejected qty": 1515,
   "Status": "Done"
+ },
+ {
+  "MO ID": "MO-00091",
+  "Date": "2026-10-26",
+  "SKU": "SKU-0029",
+  "Plant": "LOC-001",
+  "Planned qty": 4000,
+  "Produced qty": 4000,
+  "Good qty": 3930,
+  "Rejected qty": 70,
+  "Status": "Done"
+ },
+ {
+  "MO ID": "MO-00092",
+  "Date": "2026-10-26",
+  "SKU": "SKU-0041",
+  "Plant": "LOC-001",
+  "Planned qty": 12000,
+  "Produced qty": 12000,
+  "Good qty": 11765,
+  "Rejected qty": 235,
+  "Status": "Done"
+ },
+ {
+  "MO ID": "MO-00093",
+  "Date": "2026-10-27",
+  "SKU": "SKU-0019",
+  "Plant": "LOC-001",
+  "Planned qty": 4800,
+  "Produced qty": 4800,
+  "Good qty": 4716,
+  "Rejected qty": 84,
+  "Status": "Done"
+ },
+ {
+  "MO ID": "MO-00094",
+  "Date": "2026-10-27",
+  "SKU": "SKU-0047",
+  "Plant": "LOC-001",
+  "Planned qty": 4800,
+  "Produced qty": 4800,
+  "Good qty": 4755,
+  "Rejected qty": 45,
+  "Status": "Done"
+ },
+ {
+  "MO ID": "MO-00095",
+  "Date": "2026-10-28",
+  "SKU": "SKU-0040",
+  "Plant": "LOC-001",
+  "Planned qty": 9600,
+  "Produced qty": 9600,
+  "Good qty": 9416,
+  "Rejected qty": 184,
+  "Status": "Done"
+ },
+ {
+  "MO ID": "MO-00096",
+  "Date": "2026-10-28",
+  "SKU": "SKU-0030",
+  "Plant": "LOC-001",
+  "Planned qty": 2000,
+  "Produced qty": 2000,
+  "Good qty": 1958,
+  "Rejected qty": 42,
+  "Status": "Done"
+ },
+ {
+  "MO ID": "MO-00097",
+  "Date": "2026-10-29",
+  "SKU": "SKU-0001",
+  "Plant": "LOC-001",
+  "Planned qty": 19200,
+  "Produced qty": 19200,
+  "Good qty": 18898,
+  "Rejected qty": 302,
+  "Status": "Done"
+ },
+ {
+  "MO ID": "MO-00098",
+  "Date": "2026-10-29",
+  "SKU": "SKU-0042",
+  "Plant": "LOC-001",
+  "Planned qty": 12000,
+  "Produced qty": 12000,
+  "Good qty": 11815,
+  "Rejected qty": 185,
+  "Status": "Done"
+ },
+ {
+  "MO ID": "MO-00099",
+  "Date": "2026-10-31",
+  "SKU": "SKU-0035",
+  "Plant": "LOC-001",
+  "Planned qty": 4000,
+  "Produced qty": 4000,
+  "Good qty": 3944,
+  "Rejected qty": 56,
+  "Status": "Done"
+ },
+ {
+  "MO ID": "MO-00100",
+  "Date": "2026-10-31",
+  "SKU": "SKU-0015",
+  "Plant": "LOC-001",
+  "Planned qty": 9600,
+  "Produced qty": 9600,
+  "Good qty": 9372,
+  "Rejected qty": 228,
+  "Status": "Done"
+ },
+ {
+  "MO ID": "MO-00101",
+  "Date": "2026-11-01",
+  "SKU": "SKU-0025",
+  "Plant": "LOC-001",
+  "Planned qty": 800,
+  "Produced qty": 800,
+  "Good qty": 790,
+  "Rejected qty": 10,
+  "Status": "Done"
+ },
+ {
+  "MO ID": "MO-00102",
+  "Date": "2026-11-01",
+  "SKU": "SKU-0009",
+  "Plant": "LOC-001",
+  "Planned qty": 19200,
+  "Produced qty": 19200,
+  "Good qty": 18847,
+  "Rejected qty": 353,
+  "Status": "Done"
+ },
+ {
+  "MO ID": "MO-00103",
+  "Date": "2026-11-02",
+  "SKU": "SKU-0032",
+  "Plant": "LOC-001",
+  "Planned qty": 4800,
+  "Produced qty": 4800,
+  "Good qty": 4739,
+  "Rejected qty": 61,
+  "Status": "Done"
+ },
+ {
+  "MO ID": "MO-00104",
+  "Date": "2026-11-04",
+  "SKU": "SKU-0052",
+  "Plant": "LOC-001",
+  "Planned qty": 2400,
+  "Produced qty": 0,
+  "Good qty": 0,
+  "Rejected qty": 0,
+  "Status": "Planned"
+ },
+ {
+  "MO ID": "MO-00105",
+  "Date": "2026-11-04",
+  "SKU": "SKU-0026",
+  "Plant": "LOC-001",
+  "Planned qty": 2400,
+  "Produced qty": 0,
+  "Good qty": 0,
+  "Rejected qty": 0,
+  "Status": "Planned"
  }
 ]

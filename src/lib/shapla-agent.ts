@@ -22,7 +22,17 @@ const up = (now: number, before: number) => (before ? `${now >= before ? "up" : 
 
 /* ---------- lookups ---------- */
 
-const M = S.months; // Jul, Aug, Sep, Oct (October runs to the 25th)
+const M = S.months; // short month names, oldest first; the last month runs to S.company.asOf
+const MN = S.monthNames;
+const LM = M.length - 1;
+const CUR = MN[LM];
+const START = MN[0];
+const ordinal = (n: number) => `${n}${n % 100 >= 10 && n % 100 <= 20 ? "th" : ({ 1: "st", 2: "nd", 3: "rd" } as Record<number, string>)[n % 10] ?? "th"}`;
+const THROUGH = `the ${ordinal(Number(S.company.asOf.slice(8, 10)))}`;
+const SINCE = `since ${START}`;
+const SPAN = `${START} to ${CUR}`;
+const PARTIAL = `${CUR} runs to ${THROUGH}`;
+const mIdx = (iso: string) => S.monthKeys.indexOf(iso.slice(0, 7));
 const LAST = S.daily[S.daily.length - 1].date;
 const PREV = S.daily[S.daily.length - 2].date;
 const loc = Object.fromEntries(S.locations.map((l) => [l.id, l]));
@@ -47,7 +57,7 @@ const DT = S.depotTotals as Record<string, { net: number[]; Delivered: number; I
 const salesByMonth = M.map((_, i) => sum(Object.values(PM).map((p) => p.net[i])));
 const cogsByMonth = M.map((_, i) => sum(Object.values(PM).map((p) => p.cogs[i])));
 const totalSales = sum(salesByMonth);
-const octSales = salesByMonth[3];
+const curSales = salesByMonth[LM];
 const payrollMonthly = sum(S.employees.map((e) => e.gross));
 const stockValue = (s: { sku: string; qty: number }) => s.qty * prod[s.sku].cost;
 const isOverdue = (i: (typeof S.invoices)[number]) => i.out > 0 && i.due < S.company.asOf;
@@ -65,17 +75,17 @@ function overview(): Reply {
   const good = sum(S.production.map((p) => p.good));
   const made = sum(S.production.map((p) => p.produced));
   return reply({
-    text: `Here's Shapla Foods from 1 July to ${day(LAST)}. Net sales are ${money(totalSales)}, with ${money(octSales)} so far in October. Gross margin is ${pct(((totalSales - sum(cogsByMonth)) / totalSales) * 100)}, receivables stand at ${money(out)}, and the factory is running at a ${pct((good / made) * 100)} first-pass yield.`,
+    text: `Here's Shapla Foods from 1 ${START} to ${day(LAST)}. Net sales are ${money(totalSales)}, with ${money(curSales)} so far in ${CUR}. Gross margin is ${pct(((totalSales - sum(cogsByMonth)) / totalSales) * 100)}, receivables stand at ${money(out)}, and the factory is running at a ${pct((good / made) * 100)} first-pass yield.`,
     kpis: kpis([
-      ["Net sales since July", money(totalSales)],
-      ["October to date", money(octSales)],
+      [`Net sales ${SINCE}`, money(totalSales)],
+      [`${CUR} to date`, money(curSales)],
       ["Receivables", money(out)],
       ["Stock value", money(stock)],
       ["People", num(S.employees.length)],
       ["First-pass yield", pct((good / made) * 100)],
     ]),
     charts: [
-      { kind: "composed", title: "Sales vs cost of goods by month", unit: "bdt", data: M.map((m, i) => ({ label: m, Sales: salesByMonth[i], "Cost of goods": cogsByMonth[i] })), series: ["Sales", "Cost of goods"], note: "October runs to the 25th" },
+      { kind: "composed", title: "Sales vs cost of goods by month", unit: "bdt", data: M.map((m, i) => ({ label: m, Sales: salesByMonth[i], "Cost of goods": cogsByMonth[i] })), series: ["Sales", "Cost of goods"], note: PARTIAL },
       { kind: "radar", title: "Region scorecard", unit: "pct", ...regionRadar(3), note: "100 is the best region on each measure" },
     ],
     follow: ["Show the profit and loss", "Which products sell the most?", "Show receivables ageing", "How is the factory doing?"],
@@ -101,10 +111,10 @@ function regionRadar(n: number) {
 function salesTrend(): Reply {
   const recent = S.daily.slice(-24);
   return reply({
-    text: `Net sales by month since July. September closed at ${money(salesByMonth[2])}, ${up(salesByMonth[2], salesByMonth[1])} on August, and October has reached ${money(octSales)} by the 25th.`,
-    kpis: kpis(M.map((m, i) => [i === 3 ? "October to date" : `${m} sales`, money(salesByMonth[i])])),
+    text: `Net sales by month ${SINCE}. ${MN[LM - 1]} closed at ${money(salesByMonth[LM - 1])}, ${up(salesByMonth[LM - 1], salesByMonth[LM - 2])} on ${MN[LM - 2]}, and ${CUR} has reached ${money(curSales)} by ${THROUGH}.`,
+    kpis: kpis(M.map((m, i) => [i === LM ? `${CUR} to date` : `${m} sales`, money(salesByMonth[i])])),
     charts: [
-      { kind: "bar", title: "Net sales by month", unit: "bdt", data: M.map((m, i) => ({ label: i === 3 ? "Oct*" : m, Sales: salesByMonth[i] })), series: ["Sales"], note: "*October to the 25th, net of VAT" },
+      { kind: "bar", title: "Net sales by month", unit: "bdt", data: M.map((m, i) => ({ label: i === LM ? `${m}*` : m, Sales: salesByMonth[i] })), series: ["Sales"], note: `*${PARTIAL}, net of VAT` },
       { kind: "area", title: "Daily sales, last four weeks", unit: "bdt", data: recent.map((d) => ({ label: day(d.date), Sales: d.net })), series: ["Sales"] },
     ],
     follow: ["Sales by region", "Which products sell the most?", "Who are our top customers?", "Sales by sales officer"],
@@ -136,9 +146,9 @@ function salesByRegion(): Reply {
   const { raw } = regionRadar(3);
   const list = by(Object.entries(raw), ([, v]) => v.Sales);
   return reply({
-    text: `${list[0][0]} is our biggest region with ${money(list[0][1].Sales)} since July, followed by ${list[1][0]} and ${list[2][0]}.`,
+    text: `${list[0][0]} is our biggest region with ${money(list[0][1].Sales)} ${SINCE}, followed by ${list[1][0]} and ${list[2][0]}.`,
     charts: [
-      { kind: "hbar", title: "Net sales by region · July to October", unit: "bdt", data: list.map(([label, v]) => ({ label, Sales: v.Sales })), series: ["Sales"] },
+      { kind: "hbar", title: `Net sales by region · ${SPAN}`, unit: "bdt", data: list.map(([label, v]) => ({ label, Sales: v.Sales })), series: ["Sales"] },
       { kind: "radar", title: "Top three regions compared", unit: "pct", ...regionRadar(3), note: "100 is the best region on each measure" },
     ],
     tables: [table("Region measures", ["Region", "Sales", "Orders", "Customers", "Collected"], list.map(([r, v]) => [r, money(v.Sales), num(v.Orders), num(v.Customers), pct(v.Collection * 100, 0)]))],
@@ -150,9 +160,9 @@ function salesByCategory(): Reply {
   const t = Object.entries(cat).map(([id, name]) => ({ label: name, value: sum(S.products.filter((p) => p.cat === id).map((p) => sum(PM[p.sku]?.net ?? [0]))) }));
   const list = by(t, (x) => x.value).filter((x) => x.value > 0);
   return reply({
-    text: `${list[0].label} lead our sales at ${money(list[0].value)} since July, ${pct((list[0].value / totalSales) * 100)} of the total.`,
+    text: `${list[0].label} lead our sales at ${money(list[0].value)} ${SINCE}, ${pct((list[0].value / totalSales) * 100)} of the total.`,
     charts: [
-      { kind: "pie", title: "Net sales by category · July to October", unit: "bdt", data: rows(list), series: ["value"] },
+      { kind: "pie", title: `Net sales by category · ${SPAN}`, unit: "bdt", data: rows(list), series: ["value"] },
       { kind: "stacked", title: "Category mix by month", unit: "bdt", data: M.map((m, i) => ({ label: m, ...Object.fromEntries(list.slice(0, 5).map((c) => [c.label, sum(S.products.filter((p) => cat[p.cat] === c.label).map((p) => PM[p.sku]?.net[i] ?? 0))])) })), series: list.slice(0, 5).map((c) => c.label) },
     ],
     follow: ["Which products sell the most?", "Show gross margin by category", "Stock value by category"],
@@ -162,8 +172,8 @@ function salesByCategory(): Reply {
 function topProducts(): Reply {
   const list = by(S.products.map((p) => ({ label: prodName(p.sku), value: sum(PM[p.sku]?.net ?? [0]), qty: sum(PM[p.sku]?.qty ?? [0]) })), (x) => x.value);
   return reply({
-    text: `${list[0].label} is our best seller with ${money(list[0].value)} and ${num(list[0].qty)} units since July.`,
-    charts: [{ kind: "hbar", title: "Top products by net sales · July to October", unit: "bdt", data: list.slice(0, 10).map((x) => ({ label: x.label, Sales: x.value })), series: ["Sales"] }],
+    text: `${list[0].label} is our best seller with ${money(list[0].value)} and ${num(list[0].qty)} units ${SINCE}.`,
+    charts: [{ kind: "hbar", title: `Top products by net sales · ${SPAN}`, unit: "bdt", data: list.slice(0, 10).map((x) => ({ label: x.label, Sales: x.value })), series: ["Sales"] }],
     tables: [table("Top products", ["Product", "Net sales", "Units"], list.slice(0, 10).map((x) => [x.label, money(x.value), num(x.qty)]))],
     follow: ["Sales by category", "Show the price list", "Which items are low on stock?"],
   });
@@ -172,7 +182,7 @@ function topProducts(): Reply {
 function topCustomers(): Reply {
   const list = by(S.customers.map((c) => ({ c, v: sum(CT[c.id]?.net ?? [0]) })), (x) => x.v).slice(0, 10);
   return reply({
-    text: `${list[0].c.name} (${list[0].c.type}, ${list[0].c.area}) is our largest customer at ${money(list[0].v)} since July.`,
+    text: `${list[0].c.name} (${list[0].c.type}, ${list[0].c.area}) is our largest customer at ${money(list[0].v)} ${SINCE}.`,
     charts: [{ kind: "hbar", title: "Top customers by net sales", unit: "bdt", data: list.map((x) => ({ label: x.c.name, Sales: x.v })), series: ["Sales"] }],
     tables: [table("Top customers", ["Customer", "Type", "Area", "Net sales", "Orders"], list.map((x) => [x.c.name, x.c.type, x.c.area, money(x.v), num(CT[x.c.id]?.orders ?? 0)]))],
     follow: ["Customers by type", "Show receivables ageing", "Who owes us the most?"],
@@ -194,11 +204,11 @@ function salesByChannel(): Reply {
 }
 
 function salesByOfficer(): Reply {
-  const list = by(Object.entries(OT).map(([id, v]) => ({ e: emp[id], v: sum(v.net), oct: v.net[3], orders: v.orders })), (x) => x.v);
+  const list = by(Object.entries(OT).map(([id, v]) => ({ e: emp[id], v: sum(v.net), oct: v.net[LM], orders: v.orders })), (x) => x.v);
   return reply({
-    text: `${list[0].e.name} leads the field team with ${money(list[0].v)} since July and ${money(list[0].oct)} in October.`,
-    charts: [{ kind: "hbar", title: "Sales by sales officer · July to October", unit: "bdt", data: list.slice(0, 10).map((x) => ({ label: x.e.name, Sales: x.v })), series: ["Sales"] }],
-    tables: [table("Sales officers", ["Officer", "Location", "Net sales", "October", "Orders"], list.map((x) => [x.e.name, locName(x.e.loc), money(x.v), money(x.oct), num(x.orders)]))],
+    text: `${list[0].e.name} leads the field team with ${money(list[0].v)} ${SINCE} and ${money(list[0].oct)} in ${CUR}.`,
+    charts: [{ kind: "hbar", title: `Sales by sales officer · ${SPAN}`, unit: "bdt", data: list.slice(0, 10).map((x) => ({ label: x.e.name, Sales: x.v })), series: ["Sales"] }],
+    tables: [table("Sales officers", ["Officer", "Location", "Net sales", CUR, "Orders"], list.map((x) => [x.e.name, locName(x.e.loc), money(x.v), money(x.oct), num(x.orders)]))],
     follow: ["Sales by region", "Who are our top customers?", "Headcount by department"],
   });
 }
@@ -209,7 +219,7 @@ function pos(): Reply {
   const list = by(retail.map((c) => ({ c, v: sum(CT[c.id]?.net ?? [0]) })), (x) => x.v).slice(0, 8);
   const margin = S.products.map((p) => ({ label: prodName(p.sku), value: Math.round(((p.mrp - p.tp) / p.mrp) * 1000) / 10 }));
   return reply({
-    text: `Our retail and point-of-sale channel is ${retail.length} outlets: retailers and super shops. Together they bought ${money(net)} since July, ${pct((net / totalSales) * 100)} of our sales. Shops earn the gap between trade price and MRP, about ${pct(sum(margin.map((m) => m.value)) / margin.length)} on average.`,
+    text: `Our retail and point-of-sale channel is ${retail.length} outlets: retailers and super shops. Together they bought ${money(net)} ${SINCE}, ${pct((net / totalSales) * 100)} of our sales. Shops earn the gap between trade price and MRP, about ${pct(sum(margin.map((m) => m.value)) / margin.length)} on average.`,
     kpis: kpis([["Retail outlets", num(retail.length)], ["Retail sales", money(net)], ["Share of sales", pct((net / totalSales) * 100)]]),
     charts: [
       { kind: "hbar", title: "Top retail outlets", unit: "bdt", data: list.map((x) => ({ label: x.c.name, Sales: x.v })), series: ["Sales"] },
@@ -221,12 +231,12 @@ function pos(): Reply {
 
 function profitAndLoss(): Reply {
   const gp = M.map((_, i) => salesByMonth[i] - cogsByMonth[i]);
-  const pay = M.map((_, i) => (i === 3 ? payrollMonthly * (25 / 31) : payrollMonthly));
+  const pay = M.map((_, i) => (i === LM ? payrollMonthly * (Number(S.company.asOf.slice(8, 10)) / new Date(Number(S.company.asOf.slice(0, 4)), Number(S.company.asOf.slice(5, 7)), 0).getDate()) : payrollMonthly));
   return reply({
-    text: `Gross profit since July is ${money(sum(gp))} on ${money(totalSales)} of net sales, a ${pct((sum(gp) / totalSales) * 100)} margin. Salaries take ${money(sum(pay))} of that. This view uses standard cost for goods sold and leaves out overheads we don't record here.`,
+    text: `Gross profit ${SINCE} is ${money(sum(gp))} on ${money(totalSales)} of net sales, a ${pct((sum(gp) / totalSales) * 100)} margin. Salaries take ${money(sum(pay))} of that. This view uses standard cost for goods sold and leaves out overheads we don't record here.`,
     kpis: kpis([["Net sales", money(totalSales)], ["Cost of goods", money(sum(cogsByMonth))], ["Gross profit", money(sum(gp))], ["Salaries", money(sum(pay))]]),
-    charts: [{ kind: "composed", title: "Sales, gross profit and salaries", unit: "bdt", data: M.map((m, i) => ({ label: m, Sales: salesByMonth[i], "Gross profit": gp[i], Salaries: pay[i] })), series: ["Sales", "Gross profit", "Salaries"], note: "October to the 25th" }],
-    tables: [table("Profit and loss, July to October", ["Line", ...M, "Total"], [
+    charts: [{ kind: "composed", title: "Sales, gross profit and salaries", unit: "bdt", data: M.map((m, i) => ({ label: m, Sales: salesByMonth[i], "Gross profit": gp[i], Salaries: pay[i] })), series: ["Sales", "Gross profit", "Salaries"], note: PARTIAL }],
+    tables: [table(`Profit and loss, ${SPAN}`, ["Line", ...M, "Total"], [
       ["Net sales", ...salesByMonth.map(money), money(totalSales)],
       ["Cost of goods sold", ...cogsByMonth.map(money), money(sum(cogsByMonth))],
       ["Gross profit", ...gp.map(money), money(sum(gp))],
@@ -292,22 +302,22 @@ function collections(): Reply {
   const list = by(Object.entries(methods), ([, v]) => v).map(([label, value]) => ({ label, value }));
   const months = Object.keys(S.collections);
   return reply({
-    text: `We've collected ${money(sum(list.map((x) => x.value)))} since July. ${list[0].label} is the most used payment method.`,
+    text: `We've collected ${money(sum(list.map((x) => x.value)))} ${SINCE}. ${list[0].label} is the most used payment method.`,
     charts: [
       { kind: "pie", title: "Collections by payment method", unit: "bdt", data: rows(list), series: ["value"] },
-      { kind: "stacked", title: "Collections by month and method", unit: "bdt", data: months.map((m, i) => ({ label: M[i] ?? m, ...(S.collections as Record<string, Record<string, number>>)[m] })), series: list.map((x) => x.label) },
+      { kind: "stacked", title: "Collections by month and method", unit: "bdt", data: months.map((m) => ({ label: M[S.monthKeys.indexOf(m)] ?? m, ...(S.collections as Record<string, Record<string, number>>)[m] })), series: list.map((x) => x.label) },
     ],
     follow: ["Invoiced vs collected by month", "Show receivables ageing", "Who owes us the most?"],
   });
 }
 
 function invoicedVsCollected(): Reply {
-  const inv = M.map((_, i) => sum(S.invoices.filter((x) => x.date.slice(5, 7) === String(7 + i).padStart(2, "0")).map((x) => x.amt)));
+  const inv = M.map((_, i) => sum(S.invoices.filter((x) => mIdx(x.date) === i).map((x) => x.amt)));
   const col = Object.values(S.collections).map((m) => sum(Object.values(m)));
   return reply({
-    text: `We invoiced ${money(sum(inv))} and collected ${money(sum(col))} since July.`,
+    text: `We invoiced ${money(sum(inv))} and collected ${money(sum(col))} ${SINCE}.`,
     charts: [
-      { kind: "composed", title: "Invoiced vs collected", unit: "bdt", data: M.map((m, i) => ({ label: m, Invoiced: inv[i], Collected: col[i] ?? 0 })), series: ["Invoiced", "Collected"], note: "October to the 25th" },
+      { kind: "composed", title: "Invoiced vs collected", unit: "bdt", data: M.map((m, i) => ({ label: m, Invoiced: inv[i], Collected: col[i] ?? 0 })), series: ["Invoiced", "Collected"], note: PARTIAL },
       { kind: "funnel", title: "Order to cash", unit: "count", data: [
         { label: "Orders placed", value: sum(Object.values(DT).map((d) => d.Delivered + d.Invoiced + d.Pending)) },
         { label: "Invoiced", value: S.invoices.length },
@@ -406,8 +416,8 @@ function logistics(): Reply {
 function salesByDepot(): Reply {
   const deps = by(Object.entries(DT), ([, v]) => sum(v.net));
   return reply({
-    text: `${locName(deps[0][0])} ships the most, ${money(sum(deps[0][1].net))} since July.`,
-    charts: [{ kind: "hbar", title: "Net sales by depot · July to October", unit: "bdt", data: deps.map(([id, v]) => ({ label: locName(id), Sales: sum(v.net) })), series: ["Sales"] }],
+    text: `${locName(deps[0][0])} ships the most, ${money(sum(deps[0][1].net))} ${SINCE}.`,
+    charts: [{ kind: "hbar", title: `Net sales by depot · ${SPAN}`, unit: "bdt", data: deps.map(([id, v]) => ({ label: locName(id), Sales: sum(v.net) })), series: ["Sales"] }],
     follow: ["Show deliveries by depot", "Stock by depot", "Sales by region"],
   });
 }
@@ -450,7 +460,7 @@ function daysOfCover(): Reply {
   }).filter((x) => x.value > 0);
   const sorted = by(list, (x) => -x.value);
   return reply({
-    text: `Based on average daily sales since July, ${sorted[0].label} has the least cover at ${sorted[0].value} selling days.`,
+    text: `Based on average daily sales ${SINCE}, ${sorted[0].label} has the least cover at ${sorted[0].value} selling days.`,
     charts: [{ kind: "hbar", title: "Days of cover, lowest first", unit: "days", data: sorted.slice(0, 10).map((x) => ({ label: x.label, Days: x.value })), series: ["Days"] }],
     follow: ["Which items are low on stock?", "Show production output", "Which products sell the most?"],
   });
@@ -460,10 +470,10 @@ function procurement(): Reply {
   const t: Record<string, number> = {};
   for (const p of S.purchaseOrders) t[sup[p.sup].name] = (t[sup[p.sup].name] ?? 0) + p.total;
   const list = by(Object.entries(t), ([, v]) => v);
-  const months = M.map((_, i) => sum(S.purchaseOrders.filter((p) => p.date.slice(5, 7) === String(7 + i).padStart(2, "0")).map((p) => p.total)));
+  const months = M.map((_, i) => sum(S.purchaseOrders.filter((p) => mIdx(p.date) === i).map((p) => p.total)));
   return reply({
-    text: `We've placed ${S.purchaseOrders.length} purchase orders worth ${money(sum(months))} since July. ${list[0][0]} is our largest supplier at ${money(list[0][1])}.`,
-    kpis: kpis([["Purchase orders", num(S.purchaseOrders.length)], ["Spend since July", money(sum(months))], ["Open orders", num(S.purchaseOrders.filter((p) => p.st !== "Received").length)], ["Suppliers", num(S.suppliers.length)]]),
+    text: `We've placed ${S.purchaseOrders.length} purchase orders worth ${money(sum(months))} ${SINCE}. ${list[0][0]} is our largest supplier at ${money(list[0][1])}.`,
+    kpis: kpis([["Purchase orders", num(S.purchaseOrders.length)], [`Spend ${SINCE}`, money(sum(months))], ["Open orders", num(S.purchaseOrders.filter((p) => p.st !== "Received").length)], ["Suppliers", num(S.suppliers.length)]]),
     charts: [
       { kind: "hbar", title: "Spend by supplier", unit: "bdt", data: list.slice(0, 8).map(([label, value]) => ({ label, Spend: value })), series: ["Spend"] },
       { kind: "bar", title: "Purchase spend by month", unit: "bdt", data: M.map((m, i) => ({ label: m, Spend: months[i] })), series: ["Spend"] },
@@ -492,9 +502,9 @@ function rawMaterials(): Reply {
   for (const p of S.purchaseOrders) for (const [r, q, price] of poLines(p)) t[r] = (t[r] ?? 0) + q * price;
   const list = by(Object.entries(t), ([, v]) => v).slice(0, 10);
   return reply({
-    text: `${rm[list[0][0]].name} is our biggest raw material spend at ${money(list[0][1])} since July.`,
+    text: `${rm[list[0][0]].name} is our biggest raw material spend at ${money(list[0][1])} ${SINCE}.`,
     charts: [{ kind: "treemap", title: "Purchase spend by raw material", unit: "bdt", data: list.map(([id, v]) => ({ label: rm[id].name, value: Math.round(v) })), series: ["value"] }],
-    tables: [table("Raw materials", ["Material", "Unit", "Standard cost", "Spend since July"], list.map(([id, v]) => [rm[id].name, rm[id].unit, money(rm[id].cost), money(v)]))],
+    tables: [table("Raw materials", ["Material", "Unit", "Standard cost", `Spend ${SINCE}`], list.map(([id, v]) => [rm[id].name, rm[id].unit, money(rm[id].cost), money(v)]))],
     follow: ["Spend by supplier", "Show open purchase orders", "What goes into our milk biscuit?"],
   });
 }
@@ -510,9 +520,9 @@ function production(): Reply {
     x.good += p.good;
   }
   const list = by(Object.entries(t), ([, v]) => v.made);
-  const months = M.map((_, i) => sum(done.filter((p) => p.date.slice(5, 7) === String(7 + i).padStart(2, "0")).map((p) => p.produced)));
+  const months = M.map((_, i) => sum(done.filter((p) => mIdx(p.date) === i).map((p) => p.produced)));
   return reply({
-    text: `The Gazipur factory finished ${done.length} production orders and ${num(made)} units since July, with a ${pct((good / made) * 100)} first-pass yield. ${S.production.length - done.length} orders are planned.`,
+    text: `The Gazipur factory finished ${done.length} production orders and ${num(made)} units ${SINCE}, with a ${pct((good / made) * 100)} first-pass yield. ${S.production.length - done.length} orders are planned.`,
     kpis: kpis([["Units produced", num(made)], ["First-pass yield", pct((good / made) * 100)], ["Rejected units", num(made - good)], ["Planned orders", num(S.production.length - done.length)]]),
     charts: [
       { kind: "radial", title: "First-pass yield by product", unit: "pct", data: list.slice(0, 6).map(([sku, v]) => ({ label: prodName(sku), value: Math.round((v.good / v.made) * 1000) / 10 })), series: ["value"] },
@@ -583,14 +593,255 @@ function notTracked(topic: string, show: () => Reply): Reply {
   return { ...r, text: `We don't keep ${topic} in our records yet, so I can't answer that one. Here's what I can show instead. ${r.text}` };
 }
 
+/* ---------- management questions: footprint, counts, attention, growth, risk ---------- */
+
+const MO = S.monthly;
+const custLast = (id: string) => CT[id]?.last ?? "";
+const daysSince = (iso: string) => Math.round((Date.parse(S.company.asOf) - Date.parse(iso)) / 864e5);
+const outBy = (id: string) => sum(S.invoices.filter((i) => i.cus === id).map((i) => i.out));
+
+function footprint(): Reply {
+  const types: Record<string, string[]> = {};
+  for (const l of S.locations) (types[l.type] ??= []).push(l.name.split(",")[0]);
+  const depots = types["Depot"] ?? [];
+  const staff: Record<string, number> = {};
+  for (const e of S.employees) staff[e.loc] = (staff[e.loc] ?? 0) + 1;
+  return reply({
+    text: `We operate from ${S.locations.length + 1} sites: the head office in ${S.company.headOffice.split(",").pop()?.trim()}, ${(types["Factory"] ?? []).length} factory, ${(types["Central warehouse"] ?? []).length} central warehouse and ${depots.length} sales depots (our branches), one in every division. The depots serve ${S.customers.length} customers through ${S.regions.length} sales regions.`,
+    kpis: kpis([["Branches (depots)", num(depots.length)], ["Factories", num((types["Factory"] ?? []).length)], ["Warehouses", num((types["Central warehouse"] ?? []).length)], ["Sales regions", num(S.regions.length)]]),
+    charts: [{ kind: "hbar", title: `Net sales by branch · ${SPAN}`, unit: "bdt", data: by(Object.entries(DT), ([, v]) => sum(v.net)).map(([id, v]) => ({ label: locName(id), Sales: sum(v.net) })), series: ["Sales"] }],
+    tables: [table("Our sites", ["Site", "Type", "Division", "District", "People"], [["Head office", "Head office", "Dhaka", "Dhaka", num(staff.HO ?? 0)], ...S.locations.map((l) => [l.name, l.type, l.division, l.district, num(staff[l.id] ?? 0)])])],
+    follow: ["Which branch sells the most?", "Stock by depot", "Show deliveries by depot"],
+  });
+}
+
+function atAGlance(): Reply {
+  const orders = sum(MO.orders);
+  return reply({
+    text: `Shapla in numbers, 1 ${START} to ${day(LAST)}: ${num(S.products.length)} products in ${Object.keys(cat).length} categories, ${num(S.customers.length)} customers, ${num(S.suppliers.length)} suppliers, ${num(S.employees.length)} people, and ${num(orders)} sales orders.`,
+    kpis: kpis([["Products", num(S.products.length)], ["Customers", num(S.customers.length)], ["Suppliers", num(S.suppliers.length)], ["People", num(S.employees.length)], ["Sales orders", num(orders)], ["Invoices", num(S.invoices.length)], ["Purchase orders", num(S.purchaseOrders.length)], ["Production orders", num(S.production.length)]]),
+    tables: [table("Master data", ["Record", "Count"], [["Branches (depots)", num(S.locations.filter((l) => l.type === "Depot").length)], ["Sales regions", num(S.regions.length)], ["Departments", num(Object.keys(dept).length)], ["Raw materials", num(S.rawMaterials.length)], ["Bills of materials", num(Object.keys(BOM).length)], ["Ledger accounts", num(S.accounts.length)]])],
+    follow: ["How many branches do we have?", "How is Shapla doing?", "What needs my attention today?"],
+  });
+}
+
+function attention(): Reply {
+  const overdue = S.invoices.filter(isOverdue);
+  const low = S.stock.filter((s) => s.qty < s.reorder);
+  const latePO = S.purchaseOrders.filter((p) => p.st !== "Received" && p.exp < S.company.asOf);
+  const overCredit = S.customers.filter((c) => outBy(c.id) > c.credit);
+  const pend = S.pendingOrders.filter((o) => daysSince(o.date) > 3);
+  const items: [string, number, string][] = [
+    ["Overdue invoices", overdue.length, `${money(sum(overdue.map((i) => i.out)))} past due`],
+    ["Customers over credit limit", overCredit.length, overCredit.slice(0, 2).map((c) => c.name).join(", ") || "none"],
+    ["Stock below reorder level", low.length, low.length ? `tightest: ${prodName(by(low, (s) => -(s.qty / s.reorder))[0].sku)}` : "none"],
+    ["Late purchase orders", latePO.length, latePO.length ? `${money(sum(latePO.map((p) => p.total)))} expected already` : "none"],
+    ["Orders pending over 3 days", pend.length, pend.length ? `${money(sum(pend.map((o) => o.total)))} waiting` : "none"],
+  ];
+  return reply({
+    text: `Five things need a decision as of ${day(LAST)}. The biggest money at risk is ${money(sum(overdue.map((i) => i.out)))} of overdue receivables; ${overCredit.length} customers are trading above their credit limit.`,
+    kpis: kpis(items.slice(0, 4).map(([l, n]) => [l, num(n)])),
+    charts: [{ kind: "bar", title: "Open exceptions", unit: "count", data: items.map(([label, n]) => ({ label, Items: n })), series: ["Items"] }],
+    tables: [table("What needs attention", ["Exception", "Count", "Detail"], items.map(([a, n, d]) => [a, num(n), d]))],
+    follow: ["Which customers are over their credit limit?", "Who owes us the most?", "Which items are low on stock?", "Show open purchase orders"],
+  });
+}
+
+function monthOnMonth(): Reply {
+  const prev = LM - 1;
+  const lastFull = salesByMonth[prev];
+  const before = salesByMonth[prev - 1];
+  // selling days: the days with orders (Fridays are off), so the pace compares like with like
+  const daysCur = S.daily.filter((d) => mIdx(d.date) === LM).length;
+  const daysPrev = S.daily.filter((d) => mIdx(d.date) === prev).length;
+  const runRate = (curSales / Math.max(1, daysCur)) * daysPrev;
+  return reply({
+    text: `${MN[prev]} closed at ${money(lastFull)}, ${up(lastFull, before)} on ${MN[prev - 1]}. ${CUR} has ${money(curSales)} in ${daysCur} selling days; at that pace over a ${daysPrev}-day month it would end near ${money(runRate)}, ${up(runRate, lastFull)} on ${MN[prev]}.`,
+    kpis: kpis([[`${MN[prev]} sales`, money(lastFull)], [`vs ${MN[prev - 1]}`, up(lastFull, before)], [`${CUR} to date`, money(curSales)], [`${CUR} run rate`, money(runRate)]]),
+    charts: [{ kind: "composed", title: "Sales and orders by month", unit: "bdt", data: M.map((m, i) => ({ label: i === LM ? `${m}*` : m, Sales: salesByMonth[i], "Avg. order": MO.orders[i] ? salesByMonth[i] / MO.orders[i] : 0 })), series: ["Sales", "Avg. order"], note: `*${PARTIAL}` }],
+    tables: [table("Month on month", ["Month", "Net sales", "Change", "Orders", "Avg. order"], M.map((m, i) => [MN[i], money(salesByMonth[i]), i ? up(salesByMonth[i], salesByMonth[i - 1]) : "", num(MO.orders[i]), money(MO.orders[i] ? salesByMonth[i] / MO.orders[i] : 0)]))],
+    follow: ["Which products are growing?", "Sales by region", "Show the profit and loss"],
+  });
+}
+
+function growthProducts(): Reply {
+  const prev = LM - 1;
+  const list = S.products.map((p) => ({ label: prodName(p.sku), a: PM[p.sku]?.net[prev - 1] ?? 0, b: PM[p.sku]?.net[prev] ?? 0 })).filter((x) => x.a > 0).map((x) => ({ ...x, g: ((x.b - x.a) / x.a) * 100 }));
+  const up5 = by(list, (x) => x.g).slice(0, 6);
+  const down5 = by(list, (x) => -x.g).slice(0, 6);
+  return reply({
+    text: `Comparing ${MN[prev]} with ${MN[prev - 1]}: ${up5[0].label} grew fastest (${pct(up5[0].g)} up) and ${down5[0].label} fell the most (${pct(down5[0].g)} down).`,
+    charts: [{ kind: "bar", title: `Fastest growing · ${M[prev]} vs ${M[prev - 1]}`, unit: "pct", data: up5.map((x) => ({ label: x.label, Growth: Math.round(x.g * 10) / 10 })), series: ["Growth"] }],
+    tables: [table("Biggest declines", ["Product", MN[prev - 1], MN[prev], "Change"], down5.map((x) => [x.label, money(x.a), money(x.b), up(x.b, x.a)]))],
+    follow: ["Which products sell the most?", "Show slow moving stock", "Month on month sales"],
+  });
+}
+
+function creditRisk(): Reply {
+  const list = by(S.customers.map((c) => ({ c, out: outBy(c.id) })).filter((x) => x.out > x.c.credit), (x) => x.out / x.c.credit);
+  return reply({
+    text: list.length ? `${list.length} customers owe more than their credit limit. ${list[0].c.name} is furthest over at ${pct((list[0].out / list[0].c.credit) * 100, 0)} of a ${money(list[0].c.credit)} limit. Holding new credit for them until they pay down is the usual call.` : "No customer is above their credit limit right now.",
+    charts: list.length ? [{ kind: "hbar", title: "Credit used, % of limit", unit: "pct", data: list.slice(0, 10).map((x) => ({ label: x.c.name, Used: Math.round((x.out / x.c.credit) * 100) })), series: ["Used"] }] : undefined,
+    tables: [table("Over credit limit", ["Customer", "Type", "Officer", "Outstanding", "Limit", "Terms"], list.map((x) => [x.c.name, x.c.type, emp[x.c.officer].name, money(x.out), money(x.c.credit), `${x.c.terms} days`]))],
+    follow: ["Who owes us the most?", "Show receivables ageing", "Which customers stopped ordering?"],
+  });
+}
+
+function dormant(): Reply {
+  const list = by(S.customers.map((c) => ({ c, last: custLast(c.id) })).map((x) => ({ ...x, d: x.last ? daysSince(x.last) : 999 })).filter((x) => x.d > 21), (x) => x.d);
+  return reply({
+    text: `${list.length} customers haven't ordered in more than three weeks. Together they bought ${money(sum(list.map((x) => sum(CT[x.c.id]?.net ?? [0]))))} ${SINCE}, so a call from their sales officer is worth it.`,
+    kpis: kpis([["Not ordering 21+ days", num(list.length)], ["Of all customers", pct((list.length / S.customers.length) * 100, 0)]]),
+    tables: [table("Customers gone quiet", ["Customer", "Type", "Area", "Officer", "Last order", "Days"], list.slice(0, 15).map((x) => [x.c.name, x.c.type, x.c.area, emp[x.c.officer].name, x.last ? day(x.last) : "never", x.d === 999 ? "–" : num(x.d)]))],
+    follow: ["Who are our top customers?", "Sales by sales officer", "Which customers are over their credit limit?"],
+  });
+}
+
+function discountsVat(): Reply {
+  const disc = sum(MO.discount);
+  const gross = sum(MO.gross);
+  return reply({
+    text: `We gave ${money(disc)} in trade discounts ${SINCE}, ${pct((disc / gross) * 100)} of gross sales, and charged ${money(sum(MO.vat))} of VAT on our invoices. VAT rates here are illustrative.`,
+    kpis: kpis([["Gross sales", money(gross)], ["Discounts", money(disc)], ["Discount rate", pct((disc / gross) * 100)], ["Output VAT", money(sum(MO.vat))]]),
+    charts: [{ kind: "composed", title: "Discounts and VAT by month", unit: "bdt", data: M.map((m, i) => ({ label: m, Discounts: MO.discount[i], VAT: MO.vat[i] })), series: ["Discounts", "VAT"], note: PARTIAL }],
+    follow: ["Show the profit and loss", "Show gross margin by category", "Show the price list"],
+  });
+}
+
+function orderStatus(): Reply {
+  const st = MO.status as Record<string, number>;
+  const total = sum(Object.values(st));
+  return reply({
+    text: `Of ${num(total)} sales orders ${SINCE}, ${num(st.Delivered ?? 0)} are delivered, ${num(st.Invoiced ?? 0)} invoiced and on the way, and ${num(st.Pending ?? 0)} pending. Average order size is ${money(totalSales / total)}.`,
+    kpis: kpis([["Orders", num(total)], ["Delivered", pct(((st.Delivered ?? 0) / total) * 100, 0)], ["Pending", num(st.Pending ?? 0)], ["Avg. order", money(totalSales / total)]]),
+    charts: [
+      { kind: "pie", title: "Orders by status", unit: "count", data: Object.entries(st).map(([label, value]) => ({ label, value })), series: ["value"] },
+      { kind: "bar", title: "Orders by month", unit: "count", data: M.map((m, i) => ({ label: i === LM ? `${m}*` : m, Orders: MO.orders[i] })), series: ["Orders"] },
+    ],
+    follow: ["Which orders are still pending?", "Show deliveries by depot", "Month on month sales"],
+  });
+}
+
+function slowMoving(): Reply {
+  const days = S.daily.length;
+  const list = S.products.map((p) => {
+    const onHand = sum(S.stock.filter((s) => s.sku === p.sku).map((s) => s.qty));
+    const perDay = sum(PM[p.sku]?.qty ?? [0]) / days;
+    return { label: prodName(p.sku), onHand, value: onHand * p.cost, cover: perDay ? onHand / perDay : 999 };
+  }).filter((x) => x.onHand > 0);
+  const slow = by(list, (x) => x.cover).slice(0, 10);
+  return reply({
+    text: `${slow[0].label} is our slowest mover with about ${slow[0].cover >= 999 ? "no recent sales" : `${Math.round(slow[0].cover)} days of stock`}. The ten slowest items tie up ${money(sum(slow.map((x) => x.value)))} at cost; a promotion or production pause would free that cash.`,
+    charts: [{ kind: "hbar", title: "Slowest moving · days of stock", unit: "days", data: slow.map((x) => ({ label: x.label, Days: Math.round(Math.min(x.cover, 365)) })), series: ["Days"] }],
+    tables: [table("Slow moving stock", ["Product", "On hand", "Value at cost", "Days of stock"], slow.map((x) => [x.label, num(x.onHand), money(x.value), x.cover >= 999 ? "no sales" : num(x.cover)]))],
+    follow: ["Which items are low on stock?", "Stock value by category", "Which products are growing?"],
+  });
+}
+
+function stockByDepot(): Reply {
+  const t: Record<string, { v: number; low: number }> = {};
+  for (const s of S.stock) {
+    const x = (t[locName(s.loc)] ??= { v: 0, low: 0 });
+    x.v += stockValue(s);
+    if (s.qty < s.reorder) x.low += 1;
+  }
+  const list = by(Object.entries(t), ([, x]) => x.v);
+  return reply({
+    text: `${list[0][0]} holds the most stock at ${money(list[0][1].v)}. ${list.filter(([, x]) => x.low > 0).length} sites have at least one item below reorder level.`,
+    charts: [{ kind: "stacked", title: "Stock value and shortfalls by site", unit: "bdt", data: list.map(([label, x]) => ({ label, Value: Math.round(x.v) })), series: ["Value"] }],
+    tables: [table("Stock by site", ["Site", "Value at cost", "Items below reorder"], list.map(([l, x]) => [l, money(x.v), num(x.low)]))],
+    follow: ["Which items are low on stock?", "Show deliveries by depot", "Days of cover by product"],
+  });
+}
+
+function supplierPerformance(): Reply {
+  const t: Record<string, { n: number; late: number; open: number; spend: number }> = {};
+  for (const p of S.purchaseOrders) {
+    const x = (t[p.sup] ??= { n: 0, late: 0, open: 0, spend: 0 });
+    x.n += 1;
+    x.spend += p.total;
+    if (p.st !== "Received") x.open += 1;
+    if (p.st !== "Received" && p.exp < S.company.asOf) x.late += 1;
+  }
+  const list = by(Object.entries(t), ([, x]) => x.late * 1e12 + x.spend);
+  return reply({
+    text: `${sup[list[0][0]].name} has the most late orders (${list[0][1].late}). Watch suppliers with late deliveries on materials that run low, and pay the reliable ones on time.`,
+    charts: [{ kind: "stacked", title: "Purchase orders by supplier", unit: "count", data: list.slice(0, 8).map(([id, x]) => ({ label: sup[id].name, Late: x.late, "Open on time": x.open - x.late, Received: x.n - x.open })), series: ["Late", "Open on time", "Received"] }],
+    tables: [table("Supplier scorecard", ["Supplier", "City", "Orders", "Open", "Late", "Spend", "Terms"], list.map(([id, x]) => [sup[id].name, sup[id].city, num(x.n), num(x.open), num(x.late), money(x.spend), `${sup[id].terms} days`]))],
+    follow: ["Show open purchase orders", "Spend by supplier", "Spend by raw material"],
+  });
+}
+
+function productionPlan(): Reply {
+  const t: Record<string, { plan: number; made: number; rej: number }> = {};
+  for (const p of S.production) {
+    const x = (t[p.sku] ??= { plan: 0, made: 0, rej: 0 });
+    x.plan += p.planned;
+    x.made += p.produced;
+    x.rej += p.rejected;
+  }
+  const list = by(Object.entries(t), ([, x]) => x.plan);
+  const plan = sum(list.map(([, x]) => x.plan));
+  const made = sum(list.map(([, x]) => x.made));
+  return reply({
+    text: `The factory produced ${num(made)} units against a plan of ${num(plan)}, ${pct((made / plan) * 100)} attainment. Rejects were ${num(sum(list.map(([, x]) => x.rej)))} units.`,
+    kpis: kpis([["Planned", num(plan)], ["Produced", num(made)], ["Attainment", pct((made / plan) * 100)], ["Rejected", num(sum(list.map(([, x]) => x.rej)))]]),
+    charts: [{ kind: "composed", title: "Plan vs actual by product", unit: "count", data: list.slice(0, 8).map(([sku, x]) => ({ label: prodName(sku), Planned: x.plan, Produced: x.made })), series: ["Planned", "Produced"] }],
+    tables: [table("Plan vs actual", ["Product", "Planned", "Produced", "Attainment", "Rejected"], list.map(([sku, x]) => [prodName(sku), num(x.plan), num(x.made), pct(x.plan ? (x.made / x.plan) * 100 : 0, 0), num(x.rej)]))],
+    follow: ["Show production output", "Production yield by product", "Which items are low on stock?"],
+  });
+}
+
+function costPerHead(): Reply {
+  const t: Record<string, { n: number; pay: number }> = {};
+  for (const e of S.employees) {
+    const x = (t[dept[e.dept]] ??= { n: 0, pay: 0 });
+    x.n += 1;
+    x.pay += e.gross;
+  }
+  const list = by(Object.entries(t), ([, x]) => x.pay / x.n);
+  const salesPerHead = totalSales / S.employees.length;
+  return reply({
+    text: `Payroll is ${pct(((payrollMonthly * M.length) / totalSales) * 100)} of net sales. Each person generates about ${money(salesPerHead)} of sales ${SINCE}. ${list[0][0]} has the highest average pay.`,
+    kpis: kpis([["Sales per person", money(salesPerHead)], ["Payroll / sales", pct(((payrollMonthly * M.length) / totalSales) * 100)], ["Average gross", money(payrollMonthly / S.employees.length)]]),
+    charts: [{ kind: "bar", title: "Average monthly pay by department", unit: "bdt", data: list.map(([label, x]) => ({ label, Average: Math.round(x.pay / x.n) })), series: ["Average"] }],
+    tables: [table("Department cost", ["Department", "People", "Monthly payroll", "Average"], list.map(([d, x]) => [d, num(x.n), money(x.pay), money(x.pay / x.n)]))],
+    follow: ["Show payroll by department", "Headcount by department", "Pay by grade"],
+  });
+}
+
+function cashCycle(): Reply {
+  const credit = sum(S.invoices.map((i) => i.amt));
+  const out = sum(S.invoices.map((i) => i.out));
+  const dso = (out / credit) * S.daily.length;
+  const stockV = sum(S.stock.map(stockValue));
+  const dio = (stockV / sum(cogsByMonth)) * S.daily.length;
+  return reply({
+    text: `Cash is tied up for about ${Math.round(dso + dio)} days: customers take around ${Math.round(dso)} days to pay and stock sits for about ${Math.round(dio)} days. Collecting the overdue balance is the fastest lever.`,
+    kpis: kpis([["Days sales outstanding", `${Math.round(dso)} days`], ["Days of inventory", `${Math.round(dio)} days`], ["Receivables", money(out)], ["Stock at cost", money(stockV)]]),
+    charts: [{ kind: "bar", title: "Where cash is tied up", unit: "bdt", data: [{ label: "Receivables", Value: out }, { label: "Stock", Value: Math.round(stockV) }, { label: "Open POs", Value: sum(S.purchaseOrders.filter((p) => p.st !== "Received").map((p) => p.total)) }], series: ["Value"] }],
+    follow: ["Show receivables ageing", "Show slow moving stock", "Invoiced vs collected by month"],
+  });
+}
+
+function officerProductivity(): Reply {
+  const list = by(Object.entries(OT).map(([id, v]) => ({ e: emp[id], v: sum(v.net), orders: v.orders, cs: S.customers.filter((c) => c.officer === id).length })), (x) => x.v / Math.max(1, x.cs));
+  return reply({
+    text: `${list[0].e.name} gets the most from each customer, ${money(list[0].v / Math.max(1, list[0].cs))} per account. Officers with many accounts but low sales per account are where coaching pays off.`,
+    charts: [{ kind: "hbar", title: "Sales per customer account", unit: "bdt", data: list.slice(0, 10).map((x) => ({ label: x.e.name, Sales: Math.round(x.v / Math.max(1, x.cs)) })), series: ["Sales"] }],
+    tables: [table("Field team productivity", ["Officer", "Accounts", "Orders", "Net sales", "Per account", "Avg. order"], list.map((x) => [x.e.name, num(x.cs), num(x.orders), money(x.v), money(x.v / Math.max(1, x.cs)), money(x.v / Math.max(1, x.orders))]))],
+    follow: ["Sales by sales officer", "Which customers stopped ordering?", "Sales by region"],
+  });
+}
+
 /* ---------- named records ---------- */
 
 function productProfile(sku: string): Reply {
   const p = prod[sku];
-  const pm = PM[sku] ?? { net: [0, 0, 0, 0], qty: [0, 0, 0, 0], cogs: [0, 0, 0, 0] };
+  const pm = PM[sku] ?? { net: M.map(() => 0), qty: M.map(() => 0), cogs: M.map(() => 0) };
   const onHand = S.stock.filter((s) => s.sku === sku);
   return reply({
-    text: `${prodName(sku)} (${sku}) is in ${cat[p.cat]}. MRP ${money(p.mrp)}, trade price ${money(p.tp)}, standard cost ${money(p.cost)}. We've sold ${num(sum(pm.qty))} units for ${money(sum(pm.net))} since July and hold ${num(sum(onHand.map((s) => s.qty)))} units in stock.`,
+    text: `${prodName(sku)} (${sku}) is in ${cat[p.cat]}. MRP ${money(p.mrp)}, trade price ${money(p.tp)}, standard cost ${money(p.cost)}. We've sold ${num(sum(pm.qty))} units for ${money(sum(pm.net))} ${SINCE} and hold ${num(sum(onHand.map((s) => s.qty)))} units in stock.`,
     kpis: kpis([["Net sales", money(sum(pm.net))], ["Units sold", num(sum(pm.qty))], ["Gross margin", pct(sum(pm.net) ? ((sum(pm.net) - sum(pm.cogs)) / sum(pm.net)) * 100 : 0)], ["In stock", num(sum(onHand.map((s) => s.qty)))]]),
     charts: [{ kind: "composed", title: `${prodName(sku)} · sales and units by month`, unit: "bdt", data: M.map((m, i) => ({ label: m, Sales: pm.net[i], "Cost of goods": pm.cogs[i] })), series: ["Sales", "Cost of goods"] }],
     tables: [table("Stock by location", ["Location", "On hand", "Reorder at"], onHand.map((s) => [locName(s.loc), num(s.qty), num(s.reorder)]))],
@@ -600,11 +851,11 @@ function productProfile(sku: string): Reply {
 
 function customerProfile(id: string): Reply {
   const c = cus[id];
-  const t = CT[id] ?? { net: [0, 0, 0, 0], orders: 0, last: "" };
+  const t = CT[id] ?? { net: M.map(() => 0), orders: 0, last: "" };
   const inv = S.invoices.filter((i) => i.cus === id);
   const out = sum(inv.map((i) => i.out));
   return reply({
-    text: `${c.name} is a ${c.type.toLowerCase()} in ${c.area}, ${c.division} (${region[c.region].name} region), handled by ${emp[c.officer].name}. Contact: ${c.contact}. They've ordered ${money(sum(t.net))} across ${t.orders} orders since July${t.last ? `, last on ${day(t.last)}` : ""}, and owe ${money(out)} against a ${money(c.credit)} credit limit on ${c.terms}-day terms.`,
+    text: `${c.name} is a ${c.type.toLowerCase()} in ${c.area}, ${c.division} (${region[c.region].name} region), handled by ${emp[c.officer].name}. Contact: ${c.contact}. They've ordered ${money(sum(t.net))} across ${t.orders} orders ${SINCE}${t.last ? `, last on ${day(t.last)}` : ""}, and owe ${money(out)} against a ${money(c.credit)} credit limit on ${c.terms}-day terms.`,
     kpis: kpis([["Net sales", money(sum(t.net))], ["Orders", num(t.orders)], ["Outstanding", money(out)], ["Credit used", pct((out / c.credit) * 100, 0)]]),
     charts: [{ kind: "bar", title: `${c.name} · net sales by month`, unit: "bdt", data: M.map((m, i) => ({ label: m, Sales: t.net[i] })), series: ["Sales"] }],
     tables: [table("Recent invoices", ["Invoice", "Date", "Due", "Amount", "Outstanding", "Status"], by(inv, (i) => Date.parse(i.date)).slice(0, 8).map((i) => [i.id, day(i.date), day(i.due), money(i.amt), money(i.out), isOverdue(i) ? "Overdue" : i.st]))],
@@ -617,7 +868,7 @@ function employeeProfile(id: string): Reply {
   const years = (Date.parse(S.company.asOf) - Date.parse(e.join)) / 3.15576e10;
   const sales = OT[id];
   return reply({
-    text: `${e.name} is our ${e.title} in ${dept[e.dept]}, based at ${locName(e.loc)}. Grade ${e.grade}, ${e.type.toLowerCase()}, with us since ${dayYear(e.join)} (${years.toFixed(1)} years). Monthly gross is ${money(e.gross)}.${sales ? ` As a sales officer they've booked ${money(sum(sales.net))} since July.` : ""}`,
+    text: `${e.name} is our ${e.title} in ${dept[e.dept]}, based at ${locName(e.loc)}. Grade ${e.grade}, ${e.type.toLowerCase()}, with us since ${dayYear(e.join)} (${years.toFixed(1)} years). Monthly gross is ${money(e.gross)}.${sales ? ` As a sales officer they've booked ${money(sum(sales.net))} ${SINCE}.` : ""}`,
     kpis: kpis([["Gross pay", money(e.gross)], ["Basic", money(e.basic)], ["Grade", e.grade], ["Tenure", `${years.toFixed(1)} yrs`]]),
     charts: [{ kind: "pie", title: "Monthly pay split", unit: "bdt", data: [{ label: "Basic", value: e.basic }, { label: "House rent", value: e.house }, { label: "Medical", value: e.medical }, { label: "Conveyance and other", value: e.other }], series: ["value"] }],
     follow: ["Headcount by department", "Pay by grade", "Show payroll by department"],
@@ -628,7 +879,7 @@ function supplierProfile(id: string): Reply {
   const s = sup[id];
   const pos = S.purchaseOrders.filter((p) => p.sup === id);
   return reply({
-    text: `${s.name} supplies us from ${s.city}. Contact: ${s.contact}, ${s.terms}-day payment terms. We've placed ${pos.length} orders worth ${money(sum(pos.map((p) => p.total)))} since July; ${pos.filter((p) => p.st !== "Received").length} are open.`,
+    text: `${s.name} supplies us from ${s.city}. Contact: ${s.contact}, ${s.terms}-day payment terms. We've placed ${pos.length} orders worth ${money(sum(pos.map((p) => p.total)))} ${SINCE}; ${pos.filter((p) => p.st !== "Received").length} are open.`,
     tables: [table("Purchase orders", ["PO", "Date", "Items", "Expected", "Value", "Status"], by(pos, (p) => Date.parse(p.date)).map((p) => [p.id, day(p.date), poLines(p).map(([r]) => rm[r].name).join(", "), day(p.exp), money(p.total), p.st]))],
     follow: ["Spend by supplier", "Show open purchase orders", "Spend by raw material"],
   });
@@ -640,7 +891,7 @@ function regionProfile(id: string): Reply {
   const net = M.map((_, i) => sum(cs.map((c) => CT[c.id]?.net[i] ?? 0)));
   const top = by(cs, (c) => sum(CT[c.id]?.net ?? [0])).slice(0, 6);
   return reply({
-    text: `${r.name} region has ${cs.length} customers and is led by ${emp[r.rsm].name}. Net sales since July are ${money(sum(net))}, with ${money(net[3])} in October so far.`,
+    text: `${r.name} region has ${cs.length} customers and is led by ${emp[r.rsm].name}. Net sales ${SINCE} are ${money(sum(net))}, with ${money(net[LM])} in ${CUR} so far.`,
     charts: [
       { kind: "bar", title: `${r.name} · net sales by month`, unit: "bdt", data: M.map((m, i) => ({ label: m, Sales: net[i] })), series: ["Sales"] },
       { kind: "hbar", title: `Top customers in ${r.name}`, unit: "bdt", data: top.map((c) => ({ label: c.name, Sales: sum(CT[c.id]?.net ?? [0]) })), series: ["Sales"] },
@@ -676,6 +927,30 @@ function findNamed(q: string): Reply | null {
 
 type Rule = [RegExp, () => Reply];
 const RULES: Rule[] = [
+  [/(what needs|needs? (my )?attention|exception|worry|risk|red flag|problems?|issues?|action items?|what should i (do|look|focus))/, attention],
+  [/(how many|number of|count of|total number)\b.*\b(branch|depot|location|site|office|warehouse|plant|factor)/, footprint],
+  [/(how many|number of|count of|total number)\b.*\b(customer|distributor|retailer|dealer|outlet)/, customersOverview],
+  [/(how many|number of|count of|total number)\b.*\b(employee|staff|people|worker|headcount)/, headcount],
+  [/(how many|number of|count of|total number)\b.*\b(product|sku|item)/, priceList],
+  [/(how many|number of|count of|total number)\b.*\b(supplier|vendor)/, suppliersList],
+  [/(how many|number of|count of|total number)\b.*\b(order)/, orderStatus],
+  [/(which|what|best|top).*(branch|depot).*(sell|sales|most|best|perform)|(branch|depot) (sales|performance|ranking)/, salesByDepot],
+  [/(branch|branches|footprint|operations? (in|across)|where do we operate|sites?\b|offices?)/, footprint],
+  [/(how many|number of|count of|total number|master data|in numbers|at a glance numbers)/, atAGlance],
+  [/(credit limit|over (their )?(credit|limit)|credit risk|exposure|bad debt|risky customer)/, creditRisk],
+  [/(stopped ordering|not ordering|inactive|dormant|gone quiet|lost customer|churn|haven.?t ordered)/, dormant],
+  [/(discount|vat|tax)/, discountsVat],
+  [/(order status|orders? by status|how many orders|order count|fulfil|fill rate|average order|order size|basket)/, orderStatus],
+  [/(product|item|sku|brand).*(growing|growth|declin|falling|dropp)|(growing|declining|falling) (product|item)/, growthProducts],
+  [/(month on month|mom\b|vs last month|compared? (to|with) last month|growth|growing|run ?rate|this month|last month|pace|on track)/, monthOnMonth],
+  [/(growing|declin|falling|dropp|fastest|winners|losers)/, growthProducts],
+  [/(slow.?moving|dead stock|aged stock|excess stock|overstock|not selling)/, slowMoving],
+  [/(stock by (depot|branch|site|location|warehouse)|depot stock|branch stock)/, stockByDepot],
+  [/(supplier (performance|scorecard|rating)|late supplier|vendor (performance|rating)|reliab)/, supplierPerformance],
+  [/(plan vs|planned vs|attainment|production plan|schedule adherence)/, productionPlan],
+  [/(cost per head|per employee|per person|productivity of staff|payroll (to|vs|as a share of) sales|labou?r cost)/, costPerHead],
+  [/(cash cycle|cash conversion|working capital|dso|days sales outstanding|tied up|liquidity|cash flow)/, cashCycle],
+  [/(officer productivity|per account|coverage|productivity|beat|route productivity)/, officerProductivity],
   [/(attrition|resign|turnover of staff|exit)/, () => notTracked("attrition or exit data", headcount)],
   [/(leave|attendance|absent|late arrival|overtime|shift)/, () => notTracked("leave, attendance or overtime data", headcount)],
   [/(target|budget|forecast|plan vs)/, () => notTracked("sales targets, budgets or forecasts", salesTrend)],
@@ -719,7 +994,7 @@ const RULES: Rule[] = [
 ];
 
 const GREETING = /^\s*(hi|hello|hey|salam|assalamu|good (morning|afternoon|evening)|thanks?|thank you)\b/;
-const ON_TOPIC = /(shapla|our|we |us\b|company|business|sales|sold|sell|revenue|profit|loss|margin|cost|spend|price|budget|cash|bank|finance|account|ledger|vat|tax|invoice|bill|receivable|payable|ageing|aging|collect|payment|bkash|nagad|customer|dealer|distributor|retailer|outlet|pos\b|supplier|vendor|purchase|procure|po\b|order|stock|inventory|warehouse|depot|branch|logistic|deliver|dispatch|sku|product|biscuit|noodle|tea|oil|spice|flour|beverage|dairy|category|production|factory|plant|batch|yield|reject|bom|recipe|material|employee|staff|people|headcount|hr\b|hrms|payroll|salary|wage|grade|joined|department|region|division|officer|attrition|leave|attendance|overtime|target|budget|forecast|scorecard|funnel|trend|today|yesterday|month|kpi|report|chart|dashboard|overview|summary|doing)/;
+const ON_TOPIC = /(how many|number of|attention|risk|worry|exception|growth|credit|discount|working capital|cash cycle|run rate|site|footprint|operation|management|ceo|md\b|board|shapla|our|we |us\b|company|business|sales|sold|sell|revenue|profit|loss|margin|cost|spend|price|budget|cash|bank|finance|account|ledger|vat|tax|invoice|bill|receivable|payable|ageing|aging|collect|payment|bkash|nagad|customer|dealer|distributor|retailer|outlet|pos\b|supplier|vendor|purchase|procure|po\b|order|stock|inventory|warehouse|depot|branch|logistic|deliver|dispatch|sku|product|biscuit|noodle|tea|oil|spice|flour|beverage|dairy|category|production|factory|plant|batch|yield|reject|bom|recipe|material|employee|staff|people|headcount|hr\b|hrms|payroll|salary|wage|grade|joined|department|region|division|officer|attrition|leave|attendance|overtime|target|budget|forecast|scorecard|funnel|trend|today|yesterday|month|kpi|report|chart|dashboard|overview|summary|doing)/;
 const BANGLA = /[ঀ-৿]/;
 
 export const shaplaStarters = [
@@ -732,15 +1007,16 @@ export const shaplaStarters = [
 ];
 
 export const shaplaModules: { module: string; questions: string[] }[] = [
-  { module: "Overview", questions: ["How is Shapla doing?", "Region scorecard", "What were yesterday's sales?", "Show daily sales for the last month"] },
-  { module: "Sales", questions: ["Which products sell the most?", "Sales by region", "Who are our top customers?", "Sales by sales officer"] },
-  { module: "Finance", questions: ["Show the profit and loss", "Show gross margin by category", "Show receivables ageing", "Collections by payment method"] },
-  { module: "Payroll & HR", questions: ["Show payroll by department", "Pay by grade", "Headcount by department", "Who joined most recently?"] },
-  { module: "Logistics", questions: ["Show deliveries by depot", "Which orders are still pending?", "Sales by depot", "Where are our locations?"] },
+  { module: "Overview", questions: ["How is Shapla doing?", "What needs my attention today?", "How many branches do we have?", "Shapla in numbers"] },
+  { module: "Growth", questions: ["Month on month sales", "Which products are growing?", "Region scorecard", "What were yesterday's sales?"] },
+  { module: "Sales", questions: ["Which products sell the most?", "Sales by region", "Who are our top customers?", "Sales by sales officer", "Which customers stopped ordering?", "Field team productivity"] },
+  { module: "Finance", questions: ["Show the profit and loss", "Show gross margin by category", "Show receivables ageing", "Collections by payment method", "Which customers are over their credit limit?", "Where is our cash tied up?", "Discounts and VAT"] },
+  { module: "Payroll & HR", questions: ["Show payroll by department", "Pay by grade", "Headcount by department", "Who joined most recently?", "Payroll as a share of sales"] },
+  { module: "Logistics", questions: ["Show deliveries by depot", "Which orders are still pending?", "Sales by depot", "Where are our locations?", "Order status"] },
   { module: "POS & retail", questions: ["Show retail and POS sales", "Show the price list", "Sales by channel", "Customers by type"] },
-  { module: "Inventory", questions: ["Stock value by category", "Which items are low on stock?", "Days of cover by product", "Stock by depot"] },
-  { module: "Procurement", questions: ["Spend by supplier", "Show open purchase orders", "Spend by raw material", "List our suppliers"] },
-  { module: "Production", questions: ["How is the factory doing?", "What goes into our milk biscuit?", "Production yield by product", "Show production output"] },
+  { module: "Inventory", questions: ["Stock value by category", "Which items are low on stock?", "Days of cover by product", "Stock by depot", "Show slow moving stock"] },
+  { module: "Procurement", questions: ["Spend by supplier", "Show open purchase orders", "Spend by raw material", "List our suppliers", "Supplier performance"] },
+  { module: "Production", questions: ["How is the factory doing?", "What goes into our milk biscuit?", "Production yield by product", "Show production output", "Production plan vs actual"] },
 ];
 
 const decline = (): Reply => ({

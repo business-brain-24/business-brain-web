@@ -41,7 +41,7 @@ function Card({ title, sub, className, children }: { title: string; sub?: string
 
 function Tiles() {
   const tiles = [
-    { Icon: TrendingUp, label: "Net sales", sub: "Since 1 Jul", value: money(hero.netSales), a: ["October", money(hero.octSales)], b: ["Collected", `${hero.collected}%`] },
+    { Icon: TrendingUp, label: "Net sales", sub: "Since 1 Jul", value: money(hero.netSales), a: [hero.currentMonth, money(hero.octSales)], b: ["Collected", `${hero.collected}%`] },
     { Icon: Receipt, label: "Receivables", sub: "Open invoices", value: money(hero.receivables), a: ["Overdue", money(hero.overdue)], b: ["Not yet due", money(hero.receivables - hero.overdue)] },
     { Icon: Boxes, label: "Stock value", sub: "At standard cost", value: money(hero.stockValue), a: ["Products", String(hero.products)], b: ["Below reorder", String(hero.lowStockCount)] },
     { Icon: UsersRound, label: "People", sub: "Across Bangladesh", value: String(hero.people), a: ["Depots", String(hero.depots)], b: ["Customers", String(hero.customers)] },
@@ -169,7 +169,7 @@ function WeeklySales() {
           <path d={d} fill="none" stroke="#F16222" strokeWidth="2" vectorEffect="non-scaling-stroke" />
         </svg>
         <div className="mt-1.5 flex justify-between text-[12px] text-subtle">
-          {["Jul", "Aug", "Sep", "Oct"].map((m) => (
+          {hero.months.map((m) => (
             <span key={m}>{m}</span>
           ))}
         </div>
@@ -279,7 +279,7 @@ function Window() {
             <p className="text-[28px] font-display font-semibold leading-tight tracking-[-0.04em] text-ink sm:text-[34px]">Overview</p>
           </div>
           <div className="flex items-center gap-2 text-[12px]">
-            <span className="rounded-[10px] border border-line bg-white px-3 py-1.5 text-ink">1 Jul to 25 Oct 2026</span>
+            <span className="rounded-[10px] border border-line bg-white px-3 py-1.5 text-ink">{hero.period}</span>
             <span className="hidden rounded-[10px] border border-line bg-white px-3 py-1.5 text-muted sm:inline">Weekly</span>
           </div>
         </div>

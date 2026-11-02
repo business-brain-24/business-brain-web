@@ -136,7 +136,7 @@ export default function Ask() {
         setThinking(null);
         setTyping(mid);
         setChats((all) => all.map((c) => (c.id === id ? { ...c, msgs: [...c.msgs, { id: mid, from: "brain", text: reply.text, reply }] } : c)));
-      }, 700 + Math.random() * 500);
+      }, 1900 + Math.random() * 900);
     },
     [busy, current, chats],
   );
@@ -358,14 +358,7 @@ export default function Ask() {
                     />
                   ),
                 )}
-                {thinking && (
-                  <div className="flex items-center gap-3">
-                    <Avatar />
-                    <span className="bg-[linear-gradient(90deg,#8B91A8_0%,#161928_50%,#8B91A8_100%)] bg-[length:200%_100%] bg-clip-text text-[14px] text-transparent animate-[bb-shimmer_1.4s_linear_infinite]">
-                      {thinking}…
-                    </span>
-                  </div>
-                )}
+                {thinking && <Thinking key={thinking} demo={thinking !== "Thinking"} />}
               </div>
             </div>
             <div className="shrink-0 px-4 pb-3">
@@ -382,6 +375,49 @@ export default function Ask() {
         )}
       </div>
     </section>
+  );
+}
+
+// What the brain is doing while it works, in the spirit of "Thinking…" in ChatGPT or Claude.
+const STEPS_DATA = ["Thinking", "Reading the ledger", "Sampling Shapla's records", "Joining orders and invoices", "Crunching the numbers", "Checking the totals", "Drawing the charts"];
+const STEPS_TALK = ["Thinking", "Reflecting", "Weighing it up", "Composing"];
+
+/** The orb breathes and turns while a status line cycles through what the brain is doing. */
+function Thinking({ demo }: { demo: boolean }) {
+  const steps = demo ? STEPS_DATA : STEPS_TALK;
+  const [i, setI] = useState(0);
+  useEffect(() => {
+    const t = window.setInterval(() => setI((v) => Math.min(v + 1, steps.length - 1)), 420);
+    return () => window.clearInterval(t);
+  }, [steps.length]);
+  return (
+    <div className="flex items-center gap-3" role="status" aria-live="polite">
+      <span className="relative flex h-7 w-7 items-center justify-center">
+        <motion.span
+          aria-hidden
+          className="absolute inset-[-5px] rounded-full bg-[radial-gradient(circle,rgba(241,98,34,0.35),rgba(106,69,238,0.18)_55%,transparent_70%)]"
+          animate={{ scale: [0.85, 1.15, 0.85], opacity: [0.5, 1, 0.5] }}
+          transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.span className="relative" animate={{ rotate: 360 }} transition={{ duration: 3.2, repeat: Infinity, ease: "linear" }}>
+          <BrandMark className="h-7 w-7" />
+        </motion.span>
+      </span>
+      <span className="relative h-5 overflow-hidden">
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.span
+            key={steps[i]}
+            initial={{ y: 12, opacity: 0, filter: "blur(3px)" }}
+            animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+            exit={{ y: -12, opacity: 0, filter: "blur(3px)" }}
+            transition={{ duration: 0.25, ease }}
+            className="block whitespace-nowrap bg-[linear-gradient(90deg,#8B91A8_0%,#161928_50%,#8B91A8_100%)] bg-[length:200%_100%] bg-clip-text text-[14px] leading-5 text-transparent animate-[bb-shimmer_1.4s_linear_infinite]"
+          >
+            {steps[i]}…
+          </motion.span>
+        </AnimatePresence>
+      </span>
+    </div>
   );
 }
 

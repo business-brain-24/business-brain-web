@@ -9466,9 +9466,9 @@
   "Due date": "2026-10-26",
   "Customer ID": "CUS-0017",
   "Amount (BDT)": 265192.2,
-  "Paid (BDT)": 132596.1,
-  "Outstanding (BDT)": 132596.1,
-  "Payment status": "Partly paid"
+  "Paid (BDT)": 265192.2,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-000897",
@@ -9488,9 +9488,9 @@
   "Due date": "2026-10-26",
   "Customer ID": "CUS-0041",
   "Amount (BDT)": 24771.6,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 24771.6,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 24771.6,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-000899",
@@ -9499,9 +9499,9 @@
   "Due date": "2026-10-27",
   "Customer ID": "CUS-0045",
   "Amount (BDT)": 45743.04,
-  "Paid (BDT)": 22871.52,
-  "Outstanding (BDT)": 22871.52,
-  "Payment status": "Partly paid"
+  "Paid (BDT)": 45743.04,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-000900",
@@ -9510,9 +9510,9 @@
   "Due date": "2026-10-27",
   "Customer ID": "CUS-0012",
   "Amount (BDT)": 330865.82,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 330865.82,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 330865.82,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-000901",
@@ -9587,9 +9587,9 @@
   "Due date": "2026-10-27",
   "Customer ID": "CUS-0016",
   "Amount (BDT)": 186851.44,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 186851.44,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 186851.44,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-000908",
@@ -9697,9 +9697,9 @@
   "Due date": "2026-10-28",
   "Customer ID": "CUS-0035",
   "Amount (BDT)": 670888.93,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 670888.93,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 670888.93,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-000919",
@@ -9763,9 +9763,9 @@
   "Due date": "2026-10-29",
   "Customer ID": "CUS-0041",
   "Amount (BDT)": 97933.92,
-  "Paid (BDT)": 48966.96,
-  "Outstanding (BDT)": 48966.96,
-  "Payment status": "Partly paid"
+  "Paid (BDT)": 97933.92,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-000926",
@@ -9785,9 +9785,9 @@
   "Due date": "2026-10-29",
   "Customer ID": "CUS-0013",
   "Amount (BDT)": 242139.83,
-  "Paid (BDT)": 121069.91,
-  "Outstanding (BDT)": 121069.92,
-  "Payment status": "Partly paid"
+  "Paid (BDT)": 242139.83,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-000928",
@@ -9928,9 +9928,9 @@
   "Due date": "2026-10-30",
   "Customer ID": "CUS-0012",
   "Amount (BDT)": 511986.96,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 511986.96,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 511986.96,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-000942",
@@ -9961,9 +9961,9 @@
   "Due date": "2026-10-30",
   "Customer ID": "CUS-0044",
   "Amount (BDT)": 66769.92,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 66769.92,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 66769.92,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-000945",
@@ -10027,9 +10027,9 @@
   "Due date": "2026-10-31",
   "Customer ID": "CUS-0032",
   "Amount (BDT)": 62347.32,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 62347.32,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 62347.32,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-000952",
@@ -10071,9 +10071,9 @@
   "Due date": "2026-10-31",
   "Customer ID": "CUS-0013",
   "Amount (BDT)": 439960.64,
-  "Paid (BDT)": 219980.32,
-  "Outstanding (BDT)": 219980.32,
-  "Payment status": "Partly paid"
+  "Paid (BDT)": 439960.64,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-000957",
@@ -10148,9 +10148,9 @@
   "Due date": "2026-11-02",
   "Customer ID": "CUS-0013",
   "Amount (BDT)": 213408.72,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 213408.72,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 213408.72,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-000965",
@@ -10159,9 +10159,9 @@
   "Due date": "2026-11-02",
   "Customer ID": "CUS-0037",
   "Amount (BDT)": 181789.88,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 181789.88,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 181789.88,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-000966",
@@ -10214,9 +10214,9 @@
   "Due date": "2026-11-02",
   "Customer ID": "CUS-0001",
   "Amount (BDT)": 153037.08,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 153037.08,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 76518.54,
+  "Outstanding (BDT)": 76518.54,
+  "Payment status": "Partly paid"
  },
  {
   "Invoice ID": "INV-000972",
@@ -10236,9 +10236,9 @@
   "Due date": "2026-11-02",
   "Customer ID": "CUS-0001",
   "Amount (BDT)": 104511.15,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 104511.15,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 104511.15,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-000975",
@@ -10302,9 +10302,9 @@
   "Due date": "2026-11-03",
   "Customer ID": "CUS-0032",
   "Amount (BDT)": 254202.23,
-  "Paid (BDT)": 127101.12,
-  "Outstanding (BDT)": 127101.11,
-  "Payment status": "Partly paid"
+  "Paid (BDT)": 254202.23,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-000981",
@@ -10324,9 +10324,9 @@
   "Due date": "2026-11-03",
   "Customer ID": "CUS-0042",
   "Amount (BDT)": 29334.48,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 29334.48,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 29334.48,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-000983",
@@ -10467,9 +10467,9 @@
   "Due date": "2026-11-04",
   "Customer ID": "CUS-0012",
   "Amount (BDT)": 501625.82,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 501625.82,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 501625.82,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-000998",
@@ -10511,9 +10511,9 @@
   "Due date": "2026-11-04",
   "Customer ID": "CUS-0049",
   "Amount (BDT)": 47945.52,
-  "Paid (BDT)": 23972.76,
-  "Outstanding (BDT)": 23972.76,
-  "Payment status": "Partly paid"
+  "Paid (BDT)": 47945.52,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001002",
@@ -10522,9 +10522,9 @@
   "Due date": "2026-11-04",
   "Customer ID": "CUS-0035",
   "Amount (BDT)": 674950,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 674950,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 674950,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001003",
@@ -10566,9 +10566,9 @@
   "Due date": "2026-11-05",
   "Customer ID": "CUS-0045",
   "Amount (BDT)": 23531.76,
-  "Paid (BDT)": 11765.88,
-  "Outstanding (BDT)": 11765.88,
-  "Payment status": "Partly paid"
+  "Paid (BDT)": 23531.76,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001007",
@@ -10610,9 +10610,9 @@
   "Due date": "2026-11-05",
   "Customer ID": "CUS-0001",
   "Amount (BDT)": 287793.43,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 287793.43,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 287793.43,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001012",
@@ -11138,9 +11138,9 @@
   "Due date": "2026-10-27",
   "Customer ID": "CUS-0023",
   "Amount (BDT)": 320101.52,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 320101.52,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 320101.52,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001061",
@@ -11193,9 +11193,9 @@
   "Due date": "2026-10-27",
   "Customer ID": "CUS-0011",
   "Amount (BDT)": 104074.74,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 104074.74,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 104074.74,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001066",
@@ -11270,9 +11270,9 @@
   "Due date": "2026-10-28",
   "Customer ID": "CUS-0031",
   "Amount (BDT)": 233957.4,
-  "Paid (BDT)": 116978.7,
-  "Outstanding (BDT)": 116978.7,
-  "Payment status": "Partly paid"
+  "Paid (BDT)": 233957.4,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001075",
@@ -11281,9 +11281,9 @@
   "Due date": "2026-10-28",
   "Customer ID": "CUS-0031",
   "Amount (BDT)": 257803.76,
-  "Paid (BDT)": 128901.88,
-  "Outstanding (BDT)": 128901.88,
-  "Payment status": "Partly paid"
+  "Paid (BDT)": 257803.76,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001076",
@@ -11358,9 +11358,9 @@
   "Due date": "2026-10-29",
   "Customer ID": "CUS-0029",
   "Amount (BDT)": 202031.62,
-  "Paid (BDT)": 101015.81,
-  "Outstanding (BDT)": 101015.81,
-  "Payment status": "Partly paid"
+  "Paid (BDT)": 202031.62,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001083",
@@ -11391,9 +11391,9 @@
   "Due date": "2026-10-29",
   "Customer ID": "CUS-0003",
   "Amount (BDT)": 533022.8,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 533022.8,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 533022.8,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001086",
@@ -11512,9 +11512,9 @@
   "Due date": "2026-10-30",
   "Customer ID": "CUS-0029",
   "Amount (BDT)": 282614.9,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 282614.9,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 282614.9,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001097",
@@ -11600,9 +11600,9 @@
   "Due date": "2026-11-01",
   "Customer ID": "CUS-0007",
   "Amount (BDT)": 292406.73,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 292406.73,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 292406.73,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001106",
@@ -11743,9 +11743,9 @@
   "Due date": "2026-11-02",
   "Customer ID": "CUS-0015",
   "Amount (BDT)": 570721.53,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 570721.53,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 570721.53,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001120",
@@ -11754,9 +11754,9 @@
   "Due date": "2026-11-02",
   "Customer ID": "CUS-0009",
   "Amount (BDT)": 87296.38,
-  "Paid (BDT)": 43648.19,
-  "Outstanding (BDT)": 43648.19,
-  "Payment status": "Partly paid"
+  "Paid (BDT)": 87296.38,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001121",
@@ -11776,9 +11776,9 @@
   "Due date": "2026-11-02",
   "Customer ID": "CUS-0007",
   "Amount (BDT)": 458836.87,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 458836.87,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 458836.87,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001123",
@@ -11809,9 +11809,9 @@
   "Due date": "2026-11-03",
   "Customer ID": "CUS-0009",
   "Amount (BDT)": 421026.07,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 421026.07,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 421026.07,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001126",
@@ -11842,9 +11842,9 @@
   "Due date": "2026-10-26",
   "Customer ID": "CUS-0004",
   "Amount (BDT)": 95720.94,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 95720.94,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 95720.94,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001130",
@@ -11875,9 +11875,9 @@
   "Due date": "2026-11-03",
   "Customer ID": "CUS-0023",
   "Amount (BDT)": 130502.74,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 130502.74,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 130502.74,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001133",
@@ -11886,9 +11886,9 @@
   "Due date": "2026-10-26",
   "Customer ID": "CUS-0010",
   "Amount (BDT)": 182052.36,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 182052.36,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 182052.36,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001134",
@@ -11897,9 +11897,9 @@
   "Due date": "2026-10-26",
   "Customer ID": "CUS-0005",
   "Amount (BDT)": 632256.46,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 632256.46,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 632256.46,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001135",
@@ -11919,9 +11919,9 @@
   "Due date": "2026-10-27",
   "Customer ID": "CUS-0018",
   "Amount (BDT)": 360544.04,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 360544.04,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 360544.04,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001137",
@@ -11935,15 +11935,59 @@
   "Payment status": "Unpaid"
  },
  {
+  "Invoice ID": "INV-001138",
+  "SO ID": "SO-001138",
+  "Invoice date": "2026-10-20",
+  "Due date": "2026-10-27",
+  "Customer ID": "CUS-0028",
+  "Amount (BDT)": 375123.84,
+  "Paid (BDT)": 375123.84,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001139",
+  "SO ID": "SO-001139",
+  "Invoice date": "2026-10-20",
+  "Due date": "2026-11-04",
+  "Customer ID": "CUS-0007",
+  "Amount (BDT)": 303620.97,
+  "Paid (BDT)": 303620.97,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001140",
+  "SO ID": "SO-001140",
+  "Invoice date": "2026-10-20",
+  "Due date": "2026-10-27",
+  "Customer ID": "CUS-0026",
+  "Amount (BDT)": 654869.97,
+  "Paid (BDT)": 654869.97,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
   "Invoice ID": "INV-001141",
   "SO ID": "SO-001141",
   "Invoice date": "2026-10-20",
   "Due date": "2026-11-04",
   "Customer ID": "CUS-0031",
   "Amount (BDT)": 542338.67,
-  "Paid (BDT)": 271169.34,
-  "Outstanding (BDT)": 271169.33,
-  "Payment status": "Partly paid"
+  "Paid (BDT)": 542338.67,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001142",
+  "SO ID": "SO-001142",
+  "Invoice date": "2026-10-20",
+  "Due date": "2026-10-27",
+  "Customer ID": "CUS-0005",
+  "Amount (BDT)": 337980.99,
+  "Paid (BDT)": 337980.99,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001143",
@@ -11963,9 +12007,9 @@
   "Due date": "2026-10-27",
   "Customer ID": "CUS-0040",
   "Amount (BDT)": 492468.73,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 492468.73,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 492468.73,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001145",
@@ -11974,8 +12018,30 @@
   "Due date": "2026-10-27",
   "Customer ID": "CUS-0004",
   "Amount (BDT)": 174427.14,
+  "Paid (BDT)": 174427.14,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001146",
+  "SO ID": "SO-001146",
+  "Invoice date": "2026-10-20",
+  "Due date": "2026-11-04",
+  "Customer ID": "CUS-0036",
+  "Amount (BDT)": 307516.83,
+  "Paid (BDT)": 307516.83,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001147",
+  "SO ID": "SO-001147",
+  "Invoice date": "2026-10-20",
+  "Due date": "2026-10-27",
+  "Customer ID": "CUS-0004",
+  "Amount (BDT)": 116383.68,
   "Paid (BDT)": 0,
-  "Outstanding (BDT)": 174427.14,
+  "Outstanding (BDT)": 116383.68,
   "Payment status": "Unpaid"
  },
  {
@@ -12018,9 +12084,9 @@
   "Due date": "2026-11-05",
   "Customer ID": "CUS-0007",
   "Amount (BDT)": 176440.21,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 176440.21,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 176440.21,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001152",
@@ -12040,9 +12106,9 @@
   "Due date": "2026-10-28",
   "Customer ID": "CUS-0004",
   "Amount (BDT)": 52335.36,
-  "Paid (BDT)": 26167.68,
-  "Outstanding (BDT)": 26167.68,
-  "Payment status": "Partly paid"
+  "Paid (BDT)": 52335.36,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001154",
@@ -12051,9 +12117,20 @@
   "Due date": "2026-10-28",
   "Customer ID": "CUS-0024",
   "Amount (BDT)": 302424.96,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 302424.96,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 302424.96,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001155",
+  "SO ID": "SO-001155",
+  "Invoice date": "2026-10-21",
+  "Due date": "2026-10-28",
+  "Customer ID": "CUS-0021",
+  "Amount (BDT)": 130856.29,
+  "Paid (BDT)": 130856.29,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001156",
@@ -12064,6 +12141,17 @@
   "Amount (BDT)": 214814.88,
   "Paid (BDT)": 0,
   "Outstanding (BDT)": 214814.88,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001157",
+  "SO ID": "SO-001157",
+  "Invoice date": "2026-10-21",
+  "Due date": "2026-10-21",
+  "Customer ID": "CUS-0082",
+  "Amount (BDT)": 2941.47,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 2941.47,
   "Payment status": "Unpaid"
  },
  {
@@ -12100,6 +12188,17 @@
   "Payment status": "Unpaid"
  },
  {
+  "Invoice ID": "INV-001161",
+  "SO ID": "SO-001161",
+  "Invoice date": "2026-10-22",
+  "Due date": "2026-11-06",
+  "Customer ID": "CUS-0029",
+  "Amount (BDT)": 116303.16,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 116303.16,
+  "Payment status": "Unpaid"
+ },
+ {
   "Invoice ID": "INV-001162",
   "SO ID": "SO-001162",
   "Invoice date": "2026-10-22",
@@ -12109,6 +12208,39 @@
   "Paid (BDT)": 734.16,
   "Outstanding (BDT)": 734.16,
   "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001163",
+  "SO ID": "SO-001163",
+  "Invoice date": "2026-10-22",
+  "Due date": "2026-10-29",
+  "Customer ID": "CUS-0030",
+  "Amount (BDT)": 300723.24,
+  "Paid (BDT)": 300723.24,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001164",
+  "SO ID": "SO-001164",
+  "Invoice date": "2026-10-22",
+  "Due date": "2026-11-06",
+  "Customer ID": "CUS-0036",
+  "Amount (BDT)": 291882.27,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 291882.27,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001165",
+  "SO ID": "SO-001165",
+  "Invoice date": "2026-10-22",
+  "Due date": "2026-10-29",
+  "Customer ID": "CUS-0019",
+  "Amount (BDT)": 221420.52,
+  "Paid (BDT)": 221420.52,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001166",
@@ -12122,15 +12254,37 @@
   "Payment status": "Unpaid"
  },
  {
+  "Invoice ID": "INV-001167",
+  "SO ID": "SO-001167",
+  "Invoice date": "2026-10-22",
+  "Due date": "2026-11-21",
+  "Customer ID": "CUS-0042",
+  "Amount (BDT)": 25996.32,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 25996.32,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001168",
+  "SO ID": "SO-001168",
+  "Invoice date": "2026-10-24",
+  "Due date": "2026-11-23",
+  "Customer ID": "CUS-0017",
+  "Amount (BDT)": 162792.81,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 162792.81,
+  "Payment status": "Unpaid"
+ },
+ {
   "Invoice ID": "INV-001169",
   "SO ID": "SO-001169",
   "Invoice date": "2026-10-24",
   "Due date": "2026-10-31",
   "Customer ID": "CUS-0018",
   "Amount (BDT)": 366405.73,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 366405.73,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 366405.73,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001170",
@@ -12139,9 +12293,9 @@
   "Due date": "2026-10-31",
   "Customer ID": "CUS-0034",
   "Amount (BDT)": 58927.68,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 58927.68,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 58927.68,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001171",
@@ -12155,15 +12309,26 @@
   "Payment status": "Partly paid"
  },
  {
+  "Invoice ID": "INV-001172",
+  "SO ID": "SO-001172",
+  "Invoice date": "2026-10-24",
+  "Due date": "2026-11-23",
+  "Customer ID": "CUS-0016",
+  "Amount (BDT)": 110074.44,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 110074.44,
+  "Payment status": "Unpaid"
+ },
+ {
   "Invoice ID": "INV-001173",
   "SO ID": "SO-001173",
   "Invoice date": "2026-10-24",
   "Due date": "2026-10-31",
   "Customer ID": "CUS-0038",
   "Amount (BDT)": 101617.73,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 101617.73,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 101617.73,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001174",
@@ -12232,6 +12397,17 @@
   "Payment status": "Unpaid"
  },
  {
+  "Invoice ID": "INV-001180",
+  "SO ID": "SO-001180",
+  "Invoice date": "2026-10-25",
+  "Due date": "2026-11-24",
+  "Customer ID": "CUS-0041",
+  "Amount (BDT)": 79074.24,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 79074.24,
+  "Payment status": "Unpaid"
+ },
+ {
   "Invoice ID": "INV-001181",
   "SO ID": "SO-001181",
   "Invoice date": "2026-10-25",
@@ -12249,9 +12425,9 @@
   "Due date": "2026-11-01",
   "Customer ID": "CUS-0021",
   "Amount (BDT)": 316388.43,
-  "Paid (BDT)": 0,
-  "Outstanding (BDT)": 316388.43,
-  "Payment status": "Unpaid"
+  "Paid (BDT)": 316388.43,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
  },
  {
   "Invoice ID": "INV-001183",
@@ -12276,6 +12452,17 @@
   "Payment status": "Unpaid"
  },
  {
+  "Invoice ID": "INV-001185",
+  "SO ID": "SO-001185",
+  "Invoice date": "2026-10-25",
+  "Due date": "2026-11-24",
+  "Customer ID": "CUS-0042",
+  "Amount (BDT)": 87250.8,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 87250.8,
+  "Payment status": "Unpaid"
+ },
+ {
   "Invoice ID": "INV-001186",
   "SO ID": "SO-001186",
   "Invoice date": "2026-10-25",
@@ -12295,6 +12482,1128 @@
   "Amount (BDT)": 228006.13,
   "Paid (BDT)": 114003.07,
   "Outstanding (BDT)": 114003.06,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001188",
+  "SO ID": "SO-001188",
+  "Invoice date": "2026-10-26",
+  "Due date": "2026-10-26",
+  "Customer ID": "CUS-0073",
+  "Amount (BDT)": 5607.63,
+  "Paid (BDT)": 5607.63,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001189",
+  "SO ID": "SO-001189",
+  "Invoice date": "2026-10-26",
+  "Due date": "2026-11-02",
+  "Customer ID": "CUS-0008",
+  "Amount (BDT)": 862874.13,
+  "Paid (BDT)": 862874.13,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001190",
+  "SO ID": "SO-001190",
+  "Invoice date": "2026-10-26",
+  "Due date": "2026-11-10",
+  "Customer ID": "CUS-0022",
+  "Amount (BDT)": 463746.53,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 463746.53,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001191",
+  "SO ID": "SO-001191",
+  "Invoice date": "2026-10-26",
+  "Due date": "2026-11-10",
+  "Customer ID": "CUS-0027",
+  "Amount (BDT)": 94898.02,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 94898.02,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001192",
+  "SO ID": "SO-001192",
+  "Invoice date": "2026-10-26",
+  "Due date": "2026-11-02",
+  "Customer ID": "CUS-0019",
+  "Amount (BDT)": 472370.98,
+  "Paid (BDT)": 472370.98,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001193",
+  "SO ID": "SO-001193",
+  "Invoice date": "2026-10-26",
+  "Due date": "2026-11-02",
+  "Customer ID": "CUS-0006",
+  "Amount (BDT)": 298291.14,
+  "Paid (BDT)": 298291.14,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001194",
+  "SO ID": "SO-001194",
+  "Invoice date": "2026-10-26",
+  "Due date": "2026-11-02",
+  "Customer ID": "CUS-0008",
+  "Amount (BDT)": 238506.58,
+  "Paid (BDT)": 119253.29,
+  "Outstanding (BDT)": 119253.29,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001195",
+  "SO ID": "SO-001195",
+  "Invoice date": "2026-10-26",
+  "Due date": "2026-11-10",
+  "Customer ID": "CUS-0011",
+  "Amount (BDT)": 764647.35,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 764647.35,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001196",
+  "SO ID": "SO-001196",
+  "Invoice date": "2026-10-26",
+  "Due date": "2026-11-02",
+  "Customer ID": "CUS-0026",
+  "Amount (BDT)": 547224.45,
+  "Paid (BDT)": 547224.45,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001197",
+  "SO ID": "SO-001197",
+  "Invoice date": "2026-10-26",
+  "Due date": "2026-11-10",
+  "Customer ID": "CUS-0031",
+  "Amount (BDT)": 335486.39,
+  "Paid (BDT)": 167743.2,
+  "Outstanding (BDT)": 167743.19,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001198",
+  "SO ID": "SO-001198",
+  "Invoice date": "2026-10-26",
+  "Due date": "2026-11-02",
+  "Customer ID": "CUS-0019",
+  "Amount (BDT)": 52931,
+  "Paid (BDT)": 52931,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001199",
+  "SO ID": "SO-001199",
+  "Invoice date": "2026-10-26",
+  "Due date": "2026-11-25",
+  "Customer ID": "CUS-0037",
+  "Amount (BDT)": 584778.73,
+  "Paid (BDT)": 292389.37,
+  "Outstanding (BDT)": 292389.36,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001200",
+  "SO ID": "SO-001200",
+  "Invoice date": "2026-10-26",
+  "Due date": "2026-11-10",
+  "Customer ID": "CUS-0025",
+  "Amount (BDT)": 499338.15,
+  "Paid (BDT)": 249669.08,
+  "Outstanding (BDT)": 249669.07,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001202",
+  "SO ID": "SO-001202",
+  "Invoice date": "2026-10-27",
+  "Due date": "2026-11-26",
+  "Customer ID": "CUS-0016",
+  "Amount (BDT)": 322219.36,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 322219.36,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001203",
+  "SO ID": "SO-001203",
+  "Invoice date": "2026-10-27",
+  "Due date": "2026-11-03",
+  "Customer ID": "CUS-0006",
+  "Amount (BDT)": 592698.96,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 592698.96,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001204",
+  "SO ID": "SO-001204",
+  "Invoice date": "2026-10-27",
+  "Due date": "2026-10-27",
+  "Customer ID": "CUS-0111",
+  "Amount (BDT)": 10530.03,
+  "Paid (BDT)": 10530.03,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001205",
+  "SO ID": "SO-001205",
+  "Invoice date": "2026-10-27",
+  "Due date": "2026-11-26",
+  "Customer ID": "CUS-0050",
+  "Amount (BDT)": 34814.64,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 34814.64,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001206",
+  "SO ID": "SO-001206",
+  "Invoice date": "2026-10-27",
+  "Due date": "2026-11-26",
+  "Customer ID": "CUS-0017",
+  "Amount (BDT)": 240748.45,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 240748.45,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001207",
+  "SO ID": "SO-001207",
+  "Invoice date": "2026-10-27",
+  "Due date": "2026-11-26",
+  "Customer ID": "CUS-0013",
+  "Amount (BDT)": 108199.56,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 108199.56,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001208",
+  "SO ID": "SO-001208",
+  "Invoice date": "2026-10-27",
+  "Due date": "2026-11-26",
+  "Customer ID": "CUS-0016",
+  "Amount (BDT)": 294152.72,
+  "Paid (BDT)": 147076.36,
+  "Outstanding (BDT)": 147076.36,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001209",
+  "SO ID": "SO-001209",
+  "Invoice date": "2026-10-27",
+  "Due date": "2026-11-11",
+  "Customer ID": "CUS-0023",
+  "Amount (BDT)": 308380.19,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 308380.19,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001210",
+  "SO ID": "SO-001210",
+  "Invoice date": "2026-10-27",
+  "Due date": "2026-11-11",
+  "Customer ID": "CUS-0009",
+  "Amount (BDT)": 355838.48,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 355838.48,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001211",
+  "SO ID": "SO-001211",
+  "Invoice date": "2026-10-27",
+  "Due date": "2026-11-26",
+  "Customer ID": "CUS-0032",
+  "Amount (BDT)": 317444.57,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 317444.57,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001212",
+  "SO ID": "SO-001212",
+  "Invoice date": "2026-10-27",
+  "Due date": "2026-11-26",
+  "Customer ID": "CUS-0050",
+  "Amount (BDT)": 30602.88,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 30602.88,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001213",
+  "SO ID": "SO-001213",
+  "Invoice date": "2026-10-27",
+  "Due date": "2026-11-26",
+  "Customer ID": "CUS-0037",
+  "Amount (BDT)": 599109.73,
+  "Paid (BDT)": 299554.87,
+  "Outstanding (BDT)": 299554.86,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001214",
+  "SO ID": "SO-001214",
+  "Invoice date": "2026-10-27",
+  "Due date": "2026-11-11",
+  "Customer ID": "CUS-0027",
+  "Amount (BDT)": 193375.42,
+  "Paid (BDT)": 96687.71,
+  "Outstanding (BDT)": 96687.71,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001216",
+  "SO ID": "SO-001216",
+  "Invoice date": "2026-10-28",
+  "Due date": "2026-11-04",
+  "Customer ID": "CUS-0038",
+  "Amount (BDT)": 144133.57,
+  "Paid (BDT)": 144133.57,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001217",
+  "SO ID": "SO-001217",
+  "Invoice date": "2026-10-28",
+  "Due date": "2026-11-12",
+  "Customer ID": "CUS-0009",
+  "Amount (BDT)": 75947,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 75947,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001218",
+  "SO ID": "SO-001218",
+  "Invoice date": "2026-10-28",
+  "Due date": "2026-11-27",
+  "Customer ID": "CUS-0037",
+  "Amount (BDT)": 127479.54,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 127479.54,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001219",
+  "SO ID": "SO-001219",
+  "Invoice date": "2026-10-28",
+  "Due date": "2026-11-12",
+  "Customer ID": "CUS-0022",
+  "Amount (BDT)": 547995.57,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 547995.57,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001220",
+  "SO ID": "SO-001220",
+  "Invoice date": "2026-10-28",
+  "Due date": "2026-11-27",
+  "Customer ID": "CUS-0041",
+  "Amount (BDT)": 28232.4,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 28232.4,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001221",
+  "SO ID": "SO-001221",
+  "Invoice date": "2026-10-28",
+  "Due date": "2026-10-28",
+  "Customer ID": "CUS-0110",
+  "Amount (BDT)": 6356.28,
+  "Paid (BDT)": 6356.28,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001222",
+  "SO ID": "SO-001222",
+  "Invoice date": "2026-10-28",
+  "Due date": "2026-11-04",
+  "Customer ID": "CUS-0021",
+  "Amount (BDT)": 210221.23,
+  "Paid (BDT)": 210221.23,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001223",
+  "SO ID": "SO-001223",
+  "Invoice date": "2026-10-28",
+  "Due date": "2026-11-27",
+  "Customer ID": "CUS-0047",
+  "Amount (BDT)": 80680.32,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 80680.32,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001224",
+  "SO ID": "SO-001224",
+  "Invoice date": "2026-10-28",
+  "Due date": "2026-11-27",
+  "Customer ID": "CUS-0017",
+  "Amount (BDT)": 144436.32,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 144436.32,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001225",
+  "SO ID": "SO-001225",
+  "Invoice date": "2026-10-28",
+  "Due date": "2026-10-28",
+  "Customer ID": "CUS-0074",
+  "Amount (BDT)": 9853.2,
+  "Paid (BDT)": 9853.2,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001226",
+  "SO ID": "SO-001226",
+  "Invoice date": "2026-10-29",
+  "Due date": "2026-11-05",
+  "Customer ID": "CUS-0002",
+  "Amount (BDT)": 265457.61,
+  "Paid (BDT)": 265457.61,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001228",
+  "SO ID": "SO-001228",
+  "Invoice date": "2026-10-29",
+  "Due date": "2026-11-13",
+  "Customer ID": "CUS-0015",
+  "Amount (BDT)": 164060.15,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 164060.15,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001229",
+  "SO ID": "SO-001229",
+  "Invoice date": "2026-10-29",
+  "Due date": "2026-11-05",
+  "Customer ID": "CUS-0026",
+  "Amount (BDT)": 106727.54,
+  "Paid (BDT)": 106727.54,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001230",
+  "SO ID": "SO-001230",
+  "Invoice date": "2026-10-29",
+  "Due date": "2026-10-29",
+  "Customer ID": "CUS-0078",
+  "Amount (BDT)": 16847.04,
+  "Paid (BDT)": 16847.04,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001231",
+  "SO ID": "SO-001231",
+  "Invoice date": "2026-10-29",
+  "Due date": "2026-11-05",
+  "Customer ID": "CUS-0038",
+  "Amount (BDT)": 72044.28,
+  "Paid (BDT)": 36022.14,
+  "Outstanding (BDT)": 36022.14,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001232",
+  "SO ID": "SO-001232",
+  "Invoice date": "2026-10-29",
+  "Due date": "2026-11-05",
+  "Customer ID": "CUS-0034",
+  "Amount (BDT)": 54018.72,
+  "Paid (BDT)": 54018.72,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001233",
+  "SO ID": "SO-001233",
+  "Invoice date": "2026-10-29",
+  "Due date": "2026-10-29",
+  "Customer ID": "CUS-0118",
+  "Amount (BDT)": 1313.76,
+  "Paid (BDT)": 1313.76,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001234",
+  "SO ID": "SO-001234",
+  "Invoice date": "2026-10-29",
+  "Due date": "2026-11-05",
+  "Customer ID": "CUS-0004",
+  "Amount (BDT)": 695462.04,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 695462.04,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001235",
+  "SO ID": "SO-001235",
+  "Invoice date": "2026-10-31",
+  "Due date": "2026-10-31",
+  "Customer ID": "CUS-0070",
+  "Amount (BDT)": 5950.56,
+  "Paid (BDT)": 5950.56,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001236",
+  "SO ID": "SO-001236",
+  "Invoice date": "2026-10-31",
+  "Due date": "2026-11-07",
+  "Customer ID": "CUS-0010",
+  "Amount (BDT)": 188608.71,
+  "Paid (BDT)": 94304.36,
+  "Outstanding (BDT)": 94304.35,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001237",
+  "SO ID": "SO-001237",
+  "Invoice date": "2026-10-31",
+  "Due date": "2026-11-15",
+  "Customer ID": "CUS-0036",
+  "Amount (BDT)": 43265.88,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 43265.88,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001238",
+  "SO ID": "SO-001238",
+  "Invoice date": "2026-10-31",
+  "Due date": "2026-11-15",
+  "Customer ID": "CUS-0011",
+  "Amount (BDT)": 216080.68,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 216080.68,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001240",
+  "SO ID": "SO-001240",
+  "Invoice date": "2026-10-31",
+  "Due date": "2026-11-07",
+  "Customer ID": "CUS-0034",
+  "Amount (BDT)": 499328.51,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 499328.51,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001241",
+  "SO ID": "SO-001241",
+  "Invoice date": "2026-10-31",
+  "Due date": "2026-11-07",
+  "Customer ID": "CUS-0039",
+  "Amount (BDT)": 173248.74,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 173248.74,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001243",
+  "SO ID": "SO-001243",
+  "Invoice date": "2026-10-31",
+  "Due date": "2026-11-07",
+  "Customer ID": "CUS-0019",
+  "Amount (BDT)": 521078.54,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 521078.54,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001244",
+  "SO ID": "SO-001244",
+  "Invoice date": "2026-10-31",
+  "Due date": "2026-11-07",
+  "Customer ID": "CUS-0024",
+  "Amount (BDT)": 575630.76,
+  "Paid (BDT)": 287815.38,
+  "Outstanding (BDT)": 287815.38,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001245",
+  "SO ID": "SO-001245",
+  "Invoice date": "2026-11-01",
+  "Due date": "2026-11-01",
+  "Customer ID": "CUS-0117",
+  "Amount (BDT)": 29371.23,
+  "Paid (BDT)": 29371.23,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001247",
+  "SO ID": "SO-001247",
+  "Invoice date": "2026-11-01",
+  "Due date": "2026-12-01",
+  "Customer ID": "CUS-0016",
+  "Amount (BDT)": 172169.79,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 172169.79,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001249",
+  "SO ID": "SO-001249",
+  "Invoice date": "2026-11-01",
+  "Due date": "2026-11-08",
+  "Customer ID": "CUS-0040",
+  "Amount (BDT)": 105655.28,
+  "Paid (BDT)": 52827.64,
+  "Outstanding (BDT)": 52827.64,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001250",
+  "SO ID": "SO-001250",
+  "Invoice date": "2026-11-01",
+  "Due date": "2026-11-01",
+  "Customer ID": "CUS-0113",
+  "Amount (BDT)": 811.44,
+  "Paid (BDT)": 405.72,
+  "Outstanding (BDT)": 405.72,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001252",
+  "SO ID": "SO-001252",
+  "Invoice date": "2026-11-01",
+  "Due date": "2026-11-16",
+  "Customer ID": "CUS-0036",
+  "Amount (BDT)": 161764.79,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 161764.79,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001253",
+  "SO ID": "SO-001253",
+  "Invoice date": "2026-11-01",
+  "Due date": "2026-12-01",
+  "Customer ID": "CUS-0013",
+  "Amount (BDT)": 90279.84,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 90279.84,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001257",
+  "SO ID": "SO-001257",
+  "Invoice date": "2026-11-01",
+  "Due date": "2026-11-08",
+  "Customer ID": "CUS-0008",
+  "Amount (BDT)": 914380.05,
+  "Paid (BDT)": 457190.03,
+  "Outstanding (BDT)": 457190.02,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001258",
+  "SO ID": "SO-001258",
+  "Invoice date": "2026-11-02",
+  "Due date": "2026-12-02",
+  "Customer ID": "CUS-0046",
+  "Amount (BDT)": 32415.6,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 32415.6,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001259",
+  "SO ID": "SO-001259",
+  "Invoice date": "2026-11-02",
+  "Due date": "2026-12-02",
+  "Customer ID": "CUS-0017",
+  "Amount (BDT)": 546962.42,
+  "Paid (BDT)": 273481.21,
+  "Outstanding (BDT)": 273481.21,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001260",
+  "SO ID": "SO-001260",
+  "Invoice date": "2026-11-02",
+  "Due date": "2026-11-02",
+  "Customer ID": "CUS-0071",
+  "Amount (BDT)": 3091.2,
+  "Paid (BDT)": 3091.2,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001262",
+  "SO ID": "SO-001262",
+  "Invoice date": "2026-11-02",
+  "Due date": "2026-11-17",
+  "Customer ID": "CUS-0009",
+  "Amount (BDT)": 83966.4,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 83966.4,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001263",
+  "SO ID": "SO-001263",
+  "Invoice date": "2026-11-02",
+  "Due date": "2026-12-02",
+  "Customer ID": "CUS-0032",
+  "Amount (BDT)": 148296.23,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 148296.23,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001265",
+  "SO ID": "SO-001265",
+  "Invoice date": "2026-11-02",
+  "Due date": "2026-12-02",
+  "Customer ID": "CUS-0017",
+  "Amount (BDT)": 57960,
+  "Paid (BDT)": 28980,
+  "Outstanding (BDT)": 28980,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001266",
+  "SO ID": "SO-001266",
+  "Invoice date": "2026-11-02",
+  "Due date": "2026-11-09",
+  "Customer ID": "CUS-0038",
+  "Amount (BDT)": 117961.2,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 117961.2,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001269",
+  "SO ID": "SO-001269",
+  "Invoice date": "2026-11-03",
+  "Due date": "2026-11-03",
+  "Customer ID": "CUS-0070",
+  "Amount (BDT)": 8626.38,
+  "Paid (BDT)": 8626.38,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001270",
+  "SO ID": "SO-001270",
+  "Invoice date": "2026-11-03",
+  "Due date": "2026-11-10",
+  "Customer ID": "CUS-0039",
+  "Amount (BDT)": 254937.32,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 254937.32,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001271",
+  "SO ID": "SO-001271",
+  "Invoice date": "2026-11-03",
+  "Due date": "2026-12-03",
+  "Customer ID": "CUS-0001",
+  "Amount (BDT)": 827390.59,
+  "Paid (BDT)": 413695.3,
+  "Outstanding (BDT)": 413695.29,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001272",
+  "SO ID": "SO-001272",
+  "Invoice date": "2026-11-03",
+  "Due date": "2026-11-03",
+  "Customer ID": "CUS-0072",
+  "Amount (BDT)": 144.9,
+  "Paid (BDT)": 144.9,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001273",
+  "SO ID": "SO-001273",
+  "Invoice date": "2026-11-03",
+  "Due date": "2026-11-18",
+  "Customer ID": "CUS-0015",
+  "Amount (BDT)": 456184.26,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 456184.26,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001275",
+  "SO ID": "SO-001275",
+  "Invoice date": "2026-11-03",
+  "Due date": "2026-11-10",
+  "Customer ID": "CUS-0028",
+  "Amount (BDT)": 511362.2,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 511362.2,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001276",
+  "SO ID": "SO-001276",
+  "Invoice date": "2026-11-03",
+  "Due date": "2026-11-03",
+  "Customer ID": "CUS-0117",
+  "Amount (BDT)": 41876.1,
+  "Paid (BDT)": 20938.05,
+  "Outstanding (BDT)": 20938.05,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001278",
+  "SO ID": "SO-001278",
+  "Invoice date": "2026-11-03",
+  "Due date": "2026-11-10",
+  "Customer ID": "CUS-0038",
+  "Amount (BDT)": 176052.62,
+  "Paid (BDT)": 88026.31,
+  "Outstanding (BDT)": 88026.31,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001279",
+  "SO ID": "SO-001279",
+  "Invoice date": "2026-11-03",
+  "Due date": "2026-11-10",
+  "Customer ID": "CUS-0018",
+  "Amount (BDT)": 302771.13,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 302771.13,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001280",
+  "SO ID": "SO-001280",
+  "Invoice date": "2026-11-03",
+  "Due date": "2026-12-03",
+  "Customer ID": "CUS-0032",
+  "Amount (BDT)": 169562.73,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 169562.73,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001281",
+  "SO ID": "SO-001281",
+  "Invoice date": "2026-11-03",
+  "Due date": "2026-11-18",
+  "Customer ID": "CUS-0007",
+  "Amount (BDT)": 312676.31,
+  "Paid (BDT)": 156338.16,
+  "Outstanding (BDT)": 156338.15,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001282",
+  "SO ID": "SO-001282",
+  "Invoice date": "2026-11-04",
+  "Due date": "2026-11-11",
+  "Customer ID": "CUS-0028",
+  "Amount (BDT)": 345616.06,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 345616.06,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001284",
+  "SO ID": "SO-001284",
+  "Invoice date": "2026-11-04",
+  "Due date": "2026-11-11",
+  "Customer ID": "CUS-0021",
+  "Amount (BDT)": 727128.37,
+  "Paid (BDT)": 363564.19,
+  "Outstanding (BDT)": 363564.18,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001285",
+  "SO ID": "SO-001285",
+  "Invoice date": "2026-11-04",
+  "Due date": "2026-11-19",
+  "Customer ID": "CUS-0015",
+  "Amount (BDT)": 505013.95,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 505013.95,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001286",
+  "SO ID": "SO-001286",
+  "Invoice date": "2026-11-04",
+  "Due date": "2026-11-11",
+  "Customer ID": "CUS-0019",
+  "Amount (BDT)": 404178.39,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 404178.39,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001287",
+  "SO ID": "SO-001287",
+  "Invoice date": "2026-11-04",
+  "Due date": "2026-11-11",
+  "Customer ID": "CUS-0026",
+  "Amount (BDT)": 127706.74,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 127706.74,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001288",
+  "SO ID": "SO-001288",
+  "Invoice date": "2026-11-04",
+  "Due date": "2026-11-04",
+  "Customer ID": "CUS-0080",
+  "Amount (BDT)": 1038.45,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 1038.45,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001289",
+  "SO ID": "SO-001289",
+  "Invoice date": "2026-11-04",
+  "Due date": "2026-11-19",
+  "Customer ID": "CUS-0007",
+  "Amount (BDT)": 748128.12,
+  "Paid (BDT)": 374064.06,
+  "Outstanding (BDT)": 374064.06,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001290",
+  "SO ID": "SO-001290",
+  "Invoice date": "2026-11-04",
+  "Due date": "2026-11-19",
+  "Customer ID": "CUS-0027",
+  "Amount (BDT)": 104239.19,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 104239.19,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001291",
+  "SO ID": "SO-001291",
+  "Invoice date": "2026-11-04",
+  "Due date": "2026-12-04",
+  "Customer ID": "CUS-0032",
+  "Amount (BDT)": 269065.41,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 269065.41,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001292",
+  "SO ID": "SO-001292",
+  "Invoice date": "2026-11-04",
+  "Due date": "2026-12-04",
+  "Customer ID": "CUS-0042",
+  "Amount (BDT)": 77706.72,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 77706.72,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001293",
+  "SO ID": "SO-001293",
+  "Invoice date": "2026-11-04",
+  "Due date": "2026-11-04",
+  "Customer ID": "CUS-0088",
+  "Amount (BDT)": 7853.58,
+  "Paid (BDT)": 7853.58,
+  "Outstanding (BDT)": 0,
+  "Payment status": "Paid"
+ },
+ {
+  "Invoice ID": "INV-001294",
+  "SO ID": "SO-001294",
+  "Invoice date": "2026-11-04",
+  "Due date": "2026-12-04",
+  "Customer ID": "CUS-0017",
+  "Amount (BDT)": 35761.74,
+  "Paid (BDT)": 17880.87,
+  "Outstanding (BDT)": 17880.87,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001296",
+  "SO ID": "SO-001296",
+  "Invoice date": "2026-11-05",
+  "Due date": "2026-11-20",
+  "Customer ID": "CUS-0031",
+  "Amount (BDT)": 302887.37,
+  "Paid (BDT)": 151443.69,
+  "Outstanding (BDT)": 151443.68,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001297",
+  "SO ID": "SO-001297",
+  "Invoice date": "2026-11-05",
+  "Due date": "2026-11-12",
+  "Customer ID": "CUS-0034",
+  "Amount (BDT)": 225749.3,
+  "Paid (BDT)": 112874.65,
+  "Outstanding (BDT)": 112874.65,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001298",
+  "SO ID": "SO-001298",
+  "Invoice date": "2026-11-05",
+  "Due date": "2026-11-12",
+  "Customer ID": "CUS-0006",
+  "Amount (BDT)": 198201.19,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 198201.19,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001299",
+  "SO ID": "SO-001299",
+  "Invoice date": "2026-11-05",
+  "Due date": "2026-11-20",
+  "Customer ID": "CUS-0029",
+  "Amount (BDT)": 297373.44,
+  "Paid (BDT)": 148686.72,
+  "Outstanding (BDT)": 148686.72,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001300",
+  "SO ID": "SO-001300",
+  "Invoice date": "2026-11-05",
+  "Due date": "2026-11-12",
+  "Customer ID": "CUS-0024",
+  "Amount (BDT)": 108990,
+  "Paid (BDT)": 54495,
+  "Outstanding (BDT)": 54495,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001301",
+  "SO ID": "SO-001301",
+  "Invoice date": "2026-11-05",
+  "Due date": "2026-11-20",
+  "Customer ID": "CUS-0027",
+  "Amount (BDT)": 323592.2,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 323592.2,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001302",
+  "SO ID": "SO-001302",
+  "Invoice date": "2026-11-05",
+  "Due date": "2026-11-20",
+  "Customer ID": "CUS-0015",
+  "Amount (BDT)": 165165.77,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 165165.77,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001303",
+  "SO ID": "SO-001303",
+  "Invoice date": "2026-11-05",
+  "Due date": "2026-12-05",
+  "Customer ID": "CUS-0012",
+  "Amount (BDT)": 427684.52,
+  "Paid (BDT)": 213842.26,
+  "Outstanding (BDT)": 213842.26,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001304",
+  "SO ID": "SO-001304",
+  "Invoice date": "2026-11-05",
+  "Due date": "2026-12-05",
+  "Customer ID": "CUS-0012",
+  "Amount (BDT)": 102573.36,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 102573.36,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001305",
+  "SO ID": "SO-001305",
+  "Invoice date": "2026-11-05",
+  "Due date": "2026-12-05",
+  "Customer ID": "CUS-0017",
+  "Amount (BDT)": 58151.27,
+  "Paid (BDT)": 29075.64,
+  "Outstanding (BDT)": 29075.63,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001306",
+  "SO ID": "SO-001306",
+  "Invoice date": "2026-11-05",
+  "Due date": "2026-12-05",
+  "Customer ID": "CUS-0037",
+  "Amount (BDT)": 70912.8,
+  "Paid (BDT)": 35456.4,
+  "Outstanding (BDT)": 35456.4,
+  "Payment status": "Partly paid"
+ },
+ {
+  "Invoice ID": "INV-001308",
+  "SO ID": "SO-001308",
+  "Invoice date": "2026-11-05",
+  "Due date": "2026-12-05",
+  "Customer ID": "CUS-0032",
+  "Amount (BDT)": 101251.68,
+  "Paid (BDT)": 0,
+  "Outstanding (BDT)": 101251.68,
+  "Payment status": "Unpaid"
+ },
+ {
+  "Invoice ID": "INV-001309",
+  "SO ID": "SO-001309",
+  "Invoice date": "2026-11-05",
+  "Due date": "2026-12-05",
+  "Customer ID": "CUS-0045",
+  "Amount (BDT)": 57148.56,
+  "Paid (BDT)": 28574.28,
+  "Outstanding (BDT)": 28574.28,
   "Payment status": "Partly paid"
  }
 ]

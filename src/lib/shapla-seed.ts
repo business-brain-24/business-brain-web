@@ -18,7 +18,7 @@ export const shapla = {
       ],
       [
         "Avg. tenure",
-        "6.5 yrs"
+        "6.6 yrs"
       ]
     ],
     "table": {
@@ -981,7 +981,7 @@ export const shapla = {
           },
           {
             "label": "Average tenure",
-            "value": "6.5 yrs"
+            "value": "6.6 yrs"
           },
           {
             "label": "On probation",
@@ -1028,19 +1028,19 @@ export const shapla = {
         "items": [
           {
             "label": "<1 yr",
-            "value": 12
+            "value": 11
           },
           {
             "label": "1 to 2",
-            "value": 18
+            "value": 19
           },
           {
             "label": "3 to 5",
-            "value": 21
+            "value": 20
           },
           {
             "label": "6 to 10",
-            "value": 43
+            "value": 44
           },
           {
             "label": "10+",
@@ -1130,7 +1130,7 @@ export const shapla = {
   "payroll": {
     "kpis": [
       [
-        "October gross",
+        "November gross",
         "৳ 55.5 L"
       ],
       [
@@ -2318,7 +2318,7 @@ export const shapla = {
         "type": "kpis",
         "items": [
           {
-            "label": "October gross",
+            "label": "November gross",
             "value": "৳ 55.5 L"
           },
           {
@@ -3594,54 +3594,54 @@ export const shapla = {
   "sales": {
     "kpis": [
       [
-        "Sales on 25 Oct",
-        "৳ 17.4 L"
+        "Sales on 5 Nov",
+        "৳ 21.8 L"
       ],
       [
-        "Orders in October",
-        "241"
+        "Orders in November",
+        "65"
       ],
       [
         "Month to date",
-        "৳ 4.53 Cr"
+        "৳ 1.32 Cr"
       ],
       [
         "Avg. order",
-        "৳ 1.9 L"
+        "৳ 2.0 L"
       ]
     ],
     "table": {
       "title": "Sales by region",
       "cols": [
         "Region",
-        "25 Oct",
+        "5 Nov",
         "Month to date",
         "Orders"
       ],
       "rows": [
         [
           "Dhaka",
-          "৳ 4,284",
-          "৳ 1.75 Cr",
-          "90"
+          "৳ 7.8 L",
+          "৳ 42.0 L",
+          "21"
         ],
         [
           "Khulna",
-          "৳ 1.5 L",
-          "৳ 74.7 L",
-          "40"
+          "৳ 7.6 L",
+          "৳ 20.9 L",
+          "8"
         ],
         [
-          "Rajshahi",
-          "৳ 6.6 L",
-          "৳ 55.8 L",
-          "29"
+          "Sylhet",
+          "৳ 50,566",
+          "৳ 20.2 L",
+          "10"
         ],
         [
-          "Chattogram",
-          "৳ 2.7 L",
-          "৳ 53.3 L",
-          "25"
+          "Barishal",
+          "৳ 89,958",
+          "৳ 16.4 L",
+          "9"
         ]
       ]
     },
@@ -3650,21 +3650,21 @@ export const shapla = {
         "type": "kpis",
         "items": [
           {
-            "label": "Sales on 25 Oct",
-            "value": "৳ 17.4 L"
+            "label": "Sales on 5 Nov",
+            "value": "৳ 21.8 L"
           },
           {
             "label": "Month to date",
-            "value": "৳ 4.53 Cr",
-            "note": "1 to 25 Oct, net of VAT"
+            "value": "৳ 1.32 Cr",
+            "note": "1 to 5 Nov, net of VAT"
           },
           {
-            "label": "Orders in October",
-            "value": "241"
+            "label": "Orders in November",
+            "value": "65"
           },
           {
             "label": "Customers ordering",
-            "value": "73"
+            "value": "44"
           }
         ]
       },
@@ -3672,12 +3672,13 @@ export const shapla = {
         "w": 8,
         "type": "line",
         "title": "Monthly sales",
-        "sub": "৳ crore, net of VAT · *October to the 25th",
+        "sub": "৳ crore, net of VAT · *November to the 5th",
         "labels": [
           "Jul",
           "Aug",
           "Sep",
-          "Oct*"
+          "Oct",
+          "Nov*"
         ],
         "series": [
           {
@@ -3686,7 +3687,8 @@ export const shapla = {
               5.74,
               6.44,
               5.75,
-              4.53
+              5.82,
+              1.32
             ]
           }
         ]
@@ -3696,48 +3698,48 @@ export const shapla = {
         "type": "donut",
         "title": "Sales by category",
         "sub": "Month to date",
-        "center": "৳ 4.53 Cr",
-        "centerLabel": "October",
+        "center": "৳ 1.32 Cr",
+        "centerLabel": "November",
         "slices": [
           {
             "label": "Dairy",
-            "value": 13210702,
-            "display": "৳ 1.32 Cr"
+            "value": 5283619,
+            "display": "৳ 52.8 L"
           },
           {
             "label": "Spices",
-            "value": 8778991,
-            "display": "৳ 87.8 L"
-          },
-          {
-            "label": "Edible Oil",
-            "value": 4725160,
-            "display": "৳ 47.3 L"
-          },
-          {
-            "label": "Tea",
-            "value": 4604488,
-            "display": "৳ 46.0 L"
+            "value": 1594284,
+            "display": "৳ 15.9 L"
           },
           {
             "label": "Flour & Staples",
-            "value": 4565782,
-            "display": "৳ 45.7 L"
+            "value": 1555647,
+            "display": "৳ 15.6 L"
           },
           {
-            "label": "Biscuits & Bakery",
-            "value": 4156895,
-            "display": "৳ 41.6 L"
+            "label": "Edible Oil",
+            "value": 1292506,
+            "display": "৳ 12.9 L"
+          },
+          {
+            "label": "Tea",
+            "value": 1081805,
+            "display": "৳ 10.8 L"
           },
           {
             "label": "Noodles & Snacks",
-            "value": 4005722,
-            "display": "৳ 40.1 L"
+            "value": 1056353,
+            "display": "৳ 10.6 L"
+          },
+          {
+            "label": "Biscuits & Bakery",
+            "value": 817299,
+            "display": "৳ 8.2 L"
           },
           {
             "label": "Beverages",
-            "value": 1223166,
-            "display": "৳ 12.2 L"
+            "value": 482632,
+            "display": "৳ 4.8 L"
           }
         ]
       },
@@ -3750,43 +3752,43 @@ export const shapla = {
         "items": [
           {
             "label": "Dhaka",
-            "value": 175.0,
-            "display": "৳ 1.75 Cr"
+            "value": 42.0,
+            "display": "৳ 42.0 L"
           },
           {
             "label": "Khulna",
-            "value": 74.7,
-            "display": "৳ 74.7 L"
-          },
-          {
-            "label": "Rajshahi",
-            "value": 55.8,
-            "display": "৳ 55.8 L"
-          },
-          {
-            "label": "Chattogram",
-            "value": 53.3,
-            "display": "৳ 53.3 L"
+            "value": 20.9,
+            "display": "৳ 20.9 L"
           },
           {
             "label": "Sylhet",
-            "value": 33.9,
-            "display": "৳ 33.9 L"
-          },
-          {
-            "label": "Rangpur",
-            "value": 33.8,
-            "display": "৳ 33.8 L"
+            "value": 20.2,
+            "display": "৳ 20.2 L"
           },
           {
             "label": "Barishal",
-            "value": 22.9,
-            "display": "৳ 22.9 L"
+            "value": 16.4,
+            "display": "৳ 16.4 L"
+          },
+          {
+            "label": "Rangpur",
+            "value": 15.5,
+            "display": "৳ 15.5 L"
+          },
+          {
+            "label": "Rajshahi",
+            "value": 12.5,
+            "display": "৳ 12.5 L"
+          },
+          {
+            "label": "Chattogram",
+            "value": 2.5,
+            "display": "৳ 2.5 L"
           },
           {
             "label": "Mymensingh",
-            "value": 3.4,
-            "display": "৳ 3.4 L"
+            "value": 1.5,
+            "display": "৳ 1.5 L"
           }
         ]
       },
@@ -3799,33 +3801,33 @@ export const shapla = {
         "items": [
           {
             "label": "Shapla Ghee 400 g",
-            "value": 63.0,
-            "display": "৳ 63.0 L"
-          },
-          {
-            "label": "Shapla Full Cream Milk Powder 500 g",
-            "value": 31.6,
-            "display": "৳ 31.6 L"
+            "value": 22.8,
+            "display": "৳ 22.8 L"
           },
           {
             "label": "Shapla Full Cream Milk Powder 1 kg",
-            "value": 30.8,
-            "display": "৳ 30.8 L"
+            "value": 13.7,
+            "display": "৳ 13.7 L"
+          },
+          {
+            "label": "Shapla Full Cream Milk Powder 500 g",
+            "value": 13.2,
+            "display": "৳ 13.2 L"
           },
           {
             "label": "Shapla Premium Tea 200 g",
-            "value": 19.4,
-            "display": "৳ 19.4 L"
+            "value": 5.1,
+            "display": "৳ 5.1 L"
           },
           {
-            "label": "Shapla Cumin Powder 100 g",
-            "value": 16.6,
-            "display": "৳ 16.6 L"
+            "label": "Shapla Masoor Dal 1 kg",
+            "value": 4.3,
+            "display": "৳ 4.3 L"
           },
           {
-            "label": "Shapla Chilli Powder 200 g",
-            "value": 15.3,
-            "display": "৳ 15.3 L"
+            "label": "Shapla Mustard Oil 1 L",
+            "value": 4.0,
+            "display": "৳ 4.0 L"
           }
         ]
       },
@@ -3836,24 +3838,24 @@ export const shapla = {
         "sub": "Month to date",
         "rows": [
           {
-            "name": "Belal Molla",
-            "value": "৳ 67.1 L"
-          },
-          {
             "name": "Afroza Begum",
-            "value": "৳ 66.6 L"
-          },
-          {
-            "name": "Hasan Alam",
-            "value": "৳ 50.8 L"
+            "value": "৳ 18.8 L"
           },
           {
             "name": "Kamrul Talukder",
-            "value": "৳ 47.2 L"
+            "value": "৳ 17.0 L"
           },
           {
-            "name": "Jahid Mia",
-            "value": "৳ 38.7 L"
+            "name": "Hasan Alam",
+            "value": "৳ 15.4 L"
+          },
+          {
+            "name": "Popy Talukder",
+            "value": "৳ 13.3 L"
+          },
+          {
+            "name": "Arif Rahman",
+            "value": "৳ 12.1 L"
           }
         ]
       }
@@ -3863,15 +3865,15 @@ export const shapla = {
     "kpis": [
       [
         "Outstanding",
-        "৳ 5.71 Cr"
+        "৳ 6.34 Cr"
       ],
       [
         "Overdue",
-        "৳ 3.51 Cr"
+        "৳ 3.90 Cr"
       ],
       [
-        "Invoiced in October",
-        "৳ 4.47 Cr"
+        "Invoiced in November",
+        "৳ 1.13 Cr"
       ],
       [
         "Collected",
@@ -3888,27 +3890,27 @@ export const shapla = {
       ],
       "rows": [
         [
-          "INV-001187",
-          "Shirin Agency",
-          "৳ 2.3 L",
+          "INV-001309",
+          "Daily Super Store Mirpur",
+          "৳ 57,149",
           "Partly paid"
         ],
         [
-          "INV-001186",
-          "Shirin Agency",
-          "৳ 1.6 L",
-          "Partly paid"
-        ],
-        [
-          "INV-001184",
-          "Popy Distribution",
-          "৳ 4,927",
+          "INV-001308",
+          "Shakil Agency",
+          "৳ 1.0 L",
           "Unpaid"
         ],
         [
-          "INV-001183",
-          "Rasel General Store",
-          "৳ 4.4 L",
+          "INV-001306",
+          "Rubel General Store",
+          "৳ 70,913",
+          "Partly paid"
+        ],
+        [
+          "INV-001305",
+          "Shakil Agency",
+          "৳ 58,151",
           "Partly paid"
         ]
       ]
@@ -3923,324 +3925,324 @@ export const shapla = {
     ],
     "rows": [
       [
-        "INV-001187",
-        "Shirin Agency",
-        "25 Oct",
-        "9 Nov",
-        "৳ 2.3 L",
+        "INV-001309",
+        "Daily Super Store Mirpur",
+        "5 Nov",
+        "5 Dec",
+        "৳ 57,149",
         "Partly paid"
       ],
       [
-        "INV-001186",
-        "Shirin Agency",
-        "25 Oct",
-        "9 Nov",
-        "৳ 1.6 L",
-        "Partly paid"
-      ],
-      [
-        "INV-001184",
-        "Popy Distribution",
-        "25 Oct",
-        "25 Oct",
-        "৳ 4,927",
-        "Unpaid"
-      ],
-      [
-        "INV-001183",
-        "Rasel General Store",
-        "25 Oct",
-        "9 Nov",
-        "৳ 4.4 L",
-        "Partly paid"
-      ],
-      [
-        "INV-001182",
-        "Marium Agency",
-        "25 Oct",
-        "1 Nov",
-        "৳ 3.2 L",
-        "Unpaid"
-      ],
-      [
-        "INV-001181",
-        "Ayesha Bhandar",
-        "25 Oct",
-        "9 Nov",
-        "৳ 95,912",
-        "Unpaid"
-      ],
-      [
-        "INV-001179",
-        "Ayesha Traders",
-        "25 Oct",
-        "9 Nov",
-        "৳ 2.2 L",
-        "Unpaid"
-      ],
-      [
-        "INV-001178",
-        "Shirin Agency",
-        "25 Oct",
-        "24 Nov",
-        "৳ 3.6 L",
-        "Partly paid"
-      ],
-      [
-        "INV-001177",
-        "Mamun Traders",
-        "24 Oct",
-        "24 Oct",
-        "৳ 8,410",
-        "Overdue"
-      ],
-      [
-        "INV-001176",
-        "Belal Store",
-        "24 Oct",
-        "24 Oct",
-        "৳ 7,110",
-        "Overdue"
-      ],
-      [
-        "INV-001175",
-        "Shirin Bhandar",
-        "24 Oct",
-        "23 Nov",
-        "৳ 2.6 L",
-        "Unpaid"
-      ],
-      [
-        "INV-001174",
+        "INV-001308",
         "Shakil Agency",
-        "24 Oct",
-        "23 Nov",
-        "৳ 5.1 L",
-        "Unpaid"
-      ],
-      [
-        "INV-001173",
-        "Delwar Bhandar",
-        "24 Oct",
-        "31 Oct",
+        "5 Nov",
+        "5 Dec",
         "৳ 1.0 L",
         "Unpaid"
       ],
       [
-        "INV-001171",
-        "Mizanur General Store",
-        "24 Oct",
-        "8 Nov",
-        "৳ 3.7 L",
-        "Partly paid"
-      ],
-      [
-        "INV-001170",
-        "Ayesha Super Mart",
-        "24 Oct",
-        "31 Oct",
-        "৳ 58,928",
-        "Unpaid"
-      ],
-      [
-        "INV-001169",
-        "Shirin Bhandar",
-        "24 Oct",
-        "31 Oct",
-        "৳ 3.7 L",
-        "Unpaid"
-      ],
-      [
-        "INV-001166",
-        "Mithila Store",
-        "22 Oct",
-        "22 Oct",
-        "৳ 2,205",
-        "Overdue"
-      ],
-      [
-        "INV-001162",
-        "Jahid Store",
-        "22 Oct",
-        "22 Oct",
-        "৳ 1,468",
-        "Overdue"
-      ],
-      [
-        "INV-001160",
-        "Shopno Mart Ganginarpar",
-        "22 Oct",
-        "21 Nov",
-        "৳ 64,643",
-        "Unpaid"
-      ],
-      [
-        "INV-001159",
-        "Rasel General Store",
-        "22 Oct",
-        "6 Nov",
-        "৳ 67,357",
-        "Unpaid"
-      ],
-      [
-        "INV-001158",
-        "Ayesha Super Mart",
-        "22 Oct",
-        "29 Oct",
-        "৳ 4.8 L",
-        "Unpaid"
-      ],
-      [
-        "INV-001156",
-        "Shakil Agency",
-        "21 Oct",
-        "20 Nov",
-        "৳ 2.1 L",
-        "Unpaid"
-      ],
-      [
-        "INV-001154",
-        "Sajid Traders",
-        "21 Oct",
-        "28 Oct",
-        "৳ 3.0 L",
-        "Unpaid"
-      ],
-      [
-        "INV-001153",
-        "Lamia General Store",
-        "21 Oct",
-        "28 Oct",
-        "৳ 52,335",
-        "Partly paid"
-      ],
-      [
-        "INV-001152",
-        "Faisal Agency",
-        "21 Oct",
-        "20 Nov",
-        "৳ 75,493",
-        "Partly paid"
-      ],
-      [
-        "INV-001151",
-        "Emon General Store",
-        "21 Oct",
+        "INV-001306",
+        "Rubel General Store",
         "5 Nov",
-        "৳ 1.8 L",
-        "Unpaid"
-      ],
-      [
-        "INV-001150",
-        "Kamrul Bhandar",
-        "21 Oct",
-        "21 Oct",
-        "৳ 3,695",
-        "Overdue"
-      ],
-      [
-        "INV-001149",
-        "Shirin Bhandar",
-        "21 Oct",
-        "20 Nov",
-        "৳ 1.9 L",
+        "5 Dec",
+        "৳ 70,913",
         "Partly paid"
       ],
       [
-        "INV-001148",
-        "Faisal Agency",
-        "21 Oct",
-        "20 Nov",
-        "৳ 1.8 L",
+        "INV-001305",
+        "Shakil Agency",
+        "5 Nov",
+        "5 Dec",
+        "৳ 58,151",
+        "Partly paid"
+      ],
+      [
+        "INV-001304",
+        "Jahid Bhandar",
+        "5 Nov",
+        "5 Dec",
+        "৳ 1.0 L",
         "Unpaid"
       ],
       [
-        "INV-001145",
-        "Lamia General Store",
-        "20 Oct",
-        "27 Oct",
+        "INV-001303",
+        "Jahid Bhandar",
+        "5 Nov",
+        "5 Dec",
+        "৳ 4.3 L",
+        "Partly paid"
+      ],
+      [
+        "INV-001302",
+        "Mizanur General Store",
+        "5 Nov",
+        "20 Nov",
         "৳ 1.7 L",
         "Unpaid"
       ],
       [
-        "INV-001144",
-        "Anisur Super Mart",
-        "20 Oct",
-        "27 Oct",
-        "৳ 4.9 L",
+        "INV-001301",
+        "Shirin Agency",
+        "5 Nov",
+        "20 Nov",
+        "৳ 3.2 L",
         "Unpaid"
       ],
       [
-        "INV-001143",
-        "Fresh Mart Kushtia",
-        "20 Oct",
-        "19 Nov",
-        "৳ 26,717",
-        "Unpaid"
-      ],
-      [
-        "INV-001141",
-        "Rahim Enterprise",
-        "20 Oct",
-        "4 Nov",
-        "৳ 5.4 L",
+        "INV-001300",
+        "Sajid Traders",
+        "5 Nov",
+        "12 Nov",
+        "৳ 1.1 L",
         "Partly paid"
       ],
       [
-        "INV-001137",
+        "INV-001299",
+        "Tahmina Bhandar",
+        "5 Nov",
+        "20 Nov",
+        "৳ 3.0 L",
+        "Partly paid"
+      ],
+      [
+        "INV-001298",
+        "Tanvir Enterprise",
+        "5 Nov",
+        "12 Nov",
+        "৳ 2.0 L",
+        "Unpaid"
+      ],
+      [
+        "INV-001297",
+        "Ayesha Super Mart",
+        "5 Nov",
+        "12 Nov",
+        "৳ 2.3 L",
+        "Partly paid"
+      ],
+      [
+        "INV-001296",
+        "Rahim Enterprise",
+        "5 Nov",
+        "20 Nov",
+        "৳ 3.0 L",
+        "Partly paid"
+      ],
+      [
+        "INV-001294",
         "Shakil Agency",
-        "20 Oct",
-        "19 Nov",
-        "৳ 95,576",
+        "4 Nov",
+        "4 Dec",
+        "৳ 35,762",
+        "Partly paid"
+      ],
+      [
+        "INV-001293",
+        "Farzana Bhandar",
+        "4 Nov",
+        "4 Nov",
+        "৳ 7,854",
+        "Paid"
+      ],
+      [
+        "INV-001292",
+        "Fresh Shop Daulatpur",
+        "4 Nov",
+        "4 Dec",
+        "৳ 77,707",
         "Unpaid"
       ],
       [
-        "INV-001136",
-        "Shirin Bhandar",
-        "20 Oct",
-        "27 Oct",
-        "৳ 3.6 L",
+        "INV-001291",
+        "Shakil Agency",
+        "4 Nov",
+        "4 Dec",
+        "৳ 2.7 L",
         "Unpaid"
       ],
       [
-        "INV-001135",
+        "INV-001290",
         "Shirin Agency",
-        "20 Oct",
+        "4 Nov",
         "19 Nov",
-        "৳ 1.2 L",
+        "৳ 1.0 L",
         "Unpaid"
       ],
       [
-        "INV-001134",
-        "Nadia Agency",
-        "19 Oct",
-        "26 Oct",
-        "৳ 6.3 L",
-        "Unpaid"
+        "INV-001289",
+        "Emon General Store",
+        "4 Nov",
+        "19 Nov",
+        "৳ 7.5 L",
+        "Partly paid"
       ],
       [
-        "INV-001133",
-        "Mizanur Traders",
-        "19 Oct",
-        "26 Oct",
-        "৳ 1.8 L",
-        "Unpaid"
+        "INV-001288",
+        "Kamrul Bhandar",
+        "4 Nov",
+        "4 Nov",
+        "৳ 1,038",
+        "Overdue"
       ],
       [
-        "INV-001132",
-        "Saiful Store",
-        "19 Oct",
-        "3 Nov",
+        "INV-001287",
+        "Anisur Agency",
+        "4 Nov",
+        "11 Nov",
         "৳ 1.3 L",
         "Unpaid"
       ],
       [
-        "INV-001131",
+        "INV-001286",
         "Anisur Agency",
-        "19 Oct",
-        "26 Oct",
-        "৳ 33,941",
+        "4 Nov",
+        "11 Nov",
+        "৳ 4.0 L",
+        "Unpaid"
+      ],
+      [
+        "INV-001285",
+        "Mizanur General Store",
+        "4 Nov",
+        "19 Nov",
+        "৳ 5.1 L",
+        "Unpaid"
+      ],
+      [
+        "INV-001284",
+        "Marium Agency",
+        "4 Nov",
+        "11 Nov",
+        "৳ 7.3 L",
         "Partly paid"
+      ],
+      [
+        "INV-001282",
+        "Ashraf General Store",
+        "4 Nov",
+        "11 Nov",
+        "৳ 3.5 L",
+        "Unpaid"
+      ],
+      [
+        "INV-001281",
+        "Emon General Store",
+        "3 Nov",
+        "18 Nov",
+        "৳ 3.1 L",
+        "Partly paid"
+      ],
+      [
+        "INV-001280",
+        "Shakil Agency",
+        "3 Nov",
+        "3 Dec",
+        "৳ 1.7 L",
+        "Unpaid"
+      ],
+      [
+        "INV-001279",
+        "Shirin Bhandar",
+        "3 Nov",
+        "10 Nov",
+        "৳ 3.0 L",
+        "Unpaid"
+      ],
+      [
+        "INV-001278",
+        "Delwar Bhandar",
+        "3 Nov",
+        "10 Nov",
+        "৳ 1.8 L",
+        "Partly paid"
+      ],
+      [
+        "INV-001276",
+        "Shirin Store",
+        "3 Nov",
+        "3 Nov",
+        "৳ 41,876",
+        "Overdue"
+      ],
+      [
+        "INV-001275",
+        "Ashraf General Store",
+        "3 Nov",
+        "10 Nov",
+        "৳ 5.1 L",
+        "Unpaid"
+      ],
+      [
+        "INV-001273",
+        "Mizanur General Store",
+        "3 Nov",
+        "18 Nov",
+        "৳ 4.6 L",
+        "Unpaid"
+      ],
+      [
+        "INV-001272",
+        "Imran Super Mart",
+        "3 Nov",
+        "3 Nov",
+        "৳ 145",
+        "Paid"
+      ],
+      [
+        "INV-001271",
+        "Shirin Agency",
+        "3 Nov",
+        "3 Dec",
+        "৳ 8.3 L",
+        "Partly paid"
+      ],
+      [
+        "INV-001270",
+        "Shamima Bhandar",
+        "3 Nov",
+        "10 Nov",
+        "৳ 2.5 L",
+        "Unpaid"
+      ],
+      [
+        "INV-001269",
+        "Belal General Store",
+        "3 Nov",
+        "3 Nov",
+        "৳ 8,626",
+        "Paid"
+      ],
+      [
+        "INV-001266",
+        "Delwar Bhandar",
+        "2 Nov",
+        "9 Nov",
+        "৳ 1.2 L",
+        "Unpaid"
+      ],
+      [
+        "INV-001265",
+        "Shakil Agency",
+        "2 Nov",
+        "2 Dec",
+        "৳ 57,960",
+        "Partly paid"
+      ],
+      [
+        "INV-001263",
+        "Shakil Agency",
+        "2 Nov",
+        "2 Dec",
+        "৳ 1.5 L",
+        "Unpaid"
+      ],
+      [
+        "INV-001262",
+        "Ayesha Traders",
+        "2 Nov",
+        "17 Nov",
+        "৳ 83,966",
+        "Unpaid"
       ]
     ],
     "overview": [
@@ -4248,16 +4250,16 @@ export const shapla = {
         "type": "kpis",
         "items": [
           {
-            "label": "Invoiced in October",
-            "value": "৳ 4.47 Cr"
+            "label": "Invoiced in November",
+            "value": "৳ 1.13 Cr"
           },
           {
             "label": "Outstanding",
-            "value": "৳ 5.71 Cr"
+            "value": "৳ 6.34 Cr"
           },
           {
             "label": "Overdue",
-            "value": "৳ 3.51 Cr"
+            "value": "৳ 3.90 Cr"
           },
           {
             "label": "Collected",
@@ -4274,28 +4276,28 @@ export const shapla = {
         "items": [
           {
             "label": "Not due",
-            "value": 220.5,
-            "display": "৳ 2.20 Cr"
+            "value": 244.5,
+            "display": "৳ 2.44 Cr"
           },
           {
             "label": "1 to 30",
-            "value": 241.2,
-            "display": "৳ 2.41 Cr"
+            "value": 265.9,
+            "display": "৳ 2.66 Cr"
           },
           {
             "label": "31 to 60",
-            "value": 42.2,
-            "display": "৳ 42.2 L"
+            "value": 35.7,
+            "display": "৳ 35.7 L"
           },
           {
             "label": "61 to 90",
-            "value": 58.6,
-            "display": "৳ 58.6 L"
+            "value": 61.8,
+            "display": "৳ 61.8 L"
           },
           {
             "label": "90+",
-            "value": 9.1,
-            "display": "৳ 9.1 L"
+            "value": 26.6,
+            "display": "৳ 26.6 L"
           }
         ]
       },
@@ -4307,28 +4309,28 @@ export const shapla = {
         "rows": [
           {
             "name": "Shakil Agency",
-            "sub": "26 open invoices",
-            "value": "৳ 61.6 L"
+            "sub": "35 open invoices",
+            "value": "৳ 77.4 L"
           },
           {
             "name": "Shirin Agency",
-            "sub": "21 open invoices",
-            "value": "৳ 37.2 L"
-          },
-          {
-            "name": "Faisal Agency",
-            "sub": "11 open invoices",
-            "value": "৳ 36.2 L"
-          },
-          {
-            "name": "Emon General Store",
-            "sub": "9 open invoices",
-            "value": "৳ 28.0 L"
+            "sub": "24 open invoices",
+            "value": "৳ 42.8 L"
           },
           {
             "name": "Ayesha Traders",
-            "sub": "12 open invoices",
-            "value": "৳ 27.6 L"
+            "sub": "13 open invoices",
+            "value": "৳ 28.2 L"
+          },
+          {
+            "name": "Popy Super Mart",
+            "sub": "13 open invoices",
+            "value": "৳ 26.9 L"
+          },
+          {
+            "name": "Ayesha Bhandar",
+            "sub": "14 open invoices",
+            "value": "৳ 26.8 L"
           }
         ]
       },
@@ -4336,12 +4338,13 @@ export const shapla = {
         "w": 12,
         "type": "line",
         "title": "Invoiced vs collected",
-        "sub": "৳ crore · *October to the 25th",
+        "sub": "৳ crore · *November to the 5th",
         "labels": [
           "Jul",
           "Aug",
           "Sep",
-          "Oct*"
+          "Oct",
+          "Nov*"
         ],
         "series": [
           {
@@ -4350,7 +4353,8 @@ export const shapla = {
               6.26,
               6.95,
               6.14,
-              4.47
+              6.19,
+              1.13
             ]
           },
           {
@@ -4359,7 +4363,8 @@ export const shapla = {
               2.86,
               5.77,
               6.43,
-              3.04
+              4.01,
+              1.25
             ]
           }
         ]
@@ -4370,7 +4375,7 @@ export const shapla = {
     "kpis": [
       [
         "Stock value",
-        "৳ 4.73 Cr"
+        "৳ 3.76 Cr"
       ],
       [
         "SKUs",
@@ -4378,7 +4383,7 @@ export const shapla = {
       ],
       [
         "Below reorder level",
-        "43"
+        "19"
       ],
       [
         "Locations",
@@ -4395,28 +4400,28 @@ export const shapla = {
       ],
       "rows": [
         [
-          "Shapla Maida 1 kg",
-          "Chattogram Depot",
-          "100",
-          "200"
+          "Shapla Full Cream Milk Powder 500 g",
+          "Dhaka Depot",
+          "0",
+          "240"
         ],
         [
-          "Shapla Instant Noodles Masala 62 g",
+          "Shapla Mustard Oil 500 ml",
           "Khulna Depot",
-          "480",
-          "960"
-        ],
-        [
-          "Shapla Drinking Water 1.5 L",
-          "Sylhet Depot",
-          "60",
+          "0",
           "120"
         ],
         [
-          "Shapla Soybean Oil 5 L",
-          "Sylhet Depot",
-          "20",
-          "40"
+          "Shapla Atta 1 kg",
+          "Rangpur Depot",
+          "0",
+          "200"
+        ],
+        [
+          "Shapla Ghee 400 g",
+          "Dhaka Depot",
+          "51",
+          "240"
         ]
       ]
     },
@@ -4434,819 +4439,621 @@ export const shapla = {
         "SKU-0001",
         "Shapla Milk Biscuit 75 g",
         "Central Warehouse",
-        "14,304",
+        "20,242",
         "7,680",
-        "৳ 1.2 L",
+        "৳ 1.8 L",
         "In stock"
       ],
       [
         "SKU-0002",
         "Shapla Milk Biscuit Family 300 g",
         "Central Warehouse",
-        "5,112",
+        "3,120",
         "1,920",
-        "৳ 2.0 L",
+        "৳ 1.2 L",
         "In stock"
       ],
       [
         "SKU-0003",
         "Shapla Lexus Cream Cracker 240 g",
         "Central Warehouse",
-        "9,216",
+        "7,008",
         "1,920",
-        "৳ 3.1 L",
+        "৳ 2.4 L",
         "In stock"
       ],
       [
         "SKU-0004",
         "Shapla Choco Cream 100 g",
         "Central Warehouse",
-        "26,208",
+        "22,896",
         "5,760",
-        "৳ 4.0 L",
+        "৳ 3.5 L",
         "In stock"
       ],
       [
         "SKU-0005",
         "Shapla Orange Cream 100 g",
         "Central Warehouse",
-        "20,880",
+        "14,688",
         "5,760",
-        "৳ 3.3 L",
+        "৳ 2.3 L",
         "In stock"
       ],
       [
         "SKU-0006",
         "Shapla Toast Classic 300 g",
         "Central Warehouse",
-        "4,200",
+        "3,432",
         "1,920",
-        "৳ 2.2 L",
+        "৳ 1.8 L",
         "In stock"
       ],
       [
         "SKU-0007",
         "Shapla Dry Cake 350 g",
         "Central Warehouse",
-        "7,272",
+        "5,904",
         "1,920",
-        "৳ 5.1 L",
+        "৳ 4.1 L",
         "In stock"
       ],
       [
         "SKU-0008",
         "Shapla Coconut Cookies 180 g",
         "Central Warehouse",
-        "17,184",
+        "11,280",
         "3,840",
-        "৳ 4.7 L",
+        "৳ 3.1 L",
         "In stock"
       ],
       [
         "SKU-0009",
         "Shapla Instant Noodles Masala 62 g",
         "Central Warehouse",
-        "10,176",
+        "25,759",
         "7,680",
-        "৳ 1.3 L",
+        "৳ 3.2 L",
         "In stock"
       ],
       [
         "SKU-0010",
         "Shapla Instant Noodles 8-pack 496 g",
         "Central Warehouse",
-        "4,452",
+        "3,588",
         "960",
-        "৳ 4.4 L",
+        "৳ 3.5 L",
         "In stock"
       ],
       [
         "SKU-0011",
         "Shapla Chanachur Hot 150 g",
         "Central Warehouse",
-        "11,568",
+        "5,664",
         "3,840",
-        "৳ 3.0 L",
+        "৳ 1.4 L",
         "In stock"
       ],
       [
         "SKU-0012",
         "Shapla Chanachur Hot 350 g",
         "Central Warehouse",
-        "7,560",
+        "5,232",
         "1,920",
-        "৳ 3.7 L",
+        "৳ 2.6 L",
         "In stock"
       ],
       [
         "SKU-0013",
         "Shapla Potato Chips 25 g",
         "Central Warehouse",
-        "44,352",
+        "19,296",
         "11,520",
-        "৳ 2.7 L",
+        "৳ 1.2 L",
         "In stock"
       ],
       [
         "SKU-0014",
         "Shapla Dalmut 150 g",
         "Central Warehouse",
-        "16,320",
+        "8,688",
         "3,840",
-        "৳ 4.0 L",
+        "৳ 2.1 L",
         "In stock"
       ],
       [
         "SKU-0015",
         "Shapla Jhal Muri Mix 200 g",
         "Central Warehouse",
-        "6,192",
+        "9,084",
         "3,840",
-        "৳ 1.4 L",
+        "৳ 2.0 L",
         "In stock"
       ],
       [
         "SKU-0016",
         "Shapla Mango Juice 250 ml",
         "Central Warehouse",
-        "9,456",
+        "4,656",
         "1,920",
-        "৳ 1.4 L",
+        "৳ 66,720",
         "In stock"
       ],
       [
         "SKU-0017",
         "Shapla Mango Juice 1 L",
         "Central Warehouse",
-        "2,604",
+        "1,200",
         "960",
-        "৳ 1.7 L",
+        "৳ 79,428",
         "In stock"
       ],
       [
         "SKU-0018",
         "Shapla Litchi Drink 250 ml",
         "Central Warehouse",
-        "5,952",
+        "3,888",
         "1,920",
-        "৳ 89,994",
+        "৳ 58,787",
         "In stock"
       ],
       [
         "SKU-0019",
         "Shapla Drinking Water 500 ml",
         "Central Warehouse",
-        "1,824",
+        "5,244",
         "1,920",
-        "৳ 16,781",
-        "Low stock"
+        "৳ 48,245",
+        "In stock"
       ],
       [
         "SKU-0020",
         "Shapla Drinking Water 1.5 L",
         "Central Warehouse",
-        "3,324",
+        "1,008",
         "960",
-        "৳ 61,195",
+        "৳ 18,557",
         "In stock"
       ],
       [
         "SKU-0021",
         "Shapla Drinking Water 5 L",
         "Central Warehouse",
-        "1,164",
+        "488",
         "320",
-        "৳ 60,365",
+        "৳ 25,308",
         "In stock"
       ],
       [
         "SKU-0022",
         "Shapla Lemon Soda 250 ml",
         "Central Warehouse",
-        "7,872",
+        "3,240",
         "1,920",
-        "৳ 1.3 L",
+        "৳ 52,585",
         "In stock"
       ],
       [
         "SKU-0023",
         "Shapla Soybean Oil 1 L",
         "Central Warehouse",
-        "2,856",
+        "2,196",
         "960",
-        "৳ 3.3 L",
+        "৳ 2.6 L",
         "In stock"
       ],
       [
         "SKU-0024",
         "Shapla Soybean Oil 2 L",
         "Central Warehouse",
-        "1,692",
+        "864",
         "480",
-        "৳ 3.7 L",
+        "৳ 1.9 L",
         "In stock"
       ],
       [
         "SKU-0025",
         "Shapla Soybean Oil 5 L",
         "Central Warehouse",
-        "492",
+        "826",
         "320",
-        "৳ 2.9 L",
+        "৳ 4.9 L",
         "In stock"
       ],
       [
         "SKU-0026",
         "Shapla Mustard Oil 500 ml",
         "Central Warehouse",
-        "3,036",
+        "528",
         "960",
-        "৳ 3.0 L",
-        "In stock"
+        "৳ 51,591",
+        "Low stock"
       ],
       [
         "SKU-0027",
         "Shapla Mustard Oil 1 L",
         "Central Warehouse",
-        "4,440",
+        "3,840",
         "960",
-        "৳ 8.6 L",
+        "৳ 7.4 L",
         "In stock"
       ],
       [
         "SKU-0028",
         "Shapla Rice Bran Oil 1 L",
         "Central Warehouse",
-        "3,480",
+        "2,064",
         "960",
-        "৳ 4.7 L",
+        "৳ 2.8 L",
         "In stock"
       ],
       [
         "SKU-0029",
         "Shapla Atta 1 kg",
         "Central Warehouse",
-        "860",
+        "3,090",
         "1,600",
-        "৳ 35,681",
-        "Low stock"
+        "৳ 1.3 L",
+        "In stock"
       ],
       [
         "SKU-0030",
         "Shapla Atta 2 kg",
         "Central Warehouse",
-        "1,030",
+        "1,988",
         "800",
-        "৳ 80,103",
+        "৳ 1.5 L",
         "In stock"
       ],
       [
         "SKU-0031",
         "Shapla Maida 1 kg",
         "Central Warehouse",
-        "7,400",
+        "5,100",
         "1,600",
-        "৳ 3.2 L",
+        "৳ 2.2 L",
         "In stock"
       ],
       [
         "SKU-0032",
         "Shapla Suji 500 g",
         "Central Warehouse",
-        "3,720",
+        "6,611",
         "1,920",
-        "৳ 1.1 L",
+        "৳ 1.9 L",
         "In stock"
       ],
       [
         "SKU-0033",
         "Shapla Refined Sugar 1 kg",
         "Central Warehouse",
-        "4,540",
+        "3,220",
         "1,600",
-        "৳ 3.8 L",
+        "৳ 2.7 L",
         "In stock"
       ],
       [
         "SKU-0034",
         "Shapla Salt 1 kg",
         "Central Warehouse",
-        "7,175",
+        "6,375",
         "2,000",
-        "৳ 1.9 L",
+        "৳ 1.7 L",
         "In stock"
       ],
       [
         "SKU-0035",
         "Shapla Masoor Dal 1 kg",
         "Central Warehouse",
-        "2,280",
+        "3,564",
         "1,600",
-        "৳ 2.0 L",
+        "৳ 3.2 L",
         "In stock"
       ],
       [
         "SKU-0036",
         "Shapla Chinigura Rice 1 kg",
         "Central Warehouse",
-        "5,380",
+        "2,900",
         "1,600",
-        "৳ 5.2 L",
+        "৳ 2.8 L",
         "In stock"
       ],
       [
         "SKU-0037",
         "Shapla Turmeric Powder 200 g",
         "Central Warehouse",
-        "7,160",
+        "6,080",
         "3,200",
-        "৳ 4.3 L",
+        "৳ 3.6 L",
         "In stock"
       ],
       [
         "SKU-0038",
         "Shapla Chilli Powder 200 g",
         "Central Warehouse",
-        "10,400",
+        "6,080",
         "3,200",
-        "৳ 6.7 L",
+        "৳ 3.9 L",
         "In stock"
       ],
       [
         "SKU-0039",
         "Shapla Coriander Powder 200 g",
         "Central Warehouse",
-        "10,760",
+        "9,360",
         "3,200",
-        "৳ 5.3 L",
+        "৳ 4.6 L",
         "In stock"
       ],
       [
         "SKU-0040",
         "Shapla Cumin Powder 100 g",
         "Central Warehouse",
-        "4,080",
+        "9,416",
         "3,840",
-        "৳ 2.7 L",
+        "৳ 6.1 L",
         "In stock"
       ],
       [
         "SKU-0041",
         "Shapla Garam Masala 50 g",
         "Central Warehouse",
-        "2,940",
+        "10,085",
         "4,800",
-        "৳ 1.2 L",
-        "Low stock"
+        "৳ 4.1 L",
+        "In stock"
       ],
       [
         "SKU-0042",
         "Shapla Biryani Masala 40 g",
         "Central Warehouse",
-        "3,840",
+        "10,315",
         "4,800",
-        "৳ 1.4 L",
-        "Low stock"
+        "৳ 3.8 L",
+        "In stock"
       ],
       [
         "SKU-0043",
         "Shapla Beef Masala 100 g",
         "Central Warehouse",
-        "15,120",
+        "6,480",
         "3,840",
-        "৳ 6.9 L",
+        "৳ 3.0 L",
         "In stock"
       ],
       [
         "SKU-0044",
         "Shapla Chicken Masala 100 g",
         "Central Warehouse",
-        "16,752",
+        "9,408",
         "3,840",
-        "৳ 8.7 L",
+        "৳ 4.9 L",
         "In stock"
       ],
       [
         "SKU-0045",
         "Shapla Premium Tea 200 g",
         "Central Warehouse",
-        "11,680",
+        "28,171",
         "3,200",
-        "৳ 10.4 L",
+        "৳ 25.2 L",
         "In stock"
       ],
       [
         "SKU-0046",
         "Shapla Premium Tea 400 g",
         "Central Warehouse",
-        "4,860",
+        "2,660",
         "1,600",
-        "৳ 8.2 L",
+        "৳ 4.5 L",
         "In stock"
       ],
       [
         "SKU-0047",
         "Shapla Tea Bags 50s 100 g",
         "Central Warehouse",
-        "2,424",
+        "2,691",
         "1,920",
-        "৳ 2.5 L",
+        "৳ 2.8 L",
         "In stock"
       ],
       [
         "SKU-0048",
         "Shapla Full Cream Milk Powder 500 g",
         "Central Warehouse",
-        "5,640",
+        "3,648",
         "1,920",
-        "৳ 15.8 L",
+        "৳ 10.2 L",
         "In stock"
       ],
       [
         "SKU-0049",
         "Shapla Full Cream Milk Powder 1 kg",
         "Central Warehouse",
-        "3,864",
+        "2,940",
         "960",
-        "৳ 23.1 L",
+        "৳ 17.6 L",
         "In stock"
       ],
       [
         "SKU-0050",
         "Shapla Ghee 400 g",
         "Central Warehouse",
-        "7,896",
+        "3,240",
         "1,920",
-        "৳ 33.5 L",
+        "৳ 13.8 L",
         "In stock"
       ],
       [
         "SKU-0051",
         "Shapla UHT Milk 500 ml",
         "Central Warehouse",
-        "9,024",
+        "5,544",
         "1,920",
-        "৳ 3.2 L",
+        "৳ 2.0 L",
         "In stock"
       ],
       [
         "SKU-0052",
         "Shapla Sweet Yoghurt (Mishti Doi) 500 g",
         "Central Warehouse",
-        "2,088",
+        "528",
         "960",
-        "৳ 1.4 L",
-        "In stock"
+        "৳ 36,643",
+        "Low stock"
       ],
       [
-        "SKU-0031",
-        "Shapla Maida 1 kg",
-        "Chattogram Depot",
-        "100",
+        "SKU-0048",
+        "Shapla Full Cream Milk Powder 500 g",
+        "Dhaka Depot",
+        "0",
+        "240",
+        "৳ 0",
+        "Low stock"
+      ],
+      [
+        "SKU-0026",
+        "Shapla Mustard Oil 500 ml",
+        "Khulna Depot",
+        "0",
+        "120",
+        "৳ 0",
+        "Low stock"
+      ],
+      [
+        "SKU-0029",
+        "Shapla Atta 1 kg",
+        "Rangpur Depot",
+        "0",
         "200",
-        "৳ 4,305",
+        "৳ 0",
         "Low stock"
       ],
       [
-        "SKU-0009",
-        "Shapla Instant Noodles Masala 62 g",
-        "Khulna Depot",
-        "480",
-        "960",
-        "৳ 6,034",
-        "Low stock"
-      ],
-      [
-        "SKU-0020",
-        "Shapla Drinking Water 1.5 L",
-        "Sylhet Depot",
-        "60",
-        "120",
-        "৳ 1,105",
-        "Low stock"
-      ],
-      [
-        "SKU-0025",
-        "Shapla Soybean Oil 5 L",
-        "Sylhet Depot",
-        "20",
-        "40",
-        "৳ 11,881",
-        "Low stock"
-      ],
-      [
-        "SKU-0008",
-        "Shapla Coconut Cookies 180 g",
+        "SKU-0050",
+        "Shapla Ghee 400 g",
         "Dhaka Depot",
-        "288",
-        "480",
-        "৳ 7,891",
-        "Low stock"
-      ],
-      [
-        "SKU-0016",
-        "Shapla Mango Juice 250 ml",
-        "Dhaka Depot",
-        "144",
+        "51",
         "240",
-        "৳ 2,064",
-        "Low stock"
-      ],
-      [
-        "SKU-0024",
-        "Shapla Soybean Oil 2 L",
-        "Rajshahi Depot",
-        "36",
-        "60",
-        "৳ 7,966",
-        "Low stock"
-      ],
-      [
-        "SKU-0012",
-        "Shapla Chanachur Hot 350 g",
-        "Khulna Depot",
-        "144",
-        "240",
-        "৳ 7,070",
-        "Low stock"
-      ],
-      [
-        "SKU-0052",
-        "Shapla Sweet Yoghurt (Mishti Doi) 500 g",
-        "Khulna Depot",
-        "72",
-        "120",
-        "৳ 4,997",
-        "Low stock"
-      ],
-      [
-        "SKU-0004",
-        "Shapla Choco Cream 100 g",
-        "Barishal Depot",
-        "432",
-        "720",
-        "৳ 6,666",
-        "Low stock"
-      ],
-      [
-        "SKU-0015",
-        "Shapla Jhal Muri Mix 200 g",
-        "Barishal Depot",
-        "288",
-        "480",
-        "৳ 6,353",
-        "Low stock"
-      ],
-      [
-        "SKU-0020",
-        "Shapla Drinking Water 1.5 L",
-        "Dhaka Depot",
-        "84",
-        "120",
-        "৳ 1,546",
+        "৳ 21,662",
         "Low stock"
       ],
       [
         "SKU-0001",
         "Shapla Milk Biscuit 75 g",
-        "Chattogram Depot",
-        "672",
+        "Dhaka Depot",
+        "322",
         "960",
-        "৳ 5,860",
-        "Low stock"
-      ],
-      [
-        "SKU-0045",
-        "Shapla Premium Tea 200 g",
-        "Chattogram Depot",
-        "280",
-        "400",
-        "৳ 25,004",
-        "Low stock"
-      ],
-      [
-        "SKU-0029",
-        "Shapla Atta 1 kg",
-        "Rajshahi Depot",
-        "140",
-        "200",
-        "৳ 5,809",
-        "Low stock"
-      ],
-      [
-        "SKU-0024",
-        "Shapla Soybean Oil 2 L",
-        "Khulna Depot",
-        "42",
-        "60",
-        "৳ 9,293",
-        "Low stock"
-      ],
-      [
-        "SKU-0040",
-        "Shapla Cumin Powder 100 g",
-        "Barishal Depot",
-        "336",
-        "480",
-        "৳ 21,937",
-        "Low stock"
-      ],
-      [
-        "SKU-0047",
-        "Shapla Tea Bags 50s 100 g",
-        "Barishal Depot",
-        "168",
-        "240",
-        "৳ 17,514",
-        "Low stock"
-      ],
-      [
-        "SKU-0050",
-        "Shapla Ghee 400 g",
-        "Barishal Depot",
-        "168",
-        "240",
-        "৳ 71,358",
-        "Low stock"
-      ],
-      [
-        "SKU-0020",
-        "Shapla Drinking Water 1.5 L",
-        "Rangpur Depot",
-        "84",
-        "120",
-        "৳ 1,546",
-        "Low stock"
-      ],
-      [
-        "SKU-0011",
-        "Shapla Chanachur Hot 150 g",
-        "Mymensingh Depot",
-        "336",
-        "480",
-        "৳ 8,585",
+        "৳ 2,808",
         "Low stock"
       ],
       [
         "SKU-0016",
         "Shapla Mango Juice 250 ml",
-        "Mymensingh Depot",
-        "168",
-        "240",
-        "৳ 2,407",
-        "Low stock"
-      ],
-      [
-        "SKU-0017",
-        "Shapla Mango Juice 1 L",
-        "Chattogram Depot",
+        "Dhaka Depot",
         "96",
-        "120",
-        "৳ 6,354",
-        "Low stock"
-      ],
-      [
-        "SKU-0035",
-        "Shapla Masoor Dal 1 kg",
-        "Chattogram Depot",
-        "160",
-        "200",
-        "৳ 14,360",
-        "Low stock"
-      ],
-      [
-        "SKU-0012",
-        "Shapla Chanachur Hot 350 g",
-        "Sylhet Depot",
-        "192",
         "240",
-        "৳ 9,427",
+        "৳ 1,376",
         "Low stock"
       ],
       [
-        "SKU-0039",
-        "Shapla Coriander Powder 200 g",
-        "Sylhet Depot",
-        "320",
-        "400",
-        "৳ 15,658",
+        "SKU-0021",
+        "Shapla Drinking Water 5 L",
+        "Dhaka Depot",
+        "16",
+        "40",
+        "৳ 830",
+        "Low stock"
+      ],
+      [
+        "SKU-0001",
+        "Shapla Milk Biscuit 75 g",
+        "Khulna Depot",
+        "384",
+        "960",
+        "৳ 3,348",
         "Low stock"
       ],
       [
         "SKU-0045",
         "Shapla Premium Tea 200 g",
-        "Sylhet Depot",
-        "320",
+        "Khulna Depot",
+        "160",
         "400",
-        "৳ 28,576",
+        "৳ 14,288",
         "Low stock"
       ],
       [
-        "SKU-0019",
-        "Shapla Drinking Water 500 ml",
-        "Mymensingh Depot",
-        "192",
+        "SKU-0031",
+        "Shapla Maida 1 kg",
+        "Sylhet Depot",
+        "80",
+        "200",
+        "৳ 3,444",
+        "Low stock"
+      ],
+      [
+        "SKU-0047",
+        "Shapla Tea Bags 50s 100 g",
+        "Dhaka Depot",
+        "135",
         "240",
-        "৳ 1,766",
+        "৳ 14,074",
         "Low stock"
       ],
       [
-        "SKU-0052",
-        "Shapla Sweet Yoghurt (Mishti Doi) 500 g",
-        "Mymensingh Depot",
+        "SKU-0005",
+        "Shapla Orange Cream 100 g",
+        "Sylhet Depot",
+        "426",
+        "720",
+        "৳ 6,756",
+        "Low stock"
+      ],
+      [
+        "SKU-0032",
+        "Shapla Suji 500 g",
+        "Khulna Depot",
+        "168",
+        "240",
+        "৳ 4,904",
+        "Low stock"
+      ],
+      [
+        "SKU-0034",
+        "Shapla Salt 1 kg",
+        "Dhaka Depot",
+        "200",
+        "250",
+        "৳ 5,368",
+        "Low stock"
+      ],
+      [
+        "SKU-0049",
+        "Shapla Full Cream Milk Powder 1 kg",
+        "Dhaka Depot",
         "96",
         "120",
-        "৳ 6,662",
+        "৳ 57,378",
         "Low stock"
       ],
       [
-        "SKU-0028",
-        "Shapla Rice Bran Oil 1 L",
-        "Dhaka Depot",
-        "108",
-        "120",
-        "৳ 14,689",
+        "SKU-0047",
+        "Shapla Tea Bags 50s 100 g",
+        "Rangpur Depot",
+        "192",
+        "240",
+        "৳ 20,016",
         "Low stock"
       ],
       [
-        "SKU-0013",
-        "Shapla Potato Chips 25 g",
-        "Chattogram Depot",
-        "1,296",
-        "1,440",
-        "৳ 8,009",
-        "Low stock"
-      ],
-      [
-        "SKU-0026",
-        "Shapla Mustard Oil 500 ml",
-        "Rajshahi Depot",
-        "108",
-        "120",
-        "৳ 10,553",
-        "Low stock"
-      ],
-      [
-        "SKU-0043",
-        "Shapla Beef Masala 100 g",
-        "Rajshahi Depot",
-        "432",
-        "480",
-        "৳ 19,742",
-        "Low stock"
-      ],
-      [
-        "SKU-0026",
-        "Shapla Mustard Oil 500 ml",
-        "Khulna Depot",
-        "108",
-        "120",
-        "৳ 10,553",
-        "Low stock"
-      ],
-      [
-        "SKU-0041",
-        "Shapla Garam Masala 50 g",
-        "Khulna Depot",
-        "540",
-        "600",
-        "৳ 21,897",
-        "Low stock"
-      ],
-      [
-        "SKU-0027",
-        "Shapla Mustard Oil 1 L",
-        "Barishal Depot",
-        "108",
-        "120",
-        "৳ 20,886",
-        "Low stock"
-      ],
-      [
-        "SKU-0029",
-        "Shapla Atta 1 kg",
-        "Sylhet Depot",
+        "SKU-0046",
+        "Shapla Premium Tea 400 g",
+        "Rangpur Depot",
         "180",
         "200",
-        "৳ 7,468",
-        "Low stock"
-      ],
-      [
-        "SKU-0027",
-        "Shapla Mustard Oil 1 L",
-        "Rangpur Depot",
-        "108",
-        "120",
-        "৳ 20,886",
-        "Low stock"
-      ],
-      [
-        "SKU-0050",
-        "Shapla Ghee 400 g",
-        "Rangpur Depot",
-        "216",
-        "240",
-        "৳ 91,746",
+        "৳ 30,296",
         "Low stock"
       ]
     ],
@@ -5256,8 +5063,8 @@ export const shapla = {
         "items": [
           {
             "label": "Stock value",
-            "value": "৳ 4.73 Cr",
-            "note": "as of 25 Oct"
+            "value": "৳ 3.76 Cr",
+            "note": "as of 5 Nov"
           },
           {
             "label": "SKUs",
@@ -5265,7 +5072,7 @@ export const shapla = {
           },
           {
             "label": "Below reorder level",
-            "value": "43"
+            "value": "19"
           },
           {
             "label": "Locations",
@@ -5277,38 +5084,38 @@ export const shapla = {
         "w": 5,
         "type": "donut",
         "title": "Stock value by location",
-        "center": "৳ 4.73 Cr",
+        "center": "৳ 3.76 Cr",
         "centerLabel": "on hand",
         "slices": [
           {
             "label": "Central Warehouse",
-            "value": 23276703,
-            "display": "৳ 2.33 Cr"
+            "value": 18761654,
+            "display": "৳ 1.88 Cr"
           },
           {
             "label": "Mymensingh Depot",
-            "value": 3382198,
-            "display": "৳ 33.8 L"
+            "value": 3053418,
+            "display": "৳ 30.5 L"
           },
           {
             "label": "Chattogram Depot",
-            "value": 3366930,
-            "display": "৳ 33.7 L"
+            "value": 2991909,
+            "display": "৳ 29.9 L"
           },
           {
-            "label": "Khulna Depot",
-            "value": 3207763,
-            "display": "৳ 32.1 L"
-          },
-          {
-            "label": "Rajshahi Depot",
-            "value": 3099973,
-            "display": "৳ 31.0 L"
+            "label": "Barishal Depot",
+            "value": 2483377,
+            "display": "৳ 24.8 L"
           },
           {
             "label": "Rangpur Depot",
-            "value": 2850852,
-            "display": "৳ 28.5 L"
+            "value": 2388552,
+            "display": "৳ 23.9 L"
+          },
+          {
+            "label": "Rajshahi Depot",
+            "value": 2342244,
+            "display": "৳ 23.4 L"
           }
         ]
       },
@@ -5321,29 +5128,29 @@ export const shapla = {
         "goal": 100,
         "items": [
           {
-            "label": "Shapla Maida 1 kg · Chattogram Depot",
-            "value": 50,
-            "right": "100 / 200"
+            "label": "Shapla Full Cream Milk Powder 500 g · Dhaka Depot",
+            "value": 0,
+            "right": "0 / 240"
           },
           {
-            "label": "Shapla Instant Noodles Masala 62 g · Khulna Depot",
-            "value": 50,
-            "right": "480 / 960"
+            "label": "Shapla Mustard Oil 500 ml · Khulna Depot",
+            "value": 0,
+            "right": "0 / 120"
           },
           {
-            "label": "Shapla Drinking Water 1.5 L · Sylhet Depot",
-            "value": 50,
-            "right": "60 / 120"
+            "label": "Shapla Atta 1 kg · Rangpur Depot",
+            "value": 0,
+            "right": "0 / 200"
           },
           {
-            "label": "Shapla Soybean Oil 5 L · Sylhet Depot",
-            "value": 50,
-            "right": "20 / 40"
+            "label": "Shapla Ghee 400 g · Dhaka Depot",
+            "value": 21,
+            "right": "51 / 240"
           },
           {
-            "label": "Shapla Atta 1 kg · Central Warehouse",
-            "value": 54,
-            "right": "860 / 1,600"
+            "label": "Shapla Milk Biscuit 75 g · Dhaka Depot",
+            "value": 34,
+            "right": "322 / 960"
           }
         ]
       },
@@ -5355,43 +5162,43 @@ export const shapla = {
         "items": [
           {
             "label": "Dairy",
-            "value": 140.9,
-            "display": "৳ 1.41 Cr"
+            "value": 87.2,
+            "display": "৳ 87.2 L"
           },
           {
             "label": "Spices",
-            "value": 91.1,
-            "display": "৳ 91.1 L"
-          },
-          {
-            "label": "Edible Oil",
-            "value": 50.2,
-            "display": "৳ 50.2 L"
-          },
-          {
-            "label": "Biscuits & Bakery",
-            "value": 48.9,
-            "display": "৳ 48.9 L"
+            "value": 77.3,
+            "display": "৳ 77.3 L"
           },
           {
             "label": "Tea",
-            "value": 44.9,
-            "display": "৳ 44.9 L"
+            "value": 50.4,
+            "display": "৳ 50.4 L"
+          },
+          {
+            "label": "Edible Oil",
+            "value": 41.5,
+            "display": "৳ 41.5 L"
+          },
+          {
+            "label": "Biscuits & Bakery",
+            "value": 40.9,
+            "display": "৳ 40.9 L"
           },
           {
             "label": "Flour & Staples",
-            "value": 42.3,
-            "display": "৳ 42.3 L"
+            "value": 36.6,
+            "display": "৳ 36.6 L"
           },
           {
             "label": "Noodles & Snacks",
-            "value": 41.9,
-            "display": "৳ 41.9 L"
+            "value": 33.4,
+            "display": "৳ 33.4 L"
           },
           {
             "label": "Beverages",
-            "value": 12.7,
-            "display": "৳ 12.7 L"
+            "value": 8.3,
+            "display": "৳ 8.3 L"
           }
         ]
       }
@@ -5401,11 +5208,11 @@ export const shapla = {
     "kpis": [
       [
         "Open POs",
-        "13"
+        "15"
       ],
       [
-        "Spend in October",
-        "৳ 3.13 Cr"
+        "Spend in November",
+        "৳ 1.19 Cr"
       ],
       [
         "Late deliveries",
@@ -5426,27 +5233,27 @@ export const shapla = {
       ],
       "rows": [
         [
-          "PO-00064",
-          "Karnaphuli Sugar Supply",
-          "৳ 18.3 L",
+          "PO-00149",
+          "Padma Packaging Ltd",
+          "৳ 3.8 L",
           "Approved"
         ],
         [
-          "PO-00108",
-          "Halda Fruits Processing",
-          "৳ 25,305",
+          "PO-00150",
+          "Karnaphuli Sugar Supply",
+          "৳ 18.5 L",
           "Pending approval"
         ],
         [
-          "PO-00021",
-          "Rupsha Plastics",
-          "৳ 5.1 L",
-          "Received"
+          "PO-00148",
+          "Gorai Glass & Jar",
+          "৳ 9.4 L",
+          "Approved"
         ],
         [
-          "PO-00026",
-          "Surma Dairy Inputs",
-          "৳ 53.4 L",
+          "PO-00147",
+          "Dhaleshwari Flour Mills",
+          "৳ 30.1 L",
           "Approved"
         ]
       ]
@@ -5462,13 +5269,103 @@ export const shapla = {
     ],
     "rows": [
       [
+        "PO-00149",
+        "Padma Packaging Ltd",
+        "Mustard seed +2",
+        "5 Nov",
+        "15 Nov",
+        "৳ 3.8 L",
+        "Approved"
+      ],
+      [
+        "PO-00150",
+        "Karnaphuli Sugar Supply",
+        "Palm oil (bulk)",
+        "4 Nov",
+        "13 Nov",
+        "৳ 18.5 L",
+        "Pending approval"
+      ],
+      [
+        "PO-00148",
+        "Gorai Glass & Jar",
+        "Turmeric (raw)",
+        "4 Nov",
+        "11 Nov",
+        "৳ 9.4 L",
+        "Approved"
+      ],
+      [
+        "PO-00147",
+        "Dhaleshwari Flour Mills",
+        "Milk powder (bulk) +1",
+        "3 Nov",
+        "13 Nov",
+        "৳ 30.1 L",
+        "Approved"
+      ],
+      [
+        "PO-00146",
+        "Shitalakshya Chemicals",
+        "Crude soybean oil +3",
+        "2 Nov",
+        "16 Nov",
+        "৳ 26.7 L",
+        "Approved"
+      ],
+      [
+        "PO-00145",
+        "Surma Dairy Inputs",
+        "Cocoa powder",
+        "1 Nov",
+        "12 Nov",
+        "৳ 30.7 L",
+        "Approved"
+      ],
+      [
+        "PO-00144",
+        "Meghna Agro Traders",
+        "Coriander seed",
+        "29 Oct",
+        "9 Nov",
+        "৳ 80,600",
+        "Approved"
+      ],
+      [
+        "PO-00143",
+        "Dhaleshwari Flour Mills",
+        "Mango pulp",
+        "29 Oct",
+        "12 Nov",
+        "৳ 2.4 L",
+        "Approved"
+      ],
+      [
+        "PO-00142",
+        "Rupsha Plastics",
+        "Refined sugar (bulk)",
+        "27 Oct",
+        "30 Oct",
+        "৳ 56,690",
+        "Received"
+      ],
+      [
+        "PO-00141",
+        "Bhairab Salt Industries",
+        "Laminated pouch",
+        "26 Oct",
+        "31 Oct",
+        "৳ 92,000",
+        "Approved"
+      ],
+      [
         "PO-00064",
         "Karnaphuli Sugar Supply",
         "Palm oil (bulk) +2",
         "25 Oct",
         "3 Nov",
         "৳ 18.3 L",
-        "Approved"
+        "Received"
       ],
       [
         "PO-00108",
@@ -5477,7 +5374,7 @@ export const shapla = {
         "24 Oct",
         "29 Oct",
         "৳ 25,305",
-        "Pending approval"
+        "Received"
       ],
       [
         "PO-00021",
@@ -5531,7 +5428,7 @@ export const shapla = {
         "17 Oct",
         "20 Oct",
         "৳ 23.1 L",
-        "Pending approval"
+        "Approved"
       ],
       [
         "PO-00134",
@@ -5540,7 +5437,7 @@ export const shapla = {
         "16 Oct",
         "20 Oct",
         "৳ 4.1 L",
-        "Approved"
+        "Received"
       ],
       [
         "PO-00086",
@@ -5558,7 +5455,7 @@ export const shapla = {
         "15 Oct",
         "24 Oct",
         "৳ 18,500",
-        "Approved"
+        "Received"
       ],
       [
         "PO-00106",
@@ -5567,7 +5464,7 @@ export const shapla = {
         "15 Oct",
         "19 Oct",
         "৳ 23.3 L",
-        "Approved"
+        "Received"
       ],
       [
         "PO-00113",
@@ -5576,7 +5473,7 @@ export const shapla = {
         "14 Oct",
         "25 Oct",
         "৳ 22.9 L",
-        "Approved"
+        "Received"
       ],
       [
         "PO-00132",
@@ -5594,7 +5491,7 @@ export const shapla = {
         "13 Oct",
         "17 Oct",
         "৳ 4.7 L",
-        "Pending approval"
+        "Received"
       ],
       [
         "PO-00028",
@@ -5603,7 +5500,7 @@ export const shapla = {
         "12 Oct",
         "18 Oct",
         "৳ 9.3 L",
-        "Pending approval"
+        "Approved"
       ],
       [
         "PO-00023",
@@ -5612,7 +5509,7 @@ export const shapla = {
         "10 Oct",
         "13 Oct",
         "৳ 78.6 L",
-        "Pending approval"
+        "Approved"
       ],
       [
         "PO-00131",
@@ -5640,96 +5537,6 @@ export const shapla = {
         "16 Oct",
         "৳ 9.0 L",
         "Received"
-      ],
-      [
-        "PO-00007",
-        "Rupsha Plastics",
-        "Refined sugar (bulk)",
-        "1 Oct",
-        "4 Oct",
-        "৳ 56,605",
-        "Received"
-      ],
-      [
-        "PO-00121",
-        "Atrai Agro Products",
-        "Lentil (masoor) +2",
-        "29 Sep",
-        "11 Oct",
-        "৳ 36.1 L",
-        "Received"
-      ],
-      [
-        "PO-00092",
-        "Dhaleshwari Flour Mills",
-        "Lentil (masoor) +2",
-        "29 Sep",
-        "13 Oct",
-        "৳ 18.5 L",
-        "Received"
-      ],
-      [
-        "PO-00079",
-        "Shitalakshya Chemicals",
-        "Chickpea flour (besan) +3",
-        "29 Sep",
-        "2 Oct",
-        "৳ 29.5 L",
-        "Received"
-      ],
-      [
-        "PO-00068",
-        "Surma Dairy Inputs",
-        "Turmeric (raw) +1",
-        "29 Sep",
-        "7 Oct",
-        "৳ 50.9 L",
-        "Received"
-      ],
-      [
-        "PO-00102",
-        "Atrai Agro Products",
-        "Tea (auction grade) +2",
-        "27 Sep",
-        "8 Oct",
-        "৳ 55.3 L",
-        "Received"
-      ],
-      [
-        "PO-00067",
-        "Gorai Glass & Jar",
-        "Mango pulp",
-        "27 Sep",
-        "2 Oct",
-        "৳ 1.3 L",
-        "Received"
-      ],
-      [
-        "PO-00022",
-        "Rupsha Plastics",
-        "Mustard seed",
-        "27 Sep",
-        "9 Oct",
-        "৳ 9.1 L",
-        "Received"
-      ],
-      [
-        "PO-00031",
-        "Shitalakshya Chemicals",
-        "Tea (auction grade)",
-        "24 Sep",
-        "9 Oct",
-        "৳ 40.7 L",
-        "Received"
-      ],
-      [
-        "PO-00115",
-        "Buriganga Carton Works",
-        "Lentil (masoor) +1",
-        "23 Sep",
-        "28 Sep",
-        "৳ 43.4 L",
-        "Received"
       ]
     ],
     "overview": [
@@ -5737,12 +5544,12 @@ export const shapla = {
         "type": "kpis",
         "items": [
           {
-            "label": "Spend in October",
-            "value": "৳ 3.13 Cr"
+            "label": "Spend in November",
+            "value": "৳ 1.19 Cr"
           },
           {
             "label": "Open POs",
-            "value": "13"
+            "value": "15"
           },
           {
             "label": "Late deliveries",
@@ -5759,12 +5566,12 @@ export const shapla = {
         "type": "bars",
         "horizontal": true,
         "title": "Spend by supplier",
-        "sub": "July to October",
+        "sub": "July to November",
         "items": [
           {
             "label": "Surma Dairy Inputs",
-            "value": 319.4,
-            "display": "৳ 3.19 Cr"
+            "value": 350.1,
+            "display": "৳ 3.50 Cr"
           },
           {
             "label": "Jamuna Edible Imports",
@@ -5772,24 +5579,24 @@ export const shapla = {
             "display": "৳ 2.31 Cr"
           },
           {
-            "label": "Rupsha Plastics",
-            "value": 209.1,
-            "display": "৳ 2.09 Cr"
+            "label": "Shitalakshya Chemicals",
+            "value": 214.9,
+            "display": "৳ 2.15 Cr"
           },
           {
-            "label": "Madhumati Food Ingredients",
-            "value": 204.7,
-            "display": "৳ 2.05 Cr"
+            "label": "Dhaleshwari Flour Mills",
+            "value": 214.1,
+            "display": "৳ 2.14 Cr"
+          },
+          {
+            "label": "Rupsha Plastics",
+            "value": 209.7,
+            "display": "৳ 2.10 Cr"
           },
           {
             "label": "Gorai Glass & Jar",
-            "value": 198.1,
-            "display": "৳ 1.98 Cr"
-          },
-          {
-            "label": "Bhairab Salt Industries",
-            "value": 191.9,
-            "display": "৳ 1.92 Cr"
+            "value": 207.5,
+            "display": "৳ 2.07 Cr"
           }
         ]
       },
@@ -5797,7 +5604,7 @@ export const shapla = {
         "w": 5,
         "type": "bars",
         "title": "Spend by month",
-        "sub": "৳ crore · *October to the 25th",
+        "sub": "৳ crore · *November to the 5th",
         "items": [
           {
             "label": "Jul",
@@ -5815,9 +5622,14 @@ export const shapla = {
             "display": "৳ 10.89 Cr"
           },
           {
-            "label": "Oct*",
-            "value": 3.13,
-            "display": "৳ 3.13 Cr"
+            "label": "Oct",
+            "value": 3.18,
+            "display": "৳ 3.18 Cr"
+          },
+          {
+            "label": "Nov*",
+            "value": 1.19,
+            "display": "৳ 1.19 Cr"
           }
         ]
       },
@@ -5830,31 +5642,31 @@ export const shapla = {
           {
             "label": "PO-00023 · Halda Fruits Processing · ৳ 78.6 L",
             "sub": "Milk powder (bulk) · expected 13 Oct",
-            "value": "Pending approval"
-          },
-          {
-            "label": "PO-00091 · Dhaleshwari Flour Mills · ৳ 4.7 L",
-            "sub": "Salt (bulk) +1 · expected 17 Oct",
-            "value": "Pending approval"
+            "value": "Approved"
           },
           {
             "label": "PO-00028 · Ichamati Logistics · ৳ 9.3 L",
             "sub": "Dry chilli +1 · expected 18 Oct",
-            "value": "Pending approval"
-          },
-          {
-            "label": "PO-00106 · Padma Packaging Ltd · ৳ 23.3 L",
-            "sub": "Crude soybean oil +2 · expected 19 Oct",
             "value": "Approved"
           },
           {
             "label": "PO-00124 · Karnaphuli Sugar Supply · ৳ 23.1 L",
             "sub": "Wheat flour (bulk) +2 · expected 20 Oct",
-            "value": "Pending approval"
+            "value": "Approved"
           },
           {
-            "label": "PO-00134 · Teesta Spice House · ৳ 4.1 L",
-            "sub": "Turmeric (raw) +1 · expected 20 Oct",
+            "label": "PO-00026 · Surma Dairy Inputs · ৳ 53.4 L",
+            "sub": "Tea (auction grade) +3 · expected 31 Oct",
+            "value": "Approved"
+          },
+          {
+            "label": "PO-00141 · Bhairab Salt Industries · ৳ 92,000",
+            "sub": "Laminated pouch · expected 31 Oct",
+            "value": "Approved"
+          },
+          {
+            "label": "PO-00030 · Dhaleshwari Flour Mills · ৳ 2.4 L",
+            "sub": "Mango pulp · expected 1 Nov",
             "value": "Approved"
           }
         ]
@@ -5863,7 +5675,7 @@ export const shapla = {
   },
   "company": {
     "name": "Shapla Foods Ltd",
-    "asOf": "2026-10-25",
+    "asOf": "2026-11-05",
     "categories": [
       "Biscuits & Bakery",
       "Noodles & Snacks",
@@ -5908,146 +5720,153 @@ export const shapla = {
       },
       {
         "label": "Oct",
-        "sales": 45270905,
-        "invoiced": 44652135,
-        "collected": 30397031,
-        "purchases": 31335525
+        "sales": 58238432,
+        "invoiced": 61880222,
+        "collected": 40118199,
+        "purchases": 31801015
+      },
+      {
+        "label": "Nov",
+        "sales": 13164146,
+        "invoiced": 11319788,
+        "collected": 12536700,
+        "purchases": 11911365
       }
     ],
     "salesByRegion": [
       {
         "label": "Dhaka",
-        "value": 17496372
+        "value": 4204440
       },
       {
         "label": "Khulna",
-        "value": 7469731
-      },
-      {
-        "label": "Rajshahi",
-        "value": 5581544
-      },
-      {
-        "label": "Chattogram",
-        "value": 5330622
+        "value": 2092835
       },
       {
         "label": "Sylhet",
-        "value": 3387206
-      },
-      {
-        "label": "Rangpur",
-        "value": 3377507
+        "value": 2019713
       },
       {
         "label": "Barishal",
-        "value": 2290055
+        "value": 1641284
+      },
+      {
+        "label": "Rangpur",
+        "value": 1554718
+      },
+      {
+        "label": "Rajshahi",
+        "value": 1249486
+      },
+      {
+        "label": "Chattogram",
+        "value": 251054
       },
       {
         "label": "Mymensingh",
-        "value": 337869
+        "value": 150616
       }
     ],
     "salesByCategory": [
       {
         "label": "Dairy",
-        "value": 13210702
+        "value": 5283619
       },
       {
         "label": "Spices",
-        "value": 8778991
-      },
-      {
-        "label": "Edible Oil",
-        "value": 4725160
-      },
-      {
-        "label": "Tea",
-        "value": 4604488
+        "value": 1594284
       },
       {
         "label": "Flour & Staples",
-        "value": 4565782
+        "value": 1555647
       },
       {
-        "label": "Biscuits & Bakery",
-        "value": 4156895
+        "label": "Edible Oil",
+        "value": 1292506
+      },
+      {
+        "label": "Tea",
+        "value": 1081805
       },
       {
         "label": "Noodles & Snacks",
-        "value": 4005722
+        "value": 1056353
+      },
+      {
+        "label": "Biscuits & Bakery",
+        "value": 817299
       },
       {
         "label": "Beverages",
-        "value": 1223166
+        "value": 482632
       }
     ],
     "topProducts": [
       {
         "label": "Shapla Ghee 400 g",
-        "value": 6300056
-      },
-      {
-        "label": "Shapla Full Cream Milk Powder 500 g",
-        "value": 3158604
+        "value": 2276564
       },
       {
         "label": "Shapla Full Cream Milk Powder 1 kg",
-        "value": 3081272
+        "value": 1368977
+      },
+      {
+        "label": "Shapla Full Cream Milk Powder 500 g",
+        "value": 1321851
       },
       {
         "label": "Shapla Premium Tea 200 g",
-        "value": 1936402
+        "value": 514382
       },
       {
-        "label": "Shapla Cumin Powder 100 g",
-        "value": 1659759
+        "label": "Shapla Masoor Dal 1 kg",
+        "value": 427970
       },
       {
-        "label": "Shapla Chilli Powder 200 g",
-        "value": 1529547
+        "label": "Shapla Mustard Oil 1 L",
+        "value": 404099
       },
       {
-        "label": "Shapla Premium Tea 400 g",
-        "value": 1511849
+        "label": "Shapla Tea Bags 50s 100 g",
+        "value": 353913
       },
       {
         "label": "Shapla Garam Masala 50 g",
-        "value": 1488604
+        "value": 313322
       }
     ],
     "stockByCategory": [
       {
         "label": "Dairy",
-        "value": 14085561
+        "value": 8716071
       },
       {
         "label": "Spices",
-        "value": 9110803
-      },
-      {
-        "label": "Edible Oil",
-        "value": 5021740
-      },
-      {
-        "label": "Biscuits & Bakery",
-        "value": 4889118
+        "value": 7730781
       },
       {
         "label": "Tea",
-        "value": 4494462
+        "value": 5035905
+      },
+      {
+        "label": "Edible Oil",
+        "value": 4152734
+      },
+      {
+        "label": "Biscuits & Bakery",
+        "value": 4092877
       },
       {
         "label": "Flour & Staples",
-        "value": 4228298
+        "value": 3659773
       },
       {
         "label": "Noodles & Snacks",
-        "value": 4185904
+        "value": 3342387
       },
       {
         "label": "Beverages",
-        "value": 1272445
+        "value": 830754
       }
     ],
     "headcountByDept": [
@@ -6091,44 +5910,44 @@ export const shapla = {
     "ageing": [
       {
         "label": "Not due",
-        "value": 22045087
+        "value": 24446138
       },
       {
         "label": "1 to 30",
-        "value": 24117586
+        "value": 26585198
       },
       {
         "label": "31 to 60",
-        "value": 4217077
+        "value": 3567430
       },
       {
         "label": "61 to 90",
-        "value": 5864939
+        "value": 6180214
       },
       {
         "label": "90+",
-        "value": 905084
+        "value": 2660799
       }
     ],
     "production": {
-      "orders": 88,
-      "produced": 2344000,
-      "yield": 98.0,
+      "orders": 103,
+      "produced": 2474800,
+      "yield": 98.1,
       "bySku": [
         {
           "label": "Shapla Milk Biscuit 75 g",
-          "produced": 979200,
+          "produced": 998400,
           "yield": 98.2
         },
         {
           "label": "Shapla Instant Noodles Masala 62 g",
-          "produced": 556800,
+          "produced": 576000,
           "yield": 98.2
         },
         {
           "label": "Shapla Premium Tea 200 g",
-          "produced": 152000,
-          "yield": 97.6
+          "produced": 176000,
+          "yield": 97.8
         },
         {
           "label": "Shapla Toast Classic 300 g",
@@ -6181,172 +6000,172 @@ export const shapla = {
           "Sales": 100,
           "Orders": 100,
           "Customers": 100,
-          "Avg. order": 92,
+          "Avg. order": 90,
           "Collection": 100,
-          "On-time payment": 99
+          "On-time payment": 98
         },
         "Khulna": {
-          "Sales": 41,
-          "Orders": 37,
+          "Sales": 42,
+          "Orders": 38,
           "Customers": 28,
           "Avg. order": 100,
-          "Collection": 95,
-          "On-time payment": 89
+          "Collection": 94,
+          "On-time payment": 88
         },
         "Barishal": {
-          "Sales": 23,
-          "Orders": 22,
+          "Sales": 24,
+          "Orders": 23,
           "Customers": 14,
-          "Avg. order": 99,
-          "Collection": 92,
-          "On-time payment": 91
+          "Avg. order": 95,
+          "Collection": 87,
+          "On-time payment": 94
         },
         "Rajshahi": {
-          "Sales": 22,
-          "Orders": 24,
+          "Sales": 23,
+          "Orders": 25,
           "Customers": 26,
-          "Avg. order": 84,
+          "Avg. order": 83,
           "Collection": 86,
           "On-time payment": 100
         },
         "Chattogram": {
-          "Sales": 21,
+          "Sales": 20,
           "Orders": 23,
           "Customers": 28,
-          "Avg. order": 86,
-          "Collection": 70,
-          "On-time payment": 92
+          "Avg. order": 81,
+          "Collection": 77,
+          "On-time payment": 89
         },
         "Sylhet": {
-          "Sales": 19,
-          "Orders": 20,
+          "Sales": 20,
+          "Orders": 21,
           "Customers": 16,
-          "Avg. order": 89,
-          "Collection": 84,
-          "On-time payment": 88
+          "Avg. order": 86,
+          "Collection": 85,
+          "On-time payment": 90
         },
         "Rangpur": {
-          "Sales": 17,
-          "Orders": 19,
+          "Sales": 18,
+          "Orders": 20,
           "Customers": 26,
-          "Avg. order": 83,
-          "Collection": 93,
-          "On-time payment": 89
+          "Avg. order": 80,
+          "Collection": 87,
+          "On-time payment": 87
         },
         "Mymensingh": {
           "Sales": 8,
           "Orders": 12,
           "Customers": 16,
-          "Avg. order": 62,
-          "Collection": 84,
-          "On-time payment": 89
+          "Avg. order": 61,
+          "Collection": 79,
+          "On-time payment": 83
         }
       },
       "raw": {
         "Dhaka": {
-          "Sales": 89461726.8,
-          "Orders": 463,
+          "Sales": 98068992.7,
+          "Orders": 502,
           "Customers": 43,
-          "Avg. order": 193221.9,
-          "Collection": 82.1,
-          "On-time payment": 84.1
+          "Avg. order": 195356.6,
+          "Collection": 82.8,
+          "On-time payment": 83.4
         },
         "Khulna": {
-          "Sales": 36276138.5,
-          "Orders": 173,
+          "Sales": 41538335.0,
+          "Orders": 191,
           "Customers": 12,
-          "Avg. order": 209688.7,
-          "Collection": 78.0,
-          "On-time payment": 75.6
+          "Avg. order": 217478.2,
+          "Collection": 78.1,
+          "On-time payment": 75.4
         },
         "Barishal": {
-          "Sales": 20668041.6,
-          "Orders": 100,
+          "Sales": 23828285.1,
+          "Orders": 115,
           "Customers": 6,
-          "Avg. order": 206680.4,
-          "Collection": 75.9,
-          "On-time payment": 77.4
+          "Avg. order": 207202.5,
+          "Collection": 72.1,
+          "On-time payment": 80.4
         },
         "Rajshahi": {
-          "Sales": 19566129.7,
-          "Orders": 111,
+          "Sales": 22556363.1,
+          "Orders": 125,
           "Customers": 11,
-          "Avg. order": 176271.4,
-          "Collection": 70.7,
-          "On-time payment": 84.6
+          "Avg. order": 180450.9,
+          "Collection": 71.3,
+          "On-time payment": 85.5
         },
         "Chattogram": {
-          "Sales": 19186997.3,
-          "Orders": 106,
+          "Sales": 19866547.0,
+          "Orders": 113,
           "Customers": 12,
-          "Avg. order": 181009.4,
-          "Collection": 57.4,
-          "On-time payment": 77.6
+          "Avg. order": 175810.2,
+          "Collection": 63.6,
+          "On-time payment": 75.7
         },
         "Sylhet": {
-          "Sales": 16955203.5,
-          "Orders": 91,
+          "Sales": 19686506.6,
+          "Orders": 105,
           "Customers": 7,
-          "Avg. order": 186320.9,
-          "Collection": 69.2,
-          "On-time payment": 74.4
+          "Avg. order": 187490.5,
+          "Collection": 70.1,
+          "On-time payment": 77.1
         },
         "Rangpur": {
-          "Sales": 15246355.8,
-          "Orders": 88,
+          "Sales": 17256691.3,
+          "Orders": 99,
           "Customers": 11,
-          "Avg. order": 173254.0,
-          "Collection": 76.6,
-          "On-time payment": 75.3
+          "Avg. order": 174310.0,
+          "Collection": 72.4,
+          "On-time payment": 74.2
         },
         "Mymensingh": {
-          "Sales": 7165333.1,
-          "Orders": 55,
+          "Sales": 7855877.7,
+          "Orders": 59,
           "Customers": 7,
-          "Avg. order": 130278.8,
-          "Collection": 69.2,
-          "On-time payment": 75.5
+          "Avg. order": 133150.5,
+          "Collection": 65.8,
+          "On-time payment": 70.7
         }
       }
     },
     "orderFunnel": [
       {
         "label": "Orders placed",
-        "value": 1187
+        "value": 1309
       },
       {
         "label": "Invoiced",
-        "value": 1118
+        "value": 1237
       },
       {
         "label": "Paid in part or full",
-        "value": 903
+        "value": 999
       },
       {
         "label": "Paid in full",
-        "value": 785
+        "value": 864
       }
     ],
     "collectionMethods": [
       {
         "label": "bKash",
-        "value": 66156247
+        "value": 72734024
       },
       {
         "label": "Bank transfer",
-        "value": 58869771
+        "value": 67112152
       },
       {
         "label": "Cheque",
-        "value": 54070993
+        "value": 61308149
       },
       {
         "label": "Cash",
-        "value": 1085377
+        "value": 1200159
       },
       {
         "label": "Nagad",
-        "value": 832742
+        "value": 918514
       }
     ]
   }
