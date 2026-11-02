@@ -2,7 +2,6 @@
 
 import { useRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import clsx from "clsx";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -49,10 +48,6 @@ export default function FinalCta() {
             <Link href="/pricing" data-cta className={clsx(s.btnGlass, "inline-flex h-12 items-center justify-center px-6 text-[16px] font-medium text-[#262D6C]")}>
               Get a quote
             </Link>
-          </div>
-          <div className="mt-8 flex items-center gap-3 border-t border-[rgba(38,45,108,0.07)] pt-6">
-            <span className="text-[13px] text-[#5D6380]">Powered by</span>
-            <Image src="/lp/betopia-limited.webp" alt="Betopia Limited" width={120} height={40} className="h-7 w-auto" />
           </div>
         </div>
       </div>

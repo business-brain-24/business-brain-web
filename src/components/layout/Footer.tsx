@@ -123,15 +123,10 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* legal and endorsement */}
+        {/* legal */}
         <div className="flex flex-col gap-4 border-t border-white/10 py-6 text-[13px] text-white/45 md:flex-row md:items-center md:justify-between">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <span>© 2026 Business Brain</span>
-            <span className="flex items-center gap-2.5">
-              Powered by
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/brand/betopia-limited-white.webp" alt="Betopia Limited" width={84} height={28} className="h-6 w-auto opacity-80" />
-            </span>
           </div>
           <div className="flex flex-wrap gap-x-6">
             <Link href="/privacy" className="inline-flex min-h-11 items-center hover:text-white">Privacy</Link>
