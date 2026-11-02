@@ -51,7 +51,7 @@ Legend: ✅ done · 🔶 done, check on the live site · ⏳ waiting on someone 
 | Instruction | Status | Where |
 | --- | --- | --- |
 | Every FAQ answer in the HTML | ✅ | Checked live: all answers on `/products/accounting` are in the page and in `FAQPage` |
-| `Organization` (with description, parent company Betopia Limited) + `WebSite` | ✅ | `src/components/seo/JsonLd.tsx` |
+| `Organization` (with description) + `WebSite` | ✅ | `src/components/seo/JsonLd.tsx` |
 | `SoftwareApplication` for the whole product on the home page | ✅ | `productSuiteLd` in `LandingPage.tsx` |
 | `SoftwareApplication` + `FAQPage` on product pages, `BreadcrumbList` on product, industry, story pages | ✅ | Product, industry and story routes |
 | No `aggregateRating`/`review` | ✅ | Not emitted |

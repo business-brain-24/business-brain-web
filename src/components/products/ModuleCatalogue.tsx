@@ -7,7 +7,7 @@ import clsx from "clsx";
 import { catalogues } from "@/lib/catalog";
 import { ICON } from "@/lib/icons";
 
-/** Every module and sub-module, for Betopia and Akboria, with a tab per ERP and expandable modules. */
+/** Every module and sub-module, for Business Brain and Akboria, with a tab per ERP and expandable modules. */
 export default function ModuleCatalogue() {
   const [tab, setTab] = useState(catalogues[0].id);
   const [open, setOpen] = useState<string | null>(catalogues[0].modules[0].name);
