@@ -20,6 +20,47 @@ const sum = (a: readonly number[]) => a.reduce((s, x) => s + x, 0);
 const by = <T,>(xs: T[], f: (x: T) => number) => [...xs].sort((a, b) => f(b) - f(a));
 const up = (now: number, before: number) => (before ? `${now >= before ? "up" : "down"} ${pct(((now - before) / before) * 100)}` : "");
 
+/* ---------- real dates ----------
+   The seed workbook stops on a fixed day. So the assistant always talks about the real calendar, every date in
+   the records moves by the same number of days until the latest day lands on today. Month buckets keep their
+   contents and take the month names of the moved dates. Join dates stay put, so tenure grows with time. */
+
+const DAY = 864e5;
+const isoDay = (t: number) => new Date(t).toISOString().slice(0, 10);
+const utc = (iso: string) => Date.parse(`${iso}T00:00:00Z`);
+const SEED_LAST = S.company.asOf;
+const SEED_KEYS = [...S.monthKeys];
+const SHIFT = (() => {
+  const now = new Date();
+  const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+  return Math.round((today - utc(SEED_LAST)) / DAY); // negative when the seed runs past today
+})();
+const move = (iso: string) => (iso && SHIFT ? isoDay(utc(iso) + SHIFT * DAY) : iso);
+
+if (SHIFT) {
+  const monthsAhead = (() => {
+    const a = new Date(utc(SEED_LAST));
+    const b = new Date(utc(SEED_LAST) + SHIFT * DAY);
+    return (b.getUTCFullYear() - a.getUTCFullYear()) * 12 + b.getUTCMonth() - a.getUTCMonth();
+  })();
+  const keys = SEED_KEYS.map((k) => {
+    const d = new Date(Date.UTC(Number(k.slice(0, 4)), Number(k.slice(5, 7)) - 1 + monthsAhead, 1));
+    return d.toISOString().slice(0, 7);
+  });
+  const name = (k: string, month: "short" | "long") => new Date(`${k}-01T00:00:00Z`).toLocaleDateString("en-GB", { month, timeZone: "UTC" });
+  S.monthKeys = keys;
+  S.months = keys.map((k) => name(k, "short"));
+  S.monthNames = keys.map((k) => name(k, "long"));
+  S.collections = Object.fromEntries(Object.entries(S.collections).map(([k, v]) => [keys[SEED_KEYS.indexOf(k)] ?? k, v])) as typeof S.collections;
+  S.company.asOf = move(S.company.asOf);
+  for (const d of S.daily) d.date = move(d.date);
+  for (const i of S.invoices) Object.assign(i, { date: move(i.date), due: move(i.due) });
+  for (const o of S.pendingOrders) o.date = move(o.date);
+  for (const p of S.purchaseOrders) Object.assign(p, { date: move(p.date), exp: move(p.exp) });
+  for (const p of S.production) p.date = move(p.date);
+  for (const c of Object.values(S.customerTotals as Record<string, { last: string }>)) c.last = move(c.last);
+}
+
 /* ---------- lookups ---------- */
 
 const M = S.months; // short month names, oldest first; the last month runs to S.company.asOf
@@ -28,11 +69,12 @@ const LM = M.length - 1;
 const CUR = MN[LM];
 const START = MN[0];
 const ordinal = (n: number) => `${n}${n % 100 >= 10 && n % 100 <= 20 ? "th" : ({ 1: "st", 2: "nd", 3: "rd" } as Record<number, string>)[n % 10] ?? "th"}`;
-const THROUGH = `the ${ordinal(Number(S.company.asOf.slice(8, 10)))}`;
+const THROUGH = `the ${ordinal(Number(S.company.asOf.slice(8, 10)))}`; // the latest selling day in the records
 const SINCE = `since ${START}`;
 const SPAN = `${START} to ${CUR}`;
 const PARTIAL = `${CUR} runs to ${THROUGH}`;
-const mIdx = (iso: string) => S.monthKeys.indexOf(iso.slice(0, 7));
+/** Month bucket of a (moved) record date: found on the original calendar, so every record stays in its bucket. */
+const mIdx = (iso: string) => SEED_KEYS.indexOf(isoDay(utc(iso) - SHIFT * DAY).slice(0, 7));
 const LAST = S.daily[S.daily.length - 1].date;
 const PREV = S.daily[S.daily.length - 2].date;
 const loc = Object.fromEntries(S.locations.map((l) => [l.id, l]));
@@ -126,7 +168,7 @@ function salesOnDay(which: "today" | "yesterday"): Reply {
   const d = S.daily.find((x) => x.date === date)!;
   const ids = new Set(S.invoices.filter((i) => i.date === date).map((i) => i.cus));
   return reply({
-    text: `On ${dayYear(date)} we booked ${num(d.orders)} orders worth ${money(d.net)} net of VAT, from ${ids.size} customers. That's the ${which === "today" ? "latest day in our records" : "day before the latest"}; Fridays are off.`,
+    text: `On ${dayYear(date)} we booked ${num(d.orders)} orders worth ${money(d.net)} net of VAT, from ${ids.size} customers. ${which === "today" ? "That's today so far." : "That was yesterday."}`,
     kpis: kpis([["Net sales", money(d.net)], ["Orders", num(d.orders)], ["Average order", money(d.net / d.orders)]]),
     charts: [{ kind: "hbar", title: `Sales by depot · ${day(date)}`, unit: "bdt", data: depotSalesOn(date), series: ["Sales"] }],
     follow: ["Show daily sales for the last month", "Sales by region", "Which orders are still pending?"],
@@ -651,7 +693,7 @@ function monthOnMonth(): Reply {
   const prev = LM - 1;
   const lastFull = salesByMonth[prev];
   const before = salesByMonth[prev - 1];
-  // selling days: the days with orders (Fridays are off), so the pace compares like with like
+  // selling days: the days with orders, so the pace compares like with like
   const daysCur = S.daily.filter((d) => mIdx(d.date) === LM).length;
   const daysPrev = S.daily.filter((d) => mIdx(d.date) === prev).length;
   const runRate = (curSales / Math.max(1, daysCur)) * daysPrev;
