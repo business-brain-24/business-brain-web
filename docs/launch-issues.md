@@ -107,6 +107,8 @@ Banner, consent mode and pages are built. The legal text, company legal name and
 | --- | --- | --- |
 | Contact and demo create leads in the Betopia CRM; quote and newsletter kept in KV | ✅ | `functions/api/lead.ts` (PR #31) |
 | KV `LEADS`, `LEADS_API_URL`, `LEADS_API_KEY` in Pages production | ✅ | Pages settings |
+| A copy of every lead goes to Slack #leads with source Business Brain | ✅ | `SLACK_LEADS_WEBHOOK_URL` (3 Nov 2026); the one stored lead posted by hand; failed posts kept in KV as `slack-failed:<id>` |
+| Rotate the #leads Slack webhook (it was pasted in chat) | ⏳ Imran | Slack app, then `wrangler pages secret put SLACK_LEADS_WEBHOOK_URL` |
 | Turnstile keys (`NEXT_PUBLIC_TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET`) | ⏳ Imran | Not set; the honeypot is the only spam guard |
 | One real enquiry from `/contact` and `/demo`, checked in the CRM | ⏳ | |
 | Rotate the leads API key (it was pasted in chat) | ⏳ Imran | CRM and Pages secret |
@@ -140,4 +142,5 @@ Code fixes are done. Real-device check on iPhone and a mid-range Android is stil
 | `LEADS_API_URL`, `LEADS_API_KEY` | variable, secret | ✅ Set (rotate the key) |
 | `NEXT_PUBLIC_TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET` | build variable, secret | ⏳ |
 | `NEXT_PUBLIC_GTM_ID` | build variable | ⏳ |
+| `SLACK_LEADS_WEBHOOK_URL` | secret | ✅ Set (rotate it) |
 | `LEAD_WEBHOOK_URL`, `LEAD_WEBHOOK_TOKEN` | secret | Optional |
