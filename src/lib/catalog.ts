@@ -1,14 +1,14 @@
 // Full module catalogue shown on /products: every module and sub-module in the
-// Betopia ERP and in the Akboria rollout, each with a short description.
+// Business Brain ERP and in the Akboria rollout, each with a short description.
 
 export type SubModule = { name: string; desc: string; status?: "Live" | "In progress"; href?: string };
 export type Module = { name: string; desc: string; subs: SubModule[] };
 export type Catalogue = { id: string; name: string; tagline: string; modules: Module[] };
 
-const betopia: Catalogue = {
-  id: "betopia",
-  name: "Betopia ERP",
-  tagline: "The full Business Brain suite as Betopia runs it: 55 apps across operations, people, everyday collaboration and specialised work.",
+const businessBrain: Catalogue = {
+  id: "business-brain",
+  name: "Business Brain ERP",
+  tagline: "The full Business Brain suite: 55 apps across operations, people, everyday collaboration and specialised work.",
   modules: [
     {
       name: "Operational",
@@ -83,8 +83,8 @@ const betopia: Catalogue = {
         { name: "Security Center", desc: "Security alerts, access logs and policy checks across the system." },
         { name: "PMO Leads", desc: "Project management office pipeline: incoming project leads, scoping and approval." },
         { name: "Partner Portal Sales", desc: "A portal where partners place orders, track deliveries and see statements." },
-        { name: "Betopia Sales Desk", desc: "A focused desk for the inside sales team to quote, follow up and close." },
-        { name: "Betopia Voice", desc: "Call logging and voice notes tied to customers and deals." },
+        { name: "Sales Desk", desc: "A focused desk for the inside sales team to quote, follow up and close." },
+        { name: "Voice", desc: "Call logging and voice notes tied to customers and deals." },
         { name: "Level Bonus", desc: "Tiered bonus schemes by level or slab, calculated from achievement data." },
         { name: "Meeting Rooms", desc: "Book meeting rooms and equipment, with availability shown live." },
       ],
@@ -191,4 +191,4 @@ const akboria: Catalogue = {
   ],
 };
 
-export const catalogues: Catalogue[] = [betopia, akboria];
+export const catalogues: Catalogue[] = [businessBrain, akboria];

@@ -53,7 +53,7 @@ export default function ProductsIndex() {
       ))}
       <section id="modules" className="container-x mt-20 sm:mt-28">
         <Label>All modules</Label>
-        <h2 className="h-section mt-3 max-w-[760px]">Every module and sub-module, Betopia and Akboria.</h2>
+        <h2 className="h-section mt-3 max-w-[760px]">Every module and sub-module, Business Brain and Akboria.</h2>
         <div className="mt-8">
           <ModuleCatalogue />
         </div>

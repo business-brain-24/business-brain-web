@@ -18,7 +18,6 @@ export const organizationLd: Ld = {
   description: `${SITE_NAME} is the agentic ERP for growing companies and groups, configured for Bangladesh. AI agents read live figures and act through approvals.`,
   logo: absolute("/brand/business-brain-orb-512.png"),
   areaServed: "BD",
-  parentOrganization: { "@type": "Organization", name: "Betopia Limited", url: "https://www.betopialimited.com" },
   email: SITE_EMAIL,
   telephone: contact.phone.replace(/[\s-]/g, ""),
   contactPoint: [{ "@type": "ContactPoint", telephone: contact.phone.replace(/[\s-]/g, ""), email: SITE_EMAIL, contactType: "sales", areaServed: "BD" }],
