@@ -9,6 +9,8 @@
  *   TURNSTILE_SECRET    Cloudflare Turnstile secret key.
  *   LEAD_WEBHOOK_URL    Optional second destination for every form (mail relay, etc.).
  *   LEAD_WEBHOOK_TOKEN  Optional bearer token for the webhook.
+ *   SLACK_LEADS_WEBHOOK_URL  Slack incoming webhook for #leads. Every stored lead is posted there with
+ *                       source Business Brain.
  *
  * Contact and demo forms create a CRM lead through LEADS_API_URL; quote and newsletter, which the
  * CRM API has no form type for, are kept in KV (and the webhook, if set).
@@ -20,7 +22,7 @@ interface KV {
   get(key: string): Promise<string | null>;
   put(key: string, value: string, opts?: { expirationTtl?: number }): Promise<void>;
 }
-type Env = { LEADS?: KV; LEADS_API_URL?: string; LEADS_API_KEY?: string; TURNSTILE_SECRET?: string; LEAD_WEBHOOK_URL?: string; LEAD_WEBHOOK_TOKEN?: string };
+type Env = { LEADS?: KV; LEADS_API_URL?: string; LEADS_API_KEY?: string; TURNSTILE_SECRET?: string; LEAD_WEBHOOK_URL?: string; LEAD_WEBHOOK_TOKEN?: string; SLACK_LEADS_WEBHOOK_URL?: string };
 type CrmReply = { success?: boolean; error?: string; lead_id?: number };
 type Ctx = { request: Request; env: Env; waitUntil(p: Promise<unknown>): void };
 
@@ -56,6 +58,31 @@ function fieldOf(message: string) {
   const m = message.toLowerCase();
   return ["email", "phone", "name", "company", "size", "industry", "topic", "session"].find((f) => m.includes(f) || (f === "size" && m.includes("worker")));
 }
+const FORM_TITLE: Record<string, string> = { contact: "Contact", demo: "Demo request", quote: "Quote request", newsletter: "Newsletter sign-up" };
+const FIELD_LABEL: Record<string, string> = { session: "Session", name: "Name", email: "Email", phone: "Phone", company: "Company", size: "Workers", users: "Users", industry: "Industry", topic: "Topic", message: "Message", notes: "Notes" };
+const slackText = (v: string) => v.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+/** The #leads message: source, form, every field the visitor filled in, CRM result and where they came from. */
+function slackMessage(lead: Record<string, unknown>) {
+  const f = lead.fields as Record<string, string>;
+  const form = String(lead.form_name);
+  const crm = lead.crm as { status?: number; lead_id?: number | null } | undefined;
+  const attr = (lead.attribution ?? {}) as Record<string, unknown>;
+  const lines = Object.entries(f).filter(([, v]) => v).map(([k, v]) => `*${FIELD_LABEL[k] ?? k}:* ${slackText(v.slice(0, 1500))}`);
+  const crmLine = !crm ? "not sent (no CRM form type)" : crm.lead_id ? `lead #${crm.lead_id}${crm.status === 409 ? " (duplicate in 24 h)" : ""}` : `failed (${crm.status ?? 0}), follow up by hand`;
+  const from = ["last_utm_source", "last_utm_medium", "last_utm_campaign"].map((k) => attr[k]).filter(Boolean).join(" / ") || String(attr.last_referrer ?? attr.first_referrer ?? "");
+  const context = [`Source: Business Brain`, `CRM: ${crmLine}`, lead.country && `Country: ${lead.country}`, from && `From: ${from}`, lead.page && `Page: ${lead.page}`].filter(Boolean).map((t) => slackText(String(t)));
+  const title = `New Business Brain lead: ${FORM_TITLE[form] ?? form}${f.company ? ` from ${f.company}` : ""}`;
+  return {
+    text: title,
+    blocks: [
+      { type: "header", text: { type: "plain_text", text: title.slice(0, 150) } },
+      { type: "section", text: { type: "mrkdwn", text: lines.join("\n").slice(0, 2900) || "(no fields)" } },
+      { type: "context", elements: [{ type: "mrkdwn", text: context.join("  |  ").slice(0, 2900) }] },
+    ],
+  };
+}
+
 const EMAIL = /^\S+@\S+\.\S+$/;
 const PHONE = /^\+?[\d\s()-]*\d(?:[\s()-]*\d){6,}[\s()-]*$/;
 
@@ -170,6 +197,14 @@ export const onRequestPost = async ({ request, env, waitUntil }: Ctx) => {
     // Stored already, so delivery can finish after the response.
     if (env.LEADS) waitUntil(deliver.catch(() => undefined));
     else await deliver;
+  }
+
+  if (env.SLACK_LEADS_WEBHOOK_URL) {
+    const post = fetch(env.SLACK_LEADS_WEBHOOK_URL, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(slackMessage(lead)) }).then(async (r) => {
+      if (!r.ok && env.LEADS) await env.LEADS.put(`slack-failed:${id}`, JSON.stringify({ status: r.status, at: new Date().toISOString() }), { expirationTtl: KEEP });
+    });
+    // The lead is stored or in the CRM already, so Slack never holds up the visitor.
+    waitUntil(post.catch(() => undefined));
   }
 
   return json({ ok: true, id });
