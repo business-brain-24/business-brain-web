@@ -6,7 +6,7 @@ import { Play, X } from "lucide-react";
 import { track } from "@/lib/analytics";
 import s from "../lp.module.css";
 
-const YOUTUBE_ID = "w6TgeI38ja4";
+const YOUTUBE_ID = "XruE3bxDnOQ";
 
 /** "See how it works": opens the product video from YouTube in a modal. Nothing loads until it is opened. */
 export default function VideoButton() {
@@ -27,7 +27,7 @@ export default function VideoButton() {
         type="button"
         onClick={() => {
           setOpen(true);
-          track("video_play", { video: "youtube_w6TgeI38ja4", cta_location: "hero" });
+          track("video_play", { video: "youtube_XruE3bxDnOQ", cta_location: "hero" });
         }}
         className={clsx(s.btnGlass, "inline-flex h-[52px] items-center gap-2.5 pl-2 pr-5 text-[16px] font-medium text-[#262D6C]")}
       >
