@@ -94,6 +94,7 @@ export const editions = [
   { name: "Counter", for: "1 shop or outlet", includes: ["POS, stock and money", "Bangla counter app", "Daily Z-report"] },
   { name: "Growth", for: "Multi-branch and distribution", includes: ["Field force and dealers", "Depots and FEFO dispatch", "Collections agent"] },
   { name: "Group", for: "Sister concerns and factories", includes: ["Multi-company", "Make, buy, people and payroll", "All agents, 60+ reports"], highlight: true },
+  { name: "Enterprise", for: "Large groups", includes: ["Group edition features", "Dedicated environment", "Premium SLA", "Named success manager"] },
   { name: "Headless", for: "Platform teams and partners", includes: ["Gateway and SDKs", "Events and MCP for any assistant", "Your own screens"] },
 ];
 

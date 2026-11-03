@@ -185,7 +185,7 @@ export function Editions() {
   return (
     <section id="editions" data-cta-location="editions" className={section}>
       <Heading center eyebrow="Editions" title="Start with one shop. Grow into a group." sub="Every edition runs on the same core. Prices are quoted for your setup." />
-      <div className="mt-12 grid gap-3 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-12 grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         {editions.map((e) => (
           <div key={e.name} className={clsx(s.glass, "flex flex-col p-6", e.highlight && "!border-[#262D6C] ring-1 ring-[#262D6C]")}>
             <div className="flex items-center justify-between">
