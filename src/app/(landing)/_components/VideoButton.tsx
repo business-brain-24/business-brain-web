@@ -8,7 +8,7 @@ import s from "../lp.module.css";
 
 const YOUTUBE_ID = "w6TgeI38ja4";
 
-/** "See it work": opens the product video from YouTube in a modal. Nothing loads until it is opened. */
+/** "See how it works": opens the product video from YouTube in a modal. Nothing loads until it is opened. */
 export default function VideoButton() {
   const [open, setOpen] = useState(false);
   const close = useRef<HTMLButtonElement>(null);
@@ -34,7 +34,7 @@ export default function VideoButton() {
         <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#262D6C] text-white">
           <Play size={14} strokeWidth={2} className="translate-x-px fill-white" />
         </span>
-        See it work
+        See how it works
       </button>
 
       {open && (
