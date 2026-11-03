@@ -1,0 +1,65 @@
+/* NEXUS review page: the pieces the shared landing tokens do not cover. */
+
+/* Range input with an orange fill up to the thumb. --fill is set inline. */
+.range {
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f16222 0 var(--fill), #e9ebf2 var(--fill) 100%);
+  cursor: pointer;
+}
+.range::-webkit-slider-thumb {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: #fff;
+  border: 2px solid #f16222;
+  box-shadow: 0 4px 12px rgba(241, 98, 34, 0.35);
+}
+.range::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: #fff;
+  border: 2px solid #f16222;
+  box-shadow: 0 4px 12px rgba(241, 98, 34, 0.35);
+}
+.range:focus-visible {
+  outline: 2px solid #262d6c;
+  outline-offset: 6px;
+}
+
+/* Light running along the signal-to-decision line. */
+.flowLine {
+  background: linear-gradient(90deg, rgba(38, 45, 108, 0.1), rgba(38, 45, 108, 0.1));
+  overflow: hidden;
+}
+.flowLine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 30%;
+  background: linear-gradient(90deg, transparent, #f16222, transparent);
+  animation: run 3.2s ease-in-out infinite;
+}
+@keyframes run {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(340%);
+  }
+}
+
+/* The review-only strip and section sit apart from the page with a dashed edge. */
+.review {
+  border: 1.5px dashed rgba(38, 45, 108, 0.28);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flowLine::after {
+    animation: none;
+    display: none;
+  }
+}

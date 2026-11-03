@@ -39,6 +39,10 @@ https://:version.:project.pages.dev/*
 /customers/northloom
   X-Robots-Tag: noindex
 
+# NEXUS positioning review page: not linked, not indexed.
+/nexus
+  X-Robots-Tag: noindex, nofollow
+
 # Markdown copies for AI assistants (linked from llms.txt); the HTML page stays the one in search.
 /md/*
   Content-Type: text/markdown; charset=utf-8
