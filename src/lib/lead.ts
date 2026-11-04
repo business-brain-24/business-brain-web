@@ -1,6 +1,6 @@
 import { attribution, track } from "./analytics";
 
-export type FormName = "contact" | "demo" | "quote" | "newsletter";
+export type FormName = "contact" | "demo" | "quote" | "newsletter" | "access";
 
 /** Thank-you pages give ad platforms a URL to count conversions on. */
 export const thanksPath: Partial<Record<FormName, string>> = {
@@ -9,7 +9,7 @@ export const thanksPath: Partial<Record<FormName, string>> = {
   quote: "/thanks/quote",
 };
 
-export type LeadResult = { ok: true; id: string } | { ok: false; error: string; errors?: Record<string, string> };
+export type LeadResult = { ok: true; id: string } | { ok: false; error: string; errors?: Record<string, string>; status?: number };
 
 /** Posts to the Pages Function. Success only when the function says ok. */
 export async function submitLead(form: FormName, fields: Record<string, string>, turnstileToken: string): Promise<LeadResult> {
@@ -22,12 +22,12 @@ export async function submitLead(form: FormName, fields: Record<string, string>,
       body: JSON.stringify({ form_name: form, fields, attribution: attr, page: window.location.href, turnstile_token: turnstileToken, event_id }),
     });
     const data = (await res.json().catch(() => null)) as LeadResult | null;
-    if (!res.ok || !data?.ok) return { ok: false, error: data && !data.ok ? data.error : "We couldn't send that.", errors: data && !data.ok ? data.errors : undefined };
+    if (!res.ok || !data?.ok) return { ok: false, error: data && !data.ok ? data.error : "We couldn't send that.", errors: data && !data.ok ? data.errors : undefined, status: res.status };
     // No personal data in the event: only the form, segment fields and attribution.
     if (form === "newsletter") track("newsletter_signup");
     else track("generate_lead", { form_name: form, industry: fields.industry, company_size: fields.size ?? fields.users, event_id, ...attr });
     return data;
   } catch {
-    return { ok: false, error: "We couldn't send that." };
+    return { ok: false, error: "We couldn't send that.", status: 0 };
   }
 }

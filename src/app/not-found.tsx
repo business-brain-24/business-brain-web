@@ -8,7 +8,7 @@ export const metadata: Metadata = { title: "Page not found",
 // Nav and footer come from the root layout.
 export default function NotFound() {
   return (
-    <section className="container-x relative isolate flex min-h-[70vh] flex-col items-start justify-center pb-10 pt-[120px]">
+    <section data-no-gate className="container-x relative isolate flex min-h-[70vh] flex-col items-start justify-center pb-10 pt-[120px]">
         <HeroBackdrop />
       <p className="text-[13px] font-medium text-orange">404</p>
       <h1 className="h-section mt-3 max-w-[640px]">This page doesn&apos;t exist.</h1>
