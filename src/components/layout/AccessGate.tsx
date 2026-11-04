@@ -210,7 +210,7 @@ export default function AccessGate() {
                     disabled={sending}
                     className="mt-1 inline-flex h-[52px] items-center justify-center gap-2 rounded-[14px] bg-[linear-gradient(180deg,#f67d41,#f16222)] px-6 text-[16px] font-semibold text-white shadow-[0_10px_28px_rgba(241,98,34,0.4)] transition-transform hover:-translate-y-0.5 disabled:opacity-70 col-span-2"
                   >
-                    {sending ? "Opening…" : "Open the full site"}
+                    {sending ? "One moment…" : "Explore Business Brain"}
                     {!sending && <ArrowRight size={18} />}
                   </button>
                 </form>
