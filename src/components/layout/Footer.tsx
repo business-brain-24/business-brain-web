@@ -10,6 +10,17 @@ import { CookieSettingsLink } from "@/components/analytics/Consent";
 import Newsletter from "@/app/resources/Newsletter";
 import { ICON } from "@/lib/icons";
 
+/** Short footer labels for the legal documents (full names in LEGAL_DOCS, src/lib/site.ts). */
+const LEGAL_LINKS: [string, string][] = [
+  ["Privacy", "/privacy"],
+  ["Terms", "/terms"],
+  ["Cookies", "/cookies"],
+  ["Data", "/data-policy"],
+  ["Acceptable use", "/acceptable-use"],
+  ["Refunds", "/refunds"],
+  ["Security", "/security"],
+];
+
 const cols: { title: string; links: [string, string][] }[] = [
   {
     title: "Products",
@@ -128,10 +139,10 @@ export default function Footer() {
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <span>© 2026 Business Brain</span>
           </div>
-          <div className="flex flex-wrap gap-x-6">
-            <Link href="/privacy" className="inline-flex min-h-11 items-center hover:text-white">Privacy</Link>
-            <Link href="/terms" className="inline-flex min-h-11 items-center hover:text-white">Terms</Link>
-            <Link href="/security" className="inline-flex min-h-11 items-center hover:text-white">Security</Link>
+          <div className="flex flex-wrap gap-x-5 md:justify-end">
+            {LEGAL_LINKS.map(([label, href]) => (
+              <Link key={href} href={href} className="inline-flex min-h-11 items-center hover:text-white">{label}</Link>
+            ))}
             <CookieSettingsLink className="inline-flex min-h-11 items-center hover:text-white" />
           </div>
         </div>

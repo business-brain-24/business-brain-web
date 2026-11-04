@@ -5,6 +5,23 @@ export const SITE_URL = "https://getbusinessbrain.ai";
 export const SITE_NAME = "Business Brain";
 export const SITE_EMAIL = "hello@getbusinessbrain.ai";
 
+/** The company behind the product, as named in the legal documents. */
+export const LEGAL_ENTITY = "Betopia Limited";
+/** Registered office for the legal documents. Empty until management confirms it; the pages then leave the line out. */
+export const LEGAL_ADDRESS = "";
+export const LEGAL_UPDATED = "5 November 2026";
+
+/** Every legal document, in the order the footer and each document's "Other documents" list show them. */
+export const LEGAL_DOCS: [string, string][] = [
+  ["Privacy policy", "/privacy"],
+  ["Terms of service", "/terms"],
+  ["Cookie policy", "/cookies"],
+  ["Data policy", "/data-policy"],
+  ["Acceptable use", "/acceptable-use"],
+  ["Billing and refunds", "/refunds"],
+  ["Security", "/security"],
+];
+
 export const absolute = (path: string) => `${SITE_URL}${path === "/" ? "" : path}`;
 
 /** Fixed public landing pages. /login, /dashboard and /thanks are left out on purpose. */
@@ -22,6 +39,10 @@ export const staticRoutes = [
   "/ask",
   "/privacy",
   "/terms",
+  "/cookies",
+  "/data-policy",
+  "/acceptable-use",
+  "/refunds",
   "/security",
 ];
 

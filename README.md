@@ -93,6 +93,9 @@ To add a demo user, add an entry to `DEMO_USERS` in `src/lib/session.ts`.
 - GA4 events: `gate_shown`, `gate_submitted`, `gate_error`, `gate_back_to_top`, plus the usual `generate_lead` with `form_name: access`.
 - Turnstile runs once `NEXT_PUBLIC_TURNSTILE_SITE_KEY` (build variable) and `TURNSTILE_SECRET` (secret) are set in Pages. Without them the card works with the honeypot only.
 - To test the card again, delete the `bb_access` cookie.
+## Legal pages
+
+Seven documents, listed once in `LEGAL_DOCS` (`src/lib/site.ts`) and rendered by `src/components/ui/LegalPage.tsx`: privacy, terms of service, cookies, data policy, acceptable use, billing and refunds, security. A block is a paragraph, `{ list }` or `{ table }`; `[label](href)` in text becomes a link. `LEGAL_UPDATED` sets the date on all of them; `LEGAL_ADDRESS` adds the registered office once it is confirmed. When a cookie or a provider changes, update `/cookies` and `/privacy` in the same pull request.
 
 ## Notes
 
