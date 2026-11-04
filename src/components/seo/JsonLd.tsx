@@ -31,6 +31,17 @@ export const websiteLd: Ld = {
   publisher: { "@id": `${SITE_URL}/#organization` },
 };
 
+/**
+ * The visitor gate (AccessGate) covers the page after the hero until someone fills the access form. The
+ * content is in the HTML for everyone, so this tells Google the covered part is gated on purpose, not cloaked.
+ */
+export const gatedPageLd: Ld = {
+  "@type": "WebPage",
+  isPartOf: { "@id": `${SITE_URL}/#website` },
+  isAccessibleForFree: false,
+  hasPart: { "@type": "WebPageElement", isAccessibleForFree: false, cssSelector: ".bb-gate-content" },
+};
+
 export const breadcrumbLd = (items: [string, string][]): Ld => ({
   "@type": "BreadcrumbList",
   itemListElement: [["Home", "/"] as [string, string], ...items].map(([name, path], i) => ({ "@type": "ListItem", position: i + 1, name, item: absolute(path) })),

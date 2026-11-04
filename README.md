@@ -82,6 +82,18 @@ After login the site nav shows **My apps** and an avatar menu. The workspace run
 
 To add a demo user, add an entry to `DEMO_USERS` in `src/lib/session.ts`.
 
+## Visitor gate
+
+`src/components/layout/AccessGate.tsx`. The hero is open to everyone. When a visitor scrolls past 60% of the first screen, a card asks for name, mobile and email (company, team size and current setup are optional). It posts to `/api/lead` as form `access`, which goes to KV, the CRM (topic "Business Brain: Website access") and Slack #leads like the other forms. A `bb_access` cookie then opens the site for 24 hours.
+
+- Never gated: `/demo`, `/contact`, `/thanks`, `/privacy`, `/terms`, `/careers`, `/dashboard`, `/nexus`, `/md`, and any page with a `data-no-gate` element (the 404).
+- Any link with `?ref=` (for example `/pricing?ref=sales`) sets the cookie, so links we send to known people skip the form.
+- If the API fails (network, 5xx, or no KV on a preview deployment) the visitor is let in anyway and GA4 gets `gate_error`. A Turnstile failure (403) keeps the card up.
+- The content stays in the HTML, so search engines and AI crawlers read every page. The root layout marks `<main class="bb-gate-content">` as gated in JSON-LD (`gatedPageLd`), so Google does not treat the overlay as cloaking.
+- GA4 events: `gate_shown`, `gate_submitted`, `gate_error`, `gate_back_to_top`, plus the usual `generate_lead` with `form_name: access`.
+- Turnstile runs once `NEXT_PUBLIC_TURNSTILE_SITE_KEY` (build variable) and `TURNSTILE_SECRET` (secret) are set in Pages. Without them the card works with the honeypot only.
+- To test the card again, delete the `bb_access` cookie.
+
 ## Notes
 
 - Entrance animations use CSS keyframes (`bb-fade-up`, `bb-rise`, `bb-grow` in `globals.css`), so content always ends visible even if JavaScript is slow.
