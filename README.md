@@ -82,6 +82,10 @@ After login the site nav shows **My apps** and an avatar menu. The workspace run
 
 To add a demo user, add an entry to `DEMO_USERS` in `src/lib/session.ts`.
 
+## Legal pages
+
+Seven documents, listed once in `LEGAL_DOCS` (`src/lib/site.ts`) and rendered by `src/components/ui/LegalPage.tsx`: privacy, terms of service, cookies, data policy, acceptable use, billing and refunds, security. A block is a paragraph, `{ list }` or `{ table }`; `[label](href)` in text becomes a link. `LEGAL_UPDATED` sets the date on all of them; `LEGAL_ADDRESS` adds the registered office once it is confirmed. When a cookie or a provider changes, update `/cookies` and `/privacy` in the same pull request.
+
 ## Notes
 
 - Entrance animations use CSS keyframes (`bb-fade-up`, `bb-rise`, `bb-grow` in `globals.css`), so content always ends visible even if JavaScript is slow.
