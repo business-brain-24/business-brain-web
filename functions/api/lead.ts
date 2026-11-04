@@ -19,8 +19,10 @@
  * KV as held:<id>, the visitor thanked, nothing sent to the CRM or #leads); and the CRM's 429
  * "Submission in progress", which it answers while it is busy with another lead, is retried.
  *
- * Contact and demo forms create a CRM lead through LEADS_API_URL; quote and newsletter, which the
- * CRM API has no form type for, are kept in KV (and the webhook, if set).
+ * Contact, demo and access forms create a CRM lead through LEADS_API_URL; quote and newsletter, which
+ * the CRM API has no form type for, are kept in KV (and the webhook, if set). The access form is the
+ * visitor gate shown after the hero: only name, email and phone are required, and it reaches the CRM as
+ * a contact lead with the topic "Business Brain: Website access".
  *
  * Test locally: npm run build && npx wrangler pages dev out
  */
@@ -38,6 +40,7 @@ const FORMS: Record<string, string[]> = {
   demo: ["session", "name", "email", "phone", "company", "size", "industry", "notes"],
   quote: ["name", "email", "company", "users", "industry"],
   newsletter: ["email"],
+  access: ["name", "email", "phone"], // company, size and usage are optional, so the gate stays quick
 };
 const RATE_LIMIT = 60; // leads per IP per hour, unless LEADS_PER_IP_HOUR says otherwise
 const LEAD_OWNER = "CTO Office";
@@ -64,6 +67,10 @@ function crmPayload(form: string, f: Record<string, string>, ref: string) {
   if (form === "contact") return { name: f.name || nameFromEmail(f.email), email: f.email, phone: f.phone, topic: f.topic, message: withFooter(f.message) };
   if (form === "demo")
     return { session: f.session, name: f.name || nameFromEmail(f.email), email: f.email, phone: f.phone, company: f.company, size: SIZE_BRACKET[f.size] ?? f.size, industry: f.industry, notes: withFooter(f.notes) };
+  if (form === "access") {
+    const about = [f.company && `Company: ${f.company}`, f.size && `Workers: ${f.size}`, f.usage && `Using today: ${f.usage}`].filter(Boolean).join("\n");
+    return { name: f.name, email: f.email, phone: f.phone, topic: "Business Brain: Website access", message: withFooter([about, "Opened the full website from the visitor gate."].filter(Boolean).join("\n\n")) };
+  }
   return null;
 }
 
@@ -89,8 +96,8 @@ function fieldOf(message: string) {
   const m = message.toLowerCase();
   return ["email", "phone", "name", "company", "size", "industry", "topic", "session"].find((f) => m.includes(f) || (f === "size" && m.includes("worker")));
 }
-const FORM_TITLE: Record<string, string> = { contact: "Contact", demo: "Demo request", quote: "Quote request", newsletter: "Newsletter sign-up" };
-const FIELD_LABEL: Record<string, string> = { session: "Session", name: "Name", email: "Email", phone: "Phone", company: "Company", size: "Workers", users: "Users", industry: "Industry", topic: "Topic", message: "Message", notes: "Notes" };
+const FORM_TITLE: Record<string, string> = { contact: "Contact", demo: "Demo request", quote: "Quote request", newsletter: "Newsletter sign-up", access: "Website access" };
+const FIELD_LABEL: Record<string, string> = { session: "Session", name: "Name", email: "Email", phone: "Phone", company: "Company", size: "Workers", users: "Users", industry: "Industry", topic: "Topic", message: "Message", notes: "Notes", usage: "Using today" };
 const slackText = (v: string) => v.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
 /** The #leads message: source, form, every field the visitor filled in, CRM result and where they came from. */

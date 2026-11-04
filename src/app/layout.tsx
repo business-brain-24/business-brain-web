@@ -7,7 +7,8 @@ import Footer from "@/components/layout/Footer";
 import RouteTracker from "@/components/analytics/RouteTracker";
 import ConsentBanner, { consentDefaultsScript } from "@/components/analytics/Consent";
 import ChatWidget from "@/components/layout/ChatWidget";
-import JsonLd, { organizationLd, websiteLd } from "@/components/seo/JsonLd";
+import AccessGate from "@/components/layout/AccessGate";
+import JsonLd, { gatedPageLd, organizationLd, websiteLd } from "@/components/seo/JsonLd";
 import { ANALYTICS_HOST, GA4_ID, GTM_ID } from "@/lib/analytics";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { fontVariables } from "@/lib/fonts";
@@ -47,7 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script dangerouslySetInnerHTML={{ __html: consentDefaultsScript }} />
         {/* GA4 config queues ahead of the first page_view; RouteTracker sends page views, so the tag does not. */}
         {GA4_ID && <script dangerouslySetInnerHTML={{ __html: `if(location.hostname==='${ANALYTICS_HOST}'){gtag('js',new Date());gtag('config','${GA4_ID}',{send_page_view:false});}` }} />}
-        <JsonLd data={[organizationLd, websiteLd]} />
+        <JsonLd data={[organizationLd, websiteLd, gatedPageLd]} />
       </head>
       <body>
         {GTM_ID && (
@@ -59,11 +60,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <RouteTracker />
         <SmoothScroll>
           <Nav />
-          <main className="min-h-screen">{children}</main>
+          <main className="bb-gate-content min-h-screen">{children}</main>
           <Footer />
         </SmoothScroll>
         <ConsentBanner />
         <ChatWidget />
+        <AccessGate />
       </body>
     </html>
   );
