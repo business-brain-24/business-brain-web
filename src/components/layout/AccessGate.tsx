@@ -22,7 +22,7 @@ import { track } from "@/lib/analytics";
  */
 const COOKIE = "bb_access";
 const DAY = 24 * 60 * 60;
-const EXEMPT = /^\/(demo|contact|thanks|privacy|terms|careers|dashboard|nexus|md)(\/|$)/;
+const EXEMPT = /^\/(demo|contact|thanks|privacy|terms|cookies|data-policy|acceptable-use|refunds|security|careers|dashboard|nexus|md)(\/|$)/;
 const PHONE = /^\+?[\d\s()-]*\d(?:[\s()-]*\d){6,}[\s()-]*$/;
 const EMAIL = /^\S+@\S+\.\S+$/;
 const SIZES = ["1 to 300", "301 to 1,000", "1,001 to 2,500", "2,501+"];

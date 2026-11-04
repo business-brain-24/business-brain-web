@@ -86,7 +86,7 @@ To add a demo user, add an entry to `DEMO_USERS` in `src/lib/session.ts`.
 
 `src/components/layout/AccessGate.tsx`. The hero is open to everyone. When a visitor scrolls past 60% of the first screen, a card asks for name, mobile and email (company, team size and current setup are optional). It posts to `/api/lead` as form `access`, which goes to KV, the CRM (topic "Business Brain: Website access") and Slack #leads like the other forms. A `bb_access` cookie then opens the site for 24 hours.
 
-- Never gated: `/demo`, `/contact`, `/thanks`, `/privacy`, `/terms`, `/careers`, `/dashboard`, `/nexus`, `/md`, and any page with a `data-no-gate` element (the 404).
+- Never gated: `/demo`, `/contact`, `/thanks`, the legal pages (`/privacy`, `/terms`, `/cookies`, `/data-policy`, `/acceptable-use`, `/refunds`, `/security`), `/careers`, `/dashboard`, `/nexus`, `/md`, and any page with a `data-no-gate` element (the 404).
 - Any link with `?ref=` (for example `/pricing?ref=sales`) sets the cookie, so links we send to known people skip the form.
 - If the API fails (network, 5xx, or no KV on a preview deployment) the visitor is let in anyway and GA4 gets `gate_error`. A Turnstile failure (403) keeps the card up.
 - The content stays in the HTML, so search engines and AI crawlers read every page. The root layout marks `<main class="bb-gate-content">` as gated in JSON-LD (`gatedPageLd`), so Google does not treat the overlay as cloaking.
