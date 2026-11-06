@@ -27,6 +27,8 @@
  * Test locally: npm run build && npx wrangler pages dev out
  */
 
+import { normPhone, PHONE_HINT } from "../../src/lib/phone";
+
 interface KV {
   get(key: string): Promise<string | null>;
   put(key: string, value: string, opts?: { expirationTtl?: number }): Promise<void>;
@@ -122,7 +124,6 @@ function slackMessage(lead: Record<string, unknown>) {
 }
 
 const EMAIL = /^\S+@\S+\.\S+$/;
-const PHONE = /^\+?[\d\s()-]*\d(?:[\s()-]*\d){6,}[\s()-]*$/;
 
 const json = (body: unknown, status = 200) => new Response(JSON.stringify(body), { status, headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" } });
 
@@ -147,7 +148,9 @@ export const onRequestPost = async ({ request, env, waitUntil }: Ctx) => {
   const email = String(fields.email ?? "").trim();
   if (email && !EMAIL.test(email)) errors.email = "Enter a valid email.";
   const phone = String(fields.phone ?? "").trim();
-  if (phone && !PHONE.test(phone)) errors.phone = "Enter a valid phone number.";
+  const e164 = phone ? normPhone(phone) : null;
+  if (phone && !e164) errors.phone = PHONE_HINT;
+  else if (e164) fields.phone = e164; // the CRM and #leads get one spelling: +8801712345678
   if (form === "contact" || form === "demo") {
     if (/@(gmail|yahoo|hotmail|outlook)\./i.test(email)) errors.email = "Use your work email so we can match your industry.";
   }

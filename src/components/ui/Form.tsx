@@ -10,9 +10,10 @@ import Turnstile from "./Turnstile";
 import { contact } from "@/lib/data";
 import { ICON } from "@/lib/icons";
 import { submitLead, thanksPath, type FormName } from "@/lib/lead";
+import { normPhone, phoneHint } from "@/lib/phone";
+import PhoneInput from "./PhoneInput";
 
 /** Digits with optional +, spaces, dashes or brackets; at least 7 digits. Same rule as functions/api/lead.ts. */
-const PHONE = /^\+?[\d\s()-]*\d(?:[\s()-]*\d){6,}[\s()-]*$/;
 
 type Field = { name: string; label: string; type?: string; placeholder?: string; options?: string[]; full?: boolean; area?: boolean; defaultValue?: string; onChange?: (value: string) => void };
 
@@ -28,13 +29,14 @@ export default function Form({ name, fields, submit, done, extra }: { name: Form
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
+    const country = (k: string) => String(data.get(`${k}_country`) ?? "BD");
     const next: Record<string, string> = {};
     fields.forEach((f) => {
       const v = String(data.get(f.name) ?? "").trim();
       if (!v) next[f.name] = "Required";
       else if (f.type === "email" && /@(gmail|yahoo|hotmail|outlook)\./i.test(v)) next[f.name] = "Use your work email so we can match your industry.";
       else if (f.type === "email" && !/^\S+@\S+\.\S+$/.test(v)) next[f.name] = "Enter a valid email.";
-      else if (f.type === "tel" && !PHONE.test(v)) next[f.name] = "Enter a valid phone number.";
+      else if (f.type === "tel" && !normPhone(v, country(f.name))) next[f.name] = phoneHint(country(f.name));
     });
     setErrors(next);
     if (Object.keys(next).length > 0) return;
@@ -42,6 +44,7 @@ export default function Form({ name, fields, submit, done, extra }: { name: Form
     setSending(true);
     setFailed("");
     const values = Object.fromEntries(fields.map((f) => [f.name, String(data.get(f.name) ?? "").trim()]));
+    for (const f of fields) if (f.type === "tel" && values[f.name]) values[f.name] = normPhone(values[f.name], country(f.name)) ?? values[f.name];
     Object.assign(values, extra);
     values.website_url = String(data.get("website_url") ?? "");
     const res = await submitLead(name, values, token);
@@ -82,8 +85,10 @@ export default function Form({ name, fields, submit, done, extra }: { name: Form
                 </Select>
               ) : f.area ? (
                 <textarea name={f.name} rows={4} placeholder={f.placeholder} className={clsx(input(errors[f.name]), "h-auto py-3")} />
+              ) : f.type === "tel" ? (
+                <PhoneInput name={f.name} placeholder={f.placeholder} className={input(errors[f.name])} invalid={Boolean(errors[f.name])} />
               ) : (
-                <input name={f.name} type={f.type ?? "text"} {...(f.type === "tel" && { inputMode: "tel" as const, autoComplete: "tel" })} placeholder={f.placeholder} className={input(errors[f.name])} />
+                <input name={f.name} type={f.type ?? "text"} placeholder={f.placeholder} className={input(errors[f.name])} />
               )}
               {errors[f.name] && <span className="text-[13px] text-danger">{errors[f.name]}</span>}
             </label>
