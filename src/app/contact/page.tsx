@@ -55,7 +55,7 @@ export default function Contact() {
             done="Message sent."
             fields={[
               { name: "email", label: "Work email", type: "email" },
-              { name: "phone", label: "Phone", type: "tel", placeholder: "+880 1XXX-XXXXXX" },
+              { name: "phone", label: "Phone", type: "tel", placeholder: "01XXXXXXXXX" },
               { name: "topic", label: "Topic", options: ["Sales", "Support", "Partnerships", "Press"], full: true },
               { name: "message", label: "Message", area: true },
             ]}

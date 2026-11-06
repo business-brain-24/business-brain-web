@@ -11,6 +11,8 @@ import { input, PrivacyNote, Select, SubmitButton } from "@/components/ui/Form";
 import Turnstile from "@/components/ui/Turnstile";
 import { contact, industries, products } from "@/lib/data";
 import { submitLead, thanksPath } from "@/lib/lead";
+import { normPhone, phoneHint } from "@/lib/phone";
+import PhoneInput from "@/components/ui/PhoneInput";
 import { ICON } from "@/lib/icons";
 
 type Custom = { id: number; label: string; value: string };
@@ -35,6 +37,9 @@ export default function Pricing() {
     for (const f of ["name", "email", "company", "users", "industry"]) if (!String(data.get(f) ?? "").trim()) next[f] = "Required";
     const email = String(data.get("email") ?? "");
     if (email && !/^\S+@\S+\.\S+$/.test(email)) next.email = "Enter a valid email.";
+    const phone = String(data.get("phone") ?? "").trim();
+    const country = String(data.get("phone_country") ?? "BD");
+    if (phone && !normPhone(phone, country)) next.phone = phoneHint(country);
     if (modules.length === 0) next.modules = "Pick at least one module.";
     setErrors(next);
     if (Object.keys(next).length > 0) return;
@@ -42,6 +47,7 @@ export default function Pricing() {
     setFailed("");
     const fields: Record<string, string> = {};
     for (const k of ["name", "email", "company", "phone", "industry", "users", "branches", "deploy", "notes"]) fields[k] = String(data.get(k) ?? "").trim();
+    if (phone) fields.phone = normPhone(phone, country) ?? phone;
     fields.modules = modules.join(", ");
     fields.custom = custom.filter((c) => c.label || c.value).map((c) => `${c.label}: ${c.value}`).join("\n");
     const res = await submitLead("quote", fields, token);
@@ -88,7 +94,7 @@ export default function Pricing() {
                 {field("name", "Full name", <input name="name" placeholder="Your name" className={input(errors.name)} />)}
                 {field("email", "Work email", <input name="email" type="email" placeholder="name@company.com" className={input(errors.email)} />)}
                 {field("company", "Company", <input name="company" placeholder="Company name" className={input(errors.company)} />)}
-                {field("phone", "Phone (optional)", <input name="phone" type="tel" placeholder="+880…" className={input()} />)}
+                {field("phone", "Phone (optional)", <PhoneInput name="phone" placeholder="01XXXXXXXXX" className={input(errors.phone)} invalid={Boolean(errors.phone)} />)}
                 {field(
                   "industry",
                   "Industry",

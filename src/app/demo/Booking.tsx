@@ -84,7 +84,7 @@ export function Booking({ session }: { session?: string | null }) {
           fields={[
             { name: "name", label: "Full name", placeholder: "Your name" },
             { name: "email", label: "Work email", type: "email", placeholder: "name@company.com" },
-            { name: "phone", label: "Phone", type: "tel", placeholder: "+880 1XXX-XXXXXX" },
+            { name: "phone", label: "Phone", type: "tel", placeholder: "01XXXXXXXXX" },
             { name: "company", label: "Company", placeholder: "Company name" },
             { name: "size", label: "Company size", options: ["1 to 300", "301 to 1,000", "1,001 to 2,500", "2,501+"] },
             { name: "industry", label: "Industry", options: industries.map((i) => i.name) },

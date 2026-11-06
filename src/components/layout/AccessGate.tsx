@@ -9,6 +9,8 @@ import clsx from "clsx";
 import Turnstile from "@/components/ui/Turnstile";
 import { getLenis } from "@/components/motion/SmoothScroll";
 import { submitLead } from "@/lib/lead";
+import { normPhone, phoneHint } from "@/lib/phone";
+import PhoneInput from "@/components/ui/PhoneInput";
 import { track } from "@/lib/analytics";
 
 /**
@@ -23,7 +25,6 @@ import { track } from "@/lib/analytics";
 const COOKIE = "bb_access";
 const DAY = 24 * 60 * 60;
 const EXEMPT = /^\/(demo|contact|thanks|privacy|terms|cookies|data-policy|acceptable-use|refunds|security|careers|dashboard|nexus|md)(\/|$)/;
-const PHONE = /^\+?[\d\s()-]*\d(?:[\s()-]*\d){6,}[\s()-]*$/;
 const EMAIL = /^\S+@\S+\.\S+$/;
 const SIZES = ["1 to 300", "301 to 1,000", "1,001 to 2,500", "2,501+"];
 const USAGE = ["Paper or Excel", "Accounting software", "Another ERP", "Just exploring"];
@@ -95,14 +96,15 @@ export default function AccessGate() {
     const v = (k: string) => String(data.get(k) ?? "").trim();
     const next: Record<string, string> = {};
     if (!v("name")) next.name = "Please add your name.";
-    if (!PHONE.test(v("phone"))) next.phone = "Enter a mobile number we can call.";
+    const phone = normPhone(v("phone"), v("phone_country") || "BD");
+    if (!phone) next.phone = phoneHint(v("phone_country") || "BD");
     if (!EMAIL.test(v("email"))) next.email = "Enter a valid email.";
     setErrors(next);
     if (Object.keys(next).length) return;
 
     setSending(true);
     setFailed("");
-    const fields = { name: v("name"), phone: v("phone"), email: v("email"), company: v("company"), size: v("size"), usage, website_url: v("website_url") };
+    const fields = { name: v("name"), phone: phone ?? v("phone"), email: v("email"), company: v("company"), size: v("size"), usage, website_url: v("website_url") };
     const res = await submitLead("access", fields, token);
     setSending(false);
     if (!res.ok && res.errors) {
@@ -165,9 +167,13 @@ export default function AccessGate() {
                 <p className="mt-2 text-[14px] text-muted sm:text-[15px]">Tell us who you are and the full site opens for 24 hours. It takes ten seconds.</p>
 
                 <form onSubmit={onSubmit} noValidate data-form-name="access" className="mt-5 grid grid-cols-2 gap-x-2.5 gap-y-3 sm:mt-6 sm:gap-x-3">
-                  <Field label="Your name" name="name" error={errors.name} full inputRef={first} autoComplete="name" />
-                  <Field label="Mobile" name="phone" type="tel" error={errors.phone} placeholder="01XXXXXXXXX" autoComplete="tel" />
+                  <Field label="Your name" name="name" error={errors.name} inputRef={first} autoComplete="name" />
                   <Field label="Email" name="email" type="email" error={errors.email} autoComplete="email" />
+                  <label className="col-span-2 flex min-w-0 flex-col gap-1.5">
+                    <span className="text-[13px] font-medium">Mobile</span>
+                    <PhoneInput name="phone" placeholder="01712 345678" className={inputClass(errors.phone)} invalid={Boolean(errors.phone)} />
+                    {errors.phone && <span className="text-[12px] text-[#C2410C]">{errors.phone}</span>}
+                  </label>
                   <Field label="Company (optional)" name="company" autoComplete="organization" />
                   <label className="flex min-w-0 flex-col gap-1.5">
                     <span className="text-[13px] font-medium">Team size (optional)</span>
